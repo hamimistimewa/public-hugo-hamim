@@ -48,6 +48,18 @@
     </url>
   
     <url>
+      <loc>http://infone.info/tags/linux/</loc>
+      
+      <lastmod>2019-07-05T18:13:02+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
       <loc>http://infone.info/posts/</loc>
       
       <lastmod>2019-07-05T18:13:02+07:00</lastmod>
@@ -84,18 +96,6 @@
     </url>
   
     <url>
-      <loc>http://infone.info/tags/linux/</loc>
-      
-      <lastmod>2019-07-05T18:13:02+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>http://infone.info/2019/artikel1/</loc>
       
       <lastmod>2019-07-05T17:10:41+07:00</lastmod>
@@ -106,7 +106,7 @@
     </url>
   
     <url>
-      <loc>http://infone.info/tags/virtualisasi/</loc>
+      <loc>http://infone.info/tags/unix/</loc>
       
       <lastmod>2019-07-05T17:10:41+07:00</lastmod>
       
@@ -118,7 +118,7 @@
     </url>
   
     <url>
-      <loc>http://infone.info/tags/unix/</loc>
+      <loc>http://infone.info/tags/virtualisasi/</loc>
       
       <lastmod>2019-07-05T17:10:41+07:00</lastmod>
       

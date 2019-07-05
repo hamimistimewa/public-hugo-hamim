@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>LINUX</title>
+      <link>http://infone.info/tags/linux/</link>
+      <pubDate>Fri, 05 Jul 2019 18:13:02 +0700</pubDate>
+      
+      <guid>http://infone.info/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>SSH</title>
       <link>http://infone.info/tags/ssh/</link>
       <pubDate>Fri, 05 Jul 2019 18:13:02 +0700</pubDate>
@@ -21,11 +30,11 @@
     </item>
     
     <item>
-      <title>linux</title>
-      <link>http://infone.info/tags/linux/</link>
-      <pubDate>Fri, 05 Jul 2019 18:13:02 +0700</pubDate>
+      <title>UNIX</title>
+      <link>http://infone.info/tags/unix/</link>
+      <pubDate>Fri, 05 Jul 2019 17:10:41 +0700</pubDate>
       
-      <guid>http://infone.info/tags/linux/</guid>
+      <guid>http://infone.info/tags/unix/</guid>
       <description></description>
     </item>
     
@@ -35,15 +44,6 @@
       <pubDate>Fri, 05 Jul 2019 17:10:41 +0700</pubDate>
       
       <guid>http://infone.info/tags/virtualisasi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>unix</title>
-      <link>http://infone.info/tags/unix/</link>
-      <pubDate>Fri, 05 Jul 2019 17:10:41 +0700</pubDate>
-      
-      <guid>http://infone.info/tags/unix/</guid>
       <description></description>
     </item>
     
