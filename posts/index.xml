@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Catatan Cah Ndeso :)</title>
+    <link>http://infone.info/posts/</link>
+    <description>Recent content in Posts on Catatan Cah Ndeso :)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jul 2019 17:10:41 +0700</lastBuildDate>
+    
+	<atom:link href="http://infone.info/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Artikel1</title>
+      <link>http://infone.info/2019/artikel1/</link>
+      <pubDate>Fri, 05 Jul 2019 17:10:41 +0700</pubDate>
+      
+      <guid>http://infone.info/2019/artikel1/</guid>
+      <description>Seorang anak kecil semakin hari anak tersebut akan semakin tumbuh besar berkembang sampai dewasa, sama seperti teknologi semakin hari, semakin berkembang pesat tidak ada kata henti untuk selalu berkembang dan maju apalagi saat ini perkembangan dunia IT sudah sangat pesat.</description>
+    </item>
+    
+    <item>
+      <title>Artikel</title>
+      <link>http://infone.info/2019/artikel/</link>
+      <pubDate>Fri, 05 Jul 2019 17:10:32 +0700</pubDate>
+      
+      <guid>http://infone.info/2019/artikel/</guid>
+      <description>Seorang anak kecil semakin hari anak tersebut akan semakin tumbuh besar berkembang sampai dewasa, sama seperti teknologi semakin hari, semakin berkembang pesat tidak ada kata henti untuk selalu berkembang dan maju apalagi saat ini perkembangan dunia IT sudah sangat pesat.
+Dengan pesat nya teknologi tersebut terdapat salah satu teknologi yang sangat bagus dan sangat banyak digunakan baik untuk kebutuhan pribadi, industri yaitu teknologi Virtualisasi.
+Apa itu teknologi Virtualisasi ?
+Menurut Wikipedia virtualisasi adalah istilah umum yang mengacu kepada abstraksi dari sumber daya komputer.</description>
+    </item>
+    
+  </channel>
+</rss>
