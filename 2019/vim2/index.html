@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="http://nurhamim.net/2019/vim1/" />
+  <link rel="next" href="http://nurhamim.net/2019/vim3/" />
+  <link rel="canonical" href="http://nurhamim.net/2019/vim2/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Vim Mode in Action | Catatan Cah Ndeso :)
+       
+  </title>
+  <meta name="title" content="Vim Mode in Action | Catatan Cah Ndeso :)">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Vim Mode in Action",
+    "headline" : "Vim Mode in Action",
+    "description" : "Sebelumnya kita telah mengetahui tentang mode – mode yang berada di Vim, Nah pada kali ini kita akan mecoba mengetahui tentang bagaimana cara membuka mode normal, insert dan command.\nPada saat Anda membuka vim pertama kali maka disitulah kita menggunakan yang namanya mode normal .\nMode normal ini dapat kita gunakan untuk navigasi (posisi atau arah) kursor serta juga dapat kita gunakan untuk berpindah antar file (apabila telah terdapat file).",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 03:12:51 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 03:12:51 \x2b0700 WIB",
+    "url" : "http:\/\/nurhamim.net\/2019\/vim2\/",
+    "wordCount" : "401",
+    "keywords" : [ "Vim", "Catatan Cah Ndeso :)"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Vim Mode in Action</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="http://nurhamim.net/categories/teks-editor/"> TEKS EDITOR </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>Sebelumnya kita telah mengetahui tentang mode – mode yang berada di Vim, Nah pada kali ini kita akan mecoba mengetahui tentang bagaimana cara membuka mode normal, insert dan command.</p>
+
+<p>Pada saat Anda membuka vim pertama kali maka disitulah kita menggunakan yang namanya mode normal .</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Mode normal ini dapat kita gunakan untuk navigasi (posisi atau arah) kursor serta juga dapat kita gunakan untuk berpindah antar file (apabila telah terdapat file).</p>
+
+<p>Untuk memulai menulis sesuatu di Vim maka kita akan menggunakan mode insert , untuk masuk ke mode insert dari mode normal Anda perlu menekan huruf atau tombol i , perhatikan indikator di kiri bawah pada gambar berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada Mode Insert ini Anda dapat menulis atau mencatat apa yang Anda inginkan, sebagai contoh penulis disini akan menulis beberapa kalimat seperti berikut</p>
+
+<h4 id="belajar-vim-itu-menyenangkan-lo-dan-enak-banget-buat-ngonfig-di-linux">Belajar Vim itu menyenangkan lo, dan enak banget buat ngonfig di linux</h4>
+
+<h4 id="yuk-kita-belajar-vim-yaa">Yuk kita belajar Vim yaa 🙂</h4>
+
+<p><figure><img src="/images/ring.svg" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/3.png" data-sizes="auto" alt="Menulis pada mode insert" title="Menulis pada mode insert" class="lazyload"><figcaption class="image-caption">Menulis pada mode insert</figcaption></figure></p>
+
+<p>Untuk keluar dari mode insert tersebut silakan tekan tombol Esc maka Anda akan kembali ke mode normal .</p>
+
+<p>Berikutnya adalah mode command atau perintah, mode ini ditandai dengan kita mengetikkan tombol : dan kemudian diikuti dengan perintah yang ingin dijalankan, misalnya untuk menyimpan file pada gambar diatas dapat dilakukan dengan cara menekan huruf w  dan diikuti nama file yang ingin disimpan misalnya pada file ini kita akan memberikan nama file belajar.txt kemudian silakan tekan tombol Enter untuk meng-eksekusinya, contoh seperti pada gambar di bawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/4.png" data-sizes="auto" alt="Gambar mode comment dan meyimpan file" title="Gambar mode comment dan meyimpan file. " class="lazyload"><figcaption class="image-caption">Gambar mode comment dan meyimpan file</figcaption></figure></p>
+
+<p>Selain itu mode command juga dapat kita gunakan untuk keluar dari Vim dengan cara tekan tombol : lalu huruf q seperti pada gambar berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/5.png" data-sizes="auto" alt="Gambar keluar dari Vim, menggunakan mode comment" title="Gambar keluar dari Vim, menggunakan mode comment" class="lazyload"><figcaption class="image-caption">Gambar keluar dari Vim, menggunakan mode comment</figcaption></figure></p>
+
+<p>Silakan lihat file belajar.txt yang baru saja Anda buat dengan cara menjalankan perintah ls seperti berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/6.png" data-sizes="auto" alt="Gambar, melihat hasil pembuatan file menggunkan Vim" title="Gambar, melihat hasil pembuatan file menggunkan Vim " class="lazyload"><figcaption class="image-caption">Gambar, melihat hasil pembuatan file menggunkan Vim</figcaption></figure></p>
+
+<p>Gambar diatas menandakan kita telah berhasil untuk membuat file dan menyimpan file menggunakan Vim. Sekarang silakan buka kembali Vim Anda, disini kita akan mempelajari bagaimana cara membuka file yang sudah ada di Vim.</p>
+
+<p>Untuk membuka file yang sudah ada tersebut dapat dilakukan dengan cara menjalankan perintah : dan menekan tombol e (:e) diikut dengan nama file Anda. Disini file yang dimaksud yaitu belajar.txt (silakan sesuaikan dengan file yang ada), lalu tekan Enter untuk meng-eksekusinya, dengan itu file belajar.txt akan terbuka, seperti pada gambar berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/7.png" data-sizes="auto" alt="Gambar untuk membuka file di vim" title="Gambar untuk membuka file di vim" class="lazyload"><figcaption class="image-caption">Gambar untuk membuka file di vim</figcaption></figure></p>
+
+<p>Oke saat ini Anda telah berhasil membuka file di Vim.</p>
+
+<p>Cukup sekian untuk tutorial singkat mengenai Vim mode in Action  ini. Selanjutnya kita akan membahas mengenai Navigasi Dasar di Vim.</p>
+
+<p>Selamat mencoba semoga bermanfaat bagi kita semua 🙂</p>
+
+<p>Referensi : Ebook Vim Untuk Semua</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://nurhamim.net/2019/vim2/>http://nurhamim.net/2019/vim2/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/vim/">
+                    #Vim</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://nurhamim.net/2019/vim1/" class="prev" rel="prev" title="Mengenal Editor Vim"><i class="iconfont icon-left"></i>&nbsp;Mengenal Editor Vim</a>
+         
+        
+        <a href="http://nurhamim.net/2019/vim3/" class="next" rel="next" title="Mengenal Vim Mode">Mengenal Vim Mode&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

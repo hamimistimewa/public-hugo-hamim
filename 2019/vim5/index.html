@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="http://nurhamim.net/2019/vim4/" />
+  <link rel="next" href="http://nurhamim.net/2019/vim6/" />
+  <link rel="canonical" href="http://nurhamim.net/2019/vim5/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Navigasi Antar Kata di Vim | Catatan Cah Ndeso :)
+       
+  </title>
+  <meta name="title" content="Navigasi Antar Kata di Vim | Catatan Cah Ndeso :)">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Navigasi Antar Kata di Vim",
+    "headline" : "Navigasi Antar Kata di Vim",
+    "description" : "Sebelumnya kita telah membahas tentang navigasi dasar yang ada di vim, selain kegiatas menulis, editing di vim, navigasi salah satu yang penting diketahui di vim.\nDisaat kita menulis pasti kita akan menentukan kita akan menulis dimana letaknya dikiri, dikanan, atau di bawah\/atas.\nDan secara tidak sadar kita nantinya akan banyak menggunakan waktu kita untuk menavigasikan kursor ke posisi dimana penulisan atau perubahan akan kita lakukan. Baik itu mengubah, menghapus, dan menandakan tanda baca.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 03:13:14 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 03:13:14 \x2b0700 WIB",
+    "url" : "http:\/\/nurhamim.net\/2019\/vim5\/",
+    "wordCount" : "900",
+    "keywords" : [ "Vim", "Catatan Cah Ndeso :)"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Navigasi Antar Kata di Vim</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="http://nurhamim.net/categories/teks-editor/"> TEKS EDITOR </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>Sebelumnya kita telah membahas tentang navigasi dasar yang ada di vim, selain kegiatas menulis, editing di vim, navigasi salah satu yang penting diketahui di vim.</p>
+
+<p>Disaat kita menulis pasti kita akan menentukan kita akan menulis dimana letaknya dikiri, dikanan, atau di bawah/atas.</p>
+
+<p>Dan secara tidak sadar kita nantinya akan banyak menggunakan waktu kita untuk menavigasikan kursor ke posisi dimana penulisan atau perubahan akan kita lakukan. Baik itu mengubah, menghapus, dan menandakan tanda baca.</p>
+
+<p>Di vim kita tidak bisa mengguankan mouse, seperti yang telah di pelajari sebelumnya, Anda dapat mengguanakan navigasi, <strong>h, j,k, l</strong>, tapi jika Anda merasa sangat kurang efisien menggunakan navigasi tersebut karena hanya bisa terjangkau 1 huru saja, maka tutorial kali ini kita akan membahas tentang bagaimana cara menjangkau antar kata .</p>
+
+<p>Dalam bahasa inggris <strong>kata</strong> artinya word, atau sebuah susunan huruf yang dibatasi dengan karakter spasi, . Sedangkan di vim <strong>kata</strong> bisa dijabarkan sebagai berikut :</p>
+
+<ul>
+<li>Karakter alfanumerik yang dibatasi spasi</li>
+<li>Karakter non-alfanumerik</li>
+</ul>
+
+<h3 id="navigasi-kata-demi-kata-forward">Navigasi Kata demi Kata (forward)</h3>
+
+<p>Kali ini kita akan mempelajari bagaimana cara berpindah antar kata di vim, silakan buka vim Anda dan pastikan Anda berada di mode normal</p>
+
+<p>Sebagai kalimat yang akan dibuat sebagai contoh</p>
+
+<blockquote>
+<p><strong>B</strong>ermimpilah Dalam Hidup, jangan hidup dalam mimpi – mimpi .</p>
+</blockquote>
+
+<p>Untuk memindahkan kursor ke kata berikutnya Anda hanya perlu menekan tombol <strong>w</strong> dan posisi kursor akan berada pada huruf <strong>D</strong></p>
+
+<blockquote>
+<p>Bermimpilah <strong>D</strong>alam Hidup, jangan hidup dalam mimpi – mimpi .</p>
+</blockquote>
+
+<p>Meskipun Anda tidak berada pada awal kata jika Anda menekan huruf <strong>w</strong> maka Anda akan tetap berpindah ke huruf <strong>D</strong></p>
+
+<p>silakan tekan huruf <strong>w</strong> sampai ke huruf <strong>H</strong> . Perhatikan pada kata <strong>Hidup</strong>, terdapat tanda koma (,) (non-alfanumerik).</p>
+
+<p>Pertanyaannya jika saya menekan huruf <strong>w</strong> lagi apakah kursor akan langsung berada pada kata selanjutnya atau kursor berada pada tanda koma (,) ?</p>
+
+<p>Jawabannya adalah kursor akan berada pada tanda koma (,) , seperti berikut</p>
+
+<blockquote>
+<p>Bermimpilah <strong>D</strong>alam Hidup, jangan hidup dalam mimpi – mimpi .</p>
+</blockquote>
+
+<p>Kenapa ? karena di vim karakter non-alfanumerik dianggap sebagai sebuah kata sendiri. Apabila <strong>w</strong> ditekan sampai ke huruf <strong>m</strong> pertama, dari kata <strong>mimpi – mimpi</strong> kemudian <strong>w</strong> ditekan lagi maka, kursor akan bergerak dan berada di tanda <strong>–</strong> kemudian <strong>w</strong> ditekan lagi makan kursor akan berada di huruf <strong>m</strong> kedua.</p>
+
+<p>Cukup tidak efisin sekali jika terdapat karakter non-numerik, upss tapi hal tersebut dapat diatasi, jika yang Anda inginkan adalah bergerak ke kata berikutnya yang dipisahkan oleh spasi dapat dilakukan</p>
+
+<h3 id="navigasi-kata-demi-kata-per-spasi-forward">Navigasi Kata demi Kata per Spasi (forward)</h3>
+
+<p>Untuk navigasi ini hampir sama dengan navigasi sebelumnya. Dengan menggunakan navigasi ini maka nantinya Anda dapat memindahkan kursor pada kata yang dipisahkan oleh karakter non alfanumerik
+yang menyatu dengan karakter alfanumerik tidak dianggap sebagai kata tersendiri. Berikut contohnya</p>
+
+<blockquote>
+<p>Bermimpilah <strong>D</strong>alam Hidup, jangan hidup dalam mimpi – mimpi .</p>
+</blockquote>
+
+<p>Posisi kursor berada di huruf <strong>H</strong> , untuk memindahkan kursor langsung ke huruf <strong>j</strong> melewati karakter non-alfanumerik <strong>(,)</strong> dapat dilakukan dengan cara menekan tombol kapital <strong>W</strong> . Berikut hasilnya :</p>
+
+<blockquote>
+<p>Bermimpilah Dalam Hidup, <strong>j</strong>angan hidup dalam mimpi – mimpi.</p>
+</blockquote>
+
+<h3 id="navigasi-antar-kata-di-akhir-kata">Navigasi Antar Kata Di Akhir Kata</h3>
+
+<p>Jika sebelumnya kita memindahkan kursor kita ke kata berikutnya, pada navigasi ini kita akan berpindah ke kata kita sendiri tapi berada di akhir kata dengan menggunaakan huruf <strong>e</strong> Berikut contohnya :</p>
+
+<p><strong>B</strong>ermimpilah Dalam Hidup, jangan hidup dalam mimpi – mimpi.</p>
+
+<p>Kursor berada di huruf <strong>B</strong> , dengan menekan huruf <strong>e</strong> maka kursor akan berpindah ke akhir kata yaitu huruf <strong>h</strong> . Sangat jelas yaa perbedaanya.</p>
+
+<blockquote>
+<p>Bermimpila<strong>h</strong> Dalam Hidup, jangan hidup dalam mimpi – mimpi.</p>
+</blockquote>
+
+<p>Nah saat ini kursor sudah berada di huruf <strong>h</strong> , untuk dapat langsung pindah ke akhir kata di depan yaitu huruf <strong>m</strong> di kata (Dalam) silakan tekan kembali huruf <strong>e</strong> nya hehehhe, berikut hasilnya :</p>
+
+<p>Bermimpilah Dala<strong>m</strong> Hidup, jangan hidup dalam mimpi – mimpi.</p>
+
+<p>Agak aneh yaa tapi nyata adanya 🙂 .</p>
+
+<h3 id="navigasi-kata-demi-kata-per-spasi-di-akhir-kata">Navigasi Kata demi Kata per spasi di akhir Kata</h3>
+
+<p>Navigasi ini hampir sama kegunaannya dengan kapital <strong>W</strong> sebelumnya, yaitu supaya hanya kata yang dipisahkan oleh spasi yang dituju , contohnya</p>
+
+<blockquote>
+<p>Bermimpilah Dala<strong>m</strong> Hidup, jangan hidup dalam mimpi – mimpi.</p>
+</blockquote>
+
+<p>Saat ini kursor berada di huruf <strong>m</strong> , lalu tekan <strong>e</strong>* lagi maka kursor akan berada di , selanjutnya tekan kapital <strong>E</strong> maka kursor akan berada di akhir kata yaitu <strong>n</strong> dari kata (jangan).</p>
+
+<h3 id="navigasi-kata-demi-kata-backward">Navigasi Kata demi Kata (backward)</h3>
+
+<p>Sebelumnya kita telah memperlajari bagaimana cara memindahkan kursor ke depan , nah navigasi kali ini kebalikannya yaitu ke belakang, jika kita menggunakan <strong>w</strong> maka kursor kita akan berada di depan kata, jika menetakan <strong>e</strong> maka kursor kita akan berada di akhir kata, navigasi ini kebalikannya dari huruf <strong>e</strong> , yaitu back (kembali) , contoh kalimatnya</p>
+
+<blockquote>
+<p>Bermimpilah Dalam Hidup, jangan hidup dalam mimp<strong>i</strong> – mimpi.</p>
+</blockquote>
+
+<p>Kursor berada di huruf <strong>i</strong> jika Anda menekan huruf <strong>b</strong> maka kursor akan berada di huruf <strong>m</strong> dari kalimat (mimpi)</p>
+
+<p>Silakan tekan huruf <strong>m</strong> lagi maka kursor akan berada di huruf <strong>d</strong> di kata (dalam), contohnya</p>
+
+<blockquote>
+<p>Bermimpilah Dalam Hidup, jangan hidup <strong>d</strong>alam mimpi – mimpi.</p>
+</blockquote>
+
+<h3 id="navigasi-kata-demi-kata-per-spasi-backward">Navigasi Kata demi Kata per Spasi (backward)</h3>
+
+<p>Seperti pada navigasi yang lain dimana ada huruf <strong>w</strong> maka akan ada kapital <strong>W</strong> , dimana ada huruf <strong>e</strong> maka akan ada kapital <strong>E</strong> , nah ini navigasi ini yaitu huruf kapital <strong>B</strong> , fungsiny untuk berpindah ke kata sebelumnya dengan langsung loncat ke kata yang hanya dipisahkan oleh spasi.</p>
+
+<p>Selamat mencoba semoga bermanfaat</p>
+
+<p>Oke untuk tutorial berpindah antar kata sampai disini dulu yaa 🙂 , selanjutnya akan kami bahas bagaimana jika kita berpindah ke kata selanjutnya tapi dipisahkan oleh karakter.</p>
+
+<p>Referensi : Ebook Vim Untuk Semua</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://nurhamim.net/2019/vim5/>http://nurhamim.net/2019/vim5/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/vim/">
+                    #Vim</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://nurhamim.net/2019/vim4/" class="prev" rel="prev" title="Navigasi Dasar Di Vim"><i class="iconfont icon-left"></i>&nbsp;Navigasi Dasar Di Vim</a>
+         
+        
+        <a href="http://nurhamim.net/2019/vim6/" class="next" rel="next" title="Navigasi Awal dan Akhir Baris di Vim">Navigasi Awal dan Akhir Baris di Vim&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

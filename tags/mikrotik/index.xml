@@ -2,30 +2,85 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mikrotik on Catatan Cah Ndeso :)</title>
-    <link>http://infone.info/tags/mikrotik/</link>
+    <link>http://nurhamim.net/tags/mikrotik/</link>
     <description>Recent content in Mikrotik on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jul 2019 21:39:46 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 01:17:40 +0700</lastBuildDate>
     
-	<atom:link href="http://infone.info/tags/mikrotik/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://nurhamim.net/tags/mikrotik/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Cara Konfigurasi NTP (Network Time Protokol) Di Mikrotik</title>
+      <link>http://nurhamim.net/2019/post10/</link>
+      <pubDate>Sat, 06 Jul 2019 01:17:40 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/post10/</guid>
+      <description>Pada tutorial kali ini saya akan share bagaimana cara setting NTP di Mikrotik, serta penerapannya di mikrotik. Namun sebelumnya ada baiknya kita mempelajari terlebih dahulu apa itu NTP ?
+Network Time Protocol atau lebih sering disebut dengan istilah NTP merupakan sebuah mekanisme atau protokol yang bisa digunakan untuk sinkronisasi terhadap penunjuk waktu dalam sebuah sistem jaringan dan komputer.
+Sinkronisasi ini biasa dilakukan di dalam jalur komunikasi data yang biasanya menggunakan protokol komunikasi yaitu TCP/IP.</description>
+    </item>
+    
+    <item>
+      <title>Cara Menghubungkan Mikrotik Ke Access Point</title>
+      <link>http://nurhamim.net/2019/post9/</link>
+      <pubDate>Sat, 06 Jul 2019 01:17:36 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/post9/</guid>
+      <description>Pada tutorial kali ini saya akan share bagaimana cara menghubungkan mikrotik ke access point. Berikut ini topologi sederhanan untuk menghubungkan perangkat keras Mikrotik Routherboard ke Internet, Untuk media Internetnya disini kita menggunakan Access Point, Mari kita mulai untuk mempraktekkannya :
+Mikrotik memiliki berbagai macam jenis, dan banyak tipe – tipe mikrotik yang sudah memiliki fitur wireless, sepertihalnya RB941-2nD-TC yang sudah support wireless, kami akan mengkonfigurasikan mikrotik RB941-2nD-TC supaya terhubung ke internet/AP dengan MikroTik.</description>
+    </item>
+    
+    <item>
+      <title>NetInstall Mikrotik</title>
+      <link>http://nurhamim.net/2019/post8/</link>
+      <pubDate>Sat, 06 Jul 2019 01:17:34 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/post8/</guid>
+      <description>Apa itu Netinstall ?
+Netinstall merupakan program yang berjalan pada komputer Windows yang memungkinkan Anda untuk menginstall Mikrotik RouterOS ke Komputer atau ke RouterBoard melalu jaringan Ethernet. Netinstall program berbasis windows dengan protokol Bootp. Netinstall juga bisa di jalankan di Sistem Operasi Linux dengan emulator wine, Netinstall juga bisa dijalankan di Linux.
+Netinstall digunakan pada saat:  Instalasi sebelumnya gagal OS dalam Router rusak Kehilangan Password untuk akses Di gunakan untuk mereset password atau lupa password  Yang Harus kita persiapkan untuk menjalankan netinstall adalah :  Program Netinstall</description>
+    </item>
+    
+    <item>
+      <title>Manajemen User Di Mikrotik</title>
+      <link>http://nurhamim.net/2019/post7/</link>
+      <pubDate>Sat, 06 Jul 2019 01:17:30 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/post7/</guid>
+      <description>Apa itu User Management ?
+User Management untuk melindungi Router Mikrotik kita, supaya tidak semua orang bisa masuk atau login serta mengkonfigurasi router. Karena dengan adanya User Management ini kita dipermudah untuk mengelola akses masuk ke system Router, untuk masuk ke system kita harus menggunakan user dan password terlebih dahulu.
+Pada dasarnya RouterBoard Mikrotik memiliki User Management (User login) Default yaitu : User (Login)=admin dan Password=(kosong)
+Kitu juga bisa membuat lebih dari 1 user bahkan banyak userpun bisa sesuai dengan kebutuhan, Misalkan kita punya rekan untuk meng-handle jaringan kita, kita bisa membuatkan user management dengan hak akses Full/Write/Read.</description>
+    </item>
+    
+    <item>
+      <title>Perintah – Perintah Dasar Mikrotik Yang Sering Digunakan</title>
+      <link>http://nurhamim.net/2019/post6/</link>
+      <pubDate>Sat, 06 Jul 2019 01:17:21 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/post6/</guid>
+      <description>Oke pada kesempatan kali ini saya akan share tentang Command Line yang ada di Mikrotik, apa aja yaa supaya tidak berlama – lama mari kita pelajari command line nya. Berikut ini merupakan beberapa perintah dasar di Mikrotik yang umum digunakan, antaranya :
+Perintah untuk shutdown dan restart mikrotik, ketikkan perintah:
+[admin@Mikrotik]&amp;gt;system shutdown (Untuk mematikan mikrotik) [admin@Mikrotik]&amp;gt;system reboot (Untuk Merestart mikrotik) [admin@Mikrotik]&amp;gt;system reset (Untuk mereset konfigurasi yang sebelumnya dibuat).  Perlu diketahui bahwa perintah – perintah di atas tersebut harus dilakukan direktori admin</description>
+    </item>
+    
+    <item>
       <title>Cara Melakukan Soft Dan Hard Reset Mikrotik RouterBoard</title>
-      <link>http://infone.info/2019/post5/</link>
+      <link>http://nurhamim.net/2019/post5/</link>
       <pubDate>Fri, 05 Jul 2019 21:39:46 +0700</pubDate>
       
-      <guid>http://infone.info/2019/post5/</guid>
+      <guid>http://nurhamim.net/2019/post5/</guid>
       <description>Pada tutorial kali ini saya akan share bagaimana cara untuk melakukan soft dan hard reset pada mikrotik routherboard. Untuk melakukan reset pada mikrotik terdapat 2 cara yaitu ada Soft Reset dan Hard Reset, untuk istilah Soft Reset yaitu mengembalikan settingan atau konfigurasi ke mode default atau pabrikan, dengan menggunakan tools atau aplikasi, Mikrotik sudah tersedia tools Winbox. Soft Reset juga bisa menggunakan terminal di Mikrotik dengan perintah system resert-configuration , selain itu Anda akan diminta untuk Konfirmasi pilihan y/N Apabila ingin meresetnya ketik y, apabila tidak ketik N.</description>
     </item>
     
     <item>
       <title>Cara Backup, Import, Export, Konfigurasi Di Mikrotik</title>
-      <link>http://infone.info/2019/post4/</link>
+      <link>http://nurhamim.net/2019/post4/</link>
       <pubDate>Fri, 05 Jul 2019 21:39:29 +0700</pubDate>
       
-      <guid>http://infone.info/2019/post4/</guid>
+      <guid>http://nurhamim.net/2019/post4/</guid>
       <description>Banyak dari sebagian orang tidak menyadari dan kurang memperhatikan teutuhan dari settingan Router Mikrotik, Sebenarnya Mikrotik sudah disetting berbagai macam jenis konfigurasi, apabila suatu ketika router tersebut mengalami masalah error atau sejenisnya, ini akan menyebabkn masalah, untuk mengatasi masalah tersebut agar settingan kita di Router mikrotk tidak hilang, Mikrotik menyediakan tempat Import, Export, dan juga Backup.
 Ada 2 metode untuk menyimpan sebuah konfigurasi Router Mikrotik, diantaranya yaitu :
  Export dan Import.</description>
@@ -33,29 +88,29 @@ Ada 2 metode untuk menyimpan sebuah konfigurasi Router Mikrotik, diantaranya yai
     
     <item>
       <title>Cara Enable, Disable dan Uninstall Paket Router Mikrotik</title>
-      <link>http://infone.info/2019/post3/</link>
+      <link>http://nurhamim.net/2019/post3/</link>
       <pubDate>Fri, 05 Jul 2019 21:39:27 +0700</pubDate>
       
-      <guid>http://infone.info/2019/post3/</guid>
+      <guid>http://nurhamim.net/2019/post3/</guid>
       <description>Mikrotik terdiri dari banya paket – paket yang berformat .npk. Setiap paketnya mempunyai fungsi – fungsi tersendiri, dan apabila terdapat paket tidak ingin digunakan dapat dilakukan dengan cara meng-enanble, disable paket tersebut. Karena semakin banyak paket – paket yang kita gunakan maka semakin bertambah pula penggunaan memory pada mikrotik tersebut.
 Disini saya akan mencontohkan cara Enable, Disable, dan Uninstall Paket Mikrotik. Sekarang kita akan mencoba Mendisable paket PPP dan MengEnable Paket IPv6.</description>
     </item>
     
     <item>
       <title>Memberi Nama Router Mikrotik</title>
-      <link>http://infone.info/2019/post2/</link>
+      <link>http://nurhamim.net/2019/post2/</link>
       <pubDate>Fri, 05 Jul 2019 21:39:24 +0700</pubDate>
       
-      <guid>http://infone.info/2019/post2/</guid>
+      <guid>http://nurhamim.net/2019/post2/</guid>
       <description>Pada kesempatan kali ini saya akan share bagaimana cara memberi nama pada mikrotik kita ok langsung saja yaa,, Pada lab kali ini kita akan memberi nama pada router kita, fungsi memberi nama pada router disini untuk mengetahui Mac Address dari router untuk login atau masuk di winbox. Ada 2 cara untuk memberi identitas atau nama pada router, pertama anda bisa menggunakan tools winbox, yang kedua bisa menggunakan terminal mikrotik dengan perintah : system identity set name=(Nama/Identitas Router).</description>
     </item>
     
     <item>
       <title>Cara Mengakses Mikrotik</title>
-      <link>http://infone.info/2019/post1/</link>
+      <link>http://nurhamim.net/2019/post1/</link>
       <pubDate>Fri, 05 Jul 2019 21:39:15 +0700</pubDate>
       
-      <guid>http://infone.info/2019/post1/</guid>
+      <guid>http://nurhamim.net/2019/post1/</guid>
       <description>Kali ini saya akan share bagaimana cara dan menggunakan aplikasi atau bagaimana supaya kita dapat mengakses Router Mikrotik ?
 Langsung saja ya untuk mengakses router pertama kali, ada banyak cara yang bisa kita gunakan, berikut ini beberapa cara mengakses router, diantaranya adalah:
 Untuk mengakses Mikrotik Routherboard ataupun Mikrotik RouterOS yang baru, atau yang sudah tereset, memiliki default konfigurasi IP pada Ether1 yaitu 192.168.88.1 / 24, dengan default username yaitu Username: admin, dan Password: (Kosong).</description>
