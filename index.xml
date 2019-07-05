@@ -5,83 +5,329 @@
     <description>Recent content in Catatan Cah Ndeso :) on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jul 2019 18:13:02 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 21:39:46 +0700</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Alias Login SSH di Linux</title>
-      <link>http://infone.info/2019/post1/</link>
-      <pubDate>Fri, 05 Jul 2019 18:13:02 +0700</pubDate>
+      <title>Cara Melakukan Soft Dan Hard Reset Mikrotik RouterBoard</title>
+      <link>http://infone.info/2019/post5/</link>
+      <pubDate>Fri, 05 Jul 2019 21:39:46 +0700</pubDate>
       
-      <guid>http://infone.info/2019/post1/</guid>
-      <description>&lt;p&gt;Pada kesempatan kali ini topik yang akan kita bahas masih sama yaitu tentang SSH, sebelumnya kita telah mempelajari bagaimana cara melihat log di SSH.&lt;/p&gt;
+      <guid>http://infone.info/2019/post5/</guid>
+      <description>
 
-&lt;p&gt;Nah kali ini kita akan belajar cara bagaimana cara membuat alias atau modifikasi untuk login ssh di linux.&lt;/p&gt;
+&lt;p&gt;Pada tutorial kali ini saya akan share bagaimana cara untuk melakukan soft dan hard reset pada mikrotik routherboard. Untuk melakukan reset pada mikrotik terdapat 2 cara yaitu ada Soft Reset dan Hard Reset, untuk istilah Soft Reset  yaitu mengembalikan settingan atau konfigurasi ke mode default atau pabrikan, dengan menggunakan tools atau aplikasi, Mikrotik sudah tersedia tools Winbox. Soft Reset juga bisa menggunakan terminal di Mikrotik dengan perintah &lt;strong&gt;system resert-configuration&lt;/strong&gt; , selain itu Anda akan diminta untuk Konfirmasi pilihan &lt;strong&gt;y/N&lt;/strong&gt; Apabila ingin meresetnya ketik &lt;strong&gt;y&lt;/strong&gt;, apabila tidak ketik &lt;strong&gt;N&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Manfaat yang didatpakan yaitu Anda dapat mempermudah akses SSH dengan menggunakana nama yang Anda inginkan tanpa perlu mengetikkan perintah ssh roo@IP_Adress kembali.&lt;/p&gt;
+&lt;h3 id=&#34;reset-menggunakan-winbox&#34;&gt;Reset Menggunakan Winbox&lt;/h3&gt;
 
-&lt;p&gt;Oke langsung saja yaa ke tahapan – tahapan membuat alias untuk login SSH di Linux.&lt;/p&gt;
+&lt;p&gt;Pertama kita masuk ke winbox terlebih dahulu, setelah itu pilih menu &lt;strong&gt;System -&amp;gt; Reset Configuration -&amp;gt; ceklist No Default Configuration -&amp;gt; Reset Configuration&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Pertama, membuat sebuah file konfigurasi untuk meyimpan aliases ssh , di direktori /home/namauser/.ssh/ seperti berikut :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/reset%20mikrotik/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ sudo vim ~/.ssh/config 
+&lt;p&gt;Jika sudah, selanjutnya klik yes untuk me-reboot routerboard,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/reset%20mikrotik/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan tunggu sampai proses reset pada routerboard selesai. Apabila sudah selesai maka routerboard akan otomatis restart dan settingan yang ada di router sama seperti awal lagi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/reset%20mikrotik/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;soft-reset-mikrotik-menggunakan-terminal-mikrotik&#34;&gt;Soft Reset Mikrotik menggunakan Terminal Mikrotik&lt;/h3&gt;
+
+&lt;p&gt;Pertama kita masuk terlebih dahulu ke winbox, setelah itu pilih menu &lt;strong&gt;New Terminal -&amp;gt; ketikkan perintah -&amp;gt; system reset-configuration -&amp;gt; pilih yes.&lt;/strong&gt; Tunggu Proses reset sampai selesai.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/reset%20mikrotik/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Baru saja kita sudah mempelajari bagaimana cara melakukan Soft Reset. Sekarang kita akan bahas tentang Hard Reset. Berbeda dengan Soft Reset kalau soft reset mereset dari dalam tampa menyentuh perangkat.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini langkah - langkah Hard Reset, sebagai berikut:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/reset%20mikrotik/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Pertama siapkan Routerboard yang mau di reset, disini kami menggunakan Mikrotik versi RB 941&lt;/li&gt;
+&lt;li&gt;Pastikan keadaan kabel power tidak di tancapkan&lt;/li&gt;
+&lt;li&gt;Menggunakan benda yang sekiranya bisa menjangka atau masuk ke lubang reset pada mikrotik . Biasanya kita menggunakan pulpen atau obeng (+) kecil&lt;/li&gt;
+&lt;li&gt;Colokkan benda tersebut ke dalam lubang reset, tahan dan masukkan kabel power, tunggu sampai lampu ACT berkedip – kedip, dan tahan beberapa detik (sekitar 10 detik) pada router – router tertentu biasanya berbunyi beep 1x dam lampu ACT akan berhrnti. Setelah itu kita baru cabut pulpen tadi beserta kabel powernya.&lt;/li&gt;
+&lt;li&gt;Setelah itu colokkan kembali kabel power dan cobalah masuk atau login ke mikrotik anda, dan chek apakah router router sudah ter reset.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Itu cara – cara yang dapat Anda gunakan untuk melakukan reset pada router Mikrotik.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Backup, Import, Export, Konfigurasi Di Mikrotik</title>
+      <link>http://infone.info/2019/post4/</link>
+      <pubDate>Fri, 05 Jul 2019 21:39:29 +0700</pubDate>
+      
+      <guid>http://infone.info/2019/post4/</guid>
+      <description>
+
+&lt;p&gt;Banyak dari sebagian orang tidak menyadari dan kurang memperhatikan teutuhan dari settingan Router Mikrotik, Sebenarnya Mikrotik sudah disetting berbagai macam jenis konfigurasi, apabila suatu ketika router tersebut mengalami masalah error atau sejenisnya, ini akan menyebabkn masalah, untuk mengatasi masalah tersebut agar settingan kita di Router mikrotk tidak hilang, Mikrotik menyediakan tempat Import, Export, dan juga Backup.&lt;/p&gt;
+
+&lt;p&gt;Ada 2 metode untuk menyimpan sebuah konfigurasi Router Mikrotik, diantaranya yaitu :&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Export dan Import.&lt;/li&gt;
+&lt;li&gt;Backup dan Restore.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Perbedaan dari keduanya diantaranya:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Apabila File hasil backup tidak bisa dibukak di notepad, Tex Editor PC, sedangkan file hasil export bisa dibukak.&lt;/li&gt;
+&lt;li&gt;File hasil export akan berisi script konfigurasi atau settingan router mikrotik yang bisa langsung kita copy paste dan dieksekusi di terminal Mikrotik&lt;/li&gt;
+&lt;li&gt;Untuk Export dan Import, menggunakan format .rsc sedangkan Bacukp dan Restore menggunakan format .backup&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Sekarang kita akan mencoba cara yang pertama, yaitu cara Export dan Import dimana cara ini hanya bisa membuat dengan menggunakan command line interface (CLI) di terminal Mikrotik, tidak bisa dengan GUI. Sekarang kita akan mencoba untuk meng Export konfigurasi dari hotspot.&lt;/p&gt;
+
+&lt;h3 id=&#34;export-dan-import&#34;&gt;Export dan Import&lt;/h3&gt;
+
+&lt;p&gt;Langkah pertama, kita bukak New Terminal, setelah itu ketikkan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[admin@Mikrotik]&amp;gt;ip hotspot
+[admin@Mikrotik]/ip hotspot&amp;gt; export file=(isikan Nam file Export) 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Kedua, isikan file config tersebut seperti pada gambar berikut :&lt;/p&gt;
+&lt;p&gt;Contoh :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/tqwxVZg6HtxgD9-31mfunQIrvosoKqxFEifS3MDNQBztrwRewCkt4EKVS-OnQnStuWrm1QEeuvqpps3i-U5FH7-TdzoRMPFsWX3HAQdHWSIjWDsLnNTDdjaq_crLMmDIjPPJ_3gNCGZNGBWE47CmIhHB9Tn0Gvr0XnCuD21Zk61g-kl7vQhBQIGaugbauMMe-8XRFmMFkJswoEygjCSXfe7CWayflsfjQ2NwKj1muH5mfFuhSFIsyeud2GwlA6frcFVpaPB_Aa7ReBrHyDReszYEzik2DYjgBkImPBFeAoCC89EWX9sBz76YOUkYNEcimVw_HPxcTDFCNOIa-uSguL-OjM4x-NEoKViDp_gXtW5LfRDXl0hRfPBsfbcSXd6X2XRiGCUHrf9TECrk683gmJIYM4v9h6pSiUv_r6d5wh-5kMU0mj0C8l0y4lx0SxqRoIUM0njelWMLvGK3vqU5dxWTjcNylk9fqwEh0HC6pZq9_UBFkkRAUv2Xe6GFfdtifYDXpeJtwNgLayx0kuCIGQHkeRpbihouXp2kIjn1g83dCZEGq7RJEMMIIXjCW1m8NUzHiYTert_-DDoh9T1wJYuGGgBaAouImcAx7uX48PapphwW2zsRwUf0qxCthA5KeO29ySfwgVyPl194eTbw3KJqrXIdLA=w929-h398-no&#34; alt=&#34;Gambar 1&#34; title=&#34;Gambar 1&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[admin@Mikrotik]/ip hotspot&amp;gt; export file=Hamim-Export
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Keterangan :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Host : Nama yang ingin dipanggil atau yang ingin digunakan untuk mengakses ssh&lt;/p&gt;
+&lt;p&gt;Sekarang kita lihat hasil dari file export hotspot yang barusan kita export, masuk ke menu FIles. Menu Files ini dimana tempat untuk penyimpanan dari Export dan Backup, meskipun Router di reset, semua data yang ada di menu Files tidak akan hilang.&lt;/p&gt;
 
-&lt;p&gt;User : Merupakan user ssh, gambar diatas menggunakan root . Untuk user bersifat bebas menyesuaikan dengan user ssh  Anda.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Hostname : Merupakan alamat dari server yang ingin kita remote&lt;/p&gt;
+&lt;p&gt;Seperti pada gambar di atas hasil menu export nya sudah tersimpan di menu Files dengan format .rsc, saatnya kita pindahkan data Export ke Komputer anda masing – masing. Apabila anda menggunakan sistem operasi selain windows contoh seperti linux, kita harus mengintall applikasi FTP atau FileZilla untuk mengambil file nya. Untuk pengguna windows tinggal di drag and drop. Disini kami menggunakan FileZilla untuk mengambil file Exportnya.&lt;/p&gt;
 
-&lt;p&gt;Port : Isikan port ssh Anda.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;IdentityFile : sama seperti port, namun disini digunakan apabila Anda menggunakan ssh key.&lt;/p&gt;
+&lt;p&gt;Sekarang kita lihat di Folder apakah sudah ada file Hamim-Export.rsc&lt;/p&gt;
 
-&lt;p&gt;Bagi Anda yang belum tau bagaimana cara membuat ssh key di linux silakan baca terlebih dahulu dengan cara klik &lt;a href=&#34;https://www.nurhamim.net/menggunakan-ssh-key-di-linux/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;DISINI🙂&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/4.png&#34; alt=&#34;&#34; /&gt; &amp;ldquo;&amp;rdquo;)&lt;/p&gt;
 
-&lt;p&gt;Apabila Anda telah membuat konfigurasinya, silakan simpan konfigurasi tersebut lalu coba akses ssh Anda menggunakan Host . Berikut hasilnya :&lt;/p&gt;
+&lt;p&gt;Sekarang kita mencoba untuk Import file Hamim-Export.rsc dengan cara copy file yang ada di komputer Anda, lalu Anda paste di menu Files Mikrotik.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/t2xpl2CmgPfYaMbFh7j6l1T1d2Hvwqy_vBeloMXknHxoxtPXcgHEAyhCZGDTe8JwPpElnzcGSaLs4uSdCmTLMWOCgx_fkbT9drJPteB7DjzNeOSuU1UsaGz2HbliYlK38DrAVB4Q8m6LHY970eB3TG6qWu7oH-PB_2hRHuViHTFWKO-gtAKrSQ--NR4KOX7bYeNK4MlABvYL1ijRD0Sv0n7oKzjZhRvDQ816rpId1RSsLFwHE1g74L0PDbpwT7QBFDasBrb5YfvmzV_jNwxj45KRixVzdFtWEEbuMJ-8p-_9v3co0MIo8w1NeYgY-tTSgZNcfgmxV-6rdd2EfFbWIS-WKlzs3a2rBL2zgLBAlTx3RfUDL5As2erLtHILUKQo22Xd8hayNN9CeqDu7QDw3ztjrlJsJpaFPGuNmihTJNhA-4GRPVRtHKXJqaYJ8XcUncrLOOuD_abpv8qmjqWjGRMJRya1Rbp81pNeEV9C4RGJ5hLIyqo7T0TV3GpN-My3pP0I0MiBdmEteTWppw2XIzQGVbb_qTH6Xsh43B9Nff20sX_Nu0w1uVGBNIKcEzKyIvJr4M8ajweaucnW6_VvV8QuOVhsS9WukoaVhfH8J0T6Dyl9-Ian4_BlW8_gvh-efhFvnRvgMq19-qbrcljHT-TFSQoKiA=w929-h398-no&#34; alt=&#34;Gambar 2&#34; title=&#34;Gambar 2&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Itulah cara singkat bagi kita untuk menggunakan ssh secara praktis.&lt;/p&gt;
+&lt;p&gt;Langkah selanjutknya kita masuk ke menu New Terminal Mikrotik ketikkan perintah import file-name=Hamim-Export.rsc (Hamim-Export.rsc merupakan nama dari filenya).&lt;/p&gt;
 
-&lt;p&gt;Selamat mencoba semoga bermanfaat&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;backup-dan-restore&#34;&gt;Backup dan Restore&lt;/h3&gt;
+
+&lt;p&gt;Sebelumnya kita sudah belajar tentang Export dan Import. Sekarang kita akan membahas tentang Backup. Backup disini untuk menyimpan seluruh konfigurasi, tidak seperti Export yang bisa lebih spesifik. Untuk Backup ini Filenya tidak dapat di bukak dan diedit tidak seperti Export yang filenya dapat di buka melalui Text Editor. Berikut ini cara untuk membackup, dengan cara klik pada menu Files lalu klik Backup.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah Anda klik Backup, Anda akan diminta untuk mengisikan Name dari file hasil backupnya, serta Anda juga diminta untuk mengisikan Password untuk keamanan file backupnya,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Klik Backup, silakan tunggu sampai Backupnya selesai, apabila sudah selesai maka file backupnya akan langsung tersedia di menu Files, seperti yang sudah di jelaskan di atas untuk format Export yaitu .rsc dan untuk format backup .backup, seperti pada gambar dibawah ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang kita mencoba untuk memindahkan hasil  file backup yang ada di menu Files akan dipindahkan atau dicopy ke komputer lokal, supaya kita mempunya file backup dari router. Untuk pengguna Linux silakan menggunakan aplikasi FileZilla. Untuk pengguna windows bisa langsung di drag and drop.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke, itulah cara untuk melakukan Backup dan Import serta Export sebuah konfigurasi di Mikrotik.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Artikel1</title>
-      <link>http://infone.info/2019/artikel1/</link>
-      <pubDate>Fri, 05 Jul 2019 17:10:41 +0700</pubDate>
+      <title>Cara Enable, Disable dan Uninstall Paket Router Mikrotik</title>
+      <link>http://infone.info/2019/post3/</link>
+      <pubDate>Fri, 05 Jul 2019 21:39:27 +0700</pubDate>
       
-      <guid>http://infone.info/2019/artikel1/</guid>
-      <description>&lt;p&gt;Seorang anak kecil semakin hari anak tersebut akan semakin tumbuh besar berkembang sampai dewasa, sama seperti teknologi semakin hari, semakin berkembang pesat tidak ada kata henti untuk selalu berkembang dan maju apalagi saat ini perkembangan dunia IT sudah sangat pesat.&lt;/p&gt;
+      <guid>http://infone.info/2019/post3/</guid>
+      <description>&lt;p&gt;Mikrotik terdiri dari banya paket – paket yang berformat .npk. Setiap paketnya mempunyai fungsi – fungsi tersendiri, dan apabila terdapat paket tidak ingin digunakan dapat dilakukan dengan cara meng-enanble, disable paket tersebut. Karena semakin banyak paket – paket yang kita gunakan maka semakin bertambah pula penggunaan memory pada mikrotik tersebut.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/0YrXCz7YQBbvSK9TatsMtmt_4dmI0mJdlPR7THk001t2sppSy9t_A1NBKl9SfRFhQQrQHDSqOHgtGhqsYzYbi6ubz_Hm2PMuRB5tFPX18K4huVhHlZBeG_ZMc9e-x1eiYMymVpEMi8uvv84_9uIpzTsLv7YxqCcQv-Qk9T7PtzFf5O-Bfx6Tgcedfxi-s3t4F4MiEtMgrYglMHrXpSRdi2i1K3toGJe4L4Dy6x0jRT1SjFpO8d1umvKaeLfnWXZ_z9V1VrMNHuXmypZsp5imGGtVJTS70Eo-HO_OfPurVEpsRsUa0c9eEtsDADZLP0E81dGyqrKU60zM5tJ5TV37SQKr7JVw7FFUJqGBPnS08d5JXJHfYpiLyyAUXDvGFjxkneInGdATA--amG4gF3KD3oqj3cqCpEkz_UnPVQ1_OEGHvMu8E1b8TZrvq7ZGYef5eCfqLtyV0ZklKG3pknDbSqQg9KvvighqL1OMeUSe-30e-Al3mAKCKVzi3-AgcyeyTEqNxD1QqN-Oo65RkjmEwZIIARcwyW-5PaHIQi67j4qyWC5rEJAMw1lBs_jUcB0MIH4xdSlzMUSO0fWmQvkxPyq50qNbpYl3V2prX5OnB77HXCuGtsv5p7WtQQLw04Fop-A4uKC4ooGo_Bi7_613VaFcHDfBm9ev=s640-no&#34; alt=&#34;alt text&#34; title=&#34;Images 2&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Disini saya akan mencontohkan cara Enable, Disable, dan Uninstall Paket Mikrotik. Sekarang kita akan mencoba Mendisable paket PPP dan MengEnable Paket IPv6.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita bukak terlebih dahulu di menu &lt;strong&gt;System -&amp;gt; Packages&lt;/strong&gt;  lalu kita pilih paket atau fitur yang mau kita Enable atau Disable. Seperti pada gambar di bawah ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/enable%2C%20disable%2C%20uninstall%20mikrotik/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila sudah di klik &lt;strong&gt;Enable&lt;/strong&gt; atau &lt;strong&gt;Disable Packet&lt;/strong&gt; tidak akan langsung &lt;strong&gt;Enable/Disable&lt;/strong&gt; melainkan akan mendapatkan pemberitahuan &lt;strong&gt;scheduled&lt;/strong&gt; yang berisi perintah apabila paket di Disable maka akan muncul &lt;strong&gt;scheduled for Disable&lt;/strong&gt; . Untuk yang di Enable sama seperti yang Disable &lt;strong&gt;scheduled for Enable&lt;/strong&gt; .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/enable%2C%20disable%2C%20uninstall%20mikrotik/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu kita Reboot Router kita dengan cara masuk ke menu &lt;strong&gt;System -&amp;gt; Reboot&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/enable%2C%20disable%2C%20uninstall%20mikrotik/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu pilih Yes, tunggu Router sampai benar benar selesai reboot. Sebagai informasi tambahan apabila router sedang di reboot, jangan sampai router mati atau terlepas kabel powernya, karena hal tersebut akan akan membuat router bermasalah bahkan bisa sampai rusak.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/enable%2C%20disable%2C%20uninstall%20mikrotik/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila router sudah reboot kita cek kembali apakah packet sudah &lt;strong&gt;enable&lt;/strong&gt; atau &lt;strong&gt;disable&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/enable%2C%20disable%2C%20uninstall%20mikrotik/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang packet &lt;strong&gt;IPv6&lt;/strong&gt; sudah tersedia, dan Packet &lt;strong&gt;PPP&lt;/strong&gt; sudah di nonaktifkan.&lt;/p&gt;
+
+&lt;p&gt;Sebelumnya kita sudah belajar Enable dan Disable Packet Sekarang kita akan mencoba untuk menghapus atau uninstall packet di Mikrotik, dengan cara masuk ke menu &lt;strong&gt;system -&amp;gt; packages&lt;/strong&gt; pilih paket yang ingin kita hilangkan atau di uninstall, setelah itu kita pilih uninstall seperti pada gambar di bawah ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/enable%2C%20disable%2C%20uninstall%20mikrotik/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu kita reboot router kita dengan cara &lt;strong&gt;system -&amp;gt; reboot&lt;/strong&gt;  kemudian kita akan diminta untuk konfirmasi apakah anda ingin melanjutkannya atau tidak apabila anda indin melanjutkannya pilih &lt;strong&gt;Yes&lt;/strong&gt; jika tidak pilih &lt;strong&gt;No&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/enable%2C%20disable%2C%20uninstall%20mikrotik/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke itulah cara – cara yang dapat Anda gunakan untuk melakukan enable, disable dan uninstall paket pada router Mikrotik.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Artikel</title>
-      <link>http://infone.info/2019/artikel/</link>
-      <pubDate>Fri, 05 Jul 2019 17:10:32 +0700</pubDate>
+      <title>Memberi Nama Router Mikrotik</title>
+      <link>http://infone.info/2019/post2/</link>
+      <pubDate>Fri, 05 Jul 2019 21:39:24 +0700</pubDate>
       
-      <guid>http://infone.info/2019/artikel/</guid>
-      <description>&lt;p&gt;Seorang anak kecil semakin hari anak tersebut akan semakin tumbuh besar berkembang sampai dewasa, sama seperti teknologi semakin hari, semakin berkembang pesat tidak ada kata henti untuk selalu berkembang dan maju apalagi saat ini perkembangan dunia IT sudah sangat pesat.&lt;/p&gt;
+      <guid>http://infone.info/2019/post2/</guid>
+      <description>
 
-&lt;p&gt;Dengan pesat nya teknologi tersebut terdapat salah satu teknologi yang sangat bagus dan sangat banyak digunakan baik untuk kebutuhan pribadi, industri yaitu teknologi Virtualisasi.&lt;/p&gt;
+&lt;p&gt;Pada kesempatan kali ini saya akan share bagaimana cara memberi nama pada mikrotik kita ok langsung saja yaa,, Pada lab kali ini kita akan memberi nama pada router kita, fungsi memberi nama pada router disini untuk mengetahui Mac Address dari router untuk login atau masuk di winbox. Ada 2 cara untuk memberi identitas atau nama pada router, pertama anda bisa menggunakan tools winbox, yang kedua bisa menggunakan terminal mikrotik dengan perintah : system identity set name=(Nama/Identitas Router).&lt;/p&gt;
 
-&lt;p&gt;Apa itu teknologi Virtualisasi ?&lt;/p&gt;
+&lt;p&gt;Berikut ini cara memberikan identitas atau nama pada router mikrotik:&lt;/p&gt;
 
-&lt;p&gt;Menurut Wikipedia virtualisasi adalah istilah umum yang mengacu kepada abstraksi dari sumber daya komputer. Selengkapnya dapat merujuk pada tautan berikut: Teknologi Virtualisasi.&lt;/p&gt;
+&lt;h3 id=&#34;menggunakan-winbox&#34;&gt;Menggunakan Winbox&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/0YrXCz7YQBbvSK9TatsMtmt_4dmI0mJdlPR7THk001t2sppSy9t_A1NBKl9SfRFhQQrQHDSqOHgtGhqsYzYbi6ubz_Hm2PMuRB5tFPX18K4huVhHlZBeG_ZMc9e-x1eiYMymVpEMi8uvv84_9uIpzTsLv7YxqCcQv-Qk9T7PtzFf5O-Bfx6Tgcedfxi-s3t4F4MiEtMgrYglMHrXpSRdi2i1K3toGJe4L4Dy6x0jRT1SjFpO8d1umvKaeLfnWXZ_z9V1VrMNHuXmypZsp5imGGtVJTS70Eo-HO_OfPurVEpsRsUa0c9eEtsDADZLP0E81dGyqrKU60zM5tJ5TV37SQKr7JVw7FFUJqGBPnS08d5JXJHfYpiLyyAUXDvGFjxkneInGdATA--amG4gF3KD3oqj3cqCpEkz_UnPVQ1_OEGHvMu8E1b8TZrvq7ZGYef5eCfqLtyV0ZklKG3pknDbSqQg9KvvighqL1OMeUSe-30e-Al3mAKCKVzi3-AgcyeyTEqNxD1QqN-Oo65RkjmEwZIIARcwyW-5PaHIQi67j4qyWC5rEJAMw1lBs_jUcB0MIH4xdSlzMUSO0fWmQvkxPyq50qNbpYl3V2prX5OnB77HXCuGtsv5p7WtQQLw04Fop-A4uKC4ooGo_Bi7_613VaFcHDfBm9ev=s640-no&#34; alt=&#34;alt text&#34; title=&#34;Images 1&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Pilih Menu System&lt;/li&gt;
+&lt;li&gt;Identity&lt;/li&gt;
+&lt;li&gt;Masukkan nama atau identitas&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/memberi%20nama%20router%20mikrotik/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;menggunakan-new-terminal-di-mikrotik&#34;&gt;Menggunakan New Terminal di Mikrotik&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Masuk ke menu New Terminal&lt;/li&gt;
+&lt;li&gt;Ketikkan perintah (system identity set name=(Nama/Identitas Router)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/memberi%20nama%20router%20mikrotik/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah cara singkat untuk memberikan nama pada setiap router mikrotik kita. Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Mengakses Mikrotik</title>
+      <link>http://infone.info/2019/post1/</link>
+      <pubDate>Fri, 05 Jul 2019 21:39:15 +0700</pubDate>
+      
+      <guid>http://infone.info/2019/post1/</guid>
+      <description>
+
+&lt;p&gt;Kali ini saya akan share bagaimana cara dan menggunakan aplikasi atau bagaimana supaya kita dapat mengakses Router Mikrotik ?&lt;/p&gt;
+
+&lt;p&gt;Langsung saja ya untuk mengakses router pertama kali, ada banyak cara yang bisa kita gunakan, berikut ini beberapa cara mengakses router, diantaranya adalah:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk mengakses Mikrotik Routherboard ataupun Mikrotik RouterOS yang baru, atau yang sudah tereset, memiliki default konfigurasi IP pada Ether1 yaitu 192.168.88.1 / 24, dengan default username yaitu Username: admin, dan Password: (Kosong).&lt;/p&gt;
+
+&lt;p&gt;Ada 4 cara untuk megakses MikroTik Router yang biasa atau umumnya digunakan untuk mengakses yaitu:&lt;/p&gt;
+
+&lt;h3 id=&#34;via-console-command-mikrotik&#34;&gt;Via Console/Command Mikrotik&lt;/h3&gt;
+
+&lt;p&gt;Kita bisa mengakses Mikrotik menggunakan console atau shell ataupun remote akses menggunakan Applikasi PUTTY (&lt;a href=&#34;http://www.putty.org/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.putty.org/&lt;/a&gt;). Applikasi Putty ini bisa Anda install dan digunakan di  MSI (‘Windows Installer’) dan Unix source archive. Sekarang kita coba akses Mikrotik dengan Putty, caranya tinggal masukkan alamat IP Mikrotik ke kolom Host Name nya Putty&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka akan tampil seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Perlu Anda ketahui apabila anda meremote Mikrotik menggunakan Putty Anda harus memasukkan perintah atau command.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini tips supaya kita lebih gampang, dan menghemat waktu, tenaga serta lebih efisien megurangi kesalahan-kesalahan, untuk mengkonfigurasi Mikrotik menggunakan Command.&lt;/p&gt;
+
+&lt;p&gt;Tipsnya yaitu “Memanfaatkan auto complete” (seperti bash auto complete di linux) Tekan Tombol Tab di pada keyboard untuk mengetahui atau melengkapi daftar perintah selanjutnya. sebagai contoh jika Anda ingin masuk ke menu IP Address kita tinggal ketikkan perintah ip add &amp;gt; lalu tekan TAB &amp;gt; maka otomatis shell akan melengkapinya menjadi Ip Address. Untuk kembali ke sub mneu ketikkan perintah “ . . ” (titik dua), Untuk kembali ke menu root ketikkan perintah “ / ”&lt;/p&gt;
+
+&lt;h3 id=&#34;via-web-browser&#34;&gt;Via Web Browser&lt;/h3&gt;
+
+&lt;p&gt;Apabila kita tidak mempunyai aplikasi pendukung mikrotik sama sekali, Anda tidak perlu berkecil hati karena mikrotik juga bisa anda remote via web browser dengan port 80 pada bworser.Contoh : Ketikkan ip mikrotik kita di browser, disini ip mikrotik kami 192.168.88.2&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Isikan Usernama (Login)=(disesuaikan) default dari Mikrotik yaitu admin, setelah itu masukkan Password (sesuaikan dengan password Router) default password Mikrotik (kosong)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cara ini merupakan cara yang paling mudah, dari pada kita harus menggunakan aplikasi pendukung yang biasanya akan terjadi masalah atau error yng lebih banyak dari aplikasinya tersebut.&lt;/p&gt;
+
+&lt;h3 id=&#34;via-winbox&#34;&gt;Via Winbox&lt;/h3&gt;
+
+&lt;p&gt;Apa itu Winbox ? Winbox merupakan tools untuk me-remote Mikrotik yang paling populer dan selalu up to date, winbox (utility kecil di windows yang sangat praktis dan cukup mudah diguankan),  winbox juga bisa berjalan di linux bisa memakai Wine untuk menjalankannya bisa juga langsung di install di sistem operasi tersebut. Winbox salah satu tools yang bersifat GUI (Grafik User Interface). Berikut ini tampilan awal dari winbox:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Winbox akan mendeteksi mikrotik yang sudah di install atau sudah terkoneksi ke laptop atau komputer asal masih dalam satu network atau jaringan, biasanya Winbox akan mendeteksi alamat Mac Address dari ethernet yang terpasang di mikrotik. Kita bisa mengakses Mikrotik menggunakan winbox dengan menggunakan alamat IP Address Mikrotik maupun Mac Asdressnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;via-telnet&#34;&gt;Via Telnet&lt;/h3&gt;
+
+&lt;p&gt;Mikrotik juga dapat kita remote menggunakan Telnet melalui program aplikasi “command prompt” (cmd) yang sudah tersedia di sistem operasi windows, Tapi tidak direkomendasikan menggunakan Telnet dalam jaringan karena masalah keamanannya.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Catatan Akhir Tahun 2018</title>
+      <link>http://infone.info/about/about1/</link>
+      <pubDate>Fri, 05 Jul 2019 19:55:04 +0700</pubDate>
+      
+      <guid>http://infone.info/about/about1/</guid>
+      <description>&lt;p&gt;Hello guys, ini sebenarnya sudah di posting di sosial media ku hehe tapi sekarang aku bookmark lagi aja di website personal biar aman hihihi :)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/catatan%20akhir%20tahun/1.png&#34; alt=&#34;Ngapa Yakk&#34; title=&#34;Ini Aku&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“Selamat malam tahun masehi yang akan berakhir, yang mengajarkan ku nikmatnya mengikhlaskan takdir. Yang ku paham sejak dulu, setiap pertemuan akan bertakdir pada perpisahan. Pahit memang, namun, manis jika diikhlaskan. Banyak yang lalu lalang lalu menghilang. Namun, tak sedikitpula yang memutuskan menetap, namun tak seatap. Perpisahan tak selamanya pahit, tapi memang sakit untuk awal hidup yang akan ku rakit. Lara ini mengajarkan ku tentang segala rasa, yang saat ini membentuk asa, yang jua takkan ku biarkan sia-sia. Kisah ini kutuliskan dengan segenap rasa.&lt;/p&gt;
+
+&lt;p&gt;2009-2017, 9 tahun perjalanan hebatku tanpa sosoknya. Ya, umi. Abah dan umi memutuskan berpisah karena tuntutan keadaan yang ada. Tak banyak tau ku sebab dan prihal apa yang menyebabkan keluarga ini tidak sejalan dengan semestinya. Namun, takdir memang begitu hebat saat itu memberiku segala tantangan jua cobaan. Sejak itu, umi tak pernah mencari tau tentang anak-anaknya. Selayaknya menghilang dari permukaan bumi, namun dimana pun dia berada harapku dia masih disana menanti. Dan, harapku benar saja, usaha juga tau kepada siapa dia akan berikan hasil. Februari 2018, aku menemukan kembali kontak umi, namun, kembali lagi sampai detik ini pertemuan belum bersahabat untuk kita bertatap muka kembali.&lt;/p&gt;
+
+&lt;p&gt;Sejak kecil aku sudah ditinggal abah bekerja di negeri orang, iya, abah sebagai TKI disana. Namun 2011 setelah perpisahan itu terjadi, abah kembali ke tanah air, tidak lama, namun cukup mengobati hidup ku yang saat itu bergantung pada bibi dan paman yang ikhlas merawatku. 3 bulan berlalu, abah memutuskan kembali menjadi TKI, saat itu aku yang sudah terbiasa tanpa abah, tak punya rasa sedih yang terlalu saat akan ditinggalkan. 6 tahun berlalu, abah kembali ke tanah air, disaat aku sudah beranjak dewasa. Namun, abah kembali dengan penyakit yang ia derita. Berita kepulangannya sempat tidak ku ketahui karena aku masih praktek kerja lapangan di luar kota.&lt;/p&gt;
+
+&lt;p&gt;Satu minggu sebelum kepulangan ku, aku baru mengetahui jika abah sudah dirumah dan sedang sakit. Sesampai dirumah, inginku berbincang lebih banyak lagi bersama abah, namun melihat keadaannya yang tidak memungkinkan, aku memutuskan untuk berbicara seperlunya saja. Selama 6 bulan lamanya abah berketergantungan obat. 3 bulan pertama masih bisa bertahan dirumah, 2 bulan setelahnya abah dilarikan kerumah sakit terdekat dan di rawat intensif disana, dan daya tahan tubuhnya terus berkurang, membuatnya harus di pindahkan ke rumah sakit yang lebih memadai. Abah kembali harus dirawat intensif dirumah sakit ini, namun, setelah abah berusaha melawan sakitnya ia kalah, ia harus di larikan keruangan Intensive Care Unit (ICU), yang perawatan dan penjagaannya lebih ketat lagi. 4 hari lamanya abah di dalam sana, hanya pihak dokter saja yang boleh lalulalang di ruangan ini, pihak keluarga hanya diberikan kesempatan sekali sehari, itu pun jika sudah terlalu urgent.&lt;/p&gt;
+
+&lt;p&gt;16 Mei 2017. Ini adalah titik terhancur dalam hidup ku, bagaimana mungkin esok saatnya Seleksi Bersama Masuk Perguruan Tinggi Nasional pagi dini hari abah meninggal dunia. Rasanya seperti semua mimpi yang sudah ku rakit gagal. Seperti merasakan hidup yang akan hancur kedepannya. Seperti tidak ada harapan lagi untuk kehidupanku yang layak. Semangat yang membara untuk menghadapi tes seketika hilang, iya ini adalah titik terlemah ku sebagai manusia lemah. Mungkin sebagian orang akan mengatakan ini hal yang berlebihan namun, inilah yang kurasakan pasti mengenai segala hal yang hilang saat itu.&lt;/p&gt;
+
+&lt;p&gt;Waktu kian berlalu, hidup terus berjalan kembali tanpa abah, tanpa umi, mau tidak mau. suka tidak suka. Bersama semangat yang ku coba bakar lagi, hidup ku harus tetap berjalan dengan semestinya. Walau kesempatan masuk PTN ku gagal, walau abah kembali pergi namun pergi kali ini abadi, seperti kepergiannya kasih sayang untuknya pun akan tetap abadi. Perlahan aku bangkit dari segala hal yang membuatku lupa akan indahnya cobaan dari Allah. Karena aku percaya bersama kesulitan ada kemudahan, itulah janji Allah pada ummatnya.&lt;/p&gt;
+
+&lt;p&gt;Saat ini semua berjalan dengan semestinya, walau hal-hal menyakitkan itu datang ditahun sebelumnya, namun itulah yang membawa ku lebih baik di tahun ini, masih banyak yang kurang untuk hidupku yang fana ini, banyak pelajaran yang ku ambil dari perginya orang-orang yang sangat kubutuhkan, takdir ku kuat, Allah mengajarkan ku hidup tanpa mereka. Tahun ini, ku ikhlaskan segala yang terjadi, karena melupakan bukanlah cara yang tepat untuk menghilangkan dari ingatan, bagaimana pun kisah ini akan melakat, namun, aku sudah mengikhlaskan.&lt;/p&gt;
+
+&lt;p&gt;Mungkin jalan menuju sukses ku kali ini berbeda dengan teman-teman ku yang diiringi di damping oleh kehangatan keluarga, namun, setidaknya dari hatiku yang paing dalam, aku berhasil membuktikan, aku tanpa kehangatan keluarga sekali pun bisa hidup walau jatuh dan banyak luka. Dan tidak ada luka yang tak sakit, namun sakit tidak ada pula yang abadi, hanya kematian yang akan abadi. Tidak ada satupun yang bisa menghalangi jalan ikhlasmu menuju kesuksesan dan menggapai impian, kecuali dirimu sendiri mu sendrilah yang menghalanginya, percaya Allah, percayakan dia punya hal hebat untuk kau jumpai. Menguatlah untuk jadi yang terhebat “&lt;/p&gt;
+
+&lt;p&gt;Inilah kisahku mana kisah mu !&lt;/p&gt;
+
+&lt;p&gt;Content Creator:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/catatan%20akhir%20tahun/photo_2019-07-05_20-06-52.jpg&#34; alt=&#34;Septia Adelia Amin&#34; title=&#34;Septia Adelia Amin&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Siapa Saya ?</title>
+      <link>http://infone.info/about/about/</link>
+      <pubDate>Fri, 05 Jul 2019 19:52:50 +0700</pubDate>
+      
+      <guid>http://infone.info/about/about/</guid>
+      <description>&lt;p&gt;Hi, Saya Nur Hamim.&lt;/p&gt;
 </description>
     </item>
     

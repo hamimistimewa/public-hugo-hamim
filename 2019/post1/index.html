@@ -9,8 +9,8 @@
   
   
   
-  <link rel="prev" href="http://infone.info/2019/artikel1/" />
   
+  <link rel="next" href="http://infone.info/2019/post2/" />
   <link rel="canonical" href="http://infone.info/2019/post1/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           Alias Login SSH di Linux | Catatan Cah Ndeso :)
+           Cara Mengakses Mikrotik | Catatan Cah Ndeso :)
        
   </title>
-  <meta name="title" content="Alias Login SSH di Linux | Catatan Cah Ndeso :)">
+  <meta name="title" content="Cara Mengakses Mikrotik | Catatan Cah Ndeso :)">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "http:\/\/infone.info"
     },
     "articleSection" : "posts",
-    "name" : "Alias Login SSH di Linux",
-    "headline" : "Alias Login SSH di Linux",
-    "description" : "Pada kesempatan kali ini topik yang akan kita bahas masih sama yaitu tentang SSH, sebelumnya kita telah mempelajari bagaimana cara melihat log di SSH.\nNah kali ini kita akan belajar cara bagaimana cara membuat alias atau modifikasi untuk login ssh di linux.\nManfaat yang didatpakan yaitu Anda dapat mempermudah akses SSH dengan menggunakana nama yang Anda inginkan tanpa perlu mengetikkan perintah ssh roo@IP_Adress kembali.\nOke langsung saja yaa ke tahapan – tahapan membuat alias untuk login SSH di Linux.",
+    "name" : "Cara Mengakses Mikrotik",
+    "headline" : "Cara Mengakses Mikrotik",
+    "description" : "Kali ini saya akan share bagaimana cara dan menggunakan aplikasi atau bagaimana supaya kita dapat mengakses Router Mikrotik ?\nLangsung saja ya untuk mengakses router pertama kali, ada banyak cara yang bisa kita gunakan, berikut ini beberapa cara mengakses router, diantaranya adalah:\nUntuk mengakses Mikrotik Routherboard ataupun Mikrotik RouterOS yang baru, atau yang sudah tereset, memiliki default konfigurasi IP pada Ether1 yaitu 192.168.88.1 \/ 24, dengan default username yaitu Username: admin, dan Password: (Kosong).",
     "inLanguage" : "en-us",
     "author" : "[Nur Hamim]",
     "creator" : "[Nur Hamim]",
@@ -54,11 +54,11 @@
     "accountablePerson" : "[Nur Hamim]",
     "copyrightHolder" : "[Nur Hamim]",
     "copyrightYear" : "2019",
-    "datePublished": "2019-07-05 18:13:02 \x2b0700 WIB",
-    "dateModified" : "2019-07-05 18:13:02 \x2b0700 WIB",
+    "datePublished": "2019-07-05 21:39:15 \x2b0700 WIB",
+    "dateModified" : "2019-07-05 21:39:15 \x2b0700 WIB",
     "url" : "http:\/\/infone.info\/2019\/post1\/",
-    "wordCount" : "226",
-    "keywords" : [ "LINUX","SSH", "Catatan Cah Ndeso :)"]
+    "wordCount" : "502",
+    "keywords" : [ "Network","Mikrotik", "Catatan Cah Ndeso :)"]
 }
 </script>
 
@@ -116,7 +116,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Alias Login SSH di Linux</h1>
+        <h1 class="post-title" itemprop="name headline">Cara Mengakses Mikrotik</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="http://infone.info" rel="author">[Nur Hamim]</a> with ♥ 
                 <span class="post-time">
@@ -125,7 +125,7 @@
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="http://infone.info/categories/linux/"> LINUX </a>
+                        <a href="http://infone.info/categories/networking/"> NETWORKING </a>
                         
                 </span>
         </div>
@@ -148,44 +148,59 @@
           
           
 
-          <p>Pada kesempatan kali ini topik yang akan kita bahas masih sama yaitu tentang SSH, sebelumnya kita telah mempelajari bagaimana cara melihat log di SSH.</p>
+          
 
-<p>Nah kali ini kita akan belajar cara bagaimana cara membuat alias atau modifikasi untuk login ssh di linux.</p>
+<p>Kali ini saya akan share bagaimana cara dan menggunakan aplikasi atau bagaimana supaya kita dapat mengakses Router Mikrotik ?</p>
 
-<p>Manfaat yang didatpakan yaitu Anda dapat mempermudah akses SSH dengan menggunakana nama yang Anda inginkan tanpa perlu mengetikkan perintah ssh roo@IP_Adress kembali.</p>
+<p>Langsung saja ya untuk mengakses router pertama kali, ada banyak cara yang bisa kita gunakan, berikut ini beberapa cara mengakses router, diantaranya adalah:</p>
 
-<p>Oke langsung saja yaa ke tahapan – tahapan membuat alias untuk login SSH di Linux.</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p>Pertama, membuat sebuah file konfigurasi untuk meyimpan aliases ssh , di direktori /home/namauser/.ssh/ seperti berikut :</p>
+<p>Untuk mengakses Mikrotik Routherboard ataupun Mikrotik RouterOS yang baru, atau yang sudah tereset, memiliki default konfigurasi IP pada Ether1 yaitu 192.168.88.1 / 24, dengan default username yaitu Username: admin, dan Password: (Kosong).</p>
 
-<pre><code>$ sudo vim ~/.ssh/config 
-</code></pre>
+<p>Ada 4 cara untuk megakses MikroTik Router yang biasa atau umumnya digunakan untuk mengakses yaitu:</p>
 
-<p>Kedua, isikan file config tersebut seperti pada gambar berikut :</p>
+<h3 id="via-console-command-mikrotik">Via Console/Command Mikrotik</h3>
 
-<p><figure><img src="/images/ring.svg" data-src="https://lh3.googleusercontent.com/tqwxVZg6HtxgD9-31mfunQIrvosoKqxFEifS3MDNQBztrwRewCkt4EKVS-OnQnStuWrm1QEeuvqpps3i-U5FH7-TdzoRMPFsWX3HAQdHWSIjWDsLnNTDdjaq_crLMmDIjPPJ_3gNCGZNGBWE47CmIhHB9Tn0Gvr0XnCuD21Zk61g-kl7vQhBQIGaugbauMMe-8XRFmMFkJswoEygjCSXfe7CWayflsfjQ2NwKj1muH5mfFuhSFIsyeud2GwlA6frcFVpaPB_Aa7ReBrHyDReszYEzik2DYjgBkImPBFeAoCC89EWX9sBz76YOUkYNEcimVw_HPxcTDFCNOIa-uSguL-OjM4x-NEoKViDp_gXtW5LfRDXl0hRfPBsfbcSXd6X2XRiGCUHrf9TECrk683gmJIYM4v9h6pSiUv_r6d5wh-5kMU0mj0C8l0y4lx0SxqRoIUM0njelWMLvGK3vqU5dxWTjcNylk9fqwEh0HC6pZq9_UBFkkRAUv2Xe6GFfdtifYDXpeJtwNgLayx0kuCIGQHkeRpbihouXp2kIjn1g83dCZEGq7RJEMMIIXjCW1m8NUzHiYTert_-DDoh9T1wJYuGGgBaAouImcAx7uX48PapphwW2zsRwUf0qxCthA5KeO29ySfwgVyPl194eTbw3KJqrXIdLA=w929-h398-no" data-sizes="auto" alt="Gambar 1" title="Gambar 1" class="lazyload"><figcaption class="image-caption">Gambar 1</figcaption></figure></p>
+<p>Kita bisa mengakses Mikrotik menggunakan console atau shell ataupun remote akses menggunakan Applikasi PUTTY (<a href="http://www.putty.org/" rel="nofollow noreferrer" target="_blank">http://www.putty.org/</a>). Applikasi Putty ini bisa Anda install dan digunakan di  MSI (‘Windows Installer’) dan Unix source archive. Sekarang kita coba akses Mikrotik dengan Putty, caranya tinggal masukkan alamat IP Mikrotik ke kolom Host Name nya Putty</p>
 
-<p>Keterangan :</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p>Host : Nama yang ingin dipanggil atau yang ingin digunakan untuk mengakses ssh</p>
+<p>Maka akan tampil seperti pada gambar dibawah ini</p>
 
-<p>User : Merupakan user ssh, gambar diatas menggunakan root . Untuk user bersifat bebas menyesuaikan dengan user ssh  Anda.</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p>Hostname : Merupakan alamat dari server yang ingin kita remote</p>
+<p>Perlu Anda ketahui apabila anda meremote Mikrotik menggunakan Putty Anda harus memasukkan perintah atau command.</p>
 
-<p>Port : Isikan port ssh Anda.</p>
+<p>Berikut ini tips supaya kita lebih gampang, dan menghemat waktu, tenaga serta lebih efisien megurangi kesalahan-kesalahan, untuk mengkonfigurasi Mikrotik menggunakan Command.</p>
 
-<p>IdentityFile : sama seperti port, namun disini digunakan apabila Anda menggunakan ssh key.</p>
+<p>Tipsnya yaitu “Memanfaatkan auto complete” (seperti bash auto complete di linux) Tekan Tombol Tab di pada keyboard untuk mengetahui atau melengkapi daftar perintah selanjutnya. sebagai contoh jika Anda ingin masuk ke menu IP Address kita tinggal ketikkan perintah ip add &gt; lalu tekan TAB &gt; maka otomatis shell akan melengkapinya menjadi Ip Address. Untuk kembali ke sub mneu ketikkan perintah “ . . ” (titik dua), Untuk kembali ke menu root ketikkan perintah “ / ”</p>
 
-<p>Bagi Anda yang belum tau bagaimana cara membuat ssh key di linux silakan baca terlebih dahulu dengan cara klik <a href="https://www.nurhamim.net/menggunakan-ssh-key-di-linux/" rel="nofollow noreferrer" target="_blank">DISINI🙂</a></p>
+<h3 id="via-web-browser">Via Web Browser</h3>
 
-<p>Apabila Anda telah membuat konfigurasinya, silakan simpan konfigurasi tersebut lalu coba akses ssh Anda menggunakan Host . Berikut hasilnya :</p>
+<p>Apabila kita tidak mempunyai aplikasi pendukung mikrotik sama sekali, Anda tidak perlu berkecil hati karena mikrotik juga bisa anda remote via web browser dengan port 80 pada bworser.Contoh : Ketikkan ip mikrotik kita di browser, disini ip mikrotik kami 192.168.88.2</p>
 
-<p><figure><img src="/images/ring.svg" data-src="https://lh3.googleusercontent.com/t2xpl2CmgPfYaMbFh7j6l1T1d2Hvwqy_vBeloMXknHxoxtPXcgHEAyhCZGDTe8JwPpElnzcGSaLs4uSdCmTLMWOCgx_fkbT9drJPteB7DjzNeOSuU1UsaGz2HbliYlK38DrAVB4Q8m6LHY970eB3TG6qWu7oH-PB_2hRHuViHTFWKO-gtAKrSQ--NR4KOX7bYeNK4MlABvYL1ijRD0Sv0n7oKzjZhRvDQ816rpId1RSsLFwHE1g74L0PDbpwT7QBFDasBrb5YfvmzV_jNwxj45KRixVzdFtWEEbuMJ-8p-_9v3co0MIo8w1NeYgY-tTSgZNcfgmxV-6rdd2EfFbWIS-WKlzs3a2rBL2zgLBAlTx3RfUDL5As2erLtHILUKQo22Xd8hayNN9CeqDu7QDw3ztjrlJsJpaFPGuNmihTJNhA-4GRPVRtHKXJqaYJ8XcUncrLOOuD_abpv8qmjqWjGRMJRya1Rbp81pNeEV9C4RGJ5hLIyqo7T0TV3GpN-My3pP0I0MiBdmEteTWppw2XIzQGVbb_qTH6Xsh43B9Nff20sX_Nu0w1uVGBNIKcEzKyIvJr4M8ajweaucnW6_VvV8QuOVhsS9WukoaVhfH8J0T6Dyl9-Ian4_BlW8_gvh-efhFvnRvgMq19-qbrcljHT-TFSQoKiA=w929-h398-no" data-sizes="auto" alt="Gambar 2" title="Gambar 2" class="lazyload"><figcaption class="image-caption">Gambar 2</figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p>Itulah cara singkat bagi kita untuk menggunakan ssh secara praktis.</p>
+<p>Isikan Usernama (Login)=(disesuaikan) default dari Mikrotik yaitu admin, setelah itu masukkan Password (sesuaikan dengan password Router) default password Mikrotik (kosong)</p>
 
-<p>Selamat mencoba semoga bermanfaat</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Cara ini merupakan cara yang paling mudah, dari pada kita harus menggunakan aplikasi pendukung yang biasanya akan terjadi masalah atau error yng lebih banyak dari aplikasinya tersebut.</p>
+
+<h3 id="via-winbox">Via Winbox</h3>
+
+<p>Apa itu Winbox ? Winbox merupakan tools untuk me-remote Mikrotik yang paling populer dan selalu up to date, winbox (utility kecil di windows yang sangat praktis dan cukup mudah diguankan),  winbox juga bisa berjalan di linux bisa memakai Wine untuk menjalankannya bisa juga langsung di install di sistem operasi tersebut. Winbox salah satu tools yang bersifat GUI (Grafik User Interface). Berikut ini tampilan awal dari winbox:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Winbox akan mendeteksi mikrotik yang sudah di install atau sudah terkoneksi ke laptop atau komputer asal masih dalam satu network atau jaringan, biasanya Winbox akan mendeteksi alamat Mac Address dari ethernet yang terpasang di mikrotik. Kita bisa mengakses Mikrotik menggunakan winbox dengan menggunakan alamat IP Address Mikrotik maupun Mac Asdressnya.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20mengakses%20mikrotik/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="via-telnet">Via Telnet</h3>
+
+<p>Mikrotik juga dapat kita remote menggunakan Telnet melalui program aplikasi “command prompt” (cmd) yang sudah tersedia di sistem operasi windows, Tapi tidak direkomendasikan menggunakan Telnet dalam jaringan karena masalah keamanannya.</p>
 
     </div>
 
@@ -212,11 +227,11 @@
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="http://infone.info/tags/linux/">
-                    #LINUX</a></span>
+            <span class="tag"><a href="http://infone.info/tags/network/">
+                    #Network</a></span>
             
-            <span class="tag"><a href="http://infone.info/tags/ssh/">
-                    #SSH</a></span>
+            <span class="tag"><a href="http://infone.info/tags/mikrotik/">
+                    #Mikrotik</a></span>
             
             </section>
         
@@ -227,9 +242,9 @@
     </div>
 
     <div class="post-nav">
-        
-        <a href="http://infone.info/2019/artikel1/" class="prev" rel="prev" title="Artikel1"><i class="iconfont icon-left"></i>&nbsp;Artikel1</a>
          
+        
+        <a href="http://infone.info/2019/post2/" class="next" rel="next" title="Memberi Nama Router Mikrotik">Memberi Nama Router Mikrotik&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -255,7 +270,7 @@
          
 
          
-		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
     </div>
 </footer>
 

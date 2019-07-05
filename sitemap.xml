@@ -2,9 +2,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://infone.info/2019/post1/</loc>
+      <loc>http://infone.info/2019/post5/</loc>
       
-      <lastmod>2019-07-05T18:13:02+07:00</lastmod>
+      <lastmod>2019-07-05T21:39:46+07:00</lastmod>
       
       
       
@@ -14,7 +14,7 @@
     <url>
       <loc>http://infone.info/</loc>
       
-      <lastmod>2019-07-05T18:13:02+07:00</lastmod>
+      <lastmod>2019-07-05T21:39:46+07:00</lastmod>
       
       
       
@@ -26,7 +26,7 @@
     <url>
       <loc>http://infone.info/categories/</loc>
       
-      <lastmod>2019-07-05T18:13:02+07:00</lastmod>
+      <lastmod>2019-07-05T21:39:46+07:00</lastmod>
       
       
       
@@ -36,9 +36,9 @@
     </url>
   
     <url>
-      <loc>http://infone.info/categories/linux/</loc>
+      <loc>http://infone.info/tags/mikrotik/</loc>
       
-      <lastmod>2019-07-05T18:13:02+07:00</lastmod>
+      <lastmod>2019-07-05T21:39:46+07:00</lastmod>
       
       
       
@@ -48,9 +48,21 @@
     </url>
   
     <url>
-      <loc>http://infone.info/tags/linux/</loc>
+      <loc>http://infone.info/categories/networking/</loc>
       
-      <lastmod>2019-07-05T18:13:02+07:00</lastmod>
+      <lastmod>2019-07-05T21:39:46+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://infone.info/tags/network/</loc>
+      
+      <lastmod>2019-07-05T21:39:46+07:00</lastmod>
       
       
       
@@ -62,19 +74,7 @@
     <url>
       <loc>http://infone.info/posts/</loc>
       
-      <lastmod>2019-07-05T18:13:02+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>http://infone.info/tags/ssh/</loc>
-      
-      <lastmod>2019-07-05T18:13:02+07:00</lastmod>
+      <lastmod>2019-07-05T21:39:46+07:00</lastmod>
       
       
       
@@ -86,7 +86,7 @@
     <url>
       <loc>http://infone.info/tags/</loc>
       
-      <lastmod>2019-07-05T18:13:02+07:00</lastmod>
+      <lastmod>2019-07-05T21:39:46+07:00</lastmod>
       
       
       
@@ -96,9 +96,9 @@
     </url>
   
     <url>
-      <loc>http://infone.info/2019/artikel1/</loc>
+      <loc>http://infone.info/2019/post4/</loc>
       
-      <lastmod>2019-07-05T17:10:41+07:00</lastmod>
+      <lastmod>2019-07-05T21:39:29+07:00</lastmod>
       
       
       
@@ -106,9 +106,39 @@
     </url>
   
     <url>
-      <loc>http://infone.info/tags/unix/</loc>
+      <loc>http://infone.info/2019/post3/</loc>
       
-      <lastmod>2019-07-05T17:10:41+07:00</lastmod>
+      <lastmod>2019-07-05T21:39:27+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://infone.info/2019/post2/</loc>
+      
+      <lastmod>2019-07-05T21:39:24+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://infone.info/2019/post1/</loc>
+      
+      <lastmod>2019-07-05T21:39:15+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://infone.info/about/</loc>
+      
+      <lastmod>2019-07-05T19:55:04+07:00</lastmod>
       
       
       
@@ -118,21 +148,19 @@
     </url>
   
     <url>
-      <loc>http://infone.info/tags/virtualisasi/</loc>
+      <loc>http://infone.info/about/about1/</loc>
       
-      <lastmod>2019-07-05T17:10:41+07:00</lastmod>
+      <lastmod>2019-07-05T19:55:04+07:00</lastmod>
       
       
-      
-      <priority>0</priority>
       
       
     </url>
   
     <url>
-      <loc>http://infone.info/2019/artikel/</loc>
+      <loc>http://infone.info/about/about/</loc>
       
-      <lastmod>2019-07-05T17:10:32+07:00</lastmod>
+      <lastmod>2019-07-05T19:52:50+07:00</lastmod>
       
       
       

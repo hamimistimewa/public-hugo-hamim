@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="http://infone.info/2019/post3/" />
+  <link rel="next" href="http://infone.info/2019/post5/" />
+  <link rel="canonical" href="http://infone.info/2019/post4/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Backup, Import, Export, Konfigurasi Di Mikrotik | Catatan Cah Ndeso :)
+       
+  </title>
+  <meta name="title" content="Cara Backup, Import, Export, Konfigurasi Di Mikrotik | Catatan Cah Ndeso :)">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/infone.info"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Backup, Import, Export, Konfigurasi Di Mikrotik",
+    "headline" : "Cara Backup, Import, Export, Konfigurasi Di Mikrotik",
+    "description" : "Banyak dari sebagian orang tidak menyadari dan kurang memperhatikan teutuhan dari settingan Router Mikrotik, Sebenarnya Mikrotik sudah disetting berbagai macam jenis konfigurasi, apabila suatu ketika router tersebut mengalami masalah error atau sejenisnya, ini akan menyebabkn masalah, untuk mengatasi masalah tersebut agar settingan kita di Router mikrotk tidak hilang, Mikrotik menyediakan tempat Import, Export, dan juga Backup.\nAda 2 metode untuk menyimpan sebuah konfigurasi Router Mikrotik, diantaranya yaitu :\n Export dan Import.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-05 21:39:29 \x2b0700 WIB",
+    "dateModified" : "2019-07-05 21:39:29 \x2b0700 WIB",
+    "url" : "http:\/\/infone.info\/2019\/post4\/",
+    "wordCount" : "552",
+    "keywords" : [ "Network","Mikrotik", "Catatan Cah Ndeso :)"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://infone.info">Catatan Cah Ndeso :)</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://infone.info">Catatan Cah Ndeso :)</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Backup, Import, Export, Konfigurasi Di Mikrotik</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://infone.info" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-05 itemprop="datePublished">July 5, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="http://infone.info/categories/networking/"> NETWORKING </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>Banyak dari sebagian orang tidak menyadari dan kurang memperhatikan teutuhan dari settingan Router Mikrotik, Sebenarnya Mikrotik sudah disetting berbagai macam jenis konfigurasi, apabila suatu ketika router tersebut mengalami masalah error atau sejenisnya, ini akan menyebabkn masalah, untuk mengatasi masalah tersebut agar settingan kita di Router mikrotk tidak hilang, Mikrotik menyediakan tempat Import, Export, dan juga Backup.</p>
+
+<p>Ada 2 metode untuk menyimpan sebuah konfigurasi Router Mikrotik, diantaranya yaitu :</p>
+
+<ol>
+<li>Export dan Import.</li>
+<li>Backup dan Restore.</li>
+</ol>
+
+<p>Perbedaan dari keduanya diantaranya:</p>
+
+<ol>
+<li>Apabila File hasil backup tidak bisa dibukak di notepad, Tex Editor PC, sedangkan file hasil export bisa dibukak.</li>
+<li>File hasil export akan berisi script konfigurasi atau settingan router mikrotik yang bisa langsung kita copy paste dan dieksekusi di terminal Mikrotik</li>
+<li>Untuk Export dan Import, menggunakan format .rsc sedangkan Bacukp dan Restore menggunakan format .backup</li>
+</ol>
+
+<p>Sekarang kita akan mencoba cara yang pertama, yaitu cara Export dan Import dimana cara ini hanya bisa membuat dengan menggunakan command line interface (CLI) di terminal Mikrotik, tidak bisa dengan GUI. Sekarang kita akan mencoba untuk meng Export konfigurasi dari hotspot.</p>
+
+<h3 id="export-dan-import">Export dan Import</h3>
+
+<p>Langkah pertama, kita bukak New Terminal, setelah itu ketikkan perintah:</p>
+
+<pre><code class="language-bash">[admin@Mikrotik]&gt;ip hotspot
+[admin@Mikrotik]/ip hotspot&gt; export file=(isikan Nam file Export) 
+</code></pre>
+
+<p>Contoh :</p>
+
+<pre><code class="language-bash">[admin@Mikrotik]/ip hotspot&gt; export file=Hamim-Export
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sekarang kita lihat hasil dari file export hotspot yang barusan kita export, masuk ke menu FIles. Menu Files ini dimana tempat untuk penyimpanan dari Export dan Backup, meskipun Router di reset, semua data yang ada di menu Files tidak akan hilang.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Seperti pada gambar di atas hasil menu export nya sudah tersimpan di menu Files dengan format .rsc, saatnya kita pindahkan data Export ke Komputer anda masing – masing. Apabila anda menggunakan sistem operasi selain windows contoh seperti linux, kita harus mengintall applikasi FTP atau FileZilla untuk mengambil file nya. Untuk pengguna windows tinggal di drag and drop. Disini kami menggunakan FileZilla untuk mengambil file Exportnya.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sekarang kita lihat di Folder apakah sudah ada file Hamim-Export.rsc</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure> &ldquo;&rdquo;)</p>
+
+<p>Sekarang kita mencoba untuk Import file Hamim-Export.rsc dengan cara copy file yang ada di komputer Anda, lalu Anda paste di menu Files Mikrotik.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah selanjutknya kita masuk ke menu New Terminal Mikrotik ketikkan perintah import file-name=Hamim-Export.rsc (Hamim-Export.rsc merupakan nama dari filenya).</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="backup-dan-restore">Backup dan Restore</h3>
+
+<p>Sebelumnya kita sudah belajar tentang Export dan Import. Sekarang kita akan membahas tentang Backup. Backup disini untuk menyimpan seluruh konfigurasi, tidak seperti Export yang bisa lebih spesifik. Untuk Backup ini Filenya tidak dapat di bukak dan diedit tidak seperti Export yang filenya dapat di buka melalui Text Editor. Berikut ini cara untuk membackup, dengan cara klik pada menu Files lalu klik Backup.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Setelah Anda klik Backup, Anda akan diminta untuk mengisikan Name dari file hasil backupnya, serta Anda juga diminta untuk mengisikan Password untuk keamanan file backupnya,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Klik Backup, silakan tunggu sampai Backupnya selesai, apabila sudah selesai maka file backupnya akan langsung tersedia di menu Files, seperti yang sudah di jelaskan di atas untuk format Export yaitu .rsc dan untuk format backup .backup, seperti pada gambar dibawah ini:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sekarang kita mencoba untuk memindahkan hasil  file backup yang ada di menu Files akan dipindahkan atau dicopy ke komputer lokal, supaya kita mempunya file backup dari router. Untuk pengguna Linux silakan menggunakan aplikasi FileZilla. Untuk pengguna windows bisa langsung di drag and drop.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/cara%20backup%2C%20import%20export%20konfigurasi/10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Oke, itulah cara untuk melakukan Backup dan Import serta Export sebuah konfigurasi di Mikrotik.</p>
+
+<p>Selamat mencoba semoga bermanfaat 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://infone.info/2019/post4/>http://infone.info/2019/post4/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://infone.info/tags/network/">
+                    #Network</a></span>
+            
+            <span class="tag"><a href="http://infone.info/tags/mikrotik/">
+                    #Mikrotik</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://infone.info">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://infone.info/2019/post3/" class="prev" rel="prev" title="Cara Enable, Disable dan Uninstall Paket Router Mikrotik"><i class="iconfont icon-left"></i>&nbsp;Cara Enable, Disable dan Uninstall Paket Router Mikrotik</a>
+         
+        
+        <a href="http://infone.info/2019/post5/" class="next" rel="next" title="Cara Melakukan Soft Dan Hard Reset Mikrotik RouterBoard">Cara Melakukan Soft Dan Hard Reset Mikrotik RouterBoard&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://infone.info">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
