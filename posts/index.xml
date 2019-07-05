@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jul 2019 17:10:41 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 18:13:02 +0700</lastBuildDate>
     
 	<atom:link href="http://infone.info/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Alias Login SSH di Linux</title>
+      <link>http://infone.info/2019/post1/</link>
+      <pubDate>Fri, 05 Jul 2019 18:13:02 +0700</pubDate>
+      
+      <guid>http://infone.info/2019/post1/</guid>
+      <description>Pada kesempatan kali ini topik yang akan kita bahas masih sama yaitu tentang SSH, sebelumnya kita telah mempelajari bagaimana cara melihat log di SSH.
+Nah kali ini kita akan belajar cara bagaimana cara membuat alias atau modifikasi untuk login ssh di linux.
+Manfaat yang didatpakan yaitu Anda dapat mempermudah akses SSH dengan menggunakana nama yang Anda inginkan tanpa perlu mengetikkan perintah ssh roo@IP_Adress kembali.
+Oke langsung saja yaa ke tahapan – tahapan membuat alias untuk login SSH di Linux.</description>
+    </item>
     
     <item>
       <title>Artikel1</title>

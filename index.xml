@@ -5,8 +5,55 @@
     <description>Recent content in Catatan Cah Ndeso :) on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jul 2019 17:10:41 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 18:13:02 +0700</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Alias Login SSH di Linux</title>
+      <link>http://infone.info/2019/post1/</link>
+      <pubDate>Fri, 05 Jul 2019 18:13:02 +0700</pubDate>
+      
+      <guid>http://infone.info/2019/post1/</guid>
+      <description>&lt;p&gt;Pada kesempatan kali ini topik yang akan kita bahas masih sama yaitu tentang SSH, sebelumnya kita telah mempelajari bagaimana cara melihat log di SSH.&lt;/p&gt;
+
+&lt;p&gt;Nah kali ini kita akan belajar cara bagaimana cara membuat alias atau modifikasi untuk login ssh di linux.&lt;/p&gt;
+
+&lt;p&gt;Manfaat yang didatpakan yaitu Anda dapat mempermudah akses SSH dengan menggunakana nama yang Anda inginkan tanpa perlu mengetikkan perintah ssh roo@IP_Adress kembali.&lt;/p&gt;
+
+&lt;p&gt;Oke langsung saja yaa ke tahapan – tahapan membuat alias untuk login SSH di Linux.&lt;/p&gt;
+
+&lt;p&gt;Pertama, membuat sebuah file konfigurasi untuk meyimpan aliases ssh , di direktori /home/namauser/.ssh/ seperti berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo vim ~/.ssh/config 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kedua, isikan file config tersebut seperti pada gambar berikut :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/tqwxVZg6HtxgD9-31mfunQIrvosoKqxFEifS3MDNQBztrwRewCkt4EKVS-OnQnStuWrm1QEeuvqpps3i-U5FH7-TdzoRMPFsWX3HAQdHWSIjWDsLnNTDdjaq_crLMmDIjPPJ_3gNCGZNGBWE47CmIhHB9Tn0Gvr0XnCuD21Zk61g-kl7vQhBQIGaugbauMMe-8XRFmMFkJswoEygjCSXfe7CWayflsfjQ2NwKj1muH5mfFuhSFIsyeud2GwlA6frcFVpaPB_Aa7ReBrHyDReszYEzik2DYjgBkImPBFeAoCC89EWX9sBz76YOUkYNEcimVw_HPxcTDFCNOIa-uSguL-OjM4x-NEoKViDp_gXtW5LfRDXl0hRfPBsfbcSXd6X2XRiGCUHrf9TECrk683gmJIYM4v9h6pSiUv_r6d5wh-5kMU0mj0C8l0y4lx0SxqRoIUM0njelWMLvGK3vqU5dxWTjcNylk9fqwEh0HC6pZq9_UBFkkRAUv2Xe6GFfdtifYDXpeJtwNgLayx0kuCIGQHkeRpbihouXp2kIjn1g83dCZEGq7RJEMMIIXjCW1m8NUzHiYTert_-DDoh9T1wJYuGGgBaAouImcAx7uX48PapphwW2zsRwUf0qxCthA5KeO29ySfwgVyPl194eTbw3KJqrXIdLA=w929-h398-no&#34; alt=&#34;Gambar 1&#34; title=&#34;Gambar 1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Keterangan :&lt;/p&gt;
+
+&lt;p&gt;Host : Nama yang ingin dipanggil atau yang ingin digunakan untuk mengakses ssh&lt;/p&gt;
+
+&lt;p&gt;User : Merupakan user ssh, gambar diatas menggunakan root . Untuk user bersifat bebas menyesuaikan dengan user ssh  Anda.&lt;/p&gt;
+
+&lt;p&gt;Hostname : Merupakan alamat dari server yang ingin kita remote&lt;/p&gt;
+
+&lt;p&gt;Port : Isikan port ssh Anda.&lt;/p&gt;
+
+&lt;p&gt;IdentityFile : sama seperti port, namun disini digunakan apabila Anda menggunakan ssh key.&lt;/p&gt;
+
+&lt;p&gt;Bagi Anda yang belum tau bagaimana cara membuat ssh key di linux silakan baca terlebih dahulu dengan cara klik &lt;a href=&#34;https://www.nurhamim.net/menggunakan-ssh-key-di-linux/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;DISINI🙂&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila Anda telah membuat konfigurasinya, silakan simpan konfigurasi tersebut lalu coba akses ssh Anda menggunakan Host . Berikut hasilnya :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/t2xpl2CmgPfYaMbFh7j6l1T1d2Hvwqy_vBeloMXknHxoxtPXcgHEAyhCZGDTe8JwPpElnzcGSaLs4uSdCmTLMWOCgx_fkbT9drJPteB7DjzNeOSuU1UsaGz2HbliYlK38DrAVB4Q8m6LHY970eB3TG6qWu7oH-PB_2hRHuViHTFWKO-gtAKrSQ--NR4KOX7bYeNK4MlABvYL1ijRD0Sv0n7oKzjZhRvDQ816rpId1RSsLFwHE1g74L0PDbpwT7QBFDasBrb5YfvmzV_jNwxj45KRixVzdFtWEEbuMJ-8p-_9v3co0MIo8w1NeYgY-tTSgZNcfgmxV-6rdd2EfFbWIS-WKlzs3a2rBL2zgLBAlTx3RfUDL5As2erLtHILUKQo22Xd8hayNN9CeqDu7QDw3ztjrlJsJpaFPGuNmihTJNhA-4GRPVRtHKXJqaYJ8XcUncrLOOuD_abpv8qmjqWjGRMJRya1Rbp81pNeEV9C4RGJ5hLIyqo7T0TV3GpN-My3pP0I0MiBdmEteTWppw2XIzQGVbb_qTH6Xsh43B9Nff20sX_Nu0w1uVGBNIKcEzKyIvJr4M8ajweaucnW6_VvV8QuOVhsS9WukoaVhfH8J0T6Dyl9-Ian4_BlW8_gvh-efhFvnRvgMq19-qbrcljHT-TFSQoKiA=w929-h398-no&#34; alt=&#34;Gambar 2&#34; title=&#34;Gambar 2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah cara singkat bagi kita untuk menggunakan ssh secara praktis.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Artikel1</title>
