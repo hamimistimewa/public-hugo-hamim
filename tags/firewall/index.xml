@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firewall on Catatan Cah Ndeso :)</title>
+    <link>http://nurhamim.net/tags/firewall/</link>
+    <description>Recent content in Firewall on Catatan Cah Ndeso :)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Jul 2019 04:50:13 +0700</lastBuildDate>
+    
+	<atom:link href="http://nurhamim.net/tags/firewall/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mengamankan SSH menggunakan Fail2ban</title>
+      <link>http://nurhamim.net/2019/centos6/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos6/</guid>
+      <description>Mengamankan sebuah service yang berada di server itu amatlah penting, apalagi server kita public dan siapa saja dapat mengaksesnya, dan yang paling rentan dalam isu hacking atau brutforce attack di VPS (Virtual Private Server) yaitu service ssh. Nah bagaimana cara mengamankan service ssh tersebut ?
+Sangat banyak cara yang dapat dilakukan untuk mengamankan ssh, salah satunya pada tutorial kali ini kita akan mengamankan service ssh dengan menggunakan aplikasi yang cukup powerfull yaitu Fail2ban .</description>
+    </item>
+    
+  </channel>
+</rss>

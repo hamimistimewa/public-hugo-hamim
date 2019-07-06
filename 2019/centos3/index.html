@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="http://nurhamim.net/2019/centos2/" />
+  <link rel="next" href="http://nurhamim.net/2019/centos4/" />
+  <link rel="canonical" href="http://nurhamim.net/2019/centos3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Mengubah Port SSH | Catatan Cah Ndeso :)
+       
+  </title>
+  <meta name="title" content="Cara Mengubah Port SSH | Catatan Cah Ndeso :)">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Mengubah Port SSH",
+    "headline" : "Cara Mengubah Port SSH",
+    "description" : "Pada tutorial sebelumnya saya telah menyampaikan bahwa secara default ssh menggunakan port 22, nah pada tutorial kali ini kita akan mempelajari bagaimana cara untuk memodifikasi atau mengubah port default ssh tersebut.\nSangat banyak manfaat yang didaptkan jika kita mengubah port default ssh salah satunya adalah melindungi service ssh kita dari serangan brutforce ssh yang sangat sering sekali terjadi.\nNamun terdapat juga kekurangannya yaitu jikalau kita lupa port ssh yang telah kita ubah sebelumnya yaa mau nggak mau kita tidak akan bisa login ke server 🙁",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 04:50:05 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 04:50:05 \x2b0700 WIB",
+    "url" : "http:\/\/nurhamim.net\/2019\/centos3\/",
+    "wordCount" : "233",
+    "keywords" : [ "SSH","CentOS 7","Linux", "Catatan Cah Ndeso :)"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Mengubah Port SSH</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="http://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Pada tutorial sebelumnya saya telah menyampaikan bahwa secara default ssh menggunakan port 22, nah pada tutorial kali ini kita akan mempelajari bagaimana cara untuk memodifikasi atau mengubah port default ssh tersebut.</p>
+
+<p>Sangat banyak manfaat yang didaptkan jika kita mengubah port default ssh salah satunya adalah melindungi service ssh kita dari serangan brutforce ssh yang sangat sering sekali terjadi.</p>
+
+<p>Namun terdapat juga kekurangannya yaitu jikalau kita lupa port ssh yang telah kita ubah sebelumnya yaa mau nggak mau kita tidak akan bisa login ke server 🙁</p>
+
+<p>Oke, berikut ini langkah – langkah untuk mengubah port ssh,</p>
+
+<p>Pertama, silakan masuk/ login ke server Anda terlebih dahulu</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Kedua, silakan buka konfigurasi ssh yang berada di direktori sshd_config, seperti berikut :</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# vim /etc/ssh/sshd_config
+</code></pre>
+
+<p>Disini kami menggunakan CentOS 7 dengan demikian untuk mengubah konfigurasinya bisa menggunakan editor vi atau vim atau bisa juga dengan nano . Jika sudah silakan cari port 22 seperti gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Ubah port 22 diatas sesuai dengan keinginan Anda, misalnya disini kami menggunakan port 22222,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah silakan simpan dan silakan restart service ssh Anda dengan menggunakan perintah systemctl restart sshd.service, seperti pada gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Ketiga, tahap pengujian silakan remote kembali ssh Anda secara manual tanpa port apapun seperti langkah pertama, hasilnya Anda tidak akan bisa login ke server</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya, coba login kembali dengan memberikan akhiran -p [port ssh] seperti pada gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selamat mencoba semoga bermanfaat yaa 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://nurhamim.net/2019/centos3/>http://nurhamim.net/2019/centos3/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/ssh/">
+                    #SSH</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://nurhamim.net/2019/centos2/" class="prev" rel="prev" title="Remote Server Menggunakan SSH Key Di Linux"><i class="iconfont icon-left"></i>&nbsp;Remote Server Menggunakan SSH Key Di Linux</a>
+         
+        
+        <a href="http://nurhamim.net/2019/centos4/" class="next" rel="next" title="Cara Melihat Log SSH">Cara Melihat Log SSH&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

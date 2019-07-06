@@ -9,9 +9,9 @@
   
   
   
-  <link rel="prev" href="http://nurhamim.net/2019/vim9/" />
-  <link rel="next" href="http://nurhamim.net/2019/centos1/" />
-  <link rel="canonical" href="http://nurhamim.net/2019/vim10/" />
+  <link rel="prev" href="http://nurhamim.net/2019/centos4/" />
+  <link rel="next" href="http://nurhamim.net/2019/centos6/" />
+  <link rel="canonical" href="http://nurhamim.net/2019/centos5/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           Insert Mode | Catatan Cah Ndeso :)
+           Alias Login SSH di Linux | Catatan Cah Ndeso :)
        
   </title>
-  <meta name="title" content="Insert Mode | Catatan Cah Ndeso :)">
+  <meta name="title" content="Alias Login SSH di Linux | Catatan Cah Ndeso :)">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "http:\/\/nurhamim.net"
     },
     "articleSection" : "posts",
-    "name" : "Insert Mode",
-    "headline" : "Insert Mode",
-    "description" : "Setelah sebelumnya kita telah membahas macam – macam tentang navigasi di Vim, saat ini kita akan berfokus kembali untuk mempelajari mode insert, pada bab awal sebelumnya kita telah mengenal tentang apa itu mode insert, jika kita ingin menulis sesuatu maka kita harus masuk ke mode insert.\nNah pada bab awal sebelumnya jika kita ingin masuk ke mode insert menggunakan tombol i . Ternyata ada lebih dari 1 cara untuk masuk ke mode insert di Vim selain menggunakan tombol i",
+    "name" : "Alias Login SSH di Linux",
+    "headline" : "Alias Login SSH di Linux",
+    "description" : "Pada kesempatan kali ini topik yang akan kita bahas masih sama yaitu tentang SSH, sebelumnya kita telah mempelajari bagaimana cara melihat log di SSH.\nNah kali ini kita akan belajar cara bagaimana cara membuat alias atau modifikasi untuk login ssh di linux.\nManfaat yang didatpakan yaitu Anda dapat mempermudah akses SSH dengan menggunakana nama yang Anda inginkan tanpa perlu mengetikkan perintah ssh roo@IP_Adress kembali.\nOke langsung saja yaa ke tahapan – tahapan membuat alias untuk login SSH di Linux.",
     "inLanguage" : "en-us",
     "author" : "[Nur Hamim]",
     "creator" : "[Nur Hamim]",
@@ -54,11 +54,11 @@
     "accountablePerson" : "[Nur Hamim]",
     "copyrightHolder" : "[Nur Hamim]",
     "copyrightYear" : "2019",
-    "datePublished": "2019-07-06 03:13:32 \x2b0700 WIB",
-    "dateModified" : "2019-07-06 03:13:32 \x2b0700 WIB",
-    "url" : "http:\/\/nurhamim.net\/2019\/vim10\/",
-    "wordCount" : "162",
-    "keywords" : [ "Vim", "Catatan Cah Ndeso :)"]
+    "datePublished": "2019-07-06 04:50:10 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 04:50:10 \x2b0700 WIB",
+    "url" : "http:\/\/nurhamim.net\/2019\/centos5\/",
+    "wordCount" : "207",
+    "keywords" : [ "SSH","CentOS 7","Linux", "Catatan Cah Ndeso :)"]
 }
 </script>
 
@@ -116,7 +116,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Insert Mode</h1>
+        <h1 class="post-title" itemprop="name headline">Alias Login SSH di Linux</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="http://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
                 <span class="post-time">
@@ -125,7 +125,7 @@
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="http://nurhamim.net/categories/teks-editor/"> TEKS EDITOR </a>
+                        <a href="http://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
                         
                 </span>
         </div>
@@ -133,6 +133,8 @@
     <div class="post-content">
         
 
+        
+            
         
 
         
@@ -146,19 +148,40 @@
           
           
 
-          <p>Setelah sebelumnya kita telah membahas macam – macam tentang navigasi di Vim, saat ini kita akan berfokus kembali untuk mempelajari mode insert, pada bab awal sebelumnya kita telah mengenal tentang apa itu mode insert, jika kita ingin menulis sesuatu maka kita harus masuk ke mode insert.</p>
+          <p>Pada kesempatan kali ini topik yang akan kita bahas masih sama yaitu tentang SSH, sebelumnya kita telah mempelajari bagaimana cara melihat log di SSH.</p>
 
-<p>Nah pada bab awal sebelumnya jika kita ingin masuk ke mode insert menggunakan tombol i . Ternyata ada lebih dari 1 cara untuk masuk ke mode insert di Vim selain menggunakan tombol i</p>
+<p>Nah kali ini kita akan belajar cara bagaimana cara membuat alias atau modifikasi untuk login ssh di linux.</p>
 
-<p>Pertanyaannya adalah apakah harus saya mempelajari ini ?</p>
+<p>Manfaat yang didatpakan yaitu Anda dapat mempermudah akses SSH dengan menggunakana nama yang Anda inginkan tanpa perlu mengetikkan perintah <strong>ssh roo@IP_Adress</strong> kembali.</p>
 
-<p>Yapss menurut penulis Anda sangat bagus untuk mempelajari mode insert dikarenakan dengan mode insert  ini kita dapat menentukan kondisi – kondisi tertentu dalam kita menulis di Vim.</p>
+<p>Oke langsung saja yaa ke tahapan – tahapan membuat alias untuk login SSH di Linux.</p>
 
-<p>Di Vim semua cara memiliki behavior atau tingkah laku yang berbeda – beda dan pintar – pintarlah kita menggunakan cara yang mana sesuai dengan kondisi kebutuhan kita .</p>
+<p>Pertama, membuat sebuah file konfigurasi untuk meyimpan aliases ssh , di direktori <strong>/home/namauser/.ssh/</strong> seperti berikut :</p>
 
-<p>Oke mari kita akan bahas satu persatu mengenai insert mode pada tulisan berikutnya ,</p>
+<pre><code class="language-bash">$ sudo vim ~/.ssh/config 
+</code></pre>
 
-<p>Referensi : Ebook Vim Untuk Semua</p>
+<p>Kedua, isikan file config tersebut seperti pada gambar berikut :</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh05/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Keterangan :</p>
+
+<ul>
+<li><strong>Host</strong> : Nama yang ingin dipanggil atau yang ingin digunakan untuk mengakses ssh</li>
+<li><strong>User</strong> : Merupakan user ssh, gambar diatas menggunakan root . Untuk user bersifat bebas menyesuaikan dengan user ssh  Anda.</li>
+<li><strong>Hostname</strong> : Merupakan alamat dari server yang ingin kita remote</li>
+<li><strong>Port</strong> : Isikan port ssh Anda.</li>
+<li><strong>IdentityFile</strong> : sama seperti port, namun disini digunakan apabila Anda menggunakan ssh key.</li>
+</ul>
+
+<p>Apabila Anda telah membuat konfigurasinya, silakan simpan konfigurasi tersebut lalu coba akses ssh Anda menggunakan Host . Berikut hasilnya :</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh05/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Itulah cara singkat bagi kita untuk menggunakan ssh secara praktis.</p>
+
+<p>Selamat mencoba semoga bermanfaat :)</p>
 
     </div>
 
@@ -173,7 +196,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=http://nurhamim.net/2019/vim10/>http://nurhamim.net/2019/vim10/</span>
+                    <a href=http://nurhamim.net/2019/centos5/>http://nurhamim.net/2019/centos5/</span>
             </p>
             
             
@@ -185,8 +208,14 @@
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="http://nurhamim.net/tags/vim/">
-                    #Vim</a></span>
+            <span class="tag"><a href="http://nurhamim.net/tags/ssh/">
+                    #SSH</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
             
             </section>
         
@@ -198,10 +227,10 @@
 
     <div class="post-nav">
         
-        <a href="http://nurhamim.net/2019/vim9/" class="prev" rel="prev" title="Navigasi ke Posisi Sebelumnya"><i class="iconfont icon-left"></i>&nbsp;Navigasi ke Posisi Sebelumnya</a>
+        <a href="http://nurhamim.net/2019/centos4/" class="prev" rel="prev" title="Cara Melihat Log SSH"><i class="iconfont icon-left"></i>&nbsp;Cara Melihat Log SSH</a>
          
         
-        <a href="http://nurhamim.net/2019/centos1/" class="next" rel="next" title="Remote Server Menggunakan SSH di Linux">Remote Server Menggunakan SSH di Linux&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="http://nurhamim.net/2019/centos6/" class="next" rel="next" title="Mengamankan SSH menggunakan Fail2ban">Mengamankan SSH menggunakan Fail2ban&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -243,8 +272,9 @@
 
 
     
-    
-    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
     
   
 

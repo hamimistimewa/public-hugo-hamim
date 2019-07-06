@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 03:13:32 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 04:50:31 +0700</lastBuildDate>
     
 	<atom:link href="http://nurhamim.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CentOS 7</title>
+      <link>http://nurhamim.net/tags/centos-7/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:31 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/centos-7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://nurhamim.net/tags/linux/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:31 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Firewall</title>
+      <link>http://nurhamim.net/tags/firewall/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/firewall/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>http://nurhamim.net/tags/ssh/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/ssh/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Vim</title>

@@ -1,15 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SSH on Catatan Cah Ndeso :)</title>
-    <link>http://nurhamim.net/tags/ssh/</link>
-    <description>Recent content in SSH on Catatan Cah Ndeso :)</description>
+    <title>CentOS 7 on Catatan Cah Ndeso :)</title>
+    <link>http://nurhamim.net/tags/centos-7/</link>
+    <description>Recent content in CentOS 7 on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 04:50:13 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 04:50:31 +0700</lastBuildDate>
     
-	<atom:link href="http://nurhamim.net/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://nurhamim.net/tags/centos-7/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tips Shortcuts Di Linux</title>
+      <link>http://nurhamim.net/2019/centos10/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:31 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos10/</guid>
+      <description>Pada kesempatan kali ini kita akan belajar tentang shortcuts yang berada di linux, sebelum itu apasih itu shortcuts ?
+Shortcuts di linux salah satu tombol kombinasi yang dapat kita gunakan untuk melakukan sebuah eksekusi perintah yang kita inginkan. Contohnya apabila kita ingin membuka terminal Linux , dapat dilakukan dengan cara mengetikkan Ctrl + T .
+Berikut contoh – contohnya.
+Menggerakkan Cursor di Terminal Linux : Ctrl + A : Digunakan untuk berpindah ke awal perintah Ctrl + E : Digunakan untuk berpindah ke akhir perintah Ctrl + XX : Digunakan untuk memblock dan berpindah sesuai dengan letak dimana kita berada Alt + F : Digunakan untuk berpindah ke depan satu kata di baris saat ini Anda berada Alt + B : Kebalikanya dari Alt + F</description>
+    </item>
+    
+    <item>
+      <title>E-Book Perintah Dasar Di Linux</title>
+      <link>http://nurhamim.net/2019/centos9/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:26 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos9/</guid>
+      <description>Sebelumnya kita telah mempelajari tentang apa itu linux dan struktur direktori yang berada di linux, dan pada kesempatan kali ini saya akan sharing tentang perintah dasar atau yang sering di sebut dengan command line di linux.
+Dengan mempelajari command line ini maka nantinya Anda akan dapat mempermudah untuk menggunakan sistem operasi linux.
+Oleh karena itu bagi yang berminat untuk mempelajari command line di linux silakan download saja ebook nya dengan cara KLIK DISINI Yaa 🙂</description>
+    </item>
+    
+    <item>
+      <title>Struktur Hirarki Direktori di Linux</title>
+      <link>http://nurhamim.net/2019/centos8/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:22 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos8/</guid>
+      <description>Pada kesempatan yang bahagia ini hehehe, saya akan sharing kembali mengenai linux, pada tulisan sebelumnya saya telah sharing dan cerita awal mula saya kenal linux serta mengetahui tentang apa itu linux
+Nah pada kali ini saya akan share tentang struktur direktori internal di linux, menurut saya mengetahui struktur file atau direktori itu sebuah keharusan yaa, dengan kita mengetahui struktur direktori maka, kita akan lebih mudah untuk mempelajari system tersebut.
+Struktur file atau direktori yang berada di sebuah sistem itu berbeda – beda, tergantung dari arsitektur kernel yang diguakan.</description>
+    </item>
+    
+    <item>
+      <title>Memulai Dengan Linux</title>
+      <link>http://nurhamim.net/2019/centos7/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:15 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos7/</guid>
+      <description>Hai guyss, pada kesempatan kali ini saya akan sharing tentang LINUX, dan sesuai dengan judul tema pada kali ini nantinya kita akan mempelajari tentang apa itu Linux. Nah sebelum itu saya ingin cerita terlebih dahulu tentang pertama kali saya menggunakan linux hehehehe 🙂
+Pada mulanya saya pribadi kenal Linux itu pada saat saya duduk di bangku SMK kelas 2, ya cuma sekedar tau saja hehehehe. Alhamdulillah-nya saat kelas 3 SMK saya ditugaskan untuk melaksanakan PKL (Praktek Kerja Lapangan), pada saat itu saya PKL di BLC Telkom Klaten yang berada di kota klaten Jawa tengah.</description>
+    </item>
     
     <item>
       <title>Mengamankan SSH menggunakan Fail2ban</title>

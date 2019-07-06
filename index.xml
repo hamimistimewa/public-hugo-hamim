@@ -5,8 +5,602 @@
     <description>Recent content in Catatan Cah Ndeso :) on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 03:13:32 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 04:50:31 +0700</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tips Shortcuts Di Linux</title>
+      <link>http://nurhamim.net/2019/centos10/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:31 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos10/</guid>
+      <description>
+
+&lt;p&gt;Pada kesempatan kali ini kita akan belajar tentang shortcuts yang berada di linux, sebelum itu apasih itu shortcuts ?&lt;/p&gt;
+
+&lt;p&gt;Shortcuts di linux salah satu tombol kombinasi yang dapat kita gunakan untuk melakukan sebuah eksekusi perintah yang kita inginkan. Contohnya apabila kita ingin membuka terminal Linux , dapat dilakukan dengan cara mengetikkan Ctrl  + T .&lt;/p&gt;
+
+&lt;p&gt;Berikut contoh – contohnya.&lt;/p&gt;
+
+&lt;h4 id=&#34;menggerakkan-cursor-di-terminal-linux&#34;&gt;Menggerakkan Cursor di Terminal Linux :&lt;/h4&gt;
+
+&lt;p&gt;Ctrl + A : Digunakan untuk berpindah ke awal perintah
+Ctrl + E : Digunakan untuk berpindah ke akhir perintah
+Ctrl + XX : Digunakan untuk memblock dan berpindah sesuai dengan letak dimana kita berada
+Alt + F : Digunakan untuk berpindah ke depan satu kata di baris saat ini Anda berada
+Alt + B : Kebalikanya dari Alt + F&lt;/p&gt;
+
+&lt;h4 id=&#34;manipulasi-text-di-terminal-linux&#34;&gt;Manipulasi Text di Terminal Linux&lt;/h4&gt;
+
+&lt;p&gt;Ctrl + U : Digunakan untuk mengubah/ cut karakter dan dimana kursor Anda berada
+Ctrl + K : Digunakan untuk memotong/ cut satu baris karakter dimana kursor Anda berada
+Ctrl + Y : Digunakan untuk paste hasil cut
+Alt + T : Digunakan untuk menukar dua kata terakhir sebelum kursor
+Alt + U : Digunakan untuk mengubah huruf kecil menjadi kapital perkata
+Alt + C : Digunakan untuk mengubah depan kata menjadi huruf kapital
+Alt + D : Digunakan untuk delete per kata
+Ctrl + T : Digunakan untuk membuka tab baru&lt;/p&gt;
+
+&lt;h4 id=&#34;riwayat-histori-akses-di-terminal-linux&#34;&gt;Riwayat/Histori Akses Di Terminal Linux&lt;/h4&gt;
+
+&lt;p&gt;Ctrl + R : Digunakan untuk melihat histori perintah sebelumnya yang pernah kita jalankan di terminal&lt;/p&gt;
+
+&lt;h4 id=&#34;kontrol-di-terminal-linux&#34;&gt;Kontrol Di Terminal Linux&lt;/h4&gt;
+
+&lt;p&gt;Ctrl + L : Digunakan untuk membersihkan screen/ layar
+Ctrl + S : Digunakan untuk menghentikan output proses yang ditampilkan di screen, tapi tidak menyebabkan proses terlebih berhenti 🙂
+Ctrl + Q : Digunakan untuk melanjutkan output proses ditampilkan di screen, untuk memberhentikannya kembali menggunakan Ctrl + S&lt;/p&gt;
+
+&lt;h4 id=&#34;spesial-karakter&#34;&gt;Spesial Karakter&lt;/h4&gt;
+
+&lt;p&gt;Ctrl + H : Digunakan untuk menambah tab ke bawah masih dalam 1 screen
+Ctrl + J : Digunakan untuk menambah tab ke kanan masih dalam 1 screen&lt;/p&gt;
+
+&lt;p&gt;Oke itulah beberapa shortcuts yang sering sekali kita gunakan dalam menggunakan linux&lt;/p&gt;
+
+&lt;p&gt;Semoga bermanfaat selamat mencoba 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>E-Book Perintah Dasar Di Linux</title>
+      <link>http://nurhamim.net/2019/centos9/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:26 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos9/</guid>
+      <description>&lt;p&gt;Sebelumnya kita telah mempelajari tentang apa itu linux dan struktur direktori yang berada di linux, dan pada kesempatan kali ini saya akan sharing tentang perintah dasar atau yang sering di sebut dengan command line di linux.&lt;/p&gt;
+
+&lt;p&gt;Dengan mempelajari command line ini maka nantinya Anda akan dapat mempermudah untuk menggunakan sistem operasi linux.&lt;/p&gt;
+
+&lt;p&gt;Oleh karena itu bagi yang berminat untuk mempelajari command line di linux silakan download saja ebook nya dengan cara &lt;a href=&#34;https://drive.google.com/drive/folders/1cjn2db3oIDyBs1LbBYkFJbTnm35DyE4w&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;KLIK DISINI Yaa&lt;/a&gt; 🙂&lt;/p&gt;
+
+&lt;p&gt;Semoga bermanfaat, selamat belajar 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Struktur Hirarki Direktori di Linux</title>
+      <link>http://nurhamim.net/2019/centos8/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:22 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos8/</guid>
+      <description>&lt;p&gt;Pada kesempatan yang bahagia ini hehehe, saya akan sharing kembali mengenai linux, pada tulisan sebelumnya saya telah sharing dan cerita awal mula saya kenal linux serta mengetahui tentang apa itu linux&lt;/p&gt;
+
+&lt;p&gt;Nah pada kali ini saya akan share tentang struktur direktori internal di linux, menurut saya mengetahui struktur file atau direktori itu sebuah keharusan yaa, dengan kita mengetahui struktur direktori maka, kita akan lebih mudah untuk mempelajari system tersebut.&lt;/p&gt;
+
+&lt;p&gt;Struktur file atau direktori yang berada di sebuah sistem itu berbeda – beda, tergantung dari arsitektur kernel yang diguakan. Nah untk struktur file atau direktori di linux sendiri berbeda dengan di sistem operasi lainnya contoh Windows  , Istilah atau hirarki yang digunakan untuk struktur direktori di linux yaitu pohon terbalik, yang dimulai dari 1 titik / 1 inti, kemudian bercabang, ranting, dan daun.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar di atas bila di istilahkan di linux maka akan menjadi sebagai berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar di atas sangat jelas bahwasannya hirari yang digunakan oleh system operasi linux bercabang mulai dari privileages tertinggi yaitu root yang ditandai dengan tanda slas (/). Struktur hirarki file atau direktori di sistem operasi linux sendiri ada banyak menyesuaikan dengan arsitektur atau distribusi linux yang kita gunakan. Sebagai contoh berikut di bawah ini contoh gambaran mengenai hirarki direktori linux.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mari kita bahas satu persatu mengenai struktur direktori yang berada pada gambar diatas, disini penulis menggunakan Ubuntu 18.04 LTS&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bin&lt;/strong&gt; : Isi dari direktori bin sendiri yaitu file (executable) atau binari atau command dari sistem linux yang dapat kita eksekusi secara langsung oleh user atau pengguna. Contohnya seperti kita menjalankan command line , ls , mkdir dll. Berikut contohnya :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Boot&lt;/strong&gt; : Direktori ini berisi file boot loader termasuk boot_loader, kernel, initrd, memtest, config device dan system.mapping yang ditbuhkan dan digunakan pada saat sistem melakukan booting (reboot), selain itu ada juga grub, yang biasanya di pakai untuk dualbot sistem operasi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dev&lt;/strong&gt; : Direktori ini berisi sebauh file konfigurasi dari hadware laptop atau komputer yang kita gunakan, beserta modul – modul driver yang ada. Contohnya : dvd, cdrom, /dev/sda, sda1, sda2, dll.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Etc&lt;/strong&gt; : Direktori ini berisi file – file yang digunakan untuk mengkonfigurasi layanan (service) yang berada di sistem linux. File nya biasanya berbentuk script atau file dengan tipe text contohnya : dns , webserver, network dll&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Home&lt;/strong&gt; : Direktori ini berisi data pengguna (user) yang berada di sistem linux, contohnya pada gambar di bawah ini, pengguna dari sistem operasi linux yaitu hamimaja&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lib&lt;/strong&gt; : Direktori ini berisi file – file pendukung / pustaka yang dibutuhkan oleh program baik file binari dam executable, yang berada di diretori /bin&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sbin&lt;/strong&gt; : Direktori ini berisi file executable atau program atau perintah yang digunakan oleh super user (root) seperti halnya perintah ifconfig, yang digunakan untuk menampilkan informasi tentang network atau jaringan&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Root&lt;/strong&gt; : Merupakan file home direktori dari superuser (root) , berikut contohnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Opt&lt;/strong&gt; : Dirktori ini digunakan untuk perangkat lunak atau aplikasi pihak ketiga dan bukan utilitas dalam sistem linux, contohnya : LAMP, java dll.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Proc&lt;/strong&gt;: Direktori ini berisi file dari hasi pemrosesan (buffer) yang digunakan untuk menginformasikan proses yang sedang berjalan di linux, conntohnya hasil buffer dari : meminfo, cpuinfo, version, uptime, dll&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mnt&lt;/strong&gt; : Direktori ini berfungsi untuk menampung tautan antara storage device dengan sistem.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tmp&lt;/strong&gt; : Direktori ini merupakan sebuah direktori sementara yang digunakan untuk menyimpan file sementara dan akan dihapus ketika sistem di-reboot (dijalankan kembali). Berikut contoh file yang sedang disimpan&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Usr&lt;/strong&gt; : Direktori ini berisi file paket aplikasi, program, dokumentasi, konfigurasi, binari, library dan source aplikasi pada linux, yang dapat proses atau di jalankan/ execute, oleh semua pengguna (user) linux, yang merupakan utilitas atau penggunaan dari aplikasi di dalam sistem.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Var&lt;/strong&gt; : Direktori ini berisi variabel sistem seperti logs, file spool untuk printer, webserver, mail, dan proses yang dilakukan, file logs, dan sebagainya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/16.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Srv&lt;/strong&gt; : Direktori ini merupakan direktori yang berisi file service dari utilitas / program pada sistem GNU/Linux.&lt;/p&gt;
+
+&lt;p&gt;Itulah beberapa hirarki direktori di linux yang dapat kita pelajari bersama, cukup sekian untuk tutorial kali ini, semoga bermanfaat.&lt;/p&gt;
+
+&lt;p&gt;Next Time kita akan mempelajari tentang Basic Command Line di Linux.&lt;/p&gt;
+
+&lt;p&gt;Referensi :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ebook Linux&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Memulai Dengan Linux</title>
+      <link>http://nurhamim.net/2019/centos7/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:15 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos7/</guid>
+      <description>&lt;p&gt;Hai guyss, pada kesempatan kali ini saya akan sharing tentang LINUX, dan sesuai dengan judul tema pada kali ini nantinya kita akan mempelajari tentang apa itu Linux. Nah sebelum itu saya ingin cerita terlebih dahulu tentang pertama kali saya menggunakan linux hehehehe 🙂&lt;/p&gt;
+
+&lt;p&gt;Pada mulanya saya pribadi kenal Linux itu pada saat saya duduk di bangku SMK kelas 2, ya cuma sekedar tau saja hehehehe. Alhamdulillah-nya saat kelas 3 SMK saya ditugaskan untuk melaksanakan PKL (Praktek Kerja Lapangan), pada saat itu saya PKL di BLC Telkom Klaten yang berada di kota klaten Jawa tengah.&lt;/p&gt;
+
+&lt;p&gt;Nah di BLC inilah saya mengenal lebih jauh tentang linux, bahkan di BLC hukumnya wajib bagi semua siswa PKL memakai Linux lo. Awalnya sih lumayan bingung menggunakan linux, karena taunya cuma windows saja pada saat SMK kelas 1 – 2 hehehhe. Akhirnya lama – kelamaan ternyata sangat enak sekali menggunakan Linux bahkan sekarang sampai jatuh cinta pada linux #Asyekk wkwkwk alhamdulillah sampai sekarang masih istiqomah menggunakan Linux.&lt;/p&gt;
+
+&lt;p&gt;Linux itu menurut saya salah satu sistem operasi yang keren pakai (banget), udah free/ bebas lagi kurang apa coba, nikmat dah pokoknya pakai linux. Dengan linux saja dapat berkembang dan berfikir intinya nie otak gerak mikirin linux itu enak banget. Intinya linux tak seinstan mie goreng #ehh tak seinstan windows maksudnya, kenapa demikian ?&lt;/p&gt;
+
+&lt;p&gt;Salah satu contoh yang sederhana kalau di linux kita mau install aplikasi tinggal menjalankan sourcode atau perintah di terminal, atau bisa juga installasi langsung menggunakan paket yang telah disediakan. Beda dengan windows mah terlalu enak #ehh tinggal klak klik klak klik jadi lo, beuh, mantull Dah 🙁&lt;/p&gt;
+
+&lt;p&gt;Aneh nya kebanyakan orang banyak yang beranggapan dan bilang kalau linux itu susah, padahal menurut saya pribadi linux itu yang paling enak dan mantap untuk digunakan. Ya intinya happy banget menggunakan Linux Guyss. Oke langsung ke tema saja ya guyss,&lt;/p&gt;
+
+&lt;p&gt;Tau nggak sih apa itu Linux ?&lt;/p&gt;
+
+&lt;p&gt;Pada cerita sebelumnya saya banyak sekali bilang kata (linux) apa sih itu linux ? kok bisa – bisanya bilang enak emang gimana rasanya hihihihih. Jadi Linux itu sistem operasi, sama sepertihalnya windows, perbedaan yang mendasar windows itu bersifat closed sorce atau komersial atau berbayar (membeli license), sedangkan linux itu Free (bebas), bebas dalam artian bisa menjalankan program, mempelajari sourcode program yang ada di linuxnya sendiri, bahkan kita juga dapat mendistribusikan ulang lo guyss, bukan hanya itu guyss kita juga dapat meningkatkan program dan mempublikasikannya secara Free (bebas), beuh mantull kan guyss.&lt;/p&gt;
+
+&lt;p&gt;Nah pada tulisan kali ini saya tidak akan membahas detail tentang sejarah dari linux sendiri yaa, (banyak guyss wkwk) mending baca secara mandiri ya pada tautan berikut :&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://id.wikipedia.org/wiki/Linux&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Sejarah linux Wikipedia&lt;/a&gt;  or &lt;a href=&#34;https://www.belajarlinux.org/belajar-linux-untuk-pemula/sejarah-perkembangan-linux-dari-masa-ke-masa/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Belajar Linux Dot ORG&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Di Linux itu berbeda dengan sistem operasi yang lain guys, dengan kebebasannya maka, sangat banyak orang membuat atau mendistribusikan varian – varian linux yang biasanya dikenal dengan Distro (Distribution Sistem Operasi),&lt;/p&gt;
+
+&lt;p&gt;Ada 3 varian linux yang sangat populer digunakan yaitu&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Debian&lt;/li&gt;
+&lt;li&gt;RedHat&lt;/li&gt;
+&lt;li&gt;Slackware&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/linux/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah dari varian distro di atas kemudia linux berkembang atau mempunyai banyak turunan di setiap variannya. Lihat pada contoh gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/linux/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah gambar diatas sangat jelas sekali yaa, contohnya saja yang paling banyak orang gunakan kalau Varian Distro Debian turunannya ada Ubuntu , Linux Mint dll . Sedangkan RedHat  ada CentOS dan Fedora dan sebenarnya masih banyak lagi distro – distro linux lainnya teman – teman dapat mengetahui berbagai macam distro linux pada tautan berikut : &lt;a href=&#34;https://distrowatch.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;DISTROWATCH&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke mungkin cukup sekian untuk pemahaman singkat mengenai Linux yaa, semoga bermanfaat.&lt;/p&gt;
+
+&lt;p&gt;Referensi :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Google.com&lt;/li&gt;
+&lt;li&gt;www.belajarlinux.org&lt;/li&gt;
+&lt;li&gt;Ebook Sistem Operasi Linux.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mengamankan SSH menggunakan Fail2ban</title>
+      <link>http://nurhamim.net/2019/centos6/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos6/</guid>
+      <description>&lt;p&gt;Mengamankan sebuah service yang berada di server itu amatlah penting, apalagi server kita public dan siapa saja dapat mengaksesnya, dan yang paling rentan dalam isu hacking atau brutforce attack di VPS (Virtual Private Server) yaitu service ssh. Nah bagaimana cara mengamankan service ssh tersebut ?&lt;/p&gt;
+
+&lt;p&gt;Sangat banyak cara yang dapat dilakukan untuk mengamankan ssh, salah satunya pada tutorial kali ini kita akan mengamankan service ssh dengan menggunakan aplikasi yang cukup powerfull yaitu Fail2ban . Namun sebelum lanjut lebih jauh mengenai tutorial kali ini, mari kita berkenalan terlebih dahulu tentang apa sih itu Fail2ban ?&lt;/p&gt;
+
+&lt;p&gt;Fail2ban merupakan aplikasi Open Source (bebas) yang ditulis menggunakan bahasa python. Fail2ban dapat digunakan untuk mengamankan service yang berada di Server VPS dari serangan brutforce atau DDoS attack di Linux&lt;/p&gt;
+
+&lt;p&gt;Berikut ini merupakan skema dari cara kerja Fail2ban  :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar diatas mengibaratkan adanya seorang attacker yang sedang melakukan atau ingin melakukan serangan berupa brutforce password ssh VPS, namun sebelum si attacker melakukan serangan ke VPS maka ada di pengamanan dari Fail2ban yang berada di tengah – tengahnya&lt;/p&gt;
+
+&lt;p&gt;Fail2ban menetapkan berbagai rule untuk tembok keamanannya, dengan begitu, serangan tersebut di saring terlebih dahulu, jika memang serangan tersebut milik pribadi (pemilik VPS) yang tidak terindikasi abuse brutforce maka proses akses ssh akan di teruskan dan sebaliknya, jika ada proses yang kurang wajar dan melanggar rules yang telah ditetapkan oleh fail2ban maka proses akses ke VPS akan di blokir (banned) .&lt;/p&gt;
+
+&lt;p&gt;Oke, itu skema dari cara kerja fail2ban, selanjutnya mari kita bahas tentang bagaimana cara installasi Fail2ban di CentOS 7&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan remote server ssh Anda terlebih dahulu, Berikut contoh login ssh ke VPS&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hamimaja@hamimaja:~$ ssh root@103.23.20.82 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada gambar diatas perhatikan kolom merah yang diberi tanda merah, sangat banyak percobaan login ke VPS kita, dengan fail2ban kita dapat meminimalisir hal tersebut.&lt;/p&gt;
+
+&lt;p&gt;Untuk melihat banyaknya percobaan gagal login tersebut Anda dapat menggunakan perintah berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 fail2ban]# grep &amp;quot;Failed password&amp;quot; /var/log/secure
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kedua, apabila Anda telah login ke VPS atau server Anda masing – masing, selanjutnya silakan update terlebih dahulu sistem operasi CentOS 7 Anda, dengan menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 ~]# yum update -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah selanjutnya, memasang repository epel di CentOS 7 dengan menjalankan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 ~]# yum install epel-release -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila telah selesai, berikutnya silakan install fail2ban dengan menjalankan baris perintah berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 ~]# yum install fail2ban -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan tunggu proses instalasi fail2ban sampai selesai, Jika sudah barulah kita dapat memastikan fail2ban telah aktif dan dapat kita gunaka, berikut perintah yang dapat digunakan&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 ~]# systemctl start fail2ban
+[root@srv-hamim02 ~]# systemctl enable fail2ban
+Created symlink from /etc/systemd/system/multi-user.target.wants/fail2ban.service to /usr/lib/systemd/system/fail2ban.service.
+[root@srv-hamim02 ~]# 
+[root@srv-hamim02 ~]# systemctl status fail2ban
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke saat ini fail2ban telah berhasil di install,&lt;/p&gt;
+
+&lt;p&gt;Ketiga, selanjutnya melakukan konfigurasi untuk mengamankan ssh dari serangan brutforce misalnya, silakan copy file default fail2ban yaitu jail.conf  menjadi jail.local untuk direktorinya berada di /etc/fail2ban/ . seperti berikut contohnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah sebelum kita lanjut ke bagaimana melakukan konfigurasinya ada baiknya kita mengetahui terlebih dahulu komponen – komponen yang wajib kita ketahui, diantaranya adalah&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ignore IP&lt;/strong&gt; : Digunakan untuk me-whitelist IP tertentu, jadi teman – teman dapat menentukan IP mana saja yang tidak akan dan bakal di blokir (banned) sama si fail2ban, setiap penambahan IP dipisahkan dengan spasi.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bantime&lt;/strong&gt; : Digunakan untuk menentukan lama IP attacker (penyerang) yang telah terblokir (banned), dari server apabila melanggar rule yang telah ditentukan sebelumnya. Waktu yang digunakan bantime yaitu second (detik), secara default bantime yang ditentukan yaitu 600 detik (10 menit)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Maxretry&lt;/strong&gt; : Digunakan untuk mengatur jumlah percobaan yang dapat dilakukan oleh seseorang attacker untuk melakukan brute force, sebelum IP tersebut di blokir (banned) oleh fail2ban. Secara default di CentOS 7 fail2ban akan memblokir 5 kali percobaan (fail).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Findtime&lt;/strong&gt; : Yaitu waktu yang ditentukan oleh Fail2ban apakah IP tersebut masuk dalam kategori blokir (banned) atau tidak. Hitungan yang digunakan sama dengan bantime yaitu second (detik) defaultnya 600 (10 menit)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Silakan buka konfigurasi jail.local untuk melanjutkan konfigurasinya, berikut file komponen yang disebutkan diatas yang default fail2ban&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk tutorial kali ini saya akan menggunakan skema dengan komponen, sebagai berikut :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bantime&lt;/strong&gt; : -1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Findtime&lt;/strong&gt; : 200&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Maxretry&lt;/strong&gt; : 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada penentuan komponen diatas terdapat Bantime = -1 .&lt;/p&gt;
+
+&lt;p&gt;Maksud dari -1 yaitu melakukan pemblokiran (banned) ip penyerang secara permanent.&lt;/p&gt;
+
+&lt;p&gt;Berikutnya, silakan scroll kebawah carilah rules untuk mengamankan service ssh seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar diatas merupakan jails atau rule ssh secara default dari fail2ban, untuk mengaktifkan rules tersebut Anda hanya perlu menambahkan perintah enabled = tru  seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah, silakan simpan konfigurasinya&lt;/p&gt;
+
+&lt;p&gt;Keempat, silakan reload dan lihat kembali status service fail2ban Anda menggunakan perinah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 fail2ban]# systemctl reload fail2ban
+[root@srv-hamim02 fail2ban]# systemctl status fail2ban
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk memastikan apakah jail ssh kita telah Aktif dapat dilakukan dengan cara menjalankan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 fail2ban]# fail2ban-client status 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kelima, berikutnya mari kita mencoba melakukan pengetesan dengan cara logn ke server menggunakan ssh dengan menginputkan pasword yang salah,&lt;/p&gt;
+
+&lt;p&gt;Sebelumnya saya mengisikan maxtery = 3 yang artinya apabila 3 kali login ssh gagal maka IP saya akan di baca oleh rule si fail2ban dan akan di blokir (banned)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/14.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah untuk melihat ip mana yang sedang melakukan percobaan login ke server lebih dari 3 kali dan IP tersebut ke banned oleh fail2ban dapat dilihat dengan menjalankan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 fail2ban]# fail2ban-client status sshd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila Anda ingin melakukan unbanned ip terhadap ip yang telah ke banned dapat dilakukan dengan menjalankan perintah&lt;/p&gt;
+
+&lt;p&gt;[root@srv-hamim02 fail2ban]# fail2ban-client set sshd unbanip 10.10.xx.xx&lt;/p&gt;
+
+&lt;p&gt;Sedangkan untuk melihat log dari fail2ban dapat dilakukan dengan cara menjalankan baris perintah berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 fail2ban]# tail -f /var/log/fail2ban.log 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Itulah cara singkat dan mudah untuk mengamakan service ssh menggunakan fail2ban.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga tutorial ini bermanfaat bagi kita semua 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Alias Login SSH di Linux</title>
+      <link>http://nurhamim.net/2019/centos5/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:10 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos5/</guid>
+      <description>&lt;p&gt;Pada kesempatan kali ini topik yang akan kita bahas masih sama yaitu tentang SSH, sebelumnya kita telah mempelajari bagaimana cara melihat log di SSH.&lt;/p&gt;
+
+&lt;p&gt;Nah kali ini kita akan belajar cara bagaimana cara membuat alias atau modifikasi untuk login ssh di linux.&lt;/p&gt;
+
+&lt;p&gt;Manfaat yang didatpakan yaitu Anda dapat mempermudah akses SSH dengan menggunakana nama yang Anda inginkan tanpa perlu mengetikkan perintah &lt;strong&gt;ssh roo@IP_Adress&lt;/strong&gt; kembali.&lt;/p&gt;
+
+&lt;p&gt;Oke langsung saja yaa ke tahapan – tahapan membuat alias untuk login SSH di Linux.&lt;/p&gt;
+
+&lt;p&gt;Pertama, membuat sebuah file konfigurasi untuk meyimpan aliases ssh , di direktori &lt;strong&gt;/home/namauser/.ssh/&lt;/strong&gt; seperti berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo vim ~/.ssh/config 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kedua, isikan file config tersebut seperti pada gambar berikut :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh05/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Keterangan :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Host&lt;/strong&gt; : Nama yang ingin dipanggil atau yang ingin digunakan untuk mengakses ssh&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;User&lt;/strong&gt; : Merupakan user ssh, gambar diatas menggunakan root . Untuk user bersifat bebas menyesuaikan dengan user ssh  Anda.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt; : Merupakan alamat dari server yang ingin kita remote&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Port&lt;/strong&gt; : Isikan port ssh Anda.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IdentityFile&lt;/strong&gt; : sama seperti port, namun disini digunakan apabila Anda menggunakan ssh key.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apabila Anda telah membuat konfigurasinya, silakan simpan konfigurasi tersebut lalu coba akses ssh Anda menggunakan Host . Berikut hasilnya :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh05/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah cara singkat bagi kita untuk menggunakan ssh secara praktis.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Melihat Log SSH</title>
+      <link>http://nurhamim.net/2019/centos4/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:08 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos4/</guid>
+      <description>&lt;p&gt;Pada tutorial kali ini kita akan mempelajari bagaimana sih cara mengetahui log dari ssh itu sendiri, btw log ini sangat penting loh 🙂 .&lt;/p&gt;
+
+&lt;p&gt;Dengan adanya log kita dapat melihat dan mengetahui siapa saja sih yang telah berhasil login/ masuk ke server kita dengan menggunakan ssh. Disini saya menggunakan sistem operasi CentOS 7 ya.&lt;/p&gt;
+
+&lt;p&gt;Berikut langkah – langkahnya :&lt;/p&gt;
+
+&lt;p&gt;Pertama, seperti biasanya silakan remote server terlebih dahulu menggunakan ssh .&lt;/p&gt;
+
+&lt;p&gt;Kedua, jalankan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# tail -15 /var/log/secure
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perintah diatas akan menampilkan 15 baris catatan ototentikasi yang terbaru, contohnya pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh04/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk mengetahui siapa saja yang telah gagal login bisa menggunakan perintah grep seperti berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~] # grep “Failed” /var/log/secure
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka Anda akan melihat siapa saja dan dari IP mana yang telah mencoba login melalui ssh&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh04/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk mengetahui lebih detail informasi yang gagal login dapat menggunakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# grep “authentication failure” /var/log/secure
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka Anda akan melihat secara ditail IP beserta username yang digunakan untuk mencoba login ke server kita melalui ssh&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh04/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sedangkan untuk menampilkan daftar semua alamat IP yang mencoba dan gagal masuk ke server SSH dapat dilakukan dengan cara menjalankan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# grep “Failed password” /var/log/secure | awk ‘{print $11}’ | uniq -c | sort -nr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka Hasilnya akan seperti berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh04/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke itulah tips untuk melihat sebuah log dari ssh, semoga bermanfaat dan selamat mencoba ya guys 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Mengubah Port SSH</title>
+      <link>http://nurhamim.net/2019/centos3/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:05 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos3/</guid>
+      <description>&lt;p&gt;Pada tutorial sebelumnya saya telah menyampaikan bahwa secara default ssh menggunakan port 22, nah pada tutorial kali ini kita akan mempelajari bagaimana cara untuk memodifikasi atau mengubah port default ssh tersebut.&lt;/p&gt;
+
+&lt;p&gt;Sangat banyak manfaat yang didaptkan jika kita mengubah port default ssh salah satunya adalah melindungi service ssh kita dari serangan brutforce ssh yang sangat sering sekali terjadi.&lt;/p&gt;
+
+&lt;p&gt;Namun terdapat juga kekurangannya yaitu jikalau kita lupa port ssh yang telah kita ubah sebelumnya yaa mau nggak mau kita tidak akan bisa login ke server 🙁&lt;/p&gt;
+
+&lt;p&gt;Oke, berikut ini langkah – langkah untuk mengubah port ssh,&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan masuk/ login ke server Anda terlebih dahulu&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kedua, silakan buka konfigurasi ssh yang berada di direktori sshd_config, seperti berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# vim /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Disini kami menggunakan CentOS 7 dengan demikian untuk mengubah konfigurasinya bisa menggunakan editor vi atau vim atau bisa juga dengan nano . Jika sudah silakan cari port 22 seperti gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ubah port 22 diatas sesuai dengan keinginan Anda, misalnya disini kami menggunakan port 22222,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah silakan simpan dan silakan restart service ssh Anda dengan menggunakan perintah systemctl restart sshd.service, seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ketiga, tahap pengujian silakan remote kembali ssh Anda secara manual tanpa port apapun seperti langkah pertama, hasilnya Anda tidak akan bisa login ke server&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, coba login kembali dengan memberikan akhiran -p [port ssh] seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat yaa 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Remote Server Menggunakan SSH Key Di Linux</title>
+      <link>http://nurhamim.net/2019/centos2/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:01 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos2/</guid>
+      <description>&lt;p&gt;Sebelumnya kita telah membahas sedikit tentang SSH, kalau sebelumnya kita setiap masuk/ login ke server harus mengisikan password agak ribet juga ya dan kurang aman sih menurut saya pribadi :).&lt;/p&gt;
+
+&lt;p&gt;Nah disini saya ada cara yang lebih aman dan mudah untuk diimplementasikan, menggunakan apa ?&lt;/p&gt;
+
+&lt;p&gt;Menggunakan SSH Key authentication, yang biasanya sering dibilang dengan ssh-copy-id, jika Anda menggunakan ssh key Anda akan mendapatkan kenyamanan dan keamanan untuk login melalui SSH karena Anda tidak perlu memasukkan password manual seperti ssh biasa (yang rawan akan kerentanan di brutforce).&lt;/p&gt;
+
+&lt;p&gt;Jika terdapat SSH Key maka disitulah ada yang namanya Private dan Public key. Public Key nantinya yang akan di upload atau yang akan dipasangkan disisi server, sedangkan Private key berada disisi host (komputer lokasl Anda), hal yang harus diperhatikan yaitu jangan pernah mengasihkan private key Anda kepada orang lain. Sedangkan SSH key nya sendiri bisa dibilang sebagai gembok dan kunci.&lt;/p&gt;
+
+&lt;p&gt;Publik key bisa dibilang sebagai gemboknya yang dapat disebar atau dipasang ke banyak lokasi, sedangkan Private key bisa dibilang sebagai kuncinya, yang namanya kunci yaa di tarok atuh jangan disebar luaskan atau disimpan sebaikmungkin yaa guyss ehehehehehehe 🙂&lt;/p&gt;
+
+&lt;p&gt;Nah berikut langkah – langkah untuk mengguankan SSH Key di Linux&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan generate key terlebih dahulu, berikut perintahnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ssh-keygen -t rsa -b 4096 -C “info@nurhamim.net”
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah silakan masukan nama file yang digunakan untuk menyimpan key. seperti gambar berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh02/1.png&#34; alt=&#34;Generate Key&#34; title=&#34;Generate Key&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Terdapat 2 file key yang digenerate sebelumnya, diantaranya public key (.pub) dan private key .&lt;/p&gt;
+
+&lt;p&gt;Kedua, waktunya kita memasangkan atau menyimpan publik key yang telah kita generate ke server kita dengan menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ssh-copy-id root@103.23.20.82
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan tampak seperti pada gambar dibawah ini, dimana Anda akan diminta untuk memasukakn password server Anda&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh02/2.png&#34; alt=&#34;SSH Copy ID&#34; title=&#34;SSH Copy ID&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada langkah ini, ssh key sudah berhasil, untuk memastikannya silakan login menggunakan ssh kembali, maka Anda akan otomatis masuk ke server tanpa adanya permintaan pengisian password seperti ssh sebelumnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh02/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat Mencoba semoga bermanfaat. Terima kasih 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Remote Server Menggunakan SSH di Linux</title>
+      <link>http://nurhamim.net/2019/centos1/</link>
+      <pubDate>Sat, 06 Jul 2019 04:49:43 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos1/</guid>
+      <description>&lt;p&gt;Pernahkah Anda berfikir bagaimana sih cara yang dapat digunakan untuk mengakses sebuah server ?. Atau Anda yang telah mempunyai sebuah Virtual Private Server (VPS), tetapi bingung bagaimana cara mengaksesnya ?.&lt;/p&gt;
+
+&lt;p&gt;Oke, jangan keburu bingung dulu yaa, heheheh 🙂 , sebelum itu bagi Anda yang ingin mempunyai sebuah VPS yang murah dan handa serta sangat berkualitas bangett, saya sarankan Anda menggunakan VPS-nya &lt;a href=&#34;https://cloudkilat.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CloudKilat&lt;/a&gt;, selengkapnya bisa di lihat pada tautan berikut : &lt;a href=&#34;https://cloudkilat.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;VPS CloudKilat&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke, langsung saja yaa sebenarnya terdapat cara dan aplikasi yang dapat kita gunakan untuk mengakses sebuah server, jika Anda menggunakan sistem operasi Linux, Anda dapat mengakses sebuah server VPS tersebut melalui terminal linux dengan menggunakan ssh, lalu apasih itu ssh ?&lt;/p&gt;
+
+&lt;p&gt;Menurut &lt;a href=&#34;https://en.wikipedia.org/wiki/Secure_Shell&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;wikipedia&lt;/a&gt; ssh adalah sebuah protokol jaringan yang aman serta berjalan di atas TCP/IP layer yang menggunakan port 22.&lt;/p&gt;
+
+&lt;p&gt;SSH sendiri tidak berjalan hanya di sistem operasi linux saja, ssh sekarang juga dapat dijalankan di sistem operasi sepertihalnya windows atau macos.&lt;/p&gt;
+
+&lt;p&gt;Selain itu saat ini sangat banyak aplikasi ssh yang berbasis GUI (Graphical User Interface), contohnya seperti Putty, Mputty dan masih banyak lagi yang lainnya.&lt;/p&gt;
+
+&lt;p&gt;Nah kali ini saya akan mencontohkan bagaimana cara remote atau mengakses sebuah server Virtual di menggunakan ssh dan terminal linux&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan akses terlebih dahulu terminal linux Anda&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh01/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kedua, silakan ketikkan perintah ssh root@IP_VPS_Anda , lalu konfirmasi authentikasi dengan mengetikkan perintah yes , dan isikan password VPS Anda seperti berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh01/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke saat ini Anda telah berhasil masuk/ login ke server VPS Anda, selamat mencoba semoga bermanfaat.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Insert Mode</title>
@@ -209,889 +803,6 @@
 &lt;p&gt;Semoga bermanfaat, selamat mencoba&lt;/p&gt;
 
 &lt;p&gt;Referensi : Ebook Vim Untuk Semua&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Navigasi Antar Kata di Vim</title>
-      <link>http://nurhamim.net/2019/vim5/</link>
-      <pubDate>Sat, 06 Jul 2019 03:13:14 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/vim5/</guid>
-      <description>
-
-&lt;p&gt;Sebelumnya kita telah membahas tentang navigasi dasar yang ada di vim, selain kegiatas menulis, editing di vim, navigasi salah satu yang penting diketahui di vim.&lt;/p&gt;
-
-&lt;p&gt;Disaat kita menulis pasti kita akan menentukan kita akan menulis dimana letaknya dikiri, dikanan, atau di bawah/atas.&lt;/p&gt;
-
-&lt;p&gt;Dan secara tidak sadar kita nantinya akan banyak menggunakan waktu kita untuk menavigasikan kursor ke posisi dimana penulisan atau perubahan akan kita lakukan. Baik itu mengubah, menghapus, dan menandakan tanda baca.&lt;/p&gt;
-
-&lt;p&gt;Di vim kita tidak bisa mengguankan mouse, seperti yang telah di pelajari sebelumnya, Anda dapat mengguanakan navigasi, &lt;strong&gt;h, j,k, l&lt;/strong&gt;, tapi jika Anda merasa sangat kurang efisien menggunakan navigasi tersebut karena hanya bisa terjangkau 1 huru saja, maka tutorial kali ini kita akan membahas tentang bagaimana cara menjangkau antar kata .&lt;/p&gt;
-
-&lt;p&gt;Dalam bahasa inggris &lt;strong&gt;kata&lt;/strong&gt; artinya word, atau sebuah susunan huruf yang dibatasi dengan karakter spasi, . Sedangkan di vim &lt;strong&gt;kata&lt;/strong&gt; bisa dijabarkan sebagai berikut :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Karakter alfanumerik yang dibatasi spasi&lt;/li&gt;
-&lt;li&gt;Karakter non-alfanumerik&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;navigasi-kata-demi-kata-forward&#34;&gt;Navigasi Kata demi Kata (forward)&lt;/h3&gt;
-
-&lt;p&gt;Kali ini kita akan mempelajari bagaimana cara berpindah antar kata di vim, silakan buka vim Anda dan pastikan Anda berada di mode normal&lt;/p&gt;
-
-&lt;p&gt;Sebagai kalimat yang akan dibuat sebagai contoh&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt;ermimpilah Dalam Hidup, jangan hidup dalam mimpi – mimpi .&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Untuk memindahkan kursor ke kata berikutnya Anda hanya perlu menekan tombol &lt;strong&gt;w&lt;/strong&gt; dan posisi kursor akan berada pada huruf &lt;strong&gt;D&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Bermimpilah &lt;strong&gt;D&lt;/strong&gt;alam Hidup, jangan hidup dalam mimpi – mimpi .&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Meskipun Anda tidak berada pada awal kata jika Anda menekan huruf &lt;strong&gt;w&lt;/strong&gt; maka Anda akan tetap berpindah ke huruf &lt;strong&gt;D&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;silakan tekan huruf &lt;strong&gt;w&lt;/strong&gt; sampai ke huruf &lt;strong&gt;H&lt;/strong&gt; . Perhatikan pada kata &lt;strong&gt;Hidup&lt;/strong&gt;, terdapat tanda koma (,) (non-alfanumerik).&lt;/p&gt;
-
-&lt;p&gt;Pertanyaannya jika saya menekan huruf &lt;strong&gt;w&lt;/strong&gt; lagi apakah kursor akan langsung berada pada kata selanjutnya atau kursor berada pada tanda koma (,) ?&lt;/p&gt;
-
-&lt;p&gt;Jawabannya adalah kursor akan berada pada tanda koma (,) , seperti berikut&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Bermimpilah &lt;strong&gt;D&lt;/strong&gt;alam Hidup, jangan hidup dalam mimpi – mimpi .&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Kenapa ? karena di vim karakter non-alfanumerik dianggap sebagai sebuah kata sendiri. Apabila &lt;strong&gt;w&lt;/strong&gt; ditekan sampai ke huruf &lt;strong&gt;m&lt;/strong&gt; pertama, dari kata &lt;strong&gt;mimpi – mimpi&lt;/strong&gt; kemudian &lt;strong&gt;w&lt;/strong&gt; ditekan lagi maka, kursor akan bergerak dan berada di tanda &lt;strong&gt;–&lt;/strong&gt; kemudian &lt;strong&gt;w&lt;/strong&gt; ditekan lagi makan kursor akan berada di huruf &lt;strong&gt;m&lt;/strong&gt; kedua.&lt;/p&gt;
-
-&lt;p&gt;Cukup tidak efisin sekali jika terdapat karakter non-numerik, upss tapi hal tersebut dapat diatasi, jika yang Anda inginkan adalah bergerak ke kata berikutnya yang dipisahkan oleh spasi dapat dilakukan&lt;/p&gt;
-
-&lt;h3 id=&#34;navigasi-kata-demi-kata-per-spasi-forward&#34;&gt;Navigasi Kata demi Kata per Spasi (forward)&lt;/h3&gt;
-
-&lt;p&gt;Untuk navigasi ini hampir sama dengan navigasi sebelumnya. Dengan menggunakan navigasi ini maka nantinya Anda dapat memindahkan kursor pada kata yang dipisahkan oleh karakter non alfanumerik
-yang menyatu dengan karakter alfanumerik tidak dianggap sebagai kata tersendiri. Berikut contohnya&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Bermimpilah &lt;strong&gt;D&lt;/strong&gt;alam Hidup, jangan hidup dalam mimpi – mimpi .&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Posisi kursor berada di huruf &lt;strong&gt;H&lt;/strong&gt; , untuk memindahkan kursor langsung ke huruf &lt;strong&gt;j&lt;/strong&gt; melewati karakter non-alfanumerik &lt;strong&gt;(,)&lt;/strong&gt; dapat dilakukan dengan cara menekan tombol kapital &lt;strong&gt;W&lt;/strong&gt; . Berikut hasilnya :&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Bermimpilah Dalam Hidup, &lt;strong&gt;j&lt;/strong&gt;angan hidup dalam mimpi – mimpi.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;navigasi-antar-kata-di-akhir-kata&#34;&gt;Navigasi Antar Kata Di Akhir Kata&lt;/h3&gt;
-
-&lt;p&gt;Jika sebelumnya kita memindahkan kursor kita ke kata berikutnya, pada navigasi ini kita akan berpindah ke kata kita sendiri tapi berada di akhir kata dengan menggunaakan huruf &lt;strong&gt;e&lt;/strong&gt; Berikut contohnya :&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt;ermimpilah Dalam Hidup, jangan hidup dalam mimpi – mimpi.&lt;/p&gt;
-
-&lt;p&gt;Kursor berada di huruf &lt;strong&gt;B&lt;/strong&gt; , dengan menekan huruf &lt;strong&gt;e&lt;/strong&gt; maka kursor akan berpindah ke akhir kata yaitu huruf &lt;strong&gt;h&lt;/strong&gt; . Sangat jelas yaa perbedaanya.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Bermimpila&lt;strong&gt;h&lt;/strong&gt; Dalam Hidup, jangan hidup dalam mimpi – mimpi.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Nah saat ini kursor sudah berada di huruf &lt;strong&gt;h&lt;/strong&gt; , untuk dapat langsung pindah ke akhir kata di depan yaitu huruf &lt;strong&gt;m&lt;/strong&gt; di kata (Dalam) silakan tekan kembali huruf &lt;strong&gt;e&lt;/strong&gt; nya hehehhe, berikut hasilnya :&lt;/p&gt;
-
-&lt;p&gt;Bermimpilah Dala&lt;strong&gt;m&lt;/strong&gt; Hidup, jangan hidup dalam mimpi – mimpi.&lt;/p&gt;
-
-&lt;p&gt;Agak aneh yaa tapi nyata adanya 🙂 .&lt;/p&gt;
-
-&lt;h3 id=&#34;navigasi-kata-demi-kata-per-spasi-di-akhir-kata&#34;&gt;Navigasi Kata demi Kata per spasi di akhir Kata&lt;/h3&gt;
-
-&lt;p&gt;Navigasi ini hampir sama kegunaannya dengan kapital &lt;strong&gt;W&lt;/strong&gt; sebelumnya, yaitu supaya hanya kata yang dipisahkan oleh spasi yang dituju , contohnya&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Bermimpilah Dala&lt;strong&gt;m&lt;/strong&gt; Hidup, jangan hidup dalam mimpi – mimpi.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Saat ini kursor berada di huruf &lt;strong&gt;m&lt;/strong&gt; , lalu tekan &lt;strong&gt;e&lt;/strong&gt;* lagi maka kursor akan berada di , selanjutnya tekan kapital &lt;strong&gt;E&lt;/strong&gt; maka kursor akan berada di akhir kata yaitu &lt;strong&gt;n&lt;/strong&gt; dari kata (jangan).&lt;/p&gt;
-
-&lt;h3 id=&#34;navigasi-kata-demi-kata-backward&#34;&gt;Navigasi Kata demi Kata (backward)&lt;/h3&gt;
-
-&lt;p&gt;Sebelumnya kita telah memperlajari bagaimana cara memindahkan kursor ke depan , nah navigasi kali ini kebalikannya yaitu ke belakang, jika kita menggunakan &lt;strong&gt;w&lt;/strong&gt; maka kursor kita akan berada di depan kata, jika menetakan &lt;strong&gt;e&lt;/strong&gt; maka kursor kita akan berada di akhir kata, navigasi ini kebalikannya dari huruf &lt;strong&gt;e&lt;/strong&gt; , yaitu back (kembali) , contoh kalimatnya&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Bermimpilah Dalam Hidup, jangan hidup dalam mimp&lt;strong&gt;i&lt;/strong&gt; – mimpi.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Kursor berada di huruf &lt;strong&gt;i&lt;/strong&gt; jika Anda menekan huruf &lt;strong&gt;b&lt;/strong&gt; maka kursor akan berada di huruf &lt;strong&gt;m&lt;/strong&gt; dari kalimat (mimpi)&lt;/p&gt;
-
-&lt;p&gt;Silakan tekan huruf &lt;strong&gt;m&lt;/strong&gt; lagi maka kursor akan berada di huruf &lt;strong&gt;d&lt;/strong&gt; di kata (dalam), contohnya&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Bermimpilah Dalam Hidup, jangan hidup &lt;strong&gt;d&lt;/strong&gt;alam mimpi – mimpi.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;navigasi-kata-demi-kata-per-spasi-backward&#34;&gt;Navigasi Kata demi Kata per Spasi (backward)&lt;/h3&gt;
-
-&lt;p&gt;Seperti pada navigasi yang lain dimana ada huruf &lt;strong&gt;w&lt;/strong&gt; maka akan ada kapital &lt;strong&gt;W&lt;/strong&gt; , dimana ada huruf &lt;strong&gt;e&lt;/strong&gt; maka akan ada kapital &lt;strong&gt;E&lt;/strong&gt; , nah ini navigasi ini yaitu huruf kapital &lt;strong&gt;B&lt;/strong&gt; , fungsiny untuk berpindah ke kata sebelumnya dengan langsung loncat ke kata yang hanya dipisahkan oleh spasi.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat&lt;/p&gt;
-
-&lt;p&gt;Oke untuk tutorial berpindah antar kata sampai disini dulu yaa 🙂 , selanjutnya akan kami bahas bagaimana jika kita berpindah ke kata selanjutnya tapi dipisahkan oleh karakter.&lt;/p&gt;
-
-&lt;p&gt;Referensi : Ebook Vim Untuk Semua&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Navigasi Dasar Di Vim</title>
-      <link>http://nurhamim.net/2019/vim4/</link>
-      <pubDate>Sat, 06 Jul 2019 03:13:11 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/vim4/</guid>
-      <description>&lt;p&gt;Pada tulisan sebelumnya kita telah membahas tentang jenis – jenis mode di vim, Nah untuk kali ini kita akan membahas tentang Navigasi dasar yang ada di vim.&lt;/p&gt;
-
-&lt;p&gt;Dengan menggunakan editor vim, maka mindset pemikiran kita juga harus di ubah, karena editor vim berbeda dengan editor – editor lainnya,&lt;/p&gt;
-
-&lt;p&gt;Di Vim kita harus membiasakan diri dimana jari – jari kita harus setia dengan keyboard :), dengan berada di posisi home-row yaitu pada tombol a, s, d, f  dan h,j, k,l :&lt;/p&gt;
-
-&lt;p&gt;Berikut kami telah menyediakan contoh untuk penggunaan navigasi&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt;ila gagal&lt;/p&gt;
-
-&lt;p&gt;ya dicoba lagi 🙂&lt;/p&gt;
-
-&lt;p&gt;Sampai kapan ?&lt;/p&gt;
-
-&lt;p&gt;Sampai sukses !&lt;/p&gt;
-
-&lt;p&gt;Contoh di atas kursor berada di huruf &lt;strong&gt;B&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk menggerakkan kursor ke kiri, kanan dan bawah , atas,  di vim ada 4 cara diantaranya dengan menekan huruf berikut :&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;h&lt;/strong&gt; : Digunakan untuk menggerakkan kursor ke kiri&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;j&lt;/strong&gt; : Digunakan untuk menggerakkan kursor ke bawah&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;k&lt;/strong&gt; : Digunakan untuk menggerakkan kursor ke atas&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;l&lt;/strong&gt; : Digunakan untuk menggerakkan kursor ke bawah&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Jika Anda ingin bergerak ke kanan maka Anda dapat menekan huruf &lt;strong&gt;l&lt;/strong&gt; , perhatikan contoh dibawah maka kursor akan berpindah ke kanan yaitu huruf &lt;strong&gt;i&lt;/strong&gt; .&lt;/p&gt;
-
-&lt;p&gt;B&lt;strong&gt;i&lt;/strong&gt;la gagal&lt;/p&gt;
-
-&lt;p&gt;ya dicoba lagi 🙂&lt;/p&gt;
-
-&lt;p&gt;Sampai kapan ?&lt;/p&gt;
-
-&lt;p&gt;Sampai sukses !&lt;/p&gt;
-
-&lt;p&gt;Tekan huruf &lt;strong&gt;h&lt;/strong&gt; Anda ingin bergerak ke kiri lagi,&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt;ila gagal&lt;/p&gt;
-
-&lt;p&gt;ya dicoba lagi 🙂&lt;/p&gt;
-
-&lt;p&gt;Sampai kapan ?&lt;/p&gt;
-
-&lt;p&gt;Sampai sukses !&lt;/p&gt;
-
-&lt;p&gt;Untuk pindah ke bawah bisa dengan cara menekan tombol &lt;strong&gt;j&lt;/strong&gt; , maka kursor akan berada di huruf &lt;strong&gt;y&lt;/strong&gt;,seperti berikut&lt;/p&gt;
-
-&lt;p&gt;Bila gagal&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;y&lt;/strong&gt;a dicoba lagi 🙂&lt;/p&gt;
-
-&lt;p&gt;Sampai kapan ?&lt;/p&gt;
-
-&lt;p&gt;Sampai sukses !&lt;/p&gt;
-
-&lt;p&gt;Nah jika Anda ingin bergerak ke atas lagi tinggal menekan tombol &lt;strong&gt;k&lt;/strong&gt; , maka Anda akan kembali ke posisi semula&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt;ila gagal&lt;/p&gt;
-
-&lt;p&gt;ya dicoba lagi 🙂&lt;/p&gt;
-
-&lt;p&gt;Sampai kapan ?&lt;/p&gt;
-
-&lt;p&gt;Sampai sukses !&lt;/p&gt;
-
-&lt;p&gt;Oke diatas merupakan pengenalan tentang Navigasi dasar yang ada di Vim. Selanjutnya kita akan membahas lebih dalam lagi tentang navigasi yaa, tetap semangat dan selamat mencoba&lt;/p&gt;
-
-&lt;p&gt;Referensi : Ebook Vim Untuk Semua&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Mengenal Vim Mode</title>
-      <link>http://nurhamim.net/2019/vim3/</link>
-      <pubDate>Sat, 06 Jul 2019 03:13:09 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/vim3/</guid>
-      <description>
-
-&lt;p&gt;Pada tutorial sebelumnya penulis telah memberikan informasi tentang apa itu Vim. Nah pada kali ini kita akan mempelajari tentang mode dan navigasi – navigasi dasar yang berada di Vim, yang pertama silakan buka terlebih dahulu vim Anda dengan menjalankan perintah vim di terminal Linux Anda. Berikut tampilan default dari vim .&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim03/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk keluar dari vim dapat dilakukan dengan cara menekan tombol shift diikuti dengan : lalu tekan tombol q  dan tekan Enter . Huruf q artinya yaitu quit (keluar) seperti pada gambar di bawah&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim03/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hore saat ini Anda telah berhasil masuk dan keluar dari Vim. Di Vim terdapat beberapa mode . Namun sebelum itu mari kita bahas terlebih dahulu tentang pengertian dari modedi Vim.&lt;/p&gt;
-
-&lt;p&gt;Mode itu bahasa inggris yang artinya adalah wahana hemmm Aneh :(, masak iya di vim ada wahana wkwkwkw 😀 .&lt;/p&gt;
-
-&lt;p&gt;Oke, serius yaa, penulis disini mengartikan bahwasannya kata mode dalam konteks vim yaitu sebuah state/kondisi yang memungkinkan bagi vim untuk menjalankan sebuah kemampuan yang berbeda pada setiap modenya.&lt;/p&gt;
-
-&lt;p&gt;Nah jenis – jenis mode di vim bisa di bilang banyak diantaranya :&lt;/p&gt;
-
-&lt;h4 id=&#34;mode-normal&#34;&gt;Mode Normal&lt;/h4&gt;
-
-&lt;p&gt;Digunakan untuk navigasi kursor dan memanipulasi teks. Mode ini yang pertama kali dimasuki saat pertama kali menjalankan vim.&lt;/p&gt;
-
-&lt;h4 id=&#34;mode-insert&#34;&gt;Mode Insert&lt;/h4&gt;
-
-&lt;p&gt;Digunakan untuk menambah teks baru&lt;/p&gt;
-
-&lt;h4 id=&#34;mode-visual&#34;&gt;Mode Visual&lt;/h4&gt;
-
-&lt;p&gt;Digunakan untuk navigsi kursor dan manipulasi teks secara visual dengan menggunakan text block.&lt;/p&gt;
-
-&lt;h4 id=&#34;mode-command&#34;&gt;Mode Command&lt;/h4&gt;
-
-&lt;p&gt;Digunakan untuk menjalankan perintah yang dikenal oleh Vim.&lt;/p&gt;
-
-&lt;p&gt;Oke untuk itulah jenis – jenis mode yang berada di Vim.&lt;/p&gt;
-
-&lt;p&gt;Semoga bermanfaat next kita akan membahas tentang Vim Mode in Action&lt;/p&gt;
-
-&lt;p&gt;Referensi : Ebook Vim Untuk Semua .&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Vim Mode in Action</title>
-      <link>http://nurhamim.net/2019/vim2/</link>
-      <pubDate>Sat, 06 Jul 2019 03:12:51 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/vim2/</guid>
-      <description>
-
-&lt;p&gt;Sebelumnya kita telah mengetahui tentang mode – mode yang berada di Vim, Nah pada kali ini kita akan mecoba mengetahui tentang bagaimana cara membuka mode normal, insert dan command.&lt;/p&gt;
-
-&lt;p&gt;Pada saat Anda membuka vim pertama kali maka disitulah kita menggunakan yang namanya mode normal .&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Mode normal ini dapat kita gunakan untuk navigasi (posisi atau arah) kursor serta juga dapat kita gunakan untuk berpindah antar file (apabila telah terdapat file).&lt;/p&gt;
-
-&lt;p&gt;Untuk memulai menulis sesuatu di Vim maka kita akan menggunakan mode insert , untuk masuk ke mode insert dari mode normal Anda perlu menekan huruf atau tombol i , perhatikan indikator di kiri bawah pada gambar berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada Mode Insert ini Anda dapat menulis atau mencatat apa yang Anda inginkan, sebagai contoh penulis disini akan menulis beberapa kalimat seperti berikut&lt;/p&gt;
-
-&lt;h4 id=&#34;belajar-vim-itu-menyenangkan-lo-dan-enak-banget-buat-ngonfig-di-linux&#34;&gt;Belajar Vim itu menyenangkan lo, dan enak banget buat ngonfig di linux&lt;/h4&gt;
-
-&lt;h4 id=&#34;yuk-kita-belajar-vim-yaa&#34;&gt;Yuk kita belajar Vim yaa 🙂&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/3.png&#34; alt=&#34;Menulis pada mode insert&#34; title=&#34;Menulis pada mode insert&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk keluar dari mode insert tersebut silakan tekan tombol Esc maka Anda akan kembali ke mode normal .&lt;/p&gt;
-
-&lt;p&gt;Berikutnya adalah mode command atau perintah, mode ini ditandai dengan kita mengetikkan tombol : dan kemudian diikuti dengan perintah yang ingin dijalankan, misalnya untuk menyimpan file pada gambar diatas dapat dilakukan dengan cara menekan huruf w  dan diikuti nama file yang ingin disimpan misalnya pada file ini kita akan memberikan nama file belajar.txt kemudian silakan tekan tombol Enter untuk meng-eksekusinya, contoh seperti pada gambar di bawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/4.png&#34; alt=&#34;Gambar mode comment dan meyimpan file&#34; title=&#34;Gambar mode comment dan meyimpan file. &#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selain itu mode command juga dapat kita gunakan untuk keluar dari Vim dengan cara tekan tombol : lalu huruf q seperti pada gambar berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/5.png&#34; alt=&#34;Gambar keluar dari Vim, menggunakan mode comment&#34; title=&#34;Gambar keluar dari Vim, menggunakan mode comment&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Silakan lihat file belajar.txt yang baru saja Anda buat dengan cara menjalankan perintah ls seperti berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/6.png&#34; alt=&#34;Gambar, melihat hasil pembuatan file menggunkan Vim&#34; title=&#34;Gambar, melihat hasil pembuatan file menggunkan Vim &#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar diatas menandakan kita telah berhasil untuk membuat file dan menyimpan file menggunakan Vim. Sekarang silakan buka kembali Vim Anda, disini kita akan mempelajari bagaimana cara membuka file yang sudah ada di Vim.&lt;/p&gt;
-
-&lt;p&gt;Untuk membuka file yang sudah ada tersebut dapat dilakukan dengan cara menjalankan perintah : dan menekan tombol e (:e) diikut dengan nama file Anda. Disini file yang dimaksud yaitu belajar.txt (silakan sesuaikan dengan file yang ada), lalu tekan Enter untuk meng-eksekusinya, dengan itu file belajar.txt akan terbuka, seperti pada gambar berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim02/7.png&#34; alt=&#34;Gambar untuk membuka file di vim&#34; title=&#34;Gambar untuk membuka file di vim&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke saat ini Anda telah berhasil membuka file di Vim.&lt;/p&gt;
-
-&lt;p&gt;Cukup sekian untuk tutorial singkat mengenai Vim mode in Action  ini. Selanjutnya kita akan membahas mengenai Navigasi Dasar di Vim.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat bagi kita semua 🙂&lt;/p&gt;
-
-&lt;p&gt;Referensi : Ebook Vim Untuk Semua&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Mengenal Editor Vim</title>
-      <link>http://nurhamim.net/2019/vim1/</link>
-      <pubDate>Sat, 06 Jul 2019 03:12:46 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/vim1/</guid>
-      <description>&lt;p&gt;Jika Anda seorang programmer atau seorang sysadmin atau Anda pengguna sistem operasi Linux atapun Windows maka Anda akan kenal dan tak akan asing lagi dengan yang namanya teks editor sebagai contoh teks editor yang populer dan biasa dipakai bagi pengguna siste operasi Windows yaitu “notepad dan notepad++” . Selain itu bagi pengguna sistem operasi Linux pasti akan kenal pakai (banget) dengan yang namanya teks editor nano, terlebih bagi pengguna Linux Ubuntu.&lt;/p&gt;
-
-&lt;p&gt;Selain itu sebenarnya sangat banyak pemilihan teks editor yang dapat kita gunakan diantaranya :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Nano&lt;/li&gt;
-&lt;li&gt;Sublime Teks&lt;/li&gt;
-&lt;li&gt;Visual Studio Code&lt;/li&gt;
-&lt;li&gt;Notepad++&lt;/li&gt;
-&lt;li&gt;Kate&lt;/li&gt;
-&lt;li&gt;Atom&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mungkin diatas beberapa teks editor yang dapat penulis sampaikan, namun sebenarnya masih sangat banyak yang dapat Anda gunakan.&lt;/p&gt;
-
-&lt;p&gt;Pada kali ini penulis akan memperkenalkan sebuah teks editor yang bisa dibilang magic dan powerfull dan sebagian orang terkadang menyebutnya editor yang paling susah digunakan. wawww bisa gitu yaa hihihi 🙂&lt;/p&gt;
-
-&lt;p&gt;Teks editor Vim adalah teks editor yang sangat powerfull dan mudah digunakan. Namun banyak juga yang beranggapan bahwasannya VIM itu susah , Yaps betul karena vim salah satu teks editor yang berbeda dengan teks editor yang lainnya . Dengan menggunakan editor vim kita dapat berselancar dengan mudah tanpa ketergantungan dengan yang namanya tikus (mouse) hihihi 🙂&lt;/p&gt;
-
-&lt;p&gt;Editor Vim sendiri memiliki berbagai macam pemilihan penggunaan mulai dari GUI (Graphic User Interface) sampai ke CLI (Command Line Interface) . Namun pada kesempatan kali ini penulis akan membahas penggunaan Vim menggunakan CLI.&lt;/p&gt;
-
-&lt;p&gt;Sebelum melanjutkan ke pembahasan – pembahasan selanjutnya mengenai Vim ada baiknya bagi Anda yang belum memasang atau install Vim, berikut merupakan langkah – langkah untuk instalasi Vim di sistem operasi Linux&lt;/p&gt;
-
-&lt;p&gt;Terlebih dahulu silakan update sistem operasi Ubuntu yang Anda gunakan disini penulis menggunakan Ubuntu 18.04, berikut perintahnya :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo apt update 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah berikutnya Anda dapat memasang editor Vim dengan menjalankan satu baris perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo apt install vim 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk melihat versi dari Vim dapat menjalankan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ vi --version
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah Anda dapat membuka Vim dengan mengeksekusi perintah vim di terminal linux Anda,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo vim
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka akan muncul tampilan default Vim seperti gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim01/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke, saat ini editor Vim telah berhasil diinstall dan telah dapat dibuka dengan baik.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-
-&lt;p&gt;Referensi : Ebook Vim Untuk Semua&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Konfigurasi NTP (Network Time Protokol) Di Mikrotik</title>
-      <link>http://nurhamim.net/2019/post10/</link>
-      <pubDate>Sat, 06 Jul 2019 01:17:40 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/post10/</guid>
-      <description>&lt;p&gt;Pada tutorial kali ini saya akan share bagaimana cara setting NTP di Mikrotik, serta penerapannya di mikrotik. Namun sebelumnya ada baiknya kita mempelajari terlebih dahulu apa itu NTP ?&lt;/p&gt;
-
-&lt;p&gt;Network Time Protocol atau lebih sering disebut dengan istilah NTP merupakan sebuah mekanisme atau protokol yang bisa digunakan untuk sinkronisasi terhadap penunjuk waktu dalam sebuah sistem jaringan dan komputer.&lt;/p&gt;
-
-&lt;p&gt;Sinkronisasi ini biasa dilakukan di dalam jalur komunikasi data yang biasanya menggunakan protokol komunikasi yaitu TCP/IP. Sehingga proses ini sendiri dapat dilihat sebagai proses komunikasi data biasa yang hanya melakukan pertukaran paket – paket data.&lt;/p&gt;
-
-&lt;p&gt;NTP menggunakan port komunikasi UDP 123. Protokol ini memang didesain untuk dapat bekerja dengan baik meskipun media komunikasinya bervariasi, mulai dari yang waktu litensinya tinggi hingga ke yang rendah, mulai kabel sampai dengan media udara.&lt;/p&gt;
-
-&lt;p&gt;Protokol ini memungkinkan perankat -perangkat komputer untuk tetap dapat melakukan sinkronisasi waktu dengan sangat tepat dan akurat dalam berbagai media.&lt;/p&gt;
-
-&lt;p&gt;Biasanya dalam sebuah jaringan, beberapa node dilengkapi dengan fasilitas NTP dengan tujuan untuk membentuk sebuah subnet sinkronisasi. Node – node tersebut kemudian akan saling berkomunikasi dan ber sinkronisasi menyambut waktu yang direkan.&lt;/p&gt;
-
-&lt;p&gt;Meskipun ada beberapa node yang akan menjadi master (primary server), protokol NTP tidak membutuhkan mekanisme pemilihan tersebut.
-Sekarang kita akan melanjutkan bagaimana setting NTP pada Router Mikrotik.&lt;/p&gt;
-
-&lt;p&gt;Setting NTP Client di Mikrotik Dalam kondisi tertentu biasanya Router Mikrotik bekerja berdasarkan waktu, baik itu hari, tanggal, buan, maupun jam. Apabila anda memblokir sebuah akses internet di luar jam tertentu bisa juga memblokir situs – situs tertentu pada jam – jam tertentu.&lt;/p&gt;
-
-&lt;p&gt;Apabila Anda menggunakan Komputer untuk di jadikan Router tidak akan ada masalah karena di Motherboard komputer sudah ada baterai yang bisa mempertahankan konfigurasi waktu.&lt;/p&gt;
-
-&lt;p&gt;Namun jika anda menggunakan Routerboard Mikrotik yang tidak memiliki baterai internal seperti halnya komputer maka semua konfigurasi waktu akan kacau setiap kali router mengalami restart. Bagaimana cara mengatasi ketidakakuratan ini ?&lt;/p&gt;
-
-&lt;p&gt;Untuk mengatasi ketidakakuratan ini kita akan mengkonfigurasi Network Time Protokol (NTP). Sebelumnya router mikrotik harus mengetahui NTP server yang ada di internet supaya bisa menyesuaikan dengan konfigurasi waktu yang berada di NTP server tersebut.&lt;/p&gt;
-
-&lt;p&gt;Untuk Sinkronisasi konfigurasi waktu pada router mikrotik, bisa anda menggunakan NTP Server untuk Indonesia dengan IP Address 203.160.128.3&lt;/p&gt;
-
-&lt;p&gt;Langkah – lankah mengkonfigurasi NTP pada Mikrotik :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Klik Menu System  -&amp;gt; SNTP Client  (Simple Network Time Protocol)&lt;/li&gt;
-&lt;li&gt;Setelah itu kita ceklis Enabled dan isikan Primary NTP Server dengan alamat IP Address 203.160.128.3 (NTP Server Indonesia)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/ntp%20mikrotik/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Sekarang kita coba cek apakah Router Mikrotik sudah sinkron dengan waktu di indonesia, cara untuk mengeceknya anda klik menu system -&amp;gt; clock&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/ntp%20mikrotik/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada tahap ini Anda telah berhasil melakukan konfigurasi NTP di Mikrotik, selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Menghubungkan Mikrotik Ke Access Point</title>
-      <link>http://nurhamim.net/2019/post9/</link>
-      <pubDate>Sat, 06 Jul 2019 01:17:36 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/post9/</guid>
-      <description>&lt;p&gt;Pada tutorial kali ini saya akan share bagaimana cara menghubungkan mikrotik ke access point. Berikut ini topologi sederhanan untuk menghubungkan perangkat keras Mikrotik Routherboard ke Internet, Untuk media Internetnya disini kita menggunakan Access Point, Mari kita mulai untuk mempraktekkannya :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Mikrotik memiliki berbagai macam jenis, dan banyak tipe – tipe mikrotik yang sudah memiliki fitur wireless, sepertihalnya RB941-2nD-TC yang sudah support wireless, kami akan mengkonfigurasikan mikrotik RB941-2nD-TC supaya terhubung ke internet/AP dengan MikroTik.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Langkah pertama kita  buka aplikasi winbox, download langsung di situs resmi mikrtoik di &lt;a href=&#34;https://mikrotik.com/download&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://mikrotik.com/download&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Apabila sudah masuk, kita konfigurasikan alamat IP Address yang terhubung antara PC dan port Mikrotik. dengan perintah sebagai berikut : &lt;strong&gt;ip address add address 192.168.88.&lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;24&lt;/sub&gt; interface=ether2&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Konfigurasi komputer kita agar satu network dengan interface Ether2, apabila ip ether2 adalah &lt;strong&gt;192.168.88.&lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;24&lt;/sub&gt; (kelas c)&lt;/strong&gt; maka ip komputer kita bisa menggunakan &lt;strong&gt;ip 192.168.88.3-192.168.88.254&lt;/strong&gt; dengan &lt;strong&gt;gateway 192.168.88.2&lt;/strong&gt; sesuaikan dengan alamat ip ether2 yang kita jadikan gateway. Disini kami akan memberikan cara untuk menyetting ip address pada sistem operasi windows dan linux ubuntu sebagai berikut :&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Sistem Operasi Windows&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Caranya masuk ke menu &lt;strong&gt;Network Station, Klik kanan di lokal area connection, lalu pilih propertie, Double klik di TCP/IP dan masukkan ip address serta gateway, lalu Ok.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Sistem Operasi Linux Ubuntu&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Caranya &lt;strong&gt;Klik pada logo network pilih Edit connection,  add, lalu pilih Create&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu kita kasih nama pada menu &lt;strong&gt;Connection name&lt;/strong&gt; : “Untuk namanya bebas sesuai keinginan”, Pilih di menu &lt;strong&gt;Ethernet&lt;/strong&gt; dan Di menu &lt;strong&gt;Device&lt;/strong&gt; pilih Mac Addressnya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya kita masuk ke menu &lt;strong&gt;IPv4 Settings&lt;/strong&gt;,  Untuk &lt;strong&gt;Method&lt;/strong&gt;, pilih &lt;strong&gt;Manual&lt;/strong&gt;, klik &lt;strong&gt;Add&lt;/strong&gt; dan isikan alamat &lt;strong&gt;IP Address, Netmask, Gateway&lt;/strong&gt;, sesuaikan dengan Ip Address yang di Mikrotik, apabila sudah selesai kita simpan dengan klik tombol &lt;strong&gt;Save.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Selanjutnya kita aktifkan Fitur Wireless dengan klik menu &lt;strong&gt;Wireless -&amp;gt; Interface -&amp;gt; Wlan1 di enable/di aktifkan dengan cara (di centang) -&amp;gt; buka wirelessnya yang berada di menu interface klik tab wireless -&amp;gt; ganti band dengan 2GHz B/G/N -&amp;gt; Aplly -&amp;gt; Scan -&amp;gt; Pilih Access Point yang ingin digunakan -&amp;gt; lalu connect -&amp;gt; Aplly -&amp;gt; Ok&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Apabila Access Point menggunakan Password, maka kita harus mengisi pasword tersebut degan benar, dan mengkonfigurasi &lt;strong&gt;Security Profile&lt;/strong&gt;  dengan cara: &lt;strong&gt;Wireless -&amp;gt; Security profile -&amp;gt; add&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Centang semua &lt;strong&gt;Authentication Types&lt;/strong&gt; dan &lt;strong&gt;Unicast Cipher&lt;/strong&gt; serta &lt;strong&gt;Group Ciphers&lt;/strong&gt;, isikan Password &lt;strong&gt;WPA Pre-Shared Key&lt;/strong&gt; dan &lt;strong&gt;WPA2 Pre-Shared Key&lt;/strong&gt; sesuai dengan Password Access Point anda.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Lalu kita masuk kembali ke manu Wireless, masukkan Security Profile yang barusan kita buat&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pastikan &lt;strong&gt;wlan1 Running&lt;/strong&gt;, Seperti pada gambar dibawah ini :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Konfigurasi &lt;strong&gt;DHCP Client&lt;/strong&gt; supaya bisa mendapatkan &lt;strong&gt;IP Address&lt;/strong&gt; dari &lt;strong&gt;Acccess Point&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Sekarang kita konfigurasikan NAT agar semua packet bisa di bungkus dan di sebarkan. Dengan perintah : &lt;strong&gt;IP -&amp;gt; Firewall -&amp;gt; NAT -&amp;gt; add: chain=srcnat, out interace wlan1 action = masquerade&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Test apakah Mikrotik kita sudah mendapatkan koneksi internet. Caranya kita masuk ke Terminal Mikrotik, kita test dengan mengetikkan ping google.com. Apabila Mikrotik sudah mendapatkan koneksi internet baru kita test di komputer kita apakah sudah mendapatkan koneksi internet dengan cara mengetikkan perintah ping google.com pada cmd atau di terminal linux.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/menghubungkan%20ke%20access%20point/14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selamat sekarang Anda sudah bisa mengkoneksikan Mikrotik ke Internet, Semoga bermanfaat, selamat mencoba 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>NetInstall Mikrotik</title>
-      <link>http://nurhamim.net/2019/post8/</link>
-      <pubDate>Sat, 06 Jul 2019 01:17:34 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/post8/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;Apa itu Netinstall ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Netinstall merupakan program yang berjalan pada komputer Windows yang memungkinkan Anda untuk menginstall Mikrotik RouterOS ke Komputer atau ke RouterBoard melalu jaringan Ethernet. Netinstall program berbasis windows dengan protokol Bootp. Netinstall juga bisa di jalankan di Sistem Operasi Linux dengan emulator &lt;a href=&#34;https://www.winehq.org/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;wine,&lt;/a&gt; Netinstall juga bisa dijalankan di Linux.&lt;/p&gt;
-
-&lt;h3 id=&#34;netinstall-digunakan-pada-saat&#34;&gt;Netinstall digunakan pada saat:&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Instalasi sebelumnya gagal&lt;/li&gt;
-&lt;li&gt;OS dalam Router rusak&lt;/li&gt;
-&lt;li&gt;Kehilangan Password untuk akses&lt;/li&gt;
-&lt;li&gt;Di gunakan untuk mereset password atau lupa password&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;yang-harus-kita-persiapkan-untuk-menjalankan-netinstall-adalah&#34;&gt;Yang Harus kita persiapkan untuk menjalankan netinstall adalah :&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Program Netinstall&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Kabel UTP&lt;/li&gt;
-&lt;li&gt;File software Mikrotik sesuai dengan jenis nya : x86, mipsbe, mipsle, dan sejenisnya.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Untuk mendownload Netinstall Anda  bisa mendownloadnya di situs resmi Mikrotik  (www.mikrotik.com/download)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/netinstall%20mikrotik/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Silakan download Package RouterOS, sesuaikan dengan tipe router Anda dan versi yang ingin Anda gunakan jika menggunakan RB750 silahkan pilih tipe MIPSBE, jika menggunakan RB941-2nD – TC silahkan pilih tipe SMIPS. Di sini kami akan menggunakan RB941 jadi kami mendownloadnya yang SMIPS dari halaman &lt;a href=&#34;https://www.mikrotik.com/download&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.mikrotik.com/download&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/netinstall%20mikrotik/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikut ini cara menggunakan Netinstall:&lt;/p&gt;
-
-&lt;h3 id=&#34;setting-ip-address-dan-gateway-di-komputer-kita&#34;&gt;Setting IP Address dan Gateway di Komputer kita&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;IP Adress : 192.168.2.2 dan Gateway 192.168.2.1&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Lalu klik OK&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Setting IP Address di Linux Ubuntu&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/netinstall%20mikrotik/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Setting IP Address di Windows&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Setelah itu masuk ke Applikasi Netinstall &amp;gt;&amp;gt; Klik NetBooting -&amp;gt; Ceklis Boot Server Enable &amp;gt;&amp;gt; Isikan IP Address Client : 192.168.2.1 (IP Gateway Komputer)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/netinstall%20mikrotik/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Cabut Kabel Power dari Routerboard&lt;/li&gt;
-&lt;li&gt;Reset Routerboad menggunakn pulpen atau sejenisnya, tahan sekitar 10 detik&lt;/li&gt;
-&lt;li&gt;Colokan kembali kabel power ke RouterBoard&lt;/li&gt;
-&lt;li&gt;Tunggu Sampai Router kita terdeteksi oleh Netinstall tunggu sekitar 15 detik.&lt;/li&gt;
-&lt;li&gt;Kita klik browser&lt;/li&gt;
-&lt;li&gt;Lalu pilih Package yang akan di install sesuai dengan tipe dan versi Routerboard&lt;/li&gt;
-&lt;li&gt;Lalu klik OK&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/netinstall%20mikrotik/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Selanjutnya klik select all untuk menandai semua package&lt;/li&gt;
-&lt;li&gt;Lalu klik install&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/netinstall%20mikrotik/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Setelah itu kita tunggu sampai instalasi OS di Routerboard selesai.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/netinstall%20mikrotik/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Pastikan installasi selesai seperti pada gambar di bawah ini&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/netinstall%20mikrotik/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah selesai maka Routerboard akan kembali ke settingan default.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Manajemen User Di Mikrotik</title>
-      <link>http://nurhamim.net/2019/post7/</link>
-      <pubDate>Sat, 06 Jul 2019 01:17:30 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/post7/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Apa itu User Management ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;User Management untuk melindungi Router Mikrotik kita, supaya tidak semua orang bisa masuk atau login serta mengkonfigurasi router. Karena dengan adanya User Management ini kita dipermudah untuk mengelola akses masuk ke system Router, untuk masuk ke system kita harus menggunakan user dan password terlebih dahulu.&lt;/p&gt;
-
-&lt;p&gt;Pada dasarnya RouterBoard Mikrotik memiliki User Management (User login) Default yaitu : &lt;strong&gt;User (Login)=admin dan Password=(kosong)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/manajemen%20user%20mikrotik/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kitu juga bisa membuat lebih dari 1 user bahkan banyak userpun bisa sesuai dengan kebutuhan, Misalkan kita punya rekan untuk meng-handle jaringan kita, kita bisa membuatkan user management dengan hak akses Full/Write/Read.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini perbedaan hak ases Full/Write/Read Pada User Management :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Full&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hak akses ini merupakan hak akses full yang berada di paling atas atau tingkatan paling atas. User yang mempunyai hak akses full ini dia bisa menambahkan user, membaca, dan menulis atau write, serta menghapus konfigurasi, export, backup sistem mikrotik.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Write&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hak akses ini tidak jauh berbeda dengan hak akses full, yang berbeda dengan hak akses full di Write dia tidak bisa menambahkan user baru, dan juga tidak bisa melakukan konfigurasi backup konfigurasi mikrotik.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Read&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hak akses ini hanya bisa melihat dan memonitoring dan tidak bisa menabah konfigurasi tidak bisa mengedit konfigurasi mikrotik.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini cara untuk menambahkan user baru dengan Akse Write dan Read :&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Klik system -&amp;gt; User -&amp;gt; add (+)&lt;/li&gt;
-&lt;li&gt;Kita isikan name=userhamim (bebas) Group=Write Password=(bebas)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/manajemen%20user%20mikrotik/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang kita membuat user dengan akses Read&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Klik system -&amp;gt; User -&amp;gt; add (+)&lt;/li&gt;
-&lt;li&gt;Kita isikan name=santren (bebas) Group=Read Password=(bebas)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/manajemen%20user%20mikrotik/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kita juga bisa meng-costume akses user dengan cara membuat Group, dan nantinya kita bisa meng-costum sesuai dengan keinginan kita .&lt;/p&gt;
-
-&lt;p&gt;Berikut ini cara untuk membuat Group Untuk User :&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Klik system -&amp;gt; User -&amp;gt; Group -&amp;gt; Add (+)&lt;/li&gt;
-&lt;li&gt;Isi name=Santren-Koding (bebas), Policies pilih atau Ceklis sesuai kebutuhan dengan kebutuhan user .&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/manajemen%20user%20mikrotik/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Simpan dengan klik Apply dan OK.&lt;/p&gt;
-
-&lt;p&gt;Berikutnya kita akan membuat user dengan Group akses Santren-Koding, cara nya sama seperti membuat user sebelumnya, bedanya Groupnya akan kita isi dengan Group yang barusan kita buat (Santren-Koding).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/manajemen%20user%20mikrotik/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah cara – cara untuk melakukan manajemen user di Mikrotik, selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Perintah – Perintah Dasar Mikrotik Yang Sering Digunakan</title>
-      <link>http://nurhamim.net/2019/post6/</link>
-      <pubDate>Sat, 06 Jul 2019 01:17:21 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/post6/</guid>
-      <description>&lt;p&gt;Oke pada kesempatan kali ini saya akan share tentang Command Line yang ada di Mikrotik, apa aja yaa supaya tidak berlama – lama mari kita pelajari command line nya. Berikut ini merupakan beberapa perintah dasar di Mikrotik yang umum digunakan, antaranya :&lt;/p&gt;
-
-&lt;p&gt;Perintah untuk shutdown dan restart mikrotik, ketikkan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[admin@Mikrotik]&amp;gt;system shutdown (Untuk mematikan mikrotik)
-[admin@Mikrotik]&amp;gt;system reboot (Untuk Merestart mikrotik)
-[admin@Mikrotik]&amp;gt;system reset (Untuk mereset konfigurasi yang sebelumnya dibuat). 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perlu diketahui bahwa perintah – perintah di atas tersebut harus dilakukan direktori admin&lt;/p&gt;
-
-&lt;p&gt;Perintah untuk merubah nama Router Mikrotik sebagai berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[admin@Mikrotik]&amp;gt;/system identity
-[admin@Mikrotik]&amp;gt;system identity set name=hamim
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk melihat hasil dari konfigurasi, ketikkan perintah &lt;strong&gt;print&lt;/strong&gt; atau &lt;strong&gt;pr&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Sebagai contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;system identity pr name:”hamim” Lalu console akan berubah menjadi [hamim@Mikrotik]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk merubah Password Router Mikrotik, ketikkan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;/password[hamim@Mikrotik]password&amp;gt;old password:*** (Isikan password baru)
-[hamim@Mikrotik]password&amp;gt;retype new password :*** (isikan password kembali) . 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sebagai contoh :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;/password[hamim@Mikrotik]password&amp;gt;old password
-[admin@hamim]password&amp;gt;new password 123[hamim@Mikrotik]password&amp;gt;retype new password 123
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/perintah%20dasar%20mikrotik/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk melihat kondisi interface pada Router Mikrotik, ketikkan perintah :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;interface print
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/perintah%20dasar%20mikrotik/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikut ini perintah untuk penamaan interace&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Mengganti nama interface&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;interface (enter)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Mengganti nama interface&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;interface (enter)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Begitu juga untuk interface ether2 kami kasih nama LAN&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]interface&amp;gt;set 1 name=LAN
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Mengganti nama interface&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;interface (enter)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Sekarang kita cek kembali apakah nama interface sudah diganti.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;interface print
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/perintah%20dasar%20mikrotik/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Melihat Package Mikrotik dengan perintah :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt; system package
-[hamim@Mikrotik]/system package&amp;gt; print
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/perintah%20dasar%20mikrotik/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk melihat package mikrotik secara detail bisa menggunakan perintah :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]/sytem package&amp;gt; print detail
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/perintah%20dasar%20mikrotik/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk meng-upgrade paket Mikrotik, gunakan perintah :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]system upgrade&amp;gt;
-
-To upgrade chosen packages
-
-:Download 1,2,3,4,5,6,7,8,9,10,11,12,13,14
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk Mengaktifkan paket di Mikrotik, gunakan perintah :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]system page&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Enable&lt;/strong&gt; (Ketikkan Paket yang ingin di aktifkan)Sebagai contoh :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]system package&amp;gt; enable IPv6
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk setting IP Address pada Mikrotik, gunakan perintah :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;ip address
-[hamim@Mikrotik]ip address&amp;gt; add interface = (Nama Interface) address = (Isikan IP Address yang diinginkan)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sebagai contoh : Jika nama interfacenya “LAN” dan IP address yang dikehendaki : 192.168.88.2 dan subnet mask : 255.255.255.0, maka ketikkan perintah sebagai berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]/ip address
-[hamim@Mikrotik]ip address&amp;gt; add interface=lan address=192.168.88.2/24
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/perintah%20dasar%20mikrotik/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila Anda ingin setting IP DNS primary dan secondary, gunakan perintah :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;ip dns
-[hamim@Mikrotik]/ip dns&amp;gt; set servers=8.8.8.8,8.8.4.4
-allow-remote-requests (Opsional)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu kita cek dengan mengetikkan perintah “print”&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/perintah%20dasar%20mikrotik/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk setting IP Gateway pada Mikrotik, gunakan perintah :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;ip route
-[hamim@Mikrotik]/ip route&amp;gt; add gateway=(Isikan ip gateway)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh IP Gateway dari ISP 192.168.1.1, maka perintah nya :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;ip route
-[hamim@Mikrotik]/ip route&amp;gt; add gateway=192.168.1.1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/perintah%20dasar%20mikrotik/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Perinth Network Address Translate (NAT) pada Mikrotik :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;ip firewall nat
-[hamim@Mikrotik]&amp;gt;/ip firewall nat&amp;gt; add chain=srcnat out-interface=wlan1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk pemilihan Interface sesuaikan dengan interface yang terkoneksi ke internet, disitu kami menggunakan wlan1 untuk koneksi internet&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/perintah%20dasar%20mikrotik/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk setting DHCP-Client, gunakan perintah :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;ip dhcp-client
-[hamim@Mikrotik]/ip dhcp-client&amp;gt; add interface=ether3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk pemilihan Interface sesuaikan dengan kondisi di lapangan, disitu kami menggunakan ether3, karena ether3 yang terkoneksi ke internet&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/perintah%20dasar%20mikrotik/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk setting DHCP-Server, gunakan perintah :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[hamim@Mikrotik]&amp;gt;ip dhcp-server setup
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sebelum melakukan settingan dhcp-server pastikan Anda sudah memberikan alamat IP Address pada interface tersebut. Pilih interface yang ingin di setting dhcp-server, disini kami menggunakan ether3. Seperti pada gambar dibawah ini :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/perintah%20dasar%20mikrotik/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke, itulah beberapa perintah atau command line yang biasanya sering digunakan, selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
 </description>
     </item>
     
