@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="http://nurhamim.net/2019/centos18/" />
+  <link rel="next" href="http://nurhamim.net/2019/centos20/" />
+  <link rel="canonical" href="http://nurhamim.net/2019/centos19/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Record Record DNS Server | Catatan Cah Ndeso :)
+       
+  </title>
+  <meta name="title" content="Record Record DNS Server | Catatan Cah Ndeso :)">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Record Record DNS Server",
+    "headline" : "Record Record DNS Server",
+    "description" : "Pada tutorial kali ini saya akan share mengenai record - record DNS yang sering sekali digunakan, diantaranya:\n SOA (Start Of Authority) untuk mengidentifikasikan otoritas name-server pada zone data atau informasi nama host domain. TTL (Time To Live) merupakan waktu yang diperlukan server DNS untuk menyimpan hasil resolving ke cache-nya. Serial merupakan nomor seri database-cache domain domain.com. Jika ada perubahan data pada berkas zone domainanda.com, misalnya menambahkan domain blog.domainanda.com, maka anda harus merubah\/menambah nomor serinya.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 09:34:38 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 09:34:38 \x2b0700 WIB",
+    "url" : "http:\/\/nurhamim.net\/2019\/centos19\/",
+    "wordCount" : "466",
+    "keywords" : [ "dns","CentOS 7","Linux", "Catatan Cah Ndeso :)"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Record Record DNS Server</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="http://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Pada tutorial kali ini saya akan share mengenai record - record DNS yang sering sekali digunakan, diantaranya:</p>
+
+<ul>
+<li><strong>SOA (Start Of Authority)</strong> untuk mengidentifikasikan otoritas name-server pada zone data atau informasi nama host domain.</li>
+<li><strong>TTL (Time To Live)</strong> merupakan waktu yang diperlukan server DNS untuk menyimpan hasil resolving ke cache-nya.</li>
+<li><strong>Serial</strong> merupakan nomor seri database-cache domain domain.com. Jika ada perubahan data pada berkas zone domainanda.com, misalnya menambahkan domain blog.domainanda.com, maka anda harus merubah/menambah nomor serinya. Sebaiknya digunakan format tahun-bulan-tanggal-jam untuk nomor serialnya. Pada berkas database untuk zone domain domainanda.com tersebut terakhir di-update tanggal 01 Januari 2019 jam 12. Fungsi dari serial ini adalah untuk memberitahukan kepada secondary-master name-server untuk meng-update database-cache-nya jika ada perubahan pada primary-master name-server yaitu dengan melakukan pengecekan nomor serial. Jika nomor serial berubah/bertambah maka secondary-master name-server akan segera melakukan zone-transfer dari primary-master name-server.</li>
+<li><strong>Refresh</strong> adalah selang waktu yang diperlukan (dalam detik) secondary-master name-server untuk melakukan pengecekan perubahan database-cache pada primary-master name-server.</li>
+<li><strong>Retry</strong> adalah waktu (dalam detik) yang digunakan secondary-master name-server untuk menunggu pengulangan cek berkas zone jika pada saat proses refresh primary-master name-server tidak memberikan respon</li>
+<li><strong>Expire</strong> adalah waktu (dalam detik) yang digunakan secondary-master name-server untuk mempertahankan berkas zone jika tidak dapat melakukan zone-refresh. Jika setelah waktu expire telah habis tapi secondary-master name-server tidak dapat melakukan zone-refresh maka berkas zone pada secondary-master name-server akan dihapus.</li>
+<li><strong>Minimum</strong> adalah nilai waktu (TTL) default untuk semua resource-record yang ada dalam berkas zone.</li>
+<li><strong>@</strong> menunjukkan bahwa zone yang bersangkutan adalah zone domain yang ditunjukkan berkas named.conf ke berkas database-cache tersebut atau origin zone</li>
+<li><strong>IN</strong> adalah singkatan dari Internet. Semua informasi Internet digunakan IN dan untuk informasi non-Internet digunakan kode lain.</li>
+<li><strong>A</strong> menyatakan Address Internet atau alamat IP dari mesin yang ditangani oleh DNS ini proses penerjemahan namanya.</li>
+<li><strong>NS</strong> menyatakan Name Server.</li>
+<li><strong>NS Record</strong> merupakan daftar name-server yang otoritatif untuk zone bersangkutan. Pada database domain domainanda.com name-servernya adalah ns1.domainanda.com dan ns2.domainanda.com. NS Record ini yang nantinya akan diserahkan kepada pengelola domain TLD (Top Leve Domain) agar terdaftar dalam registar domain.</li>
+<li><strong>MX (Mail Exchanger)</strong> merupakan record routing email, untuk domain domainanda.com dalam hal ini akan diarahkan ke mail.domainanda.com. sebagai host yang ditunjuk sebagai mail exchanger akan memproses atau meneruskan mail untuk domain domainanda.com. Angka 10 pada MX 10 mail.domainanda.com. merupakan nilai preferensi (preference value) untuk menunjukkan tingkat prioritas mail exchanger yang digunakan untuk memproses atau meneruskan mail yang menuju domain my-server.com.</li>
+<li><strong>CNAME (Canonical Name)</strong> fungsinya untuk alias, jadi suatu host dapat mempunyai nama lebih dari satu.</li>
+<li><strong>PTR (POINTER)</strong> menyatakan pemetaan alamat IP ke domain domainanda.com yang merupakan reversed-address. Reverse Address ini sangat diperlukan jika kita membuat mail server karena dengan adanya reverse IP Address ke alamat domain kita. Maka proses sent/receive protocol SMPT pada mesin mail server kita dapat berjalan normal. Tanpa adanya reverse Address, IP kita dianggap sebagai spammer oleh mesin smtp mail server lain karena tidak dikenal.</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://nurhamim.net/2019/centos19/>http://nurhamim.net/2019/centos19/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/dns/">
+                    #dns</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://nurhamim.net/2019/centos18/" class="prev" rel="prev" title="Instalasi DNS Server Di CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Instalasi DNS Server Di CentOS 7</a>
+         
+        
+        <a href="http://nurhamim.net/2019/centos20/" class="next" rel="next" title="Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7">Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

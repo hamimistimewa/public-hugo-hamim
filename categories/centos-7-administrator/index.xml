@@ -6,10 +6,149 @@
     <description>Recent content in CENTOS 7 Administrator on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 04:50:31 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 18:34:17 +0700</lastBuildDate>
     
 	<atom:link href="http://nurhamim.net/categories/centos-7-administrator/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>S3 Storage untuk Backup WordPress</title>
+      <link>http://nurhamim.net/2019/centos22/</link>
+      <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos22/</guid>
+      <description>Pernahkan Anda mengalami kehilangan data penting pada website Anda ?
+Terlebih bagi seorang e-commerce yang menyimpan ribuan data pelanggan yang sangat – sangat penting, dan si e-commerce menggunakan CMS WordPress untuk membuat lapak jual belinya.
+Disini saya akan share bagaimana sih cara mudah untuk melakukan backup WordPress kita ke salah satu penyimpanan Data Cloud sepertihalnya S3 Protokol ?.
+Oke saya harap santai sejenak yaa jangan tegang hehehehe, pada tutorial kali saya akan bahas tuntas mengenai backup keselururahan isi WordPress mulai dari plugin sampai file – file/ data yang ada di WordPress kita ke S3 Protokol.</description>
+    </item>
+    
+    <item>
+      <title>Instalasi WordPress Menggunakan LAMP Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos21/</link>
+      <pubDate>Sat, 06 Jul 2019 18:34:13 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos21/</guid>
+      <description>WordPress adalah salah satu CMS yang sering dan bahkan sangat banyak digunakan, semua rata – rata menggunakan WordPres mulai dari website pribadi, pendidikan (sekolah), Industri Perusahaan dan masih banyak yang lainnya.
+Kenapa harus pakai WordPress ?
+Alasan pribadi saya memakai WordPress karena WordPress bisa digunakan secara Free namun ada juga yang berbayar, dan sangat banyak developer yang mensupport untuk menggunakan CMS WordPress.
+Selain itu WordPress salah satu CMS yang bisa dibilang tidak terlalu rumit seperti CMS – CMS yang lainnya.</description>
+    </item>
+    
+    <item>
+      <title>Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos20/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:50 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos20/</guid>
+      <description>Pada tutorial sebelumnya kami telah menjelaskan dan membuat sebuah DNS Server mandiri menggunakan service BIND di VPS dengan sistem operasi CentOS 7.
+Nah khusus tutorial kali ini kami akan membahas tentang DNS Master – Slave.
+Apa sih itu DNS Master Slave ? DNS Master – Slave, kata Master (primary) artinya utama, sedangkan Slave (secondary) yang artinya yang kedua yang bisanya digunakan sebagai cadangan atau backup.
+DNS Master – Slave juga bisa dibilang pembagian node Nameserver pada DNS, dengan pembagian ini maka kita akan mempunyai sebuah backup atau cadangan sebuah record Nameserver.</description>
+    </item>
+    
+    <item>
+      <title>Record Record DNS Server</title>
+      <link>http://nurhamim.net/2019/centos19/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:38 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos19/</guid>
+      <description>Pada tutorial kali ini saya akan share mengenai record - record DNS yang sering sekali digunakan, diantaranya:
+ SOA (Start Of Authority) untuk mengidentifikasikan otoritas name-server pada zone data atau informasi nama host domain. TTL (Time To Live) merupakan waktu yang diperlukan server DNS untuk menyimpan hasil resolving ke cache-nya. Serial merupakan nomor seri database-cache domain domain.com. Jika ada perubahan data pada berkas zone domainanda.com, misalnya menambahkan domain blog.domainanda.com, maka anda harus merubah/menambah nomor serinya.</description>
+    </item>
+    
+    <item>
+      <title>Instalasi DNS Server Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos18/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:28 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos18/</guid>
+      <description>Pada kesempatan kali ini kami akan share mengenai DNS server di CentOS 7, sebelum itu mari kita bahas sedikit pengertian dari DNS server.
+Apa itu DNS server ?
+DNS (Domain Name System) adalah sebuah sistem yang berfungsi sebagai layanan direktori untuk semua sistem, dengan menspesifikasinnya sebagai nama host atau domain. Dengan kata lain, DNS menjadi satu fasilitas dimana sebuah server yang memiliki nama dan alamat IP sebagai identitas yang unik di dalam jaringan.</description>
+    </item>
+    
+    <item>
+      <title>Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos17/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos17/</guid>
+      <description>Pada tutorial tersebut kita juga dapat membuat database menggunakan mode CLI (Command Line Interface) nah untuk mempermudah Anda dalam pengelolaan Database Anda dapat menggunakan phpMyAdmin dimana phpMyAdmin sendiri berbasis Web Based.
+Dimana yang dimaksuda database Anda dapat diakses melalui web browser dengan menggunakan phpMyAdmin.
+Pada tutorial kali ini kita akan menginstall phpMyAdmin menggunakan webserver apache bagi yang belum install webserver apache silakan install terlebih dahulu.
+Oke langsung saja berikut ini langkah – langkah untuk melakukan installasi dan konfigurasi phpMyAdmin di CentOS 7</description>
+    </item>
+    
+    <item>
+      <title>Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos16/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:17 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos16/</guid>
+      <description>Tahukan Anda tentang apa itu Database ?
+Lalu buat apa sih fungsinya ?
+Oke jika Anda penasang tentang pengertian fungsi database, berikut ini merupakan pengertian dan fungsi dari database .
+Database Server merupakan sebuah program komputer yang menyediakan layanan pengolahan berbasis data dan melayani komputer atau program aplikasi basis data yang menggunakan model client – server.
+Fungsi Database Server :
+ Untuk menyimpan beberapa data yang bisa dilakukan dalam 1 lokasi Penyimpanan yang aman karena fasilitas yang di server tidak ada di komputer biasa Manajemen sistem Mempermudah dan mecari dalam lingkup database  Setiap client dapat mengakses secara bersamaan</description>
+    </item>
+    
+    <item>
+      <title>Cara Instalasi PHP 7 di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos15/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos15/</guid>
+      <description>Pada tutorial kali ini saya akan share bagaimana cara instalasi php 7 mulai dari php 7.1, 7.2 dan 7.3 . Dengan demikian Anda dapat memilih php versi berapa yang ingin Anda gunakan.
+Oke langsung saja yaa ke tahapan – tahapannya :
+Pertama, pastikan Anda telah menginstall webserver apache atau nginx, jika Anda menggunakan apache silakan merujuk pada tautan berikut Instalasi Webserver Apache di CentOS 7 pada tutorial sebelumnya.
+Kedua, pastikan Anda telah menginstall atau memasang repository epel, berikut perintahnya</description>
+    </item>
+    
+    <item>
+      <title>Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos14/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos14/</guid>
+      <description>Semakin hari teknologi semakin up to date sama halnya yang terjad dengan php semkin hari maka versi php juga akan update ke versi yang lebih baru, namun sangat banyak aplikasi lama yang berjalan di versi php 5.xx sedangkan saat ini banyak pula aplikasi yang meminta remondasi untuk melakukan upgrade dari 5 ke 7 salah satunya yang paling kerasa yaitu CMS WordPress dimana di versi terbaru WordPress versi PHP yang direkomendasikan yaitu versi 7.</description>
+    </item>
+    
+    <item>
+      <title>Instalasi PHP 5.6 di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos13/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:06 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos13/</guid>
+      <description>PHP (Pemberi Harapan Palsu) ? #ehh
+Bukan yaaa hihihiih 😀 😀 😀
+PHP merupakan bahasa pemrograman web, yang sering dan abnyak sekali orang menggunakan pemrograman ini, terlebih bagi seorang programmer, udah makanan sehari – hari ni php heheheh 🙂 .
+Disini saya tidak akan mejelaskan tentang detail mengenai php itu sendiri buat apa untuk detail mengenai php itu sendiri dapat langsung dilihat di tautan resminya berikut : http://www.php.net/
+Langsung saja ke pembahan yaitu installasi php di CentOS 7.</description>
+    </item>
+    
+    <item>
+      <title>Instalasi Webserver Apache di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos12/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:02 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos12/</guid>
+      <description>Pada kesempatan kali ini saya akan share bagaimana cara installasi webserver apache tersebut di sistem operasi CentOS 7 .
+Untuk instalasi webserver apache kali ini dapat Anda coba di VPS (Virtual Private Server) atau VM (Virtual Machine) lokal biasanya banyak yang menggunakan Virtual Box di Komputer atau Laptop.
+Pertama, silakan login terlebih dahulu ke server Anda masing – masing,
+Kedua, silakan lakukan pembaharuan atau update pada sistem operasi CentOS 7, dengan menggunakan perintah</description>
+    </item>
+    
+    <item>
+      <title>Mengenal Apa itu Web Server</title>
+      <link>http://nurhamim.net/2019/centos11/</link>
+      <pubDate>Sat, 06 Jul 2019 09:33:59 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos11/</guid>
+      <description>Hai kawan – kawan, kalau sebelumnya saya share mengenai Hosting dan yang lainnya, sepertinya kurang greget yaa, nah kali ini saya akan share mengenai web server, apasih itu web server ?
+Web server adalah perangkat lunak yang memberikan layanan atau service kepada client untuk menerima request HTTP maupun HTTPS dari client yang dikenal. Setelah itu, web server akan mengirimkan request yang diminta oleh client dalam bentuk halaman web, yang secara umum berbentuk dokumen HTML.</description>
+    </item>
     
     <item>
       <title>Tips Shortcuts Di Linux</title>

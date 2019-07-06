@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dns on Catatan Cah Ndeso :)</title>
+    <link>http://nurhamim.net/tags/dns/</link>
+    <description>Recent content in dns on Catatan Cah Ndeso :)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Jul 2019 09:34:50 +0700</lastBuildDate>
+    
+	<atom:link href="http://nurhamim.net/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos20/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:50 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos20/</guid>
+      <description>Pada tutorial sebelumnya kami telah menjelaskan dan membuat sebuah DNS Server mandiri menggunakan service BIND di VPS dengan sistem operasi CentOS 7.
+Nah khusus tutorial kali ini kami akan membahas tentang DNS Master – Slave.
+Apa sih itu DNS Master Slave ? DNS Master – Slave, kata Master (primary) artinya utama, sedangkan Slave (secondary) yang artinya yang kedua yang bisanya digunakan sebagai cadangan atau backup.
+DNS Master – Slave juga bisa dibilang pembagian node Nameserver pada DNS, dengan pembagian ini maka kita akan mempunyai sebuah backup atau cadangan sebuah record Nameserver.</description>
+    </item>
+    
+    <item>
+      <title>Record Record DNS Server</title>
+      <link>http://nurhamim.net/2019/centos19/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:38 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos19/</guid>
+      <description>Pada tutorial kali ini saya akan share mengenai record - record DNS yang sering sekali digunakan, diantaranya:
+ SOA (Start Of Authority) untuk mengidentifikasikan otoritas name-server pada zone data atau informasi nama host domain. TTL (Time To Live) merupakan waktu yang diperlukan server DNS untuk menyimpan hasil resolving ke cache-nya. Serial merupakan nomor seri database-cache domain domain.com. Jika ada perubahan data pada berkas zone domainanda.com, misalnya menambahkan domain blog.domainanda.com, maka anda harus merubah/menambah nomor serinya.</description>
+    </item>
+    
+    <item>
+      <title>Instalasi DNS Server Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos18/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:28 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos18/</guid>
+      <description>Pada kesempatan kali ini kami akan share mengenai DNS server di CentOS 7, sebelum itu mari kita bahas sedikit pengertian dari DNS server.
+Apa itu DNS server ?
+DNS (Domain Name System) adalah sebuah sistem yang berfungsi sebagai layanan direktori untuk semua sistem, dengan menspesifikasinnya sebagai nama host atau domain. Dengan kata lain, DNS menjadi satu fasilitas dimana sebuah server yang memiliki nama dan alamat IP sebagai identitas yang unik di dalam jaringan.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="http://nurhamim.net/2019/centos13/" />
+  <link rel="next" href="http://nurhamim.net/2019/centos15/" />
+  <link rel="canonical" href="http://nurhamim.net/2019/centos14/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7 | Catatan Cah Ndeso :)
+       
+  </title>
+  <meta name="title" content="Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7 | Catatan Cah Ndeso :)">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7",
+    "headline" : "Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7",
+    "description" : "Semakin hari teknologi semakin up to date sama halnya yang terjad dengan php semkin hari maka versi php juga akan update ke versi yang lebih baru, namun sangat banyak aplikasi lama yang berjalan di versi php 5.xx sedangkan saat ini banyak pula aplikasi yang meminta remondasi untuk melakukan upgrade dari 5 ke 7 salah satunya yang paling kerasa yaitu CMS WordPress dimana di versi terbaru WordPress versi PHP yang direkomendasikan yaitu versi 7.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 09:34:08 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 09:34:08 \x2b0700 WIB",
+    "url" : "http:\/\/nurhamim.net\/2019\/centos14\/",
+    "wordCount" : "534",
+    "keywords" : [ "webserver","CentOS 7","Linux","php", "Catatan Cah Ndeso :)"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="http://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Semakin hari teknologi semakin up to date sama halnya yang terjad dengan php semkin hari maka versi php juga akan update ke versi yang lebih baru, namun sangat banyak aplikasi lama yang berjalan di versi php 5.xx sedangkan saat ini banyak pula aplikasi yang meminta remondasi untuk melakukan upgrade dari 5 ke 7 salah satunya yang paling kerasa yaitu CMS WordPress dimana di versi terbaru WordPress versi PHP yang direkomendasikan yaitu versi 7.xx .</p>
+
+<p>Pada kesempatan kali ini saya akan share bagaimana sih cara melakukan upgrade version dari php 5.6 ke 7.1 . Berikut langkah – langkahnya,</p>
+
+<p>Pertama, seperti biasanya silakan akses server CentOS 7 Anda masing – masing.</p>
+
+<p>Kedua, saya pastikan terlebih dahulu bahwa saya masih menggunakan php versi 5.6 dengan menggunakan peritah</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# php -v
+PHP 5.6.40 (cli) (built: Jan 9 2019 12:34:16)
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+[root@srv-hamim01 ~]#
+</code></pre>
+
+<p>Selanjutnya, menambah atau installasi repository epel di CentOS 7 dengan menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]#
+[root@srv-hamim01 ~]# wget -q http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+[root@srv-hamim01 ~]# wget -q https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+[root@srv-hamim01 ~]# rpm -i remi-release-7.rpm epel-release-latest-7.noarch.rpm
+package epel-release-7-11.noarch is already installed
+package remi-release-7.6-1.el7.remi.noarch is already installed
+[root@srv-hamim01 ~]#
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/upgrade%20php%205.6/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikutnya, mengintal manager repository remi untuk php 7.1 dengan menjalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# 
+[root@srv-hamim01 ~]# yum-config-manager --enable remi-php71
+Loaded plugins: fastestmirror
+=============================================================== repo: remi-php71 ===============================================================
+[remi-php71]
+async = True
+bandwidth = 0
+base_persistdir = /var/lib/yum/repos/x86_64/7
+baseurl = 
+cache = 0
+cachedir = /var/cache/yum/x86_64/7/remi-php71
+check_config_file_age = True
+compare_providers_priority = 80
+cost = 1000
+deltarpm_metadata_percentage = 100
+deltarpm_percentage = 
+enabled = 1
+enablegroups = True
+exclude = 
+failovermethod = priority
+ftp_disable_epsv = False
+gpgcadir = /var/lib/yum/repos/x86_64/7/remi-php71/gpgcadir
+gpgcakey = 
+gpgcheck = True
+gpgdir = /var/lib/yum/repos/x86_64/7/remi-php71/gpgdir
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+hdrdir = /var/cache/yum/x86_64/7/remi-php71/headers
+http_caching = all
+includepkgs = 
+ip_resolve = 
+keepalive = True
+keepcache = False
+mddownloadpolicy = sqlite
+mdpolicy = group:small
+mediaid = 
+metadata_expire = 21600
+metadata_expire_filter = read-only:present
+metalink = 
+minrate = 0
+mirrorlist = http://cdn.remirepo.net/enterprise/7/php71/mirror
+mirrorlist_expire = 86400
+name = Remi's PHP 7.1 RPM repository for Enterprise Linux 7 - x86_64
+old_base_cache_dir = 
+password = 
+persistdir = /var/lib/yum/repos/x86_64/7/remi-php71
+pkgdir = /var/cache/yum/x86_64/7/remi-php71/packages
+proxy = False
+proxy_dict = 
+proxy_password = 
+proxy_username = 
+repo_gpgcheck = False
+retries = 10
+skip_if_unavailable = False
+ssl_check_cert_permissions = True
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = True
+throttle = 0
+timeout = 30.0
+ui_id = remi-php71
+ui_repoid_vars = releasever,
+   basearch
+username =
+[root@srv-hamim01 ~]# 
+</code></pre>
+
+<p>Jika sudah. silakan install php dengan menjalankan perintah</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# yum install php
+</code></pre>
+
+<p>Untuk mengetahui versi php yang kita gunakan silakan jalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# php -v
+PHP 7.1.26 (cli) (built: Jan 9 2019 08:02:33) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
+[root@srv-hamim01 ~]#
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/upgrade%20php%205.6/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk menguji hasil upgrade dari php 5 ke 7, silakan restart atau reload webserver Anda disini saya menggunakan apache, berikut perintahnya</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# systemctl reload httpd
+</code></pre>
+
+<p>Apabila Anda telah melakukan reload atau restart terhadap webserver Anda silakan akses kembali IP server beserta /info.php seperti pada gambar dibawah ini.</p>
+
+<p>Sebagai catatan sebelumnya saya sudah membuat file info.php .</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/upgrade%20php%205.6/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Oke, pada tahap ini untuk upgrade php telah berhasil. Selamat mencoba semoga bermanfaat 🙂</p>
+
+<p>Jika terdapat saran atau kritik mengenai tutorial ini silakan disampaikan di kolom komentar. Terima kasih 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://nurhamim.net/2019/centos14/>http://nurhamim.net/2019/centos14/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/webserver/">
+                    #webserver</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/php/">
+                    #php</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://nurhamim.net/2019/centos13/" class="prev" rel="prev" title="Instalasi PHP 5.6 di CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Instalasi PHP 5.6 di CentOS 7</a>
+         
+        
+        <a href="http://nurhamim.net/2019/centos15/" class="next" rel="next" title="Cara Instalasi PHP 7 di CentOS 7">Cara Instalasi PHP 7 di CentOS 7&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

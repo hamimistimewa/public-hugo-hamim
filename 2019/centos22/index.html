@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="http://nurhamim.net/2019/centos21/" />
+  
+  <link rel="canonical" href="http://nurhamim.net/2019/centos22/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           S3 Storage untuk Backup WordPress | Catatan Cah Ndeso :)
+       
+  </title>
+  <meta name="title" content="S3 Storage untuk Backup WordPress | Catatan Cah Ndeso :)">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "S3 Storage untuk Backup WordPress",
+    "headline" : "S3 Storage untuk Backup WordPress",
+    "description" : "Pernahkan Anda mengalami kehilangan data penting pada website Anda ?\nTerlebih bagi seorang e-commerce yang menyimpan ribuan data pelanggan yang sangat – sangat penting, dan si e-commerce menggunakan CMS WordPress untuk membuat lapak jual belinya.\nDisini saya akan share bagaimana sih cara mudah untuk melakukan backup WordPress kita ke salah satu penyimpanan Data Cloud sepertihalnya S3 Protokol ?.\nOke saya harap santai sejenak yaa jangan tegang hehehehe, pada tutorial kali saya akan bahas tuntas mengenai backup keselururahan isi WordPress mulai dari plugin sampai file – file\/ data yang ada di WordPress kita ke S3 Protokol.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 18:34:17 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 18:34:17 \x2b0700 WIB",
+    "url" : "http:\/\/nurhamim.net\/2019\/centos22\/",
+    "wordCount" : "625",
+    "keywords" : [ "wordpress","apache","CentOS 7","Linux", "Catatan Cah Ndeso :)"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">S3 Storage untuk Backup WordPress</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="http://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Pernahkan Anda mengalami kehilangan data penting pada website Anda ?</p>
+
+<p>Terlebih bagi seorang e-commerce yang menyimpan ribuan data pelanggan yang sangat – sangat penting, dan si e-commerce menggunakan CMS WordPress untuk membuat lapak jual belinya.</p>
+
+<p>Disini saya akan share bagaimana sih cara mudah untuk melakukan backup WordPress kita ke salah satu penyimpanan <a href="http://www.cloudkilat.com/layanan/kilat-storage" rel="nofollow noreferrer" target="_blank">Data Cloud</a> sepertihalnya <a href="http://www.cloudkilat.com/layanan/kilat-storage" rel="nofollow noreferrer" target="_blank">S3 Protokol</a> ?.</p>
+
+<p>Oke saya harap santai sejenak yaa jangan tegang hehehehe, pada tutorial kali saya akan bahas tuntas mengenai backup keselururahan isi WordPress mulai dari plugin sampai file – file/ data yang ada di WordPress kita ke S3 Protokol.</p>
+
+<p>Disini saya menggunakan S3 Protokol dari CloudKilat untuk penyimpanan backupnya, kenapa saya memilih <a href="http://www.cloudkilat.com/layanan/kilat-storage" rel="nofollow noreferrer" target="_blank">S3 Protokol CloudKilat</a> ?</p>
+
+<p>Alasan yang paling utamanya adalah tempat atau letak layanan tersebut berada di Indonesia tepatnya di Data Center Cyber 2 Jakarta selain itu harga layanan yang bisa dibilang terjangkau disertai kualitas layanan yang mantull #BukanKaleng-Kaleng #ehh</p>
+
+<p>Nama layanannya yaitu Kilat Storage, pertama kali saya makai ni untuk media penyimpanan sangatlah memuaskan haaahhaahah kenapa ?</p>
+
+<p>Karena jarang dan bahkan nggak pernah ada downtime, dengan demikian earningku jalan dengan lancar, matursuwon <a href="http://www.cloudkilat.com/" rel="nofollow noreferrer" target="_blank">CloudKilat</a> hehehe 🙂</p>
+
+<p>Lebih lanjut mengenai layanan Kilat Storage atau S3 Protokol CloudKilat dapat dilihat pada tautan berikut : <a href="http://www.cloudkilat.com/layanan/kilat-storage" rel="nofollow noreferrer" target="_blank">Layanan S3 Protokol CloudKilat</a></p>
+
+<p>Sedangkan untuk integrasi antara WordPress dengan Kilat Storage tersebut saya menggunakan plugin yang telah tersedia di WordPress secara Free pulaa duhhh, tambah nikmat ni hidup 🙂</p>
+
+<p>Nama pluginnya yaitu UpdraftPlus . Oke langsung saja yaa ke langkah – langkahnya :</p>
+
+<p>Pertama, pastikan Anda telah mempunya layanan Kilat Storage. Bagi yang belum mempunyainya silakan langganan dulu ya hehehhehe 🙂</p>
+
+<p>Kedua, silakan install dan aktifkan terlebih dahulu plugin <a href="https://wordpress.org/plugins/updraftplus/" rel="nofollow noreferrer" target="_blank">UpdraftPlus</a> dengan cara berikut : <strong>Login Admin WordPress &gt;&gt; Plugins &gt;&gt; Add new &gt;&gt; Search nama Plugin Updraftplus &gt;&gt; Install Now &gt;&gt; Activate</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila plugin telah berhasil diintall, berikutnya membuat bucket atau tempat penyimpanan backup WordPress. Untuk bucketnya dibuat di layanan Kilat Storage. Untuk mengakses layanan Kilat Storage sangat banyak cara mulai dari menggunakan Dragondisk, s3cmd, s3browser dan masih banyak yang lainnya. Untuk detailnya bisa di lihta di tautan berikut :</p>
+
+<p><a href="kb.cloudkilat.com/search?query=Cara+Akses+Kilat+Storage+Baru" rel="nofollow noreferrer" target="_blank">Cara Mengakses layanan Kilat Storage CloudKilat</a></p>
+
+<p>Disini saya menggunakan dragondisk, terlebih dahulu silakan buka portal area CloudKilat Anda untuk melihat Akses Key dan Secret Key dari Layanan Kilat Storage Anda, dengan cara Login Portal CloudKilat &gt;&gt; Service &gt;&gt; Kilat Storage &gt;&gt; View, scroll kebawah Anda akan mendapatkan informasi detailnya seperti pada gambar berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika Anda telah mengetahui Access Key dan Secret Key  layanan Kilat Storage Anda silakan buka aplikasi Dragondisk untuk membuat bucket dengan cara</p>
+
+<p>Buka Aplikasi Dragondisk &gt;&gt; Account &gt;&gt; New &gt;&gt; Isikan detail informasi seperti Endpoint, secret key dan access key yang dibutuhkan seperti berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/4.gif" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila Anda telah membuat bucket, silakan kembali lagi ke plugin wordpress, dimana kita akan melakukan konfigurasi, silakan masuk ke plugin dengan cara setting &gt;&gt; UpdraftPlusBackups &gt;&gt; settings secara default seperti berikut, silakan pilih yang menu S3 Compatible (Generic)</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Anda dapat menentukan jadwal agenda backup yang Anda inginkan mulai dari, monthly, fotnighly, weekly, daily, Every 12 hours, dll .</p>
+
+<p>Disini saya set backup perminggu dengan 4 kali backup total 1 bulan ada 4 kali backup, berikut contohnya,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Gambar diatas kita juga mengisikan credential mulai dair endpoint Kilat Storage, nama bucket, access key, secret key.</p>
+
+<p>Untuk testing apakah backup kita berhasil tersimpan ke penyimpanan Kilat Storage mari kita coba backup manual dulu, dengan cara pindah ke menu Backup/Restore &gt;&gt; Backup Now maka si plugin akan membuat backup wordpress mulai dari Backup , plugin, database, upload dll.  Jika backupnya udah berhasil Anda akan mendapatkan hasil backup tersebut seperti pada gambar dibawah ini.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Mari kita pastikan apakah hasil file backup telah berada di Kilat Storage kit</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Oke, gambar di atas merupakan hasil backup yang baru saja kita lakukan.</p>
+
+<p>Anda tinggal mengunduh hasil backup tersebut. Selamat mencoba semoga bermanfaat bagi kita semua 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://nurhamim.net/2019/centos22/>http://nurhamim.net/2019/centos22/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/wordpress/">
+                    #wordpress</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/apache/">
+                    #apache</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://nurhamim.net/2019/centos21/" class="prev" rel="prev" title="Instalasi WordPress Menggunakan LAMP Di CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Instalasi WordPress Menggunakan LAMP Di CentOS 7</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

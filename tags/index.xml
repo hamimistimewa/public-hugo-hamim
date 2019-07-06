@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 04:50:31 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 18:34:17 +0700</lastBuildDate>
     
 	<atom:link href="http://nurhamim.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>CentOS 7</title>
       <link>http://nurhamim.net/tags/centos-7/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:31 +0700</pubDate>
+      <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
       
       <guid>http://nurhamim.net/tags/centos-7/</guid>
       <description></description>
@@ -23,9 +23,90 @@
     <item>
       <title>Linux</title>
       <link>http://nurhamim.net/tags/linux/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:31 +0700</pubDate>
+      <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
       
       <guid>http://nurhamim.net/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apache</title>
+      <link>http://nurhamim.net/tags/apache/</link>
+      <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/apache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress</title>
+      <link>http://nurhamim.net/tags/wordpress/</link>
+      <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dns</title>
+      <link>http://nurhamim.net/tags/dns/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:50 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>http://nurhamim.net/tags/database/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mariadb</title>
+      <link>http://nurhamim.net/tags/mariadb/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/mariadb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phpmyadmin</title>
+      <link>http://nurhamim.net/tags/phpmyadmin/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/phpmyadmin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>http://nurhamim.net/tags/php/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webserver</title>
+      <link>http://nurhamim.net/tags/webserver/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/webserver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>http://nurhamim.net/tags/nginx/</link>
+      <pubDate>Sat, 06 Jul 2019 09:33:59 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/tags/nginx/</guid>
       <description></description>
     </item>
     

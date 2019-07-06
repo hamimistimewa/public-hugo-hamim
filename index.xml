@@ -5,8 +5,1632 @@
     <description>Recent content in Catatan Cah Ndeso :) on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 04:50:31 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 18:34:17 +0700</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>S3 Storage untuk Backup WordPress</title>
+      <link>http://nurhamim.net/2019/centos22/</link>
+      <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos22/</guid>
+      <description>&lt;p&gt;Pernahkan Anda mengalami kehilangan data penting pada website Anda ?&lt;/p&gt;
+
+&lt;p&gt;Terlebih bagi seorang e-commerce yang menyimpan ribuan data pelanggan yang sangat – sangat penting, dan si e-commerce menggunakan CMS WordPress untuk membuat lapak jual belinya.&lt;/p&gt;
+
+&lt;p&gt;Disini saya akan share bagaimana sih cara mudah untuk melakukan backup WordPress kita ke salah satu penyimpanan &lt;a href=&#34;http://www.cloudkilat.com/layanan/kilat-storage&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Data Cloud&lt;/a&gt; sepertihalnya &lt;a href=&#34;http://www.cloudkilat.com/layanan/kilat-storage&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;S3 Protokol&lt;/a&gt; ?.&lt;/p&gt;
+
+&lt;p&gt;Oke saya harap santai sejenak yaa jangan tegang hehehehe, pada tutorial kali saya akan bahas tuntas mengenai backup keselururahan isi WordPress mulai dari plugin sampai file – file/ data yang ada di WordPress kita ke S3 Protokol.&lt;/p&gt;
+
+&lt;p&gt;Disini saya menggunakan S3 Protokol dari CloudKilat untuk penyimpanan backupnya, kenapa saya memilih &lt;a href=&#34;http://www.cloudkilat.com/layanan/kilat-storage&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;S3 Protokol CloudKilat&lt;/a&gt; ?&lt;/p&gt;
+
+&lt;p&gt;Alasan yang paling utamanya adalah tempat atau letak layanan tersebut berada di Indonesia tepatnya di Data Center Cyber 2 Jakarta selain itu harga layanan yang bisa dibilang terjangkau disertai kualitas layanan yang mantull #BukanKaleng-Kaleng #ehh&lt;/p&gt;
+
+&lt;p&gt;Nama layanannya yaitu Kilat Storage, pertama kali saya makai ni untuk media penyimpanan sangatlah memuaskan haaahhaahah kenapa ?&lt;/p&gt;
+
+&lt;p&gt;Karena jarang dan bahkan nggak pernah ada downtime, dengan demikian earningku jalan dengan lancar, matursuwon &lt;a href=&#34;http://www.cloudkilat.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CloudKilat&lt;/a&gt; hehehe 🙂&lt;/p&gt;
+
+&lt;p&gt;Lebih lanjut mengenai layanan Kilat Storage atau S3 Protokol CloudKilat dapat dilihat pada tautan berikut : &lt;a href=&#34;http://www.cloudkilat.com/layanan/kilat-storage&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Layanan S3 Protokol CloudKilat&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sedangkan untuk integrasi antara WordPress dengan Kilat Storage tersebut saya menggunakan plugin yang telah tersedia di WordPress secara Free pulaa duhhh, tambah nikmat ni hidup 🙂&lt;/p&gt;
+
+&lt;p&gt;Nama pluginnya yaitu UpdraftPlus . Oke langsung saja yaa ke langkah – langkahnya :&lt;/p&gt;
+
+&lt;p&gt;Pertama, pastikan Anda telah mempunya layanan Kilat Storage. Bagi yang belum mempunyainya silakan langganan dulu ya hehehhehe 🙂&lt;/p&gt;
+
+&lt;p&gt;Kedua, silakan install dan aktifkan terlebih dahulu plugin &lt;a href=&#34;https://wordpress.org/plugins/updraftplus/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;UpdraftPlus&lt;/a&gt; dengan cara berikut : &lt;strong&gt;Login Admin WordPress &amp;gt;&amp;gt; Plugins &amp;gt;&amp;gt; Add new &amp;gt;&amp;gt; Search nama Plugin Updraftplus &amp;gt;&amp;gt; Install Now &amp;gt;&amp;gt; Activate&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/1.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila plugin telah berhasil diintall, berikutnya membuat bucket atau tempat penyimpanan backup WordPress. Untuk bucketnya dibuat di layanan Kilat Storage. Untuk mengakses layanan Kilat Storage sangat banyak cara mulai dari menggunakan Dragondisk, s3cmd, s3browser dan masih banyak yang lainnya. Untuk detailnya bisa di lihta di tautan berikut :&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;kb.cloudkilat.com/search?query=Cara+Akses+Kilat+Storage+Baru&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Cara Mengakses layanan Kilat Storage CloudKilat&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Disini saya menggunakan dragondisk, terlebih dahulu silakan buka portal area CloudKilat Anda untuk melihat Akses Key dan Secret Key dari Layanan Kilat Storage Anda, dengan cara Login Portal CloudKilat &amp;gt;&amp;gt; Service &amp;gt;&amp;gt; Kilat Storage &amp;gt;&amp;gt; View, scroll kebawah Anda akan mendapatkan informasi detailnya seperti pada gambar berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika Anda telah mengetahui Access Key dan Secret Key  layanan Kilat Storage Anda silakan buka aplikasi Dragondisk untuk membuat bucket dengan cara&lt;/p&gt;
+
+&lt;p&gt;Buka Aplikasi Dragondisk &amp;gt;&amp;gt; Account &amp;gt;&amp;gt; New &amp;gt;&amp;gt; Isikan detail informasi seperti Endpoint, secret key dan access key yang dibutuhkan seperti berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/4.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila Anda telah membuat bucket, silakan kembali lagi ke plugin wordpress, dimana kita akan melakukan konfigurasi, silakan masuk ke plugin dengan cara setting &amp;gt;&amp;gt; UpdraftPlusBackups &amp;gt;&amp;gt; settings secara default seperti berikut, silakan pilih yang menu S3 Compatible (Generic)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Anda dapat menentukan jadwal agenda backup yang Anda inginkan mulai dari, monthly, fotnighly, weekly, daily, Every 12 hours, dll .&lt;/p&gt;
+
+&lt;p&gt;Disini saya set backup perminggu dengan 4 kali backup total 1 bulan ada 4 kali backup, berikut contohnya,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar diatas kita juga mengisikan credential mulai dair endpoint Kilat Storage, nama bucket, access key, secret key.&lt;/p&gt;
+
+&lt;p&gt;Untuk testing apakah backup kita berhasil tersimpan ke penyimpanan Kilat Storage mari kita coba backup manual dulu, dengan cara pindah ke menu Backup/Restore &amp;gt;&amp;gt; Backup Now maka si plugin akan membuat backup wordpress mulai dari Backup , plugin, database, upload dll.  Jika backupnya udah berhasil Anda akan mendapatkan hasil backup tersebut seperti pada gambar dibawah ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mari kita pastikan apakah hasil file backup telah berada di Kilat Storage kit&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke, gambar di atas merupakan hasil backup yang baru saja kita lakukan.&lt;/p&gt;
+
+&lt;p&gt;Anda tinggal mengunduh hasil backup tersebut. Selamat mencoba semoga bermanfaat bagi kita semua 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instalasi WordPress Menggunakan LAMP Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos21/</link>
+      <pubDate>Sat, 06 Jul 2019 18:34:13 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos21/</guid>
+      <description>&lt;p&gt;WordPress adalah salah satu CMS yang sering dan bahkan sangat banyak digunakan, semua rata – rata menggunakan WordPres mulai dari website pribadi, pendidikan (sekolah), Industri Perusahaan dan masih banyak yang lainnya.&lt;/p&gt;
+
+&lt;p&gt;Kenapa harus pakai WordPress ?&lt;/p&gt;
+
+&lt;p&gt;Alasan pribadi saya memakai WordPress karena WordPress bisa digunakan secara Free namun ada juga yang berbayar, dan sangat banyak developer yang mensupport untuk menggunakan CMS WordPress.&lt;/p&gt;
+
+&lt;p&gt;Selain itu WordPress salah satu CMS yang bisa dibilang tidak terlalu rumit seperti CMS – CMS yang lainnya.&lt;/p&gt;
+
+&lt;p&gt;Untuk fitur WordPress dapat Anda lihat melalui tautan berikut : &lt;a href=&#34;https://wordpress.org/about/features/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;FITUR WORDPRESS .&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tutorial kali ini saya akan share bagaimana cara menginstall CMS WordPress menggunakan LAMP (Linux, Apache, MySQL or MariaDB, PHP) di CentOS 7.&lt;/p&gt;
+
+&lt;p&gt;Langkah pertama yang harus kita lakuakan yaitu melakukan update sistem operasi CentOS 7 Anda dengan mengunaka perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial ~]# yum update -y 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan tunggu proses update sampai selesai, jika sudah silakan install atau menambahkan repository epel berikut perintahnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial ~]# yum install epel-release
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jikas sudah berikutnya barulah kita memasang atau install webserver apache terlebih dahulu dengan cara menjalankan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial ~]# yum install httpd -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tunggu proses installasi webserver apache sampai selesai, jika sudah pastikan webserver apache kita berjalan (running) dengan normal berikut perintahnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial ~]# systemctl start httpd
+[root@srv-tutorial ~]# systemctl enable httpd
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+[root@srv-tutorial ~]# systemctl status httpd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah berikutnya silakan install Database terlebih dahulu, pada tutorial kali ini saya akan menggunakan MariaDB.&lt;/p&gt;
+
+&lt;p&gt;Untuk installasi database dapat melihat pada tutorial sebelumnya mengenai instalasi database mariadb.&lt;/p&gt;
+
+&lt;p&gt;Langkah selanjutnya silakan install modul php, php disini sangatlah penting karean CMS WordPress ditulis menggunakan php, Jika tidak ada module php maka, CMS WordPress tidak akan berjalan (running) . Php yang digunakan untuk installasi WordPress kali ini yaitu PHP 7.1 .&lt;/p&gt;
+
+&lt;p&gt;Untuk instalasi php dapat melihat pada tutorial sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Apabila semua komponen (webserver, php, database) telah berhasil diinstall, langkah selanjutnya membuat database untuk wordpress, silakan login ke database Anda lalu membuat database baru berikut contohnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial ~]# mysql -u root -p 
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 5.5.60-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
+
+MariaDB [(none)]&amp;gt; create database WordPress;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]&amp;gt; grant all privileges on WordPress.* to &#39;isiusername-wp&#39;@&#39;localhost&#39; identified by &#39;isikanpassword-wp&#39;;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]&amp;gt; flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]&amp;gt; exit
+Bye
+[root@srv-tutorial ~]# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikutnya silakan pindah ke direktori /var/www/html/  lalu mengunduh file CMS WordPress , perintah untuk unduh file dapat menggunakan perintah wget , berikut link downlooadnya &lt;a href=&#34;https://wordpress.org/latest.zip&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://wordpress.org/latest.zip&lt;/a&gt; , berikut contohnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Secara default file wordpress yang baru saja kita unduh berekstensi .zip dengan begitu silakan unzip atau extrack terlebih file wordpress tersebut dengan menggunakan perintah unzip [Nama File].zip , berikut contohnya&lt;/p&gt;
+
+&lt;p&gt;Install service unzip terlebih dahulu dengan menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial html]# yum install unzip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah, barulah kita eksekusi file .zip tersebut dengan menggukana perintah unzip, seperti berikut ini&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial html]# ls
+latest.zip
+[root@srv-tutorial html]# unzip latest.zip 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika file sudah di ekstrack, silakan pindah ke direktori wordpress yang baru saja kita ekstrack lalu copi file default wp-config-sample.php menjadi wp-config.php menggunakan perintah cp  berikut contohnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya silakan melakukan konfigurasi WordPress, yang dikonfigurasi hanyalah menyesuaikan konfigurasi database yang sebelumnya kita buat, mulai dari nama database, username, password database wordpress, berikut contoh konfigurasinya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar diatas silakan sesuaikan dengan konfigurasi database yang telah Anda buat sebelumnya . Jika sudah langkah selanjutnya yaitu memberi hak akses dan hak owner pada direktori /wordpress dengan mengguakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial wordpress]# chown -R apache:apache /var/www/html/wordpress/
+[root@srv-tutorial wordpress]# chmod -R 755 /var/www/html/wordpress/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikutnya, kita akan membut file VirtualHost untuk wordpress.&lt;/p&gt;
+
+&lt;p&gt;Biasanya banyak sekali yang bertanya gimana sih caranya membuat banyak website di apache ?&lt;/p&gt;
+
+&lt;p&gt;Nah kalau Anda menggunkaan apache dan Anda ingin membuat banyak website maka Anda hanya perlu membuat VirtualHost, oke semoga tercerahkan mengenai VirtualHost.&lt;/p&gt;
+
+&lt;p&gt;Untuk membuat VirtualHost wordress dapat dilakukan di direktori /etc/httpd/conf.d/ . silakan buat file konfiugurasi dengan ekstensi .conf seperti berikut contohnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial wordpress]# cd /etc/httpd/conf.d/
+[root@srv-tutorial conf.d]# 
+[root@srv-tutorial conf.d]# vim wordpress.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut contoh file VirtualHost&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Keterangan :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ServerName # Isikan nama domain atau IP Server&lt;/li&gt;
+&lt;li&gt;ServerAdmin # Isikan email Anda (optional)&lt;/li&gt;
+&lt;li&gt;DocumentRoot /var/www/html/wordpress # Letak direktori file wordpress&lt;/li&gt;
+&lt;li&gt;ErrorLog logs/wordpress-infone.info-error_log # Letak file Error_Log&lt;/li&gt;
+&lt;li&gt;CustomLog logs/wordpress-infone.info-access_log combined # Letak file Access_log&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sebagai catatan, apabila Anda telah mempunya domain silakan mengarahkan domain Anda ke IP VPS Anda dengan cara menambahkan A record pada DNS Management Domain jika Anda bingung silakan menghubungi pihak penyedia domain Anda untuk menanyakan mengenai A record domain tersebut, atau Anda dapat membuat DNS Server Mandiri.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, silakan restart webserver apache dan database Anda menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial conf.d]# systemctl restart httpd
+[root@srv-tutorial conf.d]# systemctl restart mariadb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Selanjutnya, melakukan instalasi wordpress silakan akses domain infone.info/wp-admin atau IP Server/wp-admin yang telah di daftarkan di file VirtualHost pada browser seperti berikut hasilnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar diatas silakan pilih bahasa instalasi yang ingin digunakan, disini saya memilih bahasa English (United States) klik Continue untuk melanjutkan proses installasi&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar diatas silakan isikan Site Title / Judul Situs (bebas) dan isikan username beserta password login ke Administrator WordPress. Jika sudah klik tombol Install WordPress .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke, gambar diatas menandakan CMS WordPress kita telah selesai dan berhasil di install silakan klik tombol Log in untuk masuk ke Dasboard Administrator silakan isikan username dan password yang telah dibuat sebelumnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika berhasil maka Anda akan diarahkan langsung ke tampilan dasboard WordPress berikut hasilnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/16.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke, pada tahap ini Anda telah berhasil menginstall CMS WordPress di VPS dengan sistem Operasi CentOS 7.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermnafaat, selamat mencoba 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos20/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:50 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos20/</guid>
+      <description>
+
+&lt;p&gt;Pada tutorial sebelumnya kami telah menjelaskan dan membuat sebuah DNS Server mandiri menggunakan service BIND di VPS dengan sistem operasi CentOS 7.&lt;/p&gt;
+
+&lt;p&gt;Nah khusus tutorial kali ini kami akan membahas tentang DNS Master – Slave.&lt;/p&gt;
+
+&lt;h4 id=&#34;apa-sih-itu-dns-master-slave&#34;&gt;Apa sih itu DNS Master Slave ?&lt;/h4&gt;
+
+&lt;p&gt;DNS Master – Slave, kata Master (primary) artinya utama, sedangkan Slave (secondary) yang artinya yang kedua yang bisanya digunakan sebagai cadangan atau backup.&lt;/p&gt;
+
+&lt;p&gt;DNS Master – Slave juga bisa dibilang pembagian node Nameserver pada DNS, dengan pembagian ini maka kita akan mempunyai sebuah backup atau cadangan sebuah record Nameserver.&lt;/p&gt;
+
+&lt;h4 id=&#34;apa-itu-nameserver-ns&#34;&gt;Apa itu Nameserver (NS) ?&lt;/h4&gt;
+
+&lt;p&gt;Name server merupakan database dari record – record DNS. Semua record DNS mulai dari record A, MX, TXT dan yang lainnya disimpan di Nameserver.&lt;/p&gt;
+
+&lt;p&gt;Keuntungan yang didapatkan dari DNS Master Slave ini sendiri yaitu jika sewaktu – waktu server DNS Master mengalami kendala misalnya (Down) maka domain yang menggunakan Nameserver dari DNS Master – Slave tersebut tidak akan mengalami yang namanya down (tidak bisa akses domain) karena apabila server Master down domain Anda akan langsung di handle oleh server Slave yang berfungsi sebagai backup si Master. Dengan demikian domain Anda masih bisa diakses dengan normal&lt;/p&gt;
+
+&lt;p&gt;Bagi Anda yang ingin mengikuti tutorial ini silakan siapkan terlebih dahulu amunisinya hehehe, diantaranya sebagai berikut :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagi Anda yang ingin menggunakan sistem operasi selain CentOS 7 sangat diperbolehkan sesuai dengan keinginan Anda, nantinya Anda hanya perlu menyesuaikan konfigurasi dan zonenya saja.&lt;/p&gt;
+
+&lt;p&gt;Apakah harus Server Master Mengguanakan CentOS dan Server Slave Menggunakan CentOS 7 juga ?&lt;/p&gt;
+
+&lt;p&gt;Tidak, Anda dapat menggunakan Debian atau Ubuntu untuk Server Master dan Slave Anda dapat menggunakan CentOS dan sebaliknya.&lt;/p&gt;
+
+&lt;p&gt;Oke langsung saja ketahapan instalasi dan kofigurasi DNS Master Slave di CentOS 7.&lt;/p&gt;
+
+&lt;h3 id=&#34;instalasi-dan-konfigurasi-server-master-primary&#34;&gt;Instalasi Dan Konfigurasi Server Master (primary)&lt;/h3&gt;
+
+&lt;p&gt;Pertama, silakan login ke VPS Anda masing – masing dan melakukan pembaharuan sistem terlebih dahulu dengan menjalankan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-master ~]# yum update -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan tunggu proses update sampai selesai, jika sudah selanjutnya Anda silakan install service bind dengan menjalankan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-master ~]# yum install bind bind-utils -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan tunggu proses install service bind tersebut sampai selesai.&lt;/p&gt;
+
+&lt;p&gt;Kedua, melakukan konfigurasi dns master, file konfigurasinya sendiri berada di /etc/named.conf untuk membuka file konfigurasi tersebut Anda dapat menggunakan teks editor nano ataupun vim sesuai dengan keinginan Anda.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-master ~]# vim /etc/named.conf 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan menambahkan IP server Master seperti berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;options {
+	listen-on port 53 { 127.0.0.1;  117.53.45.53; };
+//	#listen-on-v6 port 53 { ::1; };
+	directory 	&amp;quot;/var/named&amp;quot;;
+	dump-file 	&amp;quot;/var/named/data/cache_dump.db&amp;quot;;
+	statistics-file &amp;quot;/var/named/data/named_stats.txt&amp;quot;;
+	memstatistics-file &amp;quot;/var/named/data/named_mem_stats.txt&amp;quot;;
+	recursing-file  &amp;quot;/var/named/data/named.recursing&amp;quot;;
+	secroots-file   &amp;quot;/var/named/data/named.secroots&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apabila Anda ingin menambahkan caching-nameserver silakan tambahkan konfigurasi berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;allow-query     { 127.0.0.1; 117.53.45.53; any; };
+allow-query-cache { 127.0.0.1; 117.53.45.53; any; };
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk keamanan agar terhindar dari indikasi abuse Flooding DNS yang pernah saya pribadi alami heheheh 🙂 dengan begitu saya akan melakukan disable recursion dns, karena dns kita tidak diperuntukkan sebagai DNS resolver sepertihalnya DNS google &lt;strong&gt;(8.8.8.8 , 8.8.4.4)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;*/
+recursion no;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apabila recursion diatas kita yes (aktif) maka, DNS kita akan menjadi DNS resolver layaknya DNS Google (8.8.8.8 , 8.8.4.4) apabila DNS kita menjadi DNS resolver akan sangat banyak permintaan akses ke DNS kita dan banyaknya akses tersebut yang akan membuat Abuse Flooding DNS terjadi 🙂&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya marilah kita membuat zone untuk Master, disini saya akan membuat zone forward saja, dimana zone forward inilah yang nantinya melakukan pemetaan dari nama domain (hamim.web.id) ke alamat IP (117.53.45.53).&lt;/p&gt;
+
+&lt;h4 id=&#34;kenapa-tidak-membuat-zone-reverse&#34;&gt;Kenapa tidak membuat zone reverse ?&lt;/h4&gt;
+
+&lt;p&gt;Zone reverse ini kebalikannya zone forward dimana fungsi dari zone reverse yaitu untuk memetakan IP ke domain. Biasanya dibilang dengan rDNS atau PTR, jika Anda pengguna VPS dan Anda ingin membangun DNS di VPS, Anda tidak perlu membuat zone reverse ini karena yang mempunyai sebuah kewenganan untuk mengelola sebuah zone reverse hanyalah pengelola IP. Dan apabila penyedia VPS Anda mempunyai block IP sendiri maka Anda nantinya apabila membutuhkan rDNS atau PTR silakan melakukan request untuk penambahan rDNS ke penyedia Hosting atau VPS Anda masing – masing. Dan yang paling sering biasanya rDNS ini digunakan untuk setup mail server.&lt;/p&gt;
+
+&lt;p&gt;Contohnya disini saya menggunakan VPS CloudKilat jadi apabila saya membutuhkan record PTR atau rDNS untuk kebutuhan mail server, saya hanya perlu request/meminta ke CloudKilat untuk membuatkan rDNS atau PTR untuk IP VPS saya.&lt;/p&gt;
+
+&lt;p&gt;Berikut contoh pembuatan zone forward untuk Master&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;zone &amp;quot;hamim.web.id&amp;quot; IN {
+	type master;
+	file &amp;quot;/etc/named/forward-hamim.zone&amp;quot;;
+	allow-update { none; };
+	allow-transfer { 103.23.20.126; };
+	also-notify { 103.23.20.126; };
+	notify yes;
+	};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut beberapa keterangan dari zone forward diatas :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;zone&lt;/strong&gt; : Digunakan untuk penamaan zone dari domain Anda&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IN&lt;/strong&gt; : Internet&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Type&lt;/strong&gt; : Sesuaikan dengan skema DNS Server Yang ingin Anda gunakan, jika DNS Servernya diperuntukkan untuk Master silakan isikan master jika slave silakan sisikan slave&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;File&lt;/strong&gt; : Letak dimana database record dari domain hamim.web.id berada&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;allow-update&lt;/strong&gt; : Digunakan untuk recursive, jika tidak diaktifkan silakan berikan keterangan none;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;allow-transfer&lt;/strong&gt; : Digunakan untuk melakukan transfer database record master (primary) ke server Slave. Silakan isikan IP dari Server Slave&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;also-notify dan notify yes&lt;/strong&gt; : Digunakan untuk notifikasi setiap perubahan di sisi zone master dan akan diinformasikan ke Slave. Namun apabila tidak menggunakannya hal tersebut tidak apa – apa dikarenakan secara default bind sudah melakukan notifikasi perubahan ke host slave.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Berikut contoh lengkap dari konfigurasi zone forward disisi Master&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;//
+// named.conf
+//
+// Provided by Red Hat bind package to configure the ISC BIND named(8) DNS
+// server as a caching only nameserver (as a localhost DNS resolver only).
+//
+// See /usr/share/doc/bind*/sample/ for example named configuration files.
+//
+// See the BIND Administrator&#39;s Reference Manual (ARM) for details about the
+// configuration located in /usr/share/doc/bind-{version}/Bv9ARM.html
+
+options {
+	listen-on port 53 { 127.0.0.1;  117.53.45.53; };
+//	#listen-on-v6 port 53 { ::1; };
+	directory 	&amp;quot;/var/named&amp;quot;;
+	dump-file 	&amp;quot;/var/named/data/cache_dump.db&amp;quot;;
+	statistics-file &amp;quot;/var/named/data/named_stats.txt&amp;quot;;
+	memstatistics-file &amp;quot;/var/named/data/named_mem_stats.txt&amp;quot;;
+	recursing-file  &amp;quot;/var/named/data/named.recursing&amp;quot;;
+	secroots-file   &amp;quot;/var/named/data/named.secroots&amp;quot;;
+
+	allow-query     { 127.0.0.1; 117.53.45.53; any; };
+	allow-query-cache { 127.0.0.1; 117.53.45.53; any; };
+
+	/* 
+         - If you are building an AUTHORITATIVE DNS server, do NOT enable recursion.
+         - If you are building a RECURSIVE (caching) DNS server, you need to enable 
+           recursion. 
+         - If your recursive DNS server has a public IP address, you MUST enable access 
+           control to limit queries to your legitimate users. Failing to do so will
+           cause your server to become part of large scale DNS amplification 
+           attacks. Implementing BCP38 within your network would greatly
+           reduce such attack surface 
+        */
+        recursion no;
+
+        dnssec-enable yes;
+        dnssec-validation yes;
+
+        /* Path to ISC DLV key */
+        bindkeys-file &amp;quot;/etc/named.iscdlv.key&amp;quot;;
+
+        managed-keys-directory &amp;quot;/var/named/dynamic&amp;quot;;
+
+        pid-file &amp;quot;/run/named/named.pid&amp;quot;;
+        session-keyfile &amp;quot;/run/named/session.key&amp;quot;;
+};
+
+logging {
+        channel default_debug {
+                file &amp;quot;data/named.run&amp;quot;;
+                severity dynamic;
+        };
+};
+
+zone &amp;quot;hamim.web.id&amp;quot; IN {
+	type master;
+	file &amp;quot;/etc/named/forward-hamim.zone&amp;quot;;
+	allow-update { none; };
+	allow-transfer { 103.23.20.126; };
+	also-notify { 103.23.20.126; };
+	notify yes;
+	};
+
+include &amp;quot;/etc/named.rfc1912.zones&amp;quot;;
+include &amp;quot;/etc/named.root.key&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan simpan konfigurasi zone forward tersebut.&lt;/p&gt;
+
+&lt;p&gt;Ketiga, membuat record dns untuk domain “hamim.web.id” silakan sesuaikan letak file record yang ingin disimpan, pada pembuatan zone forward sebelumnya kita telah menentukan letaknya yaitu di direktori /etc/named/ dengan nama file forward-hamim.zone .&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-master ~]# vim /etc/named/forward-hamim.zone 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut contoh record forward :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$TTL    86400
+@       IN      SOA             hamim.web.id. root.hamim.web.id.(
+                2019111919      ;Serial
+                3600            ;Refresh
+                1800            ;Retry
+                604800          ;Expire
+                86400           ;Minimum TTL
+)
+
+@               IN      NS      ns1.hamim.web.id.
+@               IN      NS      ns2.hamim.web.id.
+ns1             IN      A       117.53.45.53
+ns2             IN      A       103.23.20.126  
+@               IN      A       117.53.45.53
+www             IN      CNAME   hamim.web.id.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sesuai dengan topologi sebelumnya dimana NS1.HAMIM.WEB.ID akan menggunakan IP Master (117.53.45.53) sedangkan NS2.HAMIM.WEB.ID akan menggunakan IP Slave (103.23.20.126).&lt;/p&gt;
+
+&lt;p&gt;Silakan sesuaikan dengan IP VPS Anda masing – masing dan mengenai keterangan – kerangan record DNS diatas Anda dapat merujuk pada tautan berikut : &lt;a href=&#34;https://github.com/hamimistimewa/Catatan-cahndeso/wiki/Record---Record-DNS-Server&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Record – Record DNS Server Yang Sering Digunakan&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan simpan file forward tersebut.&lt;/p&gt;
+
+&lt;p&gt;Berikutnya, silakan start dan enable service bind, dan pastikan semua service bind berjalan dengan normal dengan menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-master ~]# systemctl start named
+[root@srv-master ~]# systemctl enable named
+[root@srv-master ~]# systemctl status named
+● named.service - Berkeley Internet Name Domain (DNS)
+   Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; vendor preset: disabled)
+   Active: active (running) since Kam 2019-02-21 18:23:50 WIB; 1 day 5h ago
+ Main PID: 4483 (named)
+   CGroup: /system.slice/named.service
+           └─4483 /usr/sbin/named -u named -c /etc/named.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oke apabila semua telah berjalan dengan sempurna, mari kita lanjut ke server Slave&lt;/p&gt;
+
+&lt;h3 id=&#34;instalasi-dan-konfigurasi-server-slave&#34;&gt;Instalasi Dan Konfigurasi Server Slave&lt;/h3&gt;
+
+&lt;p&gt;Untuk installasi disisi Slave tidaklah ada perubahan yang sangat signifikan dan hampir sama dengan cara install disisi Master tadi, namun perbedaannya di Slave Anda tidak perlu membuat atau nenambahkan record forward kembali, Anda hanya perlu membuat zone dengan type slave dan menentukan letak penyimpanan file dari record master.&lt;/p&gt;
+
+&lt;p&gt;Silakan install service bind sepertihalnya install Master sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Jika sudah, silakan melakukan konfigurasi slave di /etc/named.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-slave ~]# vim /etc/named.conf 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk konfigurasi silakan sesuaikan dengan konfigurasi master&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;options {
+        listen-on port 53 { 127.0.0.1;  103.23.20.126; };
+//      listen-on-v6 port 53 { none; };
+        directory       &amp;quot;/var/named&amp;quot;;
+        dump-file       &amp;quot;/var/named/data/cache_dump.db&amp;quot;;
+        statistics-file &amp;quot;/var/named/data/named_stats.txt&amp;quot;;
+        memstatistics-file &amp;quot;/var/named/data/named_mem_stats.txt&amp;quot;;
+        recursing-file  &amp;quot;/var/named/data/named.recursing&amp;quot;;
+        secroots-file   &amp;quot;/var/named/data/named.secroots&amp;quot;;
+
+        allow-query     { 127.0.0.1; 103.23.20.126; any; };
+        allow-query-cache { 127.0.0.1; 103.23.20.126; any; };
+
+        /* 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut contoh zone forward disisi Slave :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;zone &amp;quot;hamim.web.id&amp;quot; IN {
+        type slave;
+        masters { 117.53.45.53; };
+        file &amp;quot;slaves/forward-hamim.zone&amp;quot;;
+        masterfile-format text;
+        notify no;
+        };
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut beberapa keterangan dari zone forward diatas :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;zone&lt;/strong&gt; : Digunakan untuk penamaan zone dari domain Anda&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IN&lt;/strong&gt; : Internet&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Type&lt;/strong&gt; : Sesuaikan dengan skema DNS Server Yang ingin Anda gunakan, jika DNS Servernya diperuntukkan untuk Slave silakan isikan Slave jika Master silakan sisikan Master&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;masters&lt;/strong&gt; : Silakan isikan IP Master&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;File&lt;/strong&gt; : Letak dimana hasil backup database record dari domain hamim.web.id.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Masterfile-format text&lt;/strong&gt; : Digunakan untuk menerjemahkan binari ke teks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Jika sudah, silakan save konfigurasi named.conf tersebut, dan silakan start dan enable named seperti perintah yang sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Hasilnya secara otomatis Anda akan mendapatkan database record untuk backup yang dikirimkan oleh si master.&lt;/p&gt;
+
+&lt;p&gt;Untuk melihatnya silakan pindah direktori ke &lt;strong&gt;/var/named/slaves/&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-slave ~]# cd /var/named/slaves/
+[root@srv-slave slaves]# ls
+db-06eRySfx  db-C57a5DlK  db-kIGPzEJP  db-xo4j3baV  forward-hamim.zone 
+[root@srv-slave slaves]# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oke secara otomatis akan ada file forward yang dimana itulah file backupnya&lt;/p&gt;
+
+&lt;p&gt;Secara default isi dari &lt;strong&gt;forward-hamim.zone&lt;/strong&gt; berbentuk binari bukan teks,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;kenapa-binari&#34;&gt;Kenapa binari ?&lt;/h4&gt;
+
+&lt;p&gt;Berdasarkan hasil dari beberapa referensi karena dari segi keamanan.&lt;/p&gt;
+
+&lt;p&gt;Namun hal tersebut dapat diatasi dengan cara menambahkan &lt;strong&gt;masterfile-format text;&lt;/strong&gt; di zone forward di slave.&lt;/p&gt;
+
+&lt;p&gt;Harap diperhatikan apabila Anda telah menambahkan konfigurasi baru atau melakukan perubahan konfigurasi Anda wajib melakukan restart atau reload service bind dengan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-slave slaves]# 
+[root@srv-slave slaves]# systemctl restart named
+[root@srv-slave slaves]# cat forward-hamim.zone 
+$ORIGIN .
+$TTL 86400	; 1 day
+hamim.web.id		IN SOA	hamim.web.id. root.hamim.web.id. (
+				2019111919 ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				604800     ; expire (1 week)
+				86400      ; minimum (1 day)
+				)
+			NS	ns1.hamim.web.id.
+			NS	ns2.hamim.web.id.
+			A	117.53.45.53
+$ORIGIN hamim.web.id.
+analis			A	117.53.45.53
+beddol			A	117.53.45.53
+bowok			A	117.53.45.53
+cobacoba		A	117.53.45.53
+hai			A	103.53.45.53
+hello		        A	117.53.45.53
+mail			A	117.53.45.53
+ns1			A	117.53.45.53
+ns2			A	103.23.20.126
+Ommku			A	117.53.45.53
+www			CNAME	hamim.web.id.
+[root@srv-slave slaves]# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Namun penambahan &lt;strong&gt;masterfile-format text;&lt;/strong&gt; tidak disarankan apabila DNS Anda digunakan untuk banyak domain atau zone untuk domain.&lt;/p&gt;
+
+&lt;p&gt;Dengan demikian kami sarankan Anda untuk menonaktifkan atau tidak menggunakan &lt;strong&gt;masterfile-format text;&lt;/strong&gt; apabila memang nantinya membutuhkan hasil backup record barulah Anda dapat mengaktifkannya kembali.&lt;/p&gt;
+
+&lt;p&gt;Berikut merupakan log slave apabila terdapat perubahan record misalnya penamabahan atau pengurunganan record contohnya record untuk subdomain dan yang lainnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dan berikut log dari sisi Master,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada log diatas kita sangat jelas melihat &lt;strong&gt;peran also-notify dan notify yes;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Harap dicatat setiap menambahkan record baru di sisi Master misalnya Anda ingin menambahkan subdomain setiap menambahkan subdomain maka Anda perlu merubah &lt;strong&gt;Serial&lt;/strong&gt; apabila Anda tidak merubah serial maka si Slave tidak akan melakukan perubahan apapun dan subdomain yang telah Anda tambahkan di Master tidak akan resolve ke Slave.&lt;/p&gt;
+
+&lt;h3 id=&#34;percobaan&#34;&gt;PERCOBAAN&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;NS1.HAMIM.WEB.ID : 117.53.45.53
+NS2.HAMIM.WEB.ID : 103.23.20.12
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sebelumnya saya telah membuat subdomain subdomainbro&lt;/p&gt;
+
+&lt;p&gt;Pengecekan Domain Utama HAMIM.WEB.ID&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hamimaja@hamimaja:~$ dig hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns1.hamim.web.id hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns2.hamim.web.id hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns1.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns2.hamim.web.id +short
+103.23.20.126
+hamimaja@hamimaja:~$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pengecekan Sub Domain Utama SUBDOMAINBRO.HAMIM.WEB.ID&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hamimaja@hamimaja:~$ dig subdomainbro.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns1.hamim.web.id subdomainbro.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns2.hamim.web.id subdomainbro.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns1.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns2.hamim.web.id +short
+103.23.20.126
+hamimaja@hamimaja:~$ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebagai tambahan apabila Anda ingin menambahkan domai baru silakan membuat zone baru untuk domain baru Anda tersebut disisi Master dan Slave.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Record Record DNS Server</title>
+      <link>http://nurhamim.net/2019/centos19/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:38 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos19/</guid>
+      <description>&lt;p&gt;Pada tutorial kali ini saya akan share mengenai record - record DNS yang sering sekali digunakan, diantaranya:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SOA (Start Of Authority)&lt;/strong&gt; untuk mengidentifikasikan otoritas name-server pada zone data atau informasi nama host domain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TTL (Time To Live)&lt;/strong&gt; merupakan waktu yang diperlukan server DNS untuk menyimpan hasil resolving ke cache-nya.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Serial&lt;/strong&gt; merupakan nomor seri database-cache domain domain.com. Jika ada perubahan data pada berkas zone domainanda.com, misalnya menambahkan domain blog.domainanda.com, maka anda harus merubah/menambah nomor serinya. Sebaiknya digunakan format tahun-bulan-tanggal-jam untuk nomor serialnya. Pada berkas database untuk zone domain domainanda.com tersebut terakhir di-update tanggal 01 Januari 2019 jam 12. Fungsi dari serial ini adalah untuk memberitahukan kepada secondary-master name-server untuk meng-update database-cache-nya jika ada perubahan pada primary-master name-server yaitu dengan melakukan pengecekan nomor serial. Jika nomor serial berubah/bertambah maka secondary-master name-server akan segera melakukan zone-transfer dari primary-master name-server.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Refresh&lt;/strong&gt; adalah selang waktu yang diperlukan (dalam detik) secondary-master name-server untuk melakukan pengecekan perubahan database-cache pada primary-master name-server.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Retry&lt;/strong&gt; adalah waktu (dalam detik) yang digunakan secondary-master name-server untuk menunggu pengulangan cek berkas zone jika pada saat proses refresh primary-master name-server tidak memberikan respon&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Expire&lt;/strong&gt; adalah waktu (dalam detik) yang digunakan secondary-master name-server untuk mempertahankan berkas zone jika tidak dapat melakukan zone-refresh. Jika setelah waktu expire telah habis tapi secondary-master name-server tidak dapat melakukan zone-refresh maka berkas zone pada secondary-master name-server akan dihapus.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minimum&lt;/strong&gt; adalah nilai waktu (TTL) default untuk semua resource-record yang ada dalam berkas zone.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;@&lt;/strong&gt; menunjukkan bahwa zone yang bersangkutan adalah zone domain yang ditunjukkan berkas named.conf ke berkas database-cache tersebut atau origin zone&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IN&lt;/strong&gt; adalah singkatan dari Internet. Semua informasi Internet digunakan IN dan untuk informasi non-Internet digunakan kode lain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt; menyatakan Address Internet atau alamat IP dari mesin yang ditangani oleh DNS ini proses penerjemahan namanya.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NS&lt;/strong&gt; menyatakan Name Server.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NS Record&lt;/strong&gt; merupakan daftar name-server yang otoritatif untuk zone bersangkutan. Pada database domain domainanda.com name-servernya adalah ns1.domainanda.com dan ns2.domainanda.com. NS Record ini yang nantinya akan diserahkan kepada pengelola domain TLD (Top Leve Domain) agar terdaftar dalam registar domain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MX (Mail Exchanger)&lt;/strong&gt; merupakan record routing email, untuk domain domainanda.com dalam hal ini akan diarahkan ke mail.domainanda.com. sebagai host yang ditunjuk sebagai mail exchanger akan memproses atau meneruskan mail untuk domain domainanda.com. Angka 10 pada MX 10 mail.domainanda.com. merupakan nilai preferensi (preference value) untuk menunjukkan tingkat prioritas mail exchanger yang digunakan untuk memproses atau meneruskan mail yang menuju domain my-server.com.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CNAME (Canonical Name)&lt;/strong&gt; fungsinya untuk alias, jadi suatu host dapat mempunyai nama lebih dari satu.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PTR (POINTER)&lt;/strong&gt; menyatakan pemetaan alamat IP ke domain domainanda.com yang merupakan reversed-address. Reverse Address ini sangat diperlukan jika kita membuat mail server karena dengan adanya reverse IP Address ke alamat domain kita. Maka proses sent/receive protocol SMPT pada mesin mail server kita dapat berjalan normal. Tanpa adanya reverse Address, IP kita dianggap sebagai spammer oleh mesin smtp mail server lain karena tidak dikenal.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instalasi DNS Server Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos18/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:28 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos18/</guid>
+      <description>
+
+&lt;p&gt;Pada kesempatan kali ini kami akan share mengenai DNS server di CentOS 7, sebelum itu mari kita bahas sedikit pengertian dari DNS server.&lt;/p&gt;
+
+&lt;p&gt;Apa itu DNS server ?&lt;/p&gt;
+
+&lt;p&gt;DNS (Domain Name System) adalah sebuah sistem yang berfungsi sebagai layanan direktori untuk semua sistem, dengan menspesifikasinnya sebagai nama host atau domain. Dengan kata lain, DNS menjadi satu fasilitas dimana sebuah server yang memiliki nama dan alamat IP sebagai identitas yang unik di dalam jaringan.&lt;/p&gt;
+
+&lt;p&gt;Sebagai layanan, DNS menjadi salah satu bagian terpenting di dalam jaringan internet. Misalkan ni ada seseorang yang mengunjungi sebuah situs dengan mengetikan sebuah alamat situs nurhamim.net pada aplikasi browser (Firefox, Chrome, dsb).&lt;/p&gt;
+
+&lt;p&gt;Tanpa adanya DNS, pengunjung situs tersebut masih tetap akan dapat mengakses alamat tersebut dengan menggunakan IP, namun disinilah yang menjadi persoalan penting, apakah kita sanggup menghapal berbagai alamat IP sebuah server tersebut ?&lt;/p&gt;
+
+&lt;p&gt;Secara pribadi sih sangat sulit untuk menghapal sebauh alamat IP pada sebuah server jika dibandingkan dengan nama host atau domain.&lt;/p&gt;
+
+&lt;p&gt;Nah untuk melakukan pemetaan alamat sebuh domain menjadi sebuah IP Address maupun sebaliknya maka dibutuhkanlah sebuah server yang berfungsi sebagai penanggung jawab, sebuah DNS tersebut yang dinamakan DNS Server.&lt;/p&gt;
+
+&lt;p&gt;Di CentOS 7 untuk DNS Servernya sendiri kita menggunakan service BIND.&lt;/p&gt;
+
+&lt;p&gt;Apa itu BIND ?&lt;/p&gt;
+
+&lt;p&gt;BIND (Berkeley Internet Name Domain) merupakan aplikasi service dan salah satu implementasi DNS yang paling banyak digunakan pada server. BIND dibuat untuk sistem operasi BSD UNIX 4.3 oleh Kevin Dunlap, lalu banyak di-pointing ke turunan – turuan UNIX termasuk LINUX.&lt;/p&gt;
+
+&lt;h3 id=&#34;persyaratan&#34;&gt;Persyaratan :&lt;/h3&gt;
+
+&lt;p&gt;Persyaratan untuk mengikuti tutorial ini Anda diharuskan mempunyai VPS beserta domain. Karena penulis disini langsung real membuat DNS Server di VPS yang mana dapat diakses melalui publik.&lt;/p&gt;
+
+&lt;p&gt;Oke langsung saja kita ke langkah – langkah instalasi DNS Server di CentOS 7&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan akses server CentOS 7 Anda masing – masing&lt;/p&gt;
+
+&lt;p&gt;Kedua, lakukan pembaharuan atau update sistem operasi CentOS 7 Anda dengan menggunakan perintah berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-dns ~]# yum update -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan tunggu proses update sampai selesai, jika sudah selanjutnya silakan install service bind dan cache nameserver DNS dengan menggunakan perintah berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-dns ~]# yum install bind bind-utils caching-nameserver -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah, selanjutnya silakan melakukan konfigurasi bind yang berada di direktori &lt;strong&gt;/etc/named.conf&lt;/strong&gt;  , pada konfigurasi ini nantinya Anda dapat membuat zone untuk DNS Server, mulai dari zone forward dan zone reverse, berikut contoh konfigurasinya, silakan sesuaikan dengan alamap IP dan domain Anda masing – masing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah silakan simpan konfigurasi yang telah dilakukan, selanjutnya membuat file zone forward dan reverse. Untuk membuat nya menyesuaikan dengan penentuan direktori yang dibuat pada saat konfigurasi di atas yaitu di &lt;strong&gt;/etc/named/&lt;/strong&gt; silakan pindah direktori ke &lt;strong&gt;/etc/named/&lt;/strong&gt;  lalu buat file dengan nama file untuk file forward yaitu infone-forward.zone sedangkan untuk reverse infone-reverze.zone sesuai dengan konfigurasi yang telah ditentukan sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Sebenarnya untuk penamaan file zone ini bersifat bebas sesuai dengan keinginan Anda, jadi Anda tidak harus menyamakan persis untuk penamaan file buat zone forward dan reverse yaa.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-dns ~]# vim /etc/named/infone-forward.zone
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu isikan record – record untuk zone forward seperti pada gambar berikut :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada gambar diatas silakan sesuaikan IP dan domain Anda masing – masing. Harap diperhatikan dalam penambahan record di atas pastikan tidak adanya typo 1 kata pun. Jika terdapat kesalahan penulisan 1 kata saja maka service named tidak akan dapat running.&lt;/p&gt;
+
+&lt;p&gt;Selain itu Anda dapat menambahkan record sub domain record email dan yang lainnya melalui zone forward ini.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya membuat file untuk zone reverze untuk direktoriny sama dengan forward berada di direktori /named/forward .&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-dns ~]# vim /etc/named/infone-reverze.zone
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut contoh konfigurasi untuk zone reverse&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila Anda telah selesai membuat ke 2 zone tersebut, berikutnya silakan start, enable service named dan pastikan semua status running sebagai berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-dns ~]# systemctl start named
+[root@srv-dns ~]# systemctl enable named
+[root@srv-dns ~]# systemctl status named
+● named.service - Berkeley Internet Name Domain (DNS)
+   Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; vendor preset: disabled)
+   Active: active (running) since Jum 2019-02-08 06:52:26 WIB; 2 days ago
+ Main PID: 1977 (named)
+   CGroup: /system.slice/named.service
+           └─1977 /usr/sbin/named -u named -c /etc/named.conf
+
+Peb 10 03:52:01 srv-dns named[1977]: automatic empty zone: B.E.F.IP6.ARPA
+Peb 10 03:52:01 srv-dns named[1977]: automatic empty zone: 8.B.D.0.1.0.0.2.IP6.ARPA
+Peb 10 03:52:01 srv-dns named[1977]: reloading configuration succeeded
+Peb 10 03:52:01 srv-dns named[1977]: reloading zones succeeded
+Peb 10 03:52:01 srv-dns named[1977]: all zones loaded
+Peb 10 03:52:01 srv-dns named[1977]: running
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila service telah running dengan sempurna tanpa adanya kendala, berikut silakan mendaftarkan Gluer Record atau Private Name Server pada domain yang Anda gunakan disini saya menggunakan nama domain infone.info saya berlangganan domainnya di CloudKilat , berikut cara mendaftarkan private Nameserver domain di CloudKilat :&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Login portal area CloudKilat (&lt;a href=&#34;http://portal.cloudkilat.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://portal.cloudkilat.com/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Service &amp;gt;&amp;gt; Domain &amp;gt;&amp;gt; Manage &amp;gt;&amp;gt; Private Nameservers&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Silakan mengisikan atau menambahkan ns1 dan ns2 yang ingin diarahkan ke IP VPS Anda seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/6.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah silakan pindah ke menu Nameserver &amp;gt;&amp;gt; Klik pada menu Use custom nameservers (enter below) ubah nameserver menjadi ns1.infone.info dan ns2.infone.info lalu Save Changes .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya apabila perubahan NameServer telah dilakukan pada domain tersebut maka domain akan mengalami proses propagasi dan untuk proses propagasi membutuhkan waktu maksimal 48 jam. Cepat atau lambat pada proses propgasi domain bergantung dengan resolver ISP yang Anda gunakan.&lt;/p&gt;
+
+&lt;p&gt;Untuk mengetahui domain telah resolved dapat kita cek dengan cara menggunakan dig seperti berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hamimaja@hamimaja:~$ whois infone.info |grep “Name Server”
+Name Server: NS1.INFONE.INFO
+Name Server: NS2.INFONE.INFO
+hamimaja@hamimaja:~$ dig infone.info +short
+103.23.20.126
+hamimaja@hamimaja:~$ dig @ns1.infone.info infone.info +short
+103.23.20.126
+hamimaja@hamimaja:~$ dig @ns2.infone.info infone.info +short
+103.23.20.126
+hamimaja@hamimaja:~$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Anda juga dapat memastikan bahwa domain Anda telah resolved menggunnakan DNS Checker online berikut tautannya : &lt;a href=&#34;https://dnschecker.org/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://dnschecker.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila Anda terdapat kendala pada saat melakukan register nameserve private atau glue record silakan membuka tiket ke info@cloudkilat.com atau membuka tiket melalui portal cloudkilat Anda untuk meminta saran mengenai kendala yang terjadi.&lt;/p&gt;
+
+&lt;p&gt;Sebagai testing saja apakah benar DNS domain untuk infone.info telah berhasil silakan install webserver apache ataupun nginx, saya sebelumnya sudah menginstall webserver apache di CentOS 7 berikut hasilnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahapan ini DNS Server Mandiri di CentOS 7 Anda telah berhasil. Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos17/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos17/</guid>
+      <description>&lt;p&gt;Pada tutorial tersebut kita juga dapat membuat database menggunakan mode CLI (Command Line Interface) nah untuk mempermudah Anda dalam pengelolaan Database Anda dapat menggunakan phpMyAdmin dimana phpMyAdmin sendiri berbasis Web Based.&lt;/p&gt;
+
+&lt;p&gt;Dimana yang dimaksuda database Anda dapat diakses melalui web browser dengan menggunakan phpMyAdmin.&lt;/p&gt;
+
+&lt;p&gt;Pada tutorial kali ini kita akan menginstall phpMyAdmin menggunakan webserver apache bagi yang belum install webserver apache silakan install terlebih dahulu.&lt;/p&gt;
+
+&lt;p&gt;Oke langsung saja berikut ini langkah – langkah untuk melakukan installasi dan konfigurasi phpMyAdmin di CentOS 7&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan akses server CentOS 7 Anda masing – masing,&lt;/p&gt;
+
+&lt;p&gt;Kedua, pastikan Anda telah menginstall database server MariaDB atau MySQL dan webserver apache&lt;/p&gt;
+
+&lt;p&gt;Ketiga, silakan melakukan pembaharuan atau update sistem operasi CentOS 7 Anda.&lt;/p&gt;
+
+&lt;p&gt;Berikutnya, menginstall atau menambahkan repository epel di CentOS 7 dengan cara menjalakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install epel-release
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika suda, silakan install phpMyAdmin di CentOS 7 dengan cara menjalankan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install phpmyadmin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan tunggu proses instalasi sampai selesai, jika sudah selesai proses installasinya coba akses alamat IP server Anda /phpmyadmin&lt;/p&gt;
+
+&lt;p&gt;Saya yakin 100% tidak bisa wkwkkwkwkw 😀 .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Santai setelah installasi kita perlu melakukan konfigurasi phpMyAdmin, untuk file yang harus kita konfigurasi sendiri berada di /etc/httpd/conf.d/phpMyAdmin.conf . Untuk kebutuhan edit file konfigurasi dapat menggunakan editor vim atau nano, sesuai dengan keinginan Anda masing – masing, disini penulis menggunakan vim&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# vim /etc/httpd/conf.d/phpMyAdmin.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut isi dari file phpMyAdmin secara default&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan menambahkan perintah Require all granted dan disabled ip localhost seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah, silakan simpan file phpMyAdmin lalu melakukan reload atau restart terhadap webserver apache kita dengan cara menjalankan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# systemctl restart httpd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika, sudah silakan akses kembali IP server disertai /phpmyadmin, insya Allah work 100% ganss ehhehehe, hasil seperti berikut ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk loginnya secara default masih menggunakan root apabila Anda belum membuat user baru, untuk passwordnya password root database yang telah Anda buat pada saat Anda installasi database sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Berikut tampilan dari phpMyAdmin&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini Anda telah berhasil installasi dan konfigurasi phpmyadmin, bagaima simple kan intinya ada niat untuk belajar gans,&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba dan semoga bermanfaat bagi kita semua :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos16/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:17 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos16/</guid>
+      <description>&lt;p&gt;Tahukan Anda tentang apa itu Database ?&lt;/p&gt;
+
+&lt;p&gt;Lalu buat apa sih fungsinya ?&lt;/p&gt;
+
+&lt;p&gt;Oke jika Anda penasang tentang pengertian fungsi database, berikut ini merupakan pengertian dan fungsi dari database .&lt;/p&gt;
+
+&lt;p&gt;Database Server merupakan sebuah program komputer yang menyediakan layanan pengolahan berbasis data dan melayani komputer atau program aplikasi basis data yang menggunakan model client – server.&lt;/p&gt;
+
+&lt;p&gt;Fungsi Database Server :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Untuk menyimpan beberapa data yang bisa dilakukan dalam 1 lokasi&lt;/li&gt;
+&lt;li&gt;Penyimpanan yang aman karena fasilitas yang di server tidak ada di komputer biasa&lt;/li&gt;
+&lt;li&gt;Manajemen sistem&lt;/li&gt;
+&lt;li&gt;Mempermudah dan mecari dalam lingkup database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Setiap client dapat mengakses secara bersamaan&lt;/p&gt;
+
+&lt;p&gt;Database server sendiri bisa dibilang cukup banyak, yang biasanya sering digunakan yaitu MySQL, MariaDB dan PostgreSQL dan yang lainnya.&lt;/p&gt;
+
+&lt;p&gt;Nah pada tutorial kali ini saya akan share bagaimana cara instalasi dan konfigurasi database MariaDB di CentOS 7.&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan akses server Anda.&lt;/p&gt;
+
+&lt;p&gt;Kedua, jalankan baris perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install mariadb-server mariadb-client -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan tunggu proses instalasi sampai selesai jika sudah, selanjutnya Anda silakan start dan enable lalu melihat status dari database MariaDB telah berjalan dengan normal atau running. Fungsi enable sendiri berfunsi untuk menjalankan service secara otomatis apabila nantinya server dilakukan reboot atau restart, berikut perintah yang digunakan&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# 
+[root@srv-hamim01 ~]# systemctl start mariadb
+[root@srv-hamim01 ~]# systemctl status mariadb
+● mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; disabled; vendor preset: disabled)
+   Active: active (running) since Rab 2019-02-06 19:00:45 WIB; 14s ago
+  Process: 1473 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=0/SUCCESS)
+  Process: 1394 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 1472 (mysqld_safe)
+   CGroup: /system.slice/mariadb.service
+           ├─1472 /bin/sh /usr/bin/mysqld_safe --basedir=/usr
+           └─1634 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/log/maria...
+
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: MySQL manual for more instructions.
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: Please report any problems at http://mariadb.org/jira
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: The latest information about MariaDB is available at http://mariadb.org/.
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: You can find additional information about the MySQL part at:
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: http://dev.mysql.com
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: Consider joining MariaDB&#39;s strong and vibrant community:
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: https://mariadb.org/get-involved/
+Peb 06 19:00:43 srv-hamim01.localhost mysqld_safe[1472]: 190206 19:00:43 mysqld_safe Logging to &#39;/var/log/mariadb/mariadb.log&#39;.
+Peb 06 19:00:43 srv-hamim01.localhost mysqld_safe[1472]: 190206 19:00:43 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Peb 06 19:00:45 srv-hamim01.localhost systemd[1]: Started MariaDB database server.
+[root@srv-hamim01 ~]# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikutnya, melakukan konfigurasi datatabase MariaDB, berikut perintahnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# 
+[root@srv-hamim01 ~]# mysql_secure_installation 
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we&#39;ll need the current
+password for the root user.  If you&#39;ve just installed MariaDB, and
+you haven&#39;t set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorisation.
+
+Set root password? [Y/n] Y
+New password: ISIKAN_PASSWORD_ANDA
+Re-enter new password: ISIKAN_PASSWORD_ANDA
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] Y
+ ... Success!
+
+Normally, root should only be allowed to connect from &#39;localhost&#39;.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] Y
+ ... Success!
+
+By default, MariaDB comes with a database named &#39;test&#39; that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] Y
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] Y
+ ... Success!
+
+Cleaning up...
+
+All done!  If you&#39;ve completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB!
+[root@srv-hamim01 ~]# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila Anda telah melakukan konfigurasi, selanjutnya mari kita coba login ke database MariaDB Anda lalu mencoba membuat database baru dengan menggunakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# 
+[root@srv-hamim01 ~]# mysql -u root -p
+Enter password: ISIKAN_PASSWORD_DATABASE_ANDA
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 5.5.60-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
+
+MariaDB [(none)]&amp;gt; create database Hai;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]&amp;gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| Hai                |
+| mysql              |
+| performance_schema |
++--------------------+
+4 rows in set (0.00 sec)
+
+MariaDB [(none)]&amp;gt; quit
+Bye
+[root@srv-hamim01 ~]#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke, itulah cara untuk menginstall dan melakukan konfigurasi database MariaDB di sistem operasi CentOS 7.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂 .&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Instalasi PHP 7 di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos15/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos15/</guid>
+      <description>
+
+&lt;p&gt;Pada tutorial kali ini saya akan share bagaimana cara instalasi php 7 mulai dari php 7.1, 7.2 dan 7.3 . Dengan demikian Anda dapat memilih php versi berapa yang ingin Anda gunakan.&lt;/p&gt;
+
+&lt;p&gt;Oke langsung saja yaa ke tahapan – tahapannya :&lt;/p&gt;
+
+&lt;p&gt;Pertama, pastikan Anda telah menginstall webserver apache atau nginx, jika Anda menggunakan apache silakan merujuk pada tautan berikut Instalasi Webserver Apache di CentOS 7 pada tutorial sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Kedua, pastikan Anda telah menginstall atau memasang repository epel, berikut perintahnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install epel-release yum-utils
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah, silakan installa paket manager untuk php 7 dengan cara menjalankan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apabila sudah selesai, berikutnya Anda tinggal memilih ingin menginstall php 7.1, 7.2 atau 7.3 .&lt;/p&gt;
+
+&lt;p&gt;Berikut langkah – langkah untuk menginstall masing – masing versi php tersebut.&lt;/p&gt;
+
+&lt;h3 id=&#34;php-version-7-1&#34;&gt;PHP Version 7.1&lt;/h3&gt;
+
+&lt;p&gt;Mengaktifkan repo paket manager repository remi untuk php version 7.1 dengan menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum-config-manager –enable remi-php71
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah selanjutnya Anda dapat menginstall module php 7.1 yang Anda inginkan, contohnya seperti berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysql -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah silakan lihat versi php Anda, maka php yang Anda gunakan saat ini yaitu php version 7.1 . Untuk melihat versi php dapat digunakan dengan menggunakan perintah berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
+PHP 7.1.26 (cli) (built: Jan 9 2019 08:02:33) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
+with Zend OPcache v7.1.26, Copyright (c) 1999-2018, by Zend Technologies
+[root@srv-hamim01 ~]#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Selanjutnya, silakan membuat file &lt;strong&gt;info.php&lt;/strong&gt; di direktori &lt;strong&gt;/var/www/html&lt;/strong&gt; , untuk memastikan apakah php kita telah berubah dengan benar . Isikan file info.php tersebut dengan script berikut :&lt;/p&gt;
+
+&lt;p&gt;Jika sudah silakan restart web server yang Anda gunakan disini saya mengguanakan web server apache, untuk apache bisa dengan cara menjalankan perintah systemctl restart httpd .&lt;/p&gt;
+
+&lt;p&gt;Silakan akses IP server beserta /info.php, dengan demikian Anda dapat melihat modul php apa saja yang telah Anda install, seperti gambar berikut ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%207/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;php-version-7-2&#34;&gt;PHP Version 7.2&lt;/h3&gt;
+
+&lt;p&gt;Untuk installasi php version 7.2 tidak ada perbedaan sama saja dengan cara installasi php version 7.1 sebelumnya hanya saja disini kita hanya mengaktifkan saja paket manager repo remi untuk php versi 7.2 dengan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum-config-manager –enable remi-php72
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah, berikutnya Anda dapat menginstall modul php versi 7.2 yang Anda inginkan, seperti berikut contohnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah, silakan cek versi php Anda dengan menggunakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
+PHP 7.2.15 (cli) (built: Feb 5 2019 19:50:47) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+with Zend OPcache v7.2.15, Copyright (c) 1999-2018, by Zend Technologies
+[root@srv-hamim01 ~]#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk mengetahui module php apa saja yang telah diinstall silakan membuat file info.php dan melakukan restart web server yang Anda gunakan seperti langkah pada PHP Versi 1 diatas . Berikut hasilnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%207/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;php-version-7-3&#34;&gt;PHP Version 7.3&lt;/h3&gt;
+
+&lt;p&gt;Sama seperti langkah – langkah sebelumnya untuk installasi php versi 7.3 Anda hanya perlu mengaktifkan paket manager repo remi untuk php 7.3 dengan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum-config-manager –enable remi-php73
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah silakan install modul php 7.3 yang Anda inginkan&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tunggu proses intallasi module php selesai, jika sudah selesai Anda dapat melihat versi php Anda dengan menggunakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
+PHP 7.3.2 (cli) (built: Feb 5 2019 13:10:03) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.2, Copyright (c) 1998-2018 Zend Technologies
+with Zend OPcache v7.3.2, Copyright (c) 1999-2018, by Zend Technologies
+[root@srv-hamim01 ~]#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk mengetahui module php apa saja yang telah diinstall silakan membuat file info.php dan melakukan restart web server yang Anda gunakan seperti langkah pada PHP Versi 1  dan 2 diatas . Berikut hasilnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%207/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Okelah tips ajaib untuk installasi php versi 7 di CentOS 7 dengan mudah.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba dan semoga bermanfaat bagi kita semua 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos14/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos14/</guid>
+      <description>&lt;p&gt;Semakin hari teknologi semakin up to date sama halnya yang terjad dengan php semkin hari maka versi php juga akan update ke versi yang lebih baru, namun sangat banyak aplikasi lama yang berjalan di versi php 5.xx sedangkan saat ini banyak pula aplikasi yang meminta remondasi untuk melakukan upgrade dari 5 ke 7 salah satunya yang paling kerasa yaitu CMS WordPress dimana di versi terbaru WordPress versi PHP yang direkomendasikan yaitu versi 7.xx .&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan kali ini saya akan share bagaimana sih cara melakukan upgrade version dari php 5.6 ke 7.1 . Berikut langkah – langkahnya,&lt;/p&gt;
+
+&lt;p&gt;Pertama, seperti biasanya silakan akses server CentOS 7 Anda masing – masing.&lt;/p&gt;
+
+&lt;p&gt;Kedua, saya pastikan terlebih dahulu bahwa saya masih menggunakan php versi 5.6 dengan menggunakan peritah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
+PHP 5.6.40 (cli) (built: Jan 9 2019 12:34:16)
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+[root@srv-hamim01 ~]#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Selanjutnya, menambah atau installasi repository epel di CentOS 7 dengan menggunakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]#
+[root@srv-hamim01 ~]# wget -q http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+[root@srv-hamim01 ~]# wget -q https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+[root@srv-hamim01 ~]# rpm -i remi-release-7.rpm epel-release-latest-7.noarch.rpm
+package epel-release-7-11.noarch is already installed
+package remi-release-7.6-1.el7.remi.noarch is already installed
+[root@srv-hamim01 ~]#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/upgrade%20php%205.6/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikutnya, mengintal manager repository remi untuk php 7.1 dengan menjalankan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# 
+[root@srv-hamim01 ~]# yum-config-manager --enable remi-php71
+Loaded plugins: fastestmirror
+=============================================================== repo: remi-php71 ===============================================================
+[remi-php71]
+async = True
+bandwidth = 0
+base_persistdir = /var/lib/yum/repos/x86_64/7
+baseurl = 
+cache = 0
+cachedir = /var/cache/yum/x86_64/7/remi-php71
+check_config_file_age = True
+compare_providers_priority = 80
+cost = 1000
+deltarpm_metadata_percentage = 100
+deltarpm_percentage = 
+enabled = 1
+enablegroups = True
+exclude = 
+failovermethod = priority
+ftp_disable_epsv = False
+gpgcadir = /var/lib/yum/repos/x86_64/7/remi-php71/gpgcadir
+gpgcakey = 
+gpgcheck = True
+gpgdir = /var/lib/yum/repos/x86_64/7/remi-php71/gpgdir
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+hdrdir = /var/cache/yum/x86_64/7/remi-php71/headers
+http_caching = all
+includepkgs = 
+ip_resolve = 
+keepalive = True
+keepcache = False
+mddownloadpolicy = sqlite
+mdpolicy = group:small
+mediaid = 
+metadata_expire = 21600
+metadata_expire_filter = read-only:present
+metalink = 
+minrate = 0
+mirrorlist = http://cdn.remirepo.net/enterprise/7/php71/mirror
+mirrorlist_expire = 86400
+name = Remi&#39;s PHP 7.1 RPM repository for Enterprise Linux 7 - x86_64
+old_base_cache_dir = 
+password = 
+persistdir = /var/lib/yum/repos/x86_64/7/remi-php71
+pkgdir = /var/cache/yum/x86_64/7/remi-php71/packages
+proxy = False
+proxy_dict = 
+proxy_password = 
+proxy_username = 
+repo_gpgcheck = False
+retries = 10
+skip_if_unavailable = False
+ssl_check_cert_permissions = True
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = True
+throttle = 0
+timeout = 30.0
+ui_id = remi-php71
+ui_repoid_vars = releasever,
+   basearch
+username =
+[root@srv-hamim01 ~]# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah. silakan install php dengan menjalankan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk mengetahui versi php yang kita gunakan silakan jalankan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
+PHP 7.1.26 (cli) (built: Jan 9 2019 08:02:33) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
+[root@srv-hamim01 ~]#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/upgrade%20php%205.6/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk menguji hasil upgrade dari php 5 ke 7, silakan restart atau reload webserver Anda disini saya menggunakan apache, berikut perintahnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# systemctl reload httpd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apabila Anda telah melakukan reload atau restart terhadap webserver Anda silakan akses kembali IP server beserta /info.php seperti pada gambar dibawah ini.&lt;/p&gt;
+
+&lt;p&gt;Sebagai catatan sebelumnya saya sudah membuat file info.php .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/upgrade%20php%205.6/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke, pada tahap ini untuk upgrade php telah berhasil. Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+
+&lt;p&gt;Jika terdapat saran atau kritik mengenai tutorial ini silakan disampaikan di kolom komentar. Terima kasih 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instalasi PHP 5.6 di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos13/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:06 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos13/</guid>
+      <description>&lt;p&gt;PHP (Pemberi Harapan Palsu) ? #ehh&lt;/p&gt;
+
+&lt;p&gt;Bukan yaaa hihihiih 😀 😀 😀&lt;/p&gt;
+
+&lt;p&gt;PHP merupakan bahasa pemrograman web, yang sering dan abnyak sekali orang menggunakan pemrograman ini, terlebih bagi seorang programmer, udah makanan sehari – hari ni php heheheh 🙂 .&lt;/p&gt;
+
+&lt;p&gt;Disini saya tidak akan mejelaskan tentang detail mengenai php itu sendiri buat apa untuk detail mengenai php itu sendiri dapat langsung dilihat di tautan resminya berikut : &lt;a href=&#34;http://www.php.net/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.php.net/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Langsung saja ke pembahan yaitu installasi php di CentOS 7.&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan login ke server Anda masing – masing.&lt;/p&gt;
+
+&lt;p&gt;Kedua, silakan update sistem operasi CentOS 7 Anda dengan menjalankan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum update -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah silakan, berikutnya menambahkan atau install repositori remi di CentOS 7 dengan menjalankan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah berikutnya kita install manager untuk repositori remi di CentOS 7 dengan menggunakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum-config-manager --enable remi-php56
+Loaded plugins: fastestmirror
+=============================================================== repo: remi-php56 ===============================================================
+[remi-php56]
+async = True
+bandwidth = 0
+base_persistdir = /var/lib/yum/repos/x86_64/7
+baseurl = 
+cache = 0
+cachedir = /var/cache/yum/x86_64/7/remi-php56
+check_config_file_age = True
+compare_providers_priority = 80
+cost = 1000
+deltarpm_metadata_percentage = 100
+deltarpm_percentage = 
+enabled = 1
+enablegroups = True
+exclude = 
+failovermethod = priority
+ftp_disable_epsv = False
+gpgcadir = /var/lib/yum/repos/x86_64/7/remi-php56/gpgcadir
+gpgcakey = 
+gpgcheck = True
+gpgdir = /var/lib/yum/repos/x86_64/7/remi-php56/gpgdir
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+hdrdir = /var/cache/yum/x86_64/7/remi-php56/headers
+http_caching = all
+includepkgs = 
+ip_resolve = 
+keepalive = True
+keepcache = False
+mddownloadpolicy = sqlite
+mdpolicy = group:small
+mediaid = 
+metadata_expire = 21600
+metadata_expire_filter = read-only:present
+metalink = 
+minrate = 0
+mirrorlist = http://cdn.remirepo.net/enterprise/7/php56/mirror
+mirrorlist_expire = 86400
+name = Remi&#39;s PHP 5.6 RPM repository for Enterprise Linux 7 - x86_64
+old_base_cache_dir = 
+password = 
+persistdir = /var/lib/yum/repos/x86_64/7/remi-php56
+pkgdir = /var/cache/yum/x86_64/7/remi-php56/packages
+proxy = False
+proxy_dict = 
+proxy_password = 
+proxy_username = 
+repo_gpgcheck = False
+retries = 10
+skip_if_unavailable = False
+ssl_check_cert_permissions = True
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = True
+throttle = 0
+timeout = 30.0
+ui_id = remi-php56
+ui_repoid_vars = releasever,
+   basearch
+username = 
+
+[root@srv-hamim01 ~]# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah, berikutnya install php yang dibutuhkan,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan tunggu proses installasi php sampai selesai. Untuk melihat versi php yang kita gunakan dapat dilakukan dengan menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
+PHP 5.6.40 (cli) (built: Jan 9 2019 12:34:16)
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+[root@srv-hamim01 ~]#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikutnya mari kita cek php apa saja yang telah kita install dengan membuat file &lt;strong&gt;info.php&lt;/strong&gt; di &lt;strong&gt;/var/www/html&lt;/strong&gt;  dengan cara berikut,&lt;/p&gt;
+
+&lt;p&gt;Pindah ke direktori /var/www/html menggunakan perintah cd .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%205.6/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Buat script info.php seperti berikut menggunakan teks edito vim atau nano,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%205.6/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah silakan simpan file info.php tersebut, selanjutnya melakukan restart atau reload pada webserver yang Anda gunakan disini menggunakan web server apache, berikut command yang dapat Anda gunakan untuk melakukan reload tersebut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 html]# systemctl reload httpd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika sudah silakan akses IP server Anda dengan /info.php . Maka hasilnya akan seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini installasi php di CentOS 7 sudah selesai cukup mudah kan.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instalasi Webserver Apache di CentOS 7</title>
+      <link>http://nurhamim.net/2019/centos12/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:02 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos12/</guid>
+      <description>&lt;p&gt;Pada kesempatan kali ini saya akan share bagaimana cara installasi webserver apache tersebut di sistem operasi CentOS 7 .&lt;/p&gt;
+
+&lt;p&gt;Untuk instalasi webserver apache kali ini dapat Anda coba di VPS (Virtual Private Server) atau VM (Virtual Machine) lokal biasanya banyak yang menggunakan Virtual Box di Komputer atau Laptop.&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan login terlebih dahulu ke server Anda masing – masing,&lt;/p&gt;
+
+&lt;p&gt;Kedua, silakan lakukan pembaharuan atau update pada sistem operasi CentOS 7, dengan menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum update -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan tunggu proses update sampai selesai yang bisanya membutuhkan waktu kurang lebih 10 – 15 menit, tergantung dengan server yang kita gunakan.&lt;/p&gt;
+
+&lt;p&gt;Berikutnya, silakan menambahkan repository epel dengan cara menjalankan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install epel-release -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila sudah, selanjutnya Anda dapat memasang atau install webserver apache Anda dengan menjalankan satu baris perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install httpd -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tunggu proses instalasi selesai, jika sudah silakan start dan enable lalu lihat status webserver apache dengan cara berikut, fungsi enable disini berfungsi agar pada saat server mengalami reboot atau restart webserver kita tetap jalan atau running, berikut perintahnya :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# systemctl start httpd.service
+[root@srv-hamim01 ~]# systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Rab 2019-02-06 18:48:50 WIB; 7s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 32734 (httpd)
+   Status: &amp;quot;Processing requests...&amp;quot;
+   CGroup: /system.slice/httpd.service
+           ├─32734 /usr/sbin/httpd -DFOREGROUND
+           ├─32735 /usr/sbin/httpd -DFOREGROUND
+           ├─32736 /usr/sbin/httpd -DFOREGROUND
+           ├─32737 /usr/sbin/httpd -DFOREGROUND
+           ├─32738 /usr/sbin/httpd -DFOREGROUND
+           └─32739 /usr/sbin/httpd -DFOREGROUND
+
+Peb 06 18:48:50 srv-hamim01.localhost systemd[1]: Starting The Apache HTTP Server...
+Peb 06 18:48:50 srv-hamim01.localhost systemd[1]: Started The Apache HTTP Server.
+[root@srv-hamim01 ~]# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila webserver apache kita telah running dengan normal, silakan akses IP server Anda atau domain yang telah terpointing ke IP server Anda untuk memastikan apakah web server telah berjalan dengan normal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar diatas merupakan gambar atau tampilan default webserver apache di CentOS 7. Untuk testing kita dapat membuat file index.html di direktori /var/www/html/ seperti berikut untuk script sederhana file index.html-nya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke, jika sudah silakan akses kembali IP atau domain Anda, maka akan tampil file index.html yang baru saja Anda buat.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk melihat versi webserver apache yang kita gunakan dapat menggunkaan 2 perintah berikut diantaranya :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@srv-hamim01 ~]# apachectl -v
+Server version: Apache/2.4.6 (CentOS)
+Server built: Nov 5 2018 01:47:09
+[root@srv-hamim01 ~]#
+
+Atau
+
+[root@srv-hamim01 ~]# rpm -q httpd
+httpd-2.4.6-88.el7.centos.x86_64
+[root@srv-hamim01 ~]#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Itulah cara singkat untuk memasang atau install webserver apache di CentOS 7.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mengenal Apa itu Web Server</title>
+      <link>http://nurhamim.net/2019/centos11/</link>
+      <pubDate>Sat, 06 Jul 2019 09:33:59 +0700</pubDate>
+      
+      <guid>http://nurhamim.net/2019/centos11/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/webserver/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hai kawan – kawan, kalau sebelumnya saya share mengenai Hosting dan yang lainnya, sepertinya kurang greget yaa, nah kali ini saya akan share mengenai web server, apasih itu web server ?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Web server&lt;/strong&gt; adalah perangkat lunak yang memberikan layanan atau service kepada client untuk menerima request HTTP maupun HTTPS dari client yang dikenal. Setelah itu, web server akan mengirimkan request yang diminta oleh client dalam bentuk halaman web, yang secara umum
+berbentuk dokumen HTML.&lt;/p&gt;
+
+&lt;p&gt;Fungsi utama dari sebuah web server adalah memproses berkas-berkas
+yang diminta oleh klien dan kemudian memberikan respon berupa halaman website yang terdiri dari teks, gambar, video, dokumen, dan sebagainya.&lt;/p&gt;
+
+&lt;h3 id=&#34;jenis-jenis-web-server&#34;&gt;Jenis – Jenis Web Server&lt;/h3&gt;
+
+&lt;p&gt;Jenis-jenis web server antara lain Apache, Nginx, Lightspeed, IIS dan lainnya. Berikut ini kami akan sedikit berbagi pengertian dan kelebihan dari web server Apache dan Nginx dimana ke 2 webserver ini sangat sering dan banyak digunakan&lt;/p&gt;
+
+&lt;h4 id=&#34;web-server-apache&#34;&gt;Web Server Apache&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/webserver/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apache merupakan server web yang dapat di jalankan di berbagai sistim operasi yang berbeda seperti Unix, BSD, Linux, Windows dan Novell Netware yang bertugas untuk melayani fasilitas web dengan menggunakan protocol http. Apache bersifat open source, yang artinya dapat digunakan secara bebas oleh semua pengguna.&lt;/p&gt;
+
+&lt;p&gt;Web server Apache akan bekerja jika pengguna atau user meminta atau request melalui protocol http:// untuk membuka suatu halaman. Apache akan menjawab request yang diminta oleh pengguna kemudian akan di proses oleh Apache sampai menampilkan sebuah halaman yang diminta atau yang di minta&lt;/p&gt;
+
+&lt;h4 id=&#34;kelebihan-web-server-apache&#34;&gt;Kelebihan Web Server Apache :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Freeware (software gratis)&lt;/li&gt;
+&lt;li&gt;Mudah di install&lt;/li&gt;
+&lt;li&gt;Mampu beroperasi pada berbagai platform sistem operasi&lt;/li&gt;
+&lt;li&gt;Mudah mengkonfigurasinya&lt;/li&gt;
+&lt;li&gt;Menyediakan feature untuk multihomed dan virtual server .&lt;/li&gt;
+&lt;li&gt;Lebih aman karena memiliki level-level pengamanan&lt;/li&gt;
+&lt;li&gt;Mendukung transaksi yang aman ( secure transaction ) menggunakan SSL ( Secure Socket Layer ).&lt;/li&gt;
+&lt;li&gt;Mempunyai dukungan teknis melalui web.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;web-server-nginx&#34;&gt;Web Server NGINX&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/webserver/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nginx adalah sebuah server HTTP dan reverse proxy bebas berbasis open-source yang berkemampuan tinggi, juga dapat digunakan sebagai server proxy IMAP/POP3.&lt;/p&gt;
+
+&lt;p&gt;Nginx terkenal karena performanya yang tinggi, stabil, memiliki banyak fitur, mudah dikonfigur, dan menggunakan hanya sedikit sumberdaya pada server. Nginx adalah salah satu dari sebagian kecil perangkat lunak untuk server yang diciptakan untuk mengatasi Problem C10K.&lt;/p&gt;
+
+&lt;h4 id=&#34;kelebihan-web-server-nginx&#34;&gt;Kelebihan Web Server Nginx :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Opensource.&lt;/li&gt;
+&lt;li&gt;Performa yang tinggi dan stabil serta memiliki banyak fitur.&lt;/li&gt;
+&lt;li&gt;Konfigurasi yang cukup mudah.&lt;/li&gt;
+&lt;li&gt;Menggunakan sedikit sumber daya.&lt;/li&gt;
+&lt;li&gt;Cenderung lebih kuat untuk hostingan banyak dibanding Litespeed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Oke, itulah sedikit pengenalan mengenai webserver, semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Tips Shortcuts Di Linux</title>
@@ -167,642 +1791,6 @@ Ctrl + J : Digunakan untuk menambah tab ke kanan masih dalam 1 screen&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Ebook Linux&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Memulai Dengan Linux</title>
-      <link>http://nurhamim.net/2019/centos7/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:15 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos7/</guid>
-      <description>&lt;p&gt;Hai guyss, pada kesempatan kali ini saya akan sharing tentang LINUX, dan sesuai dengan judul tema pada kali ini nantinya kita akan mempelajari tentang apa itu Linux. Nah sebelum itu saya ingin cerita terlebih dahulu tentang pertama kali saya menggunakan linux hehehehe 🙂&lt;/p&gt;
-
-&lt;p&gt;Pada mulanya saya pribadi kenal Linux itu pada saat saya duduk di bangku SMK kelas 2, ya cuma sekedar tau saja hehehehe. Alhamdulillah-nya saat kelas 3 SMK saya ditugaskan untuk melaksanakan PKL (Praktek Kerja Lapangan), pada saat itu saya PKL di BLC Telkom Klaten yang berada di kota klaten Jawa tengah.&lt;/p&gt;
-
-&lt;p&gt;Nah di BLC inilah saya mengenal lebih jauh tentang linux, bahkan di BLC hukumnya wajib bagi semua siswa PKL memakai Linux lo. Awalnya sih lumayan bingung menggunakan linux, karena taunya cuma windows saja pada saat SMK kelas 1 – 2 hehehhe. Akhirnya lama – kelamaan ternyata sangat enak sekali menggunakan Linux bahkan sekarang sampai jatuh cinta pada linux #Asyekk wkwkwk alhamdulillah sampai sekarang masih istiqomah menggunakan Linux.&lt;/p&gt;
-
-&lt;p&gt;Linux itu menurut saya salah satu sistem operasi yang keren pakai (banget), udah free/ bebas lagi kurang apa coba, nikmat dah pokoknya pakai linux. Dengan linux saja dapat berkembang dan berfikir intinya nie otak gerak mikirin linux itu enak banget. Intinya linux tak seinstan mie goreng #ehh tak seinstan windows maksudnya, kenapa demikian ?&lt;/p&gt;
-
-&lt;p&gt;Salah satu contoh yang sederhana kalau di linux kita mau install aplikasi tinggal menjalankan sourcode atau perintah di terminal, atau bisa juga installasi langsung menggunakan paket yang telah disediakan. Beda dengan windows mah terlalu enak #ehh tinggal klak klik klak klik jadi lo, beuh, mantull Dah 🙁&lt;/p&gt;
-
-&lt;p&gt;Aneh nya kebanyakan orang banyak yang beranggapan dan bilang kalau linux itu susah, padahal menurut saya pribadi linux itu yang paling enak dan mantap untuk digunakan. Ya intinya happy banget menggunakan Linux Guyss. Oke langsung ke tema saja ya guyss,&lt;/p&gt;
-
-&lt;p&gt;Tau nggak sih apa itu Linux ?&lt;/p&gt;
-
-&lt;p&gt;Pada cerita sebelumnya saya banyak sekali bilang kata (linux) apa sih itu linux ? kok bisa – bisanya bilang enak emang gimana rasanya hihihihih. Jadi Linux itu sistem operasi, sama sepertihalnya windows, perbedaan yang mendasar windows itu bersifat closed sorce atau komersial atau berbayar (membeli license), sedangkan linux itu Free (bebas), bebas dalam artian bisa menjalankan program, mempelajari sourcode program yang ada di linuxnya sendiri, bahkan kita juga dapat mendistribusikan ulang lo guyss, bukan hanya itu guyss kita juga dapat meningkatkan program dan mempublikasikannya secara Free (bebas), beuh mantull kan guyss.&lt;/p&gt;
-
-&lt;p&gt;Nah pada tulisan kali ini saya tidak akan membahas detail tentang sejarah dari linux sendiri yaa, (banyak guyss wkwk) mending baca secara mandiri ya pada tautan berikut :&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://id.wikipedia.org/wiki/Linux&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Sejarah linux Wikipedia&lt;/a&gt;  or &lt;a href=&#34;https://www.belajarlinux.org/belajar-linux-untuk-pemula/sejarah-perkembangan-linux-dari-masa-ke-masa/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Belajar Linux Dot ORG&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Di Linux itu berbeda dengan sistem operasi yang lain guys, dengan kebebasannya maka, sangat banyak orang membuat atau mendistribusikan varian – varian linux yang biasanya dikenal dengan Distro (Distribution Sistem Operasi),&lt;/p&gt;
-
-&lt;p&gt;Ada 3 varian linux yang sangat populer digunakan yaitu&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Debian&lt;/li&gt;
-&lt;li&gt;RedHat&lt;/li&gt;
-&lt;li&gt;Slackware&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/linux/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah dari varian distro di atas kemudia linux berkembang atau mempunyai banyak turunan di setiap variannya. Lihat pada contoh gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/linux/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah gambar diatas sangat jelas sekali yaa, contohnya saja yang paling banyak orang gunakan kalau Varian Distro Debian turunannya ada Ubuntu , Linux Mint dll . Sedangkan RedHat  ada CentOS dan Fedora dan sebenarnya masih banyak lagi distro – distro linux lainnya teman – teman dapat mengetahui berbagai macam distro linux pada tautan berikut : &lt;a href=&#34;https://distrowatch.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;DISTROWATCH&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke mungkin cukup sekian untuk pemahaman singkat mengenai Linux yaa, semoga bermanfaat.&lt;/p&gt;
-
-&lt;p&gt;Referensi :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Google.com&lt;/li&gt;
-&lt;li&gt;www.belajarlinux.org&lt;/li&gt;
-&lt;li&gt;Ebook Sistem Operasi Linux.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Mengamankan SSH menggunakan Fail2ban</title>
-      <link>http://nurhamim.net/2019/centos6/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos6/</guid>
-      <description>&lt;p&gt;Mengamankan sebuah service yang berada di server itu amatlah penting, apalagi server kita public dan siapa saja dapat mengaksesnya, dan yang paling rentan dalam isu hacking atau brutforce attack di VPS (Virtual Private Server) yaitu service ssh. Nah bagaimana cara mengamankan service ssh tersebut ?&lt;/p&gt;
-
-&lt;p&gt;Sangat banyak cara yang dapat dilakukan untuk mengamankan ssh, salah satunya pada tutorial kali ini kita akan mengamankan service ssh dengan menggunakan aplikasi yang cukup powerfull yaitu Fail2ban . Namun sebelum lanjut lebih jauh mengenai tutorial kali ini, mari kita berkenalan terlebih dahulu tentang apa sih itu Fail2ban ?&lt;/p&gt;
-
-&lt;p&gt;Fail2ban merupakan aplikasi Open Source (bebas) yang ditulis menggunakan bahasa python. Fail2ban dapat digunakan untuk mengamankan service yang berada di Server VPS dari serangan brutforce atau DDoS attack di Linux&lt;/p&gt;
-
-&lt;p&gt;Berikut ini merupakan skema dari cara kerja Fail2ban  :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar diatas mengibaratkan adanya seorang attacker yang sedang melakukan atau ingin melakukan serangan berupa brutforce password ssh VPS, namun sebelum si attacker melakukan serangan ke VPS maka ada di pengamanan dari Fail2ban yang berada di tengah – tengahnya&lt;/p&gt;
-
-&lt;p&gt;Fail2ban menetapkan berbagai rule untuk tembok keamanannya, dengan begitu, serangan tersebut di saring terlebih dahulu, jika memang serangan tersebut milik pribadi (pemilik VPS) yang tidak terindikasi abuse brutforce maka proses akses ssh akan di teruskan dan sebaliknya, jika ada proses yang kurang wajar dan melanggar rules yang telah ditetapkan oleh fail2ban maka proses akses ke VPS akan di blokir (banned) .&lt;/p&gt;
-
-&lt;p&gt;Oke, itu skema dari cara kerja fail2ban, selanjutnya mari kita bahas tentang bagaimana cara installasi Fail2ban di CentOS 7&lt;/p&gt;
-
-&lt;p&gt;Pertama, silakan remote server ssh Anda terlebih dahulu, Berikut contoh login ssh ke VPS&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hamimaja@hamimaja:~$ ssh root@103.23.20.82 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada gambar diatas perhatikan kolom merah yang diberi tanda merah, sangat banyak percobaan login ke VPS kita, dengan fail2ban kita dapat meminimalisir hal tersebut.&lt;/p&gt;
-
-&lt;p&gt;Untuk melihat banyaknya percobaan gagal login tersebut Anda dapat menggunakan perintah berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 fail2ban]# grep &amp;quot;Failed password&amp;quot; /var/log/secure
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kedua, apabila Anda telah login ke VPS atau server Anda masing – masing, selanjutnya silakan update terlebih dahulu sistem operasi CentOS 7 Anda, dengan menggunakan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 ~]# yum update -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah selanjutnya, memasang repository epel di CentOS 7 dengan menjalankan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 ~]# yum install epel-release -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila telah selesai, berikutnya silakan install fail2ban dengan menjalankan baris perintah berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 ~]# yum install fail2ban -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Silakan tunggu proses instalasi fail2ban sampai selesai, Jika sudah barulah kita dapat memastikan fail2ban telah aktif dan dapat kita gunaka, berikut perintah yang dapat digunakan&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 ~]# systemctl start fail2ban
-[root@srv-hamim02 ~]# systemctl enable fail2ban
-Created symlink from /etc/systemd/system/multi-user.target.wants/fail2ban.service to /usr/lib/systemd/system/fail2ban.service.
-[root@srv-hamim02 ~]# 
-[root@srv-hamim02 ~]# systemctl status fail2ban
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke saat ini fail2ban telah berhasil di install,&lt;/p&gt;
-
-&lt;p&gt;Ketiga, selanjutnya melakukan konfigurasi untuk mengamankan ssh dari serangan brutforce misalnya, silakan copy file default fail2ban yaitu jail.conf  menjadi jail.local untuk direktorinya berada di /etc/fail2ban/ . seperti berikut contohnya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah sebelum kita lanjut ke bagaimana melakukan konfigurasinya ada baiknya kita mengetahui terlebih dahulu komponen – komponen yang wajib kita ketahui, diantaranya adalah&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Ignore IP&lt;/strong&gt; : Digunakan untuk me-whitelist IP tertentu, jadi teman – teman dapat menentukan IP mana saja yang tidak akan dan bakal di blokir (banned) sama si fail2ban, setiap penambahan IP dipisahkan dengan spasi.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Bantime&lt;/strong&gt; : Digunakan untuk menentukan lama IP attacker (penyerang) yang telah terblokir (banned), dari server apabila melanggar rule yang telah ditentukan sebelumnya. Waktu yang digunakan bantime yaitu second (detik), secara default bantime yang ditentukan yaitu 600 detik (10 menit)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Maxretry&lt;/strong&gt; : Digunakan untuk mengatur jumlah percobaan yang dapat dilakukan oleh seseorang attacker untuk melakukan brute force, sebelum IP tersebut di blokir (banned) oleh fail2ban. Secara default di CentOS 7 fail2ban akan memblokir 5 kali percobaan (fail).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Findtime&lt;/strong&gt; : Yaitu waktu yang ditentukan oleh Fail2ban apakah IP tersebut masuk dalam kategori blokir (banned) atau tidak. Hitungan yang digunakan sama dengan bantime yaitu second (detik) defaultnya 600 (10 menit)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Silakan buka konfigurasi jail.local untuk melanjutkan konfigurasinya, berikut file komponen yang disebutkan diatas yang default fail2ban&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk tutorial kali ini saya akan menggunakan skema dengan komponen, sebagai berikut :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Bantime&lt;/strong&gt; : -1&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Findtime&lt;/strong&gt; : 200&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Maxretry&lt;/strong&gt; : 3&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada penentuan komponen diatas terdapat Bantime = -1 .&lt;/p&gt;
-
-&lt;p&gt;Maksud dari -1 yaitu melakukan pemblokiran (banned) ip penyerang secara permanent.&lt;/p&gt;
-
-&lt;p&gt;Berikutnya, silakan scroll kebawah carilah rules untuk mengamankan service ssh seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar diatas merupakan jails atau rule ssh secara default dari fail2ban, untuk mengaktifkan rules tersebut Anda hanya perlu menambahkan perintah enabled = tru  seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah, silakan simpan konfigurasinya&lt;/p&gt;
-
-&lt;p&gt;Keempat, silakan reload dan lihat kembali status service fail2ban Anda menggunakan perinah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 fail2ban]# systemctl reload fail2ban
-[root@srv-hamim02 fail2ban]# systemctl status fail2ban
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk memastikan apakah jail ssh kita telah Aktif dapat dilakukan dengan cara menjalankan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 fail2ban]# fail2ban-client status 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kelima, berikutnya mari kita mencoba melakukan pengetesan dengan cara logn ke server menggunakan ssh dengan menginputkan pasword yang salah,&lt;/p&gt;
-
-&lt;p&gt;Sebelumnya saya mengisikan maxtery = 3 yang artinya apabila 3 kali login ssh gagal maka IP saya akan di baca oleh rule si fail2ban dan akan di blokir (banned)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/14.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah untuk melihat ip mana yang sedang melakukan percobaan login ke server lebih dari 3 kali dan IP tersebut ke banned oleh fail2ban dapat dilihat dengan menjalankan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 fail2ban]# fail2ban-client status sshd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila Anda ingin melakukan unbanned ip terhadap ip yang telah ke banned dapat dilakukan dengan menjalankan perintah&lt;/p&gt;
-
-&lt;p&gt;[root@srv-hamim02 fail2ban]# fail2ban-client set sshd unbanip 10.10.xx.xx&lt;/p&gt;
-
-&lt;p&gt;Sedangkan untuk melihat log dari fail2ban dapat dilakukan dengan cara menjalankan baris perintah berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim02 fail2ban]# tail -f /var/log/fail2ban.log 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Itulah cara singkat dan mudah untuk mengamakan service ssh menggunakan fail2ban.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga tutorial ini bermanfaat bagi kita semua 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Alias Login SSH di Linux</title>
-      <link>http://nurhamim.net/2019/centos5/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:10 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos5/</guid>
-      <description>&lt;p&gt;Pada kesempatan kali ini topik yang akan kita bahas masih sama yaitu tentang SSH, sebelumnya kita telah mempelajari bagaimana cara melihat log di SSH.&lt;/p&gt;
-
-&lt;p&gt;Nah kali ini kita akan belajar cara bagaimana cara membuat alias atau modifikasi untuk login ssh di linux.&lt;/p&gt;
-
-&lt;p&gt;Manfaat yang didatpakan yaitu Anda dapat mempermudah akses SSH dengan menggunakana nama yang Anda inginkan tanpa perlu mengetikkan perintah &lt;strong&gt;ssh roo@IP_Adress&lt;/strong&gt; kembali.&lt;/p&gt;
-
-&lt;p&gt;Oke langsung saja yaa ke tahapan – tahapan membuat alias untuk login SSH di Linux.&lt;/p&gt;
-
-&lt;p&gt;Pertama, membuat sebuah file konfigurasi untuk meyimpan aliases ssh , di direktori &lt;strong&gt;/home/namauser/.ssh/&lt;/strong&gt; seperti berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo vim ~/.ssh/config 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kedua, isikan file config tersebut seperti pada gambar berikut :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh05/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Keterangan :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Host&lt;/strong&gt; : Nama yang ingin dipanggil atau yang ingin digunakan untuk mengakses ssh&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;User&lt;/strong&gt; : Merupakan user ssh, gambar diatas menggunakan root . Untuk user bersifat bebas menyesuaikan dengan user ssh  Anda.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt; : Merupakan alamat dari server yang ingin kita remote&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Port&lt;/strong&gt; : Isikan port ssh Anda.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IdentityFile&lt;/strong&gt; : sama seperti port, namun disini digunakan apabila Anda menggunakan ssh key.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Apabila Anda telah membuat konfigurasinya, silakan simpan konfigurasi tersebut lalu coba akses ssh Anda menggunakan Host . Berikut hasilnya :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh05/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah cara singkat bagi kita untuk menggunakan ssh secara praktis.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Melihat Log SSH</title>
-      <link>http://nurhamim.net/2019/centos4/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:08 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos4/</guid>
-      <description>&lt;p&gt;Pada tutorial kali ini kita akan mempelajari bagaimana sih cara mengetahui log dari ssh itu sendiri, btw log ini sangat penting loh 🙂 .&lt;/p&gt;
-
-&lt;p&gt;Dengan adanya log kita dapat melihat dan mengetahui siapa saja sih yang telah berhasil login/ masuk ke server kita dengan menggunakan ssh. Disini saya menggunakan sistem operasi CentOS 7 ya.&lt;/p&gt;
-
-&lt;p&gt;Berikut langkah – langkahnya :&lt;/p&gt;
-
-&lt;p&gt;Pertama, seperti biasanya silakan remote server terlebih dahulu menggunakan ssh .&lt;/p&gt;
-
-&lt;p&gt;Kedua, jalankan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# tail -15 /var/log/secure
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perintah diatas akan menampilkan 15 baris catatan ototentikasi yang terbaru, contohnya pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh04/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk mengetahui siapa saja yang telah gagal login bisa menggunakan perintah grep seperti berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~] # grep “Failed” /var/log/secure
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka Anda akan melihat siapa saja dan dari IP mana yang telah mencoba login melalui ssh&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh04/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk mengetahui lebih detail informasi yang gagal login dapat menggunakan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# grep “authentication failure” /var/log/secure
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka Anda akan melihat secara ditail IP beserta username yang digunakan untuk mencoba login ke server kita melalui ssh&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh04/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sedangkan untuk menampilkan daftar semua alamat IP yang mencoba dan gagal masuk ke server SSH dapat dilakukan dengan cara menjalankan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# grep “Failed password” /var/log/secure | awk ‘{print $11}’ | uniq -c | sort -nr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka Hasilnya akan seperti berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh04/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke itulah tips untuk melihat sebuah log dari ssh, semoga bermanfaat dan selamat mencoba ya guys 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Mengubah Port SSH</title>
-      <link>http://nurhamim.net/2019/centos3/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:05 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos3/</guid>
-      <description>&lt;p&gt;Pada tutorial sebelumnya saya telah menyampaikan bahwa secara default ssh menggunakan port 22, nah pada tutorial kali ini kita akan mempelajari bagaimana cara untuk memodifikasi atau mengubah port default ssh tersebut.&lt;/p&gt;
-
-&lt;p&gt;Sangat banyak manfaat yang didaptkan jika kita mengubah port default ssh salah satunya adalah melindungi service ssh kita dari serangan brutforce ssh yang sangat sering sekali terjadi.&lt;/p&gt;
-
-&lt;p&gt;Namun terdapat juga kekurangannya yaitu jikalau kita lupa port ssh yang telah kita ubah sebelumnya yaa mau nggak mau kita tidak akan bisa login ke server 🙁&lt;/p&gt;
-
-&lt;p&gt;Oke, berikut ini langkah – langkah untuk mengubah port ssh,&lt;/p&gt;
-
-&lt;p&gt;Pertama, silakan masuk/ login ke server Anda terlebih dahulu&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kedua, silakan buka konfigurasi ssh yang berada di direktori sshd_config, seperti berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# vim /etc/ssh/sshd_config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Disini kami menggunakan CentOS 7 dengan demikian untuk mengubah konfigurasinya bisa menggunakan editor vi atau vim atau bisa juga dengan nano . Jika sudah silakan cari port 22 seperti gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ubah port 22 diatas sesuai dengan keinginan Anda, misalnya disini kami menggunakan port 22222,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah silakan simpan dan silakan restart service ssh Anda dengan menggunakan perintah systemctl restart sshd.service, seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ketiga, tahap pengujian silakan remote kembali ssh Anda secara manual tanpa port apapun seperti langkah pertama, hasilnya Anda tidak akan bisa login ke server&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya, coba login kembali dengan memberikan akhiran -p [port ssh] seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh03/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat yaa 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Remote Server Menggunakan SSH Key Di Linux</title>
-      <link>http://nurhamim.net/2019/centos2/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:01 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos2/</guid>
-      <description>&lt;p&gt;Sebelumnya kita telah membahas sedikit tentang SSH, kalau sebelumnya kita setiap masuk/ login ke server harus mengisikan password agak ribet juga ya dan kurang aman sih menurut saya pribadi :).&lt;/p&gt;
-
-&lt;p&gt;Nah disini saya ada cara yang lebih aman dan mudah untuk diimplementasikan, menggunakan apa ?&lt;/p&gt;
-
-&lt;p&gt;Menggunakan SSH Key authentication, yang biasanya sering dibilang dengan ssh-copy-id, jika Anda menggunakan ssh key Anda akan mendapatkan kenyamanan dan keamanan untuk login melalui SSH karena Anda tidak perlu memasukkan password manual seperti ssh biasa (yang rawan akan kerentanan di brutforce).&lt;/p&gt;
-
-&lt;p&gt;Jika terdapat SSH Key maka disitulah ada yang namanya Private dan Public key. Public Key nantinya yang akan di upload atau yang akan dipasangkan disisi server, sedangkan Private key berada disisi host (komputer lokasl Anda), hal yang harus diperhatikan yaitu jangan pernah mengasihkan private key Anda kepada orang lain. Sedangkan SSH key nya sendiri bisa dibilang sebagai gembok dan kunci.&lt;/p&gt;
-
-&lt;p&gt;Publik key bisa dibilang sebagai gemboknya yang dapat disebar atau dipasang ke banyak lokasi, sedangkan Private key bisa dibilang sebagai kuncinya, yang namanya kunci yaa di tarok atuh jangan disebar luaskan atau disimpan sebaikmungkin yaa guyss ehehehehehehe 🙂&lt;/p&gt;
-
-&lt;p&gt;Nah berikut langkah – langkah untuk mengguankan SSH Key di Linux&lt;/p&gt;
-
-&lt;p&gt;Pertama, silakan generate key terlebih dahulu, berikut perintahnya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ssh-keygen -t rsa -b 4096 -C “info@nurhamim.net”
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah silakan masukan nama file yang digunakan untuk menyimpan key. seperti gambar berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh02/1.png&#34; alt=&#34;Generate Key&#34; title=&#34;Generate Key&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Terdapat 2 file key yang digenerate sebelumnya, diantaranya public key (.pub) dan private key .&lt;/p&gt;
-
-&lt;p&gt;Kedua, waktunya kita memasangkan atau menyimpan publik key yang telah kita generate ke server kita dengan menggunakan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ssh-copy-id root@103.23.20.82
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka akan tampak seperti pada gambar dibawah ini, dimana Anda akan diminta untuk memasukakn password server Anda&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh02/2.png&#34; alt=&#34;SSH Copy ID&#34; title=&#34;SSH Copy ID&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada langkah ini, ssh key sudah berhasil, untuk memastikannya silakan login menggunakan ssh kembali, maka Anda akan otomatis masuk ke server tanpa adanya permintaan pengisian password seperti ssh sebelumnya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh02/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selamat Mencoba semoga bermanfaat. Terima kasih 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Remote Server Menggunakan SSH di Linux</title>
-      <link>http://nurhamim.net/2019/centos1/</link>
-      <pubDate>Sat, 06 Jul 2019 04:49:43 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos1/</guid>
-      <description>&lt;p&gt;Pernahkah Anda berfikir bagaimana sih cara yang dapat digunakan untuk mengakses sebuah server ?. Atau Anda yang telah mempunyai sebuah Virtual Private Server (VPS), tetapi bingung bagaimana cara mengaksesnya ?.&lt;/p&gt;
-
-&lt;p&gt;Oke, jangan keburu bingung dulu yaa, heheheh 🙂 , sebelum itu bagi Anda yang ingin mempunyai sebuah VPS yang murah dan handa serta sangat berkualitas bangett, saya sarankan Anda menggunakan VPS-nya &lt;a href=&#34;https://cloudkilat.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CloudKilat&lt;/a&gt;, selengkapnya bisa di lihat pada tautan berikut : &lt;a href=&#34;https://cloudkilat.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;VPS CloudKilat&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke, langsung saja yaa sebenarnya terdapat cara dan aplikasi yang dapat kita gunakan untuk mengakses sebuah server, jika Anda menggunakan sistem operasi Linux, Anda dapat mengakses sebuah server VPS tersebut melalui terminal linux dengan menggunakan ssh, lalu apasih itu ssh ?&lt;/p&gt;
-
-&lt;p&gt;Menurut &lt;a href=&#34;https://en.wikipedia.org/wiki/Secure_Shell&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;wikipedia&lt;/a&gt; ssh adalah sebuah protokol jaringan yang aman serta berjalan di atas TCP/IP layer yang menggunakan port 22.&lt;/p&gt;
-
-&lt;p&gt;SSH sendiri tidak berjalan hanya di sistem operasi linux saja, ssh sekarang juga dapat dijalankan di sistem operasi sepertihalnya windows atau macos.&lt;/p&gt;
-
-&lt;p&gt;Selain itu saat ini sangat banyak aplikasi ssh yang berbasis GUI (Graphical User Interface), contohnya seperti Putty, Mputty dan masih banyak lagi yang lainnya.&lt;/p&gt;
-
-&lt;p&gt;Nah kali ini saya akan mencontohkan bagaimana cara remote atau mengakses sebuah server Virtual di menggunakan ssh dan terminal linux&lt;/p&gt;
-
-&lt;p&gt;Pertama, silakan akses terlebih dahulu terminal linux Anda&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh01/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kedua, silakan ketikkan perintah ssh root@IP_VPS_Anda , lalu konfirmasi authentikasi dengan mengetikkan perintah yes , dan isikan password VPS Anda seperti berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh01/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke saat ini Anda telah berhasil masuk/ login ke server VPS Anda, selamat mencoba semoga bermanfaat.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Insert Mode</title>
-      <link>http://nurhamim.net/2019/vim10/</link>
-      <pubDate>Sat, 06 Jul 2019 03:13:32 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/vim10/</guid>
-      <description>&lt;p&gt;Setelah sebelumnya kita telah membahas macam – macam tentang navigasi di Vim, saat ini kita akan berfokus kembali untuk mempelajari mode insert, pada bab awal sebelumnya kita telah mengenal tentang apa itu mode insert, jika kita ingin menulis sesuatu maka kita harus masuk ke mode insert.&lt;/p&gt;
-
-&lt;p&gt;Nah pada bab awal sebelumnya jika kita ingin masuk ke mode insert menggunakan tombol i . Ternyata ada lebih dari 1 cara untuk masuk ke mode insert di Vim selain menggunakan tombol i&lt;/p&gt;
-
-&lt;p&gt;Pertanyaannya adalah apakah harus saya mempelajari ini ?&lt;/p&gt;
-
-&lt;p&gt;Yapss menurut penulis Anda sangat bagus untuk mempelajari mode insert dikarenakan dengan mode insert  ini kita dapat menentukan kondisi – kondisi tertentu dalam kita menulis di Vim.&lt;/p&gt;
-
-&lt;p&gt;Di Vim semua cara memiliki behavior atau tingkah laku yang berbeda – beda dan pintar – pintarlah kita menggunakan cara yang mana sesuai dengan kondisi kebutuhan kita .&lt;/p&gt;
-
-&lt;p&gt;Oke mari kita akan bahas satu persatu mengenai insert mode pada tulisan berikutnya ,&lt;/p&gt;
-
-&lt;p&gt;Referensi : Ebook Vim Untuk Semua&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Navigasi ke Posisi Sebelumnya</title>
-      <link>http://nurhamim.net/2019/vim9/</link>
-      <pubDate>Sat, 06 Jul 2019 03:13:25 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/vim9/</guid>
-      <description>&lt;p&gt;Ada kalanya disaat kita ngonfig  pasti kita akan menemukan yang namanya berpindah – pindah antar baris A ke B secara terus menerus.&lt;/p&gt;
-
-&lt;p&gt;Nah hal tersebut kan dapat dilakukan dengan cara menekan tombol &lt;strong&gt;5gg&lt;/strong&gt; atau &lt;strong&gt;10gg&lt;/strong&gt; menggunakan metode key stroke , namun hal ini saat kurang efektif, dengan demikian ada cara yang lebih efektif untuk berpindah antar posisi dari A ke B, dari B ke A dan seterusnya .&lt;/p&gt;
-
-&lt;p&gt;Cara yang digunakan yaitu menggunakan tombol &lt;strong&gt;Ctrl + o&lt;/strong&gt;  dan &lt;strong&gt;Ctrl + i&lt;/strong&gt; , perbedaan dari keduaannya yaitu :&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl + o&lt;/strong&gt; : Digunakan untuk kembali ke posisi sebelumnya secara mundur (konsepnya seperti undo)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl + i&lt;/strong&gt; : Digunakan untuk kembali ke posisi semula secara maju (seperti redo)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Berikut contoh penggunaannya :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim05/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada gambar di atas anggap saja saat ini kita berada di bari ke &lt;strong&gt;1&lt;/strong&gt; untuk pindah ke baris terakhir yaitu &lt;strong&gt;13&lt;/strong&gt; tersebut bisa menggunakan metode key stroke dengan menekan tombol 12gg , nah selain itu kita juga dapat menggunakan tombol &lt;strong&gt;Ctrl + i&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim05/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah jika ingin kembali lagi ke baris &lt;strong&gt;1&lt;/strong&gt; lagi bisa menggunakan &lt;strong&gt;Ctrl + o&lt;/strong&gt; , maka hasilnya Anda akan berada di baris nomor &lt;strong&gt;1&lt;/strong&gt; kembali.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim05/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Menurut penulis navigasi kali ini lebih efisien dari pada kita menggunakan tombol &lt;strong&gt;12gg&lt;/strong&gt; atau &lt;strong&gt;1gg&lt;/strong&gt; yang bisa dibilang manual untuk prosesnya.&lt;/p&gt;
-
-&lt;p&gt;Oke cukup sekian untuk tutorial kali ini, semoga bermanfaat dan selamat mencoba 🙂&lt;/p&gt;
-
-&lt;p&gt;Referensi : Ebook Vim Untuk Semua&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Navigasi Antar Baris</title>
-      <link>http://nurhamim.net/2019/vim8/</link>
-      <pubDate>Sat, 06 Jul 2019 03:13:23 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/vim8/</guid>
-      <description>
-
-&lt;p&gt;Pada kesempatan kali ini kita akan mempelajari bagaimana cara berpindah antar baris di Vim. Di Vim istilah yang digunakan untuk berpindah kursor ke baris di Vim bisa dibilang jump .&lt;/p&gt;
-
-&lt;p&gt;Sebelum lanjut ke inti materi mari kita mencoba untuk menampilakn number layaknya editor yang lain. Untuk menampilkannya dapat dilakukan dengan cara megetikkan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;:set number
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka hasilnya akan seperi pada gambar di bawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim04/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;jump-ke-nomor-baris-tertentu&#34;&gt;Jump ke Nomor Baris Tertentu&lt;/h3&gt;
-
-&lt;p&gt;Pada navigasi salah satu teknik jump yang paling gampang. Cara penggunaannya ada 2 cara diantaranya&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Menggunakan command&lt;/li&gt;
-&lt;li&gt;Menggunakan ke stroke&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Jika berada di mode normal yang paling enak mengguanakan metode yang ke 2 , perhatikan contoh pada gambar di bawah&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim04/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada gambar di atas kursor kita berada di baris nomor 1 &lt;strong&gt;&lt;html&gt;&lt;/strong&gt; , jika ingin berpindah ke baris nomor 5 dengan menggunakan metode 1, perintah yang digunakan adalah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;: 10
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim04/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah jika kita ingin berpindah ke baris misalnya baris &lt;strong&gt;12&lt;/strong&gt; dengan menggunakan metode yang ke 2, perintah yang digunakan adalah &lt;strong&gt;12gg&lt;/strong&gt; . Maka kursor akan bepindah ke baris nomor &lt;strong&gt;12&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim04/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah sekarang misalnya di codingan atau konfig kita terdapat sangat banyak misal sampai &lt;strong&gt;150&lt;/strong&gt; baris bagaimana kita langsung jump ke akhir terakhir (end) dengan cara menekan huruf kapital &lt;strong&gt;G&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim04/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke cukup sekian mengenai berpindah antar baris di Vim, semoga dapat membantu Anda, dan selamat mencoba&lt;/p&gt;
-
-&lt;p&gt;Referensi : Ebook Vim Untuk Semua&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Navigasi ke Karakter Tertentu dalam Satu Baris</title>
-      <link>http://nurhamim.net/2019/vim7/</link>
-      <pubDate>Sat, 06 Jul 2019 03:13:20 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/vim7/</guid>
-      <description>&lt;p&gt;Sebelumnya kita telah belajar bagaiman cara berpindah ke awal dan akhir baris, nah sekarang kita akan belajar bagaimana cara berpintah ke karakter tertentu yang berada pada dalam satu baris .&lt;/p&gt;
-
-&lt;p&gt;Nah berikut ini langkah – langkahnya , perhatikan contoh 1 kalimat berikut&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;J&lt;/strong&gt;angan pernah berhenti ketika kamu masih belum ingin menyerah&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Contoh diatas kursor berada di huruf &lt;strong&gt;J&lt;/strong&gt; pada kata (Jangan) . Untuk berpindah ke huruf b pada kata (berhenti) dapat dilakukan dengan cara menekan kombinasi huruf f lalu b secara bergantian , arti dari f = find (mencari) lalu diikuti karakter yang ingin di cari. maka hasilnya akan seperti berikut&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Jangan pernah &lt;strong&gt;b&lt;/strong&gt;erhenti ketika kamu masih belum ingin menyerah&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Note : Jika tombol yang dicontohkan terdiri lebih dari satu tombol maka cara penekanannya adalah berurutan satu persatu seperti jika kita mengetik.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba , semoga bermanfaat&lt;/p&gt;
-
-&lt;p&gt;Referensi : Ebook Vim Untuk Semua&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Navigasi Awal dan Akhir Baris di Vim</title>
-      <link>http://nurhamim.net/2019/vim6/</link>
-      <pubDate>Sat, 06 Jul 2019 03:13:17 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/vim6/</guid>
-      <description>&lt;p&gt;Sebelumnya kita telah bermain dan membahas bagaimana cara berpindah antar kata di Vim, nah pada navigasi ini kita akan belajar memindahkan kursor yang berada di awal kata ke akhir baris.&lt;/p&gt;
-
-&lt;p&gt;Nah kali ini kita akan belajar bagaimana cara berpindah antar baris, perhatikan contoh dibawah ini&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;K&lt;/strong&gt;etika kamu bermimpi, jangan pernah takut untuk&lt;/p&gt;
-
-&lt;p&gt;bermimpi setinggi – tingginya karena ketika Tuhan berkehendak&lt;/p&gt;
-
-&lt;p&gt;engkau bermimpi setinggi – tingginya,&lt;/p&gt;
-
-&lt;p&gt;berarti Dia pun berkehendak bahwa kamu bisa mewujudkannya&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Contoh di atas kursor berada di huruf &lt;strong&gt;K&lt;/strong&gt; untuk langsung berpindah ke akhir kalimat yaitu huruf &lt;strong&gt;k&lt;/strong&gt; dari kata (untuk) dapat dilakukan dengan cara menekan tombol &lt;strong&gt;$&lt;/strong&gt; . hasilnya kursor akan berada di huruf &lt;strong&gt;k&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Ketika kamu bermimpi, jangan pernah takut untu&lt;strong&gt;k&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;bermimpi setinggi – tingginya karena ketika Tuhan berkehendak&lt;/p&gt;
-
-&lt;p&gt;engkau bermimpi setinggi – tingginya,&lt;/p&gt;
-
-&lt;p&gt;berarti Dia pun berkehendak bahwa kamu bisa mewujudkannya&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Sedangkan untuk berpindah ke awal bari lagi silakan tekan angka &lt;strong&gt;0&lt;/strong&gt; , maka kursor akan berada di awal , perhatikan contoh berikut&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;K&lt;/strong&gt;etika kamu bermimpi, jangan pernah takut untuk&lt;/p&gt;
-
-&lt;p&gt;bermimpi setinggi – tingginya karena ketika Tuhan berkehendak&lt;/p&gt;
-
-&lt;p&gt;engkau bermimpi setinggi – tingginya,&lt;/p&gt;
-
-&lt;p&gt;berarti Dia pun berkehendak bahwa kamu bisa mewujudkannya&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Oke cukup sekian dulu untuk tutorial singkat mengenai berpindah antar baris di Vim, selanjutnya kita akan membahas bagaimana cara berpindah ke karakter tertentu di Vim  .&lt;/p&gt;
-
-&lt;p&gt;Semoga bermanfaat, selamat mencoba&lt;/p&gt;
-
-&lt;p&gt;Referensi : Ebook Vim Untuk Semua&lt;/p&gt;
 </description>
     </item>
     

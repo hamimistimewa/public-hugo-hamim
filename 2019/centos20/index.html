@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="http://nurhamim.net/2019/centos19/" />
+  <link rel="next" href="http://nurhamim.net/2019/centos21/" />
+  <link rel="canonical" href="http://nurhamim.net/2019/centos20/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7 | Catatan Cah Ndeso :)
+       
+  </title>
+  <meta name="title" content="Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7 | Catatan Cah Ndeso :)">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7",
+    "headline" : "Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7",
+    "description" : "Pada tutorial sebelumnya kami telah menjelaskan dan membuat sebuah DNS Server mandiri menggunakan service BIND di VPS dengan sistem operasi CentOS 7.\nNah khusus tutorial kali ini kami akan membahas tentang DNS Master – Slave.\nApa sih itu DNS Master Slave ? DNS Master – Slave, kata Master (primary) artinya utama, sedangkan Slave (secondary) yang artinya yang kedua yang bisanya digunakan sebagai cadangan atau backup.\nDNS Master – Slave juga bisa dibilang pembagian node Nameserver pada DNS, dengan pembagian ini maka kita akan mempunyai sebuah backup atau cadangan sebuah record Nameserver.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 09:34:50 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 09:34:50 \x2b0700 WIB",
+    "url" : "http:\/\/nurhamim.net\/2019\/centos20\/",
+    "wordCount" : "1978",
+    "keywords" : [ "dns","CentOS 7","Linux", "Catatan Cah Ndeso :)"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://nurhamim.net">Catatan Cah Ndeso :)</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="http://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>Pada tutorial sebelumnya kami telah menjelaskan dan membuat sebuah DNS Server mandiri menggunakan service BIND di VPS dengan sistem operasi CentOS 7.</p>
+
+<p>Nah khusus tutorial kali ini kami akan membahas tentang DNS Master – Slave.</p>
+
+<h4 id="apa-sih-itu-dns-master-slave">Apa sih itu DNS Master Slave ?</h4>
+
+<p>DNS Master – Slave, kata Master (primary) artinya utama, sedangkan Slave (secondary) yang artinya yang kedua yang bisanya digunakan sebagai cadangan atau backup.</p>
+
+<p>DNS Master – Slave juga bisa dibilang pembagian node Nameserver pada DNS, dengan pembagian ini maka kita akan mempunyai sebuah backup atau cadangan sebuah record Nameserver.</p>
+
+<h4 id="apa-itu-nameserver-ns">Apa itu Nameserver (NS) ?</h4>
+
+<p>Name server merupakan database dari record – record DNS. Semua record DNS mulai dari record A, MX, TXT dan yang lainnya disimpan di Nameserver.</p>
+
+<p>Keuntungan yang didapatkan dari DNS Master Slave ini sendiri yaitu jika sewaktu – waktu server DNS Master mengalami kendala misalnya (Down) maka domain yang menggunakan Nameserver dari DNS Master – Slave tersebut tidak akan mengalami yang namanya down (tidak bisa akses domain) karena apabila server Master down domain Anda akan langsung di handle oleh server Slave yang berfungsi sebagai backup si Master. Dengan demikian domain Anda masih bisa diakses dengan normal</p>
+
+<p>Bagi Anda yang ingin mengikuti tutorial ini silakan siapkan terlebih dahulu amunisinya hehehe, diantaranya sebagai berikut :</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Bagi Anda yang ingin menggunakan sistem operasi selain CentOS 7 sangat diperbolehkan sesuai dengan keinginan Anda, nantinya Anda hanya perlu menyesuaikan konfigurasi dan zonenya saja.</p>
+
+<p>Apakah harus Server Master Mengguanakan CentOS dan Server Slave Menggunakan CentOS 7 juga ?</p>
+
+<p>Tidak, Anda dapat menggunakan Debian atau Ubuntu untuk Server Master dan Slave Anda dapat menggunakan CentOS dan sebaliknya.</p>
+
+<p>Oke langsung saja ketahapan instalasi dan kofigurasi DNS Master Slave di CentOS 7.</p>
+
+<h3 id="instalasi-dan-konfigurasi-server-master-primary">Instalasi Dan Konfigurasi Server Master (primary)</h3>
+
+<p>Pertama, silakan login ke VPS Anda masing – masing dan melakukan pembaharuan sistem terlebih dahulu dengan menjalankan perintah</p>
+
+<pre><code class="language-bash">[root@srv-master ~]# yum update -y
+</code></pre>
+
+<p>Silakan tunggu proses update sampai selesai, jika sudah selanjutnya Anda silakan install service bind dengan menjalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-master ~]# yum install bind bind-utils -y
+</code></pre>
+
+<p>Silakan tunggu proses install service bind tersebut sampai selesai.</p>
+
+<p>Kedua, melakukan konfigurasi dns master, file konfigurasinya sendiri berada di /etc/named.conf untuk membuka file konfigurasi tersebut Anda dapat menggunakan teks editor nano ataupun vim sesuai dengan keinginan Anda.</p>
+
+<pre><code class="language-bash">[root@srv-master ~]# vim /etc/named.conf 
+</code></pre>
+
+<p>Silakan menambahkan IP server Master seperti berikut</p>
+
+<pre><code class="language-bash">options {
+	listen-on port 53 { 127.0.0.1;  117.53.45.53; };
+//	#listen-on-v6 port 53 { ::1; };
+	directory 	&quot;/var/named&quot;;
+	dump-file 	&quot;/var/named/data/cache_dump.db&quot;;
+	statistics-file &quot;/var/named/data/named_stats.txt&quot;;
+	memstatistics-file &quot;/var/named/data/named_mem_stats.txt&quot;;
+	recursing-file  &quot;/var/named/data/named.recursing&quot;;
+	secroots-file   &quot;/var/named/data/named.secroots&quot;;
+</code></pre>
+
+<p>Apabila Anda ingin menambahkan caching-nameserver silakan tambahkan konfigurasi berikut</p>
+
+<pre><code class="language-bash">allow-query     { 127.0.0.1; 117.53.45.53; any; };
+allow-query-cache { 127.0.0.1; 117.53.45.53; any; };
+</code></pre>
+
+<p>Untuk keamanan agar terhindar dari indikasi abuse Flooding DNS yang pernah saya pribadi alami heheheh 🙂 dengan begitu saya akan melakukan disable recursion dns, karena dns kita tidak diperuntukkan sebagai DNS resolver sepertihalnya DNS google <strong>(8.8.8.8 , 8.8.4.4)</strong></p>
+
+<pre><code class="language-bash">*/
+recursion no;
+</code></pre>
+
+<p>Apabila recursion diatas kita yes (aktif) maka, DNS kita akan menjadi DNS resolver layaknya DNS Google (8.8.8.8 , 8.8.4.4) apabila DNS kita menjadi DNS resolver akan sangat banyak permintaan akses ke DNS kita dan banyaknya akses tersebut yang akan membuat Abuse Flooding DNS terjadi 🙂</p>
+
+<p>Selanjutnya marilah kita membuat zone untuk Master, disini saya akan membuat zone forward saja, dimana zone forward inilah yang nantinya melakukan pemetaan dari nama domain (hamim.web.id) ke alamat IP (117.53.45.53).</p>
+
+<h4 id="kenapa-tidak-membuat-zone-reverse">Kenapa tidak membuat zone reverse ?</h4>
+
+<p>Zone reverse ini kebalikannya zone forward dimana fungsi dari zone reverse yaitu untuk memetakan IP ke domain. Biasanya dibilang dengan rDNS atau PTR, jika Anda pengguna VPS dan Anda ingin membangun DNS di VPS, Anda tidak perlu membuat zone reverse ini karena yang mempunyai sebuah kewenganan untuk mengelola sebuah zone reverse hanyalah pengelola IP. Dan apabila penyedia VPS Anda mempunyai block IP sendiri maka Anda nantinya apabila membutuhkan rDNS atau PTR silakan melakukan request untuk penambahan rDNS ke penyedia Hosting atau VPS Anda masing – masing. Dan yang paling sering biasanya rDNS ini digunakan untuk setup mail server.</p>
+
+<p>Contohnya disini saya menggunakan VPS CloudKilat jadi apabila saya membutuhkan record PTR atau rDNS untuk kebutuhan mail server, saya hanya perlu request/meminta ke CloudKilat untuk membuatkan rDNS atau PTR untuk IP VPS saya.</p>
+
+<p>Berikut contoh pembuatan zone forward untuk Master</p>
+
+<pre><code class="language-bash">zone &quot;hamim.web.id&quot; IN {
+	type master;
+	file &quot;/etc/named/forward-hamim.zone&quot;;
+	allow-update { none; };
+	allow-transfer { 103.23.20.126; };
+	also-notify { 103.23.20.126; };
+	notify yes;
+	};
+</code></pre>
+
+<p>Berikut beberapa keterangan dari zone forward diatas :</p>
+
+<ul>
+<li><strong>zone</strong> : Digunakan untuk penamaan zone dari domain Anda</li>
+<li><strong>IN</strong> : Internet</li>
+<li><strong>Type</strong> : Sesuaikan dengan skema DNS Server Yang ingin Anda gunakan, jika DNS Servernya diperuntukkan untuk Master silakan isikan master jika slave silakan sisikan slave</li>
+<li><strong>File</strong> : Letak dimana database record dari domain hamim.web.id berada</li>
+<li><strong>allow-update</strong> : Digunakan untuk recursive, jika tidak diaktifkan silakan berikan keterangan none;</li>
+<li><strong>allow-transfer</strong> : Digunakan untuk melakukan transfer database record master (primary) ke server Slave. Silakan isikan IP dari Server Slave</li>
+<li><strong>also-notify dan notify yes</strong> : Digunakan untuk notifikasi setiap perubahan di sisi zone master dan akan diinformasikan ke Slave. Namun apabila tidak menggunakannya hal tersebut tidak apa – apa dikarenakan secara default bind sudah melakukan notifikasi perubahan ke host slave.</li>
+</ul>
+
+<p>Berikut contoh lengkap dari konfigurasi zone forward disisi Master</p>
+
+<pre><code class="language-bash">//
+// named.conf
+//
+// Provided by Red Hat bind package to configure the ISC BIND named(8) DNS
+// server as a caching only nameserver (as a localhost DNS resolver only).
+//
+// See /usr/share/doc/bind*/sample/ for example named configuration files.
+//
+// See the BIND Administrator's Reference Manual (ARM) for details about the
+// configuration located in /usr/share/doc/bind-{version}/Bv9ARM.html
+
+options {
+	listen-on port 53 { 127.0.0.1;  117.53.45.53; };
+//	#listen-on-v6 port 53 { ::1; };
+	directory 	&quot;/var/named&quot;;
+	dump-file 	&quot;/var/named/data/cache_dump.db&quot;;
+	statistics-file &quot;/var/named/data/named_stats.txt&quot;;
+	memstatistics-file &quot;/var/named/data/named_mem_stats.txt&quot;;
+	recursing-file  &quot;/var/named/data/named.recursing&quot;;
+	secroots-file   &quot;/var/named/data/named.secroots&quot;;
+
+	allow-query     { 127.0.0.1; 117.53.45.53; any; };
+	allow-query-cache { 127.0.0.1; 117.53.45.53; any; };
+
+	/* 
+         - If you are building an AUTHORITATIVE DNS server, do NOT enable recursion.
+         - If you are building a RECURSIVE (caching) DNS server, you need to enable 
+           recursion. 
+         - If your recursive DNS server has a public IP address, you MUST enable access 
+           control to limit queries to your legitimate users. Failing to do so will
+           cause your server to become part of large scale DNS amplification 
+           attacks. Implementing BCP38 within your network would greatly
+           reduce such attack surface 
+        */
+        recursion no;
+
+        dnssec-enable yes;
+        dnssec-validation yes;
+
+        /* Path to ISC DLV key */
+        bindkeys-file &quot;/etc/named.iscdlv.key&quot;;
+
+        managed-keys-directory &quot;/var/named/dynamic&quot;;
+
+        pid-file &quot;/run/named/named.pid&quot;;
+        session-keyfile &quot;/run/named/session.key&quot;;
+};
+
+logging {
+        channel default_debug {
+                file &quot;data/named.run&quot;;
+                severity dynamic;
+        };
+};
+
+zone &quot;hamim.web.id&quot; IN {
+	type master;
+	file &quot;/etc/named/forward-hamim.zone&quot;;
+	allow-update { none; };
+	allow-transfer { 103.23.20.126; };
+	also-notify { 103.23.20.126; };
+	notify yes;
+	};
+
+include &quot;/etc/named.rfc1912.zones&quot;;
+include &quot;/etc/named.root.key&quot;;
+</code></pre>
+
+<p>Silakan simpan konfigurasi zone forward tersebut.</p>
+
+<p>Ketiga, membuat record dns untuk domain “hamim.web.id” silakan sesuaikan letak file record yang ingin disimpan, pada pembuatan zone forward sebelumnya kita telah menentukan letaknya yaitu di direktori /etc/named/ dengan nama file forward-hamim.zone .</p>
+
+<pre><code class="language-bash">[root@srv-master ~]# vim /etc/named/forward-hamim.zone 
+</code></pre>
+
+<p>Berikut contoh record forward :</p>
+
+<pre><code class="language-bash">$TTL    86400
+@       IN      SOA             hamim.web.id. root.hamim.web.id.(
+                2019111919      ;Serial
+                3600            ;Refresh
+                1800            ;Retry
+                604800          ;Expire
+                86400           ;Minimum TTL
+)
+
+@               IN      NS      ns1.hamim.web.id.
+@               IN      NS      ns2.hamim.web.id.
+ns1             IN      A       117.53.45.53
+ns2             IN      A       103.23.20.126  
+@               IN      A       117.53.45.53
+www             IN      CNAME   hamim.web.id.
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sesuai dengan topologi sebelumnya dimana NS1.HAMIM.WEB.ID akan menggunakan IP Master (117.53.45.53) sedangkan NS2.HAMIM.WEB.ID akan menggunakan IP Slave (103.23.20.126).</p>
+
+<p>Silakan sesuaikan dengan IP VPS Anda masing – masing dan mengenai keterangan – kerangan record DNS diatas Anda dapat merujuk pada tautan berikut : <a href="https://github.com/hamimistimewa/Catatan-cahndeso/wiki/Record---Record-DNS-Server" rel="nofollow noreferrer" target="_blank">Record – Record DNS Server Yang Sering Digunakan</a></p>
+
+<p>Silakan simpan file forward tersebut.</p>
+
+<p>Berikutnya, silakan start dan enable service bind, dan pastikan semua service bind berjalan dengan normal dengan menggunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-master ~]# systemctl start named
+[root@srv-master ~]# systemctl enable named
+[root@srv-master ~]# systemctl status named
+● named.service - Berkeley Internet Name Domain (DNS)
+   Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; vendor preset: disabled)
+   Active: active (running) since Kam 2019-02-21 18:23:50 WIB; 1 day 5h ago
+ Main PID: 4483 (named)
+   CGroup: /system.slice/named.service
+           └─4483 /usr/sbin/named -u named -c /etc/named.conf
+</code></pre>
+
+<p>Oke apabila semua telah berjalan dengan sempurna, mari kita lanjut ke server Slave</p>
+
+<h3 id="instalasi-dan-konfigurasi-server-slave">Instalasi Dan Konfigurasi Server Slave</h3>
+
+<p>Untuk installasi disisi Slave tidaklah ada perubahan yang sangat signifikan dan hampir sama dengan cara install disisi Master tadi, namun perbedaannya di Slave Anda tidak perlu membuat atau nenambahkan record forward kembali, Anda hanya perlu membuat zone dengan type slave dan menentukan letak penyimpanan file dari record master.</p>
+
+<p>Silakan install service bind sepertihalnya install Master sebelumnya.</p>
+
+<p>Jika sudah, silakan melakukan konfigurasi slave di /etc/named.conf</p>
+
+<pre><code class="language-bash">[root@srv-slave ~]# vim /etc/named.conf 
+</code></pre>
+
+<p>Untuk konfigurasi silakan sesuaikan dengan konfigurasi master</p>
+
+<pre><code class="language-bash">options {
+        listen-on port 53 { 127.0.0.1;  103.23.20.126; };
+//      listen-on-v6 port 53 { none; };
+        directory       &quot;/var/named&quot;;
+        dump-file       &quot;/var/named/data/cache_dump.db&quot;;
+        statistics-file &quot;/var/named/data/named_stats.txt&quot;;
+        memstatistics-file &quot;/var/named/data/named_mem_stats.txt&quot;;
+        recursing-file  &quot;/var/named/data/named.recursing&quot;;
+        secroots-file   &quot;/var/named/data/named.secroots&quot;;
+
+        allow-query     { 127.0.0.1; 103.23.20.126; any; };
+        allow-query-cache { 127.0.0.1; 103.23.20.126; any; };
+
+        /* 
+</code></pre>
+
+<p>Berikut contoh zone forward disisi Slave :</p>
+
+<pre><code class="language-bash">zone &quot;hamim.web.id&quot; IN {
+        type slave;
+        masters { 117.53.45.53; };
+        file &quot;slaves/forward-hamim.zone&quot;;
+        masterfile-format text;
+        notify no;
+        };
+</code></pre>
+
+<p>Berikut beberapa keterangan dari zone forward diatas :</p>
+
+<ul>
+<li><strong>zone</strong> : Digunakan untuk penamaan zone dari domain Anda</li>
+<li><strong>IN</strong> : Internet</li>
+<li><strong>Type</strong> : Sesuaikan dengan skema DNS Server Yang ingin Anda gunakan, jika DNS Servernya diperuntukkan untuk Slave silakan isikan Slave jika Master silakan sisikan Master</li>
+<li><strong>masters</strong> : Silakan isikan IP Master</li>
+<li><strong>File</strong> : Letak dimana hasil backup database record dari domain hamim.web.id.</li>
+<li><strong>Masterfile-format text</strong> : Digunakan untuk menerjemahkan binari ke teks</li>
+</ul>
+
+<p>Jika sudah, silakan save konfigurasi named.conf tersebut, dan silakan start dan enable named seperti perintah yang sebelumnya.</p>
+
+<p>Hasilnya secara otomatis Anda akan mendapatkan database record untuk backup yang dikirimkan oleh si master.</p>
+
+<p>Untuk melihatnya silakan pindah direktori ke <strong>/var/named/slaves/</strong></p>
+
+<pre><code class="language-bash">[root@srv-slave ~]# cd /var/named/slaves/
+[root@srv-slave slaves]# ls
+db-06eRySfx  db-C57a5DlK  db-kIGPzEJP  db-xo4j3baV  forward-hamim.zone 
+[root@srv-slave slaves]# 
+</code></pre>
+
+<p>Oke secara otomatis akan ada file forward yang dimana itulah file backupnya</p>
+
+<p>Secara default isi dari <strong>forward-hamim.zone</strong> berbentuk binari bukan teks,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h4 id="kenapa-binari">Kenapa binari ?</h4>
+
+<p>Berdasarkan hasil dari beberapa referensi karena dari segi keamanan.</p>
+
+<p>Namun hal tersebut dapat diatasi dengan cara menambahkan <strong>masterfile-format text;</strong> di zone forward di slave.</p>
+
+<p>Harap diperhatikan apabila Anda telah menambahkan konfigurasi baru atau melakukan perubahan konfigurasi Anda wajib melakukan restart atau reload service bind dengan perintah</p>
+
+<pre><code class="language-bash">[root@srv-slave slaves]# 
+[root@srv-slave slaves]# systemctl restart named
+[root@srv-slave slaves]# cat forward-hamim.zone 
+$ORIGIN .
+$TTL 86400	; 1 day
+hamim.web.id		IN SOA	hamim.web.id. root.hamim.web.id. (
+				2019111919 ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				604800     ; expire (1 week)
+				86400      ; minimum (1 day)
+				)
+			NS	ns1.hamim.web.id.
+			NS	ns2.hamim.web.id.
+			A	117.53.45.53
+$ORIGIN hamim.web.id.
+analis			A	117.53.45.53
+beddol			A	117.53.45.53
+bowok			A	117.53.45.53
+cobacoba		A	117.53.45.53
+hai			A	103.53.45.53
+hello		        A	117.53.45.53
+mail			A	117.53.45.53
+ns1			A	117.53.45.53
+ns2			A	103.23.20.126
+Ommku			A	117.53.45.53
+www			CNAME	hamim.web.id.
+[root@srv-slave slaves]# 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Namun penambahan <strong>masterfile-format text;</strong> tidak disarankan apabila DNS Anda digunakan untuk banyak domain atau zone untuk domain.</p>
+
+<p>Dengan demikian kami sarankan Anda untuk menonaktifkan atau tidak menggunakan <strong>masterfile-format text;</strong> apabila memang nantinya membutuhkan hasil backup record barulah Anda dapat mengaktifkannya kembali.</p>
+
+<p>Berikut merupakan log slave apabila terdapat perubahan record misalnya penamabahan atau pengurunganan record contohnya record untuk subdomain dan yang lainnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Dan berikut log dari sisi Master,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada log diatas kita sangat jelas melihat <strong>peran also-notify dan notify yes;</strong></p>
+
+<p>Harap dicatat setiap menambahkan record baru di sisi Master misalnya Anda ingin menambahkan subdomain setiap menambahkan subdomain maka Anda perlu merubah <strong>Serial</strong> apabila Anda tidak merubah serial maka si Slave tidak akan melakukan perubahan apapun dan subdomain yang telah Anda tambahkan di Master tidak akan resolve ke Slave.</p>
+
+<h3 id="percobaan">PERCOBAAN</h3>
+
+<pre><code class="language-bash">NS1.HAMIM.WEB.ID : 117.53.45.53
+NS2.HAMIM.WEB.ID : 103.23.20.12
+</code></pre>
+
+<p>Sebelumnya saya telah membuat subdomain subdomainbro</p>
+
+<p>Pengecekan Domain Utama HAMIM.WEB.ID</p>
+
+<pre><code class="language-bash">hamimaja@hamimaja:~$ dig hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns1.hamim.web.id hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns2.hamim.web.id hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns1.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns2.hamim.web.id +short
+103.23.20.126
+hamimaja@hamimaja:~$
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pengecekan Sub Domain Utama SUBDOMAINBRO.HAMIM.WEB.ID</p>
+
+<pre><code class="language-bash">hamimaja@hamimaja:~$ dig subdomainbro.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns1.hamim.web.id subdomainbro.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns2.hamim.web.id subdomainbro.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns1.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns2.hamim.web.id +short
+103.23.20.126
+hamimaja@hamimaja:~$ 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sebagai tambahan apabila Anda ingin menambahkan domai baru silakan membuat zone baru untuk domain baru Anda tersebut disisi Master dan Slave.</p>
+
+<p>Selamat mencoba semoga bermanfaat 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://nurhamim.net/2019/centos20/>http://nurhamim.net/2019/centos20/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/dns/">
+                    #dns</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="http://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://nurhamim.net/2019/centos19/" class="prev" rel="prev" title="Record Record DNS Server"><i class="iconfont icon-left"></i>&nbsp;Record Record DNS Server</a>
+         
+        
+        <a href="http://nurhamim.net/2019/centos21/" class="next" rel="next" title="Instalasi WordPress Menggunakan LAMP Di CentOS 7">Instalasi WordPress Menggunakan LAMP Di CentOS 7&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
