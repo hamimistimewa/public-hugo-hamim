@@ -1,19 +1,533 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Catatan Cah Ndeso :) on Catatan Cah Ndeso :)</title>
-    <link>http://nurhamim.net/</link>
+    <link>https://nurhamim.net/</link>
     <description>Recent content in Catatan Cah Ndeso :) on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 18:34:17 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 20:49:43 +0700</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Menggunakan FTP di Cyber Panel</title>
+      <link>https://nurhamim.net/2019/panel9/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:43 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel9/</guid>
+      <description>&lt;p&gt;Baru saja saya share mengenai File Manager, nah untuk kali ini merupakan tutorial lanjutan dari file manager yaitu FTP Server di Cyber Panel&lt;/p&gt;
+
+&lt;p&gt;Apasih itu FTP ?&lt;/p&gt;
+
+&lt;p&gt;FTP (File Transfer Protokol) yang bisanya digunakan untuk mengirimkan file atau direktori dari lokal ke Server/Control Panel. FTP juga biasanya digunakan untuk manajemen file atau direktori.&lt;/p&gt;
+
+&lt;p&gt;Seperti tutorial – tutorial sebelumya untuk penggunaan fitur yang ada du Cyber Panel sangatlah mudah dan tidak serumit apa yang kira hehehehe 🙂&lt;/p&gt;
+
+&lt;p&gt;Oke langsung saja berikut cara membuat akun FTP pada Cyber Panel :&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan login ke control panel Cyber Panel Anda masing – masing&lt;/p&gt;
+
+&lt;p&gt;Kedua, masuk ke menu &lt;strong&gt;FTP &amp;gt;&amp;gt; Create FTP Account&lt;/strong&gt; lalu select website untuk memilih website yang ingin dibuatkan akun FTP. Contohnya seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ftp%20cyber%20panel/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikutnya, isikan username, password ftp untuk membuat akun FTP Anda, jika sudah silakan klik pada menu Create FTP untuk membuat akun FTPnya. Seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ftp%20cyber%20panel/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Saat ini Anda telah berhasil membuat akun FTP, untuk melihat semua akun FTP kita dapat dilakukan dengan cara masuk ke menu &lt;strong&gt;FTP &amp;gt;&amp;gt; List FTP Account&lt;/strong&gt;  . Seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ftp%20cyber%20panel/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ketiga, tahap kali ini yaitu tahap pengujian, untuk pengujiannya disini saya menggunakan FileZilla bagi Anda yang belum mempunyai aplikasi tersebut, silakan unduh dan install terlebih dahulu di laptop atau komputer Anda masing – masing pada tautan berikut : &lt;a href=&#34;https://filezilla-project.org/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://filezilla-project.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika, sudah silakan buka aplikasi filezillah Anda masing – masing, lalu isikan detail akun ftp sebagai berikut :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Host&lt;/strong&gt;: Alamat Server atau Control Panel Anda
+&lt;strong&gt;Username&lt;/strong&gt;: username ftp atau akun ftp yang Anda buat sebelumnya
+&lt;strong&gt;Password&lt;/strong&gt;: Password ftp atau password akun ftp yang Anda buat sebelumnya
+&lt;strong&gt;Port&lt;/strong&gt;: Port dari FTP yaitu 21&lt;/p&gt;
+
+&lt;p&gt;Klik Quickconnect , seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ftp%20cyber%20panel/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika berhasil, akan seperti gambar dibawah ini,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ftp%20cyber%20panel/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke, saat ini Anda telah berhasil membuat akun ftp dan juga menggunakan ftp.&lt;/p&gt;
+
+&lt;p&gt;Itulah tutorial singkat mengenai FTP di Cyber Panel, selamat mencoba dan semoga bermanfaat 🙂 .&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>File Manager di Cyber Panel</title>
+      <link>https://nurhamim.net/2019/panel8/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:41 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel8/</guid>
+      <description>&lt;p&gt;Hai guyss, saat ini saya masih ngulik tentang Cyber Panel hehehehe,&lt;/p&gt;
+
+&lt;p&gt;Cyber Panel salah satu control panel Free yang baru saja release tahun 2018 kalau nggak salah yaa heheheh. Dan pertama kali saya mencoba control panel ini, saya lumayan heran dengan fitur yang diberikan sangat lengkap soalnya 🙂 .&lt;/p&gt;
+
+&lt;p&gt;Oleh karena itu saya ingin share kembali mengeni File manager di Cyber Panel.&lt;/p&gt;
+
+&lt;p&gt;File manager ini sangat perlu dan penting, dengan adanya file manager di control panel maka, kita dapat dengan mudah untuk melakukan pengelolaan atau majamen file atau direktori pada website yang berada di control panel cyber panel.&lt;/p&gt;
+
+&lt;p&gt;Seperti biasa di control panel kece ini Cyber Panel file manager telah terinstall otomatis tidak seperti control panel yang free lainnya terkadang kita masih harus install manual file managernya agar ribet ya eheeheh.&lt;/p&gt;
+
+&lt;p&gt;Oke langsung saja ke tahapan – tahapan bagaimana cara melihat file manager di Cyber Panel.&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan login terlebih dahulu ke control panel Cyber Panel Anda masing – masing.&lt;/p&gt;
+
+&lt;p&gt;Kedua, silakan masuk ke menu &lt;strong&gt;website &amp;gt;&amp;gt; List Website &amp;gt;&amp;gt; Klik pada Lauch&lt;/strong&gt;, seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/file%20manager%20cyber%20panel/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikutnya, scroll ke bawah pada bagian File terdapat menu &lt;strong&gt;File Manager&lt;/strong&gt;, silakan klik saja&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/file%20manager%20cyber%20panel/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke berikut tampilan dari File Manager control panel Cyber Panel,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/file%20manager%20cyber%20panel/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sangat mudah kan hehehhehe simple banget loo, dan design yang elegant membuat saya sangat suka menggunakan control panel yang mantapp ini.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instalasi CMS WordPress di Cyber Panel</title>
+      <link>https://nurhamim.net/2019/panel7/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:38 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel7/</guid>
+      <description>&lt;p&gt;Hello Guyss, masih pada semangat yaa untuk belajar mengenai control panel, tutorial kali ini melanjutkan tutorial sebelumnya, dimana sebelumnya kita telah belajar bagaiamana cara membuat website di Cyber Panel .&lt;/p&gt;
+
+&lt;p&gt;Sesuai dengan judul tutorial kali  ini kita akan menginstall CMS WordPress di control panel Cyber Panel.&lt;/p&gt;
+
+&lt;p&gt;Oke, langsung saja ke langkah – langkah installasinya ya&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan login terlebih dahulu ke control panel cyber panel Anda.&lt;/p&gt;
+
+&lt;p&gt;Kedua, masuk kemenu Website &amp;gt;&amp;gt; List Website &amp;gt;&amp;gt; Klik pada menu launch , seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Scroll kebawah terdapat menu fitur untuk instalasi aplikasi, secara default Cyber panel telah menyediakan CMS WordPress, jadi Anda tinggal klik pada menu WordPress with LSCache seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya silakan mengisikan credential mulai dari title untuk wordpress Anda sampai username dan password untuk login ke admin wordpress Anda nantinya, selain itu Anda juga diminta untuk mengisikan letak direktori untuk menyimpan berkas wordpress, seperti pada gambar berikut, jika sudah diisi semua klik pada menu Install Now  untuk memulai instalasi wordpress&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/3.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggu sampai instalasi wordpress selesai, jika sudah selesai akan tampail seperti berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada langkah ini Anda telah berhasil melakukan instalasi wordpress, silakan mencoba akses domain Anda. Berikut tampilan default wordpress&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk login ke admin wordpress silakan ketikkan nama domain /wp-admin atau nama domain /wp-login contohnya : &lt;a href=&#34;https://infone.info/wp-login.php&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://infone.info/wp-login.php&lt;/a&gt; , isikan username dan password login admin wordpress Anda yang telah Anda input atau buat pada proses intalasi di atas sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika Anda berhasil login maka Anda akan diarahkan ke halam admin wordpress&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke cukup simple yaa untuk instalasi CMS WordPress di Cyber Panel, sangat banyak manfaat yang didapatkan apabila kita memasang wordpress di control panel cyber panel yang menggunakan webserver litespeed mulai dari proses yang cepat dan tersedia pula plugin chache di wordpress khusus untuk webserver litespeed.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Membuat Website di Cyber Panel</title>
+      <link>https://nurhamim.net/2019/panel6/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:36 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel6/</guid>
+      <description>&lt;p&gt;Hai guyss untuk tutorial kali ini saya akan share bagaimana cara membuat sebuah website menggunakan control panel cyber panel, tutorial ini kelanjutan dari tutorial sebelumnya yang memabahas tentang bagaimana cara menngatur DNS di Cyber Panel&lt;/p&gt;
+
+&lt;p&gt;Untuk mengikuti tutorial ini pastikan Anda telah mengatur DNS dengan benar, jika sudah mari kita bahas bagaimana cara membuat website di cyber panel&lt;/p&gt;
+
+&lt;p&gt;Pertama, login terlebih dahulu ke cyber panel Anda&lt;/p&gt;
+
+&lt;p&gt;Kedua, pilih menu &lt;strong&gt;Website &amp;gt;&amp;gt; Create Website&lt;/strong&gt; , dan isikan detailnya mulai dari pemilihan paket yang ingin digunakan, disini saya menggunakan packages default.&lt;/p&gt;
+
+&lt;p&gt;Selain itu Anda juga dapat menentukan apakah website nantinya ingin menggunakan SSL Free yang disediakan oleh Cyber Panel atau tidak, jika Anda ingin menggunakan SSL Free silakan checklist pada menu SSL yang berada di Additional Features seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggu proses pembuatan website sampai selesa&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah selesai maka Akan ada informasi seperti pada gambar berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk melihat list dari website yang telah kita buat dapat dilihat dimenu Website &amp;gt;&amp;gt; List Website  . Klik pada icon Launch  untuk melihat fitur apa saja yang dapat diinstall atau dipasangkan di website Anda nantinya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah di klik, Anda akan dimanjakan oleh tampilan fitur yang diberikan oleh Cyber panel yang sangat – sangat indah dan mudah dalam penggunaanya. Nggak ribet uyyy :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan Akses website yang telah Anda buat, seperti berikut hasilnya, website kita telah terinstall SSL Free looo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat yaa 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mengatur DNS di Cyber Panel</title>
+      <link>https://nurhamim.net/2019/panel5/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:34 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel5/</guid>
+      <description>&lt;p&gt;Tutorial kali ini merupakan kelanjutan dari tutorial – tutorial sebelumnya yaitu instalasi control panel Cyber Panel di CentOS 7.&lt;/p&gt;
+
+&lt;p&gt;Biasanya kebanyakan kalau kita telah menginstall control panel yang paling pertama kali di konfigurasi yaitu DNS, karena menurut saya DNS ini sangat penting sekali.&lt;/p&gt;
+
+&lt;p&gt;Contoh singkatnya saja kalau sebelumnya kita akses control panel panel menggunakan IP maka dengan melakukan konfigurasi DNS ini Anda dapat menggunakan nama domain Anda.&lt;/p&gt;
+
+&lt;p&gt;Selain itu Anda juga dapat mengelola domain yang Anda miliki langsung melalui control panel mulai dari penambahan record subdomain, mail, dan sebagainya.&lt;/p&gt;
+
+&lt;p&gt;Hal yang dibutuhkan dalam mengikuti tutorial kali ini yaitu domain, disini saya sebelumnya telah mempunyai domain, saya pribadi langganan domain di CloudKilat kenapa saya berlangganan domain di CloudKilat, yang pertama fitur dan Dasboardnya lengkap elegan pulaa enak dilihat dan mudah tentunya untuk digunakan.&lt;/p&gt;
+
+&lt;p&gt;Oke, mari kita lanjut ke proses konfigurasi DNS pada Cyber Panel.&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan login ke administrator kontrol panel Cyber Panel Anda.&lt;/p&gt;
+
+&lt;p&gt;Kedua, masuk ke menu &lt;strong&gt;DNS &amp;gt;&amp;gt; Create Name Server&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Disini kita akan membuat Name server. Apa fungsi dari Name server ?&lt;/p&gt;
+
+&lt;p&gt;Name server itu pusat dari record DNS yang digunakan untuk menyimpan semua record DNS.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya silakan tambahkan domain Anda, disini nama domain saya yaitu infone.info . Selain itu buat name server berikut detailnya :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;First Nameserver&lt;/strong&gt;: ns1.infone.info
+&lt;strong&gt;IP Address&lt;/strong&gt;: Alamat IP Server / Control Panel Cyber Panel
+&lt;strong&gt;Second Nameserver&lt;/strong&gt;: ns2.infone.info
+&lt;strong&gt;IP Address&lt;/strong&gt;: Alamat IP Server / Control Panel Cyber Panel&lt;/p&gt;
+
+&lt;p&gt;Jika sudah, silakan save dengan menekan tombol Create Nameserver, seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika berhasil dibuat maka akan ada informasi bahwasannya Nameserver telah berhasil di buat, seperti gambar berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjuntya, yaitu membuat Private Nameserver atau bisanya sering disebut dengan Gluer Record . Disini saya berlangganan domain di CloudKilat, bagi Anda yang berlangganan domain di CloudKilat bisa mengikuti step berikut,&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Login ke portal area CloudKilat (&lt;a href=&#34;http://portal.cloudkilat.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://portal.cloudkilat.com/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Service &amp;gt;&amp;gt; Domain &amp;gt;&amp;gt; infone.info &amp;gt;&amp;gt; Manage&lt;/li&gt;
+&lt;li&gt;Private Nameserver&lt;/li&gt;
+&lt;li&gt;Mendaftarkan Glue record dengan cara menambahkan ns1 dan ns2 ke alamat IP Server atau Control Panel Cyber Panel lalu Save Changes . Seperti pada gambar dibawah ini.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pastikan penambahan private Nameservernya berhasil, seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah, selanjutnya mengubah nameserver domain menjadi &lt;strong&gt;ns1.infone.info dan ns2.infone.info&lt;/strong&gt; .&lt;/p&gt;
+
+&lt;p&gt;Untuk mengubahnya silakan pindah ke menu &lt;strong&gt;Nameserver  &amp;gt;&amp;gt; klik pada menu Use custom nameserver (enter below) &amp;gt;&amp;gt; Isikan nameserver nya &amp;gt;&amp;gt; Changes Nameservers&lt;/strong&gt;. Seperti pada gambar dibawah ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila terdapat kendala pada saat pembuatan private nameserver domain, silakan menghubungi support CloudKilat di info@cloudkilat.com atau support@cloudkilat.com .&lt;/p&gt;
+
+&lt;p&gt;Bagi Anda yang mempunyai domain di provider lain selain CloudKilat silakan menghubungi pihak penyedia domain Anda. Untuk proses penambahan private Nameserver atau Glue Record.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya apabila perubahan NameServer telah dilakukan pada domain tersebut maka domain akan mengalami proses propagasi dan untuk proses propagasi membutuhkan waktu maksimal 48 jam. Cepat atau lambat pada proses propgasi domain bergantung dengan resolver ISP yang Anda gunakan.&lt;/p&gt;
+
+&lt;p&gt;Jika proses propagasi domain telah selesai, Anda dapat mengeceknya menggunakan command dig . Berikut contohnya :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ dig @infone.info infone.info +short
+117.53.46.27
+$ dig @ns1.infone.info infone.info +short
+117.53.46.27
+$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oke saat ini kedua nameserver telah resolve ke IP control Panel Cyber Panel. Selanjutnya Anda dapat menambahkan A record atau record DNS yang lainnya sepertihalnya MX record dan yang lainnnya melalui DNS Management Control Panel Cyber Panel di menu DNS &amp;gt;&amp;gt; Add/Delete Records . Seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk mencobanya membutikan apakah domain infone.info telah mengarah ke control panel Cyber Panel dapat dilakukan dengan cara mengakses Control Panel Cyber Panel mengguakan nama domainnya diikuti port cyber panel contohnya : &lt;strong&gt;&lt;a href=&#34;https://infone.info:8090&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://infone.info:8090&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Atau Anda dapat melakukan ping ke domain infone.info , maka hasilnya domain tersebut dapat di ping dan mengarah ke IP control Panel Plesk Panel Anda :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# ping infone.info
+PING infone.info (117.53.46.27) 56(84) bytes of data.
+64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=2 ttl=58 time=16.4 ms
+64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=3 ttl=58 time=6.62 ms
+64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=4 ttl=58 time=8.36 ms
+64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=5 ttl=58 time=7.86 ms
+64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=6 ttl=58 time=4.88 ms
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oke, saat ini konfigurasi DNS pada Cyber Panel telah berhasil, selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Reset Password Admin Cyber Panel di CentOS 7</title>
+      <link>https://nurhamim.net/2019/panel4/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:32 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel4/</guid>
+      <description>&lt;p&gt;Lupaa Pasword ???????&lt;/p&gt;
+
+&lt;p&gt;Bingung ??????&lt;/p&gt;
+
+&lt;p&gt;Jangan bingung dulu guys pasti ada solusinya kok heheheh :).&lt;/p&gt;
+
+&lt;p&gt;Sangat banyak seseorang pemula seperti saya hehehe terkadang ni kalau udah install dan udah selesai terkadang ada aja yang lupa salah satunya Password login ke Admin.&lt;/p&gt;
+
+&lt;p&gt;Untuk itu pada tutorial kali ini saya akan share bagaimana cara mengatasi lupa password admin di control panel Cyber Panel.&lt;/p&gt;
+
+&lt;p&gt;Pertama, memastikan terlebih dahulu bahwa saya belum bisa login karena lupa password, beriku contohnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/reset%20password%20cyber%20panel/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya untuk mengatasi isu tersebut silakan login ke server atau VPS Anda yang telah terinstall control panel Cyber Panel&lt;/p&gt;
+
+&lt;p&gt;Kedua, jika sudah silakan jalankan satu bari perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-panel ~]# python /usr/local/CyberCP/plogical/adminPass.py –password IsikanPasswordBaruAnda
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/reset%20password%20cyber%20panel/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah silakan coba kembali login menggunakan username admin dan password baru yang Anda buat, berikut hasilnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/reset%20password%20cyber%20panel/3.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/reset%20password%20cyber%20panel/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oke, saat ini Anda telah berhasil reset password login ke control panel cyber panel.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instalasi Cyber Panel di CentOS 7</title>
+      <link>https://nurhamim.net/2019/panel3/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:13 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel3/</guid>
+      <description>&lt;p&gt;Hai, semua saya harap teman – teman semua masih pada semangat untuk belajar dunia IT khususnya Linux yaa hehehehe :).&lt;/p&gt;
+
+&lt;p&gt;Tutorial kali ini temanya masih sama dengan postingan yang sebelumnya yaitu mengenai instalasi control panel, namun kali ini kita akan mencoba control panel Cyber Panel di CentOS 7.&lt;/p&gt;
+
+&lt;p&gt;Control Panel Cyber Panel bisa dibilang control panel yang open source (bebas) yang tergolong baru, dan sangat banyak fitur – fitur keren yang dapat kita manfaatkan untuk mengelola sebuah website.&lt;/p&gt;
+
+&lt;p&gt;Adapun fitur – fitur yang ada di cyber panel diantaranya, DNS Management, Mail, FirewallD and SpamAssassin untuk security, SSL Free, dan webserver menggunakan OpenLiteSpeed, dimana penggunaan dan cache website Anda akan terasa ringan dan cepat, terlebih apabila Anda menggunakan CMS WordPress pada control panel ini.&lt;/p&gt;
+
+&lt;p&gt;Untuk lebih detail mengenai fitur yang berada di Cyber Panel dapat dilihat disini : &lt;a href=&#34;https://cyberpanel.net/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Fitur Cyber Panel&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebelum melakukan instalasi control panel Cyber Panel pastikan sistem operasi CentOS 7 Anda bersifat Fress OS atau belum terinstall aplikasi apapun didalamnya. Oke langsung saja kita ke langkah – langkah instalasi Cyber Panel di CentOS 7 :&lt;/p&gt;
+
+&lt;p&gt;Pertama, silakan remote server atau VPS Anda terlebih dahulu menggunakan ssh ataupun yang lainnya.&lt;/p&gt;
+
+&lt;p&gt;Kedua, silakan update sistem operasi CentOS 7 Anda dengan menggunakan perintah :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-panel ~] # yum update -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan tunggu pembaharuan atau udate sistem selesai, jika sudah selanjutnya menginstall service wget nantinya digunakan untuk mengunduh file control panel cyber panelnya, seperti berikut perintahnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-panel ~] # yum install wget -y 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah, silakan unduh dan install control panel Cyber Panel dengan menjalankan 1 bari perintah berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-panel ~] # sh &amp;lt;(curl https://cyberpanel.net/install.sh || wget -O - https://cyberpanel.net/install.sh) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar di atas silakan pilih nomor untuk installasi Cyber Panel, Selanjutnya Anda akan diminta untuk memilih versi webserver OpenLiteSpeed yang ingin digunakan di control panel Cyber Panel, terdapat 2 pilihan yaiu Free dan berbayar, jika Anda ingin menggunakan yang berbayar silakan pilih nomor 2, jika Anda ingin menggunakan yang free silakan pilih yang nomor 1 seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, Anda akan diminta untuk memilih penggunaan password admin, apakah Anda ingin menggunakan password random yang nantinya akan ditentukan oleh sistem atau manual, jika random silakan tekan huruf &lt;strong&gt;r&lt;/strong&gt; .&lt;/p&gt;
+
+&lt;p&gt;Berikutnya Anda diminta untuk melakukan konfirmasinya extension php yang ingin Anda gunakan, ini bersifat opsional yaa, jika Anda tidak membutuhkan extension tersebut silakan skip saja, seperti berikut contohnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan tunggu proses instalasi sampai selesai, dimana proses instalasi membutuhkan waktu kurang lebih 15 – 40 menit. Apabila instalasi telah selesai maka Anda akan diberikan credential untuk login ke admin control panel Cyber Panel beserta credential untuk login ke admin Database, contohnya seperti pada gambar dibawah ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan akses control panel Cyber Panel Anda dengan menggunakan port 8090 . contohnya &lt;strong&gt;&lt;a href=&#34;https://IPSerever:8090&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://IPSerever:8090&lt;/a&gt;&lt;/strong&gt;, seperti pada gambar dibawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan isikan username dan password untuk login ke admin panel Anda seperti pada gambar diatas, apabila credential login telah berhasil dan benar maka Anda akan diarahkan ke dashboard admin Cyber Panel yang cukup bagus dan sangat enak dilihat heehehhee 🙂&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada step ini control panel Cyber Panel Anda telah berhasil diinstal dengan sempurna, selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instalasi CWP di CentOS 7</title>
+      <link>https://nurhamim.net/2019/panel2/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:09 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel2/</guid>
+      <description>&lt;p&gt;Mempunyai server VPS tapi nggak bisa mengelolanya, hemm jangan kebingungan dulu guyss, disini saya akan share bagaimana cara installasi control panel CWP (Control Web Panel) di sistem operasi CentOS 7 .&lt;/p&gt;
+
+&lt;p&gt;CWP (CentOS Web Panel) salah satu control panel yang powerfull yang memang dikhususkan untuk sistem operasi RHEL dan keturunannya yaitu CentOS, CWP juga dapat diinstal di CloudLinux.&lt;/p&gt;
+
+&lt;p&gt;CWP bersifat open source (free) bebas digunakan tanpa harus membeli license.&lt;/p&gt;
+
+&lt;p&gt;Fitur – Fitur yang ada di CWP juga lumayan banyak mulai dari, DNS, Mail server, Webserver, Security, dan masih banyak lagi untuk detailnya bisa lihat pada tautan berikut :&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://centos-webpanel.com/features&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Features Control Web Panel&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sedangkan untuk requirement yang dibutuhkan untuk instalasi cwp diantaranya&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Server &lt;sup&gt;32&lt;/sup&gt;&amp;frasl;&lt;sub&gt;64&lt;/sub&gt; Bit atau VPS&lt;/li&gt;
+&lt;li&gt;Ram 512MB lebih tinggi lebih baik dan direkomendasikan&lt;/li&gt;
+&lt;li&gt;Storage 10Gb lebih tinggi lebih baik dan direkomendasikan&lt;/li&gt;
+&lt;li&gt;Sistem Operasi CentOS 6.x 7.x / RedHat 6.x, 7.x / CloudLinux 6.x, 7.x&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Selanjutnya, saaya akan memeberitahukan tahapan – tahapan untuk melakukan instalasi cwp di CentOS 7. Disini saya menggunakan VPS untuk servenya.&lt;/p&gt;
+
+&lt;p&gt;Pertama, pastikan VPS Anda dalam keadaan Freesh Install /OS atau belum terinstall aplikasi apapun.&lt;/p&gt;
+
+&lt;p&gt;Kedua, silakan remote VPS Anda, jika sudah silakan update terlebih dahulu VPS CentOS 7 Anda dengan menggunakan perintah &lt;strong&gt;yum update -y&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila sistem operasi CentOS 7 Anda telah ter-update dengan sempurna selanjutnya silakan menginstall service wget yang digunakan untuk mengunduh file installer dari cwp, berikut perintahnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-panel ~] # yum install wget -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah selanjutnya menentukan direktori installasi cwp, secara default direktori cwp yaitu /usr/local/src . Silakan pindah direktori terlebih dahulu menggunakan perintah cd  , dan mengunduh file installer cwp seperti berikut perintahnya seperti berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-panel ~]# cd /usr/local/src
+[root@srv-panel src]# wget http://centos-webpanel.com/cwp-el7-latest
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah, selanjutnya Anda dapat melakukan instalasi cwp dengan menjalankan baris perintah berikut :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-panel src]# sh cwp-el7-latest
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan tunggu proses instalasi sampai selesai, waktu instalasi membutuhkan waktu kurang lebih 1 jam.&lt;/p&gt;
+
+&lt;p&gt;Apabila instalasi telah selesai Anda akan diberikan data credential untuk login ke control panel cwp Anda, seperti berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar diatas merupakan data credential untuk login ke Administrator control panel cwp beserta login ke Database MySQL Anda. Gambar diatas juga telah menjelaskan untuk login ke Administrator cwp menggunakan username root dan untuk passwordnya menggunakan password root VPS atau server Anda. Silakan akses IP VPS Anda menggunakan port 2030 (no-secure/ http) dan port 2031 (secure /https) . Seperti pada gambar berikut ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila telah berhasil maka, Anda akan diarahkan ke Dashboard Admin dari contol panel CWP seperti berikut ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini Anda telah berhasil memasang atau instalasi control panel cwp di VPS atau server Anda.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apa itu Control Panel WebHosting ?</title>
+      <link>https://nurhamim.net/2019/panel1/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:01 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel1/</guid>
+      <description>&lt;p&gt;Hai semua, pada malam hari yang cerah ini #asyekk saya akan share mengenai tentang apa sih itu control panel WebHosting ?&lt;/p&gt;
+
+&lt;p&gt;Mungkin diluar sana sudah banyak yang tau tentang control panel web hosting, namun masih banyak pula yang belum tau tentang apa itu control panel di dunia hosting.&lt;/p&gt;
+
+&lt;p&gt;Provider atau penyedia jasa Hosting bisanya menyediakan yang namanya control panel, fungsinya untuk melakukan pengelolaan sebuah website yang berbasis web base, artinya dapat diakses menggunakan web browser.&lt;/p&gt;
+
+&lt;p&gt;Dengan menggunakan control panel kita dapat mengelola sebuah website dengan mudah, pengelolaan yang dimaksud mulai dari pengelolaan domain, mebuat DNS, Mail Server, FTP dan masih banyak lagi.&lt;/p&gt;
+
+&lt;p&gt;Control panel sendiri ada banyak jenisnya, mulai dari yang berbayar sampai yang Free.&lt;/p&gt;
+
+&lt;p&gt;Berikut merupakan contoh control panel yang Berbayar dan Free yang sering atau populer digunakan di dunia perhostingan.&lt;/p&gt;
+
+&lt;p&gt;Control Panel Berbayar :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;WHM/cPanel&lt;/li&gt;
+&lt;li&gt;Plesk Panel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Control Panel Free/ Open Source :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CWP (CentOS Web Panel)&lt;/li&gt;
+&lt;li&gt;Ajenti&lt;/li&gt;
+&lt;li&gt;Cyber Panel&lt;/li&gt;
+&lt;li&gt;Webmin&lt;/li&gt;
+&lt;li&gt;Virtualmin&lt;/li&gt;
+&lt;li&gt;Webuso&lt;/li&gt;
+&lt;li&gt;Vesta CP&lt;/li&gt;
+&lt;li&gt;Sentora&lt;/li&gt;
+&lt;li&gt;GNU Panel&lt;/li&gt;
+&lt;li&gt;ISPConfig&lt;/li&gt;
+&lt;li&gt;Froxlor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dan masih banyak yang lainnya.&lt;/p&gt;
+
+&lt;p&gt;Dengan demikian apabila Anda mempunya sebuah Server VPS (Virtual Private Server) dan Anda ingin menghostingkan server VPS tersebut dapat dilakukan dengan menggunakan control panel berbayar atau free yang telah disebutkan diatas.&lt;/p&gt;
+
+&lt;p&gt;Semoga informasi ini bermanfaat bagi Anda semua 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>S3 Storage untuk Backup WordPress</title>
-      <link>http://nurhamim.net/2019/centos22/</link>
+      <link>https://nurhamim.net/2019/centos22/</link>
       <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos22/</guid>
+      <guid>https://nurhamim.net/2019/centos22/</guid>
       <description>&lt;p&gt;Pernahkan Anda mengalami kehilangan data penting pada website Anda ?&lt;/p&gt;
 
 &lt;p&gt;Terlebih bagi seorang e-commerce yang menyimpan ribuan data pelanggan yang sangat – sangat penting, dan si e-commerce menggunakan CMS WordPress untuk membuat lapak jual belinya.&lt;/p&gt;
@@ -85,10 +599,10 @@
     
     <item>
       <title>Instalasi WordPress Menggunakan LAMP Di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos21/</link>
+      <link>https://nurhamim.net/2019/centos21/</link>
       <pubDate>Sat, 06 Jul 2019 18:34:13 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos21/</guid>
+      <guid>https://nurhamim.net/2019/centos21/</guid>
       <description>&lt;p&gt;WordPress adalah salah satu CMS yang sering dan bahkan sangat banyak digunakan, semua rata – rata menggunakan WordPres mulai dari website pribadi, pendidikan (sekolah), Industri Perusahaan dan masih banyak yang lainnya.&lt;/p&gt;
 
 &lt;p&gt;Kenapa harus pakai WordPress ?&lt;/p&gt;
@@ -267,10 +781,10 @@ latest.zip
     
     <item>
       <title>Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos20/</link>
+      <link>https://nurhamim.net/2019/centos20/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:50 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos20/</guid>
+      <guid>https://nurhamim.net/2019/centos20/</guid>
       <description>
 
 &lt;p&gt;Pada tutorial sebelumnya kami telah menjelaskan dan membuat sebuah DNS Server mandiri menggunakan service BIND di VPS dengan sistem operasi CentOS 7.&lt;/p&gt;
@@ -673,10 +1187,10 @@ hamimaja@hamimaja:~$
     
     <item>
       <title>Record Record DNS Server</title>
-      <link>http://nurhamim.net/2019/centos19/</link>
+      <link>https://nurhamim.net/2019/centos19/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:38 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos19/</guid>
+      <guid>https://nurhamim.net/2019/centos19/</guid>
       <description>&lt;p&gt;Pada tutorial kali ini saya akan share mengenai record - record DNS yang sering sekali digunakan, diantaranya:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -701,10 +1215,10 @@ hamimaja@hamimaja:~$
     
     <item>
       <title>Instalasi DNS Server Di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos18/</link>
+      <link>https://nurhamim.net/2019/centos18/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:28 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos18/</guid>
+      <guid>https://nurhamim.net/2019/centos18/</guid>
       <description>
 
 &lt;p&gt;Pada kesempatan kali ini kami akan share mengenai DNS server di CentOS 7, sebelum itu mari kita bahas sedikit pengertian dari DNS server.&lt;/p&gt;
@@ -845,10 +1359,10 @@ hamimaja@hamimaja:~$
     
     <item>
       <title>Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos17/</link>
+      <link>https://nurhamim.net/2019/centos17/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos17/</guid>
+      <guid>https://nurhamim.net/2019/centos17/</guid>
       <description>&lt;p&gt;Pada tutorial tersebut kita juga dapat membuat database menggunakan mode CLI (Command Line Interface) nah untuk mempermudah Anda dalam pengelolaan Database Anda dapat menggunakan phpMyAdmin dimana phpMyAdmin sendiri berbasis Web Based.&lt;/p&gt;
 
 &lt;p&gt;Dimana yang dimaksuda database Anda dapat diakses melalui web browser dengan menggunakan phpMyAdmin.&lt;/p&gt;
@@ -910,887 +1424,6 @@ hamimaja@hamimaja:~$
 &lt;p&gt;Pada tahap ini Anda telah berhasil installasi dan konfigurasi phpmyadmin, bagaima simple kan intinya ada niat untuk belajar gans,&lt;/p&gt;
 
 &lt;p&gt;Selamat mencoba dan semoga bermanfaat bagi kita semua :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos16/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:17 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos16/</guid>
-      <description>&lt;p&gt;Tahukan Anda tentang apa itu Database ?&lt;/p&gt;
-
-&lt;p&gt;Lalu buat apa sih fungsinya ?&lt;/p&gt;
-
-&lt;p&gt;Oke jika Anda penasang tentang pengertian fungsi database, berikut ini merupakan pengertian dan fungsi dari database .&lt;/p&gt;
-
-&lt;p&gt;Database Server merupakan sebuah program komputer yang menyediakan layanan pengolahan berbasis data dan melayani komputer atau program aplikasi basis data yang menggunakan model client – server.&lt;/p&gt;
-
-&lt;p&gt;Fungsi Database Server :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Untuk menyimpan beberapa data yang bisa dilakukan dalam 1 lokasi&lt;/li&gt;
-&lt;li&gt;Penyimpanan yang aman karena fasilitas yang di server tidak ada di komputer biasa&lt;/li&gt;
-&lt;li&gt;Manajemen sistem&lt;/li&gt;
-&lt;li&gt;Mempermudah dan mecari dalam lingkup database&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Setiap client dapat mengakses secara bersamaan&lt;/p&gt;
-
-&lt;p&gt;Database server sendiri bisa dibilang cukup banyak, yang biasanya sering digunakan yaitu MySQL, MariaDB dan PostgreSQL dan yang lainnya.&lt;/p&gt;
-
-&lt;p&gt;Nah pada tutorial kali ini saya akan share bagaimana cara instalasi dan konfigurasi database MariaDB di CentOS 7.&lt;/p&gt;
-
-&lt;p&gt;Pertama, silakan akses server Anda.&lt;/p&gt;
-
-&lt;p&gt;Kedua, jalankan baris perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install mariadb-server mariadb-client -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Silakan tunggu proses instalasi sampai selesai jika sudah, selanjutnya Anda silakan start dan enable lalu melihat status dari database MariaDB telah berjalan dengan normal atau running. Fungsi enable sendiri berfunsi untuk menjalankan service secara otomatis apabila nantinya server dilakukan reboot atau restart, berikut perintah yang digunakan&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# 
-[root@srv-hamim01 ~]# systemctl start mariadb
-[root@srv-hamim01 ~]# systemctl status mariadb
-● mariadb.service - MariaDB database server
-   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; disabled; vendor preset: disabled)
-   Active: active (running) since Rab 2019-02-06 19:00:45 WIB; 14s ago
-  Process: 1473 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=0/SUCCESS)
-  Process: 1394 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
- Main PID: 1472 (mysqld_safe)
-   CGroup: /system.slice/mariadb.service
-           ├─1472 /bin/sh /usr/bin/mysqld_safe --basedir=/usr
-           └─1634 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/log/maria...
-
-Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: MySQL manual for more instructions.
-Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: Please report any problems at http://mariadb.org/jira
-Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: The latest information about MariaDB is available at http://mariadb.org/.
-Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: You can find additional information about the MySQL part at:
-Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: http://dev.mysql.com
-Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: Consider joining MariaDB&#39;s strong and vibrant community:
-Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: https://mariadb.org/get-involved/
-Peb 06 19:00:43 srv-hamim01.localhost mysqld_safe[1472]: 190206 19:00:43 mysqld_safe Logging to &#39;/var/log/mariadb/mariadb.log&#39;.
-Peb 06 19:00:43 srv-hamim01.localhost mysqld_safe[1472]: 190206 19:00:43 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
-Peb 06 19:00:45 srv-hamim01.localhost systemd[1]: Started MariaDB database server.
-[root@srv-hamim01 ~]# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikutnya, melakukan konfigurasi datatabase MariaDB, berikut perintahnya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# 
-[root@srv-hamim01 ~]# mysql_secure_installation 
-
-NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
-      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
-
-In order to log into MariaDB to secure it, we&#39;ll need the current
-password for the root user.  If you&#39;ve just installed MariaDB, and
-you haven&#39;t set the root password yet, the password will be blank,
-so you should just press enter here.
-
-Enter current password for root (enter for none): 
-OK, successfully used password, moving on...
-
-Setting the root password ensures that nobody can log into the MariaDB
-root user without the proper authorisation.
-
-Set root password? [Y/n] Y
-New password: ISIKAN_PASSWORD_ANDA
-Re-enter new password: ISIKAN_PASSWORD_ANDA
-Password updated successfully!
-Reloading privilege tables..
- ... Success!
-
-
-By default, a MariaDB installation has an anonymous user, allowing anyone
-to log into MariaDB without having to have a user account created for
-them.  This is intended only for testing, and to make the installation
-go a bit smoother.  You should remove them before moving into a
-production environment.
-
-Remove anonymous users? [Y/n] Y
- ... Success!
-
-Normally, root should only be allowed to connect from &#39;localhost&#39;.  This
-ensures that someone cannot guess at the root password from the network.
-
-Disallow root login remotely? [Y/n] Y
- ... Success!
-
-By default, MariaDB comes with a database named &#39;test&#39; that anyone can
-access.  This is also intended only for testing, and should be removed
-before moving into a production environment.
-
-Remove test database and access to it? [Y/n] Y
- - Dropping test database...
- ... Success!
- - Removing privileges on test database...
- ... Success!
-
-Reloading the privilege tables will ensure that all changes made so far
-will take effect immediately.
-
-Reload privilege tables now? [Y/n] Y
- ... Success!
-
-Cleaning up...
-
-All done!  If you&#39;ve completed all of the above steps, your MariaDB
-installation should now be secure.
-
-Thanks for using MariaDB!
-[root@srv-hamim01 ~]# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila Anda telah melakukan konfigurasi, selanjutnya mari kita coba login ke database MariaDB Anda lalu mencoba membuat database baru dengan menggunakan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# 
-[root@srv-hamim01 ~]# mysql -u root -p
-Enter password: ISIKAN_PASSWORD_DATABASE_ANDA
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 10
-Server version: 5.5.60-MariaDB MariaDB Server
-
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-
-Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
-
-MariaDB [(none)]&amp;gt; create database Hai;
-Query OK, 1 row affected (0.00 sec)
-
-MariaDB [(none)]&amp;gt; show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| Hai                |
-| mysql              |
-| performance_schema |
-+--------------------+
-4 rows in set (0.00 sec)
-
-MariaDB [(none)]&amp;gt; quit
-Bye
-[root@srv-hamim01 ~]#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke, itulah cara untuk menginstall dan melakukan konfigurasi database MariaDB di sistem operasi CentOS 7.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂 .&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Instalasi PHP 7 di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos15/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos15/</guid>
-      <description>
-
-&lt;p&gt;Pada tutorial kali ini saya akan share bagaimana cara instalasi php 7 mulai dari php 7.1, 7.2 dan 7.3 . Dengan demikian Anda dapat memilih php versi berapa yang ingin Anda gunakan.&lt;/p&gt;
-
-&lt;p&gt;Oke langsung saja yaa ke tahapan – tahapannya :&lt;/p&gt;
-
-&lt;p&gt;Pertama, pastikan Anda telah menginstall webserver apache atau nginx, jika Anda menggunakan apache silakan merujuk pada tautan berikut Instalasi Webserver Apache di CentOS 7 pada tutorial sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Kedua, pastikan Anda telah menginstall atau memasang repository epel, berikut perintahnya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install epel-release yum-utils
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah, silakan installa paket manager untuk php 7 dengan cara menjalankan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Apabila sudah selesai, berikutnya Anda tinggal memilih ingin menginstall php 7.1, 7.2 atau 7.3 .&lt;/p&gt;
-
-&lt;p&gt;Berikut langkah – langkah untuk menginstall masing – masing versi php tersebut.&lt;/p&gt;
-
-&lt;h3 id=&#34;php-version-7-1&#34;&gt;PHP Version 7.1&lt;/h3&gt;
-
-&lt;p&gt;Mengaktifkan repo paket manager repository remi untuk php version 7.1 dengan menggunakan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum-config-manager –enable remi-php71
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah selanjutnya Anda dapat menginstall module php 7.1 yang Anda inginkan, contohnya seperti berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysql -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah silakan lihat versi php Anda, maka php yang Anda gunakan saat ini yaitu php version 7.1 . Untuk melihat versi php dapat digunakan dengan menggunakan perintah berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
-PHP 7.1.26 (cli) (built: Jan 9 2019 08:02:33) ( NTS )
-Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
-with Zend OPcache v7.1.26, Copyright (c) 1999-2018, by Zend Technologies
-[root@srv-hamim01 ~]#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Selanjutnya, silakan membuat file &lt;strong&gt;info.php&lt;/strong&gt; di direktori &lt;strong&gt;/var/www/html&lt;/strong&gt; , untuk memastikan apakah php kita telah berubah dengan benar . Isikan file info.php tersebut dengan script berikut :&lt;/p&gt;
-
-&lt;p&gt;Jika sudah silakan restart web server yang Anda gunakan disini saya mengguanakan web server apache, untuk apache bisa dengan cara menjalankan perintah systemctl restart httpd .&lt;/p&gt;
-
-&lt;p&gt;Silakan akses IP server beserta /info.php, dengan demikian Anda dapat melihat modul php apa saja yang telah Anda install, seperti gambar berikut ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%207/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;php-version-7-2&#34;&gt;PHP Version 7.2&lt;/h3&gt;
-
-&lt;p&gt;Untuk installasi php version 7.2 tidak ada perbedaan sama saja dengan cara installasi php version 7.1 sebelumnya hanya saja disini kita hanya mengaktifkan saja paket manager repo remi untuk php versi 7.2 dengan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum-config-manager –enable remi-php72
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah, berikutnya Anda dapat menginstall modul php versi 7.2 yang Anda inginkan, seperti berikut contohnya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah, silakan cek versi php Anda dengan menggunakan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
-PHP 7.2.15 (cli) (built: Feb 5 2019 19:50:47) ( NTS )
-Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
-with Zend OPcache v7.2.15, Copyright (c) 1999-2018, by Zend Technologies
-[root@srv-hamim01 ~]#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk mengetahui module php apa saja yang telah diinstall silakan membuat file info.php dan melakukan restart web server yang Anda gunakan seperti langkah pada PHP Versi 1 diatas . Berikut hasilnya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%207/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;php-version-7-3&#34;&gt;PHP Version 7.3&lt;/h3&gt;
-
-&lt;p&gt;Sama seperti langkah – langkah sebelumnya untuk installasi php versi 7.3 Anda hanya perlu mengaktifkan paket manager repo remi untuk php 7.3 dengan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum-config-manager –enable remi-php73
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah silakan install modul php 7.3 yang Anda inginkan&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tunggu proses intallasi module php selesai, jika sudah selesai Anda dapat melihat versi php Anda dengan menggunakan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
-PHP 7.3.2 (cli) (built: Feb 5 2019 13:10:03) ( NTS )
-Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.3.2, Copyright (c) 1998-2018 Zend Technologies
-with Zend OPcache v7.3.2, Copyright (c) 1999-2018, by Zend Technologies
-[root@srv-hamim01 ~]#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk mengetahui module php apa saja yang telah diinstall silakan membuat file info.php dan melakukan restart web server yang Anda gunakan seperti langkah pada PHP Versi 1  dan 2 diatas . Berikut hasilnya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%207/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Okelah tips ajaib untuk installasi php versi 7 di CentOS 7 dengan mudah.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba dan semoga bermanfaat bagi kita semua 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos14/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos14/</guid>
-      <description>&lt;p&gt;Semakin hari teknologi semakin up to date sama halnya yang terjad dengan php semkin hari maka versi php juga akan update ke versi yang lebih baru, namun sangat banyak aplikasi lama yang berjalan di versi php 5.xx sedangkan saat ini banyak pula aplikasi yang meminta remondasi untuk melakukan upgrade dari 5 ke 7 salah satunya yang paling kerasa yaitu CMS WordPress dimana di versi terbaru WordPress versi PHP yang direkomendasikan yaitu versi 7.xx .&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan kali ini saya akan share bagaimana sih cara melakukan upgrade version dari php 5.6 ke 7.1 . Berikut langkah – langkahnya,&lt;/p&gt;
-
-&lt;p&gt;Pertama, seperti biasanya silakan akses server CentOS 7 Anda masing – masing.&lt;/p&gt;
-
-&lt;p&gt;Kedua, saya pastikan terlebih dahulu bahwa saya masih menggunakan php versi 5.6 dengan menggunakan peritah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
-PHP 5.6.40 (cli) (built: Jan 9 2019 12:34:16)
-Copyright (c) 1997-2016 The PHP Group
-Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
-[root@srv-hamim01 ~]#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Selanjutnya, menambah atau installasi repository epel di CentOS 7 dengan menggunakan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]#
-[root@srv-hamim01 ~]# wget -q http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-[root@srv-hamim01 ~]# wget -q https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-[root@srv-hamim01 ~]# rpm -i remi-release-7.rpm epel-release-latest-7.noarch.rpm
-package epel-release-7-11.noarch is already installed
-package remi-release-7.6-1.el7.remi.noarch is already installed
-[root@srv-hamim01 ~]#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/upgrade%20php%205.6/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikutnya, mengintal manager repository remi untuk php 7.1 dengan menjalankan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# 
-[root@srv-hamim01 ~]# yum-config-manager --enable remi-php71
-Loaded plugins: fastestmirror
-=============================================================== repo: remi-php71 ===============================================================
-[remi-php71]
-async = True
-bandwidth = 0
-base_persistdir = /var/lib/yum/repos/x86_64/7
-baseurl = 
-cache = 0
-cachedir = /var/cache/yum/x86_64/7/remi-php71
-check_config_file_age = True
-compare_providers_priority = 80
-cost = 1000
-deltarpm_metadata_percentage = 100
-deltarpm_percentage = 
-enabled = 1
-enablegroups = True
-exclude = 
-failovermethod = priority
-ftp_disable_epsv = False
-gpgcadir = /var/lib/yum/repos/x86_64/7/remi-php71/gpgcadir
-gpgcakey = 
-gpgcheck = True
-gpgdir = /var/lib/yum/repos/x86_64/7/remi-php71/gpgdir
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
-hdrdir = /var/cache/yum/x86_64/7/remi-php71/headers
-http_caching = all
-includepkgs = 
-ip_resolve = 
-keepalive = True
-keepcache = False
-mddownloadpolicy = sqlite
-mdpolicy = group:small
-mediaid = 
-metadata_expire = 21600
-metadata_expire_filter = read-only:present
-metalink = 
-minrate = 0
-mirrorlist = http://cdn.remirepo.net/enterprise/7/php71/mirror
-mirrorlist_expire = 86400
-name = Remi&#39;s PHP 7.1 RPM repository for Enterprise Linux 7 - x86_64
-old_base_cache_dir = 
-password = 
-persistdir = /var/lib/yum/repos/x86_64/7/remi-php71
-pkgdir = /var/cache/yum/x86_64/7/remi-php71/packages
-proxy = False
-proxy_dict = 
-proxy_password = 
-proxy_username = 
-repo_gpgcheck = False
-retries = 10
-skip_if_unavailable = False
-ssl_check_cert_permissions = True
-sslcacert = 
-sslclientcert = 
-sslclientkey = 
-sslverify = True
-throttle = 0
-timeout = 30.0
-ui_id = remi-php71
-ui_repoid_vars = releasever,
-   basearch
-username =
-[root@srv-hamim01 ~]# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah. silakan install php dengan menjalankan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk mengetahui versi php yang kita gunakan silakan jalankan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
-PHP 7.1.26 (cli) (built: Jan 9 2019 08:02:33) ( NTS )
-Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
-[root@srv-hamim01 ~]#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/upgrade%20php%205.6/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk menguji hasil upgrade dari php 5 ke 7, silakan restart atau reload webserver Anda disini saya menggunakan apache, berikut perintahnya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# systemctl reload httpd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Apabila Anda telah melakukan reload atau restart terhadap webserver Anda silakan akses kembali IP server beserta /info.php seperti pada gambar dibawah ini.&lt;/p&gt;
-
-&lt;p&gt;Sebagai catatan sebelumnya saya sudah membuat file info.php .&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/upgrade%20php%205.6/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke, pada tahap ini untuk upgrade php telah berhasil. Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-
-&lt;p&gt;Jika terdapat saran atau kritik mengenai tutorial ini silakan disampaikan di kolom komentar. Terima kasih 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instalasi PHP 5.6 di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos13/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:06 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos13/</guid>
-      <description>&lt;p&gt;PHP (Pemberi Harapan Palsu) ? #ehh&lt;/p&gt;
-
-&lt;p&gt;Bukan yaaa hihihiih 😀 😀 😀&lt;/p&gt;
-
-&lt;p&gt;PHP merupakan bahasa pemrograman web, yang sering dan abnyak sekali orang menggunakan pemrograman ini, terlebih bagi seorang programmer, udah makanan sehari – hari ni php heheheh 🙂 .&lt;/p&gt;
-
-&lt;p&gt;Disini saya tidak akan mejelaskan tentang detail mengenai php itu sendiri buat apa untuk detail mengenai php itu sendiri dapat langsung dilihat di tautan resminya berikut : &lt;a href=&#34;http://www.php.net/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.php.net/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Langsung saja ke pembahan yaitu installasi php di CentOS 7.&lt;/p&gt;
-
-&lt;p&gt;Pertama, silakan login ke server Anda masing – masing.&lt;/p&gt;
-
-&lt;p&gt;Kedua, silakan update sistem operasi CentOS 7 Anda dengan menjalankan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum update -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah silakan, berikutnya menambahkan atau install repositori remi di CentOS 7 dengan menjalankan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah berikutnya kita install manager untuk repositori remi di CentOS 7 dengan menggunakan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum-config-manager --enable remi-php56
-Loaded plugins: fastestmirror
-=============================================================== repo: remi-php56 ===============================================================
-[remi-php56]
-async = True
-bandwidth = 0
-base_persistdir = /var/lib/yum/repos/x86_64/7
-baseurl = 
-cache = 0
-cachedir = /var/cache/yum/x86_64/7/remi-php56
-check_config_file_age = True
-compare_providers_priority = 80
-cost = 1000
-deltarpm_metadata_percentage = 100
-deltarpm_percentage = 
-enabled = 1
-enablegroups = True
-exclude = 
-failovermethod = priority
-ftp_disable_epsv = False
-gpgcadir = /var/lib/yum/repos/x86_64/7/remi-php56/gpgcadir
-gpgcakey = 
-gpgcheck = True
-gpgdir = /var/lib/yum/repos/x86_64/7/remi-php56/gpgdir
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
-hdrdir = /var/cache/yum/x86_64/7/remi-php56/headers
-http_caching = all
-includepkgs = 
-ip_resolve = 
-keepalive = True
-keepcache = False
-mddownloadpolicy = sqlite
-mdpolicy = group:small
-mediaid = 
-metadata_expire = 21600
-metadata_expire_filter = read-only:present
-metalink = 
-minrate = 0
-mirrorlist = http://cdn.remirepo.net/enterprise/7/php56/mirror
-mirrorlist_expire = 86400
-name = Remi&#39;s PHP 5.6 RPM repository for Enterprise Linux 7 - x86_64
-old_base_cache_dir = 
-password = 
-persistdir = /var/lib/yum/repos/x86_64/7/remi-php56
-pkgdir = /var/cache/yum/x86_64/7/remi-php56/packages
-proxy = False
-proxy_dict = 
-proxy_password = 
-proxy_username = 
-repo_gpgcheck = False
-retries = 10
-skip_if_unavailable = False
-ssl_check_cert_permissions = True
-sslcacert = 
-sslclientcert = 
-sslclientkey = 
-sslverify = True
-throttle = 0
-timeout = 30.0
-ui_id = remi-php56
-ui_repoid_vars = releasever,
-   basearch
-username = 
-
-[root@srv-hamim01 ~]# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah, berikutnya install php yang dibutuhkan,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Silakan tunggu proses installasi php sampai selesai. Untuk melihat versi php yang kita gunakan dapat dilakukan dengan menggunakan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# php -v
-PHP 5.6.40 (cli) (built: Jan 9 2019 12:34:16)
-Copyright (c) 1997-2016 The PHP Group
-Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
-[root@srv-hamim01 ~]#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Berikutnya mari kita cek php apa saja yang telah kita install dengan membuat file &lt;strong&gt;info.php&lt;/strong&gt; di &lt;strong&gt;/var/www/html&lt;/strong&gt;  dengan cara berikut,&lt;/p&gt;
-
-&lt;p&gt;Pindah ke direktori /var/www/html menggunakan perintah cd .&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%205.6/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Buat script info.php seperti berikut menggunakan teks edito vim atau nano,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%205.6/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah silakan simpan file info.php tersebut, selanjutnya melakukan restart atau reload pada webserver yang Anda gunakan disini menggunakan web server apache, berikut command yang dapat Anda gunakan untuk melakukan reload tersebut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 html]# systemctl reload httpd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika sudah silakan akses IP server Anda dengan /info.php . Maka hasilnya akan seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;Pada tahap ini installasi php di CentOS 7 sudah selesai cukup mudah kan.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instalasi Webserver Apache di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos12/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:02 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos12/</guid>
-      <description>&lt;p&gt;Pada kesempatan kali ini saya akan share bagaimana cara installasi webserver apache tersebut di sistem operasi CentOS 7 .&lt;/p&gt;
-
-&lt;p&gt;Untuk instalasi webserver apache kali ini dapat Anda coba di VPS (Virtual Private Server) atau VM (Virtual Machine) lokal biasanya banyak yang menggunakan Virtual Box di Komputer atau Laptop.&lt;/p&gt;
-
-&lt;p&gt;Pertama, silakan login terlebih dahulu ke server Anda masing – masing,&lt;/p&gt;
-
-&lt;p&gt;Kedua, silakan lakukan pembaharuan atau update pada sistem operasi CentOS 7, dengan menggunakan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum update -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Silakan tunggu proses update sampai selesai yang bisanya membutuhkan waktu kurang lebih 10 – 15 menit, tergantung dengan server yang kita gunakan.&lt;/p&gt;
-
-&lt;p&gt;Berikutnya, silakan menambahkan repository epel dengan cara menjalankan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install epel-release -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila sudah, selanjutnya Anda dapat memasang atau install webserver apache Anda dengan menjalankan satu baris perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install httpd -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tunggu proses instalasi selesai, jika sudah silakan start dan enable lalu lihat status webserver apache dengan cara berikut, fungsi enable disini berfungsi agar pada saat server mengalami reboot atau restart webserver kita tetap jalan atau running, berikut perintahnya :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# systemctl start httpd.service
-[root@srv-hamim01 ~]# systemctl status httpd.service
-● httpd.service - The Apache HTTP Server
-   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
-   Active: active (running) since Rab 2019-02-06 18:48:50 WIB; 7s ago
-     Docs: man:httpd(8)
-           man:apachectl(8)
- Main PID: 32734 (httpd)
-   Status: &amp;quot;Processing requests...&amp;quot;
-   CGroup: /system.slice/httpd.service
-           ├─32734 /usr/sbin/httpd -DFOREGROUND
-           ├─32735 /usr/sbin/httpd -DFOREGROUND
-           ├─32736 /usr/sbin/httpd -DFOREGROUND
-           ├─32737 /usr/sbin/httpd -DFOREGROUND
-           ├─32738 /usr/sbin/httpd -DFOREGROUND
-           └─32739 /usr/sbin/httpd -DFOREGROUND
-
-Peb 06 18:48:50 srv-hamim01.localhost systemd[1]: Starting The Apache HTTP Server...
-Peb 06 18:48:50 srv-hamim01.localhost systemd[1]: Started The Apache HTTP Server.
-[root@srv-hamim01 ~]# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila webserver apache kita telah running dengan normal, silakan akses IP server Anda atau domain yang telah terpointing ke IP server Anda untuk memastikan apakah web server telah berjalan dengan normal.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar diatas merupakan gambar atau tampilan default webserver apache di CentOS 7. Untuk testing kita dapat membuat file index.html di direktori /var/www/html/ seperti berikut untuk script sederhana file index.html-nya.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke, jika sudah silakan akses kembali IP atau domain Anda, maka akan tampil file index.html yang baru saja Anda buat.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install%20apache/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk melihat versi webserver apache yang kita gunakan dapat menggunkaan 2 perintah berikut diantaranya :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@srv-hamim01 ~]# apachectl -v
-Server version: Apache/2.4.6 (CentOS)
-Server built: Nov 5 2018 01:47:09
-[root@srv-hamim01 ~]#
-
-Atau
-
-[root@srv-hamim01 ~]# rpm -q httpd
-httpd-2.4.6-88.el7.centos.x86_64
-[root@srv-hamim01 ~]#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Itulah cara singkat untuk memasang atau install webserver apache di CentOS 7.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Mengenal Apa itu Web Server</title>
-      <link>http://nurhamim.net/2019/centos11/</link>
-      <pubDate>Sat, 06 Jul 2019 09:33:59 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos11/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/webserver/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hai kawan – kawan, kalau sebelumnya saya share mengenai Hosting dan yang lainnya, sepertinya kurang greget yaa, nah kali ini saya akan share mengenai web server, apasih itu web server ?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Web server&lt;/strong&gt; adalah perangkat lunak yang memberikan layanan atau service kepada client untuk menerima request HTTP maupun HTTPS dari client yang dikenal. Setelah itu, web server akan mengirimkan request yang diminta oleh client dalam bentuk halaman web, yang secara umum
-berbentuk dokumen HTML.&lt;/p&gt;
-
-&lt;p&gt;Fungsi utama dari sebuah web server adalah memproses berkas-berkas
-yang diminta oleh klien dan kemudian memberikan respon berupa halaman website yang terdiri dari teks, gambar, video, dokumen, dan sebagainya.&lt;/p&gt;
-
-&lt;h3 id=&#34;jenis-jenis-web-server&#34;&gt;Jenis – Jenis Web Server&lt;/h3&gt;
-
-&lt;p&gt;Jenis-jenis web server antara lain Apache, Nginx, Lightspeed, IIS dan lainnya. Berikut ini kami akan sedikit berbagi pengertian dan kelebihan dari web server Apache dan Nginx dimana ke 2 webserver ini sangat sering dan banyak digunakan&lt;/p&gt;
-
-&lt;h4 id=&#34;web-server-apache&#34;&gt;Web Server Apache&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/webserver/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apache merupakan server web yang dapat di jalankan di berbagai sistim operasi yang berbeda seperti Unix, BSD, Linux, Windows dan Novell Netware yang bertugas untuk melayani fasilitas web dengan menggunakan protocol http. Apache bersifat open source, yang artinya dapat digunakan secara bebas oleh semua pengguna.&lt;/p&gt;
-
-&lt;p&gt;Web server Apache akan bekerja jika pengguna atau user meminta atau request melalui protocol http:// untuk membuka suatu halaman. Apache akan menjawab request yang diminta oleh pengguna kemudian akan di proses oleh Apache sampai menampilkan sebuah halaman yang diminta atau yang di minta&lt;/p&gt;
-
-&lt;h4 id=&#34;kelebihan-web-server-apache&#34;&gt;Kelebihan Web Server Apache :&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Freeware (software gratis)&lt;/li&gt;
-&lt;li&gt;Mudah di install&lt;/li&gt;
-&lt;li&gt;Mampu beroperasi pada berbagai platform sistem operasi&lt;/li&gt;
-&lt;li&gt;Mudah mengkonfigurasinya&lt;/li&gt;
-&lt;li&gt;Menyediakan feature untuk multihomed dan virtual server .&lt;/li&gt;
-&lt;li&gt;Lebih aman karena memiliki level-level pengamanan&lt;/li&gt;
-&lt;li&gt;Mendukung transaksi yang aman ( secure transaction ) menggunakan SSL ( Secure Socket Layer ).&lt;/li&gt;
-&lt;li&gt;Mempunyai dukungan teknis melalui web.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;web-server-nginx&#34;&gt;Web Server NGINX&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/webserver/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nginx adalah sebuah server HTTP dan reverse proxy bebas berbasis open-source yang berkemampuan tinggi, juga dapat digunakan sebagai server proxy IMAP/POP3.&lt;/p&gt;
-
-&lt;p&gt;Nginx terkenal karena performanya yang tinggi, stabil, memiliki banyak fitur, mudah dikonfigur, dan menggunakan hanya sedikit sumberdaya pada server. Nginx adalah salah satu dari sebagian kecil perangkat lunak untuk server yang diciptakan untuk mengatasi Problem C10K.&lt;/p&gt;
-
-&lt;h4 id=&#34;kelebihan-web-server-nginx&#34;&gt;Kelebihan Web Server Nginx :&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Opensource.&lt;/li&gt;
-&lt;li&gt;Performa yang tinggi dan stabil serta memiliki banyak fitur.&lt;/li&gt;
-&lt;li&gt;Konfigurasi yang cukup mudah.&lt;/li&gt;
-&lt;li&gt;Menggunakan sedikit sumber daya.&lt;/li&gt;
-&lt;li&gt;Cenderung lebih kuat untuk hostingan banyak dibanding Litespeed.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Oke, itulah sedikit pengenalan mengenai webserver, semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tips Shortcuts Di Linux</title>
-      <link>http://nurhamim.net/2019/centos10/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:31 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos10/</guid>
-      <description>
-
-&lt;p&gt;Pada kesempatan kali ini kita akan belajar tentang shortcuts yang berada di linux, sebelum itu apasih itu shortcuts ?&lt;/p&gt;
-
-&lt;p&gt;Shortcuts di linux salah satu tombol kombinasi yang dapat kita gunakan untuk melakukan sebuah eksekusi perintah yang kita inginkan. Contohnya apabila kita ingin membuka terminal Linux , dapat dilakukan dengan cara mengetikkan Ctrl  + T .&lt;/p&gt;
-
-&lt;p&gt;Berikut contoh – contohnya.&lt;/p&gt;
-
-&lt;h4 id=&#34;menggerakkan-cursor-di-terminal-linux&#34;&gt;Menggerakkan Cursor di Terminal Linux :&lt;/h4&gt;
-
-&lt;p&gt;Ctrl + A : Digunakan untuk berpindah ke awal perintah
-Ctrl + E : Digunakan untuk berpindah ke akhir perintah
-Ctrl + XX : Digunakan untuk memblock dan berpindah sesuai dengan letak dimana kita berada
-Alt + F : Digunakan untuk berpindah ke depan satu kata di baris saat ini Anda berada
-Alt + B : Kebalikanya dari Alt + F&lt;/p&gt;
-
-&lt;h4 id=&#34;manipulasi-text-di-terminal-linux&#34;&gt;Manipulasi Text di Terminal Linux&lt;/h4&gt;
-
-&lt;p&gt;Ctrl + U : Digunakan untuk mengubah/ cut karakter dan dimana kursor Anda berada
-Ctrl + K : Digunakan untuk memotong/ cut satu baris karakter dimana kursor Anda berada
-Ctrl + Y : Digunakan untuk paste hasil cut
-Alt + T : Digunakan untuk menukar dua kata terakhir sebelum kursor
-Alt + U : Digunakan untuk mengubah huruf kecil menjadi kapital perkata
-Alt + C : Digunakan untuk mengubah depan kata menjadi huruf kapital
-Alt + D : Digunakan untuk delete per kata
-Ctrl + T : Digunakan untuk membuka tab baru&lt;/p&gt;
-
-&lt;h4 id=&#34;riwayat-histori-akses-di-terminal-linux&#34;&gt;Riwayat/Histori Akses Di Terminal Linux&lt;/h4&gt;
-
-&lt;p&gt;Ctrl + R : Digunakan untuk melihat histori perintah sebelumnya yang pernah kita jalankan di terminal&lt;/p&gt;
-
-&lt;h4 id=&#34;kontrol-di-terminal-linux&#34;&gt;Kontrol Di Terminal Linux&lt;/h4&gt;
-
-&lt;p&gt;Ctrl + L : Digunakan untuk membersihkan screen/ layar
-Ctrl + S : Digunakan untuk menghentikan output proses yang ditampilkan di screen, tapi tidak menyebabkan proses terlebih berhenti 🙂
-Ctrl + Q : Digunakan untuk melanjutkan output proses ditampilkan di screen, untuk memberhentikannya kembali menggunakan Ctrl + S&lt;/p&gt;
-
-&lt;h4 id=&#34;spesial-karakter&#34;&gt;Spesial Karakter&lt;/h4&gt;
-
-&lt;p&gt;Ctrl + H : Digunakan untuk menambah tab ke bawah masih dalam 1 screen
-Ctrl + J : Digunakan untuk menambah tab ke kanan masih dalam 1 screen&lt;/p&gt;
-
-&lt;p&gt;Oke itulah beberapa shortcuts yang sering sekali kita gunakan dalam menggunakan linux&lt;/p&gt;
-
-&lt;p&gt;Semoga bermanfaat selamat mencoba 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>E-Book Perintah Dasar Di Linux</title>
-      <link>http://nurhamim.net/2019/centos9/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:26 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos9/</guid>
-      <description>&lt;p&gt;Sebelumnya kita telah mempelajari tentang apa itu linux dan struktur direktori yang berada di linux, dan pada kesempatan kali ini saya akan sharing tentang perintah dasar atau yang sering di sebut dengan command line di linux.&lt;/p&gt;
-
-&lt;p&gt;Dengan mempelajari command line ini maka nantinya Anda akan dapat mempermudah untuk menggunakan sistem operasi linux.&lt;/p&gt;
-
-&lt;p&gt;Oleh karena itu bagi yang berminat untuk mempelajari command line di linux silakan download saja ebook nya dengan cara &lt;a href=&#34;https://drive.google.com/drive/folders/1cjn2db3oIDyBs1LbBYkFJbTnm35DyE4w&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;KLIK DISINI Yaa&lt;/a&gt; 🙂&lt;/p&gt;
-
-&lt;p&gt;Semoga bermanfaat, selamat belajar 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Struktur Hirarki Direktori di Linux</title>
-      <link>http://nurhamim.net/2019/centos8/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:22 +0700</pubDate>
-      
-      <guid>http://nurhamim.net/2019/centos8/</guid>
-      <description>&lt;p&gt;Pada kesempatan yang bahagia ini hehehe, saya akan sharing kembali mengenai linux, pada tulisan sebelumnya saya telah sharing dan cerita awal mula saya kenal linux serta mengetahui tentang apa itu linux&lt;/p&gt;
-
-&lt;p&gt;Nah pada kali ini saya akan share tentang struktur direktori internal di linux, menurut saya mengetahui struktur file atau direktori itu sebuah keharusan yaa, dengan kita mengetahui struktur direktori maka, kita akan lebih mudah untuk mempelajari system tersebut.&lt;/p&gt;
-
-&lt;p&gt;Struktur file atau direktori yang berada di sebuah sistem itu berbeda – beda, tergantung dari arsitektur kernel yang diguakan. Nah untk struktur file atau direktori di linux sendiri berbeda dengan di sistem operasi lainnya contoh Windows  , Istilah atau hirarki yang digunakan untuk struktur direktori di linux yaitu pohon terbalik, yang dimulai dari 1 titik / 1 inti, kemudian bercabang, ranting, dan daun.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar di atas bila di istilahkan di linux maka akan menjadi sebagai berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar di atas sangat jelas bahwasannya hirari yang digunakan oleh system operasi linux bercabang mulai dari privileages tertinggi yaitu root yang ditandai dengan tanda slas (/). Struktur hirarki file atau direktori di sistem operasi linux sendiri ada banyak menyesuaikan dengan arsitektur atau distribusi linux yang kita gunakan. Sebagai contoh berikut di bawah ini contoh gambaran mengenai hirarki direktori linux.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Mari kita bahas satu persatu mengenai struktur direktori yang berada pada gambar diatas, disini penulis menggunakan Ubuntu 18.04 LTS&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bin&lt;/strong&gt; : Isi dari direktori bin sendiri yaitu file (executable) atau binari atau command dari sistem linux yang dapat kita eksekusi secara langsung oleh user atau pengguna. Contohnya seperti kita menjalankan command line , ls , mkdir dll. Berikut contohnya :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Boot&lt;/strong&gt; : Direktori ini berisi file boot loader termasuk boot_loader, kernel, initrd, memtest, config device dan system.mapping yang ditbuhkan dan digunakan pada saat sistem melakukan booting (reboot), selain itu ada juga grub, yang biasanya di pakai untuk dualbot sistem operasi.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Dev&lt;/strong&gt; : Direktori ini berisi sebauh file konfigurasi dari hadware laptop atau komputer yang kita gunakan, beserta modul – modul driver yang ada. Contohnya : dvd, cdrom, /dev/sda, sda1, sda2, dll.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Etc&lt;/strong&gt; : Direktori ini berisi file – file yang digunakan untuk mengkonfigurasi layanan (service) yang berada di sistem linux. File nya biasanya berbentuk script atau file dengan tipe text contohnya : dns , webserver, network dll&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Home&lt;/strong&gt; : Direktori ini berisi data pengguna (user) yang berada di sistem linux, contohnya pada gambar di bawah ini, pengguna dari sistem operasi linux yaitu hamimaja&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lib&lt;/strong&gt; : Direktori ini berisi file – file pendukung / pustaka yang dibutuhkan oleh program baik file binari dam executable, yang berada di diretori /bin&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Sbin&lt;/strong&gt; : Direktori ini berisi file executable atau program atau perintah yang digunakan oleh super user (root) seperti halnya perintah ifconfig, yang digunakan untuk menampilkan informasi tentang network atau jaringan&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Root&lt;/strong&gt; : Merupakan file home direktori dari superuser (root) , berikut contohnya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Opt&lt;/strong&gt; : Dirktori ini digunakan untuk perangkat lunak atau aplikasi pihak ketiga dan bukan utilitas dalam sistem linux, contohnya : LAMP, java dll.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Proc&lt;/strong&gt;: Direktori ini berisi file dari hasi pemrosesan (buffer) yang digunakan untuk menginformasikan proses yang sedang berjalan di linux, conntohnya hasil buffer dari : meminfo, cpuinfo, version, uptime, dll&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Mnt&lt;/strong&gt; : Direktori ini berfungsi untuk menampung tautan antara storage device dengan sistem.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tmp&lt;/strong&gt; : Direktori ini merupakan sebuah direktori sementara yang digunakan untuk menyimpan file sementara dan akan dihapus ketika sistem di-reboot (dijalankan kembali). Berikut contoh file yang sedang disimpan&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Usr&lt;/strong&gt; : Direktori ini berisi file paket aplikasi, program, dokumentasi, konfigurasi, binari, library dan source aplikasi pada linux, yang dapat proses atau di jalankan/ execute, oleh semua pengguna (user) linux, yang merupakan utilitas atau penggunaan dari aplikasi di dalam sistem.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Var&lt;/strong&gt; : Direktori ini berisi variabel sistem seperti logs, file spool untuk printer, webserver, mail, dan proses yang dilakukan, file logs, dan sebagainya.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/16.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Srv&lt;/strong&gt; : Direktori ini merupakan direktori yang berisi file service dari utilitas / program pada sistem GNU/Linux.&lt;/p&gt;
-
-&lt;p&gt;Itulah beberapa hirarki direktori di linux yang dapat kita pelajari bersama, cukup sekian untuk tutorial kali ini, semoga bermanfaat.&lt;/p&gt;
-
-&lt;p&gt;Next Time kita akan mempelajari tentang Basic Command Line di Linux.&lt;/p&gt;
-
-&lt;p&gt;Referensi :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Ebook Linux&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

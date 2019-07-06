@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>phpmyadmin on Catatan Cah Ndeso :)</title>
-    <link>http://nurhamim.net/tags/phpmyadmin/</link>
+    <link>https://nurhamim.net/tags/phpmyadmin/</link>
     <description>Recent content in phpmyadmin on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 06 Jul 2019 09:34:23 +0700</lastBuildDate>
     
-	<atom:link href="http://nurhamim.net/tags/phpmyadmin/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nurhamim.net/tags/phpmyadmin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos17/</link>
+      <link>https://nurhamim.net/2019/centos17/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos17/</guid>
+      <guid>https://nurhamim.net/2019/centos17/</guid>
       <description>Pada tutorial tersebut kita juga dapat membuat database menggunakan mode CLI (Command Line Interface) nah untuk mempermudah Anda dalam pengelolaan Database Anda dapat menggunakan phpMyAdmin dimana phpMyAdmin sendiri berbasis Web Based.
 Dimana yang dimaksuda database Anda dapat diakses melalui web browser dengan menggunakan phpMyAdmin.
 Pada tutorial kali ini kita akan menginstall phpMyAdmin menggunakan webserver apache bagi yang belum install webserver apache silakan install terlebih dahulu.

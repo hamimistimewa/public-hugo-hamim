@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SSH on Catatan Cah Ndeso :)</title>
-    <link>http://nurhamim.net/tags/ssh/</link>
+    <link>https://nurhamim.net/tags/ssh/</link>
     <description>Recent content in SSH on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 06 Jul 2019 04:50:13 +0700</lastBuildDate>
     
-	<atom:link href="http://nurhamim.net/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nurhamim.net/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mengamankan SSH menggunakan Fail2ban</title>
-      <link>http://nurhamim.net/2019/centos6/</link>
+      <link>https://nurhamim.net/2019/centos6/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos6/</guid>
+      <guid>https://nurhamim.net/2019/centos6/</guid>
       <description>Mengamankan sebuah service yang berada di server itu amatlah penting, apalagi server kita public dan siapa saja dapat mengaksesnya, dan yang paling rentan dalam isu hacking atau brutforce attack di VPS (Virtual Private Server) yaitu service ssh. Nah bagaimana cara mengamankan service ssh tersebut ?
 Sangat banyak cara yang dapat dilakukan untuk mengamankan ssh, salah satunya pada tutorial kali ini kita akan mengamankan service ssh dengan menggunakan aplikasi yang cukup powerfull yaitu Fail2ban .</description>
     </item>
     
     <item>
       <title>Alias Login SSH di Linux</title>
-      <link>http://nurhamim.net/2019/centos5/</link>
+      <link>https://nurhamim.net/2019/centos5/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:10 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos5/</guid>
+      <guid>https://nurhamim.net/2019/centos5/</guid>
       <description>Pada kesempatan kali ini topik yang akan kita bahas masih sama yaitu tentang SSH, sebelumnya kita telah mempelajari bagaimana cara melihat log di SSH.
 Nah kali ini kita akan belajar cara bagaimana cara membuat alias atau modifikasi untuk login ssh di linux.
 Manfaat yang didatpakan yaitu Anda dapat mempermudah akses SSH dengan menggunakana nama yang Anda inginkan tanpa perlu mengetikkan perintah ssh roo@IP_Adress kembali.
@@ -35,10 +35,10 @@ Oke langsung saja yaa ke tahapan – tahapan membuat alias untuk login SSH di Li
     
     <item>
       <title>Cara Melihat Log SSH</title>
-      <link>http://nurhamim.net/2019/centos4/</link>
+      <link>https://nurhamim.net/2019/centos4/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:08 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos4/</guid>
+      <guid>https://nurhamim.net/2019/centos4/</guid>
       <description>Pada tutorial kali ini kita akan mempelajari bagaimana sih cara mengetahui log dari ssh itu sendiri, btw log ini sangat penting loh 🙂 .
 Dengan adanya log kita dapat melihat dan mengetahui siapa saja sih yang telah berhasil login/ masuk ke server kita dengan menggunakan ssh. Disini saya menggunakan sistem operasi CentOS 7 ya.
 Berikut langkah – langkahnya :
@@ -47,10 +47,10 @@ Pertama, seperti biasanya silakan remote server terlebih dahulu menggunakan ssh 
     
     <item>
       <title>Cara Mengubah Port SSH</title>
-      <link>http://nurhamim.net/2019/centos3/</link>
+      <link>https://nurhamim.net/2019/centos3/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:05 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos3/</guid>
+      <guid>https://nurhamim.net/2019/centos3/</guid>
       <description>Pada tutorial sebelumnya saya telah menyampaikan bahwa secara default ssh menggunakan port 22, nah pada tutorial kali ini kita akan mempelajari bagaimana cara untuk memodifikasi atau mengubah port default ssh tersebut.
 Sangat banyak manfaat yang didaptkan jika kita mengubah port default ssh salah satunya adalah melindungi service ssh kita dari serangan brutforce ssh yang sangat sering sekali terjadi.
 Namun terdapat juga kekurangannya yaitu jikalau kita lupa port ssh yang telah kita ubah sebelumnya yaa mau nggak mau kita tidak akan bisa login ke server 🙁</description>
@@ -58,10 +58,10 @@ Namun terdapat juga kekurangannya yaitu jikalau kita lupa port ssh yang telah ki
     
     <item>
       <title>Remote Server Menggunakan SSH Key Di Linux</title>
-      <link>http://nurhamim.net/2019/centos2/</link>
+      <link>https://nurhamim.net/2019/centos2/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:01 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos2/</guid>
+      <guid>https://nurhamim.net/2019/centos2/</guid>
       <description>Sebelumnya kita telah membahas sedikit tentang SSH, kalau sebelumnya kita setiap masuk/ login ke server harus mengisikan password agak ribet juga ya dan kurang aman sih menurut saya pribadi :).
 Nah disini saya ada cara yang lebih aman dan mudah untuk diimplementasikan, menggunakan apa ?
 Menggunakan SSH Key authentication, yang biasanya sering dibilang dengan ssh-copy-id, jika Anda menggunakan ssh key Anda akan mendapatkan kenyamanan dan keamanan untuk login melalui SSH karena Anda tidak perlu memasukkan password manual seperti ssh biasa (yang rawan akan kerentanan di brutforce).</description>
@@ -69,10 +69,10 @@ Menggunakan SSH Key authentication, yang biasanya sering dibilang dengan ssh-cop
     
     <item>
       <title>Remote Server Menggunakan SSH di Linux</title>
-      <link>http://nurhamim.net/2019/centos1/</link>
+      <link>https://nurhamim.net/2019/centos1/</link>
       <pubDate>Sat, 06 Jul 2019 04:49:43 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos1/</guid>
+      <guid>https://nurhamim.net/2019/centos1/</guid>
       <description>Pernahkah Anda berfikir bagaimana sih cara yang dapat digunakan untuk mengakses sebuah server ?. Atau Anda yang telah mempunyai sebuah Virtual Private Server (VPS), tetapi bingung bagaimana cara mengaksesnya ?.
 Oke, jangan keburu bingung dulu yaa, heheheh 🙂 , sebelum itu bagi Anda yang ingin mempunyai sebuah VPS yang murah dan handa serta sangat berkualitas bangett, saya sarankan Anda menggunakan VPS-nya CloudKilat, selengkapnya bisa di lihat pada tautan berikut : VPS CloudKilat</description>
     </item>

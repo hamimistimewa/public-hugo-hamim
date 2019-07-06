@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nginx on Catatan Cah Ndeso :)</title>
-    <link>http://nurhamim.net/tags/nginx/</link>
+    <link>https://nurhamim.net/tags/nginx/</link>
     <description>Recent content in nginx on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 06 Jul 2019 09:33:59 +0700</lastBuildDate>
     
-	<atom:link href="http://nurhamim.net/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nurhamim.net/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mengenal Apa itu Web Server</title>
-      <link>http://nurhamim.net/2019/centos11/</link>
+      <link>https://nurhamim.net/2019/centos11/</link>
       <pubDate>Sat, 06 Jul 2019 09:33:59 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos11/</guid>
+      <guid>https://nurhamim.net/2019/centos11/</guid>
       <description>Hai kawan – kawan, kalau sebelumnya saya share mengenai Hosting dan yang lainnya, sepertinya kurang greget yaa, nah kali ini saya akan share mengenai web server, apasih itu web server ?
 Web server adalah perangkat lunak yang memberikan layanan atau service kepada client untuk menerima request HTTP maupun HTTPS dari client yang dikenal. Setelah itu, web server akan mengirimkan request yang diminta oleh client dalam bentuk halaman web, yang secara umum berbentuk dokumen HTML.</description>
     </item>

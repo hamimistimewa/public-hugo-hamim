@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/2019/panel1/" />
+  <link rel="next" href="https://nurhamim.net/2019/panel3/" />
+  <link rel="canonical" href="https://nurhamim.net/2019/panel2/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi CWP di CentOS 7 | Catatan Cah Ndeso :)
+       
+  </title>
+  <meta name="title" content="Instalasi CWP di CentOS 7 | Catatan Cah Ndeso :)">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi CWP di CentOS 7",
+    "headline" : "Instalasi CWP di CentOS 7",
+    "description" : "Mempunyai server VPS tapi nggak bisa mengelolanya, hemm jangan kebingungan dulu guyss, disini saya akan share bagaimana cara installasi control panel CWP (Control Web Panel) di sistem operasi CentOS 7 .\nCWP (CentOS Web Panel) salah satu control panel yang powerfull yang memang dikhususkan untuk sistem operasi RHEL dan keturunannya yaitu CentOS, CWP juga dapat diinstal di CloudLinux.\nCWP bersifat open source (free) bebas digunakan tanpa harus membeli license.\nFitur – Fitur yang ada di CWP juga lumayan banyak mulai dari, DNS, Mail server, Webserver, Security, dan masih banyak lagi untuk detailnya bisa lihat pada tautan berikut :",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 20:49:09 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 20:49:09 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/2019\/panel2\/",
+    "wordCount" : "424",
+    "keywords" : [ "CentOS 7","Linux","webpanel","cwp", "Catatan Cah Ndeso :)"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso :)</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso :)</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi CWP di CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/control-panel/"> CONTROL PANEL </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Mempunyai server VPS tapi nggak bisa mengelolanya, hemm jangan kebingungan dulu guyss, disini saya akan share bagaimana cara installasi control panel CWP (Control Web Panel) di sistem operasi CentOS 7 .</p>
+
+<p>CWP (CentOS Web Panel) salah satu control panel yang powerfull yang memang dikhususkan untuk sistem operasi RHEL dan keturunannya yaitu CentOS, CWP juga dapat diinstal di CloudLinux.</p>
+
+<p>CWP bersifat open source (free) bebas digunakan tanpa harus membeli license.</p>
+
+<p>Fitur – Fitur yang ada di CWP juga lumayan banyak mulai dari, DNS, Mail server, Webserver, Security, dan masih banyak lagi untuk detailnya bisa lihat pada tautan berikut :</p>
+
+<p><a href="http://centos-webpanel.com/features" rel="nofollow noreferrer" target="_blank"><strong>Features Control Web Panel</strong></a></p>
+
+<p>Sedangkan untuk requirement yang dibutuhkan untuk instalasi cwp diantaranya</p>
+
+<ul>
+<li>Server <sup>32</sup>&frasl;<sub>64</sub> Bit atau VPS</li>
+<li>Ram 512MB lebih tinggi lebih baik dan direkomendasikan</li>
+<li>Storage 10Gb lebih tinggi lebih baik dan direkomendasikan</li>
+<li>Sistem Operasi CentOS 6.x 7.x / RedHat 6.x, 7.x / CloudLinux 6.x, 7.x</li>
+</ul>
+
+<p>Selanjutnya, saaya akan memeberitahukan tahapan – tahapan untuk melakukan instalasi cwp di CentOS 7. Disini saya menggunakan VPS untuk servenya.</p>
+
+<p>Pertama, pastikan VPS Anda dalam keadaan Freesh Install /OS atau belum terinstall aplikasi apapun.</p>
+
+<p>Kedua, silakan remote VPS Anda, jika sudah silakan update terlebih dahulu VPS CentOS 7 Anda dengan menggunakan perintah <strong>yum update -y</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila sistem operasi CentOS 7 Anda telah ter-update dengan sempurna selanjutnya silakan menginstall service wget yang digunakan untuk mengunduh file installer dari cwp, berikut perintahnya</p>
+
+<pre><code class="language-bash">[root@srv-panel ~] # yum install wget -y
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah selanjutnya menentukan direktori installasi cwp, secara default direktori cwp yaitu /usr/local/src . Silakan pindah direktori terlebih dahulu menggunakan perintah cd  , dan mengunduh file installer cwp seperti berikut perintahnya seperti berikut</p>
+
+<pre><code class="language-bash">[root@srv-panel ~]# cd /usr/local/src
+[root@srv-panel src]# wget http://centos-webpanel.com/cwp-el7-latest
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah, selanjutnya Anda dapat melakukan instalasi cwp dengan menjalankan baris perintah berikut :</p>
+
+<pre><code class="language-bash">[root@srv-panel src]# sh cwp-el7-latest
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan tunggu proses instalasi sampai selesai, waktu instalasi membutuhkan waktu kurang lebih 1 jam.</p>
+
+<p>Apabila instalasi telah selesai Anda akan diberikan data credential untuk login ke control panel cwp Anda, seperti berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Gambar diatas merupakan data credential untuk login ke Administrator control panel cwp beserta login ke Database MySQL Anda. Gambar diatas juga telah menjelaskan untuk login ke Administrator cwp menggunakan username root dan untuk passwordnya menggunakan password root VPS atau server Anda. Silakan akses IP VPS Anda menggunakan port 2030 (no-secure/ http) dan port 2031 (secure /https) . Seperti pada gambar berikut ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila telah berhasil maka, Anda akan diarahkan ke Dashboard Admin dari contol panel CWP seperti berikut ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada tahap ini Anda telah berhasil memasang atau instalasi control panel cwp di VPS atau server Anda.</p>
+
+<p>Selamat mencoba semoga bermanfaat 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/2019/panel2/>https://nurhamim.net/2019/panel2/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/webpanel/">
+                    #webpanel</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/cwp/">
+                    #cwp</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/2019/panel1/" class="prev" rel="prev" title="Apa itu Control Panel WebHosting ?"><i class="iconfont icon-left"></i>&nbsp;Apa itu Control Panel WebHosting ?</a>
+         
+        
+        <a href="https://nurhamim.net/2019/panel3/" class="next" rel="next" title="Instalasi Cyber Panel di CentOS 7">Instalasi Cyber Panel di CentOS 7&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

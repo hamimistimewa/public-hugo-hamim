@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>webserver on Catatan Cah Ndeso :)</title>
-    <link>http://nurhamim.net/tags/webserver/</link>
+    <link>https://nurhamim.net/tags/webserver/</link>
     <description>Recent content in webserver on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 06 Jul 2019 09:34:08 +0700</lastBuildDate>
     
-	<atom:link href="http://nurhamim.net/tags/webserver/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nurhamim.net/tags/webserver/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cara Instalasi PHP 7 di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos15/</link>
+      <link>https://nurhamim.net/2019/centos15/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos15/</guid>
+      <guid>https://nurhamim.net/2019/centos15/</guid>
       <description>Pada tutorial kali ini saya akan share bagaimana cara instalasi php 7 mulai dari php 7.1, 7.2 dan 7.3 . Dengan demikian Anda dapat memilih php versi berapa yang ingin Anda gunakan.
 Oke langsung saja yaa ke tahapan – tahapannya :
 Pertama, pastikan Anda telah menginstall webserver apache atau nginx, jika Anda menggunakan apache silakan merujuk pada tautan berikut Instalasi Webserver Apache di CentOS 7 pada tutorial sebelumnya.
@@ -25,19 +25,19 @@ Kedua, pastikan Anda telah menginstall atau memasang repository epel, berikut pe
     
     <item>
       <title>Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos14/</link>
+      <link>https://nurhamim.net/2019/centos14/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos14/</guid>
+      <guid>https://nurhamim.net/2019/centos14/</guid>
       <description>Semakin hari teknologi semakin up to date sama halnya yang terjad dengan php semkin hari maka versi php juga akan update ke versi yang lebih baru, namun sangat banyak aplikasi lama yang berjalan di versi php 5.xx sedangkan saat ini banyak pula aplikasi yang meminta remondasi untuk melakukan upgrade dari 5 ke 7 salah satunya yang paling kerasa yaitu CMS WordPress dimana di versi terbaru WordPress versi PHP yang direkomendasikan yaitu versi 7.</description>
     </item>
     
     <item>
       <title>Instalasi PHP 5.6 di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos13/</link>
+      <link>https://nurhamim.net/2019/centos13/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:06 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos13/</guid>
+      <guid>https://nurhamim.net/2019/centos13/</guid>
       <description>PHP (Pemberi Harapan Palsu) ? #ehh
 Bukan yaaa hihihiih 😀 😀 😀
 PHP merupakan bahasa pemrograman web, yang sering dan abnyak sekali orang menggunakan pemrograman ini, terlebih bagi seorang programmer, udah makanan sehari – hari ni php heheheh 🙂 .
@@ -47,10 +47,10 @@ Langsung saja ke pembahan yaitu installasi php di CentOS 7.</description>
     
     <item>
       <title>Instalasi Webserver Apache di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos12/</link>
+      <link>https://nurhamim.net/2019/centos12/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:02 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos12/</guid>
+      <guid>https://nurhamim.net/2019/centos12/</guid>
       <description>Pada kesempatan kali ini saya akan share bagaimana cara installasi webserver apache tersebut di sistem operasi CentOS 7 .
 Untuk instalasi webserver apache kali ini dapat Anda coba di VPS (Virtual Private Server) atau VM (Virtual Machine) lokal biasanya banyak yang menggunakan Virtual Box di Komputer atau Laptop.
 Pertama, silakan login terlebih dahulu ke server Anda masing – masing,
@@ -59,10 +59,10 @@ Kedua, silakan lakukan pembaharuan atau update pada sistem operasi CentOS 7, den
     
     <item>
       <title>Mengenal Apa itu Web Server</title>
-      <link>http://nurhamim.net/2019/centos11/</link>
+      <link>https://nurhamim.net/2019/centos11/</link>
       <pubDate>Sat, 06 Jul 2019 09:33:59 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos11/</guid>
+      <guid>https://nurhamim.net/2019/centos11/</guid>
       <description>Hai kawan – kawan, kalau sebelumnya saya share mengenai Hosting dan yang lainnya, sepertinya kurang greget yaa, nah kali ini saya akan share mengenai web server, apasih itu web server ?
 Web server adalah perangkat lunak yang memberikan layanan atau service kepada client untuk menerima request HTTP maupun HTTPS dari client yang dikenal. Setelah itu, web server akan mengirimkan request yang diminta oleh client dalam bentuk halaman web, yang secara umum berbentuk dokumen HTML.</description>
     </item>

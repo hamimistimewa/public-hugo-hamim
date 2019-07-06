@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CONTROL PANEL on Catatan Cah Ndeso :)</title>
+    <link>https://nurhamim.net/categories/control-panel/</link>
+    <description>Recent content in CONTROL PANEL on Catatan Cah Ndeso :)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Jul 2019 20:49:43 +0700</lastBuildDate>
+    
+	<atom:link href="https://nurhamim.net/categories/control-panel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Menggunakan FTP di Cyber Panel</title>
+      <link>https://nurhamim.net/2019/panel9/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:43 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel9/</guid>
+      <description>Baru saja saya share mengenai File Manager, nah untuk kali ini merupakan tutorial lanjutan dari file manager yaitu FTP Server di Cyber Panel
+Apasih itu FTP ?
+FTP (File Transfer Protokol) yang bisanya digunakan untuk mengirimkan file atau direktori dari lokal ke Server/Control Panel. FTP juga biasanya digunakan untuk manajemen file atau direktori.
+Seperti tutorial – tutorial sebelumya untuk penggunaan fitur yang ada du Cyber Panel sangatlah mudah dan tidak serumit apa yang kira hehehehe 🙂</description>
+    </item>
+    
+    <item>
+      <title>File Manager di Cyber Panel</title>
+      <link>https://nurhamim.net/2019/panel8/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:41 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel8/</guid>
+      <description>Hai guyss, saat ini saya masih ngulik tentang Cyber Panel hehehehe,
+Cyber Panel salah satu control panel Free yang baru saja release tahun 2018 kalau nggak salah yaa heheheh. Dan pertama kali saya mencoba control panel ini, saya lumayan heran dengan fitur yang diberikan sangat lengkap soalnya 🙂 .
+Oleh karena itu saya ingin share kembali mengeni File manager di Cyber Panel.
+File manager ini sangat perlu dan penting, dengan adanya file manager di control panel maka, kita dapat dengan mudah untuk melakukan pengelolaan atau majamen file atau direktori pada website yang berada di control panel cyber panel.</description>
+    </item>
+    
+    <item>
+      <title>Instalasi CMS WordPress di Cyber Panel</title>
+      <link>https://nurhamim.net/2019/panel7/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:38 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel7/</guid>
+      <description>Hello Guyss, masih pada semangat yaa untuk belajar mengenai control panel, tutorial kali ini melanjutkan tutorial sebelumnya, dimana sebelumnya kita telah belajar bagaiamana cara membuat website di Cyber Panel .
+Sesuai dengan judul tutorial kali ini kita akan menginstall CMS WordPress di control panel Cyber Panel.
+Oke, langsung saja ke langkah – langkah installasinya ya
+Pertama, silakan login terlebih dahulu ke control panel cyber panel Anda.
+Kedua, masuk kemenu Website &amp;gt;&amp;gt; List Website &amp;gt;&amp;gt; Klik pada menu launch , seperti pada gambar dibawah ini</description>
+    </item>
+    
+    <item>
+      <title>Membuat Website di Cyber Panel</title>
+      <link>https://nurhamim.net/2019/panel6/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:36 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel6/</guid>
+      <description>Hai guyss untuk tutorial kali ini saya akan share bagaimana cara membuat sebuah website menggunakan control panel cyber panel, tutorial ini kelanjutan dari tutorial sebelumnya yang memabahas tentang bagaimana cara menngatur DNS di Cyber Panel
+Untuk mengikuti tutorial ini pastikan Anda telah mengatur DNS dengan benar, jika sudah mari kita bahas bagaimana cara membuat website di cyber panel
+Pertama, login terlebih dahulu ke cyber panel Anda
+Kedua, pilih menu Website &amp;gt;&amp;gt; Create Website , dan isikan detailnya mulai dari pemilihan paket yang ingin digunakan, disini saya menggunakan packages default.</description>
+    </item>
+    
+    <item>
+      <title>Mengatur DNS di Cyber Panel</title>
+      <link>https://nurhamim.net/2019/panel5/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:34 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel5/</guid>
+      <description>Tutorial kali ini merupakan kelanjutan dari tutorial – tutorial sebelumnya yaitu instalasi control panel Cyber Panel di CentOS 7.
+Biasanya kebanyakan kalau kita telah menginstall control panel yang paling pertama kali di konfigurasi yaitu DNS, karena menurut saya DNS ini sangat penting sekali.
+Contoh singkatnya saja kalau sebelumnya kita akses control panel panel menggunakan IP maka dengan melakukan konfigurasi DNS ini Anda dapat menggunakan nama domain Anda.
+Selain itu Anda juga dapat mengelola domain yang Anda miliki langsung melalui control panel mulai dari penambahan record subdomain, mail, dan sebagainya.</description>
+    </item>
+    
+    <item>
+      <title>Reset Password Admin Cyber Panel di CentOS 7</title>
+      <link>https://nurhamim.net/2019/panel4/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:32 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel4/</guid>
+      <description>Lupaa Pasword ???????
+Bingung ??????
+Jangan bingung dulu guys pasti ada solusinya kok heheheh :).
+Sangat banyak seseorang pemula seperti saya hehehe terkadang ni kalau udah install dan udah selesai terkadang ada aja yang lupa salah satunya Password login ke Admin.
+Untuk itu pada tutorial kali ini saya akan share bagaimana cara mengatasi lupa password admin di control panel Cyber Panel.
+Pertama, memastikan terlebih dahulu bahwa saya belum bisa login karena lupa password, beriku contohnya</description>
+    </item>
+    
+    <item>
+      <title>Instalasi Cyber Panel di CentOS 7</title>
+      <link>https://nurhamim.net/2019/panel3/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:13 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel3/</guid>
+      <description>Hai, semua saya harap teman – teman semua masih pada semangat untuk belajar dunia IT khususnya Linux yaa hehehehe :).
+Tutorial kali ini temanya masih sama dengan postingan yang sebelumnya yaitu mengenai instalasi control panel, namun kali ini kita akan mencoba control panel Cyber Panel di CentOS 7.
+Control Panel Cyber Panel bisa dibilang control panel yang open source (bebas) yang tergolong baru, dan sangat banyak fitur – fitur keren yang dapat kita manfaatkan untuk mengelola sebuah website.</description>
+    </item>
+    
+    <item>
+      <title>Instalasi CWP di CentOS 7</title>
+      <link>https://nurhamim.net/2019/panel2/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:09 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel2/</guid>
+      <description>Mempunyai server VPS tapi nggak bisa mengelolanya, hemm jangan kebingungan dulu guyss, disini saya akan share bagaimana cara installasi control panel CWP (Control Web Panel) di sistem operasi CentOS 7 .
+CWP (CentOS Web Panel) salah satu control panel yang powerfull yang memang dikhususkan untuk sistem operasi RHEL dan keturunannya yaitu CentOS, CWP juga dapat diinstal di CloudLinux.
+CWP bersifat open source (free) bebas digunakan tanpa harus membeli license.
+Fitur – Fitur yang ada di CWP juga lumayan banyak mulai dari, DNS, Mail server, Webserver, Security, dan masih banyak lagi untuk detailnya bisa lihat pada tautan berikut :</description>
+    </item>
+    
+    <item>
+      <title>Apa itu Control Panel WebHosting ?</title>
+      <link>https://nurhamim.net/2019/panel1/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:01 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel1/</guid>
+      <description>Hai semua, pada malam hari yang cerah ini #asyekk saya akan share mengenai tentang apa sih itu control panel WebHosting ?
+Mungkin diluar sana sudah banyak yang tau tentang control panel web hosting, namun masih banyak pula yang belum tau tentang apa itu control panel di dunia hosting.
+Provider atau penyedia jasa Hosting bisanya menyediakan yang namanya control panel, fungsinya untuk melakukan pengelolaan sebuah website yang berbasis web base, artinya dapat diakses menggunakan web browser.</description>
+    </item>
+    
+  </channel>
+</rss>

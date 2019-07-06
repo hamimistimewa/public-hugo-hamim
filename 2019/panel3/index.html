@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/2019/panel2/" />
+  <link rel="next" href="https://nurhamim.net/2019/panel4/" />
+  <link rel="canonical" href="https://nurhamim.net/2019/panel3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi Cyber Panel di CentOS 7 | Catatan Cah Ndeso :)
+       
+  </title>
+  <meta name="title" content="Instalasi Cyber Panel di CentOS 7 | Catatan Cah Ndeso :)">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi Cyber Panel di CentOS 7",
+    "headline" : "Instalasi Cyber Panel di CentOS 7",
+    "description" : "Hai, semua saya harap teman – teman semua masih pada semangat untuk belajar dunia IT khususnya Linux yaa hehehehe :).\nTutorial kali ini temanya masih sama dengan postingan yang sebelumnya yaitu mengenai instalasi control panel, namun kali ini kita akan mencoba control panel Cyber Panel di CentOS 7.\nControl Panel Cyber Panel bisa dibilang control panel yang open source (bebas) yang tergolong baru, dan sangat banyak fitur – fitur keren yang dapat kita manfaatkan untuk mengelola sebuah website.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 20:49:13 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 20:49:13 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/2019\/panel3\/",
+    "wordCount" : "511",
+    "keywords" : [ "CentOS 7","Linux","webpanel","Cyber Panel", "Catatan Cah Ndeso :)"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso :)</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso :)</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi Cyber Panel di CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/control-panel/"> CONTROL PANEL </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Hai, semua saya harap teman – teman semua masih pada semangat untuk belajar dunia IT khususnya Linux yaa hehehehe :).</p>
+
+<p>Tutorial kali ini temanya masih sama dengan postingan yang sebelumnya yaitu mengenai instalasi control panel, namun kali ini kita akan mencoba control panel Cyber Panel di CentOS 7.</p>
+
+<p>Control Panel Cyber Panel bisa dibilang control panel yang open source (bebas) yang tergolong baru, dan sangat banyak fitur – fitur keren yang dapat kita manfaatkan untuk mengelola sebuah website.</p>
+
+<p>Adapun fitur – fitur yang ada di cyber panel diantaranya, DNS Management, Mail, FirewallD and SpamAssassin untuk security, SSL Free, dan webserver menggunakan OpenLiteSpeed, dimana penggunaan dan cache website Anda akan terasa ringan dan cepat, terlebih apabila Anda menggunakan CMS WordPress pada control panel ini.</p>
+
+<p>Untuk lebih detail mengenai fitur yang berada di Cyber Panel dapat dilihat disini : <a href="https://cyberpanel.net/" rel="nofollow noreferrer" target="_blank">Fitur Cyber Panel</a></p>
+
+<p>Sebelum melakukan instalasi control panel Cyber Panel pastikan sistem operasi CentOS 7 Anda bersifat Fress OS atau belum terinstall aplikasi apapun didalamnya. Oke langsung saja kita ke langkah – langkah instalasi Cyber Panel di CentOS 7 :</p>
+
+<p>Pertama, silakan remote server atau VPS Anda terlebih dahulu menggunakan ssh ataupun yang lainnya.</p>
+
+<p>Kedua, silakan update sistem operasi CentOS 7 Anda dengan menggunakan perintah :</p>
+
+<pre><code class="language-bash">[root@srv-panel ~] # yum update -y
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan tunggu pembaharuan atau udate sistem selesai, jika sudah selanjutnya menginstall service wget nantinya digunakan untuk mengunduh file control panel cyber panelnya, seperti berikut perintahnya</p>
+
+<pre><code class="language-bash">[root@srv-panel ~] # yum install wget -y 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah, silakan unduh dan install control panel Cyber Panel dengan menjalankan 1 bari perintah berikut :</p>
+
+<pre><code class="language-bash">[root@srv-panel ~] # sh &lt;(curl https://cyberpanel.net/install.sh || wget -O - https://cyberpanel.net/install.sh) 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Gambar di atas silakan pilih nomor untuk installasi Cyber Panel, Selanjutnya Anda akan diminta untuk memilih versi webserver OpenLiteSpeed yang ingin digunakan di control panel Cyber Panel, terdapat 2 pilihan yaiu Free dan berbayar, jika Anda ingin menggunakan yang berbayar silakan pilih nomor 2, jika Anda ingin menggunakan yang free silakan pilih yang nomor 1 seperti pada gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya, Anda akan diminta untuk memilih penggunaan password admin, apakah Anda ingin menggunakan password random yang nantinya akan ditentukan oleh sistem atau manual, jika random silakan tekan huruf <strong>r</strong> .</p>
+
+<p>Berikutnya Anda diminta untuk melakukan konfirmasinya extension php yang ingin Anda gunakan, ini bersifat opsional yaa, jika Anda tidak membutuhkan extension tersebut silakan skip saja, seperti berikut contohnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan tunggu proses instalasi sampai selesai, dimana proses instalasi membutuhkan waktu kurang lebih 15 – 40 menit. Apabila instalasi telah selesai maka Anda akan diberikan credential untuk login ke admin control panel Cyber Panel beserta credential untuk login ke admin Database, contohnya seperti pada gambar dibawah ini.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan akses control panel Cyber Panel Anda dengan menggunakan port 8090 . contohnya <strong><a href="https://IPSerever:8090" rel="nofollow noreferrer" target="_blank">https://IPSerever:8090</a></strong>, seperti pada gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan isikan username dan password untuk login ke admin panel Anda seperti pada gambar diatas, apabila credential login telah berhasil dan benar maka Anda akan diarahkan ke dashboard admin Cyber Panel yang cukup bagus dan sangat enak dilihat heehehhee 🙂</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada step ini control panel Cyber Panel Anda telah berhasil diinstal dengan sempurna, selamat mencoba semoga bermanfaat 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/2019/panel3/>https://nurhamim.net/2019/panel3/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/webpanel/">
+                    #webpanel</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/cyber-panel/">
+                    #Cyber Panel</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/2019/panel2/" class="prev" rel="prev" title="Instalasi CWP di CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Instalasi CWP di CentOS 7</a>
+         
+        
+        <a href="https://nurhamim.net/2019/panel4/" class="next" rel="next" title="Reset Password Admin Cyber Panel di CentOS 7">Reset Password Admin Cyber Panel di CentOS 7&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

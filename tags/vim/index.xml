@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vim on Catatan Cah Ndeso :)</title>
-    <link>http://nurhamim.net/tags/vim/</link>
+    <link>https://nurhamim.net/tags/vim/</link>
     <description>Recent content in Vim on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 06 Jul 2019 03:13:32 +0700</lastBuildDate>
     
-	<atom:link href="http://nurhamim.net/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nurhamim.net/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Insert Mode</title>
-      <link>http://nurhamim.net/2019/vim10/</link>
+      <link>https://nurhamim.net/2019/vim10/</link>
       <pubDate>Sat, 06 Jul 2019 03:13:32 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/vim10/</guid>
+      <guid>https://nurhamim.net/2019/vim10/</guid>
       <description>Setelah sebelumnya kita telah membahas macam – macam tentang navigasi di Vim, saat ini kita akan berfokus kembali untuk mempelajari mode insert, pada bab awal sebelumnya kita telah mengenal tentang apa itu mode insert, jika kita ingin menulis sesuatu maka kita harus masuk ke mode insert.
 Nah pada bab awal sebelumnya jika kita ingin masuk ke mode insert menggunakan tombol i . Ternyata ada lebih dari 1 cara untuk masuk ke mode insert di Vim selain menggunakan tombol i</description>
     </item>
     
     <item>
       <title>Navigasi ke Posisi Sebelumnya</title>
-      <link>http://nurhamim.net/2019/vim9/</link>
+      <link>https://nurhamim.net/2019/vim9/</link>
       <pubDate>Sat, 06 Jul 2019 03:13:25 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/vim9/</guid>
+      <guid>https://nurhamim.net/2019/vim9/</guid>
       <description>Ada kalanya disaat kita ngonfig pasti kita akan menemukan yang namanya berpindah – pindah antar baris A ke B secara terus menerus.
 Nah hal tersebut kan dapat dilakukan dengan cara menekan tombol 5gg atau 10gg menggunakan metode key stroke , namun hal ini saat kurang efektif, dengan demikian ada cara yang lebih efektif untuk berpindah antar posisi dari A ke B, dari B ke A dan seterusnya .
 Cara yang digunakan yaitu menggunakan tombol Ctrl + o dan Ctrl + i , perbedaan dari keduaannya yaitu :</description>
@@ -34,10 +34,10 @@ Cara yang digunakan yaitu menggunakan tombol Ctrl + o dan Ctrl + i , perbedaan d
     
     <item>
       <title>Navigasi Antar Baris</title>
-      <link>http://nurhamim.net/2019/vim8/</link>
+      <link>https://nurhamim.net/2019/vim8/</link>
       <pubDate>Sat, 06 Jul 2019 03:13:23 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/vim8/</guid>
+      <guid>https://nurhamim.net/2019/vim8/</guid>
       <description>Pada kesempatan kali ini kita akan mempelajari bagaimana cara berpindah antar baris di Vim. Di Vim istilah yang digunakan untuk berpindah kursor ke baris di Vim bisa dibilang jump .
 Sebelum lanjut ke inti materi mari kita mencoba untuk menampilakn number layaknya editor yang lain. Untuk menampilkannya dapat dilakukan dengan cara megetikkan perintah berikut
 :set number  Maka hasilnya akan seperi pada gambar di bawah ini
@@ -46,10 +46,10 @@ Jump ke Nomor Baris Tertentu Pada navigasi salah satu teknik jump yang paling ga
     
     <item>
       <title>Navigasi ke Karakter Tertentu dalam Satu Baris</title>
-      <link>http://nurhamim.net/2019/vim7/</link>
+      <link>https://nurhamim.net/2019/vim7/</link>
       <pubDate>Sat, 06 Jul 2019 03:13:20 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/vim7/</guid>
+      <guid>https://nurhamim.net/2019/vim7/</guid>
       <description>Sebelumnya kita telah belajar bagaiman cara berpindah ke awal dan akhir baris, nah sekarang kita akan belajar bagaimana cara berpintah ke karakter tertentu yang berada pada dalam satu baris .
 Nah berikut ini langkah – langkahnya , perhatikan contoh 1 kalimat berikut
  Jangan pernah berhenti ketika kamu masih belum ingin menyerah
@@ -58,10 +58,10 @@ Nah berikut ini langkah – langkahnya , perhatikan contoh 1 kalimat berikut
     
     <item>
       <title>Navigasi Awal dan Akhir Baris di Vim</title>
-      <link>http://nurhamim.net/2019/vim6/</link>
+      <link>https://nurhamim.net/2019/vim6/</link>
       <pubDate>Sat, 06 Jul 2019 03:13:17 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/vim6/</guid>
+      <guid>https://nurhamim.net/2019/vim6/</guid>
       <description>Sebelumnya kita telah bermain dan membahas bagaimana cara berpindah antar kata di Vim, nah pada navigasi ini kita akan belajar memindahkan kursor yang berada di awal kata ke akhir baris.
 Nah kali ini kita akan belajar bagaimana cara berpindah antar baris, perhatikan contoh dibawah ini
   Ketika kamu bermimpi, jangan pernah takut untuk
@@ -72,10 +72,10 @@ berarti Dia pun berkehendak bahwa kamu bisa mewujudkannya</description>
     
     <item>
       <title>Navigasi Antar Kata di Vim</title>
-      <link>http://nurhamim.net/2019/vim5/</link>
+      <link>https://nurhamim.net/2019/vim5/</link>
       <pubDate>Sat, 06 Jul 2019 03:13:14 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/vim5/</guid>
+      <guid>https://nurhamim.net/2019/vim5/</guid>
       <description>Sebelumnya kita telah membahas tentang navigasi dasar yang ada di vim, selain kegiatas menulis, editing di vim, navigasi salah satu yang penting diketahui di vim.
 Disaat kita menulis pasti kita akan menentukan kita akan menulis dimana letaknya dikiri, dikanan, atau di bawah/atas.
 Dan secara tidak sadar kita nantinya akan banyak menggunakan waktu kita untuk menavigasikan kursor ke posisi dimana penulisan atau perubahan akan kita lakukan. Baik itu mengubah, menghapus, dan menandakan tanda baca.</description>
@@ -83,10 +83,10 @@ Dan secara tidak sadar kita nantinya akan banyak menggunakan waktu kita untuk me
     
     <item>
       <title>Navigasi Dasar Di Vim</title>
-      <link>http://nurhamim.net/2019/vim4/</link>
+      <link>https://nurhamim.net/2019/vim4/</link>
       <pubDate>Sat, 06 Jul 2019 03:13:11 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/vim4/</guid>
+      <guid>https://nurhamim.net/2019/vim4/</guid>
       <description>Pada tulisan sebelumnya kita telah membahas tentang jenis – jenis mode di vim, Nah untuk kali ini kita akan membahas tentang Navigasi dasar yang ada di vim.
 Dengan menggunakan editor vim, maka mindset pemikiran kita juga harus di ubah, karena editor vim berbeda dengan editor – editor lainnya,
 Di Vim kita harus membiasakan diri dimana jari – jari kita harus setia dengan keyboard :), dengan berada di posisi home-row yaitu pada tombol a, s, d, f dan h,j, k,l :</description>
@@ -94,20 +94,20 @@ Di Vim kita harus membiasakan diri dimana jari – jari kita harus setia dengan 
     
     <item>
       <title>Mengenal Vim Mode</title>
-      <link>http://nurhamim.net/2019/vim3/</link>
+      <link>https://nurhamim.net/2019/vim3/</link>
       <pubDate>Sat, 06 Jul 2019 03:13:09 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/vim3/</guid>
+      <guid>https://nurhamim.net/2019/vim3/</guid>
       <description>Pada tutorial sebelumnya penulis telah memberikan informasi tentang apa itu Vim. Nah pada kali ini kita akan mempelajari tentang mode dan navigasi – navigasi dasar yang berada di Vim, yang pertama silakan buka terlebih dahulu vim Anda dengan menjalankan perintah vim di terminal Linux Anda. Berikut tampilan default dari vim .
 Untuk keluar dari vim dapat dilakukan dengan cara menekan tombol shift diikuti dengan : lalu tekan tombol q dan tekan Enter .</description>
     </item>
     
     <item>
       <title>Vim Mode in Action</title>
-      <link>http://nurhamim.net/2019/vim2/</link>
+      <link>https://nurhamim.net/2019/vim2/</link>
       <pubDate>Sat, 06 Jul 2019 03:12:51 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/vim2/</guid>
+      <guid>https://nurhamim.net/2019/vim2/</guid>
       <description>Sebelumnya kita telah mengetahui tentang mode – mode yang berada di Vim, Nah pada kali ini kita akan mecoba mengetahui tentang bagaimana cara membuka mode normal, insert dan command.
 Pada saat Anda membuka vim pertama kali maka disitulah kita menggunakan yang namanya mode normal .
 Mode normal ini dapat kita gunakan untuk navigasi (posisi atau arah) kursor serta juga dapat kita gunakan untuk berpindah antar file (apabila telah terdapat file).</description>
@@ -115,10 +115,10 @@ Mode normal ini dapat kita gunakan untuk navigasi (posisi atau arah) kursor sert
     
     <item>
       <title>Mengenal Editor Vim</title>
-      <link>http://nurhamim.net/2019/vim1/</link>
+      <link>https://nurhamim.net/2019/vim1/</link>
       <pubDate>Sat, 06 Jul 2019 03:12:46 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/vim1/</guid>
+      <guid>https://nurhamim.net/2019/vim1/</guid>
       <description>Jika Anda seorang programmer atau seorang sysadmin atau Anda pengguna sistem operasi Linux atapun Windows maka Anda akan kenal dan tak akan asing lagi dengan yang namanya teks editor sebagai contoh teks editor yang populer dan biasa dipakai bagi pengguna siste operasi Windows yaitu “notepad dan notepad++” . Selain itu bagi pengguna sistem operasi Linux pasti akan kenal pakai (banget) dengan yang namanya teks editor nano, terlebih bagi pengguna Linux Ubuntu.</description>
     </item>
     

@@ -2,39 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Catatan Cah Ndeso :)</title>
-    <link>http://nurhamim.net/categories/</link>
+    <link>https://nurhamim.net/categories/</link>
     <description>Recent content in Categories on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 18:34:17 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 20:49:43 +0700</lastBuildDate>
     
-	<atom:link href="http://nurhamim.net/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nurhamim.net/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>CONTROL PANEL</title>
+      <link>https://nurhamim.net/categories/control-panel/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:43 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/categories/control-panel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>CENTOS 7 Administrator</title>
-      <link>http://nurhamim.net/categories/centos-7-administrator/</link>
+      <link>https://nurhamim.net/categories/centos-7-administrator/</link>
       <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
       
-      <guid>http://nurhamim.net/categories/centos-7-administrator/</guid>
+      <guid>https://nurhamim.net/categories/centos-7-administrator/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TEKS EDITOR</title>
-      <link>http://nurhamim.net/categories/teks-editor/</link>
+      <link>https://nurhamim.net/categories/teks-editor/</link>
       <pubDate>Sat, 06 Jul 2019 03:13:32 +0700</pubDate>
       
-      <guid>http://nurhamim.net/categories/teks-editor/</guid>
+      <guid>https://nurhamim.net/categories/teks-editor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NETWORKING</title>
-      <link>http://nurhamim.net/categories/networking/</link>
+      <link>https://nurhamim.net/categories/networking/</link>
       <pubDate>Sat, 06 Jul 2019 01:17:40 +0700</pubDate>
       
-      <guid>http://nurhamim.net/categories/networking/</guid>
+      <guid>https://nurhamim.net/categories/networking/</guid>
       <description></description>
     </item>
     

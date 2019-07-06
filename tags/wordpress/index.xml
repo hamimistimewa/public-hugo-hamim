@@ -1,22 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>wordpress on Catatan Cah Ndeso :)</title>
-    <link>http://nurhamim.net/tags/wordpress/</link>
-    <description>Recent content in wordpress on Catatan Cah Ndeso :)</description>
+    <title>WordPress on Catatan Cah Ndeso :)</title>
+    <link>https://nurhamim.net/tags/wordpress/</link>
+    <description>Recent content in WordPress on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 18:34:17 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 20:49:38 +0700</lastBuildDate>
     
-	<atom:link href="http://nurhamim.net/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nurhamim.net/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Instalasi CMS WordPress di Cyber Panel</title>
+      <link>https://nurhamim.net/2019/panel7/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:38 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/panel7/</guid>
+      <description>Hello Guyss, masih pada semangat yaa untuk belajar mengenai control panel, tutorial kali ini melanjutkan tutorial sebelumnya, dimana sebelumnya kita telah belajar bagaiamana cara membuat website di Cyber Panel .
+Sesuai dengan judul tutorial kali ini kita akan menginstall CMS WordPress di control panel Cyber Panel.
+Oke, langsung saja ke langkah – langkah installasinya ya
+Pertama, silakan login terlebih dahulu ke control panel cyber panel Anda.
+Kedua, masuk kemenu Website &amp;gt;&amp;gt; List Website &amp;gt;&amp;gt; Klik pada menu launch , seperti pada gambar dibawah ini</description>
+    </item>
+    
+    <item>
       <title>S3 Storage untuk Backup WordPress</title>
-      <link>http://nurhamim.net/2019/centos22/</link>
+      <link>https://nurhamim.net/2019/centos22/</link>
       <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos22/</guid>
+      <guid>https://nurhamim.net/2019/centos22/</guid>
       <description>Pernahkan Anda mengalami kehilangan data penting pada website Anda ?
 Terlebih bagi seorang e-commerce yang menyimpan ribuan data pelanggan yang sangat – sangat penting, dan si e-commerce menggunakan CMS WordPress untuk membuat lapak jual belinya.
 Disini saya akan share bagaimana sih cara mudah untuk melakukan backup WordPress kita ke salah satu penyimpanan Data Cloud sepertihalnya S3 Protokol ?.
@@ -25,10 +38,10 @@ Oke saya harap santai sejenak yaa jangan tegang hehehehe, pada tutorial kali say
     
     <item>
       <title>Instalasi WordPress Menggunakan LAMP Di CentOS 7</title>
-      <link>http://nurhamim.net/2019/centos21/</link>
+      <link>https://nurhamim.net/2019/centos21/</link>
       <pubDate>Sat, 06 Jul 2019 18:34:13 +0700</pubDate>
       
-      <guid>http://nurhamim.net/2019/centos21/</guid>
+      <guid>https://nurhamim.net/2019/centos21/</guid>
       <description>WordPress adalah salah satu CMS yang sering dan bahkan sangat banyak digunakan, semua rata – rata menggunakan WordPres mulai dari website pribadi, pendidikan (sekolah), Industri Perusahaan dan masih banyak yang lainnya.
 Kenapa harus pakai WordPress ?
 Alasan pribadi saya memakai WordPress karena WordPress bisa digunakan secara Free namun ada juga yang berbayar, dan sangat banyak developer yang mensupport untuk menggunakan CMS WordPress.
