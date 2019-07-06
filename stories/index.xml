@@ -6,10 +6,21 @@
     <description>Recent content in Stories on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jul 2019 19:55:04 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2019 05:21:26 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/stories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Workshop DNS Server</title>
+      <link>https://nurhamim.net/stories/part2/</link>
+      <pubDate>Sun, 07 Jul 2019 05:21:26 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/stories/part2/</guid>
+      <description>Sabtu, 30 Maret 2019, salah satu tanggal dan bulan yang sangat menyenangkan, karen pada hari itulah saya bisa sharing IT mengenai DNS Server. Selain itu saya juga bisa sharing pengalaman enak tidak enaknya bekerja di dunia perhostingan ,, eitss banyak enaknya hehehe 🙂
+Seperti yang kita ketahui tanpa adanya DNS Server maka kita akan sangat – sangat kesulitan untuk mengakses sebuah website ataupun forum atau yang lainnya.
+Tanpa adanya DNS Server maka Anda tidak dapat mengakses nurhamim.</description>
+    </item>
     
     <item>
       <title>Catatan Akhir Tahun 2018</title>

@@ -2,9 +2,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://nurhamim.net/categories/control-panel/</loc>
+      <loc>https://nurhamim.net/</loc>
       
-      <lastmod>2019-07-06T20:49:43+07:00</lastmod>
+      <lastmod>2019-07-07T05:21:26+07:00</lastmod>
       
       
       
@@ -14,7 +14,29 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/</loc>
+      <loc>https://nurhamim.net/stories/</loc>
+      
+      <lastmod>2019-07-07T05:21:26+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/stories/part2/</loc>
+      
+      <lastmod>2019-07-07T05:21:26+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/categories/control-panel/</loc>
       
       <lastmod>2019-07-06T20:49:43+07:00</lastmod>
       
@@ -841,18 +863,6 @@
       <lastmod>2019-07-05T19:55:04+07:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/stories/</loc>
-      
-      <lastmod>2019-07-05T19:55:04+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>

@@ -5,8 +5,47 @@
     <description>Recent content in Catatan Cah Ndeso :) on Catatan Cah Ndeso :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 20:49:43 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2019 05:21:26 +0700</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Workshop DNS Server</title>
+      <link>https://nurhamim.net/stories/part2/</link>
+      <pubDate>Sun, 07 Jul 2019 05:21:26 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/stories/part2/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/workshop-dns/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Sabtu, 30 Maret 2019&lt;/em&gt;&lt;/strong&gt;, salah satu tanggal dan bulan yang sangat menyenangkan, karen pada hari itulah saya bisa sharing IT mengenai DNS Server. Selain itu saya juga bisa sharing pengalaman enak tidak enaknya bekerja di dunia perhostingan ,, eitss banyak enaknya hehehe 🙂&lt;/p&gt;
+
+&lt;p&gt;Seperti yang kita ketahui tanpa adanya DNS Server maka kita akan sangat – sangat kesulitan untuk mengakses sebuah website ataupun forum atau yang lainnya.&lt;/p&gt;
+
+&lt;p&gt;Tanpa adanya DNS Server maka Anda tidak dapat mengakses nurhamim.net, klas.or.id, klim.or.id atau facebook.com lalu bagaimana cara mengakses website tersebut tanpa adanya DNS Server, Anda dapat mengaksesnya menggunakan IP Server dari masing – masing website yang dicontohkan diatas.&lt;/p&gt;
+
+&lt;p&gt;Apakah Anda sanggup menghafalkan IP Server Anda di masing – masing website, saya rasa seorang manusia yang biasa – biasa saja akan sangat kesulitan untuk mengakses website dengan menggunakan IP Address.&lt;/p&gt;
+
+&lt;p&gt;Pada workhop tersebut kita belajar bersama – sama tanpa memandang guru, siswa, mahasiswa, dosen, dll, kita semua sama manusia yang haus akan ilmu yang bermanfaat. Tempat workshop yang adem dan antusiasme teman – teman sekalian menambah rasa senang saya untuk berbagi ilmu mengenai apa itu DNS Server, bagaimana cara kerja DNS Server, Cara membuat DNS Server, selain itu saya juga sempat sharing mengenai Industri Domain, jadi yang ikut whorkshop DNS selesai ikut whorkshop yang punya jiwa usaha bisa menjadi reseller untuk jualan domain tentunya hehehe ,,, 🙂&lt;/p&gt;
+
+&lt;p&gt;Itulah sedikit cerita tentang acara whorkshop DNS Server di &lt;a href=&#34;https://narotama.ac.id/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Universitas Narotama&lt;/a&gt; Surabaya Jawa Timur.&lt;/p&gt;
+
+&lt;p&gt;Tak luput pula saya sangat – sangat berterima kasih kepada teman – teman komunitas arek linux suroboyo &lt;a href=&#34;https://klas.or.id/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;KLAS&lt;/a&gt; , komunitas linux malang &lt;a href=&#34;https://www.klim.or.id/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;KLIM&lt;/a&gt; dan &lt;a href=&#34;https://www.cloudkilat.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CloudKilat&lt;/a&gt; salah satu sponsor yang sudah men-support VPS untuk kita belajar membuat DNS Server Mandiri.&lt;/p&gt;
+
+&lt;p&gt;Berikut beberapa foto dokumentasi hasil dari whorkshop DNS Server.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/workshop-dns/2.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/workshop-dns/3.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/workshop-dns/4.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/workshop-dns/5.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/workshop-dns/6.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/workshop-dns/7.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/workshop-dns/8.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/workshop-dns/9.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk materi dapat teman – teman unduh dengan cara klik &lt;a href=&#34;https://s.id/lokakaryaDNS_Server&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;DISINI&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat bertemu di lain waktu teman – teman sekalian, terima kasih banyak atas antusiamenya pada whorkshop DNS Server kali ini 🙂&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Menggunakan FTP di Cyber Panel</title>
@@ -1354,76 +1393,6 @@ hamimaja@hamimaja:~$
 &lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Pada tahapan ini DNS Server Mandiri di CentOS 7 Anda telah berhasil. Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos17/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/2019/centos17/</guid>
-      <description>&lt;p&gt;Pada tutorial tersebut kita juga dapat membuat database menggunakan mode CLI (Command Line Interface) nah untuk mempermudah Anda dalam pengelolaan Database Anda dapat menggunakan phpMyAdmin dimana phpMyAdmin sendiri berbasis Web Based.&lt;/p&gt;
-
-&lt;p&gt;Dimana yang dimaksuda database Anda dapat diakses melalui web browser dengan menggunakan phpMyAdmin.&lt;/p&gt;
-
-&lt;p&gt;Pada tutorial kali ini kita akan menginstall phpMyAdmin menggunakan webserver apache bagi yang belum install webserver apache silakan install terlebih dahulu.&lt;/p&gt;
-
-&lt;p&gt;Oke langsung saja berikut ini langkah – langkah untuk melakukan installasi dan konfigurasi phpMyAdmin di CentOS 7&lt;/p&gt;
-
-&lt;p&gt;Pertama, silakan akses server CentOS 7 Anda masing – masing,&lt;/p&gt;
-
-&lt;p&gt;Kedua, pastikan Anda telah menginstall database server MariaDB atau MySQL dan webserver apache&lt;/p&gt;
-
-&lt;p&gt;Ketiga, silakan melakukan pembaharuan atau update sistem operasi CentOS 7 Anda.&lt;/p&gt;
-
-&lt;p&gt;Berikutnya, menginstall atau menambahkan repository epel di CentOS 7 dengan cara menjalakan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install epel-release
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika suda, silakan install phpMyAdmin di CentOS 7 dengan cara menjalankan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# yum install phpmyadmin
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Silakan tunggu proses instalasi sampai selesai, jika sudah selesai proses installasinya coba akses alamat IP server Anda /phpmyadmin&lt;/p&gt;
-
-&lt;p&gt;Saya yakin 100% tidak bisa wkwkkwkwkw 😀 .&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Santai setelah installasi kita perlu melakukan konfigurasi phpMyAdmin, untuk file yang harus kita konfigurasi sendiri berada di /etc/httpd/conf.d/phpMyAdmin.conf . Untuk kebutuhan edit file konfigurasi dapat menggunakan editor vim atau nano, sesuai dengan keinginan Anda masing – masing, disini penulis menggunakan vim&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# vim /etc/httpd/conf.d/phpMyAdmin.conf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Berikut isi dari file phpMyAdmin secara default&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Silakan menambahkan perintah Require all granted dan disabled ip localhost seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah, silakan simpan file phpMyAdmin lalu melakukan reload atau restart terhadap webserver apache kita dengan cara menjalankan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-hamim01 ~]# systemctl restart httpd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika, sudah silakan akses kembali IP server disertai /phpmyadmin, insya Allah work 100% ganss ehhehehe, hasil seperti berikut ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk loginnya secara default masih menggunakan root apabila Anda belum membuat user baru, untuk passwordnya password root database yang telah Anda buat pada saat Anda installasi database sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Berikut tampilan dari phpMyAdmin&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada tahap ini Anda telah berhasil installasi dan konfigurasi phpmyadmin, bagaima simple kan intinya ada niat untuk belajar gans,&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba dan semoga bermanfaat bagi kita semua :)&lt;/p&gt;
 </description>
     </item>
     
