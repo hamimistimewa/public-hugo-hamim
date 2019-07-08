@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/navigasi-ke-karakter-tertentu-dalam-satu-baris/" />
+  <link rel="next" href="https://nurhamim.net/navigasi-ke-posisi-sebelumnya/" />
+  <link rel="canonical" href="https://nurhamim.net/navigasi-antar-baris/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Navigasi Antar Baris | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Navigasi Antar Baris | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Navigasi Antar Baris",
+    "headline" : "Navigasi Antar Baris",
+    "description" : "Pada kesempatan kali ini kita akan mempelajari bagaimana cara berpindah antar baris di Vim. Di Vim istilah yang digunakan untuk berpindah kursor ke baris di Vim bisa dibilang jump .\nSebelum lanjut ke inti materi mari kita mencoba untuk menampilakn number layaknya editor yang lain. Untuk menampilkannya dapat dilakukan dengan cara megetikkan perintah berikut\n:set number  Maka hasilnya akan seperi pada gambar di bawah ini\nJump ke Nomor Baris Tertentu Pada navigasi salah satu teknik jump yang paling gampang.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 03:13:23 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 03:13:23 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/navigasi-antar-baris\/",
+    "wordCount" : "220",
+    "keywords" : [ "Vim", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Navigasi Antar Baris</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/teks-editor/"> TEKS EDITOR </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>Pada kesempatan kali ini kita akan mempelajari bagaimana cara berpindah antar baris di Vim. Di Vim istilah yang digunakan untuk berpindah kursor ke baris di Vim bisa dibilang jump .</p>
+
+<p>Sebelum lanjut ke inti materi mari kita mencoba untuk menampilakn number layaknya editor yang lain. Untuk menampilkannya dapat dilakukan dengan cara megetikkan perintah berikut</p>
+
+<pre><code class="language-bash">:set number
+</code></pre>
+
+<p>Maka hasilnya akan seperi pada gambar di bawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim04/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="jump-ke-nomor-baris-tertentu">Jump ke Nomor Baris Tertentu</h3>
+
+<p>Pada navigasi salah satu teknik jump yang paling gampang. Cara penggunaannya ada 2 cara diantaranya</p>
+
+<ol>
+<li>Menggunakan command</li>
+<li>Menggunakan ke stroke</li>
+</ol>
+
+<p>Jika berada di mode normal yang paling enak mengguanakan metode yang ke 2 , perhatikan contoh pada gambar di bawah</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim04/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada gambar di atas kursor kita berada di baris nomor 1 <strong><html></strong> , jika ingin berpindah ke baris nomor 5 dengan menggunakan metode 1, perintah yang digunakan adalah</p>
+
+<pre><code class="language-bash">: 10
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim04/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Nah jika kita ingin berpindah ke baris misalnya baris <strong>12</strong> dengan menggunakan metode yang ke 2, perintah yang digunakan adalah <strong>12gg</strong> . Maka kursor akan bepindah ke baris nomor <strong>12</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim04/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Nah sekarang misalnya di codingan atau konfig kita terdapat sangat banyak misal sampai <strong>150</strong> baris bagaimana kita langsung jump ke akhir terakhir (end) dengan cara menekan huruf kapital <strong>G</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/teks%20editor%20vim/vim04/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Oke cukup sekian mengenai berpindah antar baris di Vim, semoga dapat membantu Anda, dan selamat mencoba</p>
+
+<p>Referensi : Ebook Vim Untuk Semua</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/navigasi-antar-baris/>https://nurhamim.net/navigasi-antar-baris/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/vim/">
+                    #Vim</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/navigasi-ke-karakter-tertentu-dalam-satu-baris/" class="prev" rel="prev" title="Navigasi ke Karakter Tertentu dalam Satu Baris"><i class="iconfont icon-left"></i>&nbsp;Navigasi ke Karakter Tertentu dalam Satu Baris</a>
+         
+        
+        <a href="https://nurhamim.net/navigasi-ke-posisi-sebelumnya/" class="next" rel="next" title="Navigasi ke Posisi Sebelumnya">Navigasi ke Posisi Sebelumnya&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/cara-instalasi-php-7-di-centos-7/" />
+  <link rel="next" href="https://nurhamim.net/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7/" />
+  <link rel="canonical" href="https://nurhamim.net/instalasi-dan-konfigurasi-database-mariadb-di-centos-7/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7",
+    "headline" : "Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7",
+    "description" : "Tahukan Anda tentang apa itu Database ?\nLalu buat apa sih fungsinya ?\nOke jika Anda penasang tentang pengertian fungsi database, berikut ini merupakan pengertian dan fungsi dari database .\nDatabase Server merupakan sebuah program komputer yang menyediakan layanan pengolahan berbasis data dan melayani komputer atau program aplikasi basis data yang menggunakan model client – server.\nFungsi Database Server :\n Untuk menyimpan beberapa data yang bisa dilakukan dalam 1 lokasi Penyimpanan yang aman karena fasilitas yang di server tidak ada di komputer biasa Manajemen sistem Mempermudah dan mecari dalam lingkup database  Setiap client dapat mengakses secara bersamaan",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 09:34:17 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 09:34:17 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/instalasi-dan-konfigurasi-database-mariadb-di-centos-7\/",
+    "wordCount" : "836",
+    "keywords" : [ "mariadb","CentOS 7","Linux","database", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Tahukan Anda tentang apa itu Database ?</p>
+
+<p>Lalu buat apa sih fungsinya ?</p>
+
+<p>Oke jika Anda penasang tentang pengertian fungsi database, berikut ini merupakan pengertian dan fungsi dari database .</p>
+
+<p>Database Server merupakan sebuah program komputer yang menyediakan layanan pengolahan berbasis data dan melayani komputer atau program aplikasi basis data yang menggunakan model client – server.</p>
+
+<p>Fungsi Database Server :</p>
+
+<ul>
+<li>Untuk menyimpan beberapa data yang bisa dilakukan dalam 1 lokasi</li>
+<li>Penyimpanan yang aman karena fasilitas yang di server tidak ada di komputer biasa</li>
+<li>Manajemen sistem</li>
+<li>Mempermudah dan mecari dalam lingkup database</li>
+</ul>
+
+<p>Setiap client dapat mengakses secara bersamaan</p>
+
+<p>Database server sendiri bisa dibilang cukup banyak, yang biasanya sering digunakan yaitu MySQL, MariaDB dan PostgreSQL dan yang lainnya.</p>
+
+<p>Nah pada tutorial kali ini saya akan share bagaimana cara instalasi dan konfigurasi database MariaDB di CentOS 7.</p>
+
+<p>Pertama, silakan akses server Anda.</p>
+
+<p>Kedua, jalankan baris perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# yum install mariadb-server mariadb-client -y
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan tunggu proses instalasi sampai selesai jika sudah, selanjutnya Anda silakan start dan enable lalu melihat status dari database MariaDB telah berjalan dengan normal atau running. Fungsi enable sendiri berfunsi untuk menjalankan service secara otomatis apabila nantinya server dilakukan reboot atau restart, berikut perintah yang digunakan</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# 
+[root@srv-hamim01 ~]# systemctl start mariadb
+[root@srv-hamim01 ~]# systemctl status mariadb
+● mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; disabled; vendor preset: disabled)
+   Active: active (running) since Rab 2019-02-06 19:00:45 WIB; 14s ago
+  Process: 1473 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=0/SUCCESS)
+  Process: 1394 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 1472 (mysqld_safe)
+   CGroup: /system.slice/mariadb.service
+           ├─1472 /bin/sh /usr/bin/mysqld_safe --basedir=/usr
+           └─1634 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/log/maria...
+
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: MySQL manual for more instructions.
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: Please report any problems at http://mariadb.org/jira
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: The latest information about MariaDB is available at http://mariadb.org/.
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: You can find additional information about the MySQL part at:
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: http://dev.mysql.com
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: Consider joining MariaDB's strong and vibrant community:
+Peb 06 19:00:43 srv-hamim01.localhost mariadb-prepare-db-dir[1394]: https://mariadb.org/get-involved/
+Peb 06 19:00:43 srv-hamim01.localhost mysqld_safe[1472]: 190206 19:00:43 mysqld_safe Logging to '/var/log/mariadb/mariadb.log'.
+Peb 06 19:00:43 srv-hamim01.localhost mysqld_safe[1472]: 190206 19:00:43 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Peb 06 19:00:45 srv-hamim01.localhost systemd[1]: Started MariaDB database server.
+[root@srv-hamim01 ~]# 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikutnya, melakukan konfigurasi datatabase MariaDB, berikut perintahnya</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# 
+[root@srv-hamim01 ~]# mysql_secure_installation 
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user.  If you've just installed MariaDB, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorisation.
+
+Set root password? [Y/n] Y
+New password: ISIKAN_PASSWORD_ANDA
+Re-enter new password: ISIKAN_PASSWORD_ANDA
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] Y
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] Y
+ ... Success!
+
+By default, MariaDB comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] Y
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] Y
+ ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB!
+[root@srv-hamim01 ~]# 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila Anda telah melakukan konfigurasi, selanjutnya mari kita coba login ke database MariaDB Anda lalu mencoba membuat database baru dengan menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# 
+[root@srv-hamim01 ~]# mysql -u root -p
+Enter password: ISIKAN_PASSWORD_DATABASE_ANDA
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 5.5.60-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]&gt; create database Hai;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| Hai                |
+| mysql              |
+| performance_schema |
++--------------------+
+4 rows in set (0.00 sec)
+
+MariaDB [(none)]&gt; quit
+Bye
+[root@srv-hamim01 ~]#
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/database/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Oke, itulah cara untuk menginstall dan melakukan konfigurasi database MariaDB di sistem operasi CentOS 7.</p>
+
+<p>Selamat mencoba semoga bermanfaat 🙂 .</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/instalasi-dan-konfigurasi-database-mariadb-di-centos-7/>https://nurhamim.net/instalasi-dan-konfigurasi-database-mariadb-di-centos-7/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/mariadb/">
+                    #mariadb</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/database/">
+                    #database</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/cara-instalasi-php-7-di-centos-7/" class="prev" rel="prev" title="Cara Instalasi PHP 7 di CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Cara Instalasi PHP 7 di CentOS 7</a>
+         
+        
+        <a href="https://nurhamim.net/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7/" class="next" rel="next" title="Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7">Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

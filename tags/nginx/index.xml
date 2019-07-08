@@ -13,10 +13,10 @@
     
     <item>
       <title>Mengenal Apa itu Web Server</title>
-      <link>https://nurhamim.net/2019/centos11/</link>
+      <link>https://nurhamim.net/mengenal-apa-itu-web-server/</link>
       <pubDate>Sat, 06 Jul 2019 09:33:59 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos11/</guid>
+      <guid>https://nurhamim.net/mengenal-apa-itu-web-server/</guid>
       <description>Hai kawan – kawan, kalau sebelumnya saya share mengenai Hosting dan yang lainnya, sepertinya kurang greget yaa, nah kali ini saya akan share mengenai web server, apasih itu web server ?
 Web server adalah perangkat lunak yang memberikan layanan atau service kepada client untuk menerima request HTTP maupun HTTPS dari client yang dikenal. Setelah itu, web server akan mengirimkan request yang diminta oleh client dalam bentuk halaman web, yang secara umum berbentuk dokumen HTML.</description>
     </item>

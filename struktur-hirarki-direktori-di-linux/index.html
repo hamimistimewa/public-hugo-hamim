@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/memulai-dengan-linux/" />
+  <link rel="next" href="https://nurhamim.net/e-book-perintah-dasar-di-linux/" />
+  <link rel="canonical" href="https://nurhamim.net/struktur-hirarki-direktori-di-linux/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Struktur Hirarki Direktori di Linux | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Struktur Hirarki Direktori di Linux | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Struktur Hirarki Direktori di Linux",
+    "headline" : "Struktur Hirarki Direktori di Linux",
+    "description" : "Pada kesempatan yang bahagia ini hehehe, saya akan sharing kembali mengenai linux, pada tulisan sebelumnya saya telah sharing dan cerita awal mula saya kenal linux serta mengetahui tentang apa itu linux\nNah pada kali ini saya akan share tentang struktur direktori internal di linux, menurut saya mengetahui struktur file atau direktori itu sebuah keharusan yaa, dengan kita mengetahui struktur direktori maka, kita akan lebih mudah untuk mempelajari system tersebut.\nStruktur file atau direktori yang berada di sebuah sistem itu berbeda – beda, tergantung dari arsitektur kernel yang diguakan.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 04:50:22 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 04:50:22 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/struktur-hirarki-direktori-di-linux\/",
+    "wordCount" : "671",
+    "keywords" : [ "Linux","CentOS 7", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Struktur Hirarki Direktori di Linux</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Pada kesempatan yang bahagia ini hehehe, saya akan sharing kembali mengenai linux, pada tulisan sebelumnya saya telah sharing dan cerita awal mula saya kenal linux serta mengetahui tentang apa itu linux</p>
+
+<p>Nah pada kali ini saya akan share tentang struktur direktori internal di linux, menurut saya mengetahui struktur file atau direktori itu sebuah keharusan yaa, dengan kita mengetahui struktur direktori maka, kita akan lebih mudah untuk mempelajari system tersebut.</p>
+
+<p>Struktur file atau direktori yang berada di sebuah sistem itu berbeda – beda, tergantung dari arsitektur kernel yang diguakan. Nah untk struktur file atau direktori di linux sendiri berbeda dengan di sistem operasi lainnya contoh Windows  , Istilah atau hirarki yang digunakan untuk struktur direktori di linux yaitu pohon terbalik, yang dimulai dari 1 titik / 1 inti, kemudian bercabang, ranting, dan daun.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Gambar di atas bila di istilahkan di linux maka akan menjadi sebagai berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/2.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Gambar di atas sangat jelas bahwasannya hirari yang digunakan oleh system operasi linux bercabang mulai dari privileages tertinggi yaitu root yang ditandai dengan tanda slas (/). Struktur hirarki file atau direktori di sistem operasi linux sendiri ada banyak menyesuaikan dengan arsitektur atau distribusi linux yang kita gunakan. Sebagai contoh berikut di bawah ini contoh gambaran mengenai hirarki direktori linux.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Mari kita bahas satu persatu mengenai struktur direktori yang berada pada gambar diatas, disini penulis menggunakan Ubuntu 18.04 LTS</p>
+
+<p><strong>Bin</strong> : Isi dari direktori bin sendiri yaitu file (executable) atau binari atau command dari sistem linux yang dapat kita eksekusi secara langsung oleh user atau pengguna. Contohnya seperti kita menjalankan command line , ls , mkdir dll. Berikut contohnya :</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Boot</strong> : Direktori ini berisi file boot loader termasuk boot_loader, kernel, initrd, memtest, config device dan system.mapping yang ditbuhkan dan digunakan pada saat sistem melakukan booting (reboot), selain itu ada juga grub, yang biasanya di pakai untuk dualbot sistem operasi.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Dev</strong> : Direktori ini berisi sebauh file konfigurasi dari hadware laptop atau komputer yang kita gunakan, beserta modul – modul driver yang ada. Contohnya : dvd, cdrom, /dev/sda, sda1, sda2, dll.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Etc</strong> : Direktori ini berisi file – file yang digunakan untuk mengkonfigurasi layanan (service) yang berada di sistem linux. File nya biasanya berbentuk script atau file dengan tipe text contohnya : dns , webserver, network dll</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Home</strong> : Direktori ini berisi data pengguna (user) yang berada di sistem linux, contohnya pada gambar di bawah ini, pengguna dari sistem operasi linux yaitu hamimaja</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Lib</strong> : Direktori ini berisi file – file pendukung / pustaka yang dibutuhkan oleh program baik file binari dam executable, yang berada di diretori /bin</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Sbin</strong> : Direktori ini berisi file executable atau program atau perintah yang digunakan oleh super user (root) seperti halnya perintah ifconfig, yang digunakan untuk menampilkan informasi tentang network atau jaringan</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Root</strong> : Merupakan file home direktori dari superuser (root) , berikut contohnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/11.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Opt</strong> : Dirktori ini digunakan untuk perangkat lunak atau aplikasi pihak ketiga dan bukan utilitas dalam sistem linux, contohnya : LAMP, java dll.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/12.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Proc</strong>: Direktori ini berisi file dari hasi pemrosesan (buffer) yang digunakan untuk menginformasikan proses yang sedang berjalan di linux, conntohnya hasil buffer dari : meminfo, cpuinfo, version, uptime, dll</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/13.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Mnt</strong> : Direktori ini berfungsi untuk menampung tautan antara storage device dengan sistem.</p>
+
+<p><strong>Tmp</strong> : Direktori ini merupakan sebuah direktori sementara yang digunakan untuk menyimpan file sementara dan akan dihapus ketika sistem di-reboot (dijalankan kembali). Berikut contoh file yang sedang disimpan</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/14.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Usr</strong> : Direktori ini berisi file paket aplikasi, program, dokumentasi, konfigurasi, binari, library dan source aplikasi pada linux, yang dapat proses atau di jalankan/ execute, oleh semua pengguna (user) linux, yang merupakan utilitas atau penggunaan dari aplikasi di dalam sistem.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/15.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Var</strong> : Direktori ini berisi variabel sistem seperti logs, file spool untuk printer, webserver, mail, dan proses yang dilakukan, file logs, dan sebagainya.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/hirarki-linux/16.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Srv</strong> : Direktori ini merupakan direktori yang berisi file service dari utilitas / program pada sistem GNU/Linux.</p>
+
+<p>Itulah beberapa hirarki direktori di linux yang dapat kita pelajari bersama, cukup sekian untuk tutorial kali ini, semoga bermanfaat.</p>
+
+<p>Next Time kita akan mempelajari tentang Basic Command Line di Linux.</p>
+
+<p>Referensi :</p>
+
+<ul>
+<li>Ebook Linux</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/struktur-hirarki-direktori-di-linux/>https://nurhamim.net/struktur-hirarki-direktori-di-linux/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/memulai-dengan-linux/" class="prev" rel="prev" title="Memulai Dengan Linux"><i class="iconfont icon-left"></i>&nbsp;Memulai Dengan Linux</a>
+         
+        
+        <a href="https://nurhamim.net/e-book-perintah-dasar-di-linux/" class="next" rel="next" title="E-Book Perintah Dasar Di Linux">E-Book Perintah Dasar Di Linux&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

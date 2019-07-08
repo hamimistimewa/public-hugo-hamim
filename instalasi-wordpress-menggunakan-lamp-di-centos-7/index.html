@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/panduan-instalasi-dan-konfigurasi-dns-master-slave-di-centos-7/" />
+  <link rel="next" href="https://nurhamim.net/s3-storage-untuk-backup-wordpress/" />
+  <link rel="canonical" href="https://nurhamim.net/instalasi-wordpress-menggunakan-lamp-di-centos-7/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi WordPress Menggunakan LAMP Di CentOS 7 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Instalasi WordPress Menggunakan LAMP Di CentOS 7 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi WordPress Menggunakan LAMP Di CentOS 7",
+    "headline" : "Instalasi WordPress Menggunakan LAMP Di CentOS 7",
+    "description" : "WordPress adalah salah satu CMS yang sering dan bahkan sangat banyak digunakan, semua rata – rata menggunakan WordPres mulai dari website pribadi, pendidikan (sekolah), Industri Perusahaan dan masih banyak yang lainnya.\nKenapa harus pakai WordPress ?\nAlasan pribadi saya memakai WordPress karena WordPress bisa digunakan secara Free namun ada juga yang berbayar, dan sangat banyak developer yang mensupport untuk menggunakan CMS WordPress.\nSelain itu WordPress salah satu CMS yang bisa dibilang tidak terlalu rumit seperti CMS – CMS yang lainnya.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 18:34:13 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 18:34:13 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/instalasi-wordpress-menggunakan-lamp-di-centos-7\/",
+    "wordCount" : "938",
+    "keywords" : [ "wordpress","apache","CentOS 7","Linux", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi WordPress Menggunakan LAMP Di CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>WordPress adalah salah satu CMS yang sering dan bahkan sangat banyak digunakan, semua rata – rata menggunakan WordPres mulai dari website pribadi, pendidikan (sekolah), Industri Perusahaan dan masih banyak yang lainnya.</p>
+
+<p>Kenapa harus pakai WordPress ?</p>
+
+<p>Alasan pribadi saya memakai WordPress karena WordPress bisa digunakan secara Free namun ada juga yang berbayar, dan sangat banyak developer yang mensupport untuk menggunakan CMS WordPress.</p>
+
+<p>Selain itu WordPress salah satu CMS yang bisa dibilang tidak terlalu rumit seperti CMS – CMS yang lainnya.</p>
+
+<p>Untuk fitur WordPress dapat Anda lihat melalui tautan berikut : <a href="https://wordpress.org/about/features/" rel="nofollow noreferrer" target="_blank">FITUR WORDPRESS .</a></p>
+
+<p>Pada tutorial kali ini saya akan share bagaimana cara menginstall CMS WordPress menggunakan LAMP (Linux, Apache, MySQL or MariaDB, PHP) di CentOS 7.</p>
+
+<p>Langkah pertama yang harus kita lakuakan yaitu melakukan update sistem operasi CentOS 7 Anda dengan mengunaka perintah</p>
+
+<pre><code class="language-bash">[root@srv-tutorial ~]# yum update -y 
+</code></pre>
+
+<p>Silakan tunggu proses update sampai selesai, jika sudah silakan install atau menambahkan repository epel berikut perintahnya</p>
+
+<pre><code class="language-bash">[root@srv-tutorial ~]# yum install epel-release
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jikas sudah berikutnya barulah kita memasang atau install webserver apache terlebih dahulu dengan cara menjalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-tutorial ~]# yum install httpd -y
+</code></pre>
+
+<p>Tunggu proses installasi webserver apache sampai selesai, jika sudah pastikan webserver apache kita berjalan (running) dengan normal berikut perintahnya</p>
+
+<pre><code class="language-bash">[root@srv-tutorial ~]# systemctl start httpd
+[root@srv-tutorial ~]# systemctl enable httpd
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+[root@srv-tutorial ~]# systemctl status httpd
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah berikutnya silakan install Database terlebih dahulu, pada tutorial kali ini saya akan menggunakan MariaDB.</p>
+
+<p>Untuk installasi database dapat melihat pada tutorial sebelumnya mengenai instalasi database mariadb.</p>
+
+<p>Langkah selanjutnya silakan install modul php, php disini sangatlah penting karean CMS WordPress ditulis menggunakan php, Jika tidak ada module php maka, CMS WordPress tidak akan berjalan (running) . Php yang digunakan untuk installasi WordPress kali ini yaitu PHP 7.1 .</p>
+
+<p>Untuk instalasi php dapat melihat pada tutorial sebelumnya.</p>
+
+<p>Apabila semua komponen (webserver, php, database) telah berhasil diinstall, langkah selanjutnya membuat database untuk wordpress, silakan login ke database Anda lalu membuat database baru berikut contohnya</p>
+
+<pre><code class="language-bash">[root@srv-tutorial ~]# mysql -u root -p 
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 5.5.60-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]&gt; create database WordPress;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]&gt; grant all privileges on WordPress.* to 'isiusername-wp'@'localhost' identified by 'isikanpassword-wp';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]&gt; flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]&gt; exit
+Bye
+[root@srv-tutorial ~]# 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikutnya silakan pindah ke direktori /var/www/html/  lalu mengunduh file CMS WordPress , perintah untuk unduh file dapat menggunakan perintah wget , berikut link downlooadnya <a href="https://wordpress.org/latest.zip" rel="nofollow noreferrer" target="_blank">https://wordpress.org/latest.zip</a> , berikut contohnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Secara default file wordpress yang baru saja kita unduh berekstensi .zip dengan begitu silakan unzip atau extrack terlebih file wordpress tersebut dengan menggunakan perintah unzip [Nama File].zip , berikut contohnya</p>
+
+<p>Install service unzip terlebih dahulu dengan menggunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-tutorial html]# yum install unzip
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah, barulah kita eksekusi file .zip tersebut dengan menggukana perintah unzip, seperti berikut ini</p>
+
+<pre><code class="language-bash">[root@srv-tutorial html]# ls
+latest.zip
+[root@srv-tutorial html]# unzip latest.zip 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika file sudah di ekstrack, silakan pindah ke direktori wordpress yang baru saja kita ekstrack lalu copi file default wp-config-sample.php menjadi wp-config.php menggunakan perintah cp  berikut contohnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya silakan melakukan konfigurasi WordPress, yang dikonfigurasi hanyalah menyesuaikan konfigurasi database yang sebelumnya kita buat, mulai dari nama database, username, password database wordpress, berikut contoh konfigurasinya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Gambar diatas silakan sesuaikan dengan konfigurasi database yang telah Anda buat sebelumnya . Jika sudah langkah selanjutnya yaitu memberi hak akses dan hak owner pada direktori /wordpress dengan mengguakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-tutorial wordpress]# chown -R apache:apache /var/www/html/wordpress/
+[root@srv-tutorial wordpress]# chmod -R 755 /var/www/html/wordpress/
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikutnya, kita akan membut file VirtualHost untuk wordpress.</p>
+
+<p>Biasanya banyak sekali yang bertanya gimana sih caranya membuat banyak website di apache ?</p>
+
+<p>Nah kalau Anda menggunkaan apache dan Anda ingin membuat banyak website maka Anda hanya perlu membuat VirtualHost, oke semoga tercerahkan mengenai VirtualHost.</p>
+
+<p>Untuk membuat VirtualHost wordress dapat dilakukan di direktori /etc/httpd/conf.d/ . silakan buat file konfiugurasi dengan ekstensi .conf seperti berikut contohnya</p>
+
+<pre><code class="language-bash">[root@srv-tutorial wordpress]# cd /etc/httpd/conf.d/
+[root@srv-tutorial conf.d]# 
+[root@srv-tutorial conf.d]# vim wordpress.conf
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut contoh file VirtualHost</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/11.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Keterangan :</p>
+
+<ul>
+<li>ServerName # Isikan nama domain atau IP Server</li>
+<li>ServerAdmin # Isikan email Anda (optional)</li>
+<li>DocumentRoot /var/www/html/wordpress # Letak direktori file wordpress</li>
+<li>ErrorLog logs/wordpress-infone.info-error_log # Letak file Error_Log</li>
+<li>CustomLog logs/wordpress-infone.info-access_log combined # Letak file Access_log</li>
+</ul>
+
+<p>Sebagai catatan, apabila Anda telah mempunya domain silakan mengarahkan domain Anda ke IP VPS Anda dengan cara menambahkan A record pada DNS Management Domain jika Anda bingung silakan menghubungi pihak penyedia domain Anda untuk menanyakan mengenai A record domain tersebut, atau Anda dapat membuat DNS Server Mandiri.</p>
+
+<p>Selanjutnya, silakan restart webserver apache dan database Anda menggunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-tutorial conf.d]# systemctl restart httpd
+[root@srv-tutorial conf.d]# systemctl restart mariadb
+</code></pre>
+
+<p>Selanjutnya, melakukan instalasi wordpress silakan akses domain infone.info/wp-admin atau IP Server/wp-admin yang telah di daftarkan di file VirtualHost pada browser seperti berikut hasilnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/12.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Gambar diatas silakan pilih bahasa instalasi yang ingin digunakan, disini saya memilih bahasa English (United States) klik Continue untuk melanjutkan proses installasi</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/13.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Gambar diatas silakan isikan Site Title / Judul Situs (bebas) dan isikan username beserta password login ke Administrator WordPress. Jika sudah klik tombol Install WordPress .</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/14.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Oke, gambar diatas menandakan CMS WordPress kita telah selesai dan berhasil di install silakan klik tombol Log in untuk masuk ke Dasboard Administrator silakan isikan username dan password yang telah dibuat sebelumnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/15.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika berhasil maka Anda akan diarahkan langsung ke tampilan dasboard WordPress berikut hasilnya.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/16.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Oke, pada tahap ini Anda telah berhasil menginstall CMS WordPress di VPS dengan sistem Operasi CentOS 7.</p>
+
+<p>Selamat mencoba semoga bermnafaat, selamat mencoba 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/instalasi-wordpress-menggunakan-lamp-di-centos-7/>https://nurhamim.net/instalasi-wordpress-menggunakan-lamp-di-centos-7/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/wordpress/">
+                    #wordpress</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/apache/">
+                    #apache</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/panduan-instalasi-dan-konfigurasi-dns-master-slave-di-centos-7/" class="prev" rel="prev" title="Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7</a>
+         
+        
+        <a href="https://nurhamim.net/s3-storage-untuk-backup-wordpress/" class="next" rel="next" title="S3 Storage untuk Backup WordPress">S3 Storage untuk Backup WordPress&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

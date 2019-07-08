@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/mengamankan-ssh-menggunakan-fail2ban/" />
+  <link rel="next" href="https://nurhamim.net/struktur-hirarki-direktori-di-linux/" />
+  <link rel="canonical" href="https://nurhamim.net/memulai-dengan-linux/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Memulai Dengan Linux | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Memulai Dengan Linux | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Memulai Dengan Linux",
+    "headline" : "Memulai Dengan Linux",
+    "description" : "Hai guyss, pada kesempatan kali ini saya akan sharing tentang LINUX, dan sesuai dengan judul tema pada kali ini nantinya kita akan mempelajari tentang apa itu Linux. Nah sebelum itu saya ingin cerita terlebih dahulu tentang pertama kali saya menggunakan linux hehehehe 🙂\nPada mulanya saya pribadi kenal Linux itu pada saat saya duduk di bangku SMK kelas 2, ya cuma sekedar tau saja hehehehe. Alhamdulillah-nya saat kelas 3 SMK saya ditugaskan untuk melaksanakan PKL (Praktek Kerja Lapangan), pada saat itu saya PKL di BLC Telkom Klaten yang berada di kota klaten Jawa tengah.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 04:50:15 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 04:50:15 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/memulai-dengan-linux\/",
+    "wordCount" : "577",
+    "keywords" : [ "Linux","CentOS 7", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Memulai Dengan Linux</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Hai guyss, pada kesempatan kali ini saya akan sharing tentang LINUX, dan sesuai dengan judul tema pada kali ini nantinya kita akan mempelajari tentang apa itu Linux. Nah sebelum itu saya ingin cerita terlebih dahulu tentang pertama kali saya menggunakan linux hehehehe 🙂</p>
+
+<p>Pada mulanya saya pribadi kenal Linux itu pada saat saya duduk di bangku SMK kelas 2, ya cuma sekedar tau saja hehehehe. Alhamdulillah-nya saat kelas 3 SMK saya ditugaskan untuk melaksanakan PKL (Praktek Kerja Lapangan), pada saat itu saya PKL di BLC Telkom Klaten yang berada di kota klaten Jawa tengah.</p>
+
+<p>Nah di BLC inilah saya mengenal lebih jauh tentang linux, bahkan di BLC hukumnya wajib bagi semua siswa PKL memakai Linux lo. Awalnya sih lumayan bingung menggunakan linux, karena taunya cuma windows saja pada saat SMK kelas 1 – 2 hehehhe. Akhirnya lama – kelamaan ternyata sangat enak sekali menggunakan Linux bahkan sekarang sampai jatuh cinta pada linux #Asyekk wkwkwk alhamdulillah sampai sekarang masih istiqomah menggunakan Linux.</p>
+
+<p>Linux itu menurut saya salah satu sistem operasi yang keren pakai (banget), udah free/ bebas lagi kurang apa coba, nikmat dah pokoknya pakai linux. Dengan linux saja dapat berkembang dan berfikir intinya nie otak gerak mikirin linux itu enak banget. Intinya linux tak seinstan mie goreng #ehh tak seinstan windows maksudnya, kenapa demikian ?</p>
+
+<p>Salah satu contoh yang sederhana kalau di linux kita mau install aplikasi tinggal menjalankan sourcode atau perintah di terminal, atau bisa juga installasi langsung menggunakan paket yang telah disediakan. Beda dengan windows mah terlalu enak #ehh tinggal klak klik klak klik jadi lo, beuh, mantull Dah 🙁</p>
+
+<p>Aneh nya kebanyakan orang banyak yang beranggapan dan bilang kalau linux itu susah, padahal menurut saya pribadi linux itu yang paling enak dan mantap untuk digunakan. Ya intinya happy banget menggunakan Linux Guyss. Oke langsung ke tema saja ya guyss,</p>
+
+<p>Tau nggak sih apa itu Linux ?</p>
+
+<p>Pada cerita sebelumnya saya banyak sekali bilang kata (linux) apa sih itu linux ? kok bisa – bisanya bilang enak emang gimana rasanya hihihihih. Jadi Linux itu sistem operasi, sama sepertihalnya windows, perbedaan yang mendasar windows itu bersifat closed sorce atau komersial atau berbayar (membeli license), sedangkan linux itu Free (bebas), bebas dalam artian bisa menjalankan program, mempelajari sourcode program yang ada di linuxnya sendiri, bahkan kita juga dapat mendistribusikan ulang lo guyss, bukan hanya itu guyss kita juga dapat meningkatkan program dan mempublikasikannya secara Free (bebas), beuh mantull kan guyss.</p>
+
+<p>Nah pada tulisan kali ini saya tidak akan membahas detail tentang sejarah dari linux sendiri yaa, (banyak guyss wkwk) mending baca secara mandiri ya pada tautan berikut :</p>
+
+<p><a href="https://id.wikipedia.org/wiki/Linux" rel="nofollow noreferrer" target="_blank">Sejarah linux Wikipedia</a>  or <a href="https://www.belajarlinux.org/belajar-linux-untuk-pemula/sejarah-perkembangan-linux-dari-masa-ke-masa/" rel="nofollow noreferrer" target="_blank">Belajar Linux Dot ORG</a></p>
+
+<p>Di Linux itu berbeda dengan sistem operasi yang lain guys, dengan kebebasannya maka, sangat banyak orang membuat atau mendistribusikan varian – varian linux yang biasanya dikenal dengan Distro (Distribution Sistem Operasi),</p>
+
+<p>Ada 3 varian linux yang sangat populer digunakan yaitu</p>
+
+<ol>
+<li>Debian</li>
+<li>RedHat</li>
+<li>Slackware</li>
+</ol>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/linux/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Nah dari varian distro di atas kemudia linux berkembang atau mempunyai banyak turunan di setiap variannya. Lihat pada contoh gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/linux/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Nah gambar diatas sangat jelas sekali yaa, contohnya saja yang paling banyak orang gunakan kalau Varian Distro Debian turunannya ada Ubuntu , Linux Mint dll . Sedangkan RedHat  ada CentOS dan Fedora dan sebenarnya masih banyak lagi distro – distro linux lainnya teman – teman dapat mengetahui berbagai macam distro linux pada tautan berikut : <a href="https://distrowatch.com/" rel="nofollow noreferrer" target="_blank">DISTROWATCH</a></p>
+
+<p>Oke mungkin cukup sekian untuk pemahaman singkat mengenai Linux yaa, semoga bermanfaat.</p>
+
+<p>Referensi :</p>
+
+<ul>
+<li>Google.com</li>
+<li>www.belajarlinux.org</li>
+<li>Ebook Sistem Operasi Linux.</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/memulai-dengan-linux/>https://nurhamim.net/memulai-dengan-linux/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/mengamankan-ssh-menggunakan-fail2ban/" class="prev" rel="prev" title="Mengamankan SSH menggunakan Fail2ban"><i class="iconfont icon-left"></i>&nbsp;Mengamankan SSH menggunakan Fail2ban</a>
+         
+        
+        <a href="https://nurhamim.net/struktur-hirarki-direktori-di-linux/" class="next" rel="next" title="Struktur Hirarki Direktori di Linux">Struktur Hirarki Direktori di Linux&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

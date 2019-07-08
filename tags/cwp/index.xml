@@ -13,10 +13,10 @@
     
     <item>
       <title>Instalasi CWP di CentOS 7</title>
-      <link>https://nurhamim.net/2019/panel2/</link>
+      <link>https://nurhamim.net/instalasi-cwp-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 20:49:09 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/panel2/</guid>
+      <guid>https://nurhamim.net/instalasi-cwp-di-centos-7/</guid>
       <description>Mempunyai server VPS tapi nggak bisa mengelolanya, hemm jangan kebingungan dulu guyss, disini saya akan share bagaimana cara installasi control panel CWP (Control Web Panel) di sistem operasi CentOS 7 .
 CWP (CentOS Web Panel) salah satu control panel yang powerfull yang memang dikhususkan untuk sistem operasi RHEL dan keturunannya yaitu CentOS, CWP juga dapat diinstal di CloudLinux.
 CWP bersifat open source (free) bebas digunakan tanpa harus membeli license.

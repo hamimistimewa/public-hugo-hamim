@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/mengenal-vim-mode/" />
+  <link rel="next" href="https://nurhamim.net/navigasi-antar-kata-di-vim/" />
+  <link rel="canonical" href="https://nurhamim.net/navigasi-dasar-di-vim/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Navigasi Dasar Di Vim | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Navigasi Dasar Di Vim | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Navigasi Dasar Di Vim",
+    "headline" : "Navigasi Dasar Di Vim",
+    "description" : "Pada tulisan sebelumnya kita telah membahas tentang jenis – jenis mode di vim, Nah untuk kali ini kita akan membahas tentang Navigasi dasar yang ada di vim.\nDengan menggunakan editor vim, maka mindset pemikiran kita juga harus di ubah, karena editor vim berbeda dengan editor – editor lainnya,\nDi Vim kita harus membiasakan diri dimana jari – jari kita harus setia dengan keyboard :), dengan berada di posisi home-row yaitu pada tombol a, s, d, f dan h,j, k,l :",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 03:13:11 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 03:13:11 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/navigasi-dasar-di-vim\/",
+    "wordCount" : "315",
+    "keywords" : [ "Vim", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Navigasi Dasar Di Vim</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/teks-editor/"> TEKS EDITOR </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Pada tulisan sebelumnya kita telah membahas tentang jenis – jenis mode di vim, Nah untuk kali ini kita akan membahas tentang Navigasi dasar yang ada di vim.</p>
+
+<p>Dengan menggunakan editor vim, maka mindset pemikiran kita juga harus di ubah, karena editor vim berbeda dengan editor – editor lainnya,</p>
+
+<p>Di Vim kita harus membiasakan diri dimana jari – jari kita harus setia dengan keyboard :), dengan berada di posisi home-row yaitu pada tombol a, s, d, f  dan h,j, k,l :</p>
+
+<p>Berikut kami telah menyediakan contoh untuk penggunaan navigasi</p>
+
+<p><strong>B</strong>ila gagal</p>
+
+<p>ya dicoba lagi 🙂</p>
+
+<p>Sampai kapan ?</p>
+
+<p>Sampai sukses !</p>
+
+<p>Contoh di atas kursor berada di huruf <strong>B</strong></p>
+
+<p>Untuk menggerakkan kursor ke kiri, kanan dan bawah , atas,  di vim ada 4 cara diantaranya dengan menekan huruf berikut :</p>
+
+<ol>
+<li><strong>h</strong> : Digunakan untuk menggerakkan kursor ke kiri</li>
+<li><strong>j</strong> : Digunakan untuk menggerakkan kursor ke bawah</li>
+<li><strong>k</strong> : Digunakan untuk menggerakkan kursor ke atas</li>
+<li><strong>l</strong> : Digunakan untuk menggerakkan kursor ke bawah</li>
+</ol>
+
+<p>Jika Anda ingin bergerak ke kanan maka Anda dapat menekan huruf <strong>l</strong> , perhatikan contoh dibawah maka kursor akan berpindah ke kanan yaitu huruf <strong>i</strong> .</p>
+
+<p>B<strong>i</strong>la gagal</p>
+
+<p>ya dicoba lagi 🙂</p>
+
+<p>Sampai kapan ?</p>
+
+<p>Sampai sukses !</p>
+
+<p>Tekan huruf <strong>h</strong> Anda ingin bergerak ke kiri lagi,</p>
+
+<p><strong>B</strong>ila gagal</p>
+
+<p>ya dicoba lagi 🙂</p>
+
+<p>Sampai kapan ?</p>
+
+<p>Sampai sukses !</p>
+
+<p>Untuk pindah ke bawah bisa dengan cara menekan tombol <strong>j</strong> , maka kursor akan berada di huruf <strong>y</strong>,seperti berikut</p>
+
+<p>Bila gagal</p>
+
+<p><strong>y</strong>a dicoba lagi 🙂</p>
+
+<p>Sampai kapan ?</p>
+
+<p>Sampai sukses !</p>
+
+<p>Nah jika Anda ingin bergerak ke atas lagi tinggal menekan tombol <strong>k</strong> , maka Anda akan kembali ke posisi semula</p>
+
+<p><strong>B</strong>ila gagal</p>
+
+<p>ya dicoba lagi 🙂</p>
+
+<p>Sampai kapan ?</p>
+
+<p>Sampai sukses !</p>
+
+<p>Oke diatas merupakan pengenalan tentang Navigasi dasar yang ada di Vim. Selanjutnya kita akan membahas lebih dalam lagi tentang navigasi yaa, tetap semangat dan selamat mencoba</p>
+
+<p>Referensi : Ebook Vim Untuk Semua</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/navigasi-dasar-di-vim/>https://nurhamim.net/navigasi-dasar-di-vim/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/vim/">
+                    #Vim</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/mengenal-vim-mode/" class="prev" rel="prev" title="Mengenal Vim Mode"><i class="iconfont icon-left"></i>&nbsp;Mengenal Vim Mode</a>
+         
+        
+        <a href="https://nurhamim.net/navigasi-antar-kata-di-vim/" class="next" rel="next" title="Navigasi Antar Kata di Vim">Navigasi Antar Kata di Vim&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

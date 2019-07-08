@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/pengenalan-dan-kenapa-linux/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/file-dan-direktori/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           File Dan Direktori | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="File Dan Direktori | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "File Dan Direktori",
+    "headline" : "File Dan Direktori",
+    "description" : "Pada tutorial kali ini saya masih tetap membahas mengenai comand line linux, namun untuk kali saya akan fokus pembahasan tentang navigasi direktori, membuat, dan memodifikasi file dan direktori di sistem operasi Linux.\nBerikut tabel content yang akan kita bahas satu - satu\n pwd cd clear ls mkdir touch rm cp mv rename ln tar and gzip  Mari kita bahas satu per satu content diatas :\npwd Perintah pwd digunakan untuk print (melihat) direktori dimana Anda berada.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-08 18:52:20 \x2b0700 WIB",
+    "dateModified" : "2019-07-08 18:52:20 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/file-dan-direktori\/",
+    "wordCount" : "872",
+    "keywords" : [ "Linux","Command Line", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">File Dan Direktori</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-08 itemprop="datePublished">July 8, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/linux-command-line/"> Linux Command Line </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>Pada tutorial kali ini saya masih tetap membahas mengenai comand line linux, namun untuk kali saya akan fokus pembahasan tentang navigasi direktori, membuat, dan memodifikasi file dan direktori di sistem operasi Linux.</p>
+
+<p>Berikut tabel content yang akan kita bahas satu - satu</p>
+
+<ul>
+<li>pwd</li>
+<li>cd</li>
+<li>clear</li>
+<li>ls</li>
+<li>mkdir</li>
+<li>touch</li>
+<li>rm</li>
+<li>cp</li>
+<li>mv</li>
+<li>rename</li>
+<li>ln</li>
+<li>tar and gzip</li>
+</ul>
+
+<p>Mari kita bahas satu per satu  content diatas :</p>
+
+<h4 id="pwd">pwd</h4>
+
+<p>Perintah <code>pwd</code> digunakan untuk print (melihat) direktori dimana Anda berada.</p>
+
+<pre><code class="language-bash">root@hamimaja:~# pwd
+/root
+root@hamimaja:~# 
+</code></pre>
+
+<h4 id="cd">cd</h4>
+
+<p>Perintah ini digunakan untuk berpindah posisi dari direktori A ke direktori yang lainnya.</p>
+
+<pre><code class="language-bash">root@hamimaja:~# 
+root@hamimaja:~# pwd
+/root
+root@hamimaja:~# 
+root@hamimaja:~# cd /home/hamimaja/
+root@hamimaja:/home/hamimaja# pwd
+/home/hamimaja
+root@hamimaja:/home/hamimaja# cd -
+/root
+root@hamimaja:~# pwd
+/root
+root@hamimaja:~# 
+</code></pre>
+
+<p>Dari contoh diatas kita dapat berpindah ke direktori <code>/home/hamimaja</code> dengan menggunakan perintah <code>cd</code> selain itu kita juga dapat kembali ke direktori semua <code>/root</code> dengan menggunakan perintah <code>cd -</code> .</p>
+
+<p>Berikut beberapa opsi dari perintah <code>cd</code> yang dapat digunakan diantaranya</p>
+
+<ul>
+<li><code>.</code> - Tetap berada di di direktori saat ini</li>
+</ul>
+
+<pre><code class="language-bash">root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# 
+root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd .
+root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# 
+</code></pre>
+
+<ul>
+<li><code>..</code> - Merujuk ke direktori satu hierarki di atas</li>
+</ul>
+
+<pre><code class="language-bash">root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd .
+root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd ..
+root@hamimaja:/home/hamimaja/Music/Websiteku# 
+</code></pre>
+
+<ul>
+<li><code>../..</code> - Merujuk ke direktori dua hierarki di atas dan seterusnya</li>
+</ul>
+
+<pre><code class="language-bash">root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd .
+root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd ..
+root@hamimaja:/home/hamimaja/Music/Websiteku# cd ../..
+root@hamimaja:/home/hamimaja# 
+</code></pre>
+
+<p>Tidak hanya itu masih ada perintah cd dengan kompinasi lainnya seperti <code>cd ~/</code> atau <code>cd ~</code> atau <code>cd</code> akan menuju direktori yang ditentukan oleh variabel shell HOME (yang biasanya disetel ke direktori home user atau pengguna)</p>
+
+<pre><code class="language-bash">root@hamimaja:/home/hamimaja# pwd
+/home/hamimaja
+root@hamimaja:/home/hamimaja# echo &quot;$HOME&quot;
+/root
+root@hamimaja:/home/hamimaja# cd
+root@hamimaja:~# pwd
+/root
+root@hamimaja:~# 
+</code></pre>
+
+<h4 id="clear">clear</h4>
+
+<p>Perintah ini digunakan untuk menghapus screen di terminal, selain itu untuk menghapus screen di terminal dapat menggunakan perintah <code>ctrl + l</code></p>
+
+<h4 id="ls">ls</h4>
+
+<p>Perintah ini digunakan untuk menampilkan list direktori.</p>
+
+<pre><code class="language-bash">root@hamimaja:~# 
+root@hamimaja:~# ls
+close  contoh-website  LeaveIt  pass_list.tx  resources  tar.file  test-backup  test-backup.tar  test-backup.tar.gz  wrk
+root@hamimaja:~#
+</code></pre>
+
+<p>Bila ingin melihat direkotiri di direktori tertentu misalnya direktori <code>/var</code> dapat dilakukan seperti berikut</p>
+
+<pre><code class="language-bash">root@hamimaja:~# 
+root@hamimaja:~# ls /var/
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  snap  spool  tmp
+root@hamimaja:~# 
+</code></pre>
+
+<p>Gunakan opsi -1 untuk menampilkan direktori ke bawah (list dalam bentuk kolom) seperti berikut</p>
+
+<pre><code class="language-bash">root@hamimaja:~# 
+root@hamimaja:~# ls -1 /var/
+backups
+cache
+crash
+lib
+local
+lock
+log
+mail
+metrics
+opt
+run
+snap
+spool
+tmproot@hamimaja:~# 
+root@hamimaja:~# ls -1 /var/
+backups
+cache
+crash
+lib
+local
+lock
+log
+mail
+metrics
+opt
+run
+snap
+spool
+tmp
+root@hamimaja:~# 
+root@hamimaja:~# 
+</code></pre>
+
+<p>Jika Anda ingin menampilkan file atau direktori sekaligus ingin mengetahui <code>permissions, ownership, size, timestamp</code> dan yang lainnya pada direktori tersebut juga dapat dilakukan dengan cara menambahkan beberapa opsi yakni <code>d</code> untuk direktori, <code>-</code> untuk file <code>l</code> untuk tautan simbolik dan yang lainnya</p>
+
+<pre><code class="language-bash">root@hamimaja:~# ls -l
+total 434952
+-rw-r--r-- 1 root root         0 Jun 20 07:07 close
+drwxr-xr-x 3 root root      4096 Jul  4 21:39 contoh-website
+drwxr-xr-x 9 root root      4096 Jul  8 13:22 LeaveIt
+-rw-r--r-- 1 root root         0 Jul  8 15:49 pass_list.tx
+drwxr-xr-x 3 root root      4096 Jul  7 10:26 resources
+-rw-r--r-- 1 root root         0 Jun 18 02:12 tar.file
+-rw-r--r-- 1 root root 445368320 Jun 18 02:17 test-backup
+-rw-r--r-- 1 root root         0 Jun 18 02:12 test-backup.tar
+-rw-r--r-- 1 root root         0 Jun 18 02:17 test-backup.tar.gz
+drwxr-xr-x 8 root root      4096 Mei 18 13:22 wrk
+root@hamimaja:~# 
+</code></pre>
+
+<p>Bila ingin ditampilkan size (ukuran setiap direktori) silakan tambahkan opsi <code>-h</code></p>
+
+<pre><code class="language-bash">root@hamimaja:~# 
+root@hamimaja:~# ls -lh
+total 425M
+-rw-r--r-- 1 root root    0 Jun 20 07:07 close
+drwxr-xr-x 3 root root 4,0K Jul  4 21:39 contoh-website
+drwxr-xr-x 9 root root 4,0K Jul  8 13:22 LeaveIt
+-rw-r--r-- 1 root root    0 Jul  8 15:49 pass_list.tx
+drwxr-xr-x 3 root root 4,0K Jul  7 10:26 resources
+-rw-r--r-- 1 root root    0 Jun 18 02:12 tar.file
+-rw-r--r-- 1 root root 425M Jun 18 02:17 test-backup
+-rw-r--r-- 1 root root    0 Jun 18 02:12 test-backup.tar
+-rw-r--r-- 1 root root    0 Jun 18 02:17 test-backup.tar.gz
+drwxr-xr-x 8 root root 4,0K Mei 18 13:22 wrk
+root@hamimaja:~# 
+</code></pre>
+
+<p>Silakan guunakan opsi <code>-s</code> dari pada <code>-l</code> jika hanya info ukuran saja yang diperlukan</p>
+
+<pre><code class="language-bash">root@hamimaja:~# 
+root@hamimaja:~# ls -1sh contoh-website/
+total 8,0K
+4,0K CNAME
+4,0K index.html
+root@hamimaja:~# 
+</code></pre>
+
+<p>Gunakan <code>-t</code> untuk mengurutkan berdasarkan timestamp, dan biasanya dikombinasikan dengan <code>-r</code> untuk membalik urutan sehingga file yang paling baru dimodifikasi menunjukkan sebagai item terakhir</p>
+
+<p>Selain itu  terdapat opsi <code>-S</code> digunakan untuk mengurutkan berdasarkan ukuran file (tidak cocok untuk direktori), <code>-v</code> opsi ini dapat digunakan untuk melakukan penyortiran versi (cocok untuk nama file dengan angka di dalamnya), <code>-X</code> opsi ini memungkinkan untuk mengurutkan berdasarkan ekstensi file (yaitu karakter setelah yang terakhir <code>.</code> dalam nama file)</p>
+
+<pre><code class="language-bash">root@hamimaja:~# 
+root@hamimaja:~# ls -lhtr
+total 425M
+drwxr-xr-x 8 root root 4,0K Mei 18 13:22 wrk
+-rw-r--r-- 1 root root    0 Jun 18 02:12 tar.file
+-rw-r--r-- 1 root root    0 Jun 18 02:12 test-backup.tar
+-rw-r--r-- 1 root root    0 Jun 18 02:17 test-backup.tar.gz
+-rw-r--r-- 1 root root 425M Jun 18 02:17 test-backup
+-rw-r--r-- 1 root root    0 Jun 20 07:07 close
+drwxr-xr-x 3 root root 4,0K Jul  4 21:39 contoh-website
+drwxr-xr-x 3 root root 4,0K Jul  7 10:26 resources
+drwxr-xr-x 9 root root 4,0K Jul  8 13:22 LeaveIt
+-rw-r--r-- 1 root root    0 Jul  8 15:49 pass_list.tx
+
+root@hamimaja:~# ls -X
+close  contoh-website  LeaveIt  resources  test-backup  wrk  tar.file  test-backup.tar.gz  test-backup.tar  pass_list.tx
+root@hamimaja:~#
+</code></pre>
+
+<p>Opsi <code>-a</code> digunakan untuk menampilkan file yang tersembunyi (file hidden)</p>
+
+<pre><code class="language-bash">root@hamimaja:~# 
+root@hamimaja:~# ls -a wrk/
+.   azure-piplines.yml  .circleci  .git        INSTALL  Makefile  obj        SCRIPTING  src
+..  CHANGES             deps       .gitignore  LICENSE  NOTICE    README.md  scripts    wrk
+root@hamimaja:~# 
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/file-dan-direktori/>https://nurhamim.net/file-dan-direktori/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/command-line/">
+                    #Command Line</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/pengenalan-dan-kenapa-linux/" class="prev" rel="prev" title="Pengenalan Dan Kenapa Linux?"><i class="iconfont icon-left"></i>&nbsp;Pengenalan Dan Kenapa Linux?</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7/" />
+  <link rel="next" href="https://nurhamim.net/record-record-dns-server/" />
+  <link rel="canonical" href="https://nurhamim.net/instalasi-dns-server-di-centos-7/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi DNS Server Di CentOS 7 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Instalasi DNS Server Di CentOS 7 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi DNS Server Di CentOS 7",
+    "headline" : "Instalasi DNS Server Di CentOS 7",
+    "description" : "Pada kesempatan kali ini kami akan share mengenai DNS server di CentOS 7, sebelum itu mari kita bahas sedikit pengertian dari DNS server.\nApa itu DNS server ?\nDNS (Domain Name System) adalah sebuah sistem yang berfungsi sebagai layanan direktori untuk semua sistem, dengan menspesifikasinnya sebagai nama host atau domain. Dengan kata lain, DNS menjadi satu fasilitas dimana sebuah server yang memiliki nama dan alamat IP sebagai identitas yang unik di dalam jaringan.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 09:34:28 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 09:34:28 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/instalasi-dns-server-di-centos-7\/",
+    "wordCount" : "979",
+    "keywords" : [ "dns","CentOS 7","Linux", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi DNS Server Di CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>Pada kesempatan kali ini kami akan share mengenai DNS server di CentOS 7, sebelum itu mari kita bahas sedikit pengertian dari DNS server.</p>
+
+<p>Apa itu DNS server ?</p>
+
+<p>DNS (Domain Name System) adalah sebuah sistem yang berfungsi sebagai layanan direktori untuk semua sistem, dengan menspesifikasinnya sebagai nama host atau domain. Dengan kata lain, DNS menjadi satu fasilitas dimana sebuah server yang memiliki nama dan alamat IP sebagai identitas yang unik di dalam jaringan.</p>
+
+<p>Sebagai layanan, DNS menjadi salah satu bagian terpenting di dalam jaringan internet. Misalkan ni ada seseorang yang mengunjungi sebuah situs dengan mengetikan sebuah alamat situs nurhamim.net pada aplikasi browser (Firefox, Chrome, dsb).</p>
+
+<p>Tanpa adanya DNS, pengunjung situs tersebut masih tetap akan dapat mengakses alamat tersebut dengan menggunakan IP, namun disinilah yang menjadi persoalan penting, apakah kita sanggup menghapal berbagai alamat IP sebuah server tersebut ?</p>
+
+<p>Secara pribadi sih sangat sulit untuk menghapal sebauh alamat IP pada sebuah server jika dibandingkan dengan nama host atau domain.</p>
+
+<p>Nah untuk melakukan pemetaan alamat sebuh domain menjadi sebuah IP Address maupun sebaliknya maka dibutuhkanlah sebuah server yang berfungsi sebagai penanggung jawab, sebuah DNS tersebut yang dinamakan DNS Server.</p>
+
+<p>Di CentOS 7 untuk DNS Servernya sendiri kita menggunakan service BIND.</p>
+
+<p>Apa itu BIND ?</p>
+
+<p>BIND (Berkeley Internet Name Domain) merupakan aplikasi service dan salah satu implementasi DNS yang paling banyak digunakan pada server. BIND dibuat untuk sistem operasi BSD UNIX 4.3 oleh Kevin Dunlap, lalu banyak di-pointing ke turunan – turuan UNIX termasuk LINUX.</p>
+
+<h3 id="persyaratan">Persyaratan :</h3>
+
+<p>Persyaratan untuk mengikuti tutorial ini Anda diharuskan mempunyai VPS beserta domain. Karena penulis disini langsung real membuat DNS Server di VPS yang mana dapat diakses melalui publik.</p>
+
+<p>Oke langsung saja kita ke langkah – langkah instalasi DNS Server di CentOS 7</p>
+
+<p>Pertama, silakan akses server CentOS 7 Anda masing – masing</p>
+
+<p>Kedua, lakukan pembaharuan atau update sistem operasi CentOS 7 Anda dengan menggunakan perintah berikut :</p>
+
+<pre><code class="language-bash">[root@srv-dns ~]# yum update -y
+</code></pre>
+
+<p>Silakan tunggu proses update sampai selesai, jika sudah selanjutnya silakan install service bind dan cache nameserver DNS dengan menggunakan perintah berikut :</p>
+
+<pre><code class="language-bash">[root@srv-dns ~]# yum install bind bind-utils caching-nameserver -y
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah, selanjutnya silakan melakukan konfigurasi bind yang berada di direktori <strong>/etc/named.conf</strong>  , pada konfigurasi ini nantinya Anda dapat membuat zone untuk DNS Server, mulai dari zone forward dan zone reverse, berikut contoh konfigurasinya, silakan sesuaikan dengan alamap IP dan domain Anda masing – masing.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah silakan simpan konfigurasi yang telah dilakukan, selanjutnya membuat file zone forward dan reverse. Untuk membuat nya menyesuaikan dengan penentuan direktori yang dibuat pada saat konfigurasi di atas yaitu di <strong>/etc/named/</strong> silakan pindah direktori ke <strong>/etc/named/</strong>  lalu buat file dengan nama file untuk file forward yaitu infone-forward.zone sedangkan untuk reverse infone-reverze.zone sesuai dengan konfigurasi yang telah ditentukan sebelumnya.</p>
+
+<p>Sebenarnya untuk penamaan file zone ini bersifat bebas sesuai dengan keinginan Anda, jadi Anda tidak harus menyamakan persis untuk penamaan file buat zone forward dan reverse yaa.</p>
+
+<pre><code class="language-bash">[root@srv-dns ~]# vim /etc/named/infone-forward.zone
+</code></pre>
+
+<p>Lalu isikan record – record untuk zone forward seperti pada gambar berikut :</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada gambar diatas silakan sesuaikan IP dan domain Anda masing – masing. Harap diperhatikan dalam penambahan record di atas pastikan tidak adanya typo 1 kata pun. Jika terdapat kesalahan penulisan 1 kata saja maka service named tidak akan dapat running.</p>
+
+<p>Selain itu Anda dapat menambahkan record sub domain record email dan yang lainnya melalui zone forward ini.</p>
+
+<p>Selanjutnya membuat file untuk zone reverze untuk direktoriny sama dengan forward berada di direktori /named/forward .</p>
+
+<pre><code class="language-bash">[root@srv-dns ~]# vim /etc/named/infone-reverze.zone
+</code></pre>
+
+<p>Berikut contoh konfigurasi untuk zone reverse</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila Anda telah selesai membuat ke 2 zone tersebut, berikutnya silakan start, enable service named dan pastikan semua status running sebagai berikut :</p>
+
+<pre><code class="language-bash">[root@srv-dns ~]# systemctl start named
+[root@srv-dns ~]# systemctl enable named
+[root@srv-dns ~]# systemctl status named
+● named.service - Berkeley Internet Name Domain (DNS)
+   Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; vendor preset: disabled)
+   Active: active (running) since Jum 2019-02-08 06:52:26 WIB; 2 days ago
+ Main PID: 1977 (named)
+   CGroup: /system.slice/named.service
+           └─1977 /usr/sbin/named -u named -c /etc/named.conf
+
+Peb 10 03:52:01 srv-dns named[1977]: automatic empty zone: B.E.F.IP6.ARPA
+Peb 10 03:52:01 srv-dns named[1977]: automatic empty zone: 8.B.D.0.1.0.0.2.IP6.ARPA
+Peb 10 03:52:01 srv-dns named[1977]: reloading configuration succeeded
+Peb 10 03:52:01 srv-dns named[1977]: reloading zones succeeded
+Peb 10 03:52:01 srv-dns named[1977]: all zones loaded
+Peb 10 03:52:01 srv-dns named[1977]: running
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila service telah running dengan sempurna tanpa adanya kendala, berikut silakan mendaftarkan Gluer Record atau Private Name Server pada domain yang Anda gunakan disini saya menggunakan nama domain infone.info saya berlangganan domainnya di CloudKilat , berikut cara mendaftarkan private Nameserver domain di CloudKilat :</p>
+
+<ol>
+<li>Login portal area CloudKilat (<a href="http://portal.cloudkilat.com/" rel="nofollow noreferrer" target="_blank">http://portal.cloudkilat.com/</a>)</li>
+<li>Service &gt;&gt; Domain &gt;&gt; Manage &gt;&gt; Private Nameservers</li>
+</ol>
+
+<p>Silakan mengisikan atau menambahkan ns1 dan ns2 yang ingin diarahkan ke IP VPS Anda seperti pada gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah silakan pindah ke menu Nameserver &gt;&gt; Klik pada menu Use custom nameservers (enter below) ubah nameserver menjadi ns1.infone.info dan ns2.infone.info lalu Save Changes .</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya apabila perubahan NameServer telah dilakukan pada domain tersebut maka domain akan mengalami proses propagasi dan untuk proses propagasi membutuhkan waktu maksimal 48 jam. Cepat atau lambat pada proses propgasi domain bergantung dengan resolver ISP yang Anda gunakan.</p>
+
+<p>Untuk mengetahui domain telah resolved dapat kita cek dengan cara menggunakan dig seperti berikut :</p>
+
+<pre><code class="language-bash">hamimaja@hamimaja:~$ whois infone.info |grep “Name Server”
+Name Server: NS1.INFONE.INFO
+Name Server: NS2.INFONE.INFO
+hamimaja@hamimaja:~$ dig infone.info +short
+103.23.20.126
+hamimaja@hamimaja:~$ dig @ns1.infone.info infone.info +short
+103.23.20.126
+hamimaja@hamimaja:~$ dig @ns2.infone.info infone.info +short
+103.23.20.126
+hamimaja@hamimaja:~$
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Anda juga dapat memastikan bahwa domain Anda telah resolved menggunnakan DNS Checker online berikut tautannya : <a href="https://dnschecker.org/" rel="nofollow noreferrer" target="_blank">https://dnschecker.org/</a></p>
+
+<p>Apabila Anda terdapat kendala pada saat melakukan register nameserve private atau glue record silakan membuka tiket ke info@cloudkilat.com atau membuka tiket melalui portal cloudkilat Anda untuk meminta saran mengenai kendala yang terjadi.</p>
+
+<p>Sebagai testing saja apakah benar DNS domain untuk infone.info telah berhasil silakan install webserver apache ataupun nginx, saya sebelumnya sudah menginstall webserver apache di CentOS 7 berikut hasilnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada tahapan ini DNS Server Mandiri di CentOS 7 Anda telah berhasil. Selamat mencoba semoga bermanfaat 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/instalasi-dns-server-di-centos-7/>https://nurhamim.net/instalasi-dns-server-di-centos-7/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/dns/">
+                    #dns</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7/" class="prev" rel="prev" title="Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7</a>
+         
+        
+        <a href="https://nurhamim.net/record-record-dns-server/" class="next" rel="next" title="Record Record DNS Server">Record Record DNS Server&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

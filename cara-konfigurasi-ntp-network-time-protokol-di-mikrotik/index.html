@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/cara-menghubungkan-mikrotik-ke-access-point/" />
+  <link rel="next" href="https://nurhamim.net/mengenal-editor-vim/" />
+  <link rel="canonical" href="https://nurhamim.net/cara-konfigurasi-ntp-network-time-protokol-di-mikrotik/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Konfigurasi NTP (Network Time Protokol) Di Mikrotik | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Cara Konfigurasi NTP (Network Time Protokol) Di Mikrotik | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Konfigurasi NTP (Network Time Protokol) Di Mikrotik",
+    "headline" : "Cara Konfigurasi NTP (Network Time Protokol) Di Mikrotik",
+    "description" : "Pada tutorial kali ini saya akan share bagaimana cara setting NTP di Mikrotik, serta penerapannya di mikrotik. Namun sebelumnya ada baiknya kita mempelajari terlebih dahulu apa itu NTP ?\nNetwork Time Protocol atau lebih sering disebut dengan istilah NTP merupakan sebuah mekanisme atau protokol yang bisa digunakan untuk sinkronisasi terhadap penunjuk waktu dalam sebuah sistem jaringan dan komputer.\nSinkronisasi ini biasa dilakukan di dalam jalur komunikasi data yang biasanya menggunakan protokol komunikasi yaitu TCP\/IP.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 01:17:40 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 01:17:40 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/cara-konfigurasi-ntp-network-time-protokol-di-mikrotik\/",
+    "wordCount" : "431",
+    "keywords" : [ "Network","Mikrotik", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Konfigurasi NTP (Network Time Protokol) Di Mikrotik</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/networking/"> NETWORKING </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Pada tutorial kali ini saya akan share bagaimana cara setting NTP di Mikrotik, serta penerapannya di mikrotik. Namun sebelumnya ada baiknya kita mempelajari terlebih dahulu apa itu NTP ?</p>
+
+<p>Network Time Protocol atau lebih sering disebut dengan istilah NTP merupakan sebuah mekanisme atau protokol yang bisa digunakan untuk sinkronisasi terhadap penunjuk waktu dalam sebuah sistem jaringan dan komputer.</p>
+
+<p>Sinkronisasi ini biasa dilakukan di dalam jalur komunikasi data yang biasanya menggunakan protokol komunikasi yaitu TCP/IP. Sehingga proses ini sendiri dapat dilihat sebagai proses komunikasi data biasa yang hanya melakukan pertukaran paket – paket data.</p>
+
+<p>NTP menggunakan port komunikasi UDP 123. Protokol ini memang didesain untuk dapat bekerja dengan baik meskipun media komunikasinya bervariasi, mulai dari yang waktu litensinya tinggi hingga ke yang rendah, mulai kabel sampai dengan media udara.</p>
+
+<p>Protokol ini memungkinkan perankat -perangkat komputer untuk tetap dapat melakukan sinkronisasi waktu dengan sangat tepat dan akurat dalam berbagai media.</p>
+
+<p>Biasanya dalam sebuah jaringan, beberapa node dilengkapi dengan fasilitas NTP dengan tujuan untuk membentuk sebuah subnet sinkronisasi. Node – node tersebut kemudian akan saling berkomunikasi dan ber sinkronisasi menyambut waktu yang direkan.</p>
+
+<p>Meskipun ada beberapa node yang akan menjadi master (primary server), protokol NTP tidak membutuhkan mekanisme pemilihan tersebut.
+Sekarang kita akan melanjutkan bagaimana setting NTP pada Router Mikrotik.</p>
+
+<p>Setting NTP Client di Mikrotik Dalam kondisi tertentu biasanya Router Mikrotik bekerja berdasarkan waktu, baik itu hari, tanggal, buan, maupun jam. Apabila anda memblokir sebuah akses internet di luar jam tertentu bisa juga memblokir situs – situs tertentu pada jam – jam tertentu.</p>
+
+<p>Apabila Anda menggunakan Komputer untuk di jadikan Router tidak akan ada masalah karena di Motherboard komputer sudah ada baterai yang bisa mempertahankan konfigurasi waktu.</p>
+
+<p>Namun jika anda menggunakan Routerboard Mikrotik yang tidak memiliki baterai internal seperti halnya komputer maka semua konfigurasi waktu akan kacau setiap kali router mengalami restart. Bagaimana cara mengatasi ketidakakuratan ini ?</p>
+
+<p>Untuk mengatasi ketidakakuratan ini kita akan mengkonfigurasi Network Time Protokol (NTP). Sebelumnya router mikrotik harus mengetahui NTP server yang ada di internet supaya bisa menyesuaikan dengan konfigurasi waktu yang berada di NTP server tersebut.</p>
+
+<p>Untuk Sinkronisasi konfigurasi waktu pada router mikrotik, bisa anda menggunakan NTP Server untuk Indonesia dengan IP Address 203.160.128.3</p>
+
+<p>Langkah – lankah mengkonfigurasi NTP pada Mikrotik :</p>
+
+<ul>
+<li>Klik Menu System  -&gt; SNTP Client  (Simple Network Time Protocol)</li>
+<li>Setelah itu kita ceklis Enabled dan isikan Primary NTP Server dengan alamat IP Address 203.160.128.3 (NTP Server Indonesia)</li>
+</ul>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/ntp%20mikrotik/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<ul>
+<li>Sekarang kita coba cek apakah Router Mikrotik sudah sinkron dengan waktu di indonesia, cara untuk mengeceknya anda klik menu system -&gt; clock</li>
+</ul>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/mikrotik/ntp%20mikrotik/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada tahap ini Anda telah berhasil melakukan konfigurasi NTP di Mikrotik, selamat mencoba semoga bermanfaat 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/cara-konfigurasi-ntp-network-time-protokol-di-mikrotik/>https://nurhamim.net/cara-konfigurasi-ntp-network-time-protokol-di-mikrotik/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/network/">
+                    #Network</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/mikrotik/">
+                    #Mikrotik</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/cara-menghubungkan-mikrotik-ke-access-point/" class="prev" rel="prev" title="Cara Menghubungkan Mikrotik Ke Access Point"><i class="iconfont icon-left"></i>&nbsp;Cara Menghubungkan Mikrotik Ke Access Point</a>
+         
+        
+        <a href="https://nurhamim.net/mengenal-editor-vim/" class="next" rel="next" title="Mengenal Editor Vim">Mengenal Editor Vim&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

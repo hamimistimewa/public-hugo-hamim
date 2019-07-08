@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/alias-login-ssh-di-linux/" />
+  <link rel="next" href="https://nurhamim.net/memulai-dengan-linux/" />
+  <link rel="canonical" href="https://nurhamim.net/mengamankan-ssh-menggunakan-fail2ban/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Mengamankan SSH menggunakan Fail2ban | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Mengamankan SSH menggunakan Fail2ban | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Mengamankan SSH menggunakan Fail2ban",
+    "headline" : "Mengamankan SSH menggunakan Fail2ban",
+    "description" : "Mengamankan sebuah service yang berada di server itu amatlah penting, apalagi server kita public dan siapa saja dapat mengaksesnya, dan yang paling rentan dalam isu hacking atau brutforce attack di VPS (Virtual Private Server) yaitu service ssh. Nah bagaimana cara mengamankan service ssh tersebut ?\nSangat banyak cara yang dapat dilakukan untuk mengamankan ssh, salah satunya pada tutorial kali ini kita akan mengamankan service ssh dengan menggunakan aplikasi yang cukup powerfull yaitu Fail2ban .",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 04:50:13 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 04:50:13 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/mengamankan-ssh-menggunakan-fail2ban\/",
+    "wordCount" : "921",
+    "keywords" : [ "SSH","CentOS 7","Linux","Firewall", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Mengamankan SSH menggunakan Fail2ban</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Mengamankan sebuah service yang berada di server itu amatlah penting, apalagi server kita public dan siapa saja dapat mengaksesnya, dan yang paling rentan dalam isu hacking atau brutforce attack di VPS (Virtual Private Server) yaitu service ssh. Nah bagaimana cara mengamankan service ssh tersebut ?</p>
+
+<p>Sangat banyak cara yang dapat dilakukan untuk mengamankan ssh, salah satunya pada tutorial kali ini kita akan mengamankan service ssh dengan menggunakan aplikasi yang cukup powerfull yaitu Fail2ban . Namun sebelum lanjut lebih jauh mengenai tutorial kali ini, mari kita berkenalan terlebih dahulu tentang apa sih itu Fail2ban ?</p>
+
+<p>Fail2ban merupakan aplikasi Open Source (bebas) yang ditulis menggunakan bahasa python. Fail2ban dapat digunakan untuk mengamankan service yang berada di Server VPS dari serangan brutforce atau DDoS attack di Linux</p>
+
+<p>Berikut ini merupakan skema dari cara kerja Fail2ban  :</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/1.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Gambar diatas mengibaratkan adanya seorang attacker yang sedang melakukan atau ingin melakukan serangan berupa brutforce password ssh VPS, namun sebelum si attacker melakukan serangan ke VPS maka ada di pengamanan dari Fail2ban yang berada di tengah – tengahnya</p>
+
+<p>Fail2ban menetapkan berbagai rule untuk tembok keamanannya, dengan begitu, serangan tersebut di saring terlebih dahulu, jika memang serangan tersebut milik pribadi (pemilik VPS) yang tidak terindikasi abuse brutforce maka proses akses ssh akan di teruskan dan sebaliknya, jika ada proses yang kurang wajar dan melanggar rules yang telah ditetapkan oleh fail2ban maka proses akses ke VPS akan di blokir (banned) .</p>
+
+<p>Oke, itu skema dari cara kerja fail2ban, selanjutnya mari kita bahas tentang bagaimana cara installasi Fail2ban di CentOS 7</p>
+
+<p>Pertama, silakan remote server ssh Anda terlebih dahulu, Berikut contoh login ssh ke VPS</p>
+
+<pre><code class="language-bash">hamimaja@hamimaja:~$ ssh root@103.23.20.82 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada gambar diatas perhatikan kolom merah yang diberi tanda merah, sangat banyak percobaan login ke VPS kita, dengan fail2ban kita dapat meminimalisir hal tersebut.</p>
+
+<p>Untuk melihat banyaknya percobaan gagal login tersebut Anda dapat menggunakan perintah berikut :</p>
+
+<pre><code class="language-bash">[root@srv-hamim02 fail2ban]# grep &quot;Failed password&quot; /var/log/secure
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Kedua, apabila Anda telah login ke VPS atau server Anda masing – masing, selanjutnya silakan update terlebih dahulu sistem operasi CentOS 7 Anda, dengan menggunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-hamim02 ~]# yum update -y
+</code></pre>
+
+<p>Jika sudah selanjutnya, memasang repository epel di CentOS 7 dengan menjalankan perintah</p>
+
+<pre><code class="language-bash">[root@srv-hamim02 ~]# yum install epel-release -y
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila telah selesai, berikutnya silakan install fail2ban dengan menjalankan baris perintah berikut :</p>
+
+<pre><code class="language-bash">[root@srv-hamim02 ~]# yum install fail2ban -y
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan tunggu proses instalasi fail2ban sampai selesai, Jika sudah barulah kita dapat memastikan fail2ban telah aktif dan dapat kita gunaka, berikut perintah yang dapat digunakan</p>
+
+<pre><code class="language-bash">[root@srv-hamim02 ~]# systemctl start fail2ban
+[root@srv-hamim02 ~]# systemctl enable fail2ban
+Created symlink from /etc/systemd/system/multi-user.target.wants/fail2ban.service to /usr/lib/systemd/system/fail2ban.service.
+[root@srv-hamim02 ~]# 
+[root@srv-hamim02 ~]# systemctl status fail2ban
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Oke saat ini fail2ban telah berhasil di install,</p>
+
+<p>Ketiga, selanjutnya melakukan konfigurasi untuk mengamankan ssh dari serangan brutforce misalnya, silakan copy file default fail2ban yaitu jail.conf  menjadi jail.local untuk direktorinya berada di /etc/fail2ban/ . seperti berikut contohnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah sebelum kita lanjut ke bagaimana melakukan konfigurasinya ada baiknya kita mengetahui terlebih dahulu komponen – komponen yang wajib kita ketahui, diantaranya adalah</p>
+
+<ul>
+<li><strong>Ignore IP</strong> : Digunakan untuk me-whitelist IP tertentu, jadi teman – teman dapat menentukan IP mana saja yang tidak akan dan bakal di blokir (banned) sama si fail2ban, setiap penambahan IP dipisahkan dengan spasi.</li>
+<li><strong>Bantime</strong> : Digunakan untuk menentukan lama IP attacker (penyerang) yang telah terblokir (banned), dari server apabila melanggar rule yang telah ditentukan sebelumnya. Waktu yang digunakan bantime yaitu second (detik), secara default bantime yang ditentukan yaitu 600 detik (10 menit)</li>
+<li><strong>Maxretry</strong> : Digunakan untuk mengatur jumlah percobaan yang dapat dilakukan oleh seseorang attacker untuk melakukan brute force, sebelum IP tersebut di blokir (banned) oleh fail2ban. Secara default di CentOS 7 fail2ban akan memblokir 5 kali percobaan (fail).</li>
+<li><strong>Findtime</strong> : Yaitu waktu yang ditentukan oleh Fail2ban apakah IP tersebut masuk dalam kategori blokir (banned) atau tidak. Hitungan yang digunakan sama dengan bantime yaitu second (detik) defaultnya 600 (10 menit)</li>
+</ul>
+
+<p>Silakan buka konfigurasi jail.local untuk melanjutkan konfigurasinya, berikut file komponen yang disebutkan diatas yang default fail2ban</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk tutorial kali ini saya akan menggunakan skema dengan komponen, sebagai berikut :</p>
+
+<ul>
+<li><strong>Bantime</strong> : -1</li>
+<li><strong>Findtime</strong> : 200</li>
+<li><strong>Maxretry</strong> : 3</li>
+</ul>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada penentuan komponen diatas terdapat Bantime = -1 .</p>
+
+<p>Maksud dari -1 yaitu melakukan pemblokiran (banned) ip penyerang secara permanent.</p>
+
+<p>Berikutnya, silakan scroll kebawah carilah rules untuk mengamankan service ssh seperti pada gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Gambar diatas merupakan jails atau rule ssh secara default dari fail2ban, untuk mengaktifkan rules tersebut Anda hanya perlu menambahkan perintah enabled = tru  seperti pada gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/11.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah, silakan simpan konfigurasinya</p>
+
+<p>Keempat, silakan reload dan lihat kembali status service fail2ban Anda menggunakan perinah</p>
+
+<pre><code class="language-bash">[root@srv-hamim02 fail2ban]# systemctl reload fail2ban
+[root@srv-hamim02 fail2ban]# systemctl status fail2ban
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/12.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk memastikan apakah jail ssh kita telah Aktif dapat dilakukan dengan cara menjalankan perintah</p>
+
+<pre><code class="language-bash">[root@srv-hamim02 fail2ban]# fail2ban-client status 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/13.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Kelima, berikutnya mari kita mencoba melakukan pengetesan dengan cara logn ke server menggunakan ssh dengan menginputkan pasword yang salah,</p>
+
+<p>Sebelumnya saya mengisikan maxtery = 3 yang artinya apabila 3 kali login ssh gagal maka IP saya akan di baca oleh rule si fail2ban dan akan di blokir (banned)</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/14.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Nah untuk melihat ip mana yang sedang melakukan percobaan login ke server lebih dari 3 kali dan IP tersebut ke banned oleh fail2ban dapat dilihat dengan menjalankan perintah</p>
+
+<pre><code class="language-bash">[root@srv-hamim02 fail2ban]# fail2ban-client status sshd
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssh/ssh06/15.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila Anda ingin melakukan unbanned ip terhadap ip yang telah ke banned dapat dilakukan dengan menjalankan perintah</p>
+
+<p>[root@srv-hamim02 fail2ban]# fail2ban-client set sshd unbanip 10.10.xx.xx</p>
+
+<p>Sedangkan untuk melihat log dari fail2ban dapat dilakukan dengan cara menjalankan baris perintah berikut :</p>
+
+<pre><code class="language-bash">[root@srv-hamim02 fail2ban]# tail -f /var/log/fail2ban.log 
+</code></pre>
+
+<p>Itulah cara singkat dan mudah untuk mengamakan service ssh menggunakan fail2ban.</p>
+
+<p>Selamat mencoba semoga tutorial ini bermanfaat bagi kita semua 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/mengamankan-ssh-menggunakan-fail2ban/>https://nurhamim.net/mengamankan-ssh-menggunakan-fail2ban/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/ssh/">
+                    #SSH</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/firewall/">
+                    #Firewall</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/alias-login-ssh-di-linux/" class="prev" rel="prev" title="Alias Login SSH di Linux"><i class="iconfont icon-left"></i>&nbsp;Alias Login SSH di Linux</a>
+         
+        
+        <a href="https://nurhamim.net/memulai-dengan-linux/" class="next" rel="next" title="Memulai Dengan Linux">Memulai Dengan Linux&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

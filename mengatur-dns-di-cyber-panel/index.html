@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/reset-password-admin-cyber-panel-di-centos-7/" />
+  <link rel="next" href="https://nurhamim.net/membuat-website-di-cyber-panel/" />
+  <link rel="canonical" href="https://nurhamim.net/mengatur-dns-di-cyber-panel/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Mengatur DNS di Cyber Panel | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Mengatur DNS di Cyber Panel | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Mengatur DNS di Cyber Panel",
+    "headline" : "Mengatur DNS di Cyber Panel",
+    "description" : "Tutorial kali ini merupakan kelanjutan dari tutorial – tutorial sebelumnya yaitu instalasi control panel Cyber Panel di CentOS 7.\nBiasanya kebanyakan kalau kita telah menginstall control panel yang paling pertama kali di konfigurasi yaitu DNS, karena menurut saya DNS ini sangat penting sekali.\nContoh singkatnya saja kalau sebelumnya kita akses control panel panel menggunakan IP maka dengan melakukan konfigurasi DNS ini Anda dapat menggunakan nama domain Anda.\nSelain itu Anda juga dapat mengelola domain yang Anda miliki langsung melalui control panel mulai dari penambahan record subdomain, mail, dan sebagainya.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 20:49:34 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 20:49:34 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/mengatur-dns-di-cyber-panel\/",
+    "wordCount" : "671",
+    "keywords" : [ "CentOS 7","Linux","webpanel","Cyber Panel","dns", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Mengatur DNS di Cyber Panel</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/control-panel/"> CONTROL PANEL </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Tutorial kali ini merupakan kelanjutan dari tutorial – tutorial sebelumnya yaitu instalasi control panel Cyber Panel di CentOS 7.</p>
+
+<p>Biasanya kebanyakan kalau kita telah menginstall control panel yang paling pertama kali di konfigurasi yaitu DNS, karena menurut saya DNS ini sangat penting sekali.</p>
+
+<p>Contoh singkatnya saja kalau sebelumnya kita akses control panel panel menggunakan IP maka dengan melakukan konfigurasi DNS ini Anda dapat menggunakan nama domain Anda.</p>
+
+<p>Selain itu Anda juga dapat mengelola domain yang Anda miliki langsung melalui control panel mulai dari penambahan record subdomain, mail, dan sebagainya.</p>
+
+<p>Hal yang dibutuhkan dalam mengikuti tutorial kali ini yaitu domain, disini saya sebelumnya telah mempunyai domain, saya pribadi langganan domain di CloudKilat kenapa saya berlangganan domain di CloudKilat, yang pertama fitur dan Dasboardnya lengkap elegan pulaa enak dilihat dan mudah tentunya untuk digunakan.</p>
+
+<p>Oke, mari kita lanjut ke proses konfigurasi DNS pada Cyber Panel.</p>
+
+<p>Pertama, silakan login ke administrator kontrol panel Cyber Panel Anda.</p>
+
+<p>Kedua, masuk ke menu <strong>DNS &gt;&gt; Create Name Server</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Disini kita akan membuat Name server. Apa fungsi dari Name server ?</p>
+
+<p>Name server itu pusat dari record DNS yang digunakan untuk menyimpan semua record DNS.</p>
+
+<p>Selanjutnya silakan tambahkan domain Anda, disini nama domain saya yaitu infone.info . Selain itu buat name server berikut detailnya :</p>
+
+<p><strong>First Nameserver</strong>: ns1.infone.info
+<strong>IP Address</strong>: Alamat IP Server / Control Panel Cyber Panel
+<strong>Second Nameserver</strong>: ns2.infone.info
+<strong>IP Address</strong>: Alamat IP Server / Control Panel Cyber Panel</p>
+
+<p>Jika sudah, silakan save dengan menekan tombol Create Nameserver, seperti pada gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika berhasil dibuat maka akan ada informasi bahwasannya Nameserver telah berhasil di buat, seperti gambar berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjuntya, yaitu membuat Private Nameserver atau bisanya sering disebut dengan Gluer Record . Disini saya berlangganan domain di CloudKilat, bagi Anda yang berlangganan domain di CloudKilat bisa mengikuti step berikut,</p>
+
+<ol>
+<li>Login ke portal area CloudKilat (<a href="http://portal.cloudkilat.com/" rel="nofollow noreferrer" target="_blank">http://portal.cloudkilat.com/</a>)</li>
+<li>Service &gt;&gt; Domain &gt;&gt; infone.info &gt;&gt; Manage</li>
+<li>Private Nameserver</li>
+<li>Mendaftarkan Glue record dengan cara menambahkan ns1 dan ns2 ke alamat IP Server atau Control Panel Cyber Panel lalu Save Changes . Seperti pada gambar dibawah ini.</li>
+</ol>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pastikan penambahan private Nameservernya berhasil, seperti pada gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah, selanjutnya mengubah nameserver domain menjadi <strong>ns1.infone.info dan ns2.infone.info</strong> .</p>
+
+<p>Untuk mengubahnya silakan pindah ke menu <strong>Nameserver  &gt;&gt; klik pada menu Use custom nameserver (enter below) &gt;&gt; Isikan nameserver nya &gt;&gt; Changes Nameservers</strong>. Seperti pada gambar dibawah ini.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila terdapat kendala pada saat pembuatan private nameserver domain, silakan menghubungi support CloudKilat di info@cloudkilat.com atau support@cloudkilat.com .</p>
+
+<p>Bagi Anda yang mempunyai domain di provider lain selain CloudKilat silakan menghubungi pihak penyedia domain Anda. Untuk proses penambahan private Nameserver atau Glue Record.</p>
+
+<p>Selanjutnya apabila perubahan NameServer telah dilakukan pada domain tersebut maka domain akan mengalami proses propagasi dan untuk proses propagasi membutuhkan waktu maksimal 48 jam. Cepat atau lambat pada proses propgasi domain bergantung dengan resolver ISP yang Anda gunakan.</p>
+
+<p>Jika proses propagasi domain telah selesai, Anda dapat mengeceknya menggunakan command dig . Berikut contohnya :</p>
+
+<pre><code class="language-bash">$ dig @infone.info infone.info +short
+117.53.46.27
+$ dig @ns1.infone.info infone.info +short
+117.53.46.27
+$
+</code></pre>
+
+<p>Oke saat ini kedua nameserver telah resolve ke IP control Panel Cyber Panel. Selanjutnya Anda dapat menambahkan A record atau record DNS yang lainnya sepertihalnya MX record dan yang lainnnya melalui DNS Management Control Panel Cyber Panel di menu DNS &gt;&gt; Add/Delete Records . Seperti pada gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk mencobanya membutikan apakah domain infone.info telah mengarah ke control panel Cyber Panel dapat dilakukan dengan cara mengakses Control Panel Cyber Panel mengguakan nama domainnya diikuti port cyber panel contohnya : <strong><a href="https://infone.info:8090" rel="nofollow noreferrer" target="_blank">https://infone.info:8090</a></strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Atau Anda dapat melakukan ping ke domain infone.info , maka hasilnya domain tersebut dapat di ping dan mengarah ke IP control Panel Plesk Panel Anda :</p>
+
+<pre><code class="language-bash">root@hamimaja:~# ping infone.info
+PING infone.info (117.53.46.27) 56(84) bytes of data.
+64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=2 ttl=58 time=16.4 ms
+64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=3 ttl=58 time=6.62 ms
+64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=4 ttl=58 time=8.36 ms
+64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=5 ttl=58 time=7.86 ms
+64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=6 ttl=58 time=4.88 ms
+</code></pre>
+
+<p>Oke, saat ini konfigurasi DNS pada Cyber Panel telah berhasil, selamat mencoba semoga bermanfaat 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/mengatur-dns-di-cyber-panel/>https://nurhamim.net/mengatur-dns-di-cyber-panel/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/webpanel/">
+                    #webpanel</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/cyber-panel/">
+                    #Cyber Panel</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/dns/">
+                    #dns</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/reset-password-admin-cyber-panel-di-centos-7/" class="prev" rel="prev" title="Reset Password Admin Cyber Panel di CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Reset Password Admin Cyber Panel di CentOS 7</a>
+         
+        
+        <a href="https://nurhamim.net/membuat-website-di-cyber-panel/" class="next" rel="next" title="Membuat Website di Cyber Panel">Membuat Website di Cyber Panel&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

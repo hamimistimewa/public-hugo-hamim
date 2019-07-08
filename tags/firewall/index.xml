@@ -13,10 +13,10 @@
     
     <item>
       <title>Mengamankan SSH menggunakan Fail2ban</title>
-      <link>https://nurhamim.net/2019/centos6/</link>
+      <link>https://nurhamim.net/mengamankan-ssh-menggunakan-fail2ban/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos6/</guid>
+      <guid>https://nurhamim.net/mengamankan-ssh-menggunakan-fail2ban/</guid>
       <description>Mengamankan sebuah service yang berada di server itu amatlah penting, apalagi server kita public dan siapa saja dapat mengaksesnya, dan yang paling rentan dalam isu hacking atau brutforce attack di VPS (Virtual Private Server) yaitu service ssh. Nah bagaimana cara mengamankan service ssh tersebut ?
 Sangat banyak cara yang dapat dilakukan untuk mengamankan ssh, salah satunya pada tutorial kali ini kita akan mengamankan service ssh dengan menggunakan aplikasi yang cukup powerfull yaitu Fail2ban .</description>
     </item>

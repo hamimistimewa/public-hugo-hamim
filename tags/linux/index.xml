@@ -6,27 +6,39 @@
     <description>Recent content in Linux on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jul 2019 14:03:12 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 18:52:20 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>File Dan Direktori</title>
+      <link>https://nurhamim.net/file-dan-direktori/</link>
+      <pubDate>Mon, 08 Jul 2019 18:52:20 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/file-dan-direktori/</guid>
+      <description>Pada tutorial kali ini saya masih tetap membahas mengenai comand line linux, namun untuk kali saya akan fokus pembahasan tentang navigasi direktori, membuat, dan memodifikasi file dan direktori di sistem operasi Linux.
+Berikut tabel content yang akan kita bahas satu - satu
+ pwd cd clear ls mkdir touch rm cp mv rename ln tar and gzip  Mari kita bahas satu per satu content diatas :
+pwd Perintah pwd digunakan untuk print (melihat) direktori dimana Anda berada.</description>
+    </item>
+    
+    <item>
       <title>Pengenalan Dan Kenapa Linux?</title>
-      <link>https://nurhamim.net/2019/linux1/</link>
+      <link>https://nurhamim.net/pengenalan-dan-kenapa-linux/</link>
       <pubDate>Mon, 08 Jul 2019 14:03:12 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/linux1/</guid>
+      <guid>https://nurhamim.net/pengenalan-dan-kenapa-linux/</guid>
       <description>Apa itu Linux ? Menurut Wikipedia
  Linux is a family of free and open-source software operating systems built around the Linux kernel. Typically, Linux is packaged in a form known as a Linux distribution (or distro for short) for both desktop and server use. The defining component of a Linux distribution is the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds. Many Linux distributions use the word &amp;ldquo;Linux&amp;rdquo; in their name.</description>
     </item>
     
     <item>
       <title>Pengenalan Perintah Linux Atau Command Line</title>
-      <link>https://nurhamim.net/2019/linux2/</link>
+      <link>https://nurhamim.net/pengenalan-perintah-linux-atau-command-line/</link>
       <pubDate>Mon, 08 Jul 2019 14:03:12 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/linux2/</guid>
+      <guid>https://nurhamim.net/pengenalan-perintah-linux-atau-command-line/</guid>
       <description>Pada tutorial kali ini kita akan membahas tengan Command Line introduction atau Pengenalan Perintah di Linux.
 Berikut ini merupakan beberapa bahasan yang akan di sajikan dalam tutorial kali ini diantaranya:
  File System Command Line Interface (CLI) Perintah atau Command Line Di Linux Perintah Mengenai Info System Di Linux  File System Di sebuah sistem operasi pasti terdapat yang namanya file system, lalu apa itu file system ?
@@ -35,10 +47,10 @@ File System (sistem file) merupakan wadah atau tempat penyimpanan, pengelolaan, 
     
     <item>
       <title>Menggunakan FTP di Cyber Panel</title>
-      <link>https://nurhamim.net/2019/panel9/</link>
+      <link>https://nurhamim.net/menggunakan-ftp-di-cyber-panel/</link>
       <pubDate>Sat, 06 Jul 2019 20:49:43 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/panel9/</guid>
+      <guid>https://nurhamim.net/menggunakan-ftp-di-cyber-panel/</guid>
       <description>Baru saja saya share mengenai File Manager, nah untuk kali ini merupakan tutorial lanjutan dari file manager yaitu FTP Server di Cyber Panel
 Apasih itu FTP ?
 FTP (File Transfer Protokol) yang bisanya digunakan untuk mengirimkan file atau direktori dari lokal ke Server/Control Panel. FTP juga biasanya digunakan untuk manajemen file atau direktori.
@@ -47,10 +59,10 @@ Seperti tutorial – tutorial sebelumya untuk penggunaan fitur yang ada du Cyber
     
     <item>
       <title>File Manager di Cyber Panel</title>
-      <link>https://nurhamim.net/2019/panel8/</link>
+      <link>https://nurhamim.net/file-manager-di-cyber-panel/</link>
       <pubDate>Sat, 06 Jul 2019 20:49:41 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/panel8/</guid>
+      <guid>https://nurhamim.net/file-manager-di-cyber-panel/</guid>
       <description>Hai guyss, saat ini saya masih ngulik tentang Cyber Panel hehehehe,
 Cyber Panel salah satu control panel Free yang baru saja release tahun 2018 kalau nggak salah yaa heheheh. Dan pertama kali saya mencoba control panel ini, saya lumayan heran dengan fitur yang diberikan sangat lengkap soalnya 🙂 .
 Oleh karena itu saya ingin share kembali mengeni File manager di Cyber Panel.
@@ -59,10 +71,10 @@ File manager ini sangat perlu dan penting, dengan adanya file manager di control
     
     <item>
       <title>Instalasi CMS WordPress di Cyber Panel</title>
-      <link>https://nurhamim.net/2019/panel7/</link>
+      <link>https://nurhamim.net/instalasi-cms-wordpress-di-cyber-panel/</link>
       <pubDate>Sat, 06 Jul 2019 20:49:38 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/panel7/</guid>
+      <guid>https://nurhamim.net/instalasi-cms-wordpress-di-cyber-panel/</guid>
       <description>Hello Guyss, masih pada semangat yaa untuk belajar mengenai control panel, tutorial kali ini melanjutkan tutorial sebelumnya, dimana sebelumnya kita telah belajar bagaiamana cara membuat website di Cyber Panel .
 Sesuai dengan judul tutorial kali ini kita akan menginstall CMS WordPress di control panel Cyber Panel.
 Oke, langsung saja ke langkah – langkah installasinya ya
@@ -72,10 +84,10 @@ Kedua, masuk kemenu Website &amp;gt;&amp;gt; List Website &amp;gt;&amp;gt; Klik 
     
     <item>
       <title>Membuat Website di Cyber Panel</title>
-      <link>https://nurhamim.net/2019/panel6/</link>
+      <link>https://nurhamim.net/membuat-website-di-cyber-panel/</link>
       <pubDate>Sat, 06 Jul 2019 20:49:36 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/panel6/</guid>
+      <guid>https://nurhamim.net/membuat-website-di-cyber-panel/</guid>
       <description>Hai guyss untuk tutorial kali ini saya akan share bagaimana cara membuat sebuah website menggunakan control panel cyber panel, tutorial ini kelanjutan dari tutorial sebelumnya yang memabahas tentang bagaimana cara menngatur DNS di Cyber Panel
 Untuk mengikuti tutorial ini pastikan Anda telah mengatur DNS dengan benar, jika sudah mari kita bahas bagaimana cara membuat website di cyber panel
 Pertama, login terlebih dahulu ke cyber panel Anda
@@ -84,10 +96,10 @@ Kedua, pilih menu Website &amp;gt;&amp;gt; Create Website , dan isikan detailnya
     
     <item>
       <title>Mengatur DNS di Cyber Panel</title>
-      <link>https://nurhamim.net/2019/panel5/</link>
+      <link>https://nurhamim.net/mengatur-dns-di-cyber-panel/</link>
       <pubDate>Sat, 06 Jul 2019 20:49:34 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/panel5/</guid>
+      <guid>https://nurhamim.net/mengatur-dns-di-cyber-panel/</guid>
       <description>Tutorial kali ini merupakan kelanjutan dari tutorial – tutorial sebelumnya yaitu instalasi control panel Cyber Panel di CentOS 7.
 Biasanya kebanyakan kalau kita telah menginstall control panel yang paling pertama kali di konfigurasi yaitu DNS, karena menurut saya DNS ini sangat penting sekali.
 Contoh singkatnya saja kalau sebelumnya kita akses control panel panel menggunakan IP maka dengan melakukan konfigurasi DNS ini Anda dapat menggunakan nama domain Anda.
@@ -96,10 +108,10 @@ Selain itu Anda juga dapat mengelola domain yang Anda miliki langsung melalui co
     
     <item>
       <title>Reset Password Admin Cyber Panel di CentOS 7</title>
-      <link>https://nurhamim.net/2019/panel4/</link>
+      <link>https://nurhamim.net/reset-password-admin-cyber-panel-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 20:49:32 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/panel4/</guid>
+      <guid>https://nurhamim.net/reset-password-admin-cyber-panel-di-centos-7/</guid>
       <description>Lupaa Pasword ???????
 Bingung ??????
 Jangan bingung dulu guys pasti ada solusinya kok heheheh :).
@@ -110,10 +122,10 @@ Pertama, memastikan terlebih dahulu bahwa saya belum bisa login karena lupa pass
     
     <item>
       <title>Instalasi Cyber Panel di CentOS 7</title>
-      <link>https://nurhamim.net/2019/panel3/</link>
+      <link>https://nurhamim.net/instalasi-cyber-panel-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 20:49:13 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/panel3/</guid>
+      <guid>https://nurhamim.net/instalasi-cyber-panel-di-centos-7/</guid>
       <description>Hai, semua saya harap teman – teman semua masih pada semangat untuk belajar dunia IT khususnya Linux yaa hehehehe :).
 Tutorial kali ini temanya masih sama dengan postingan yang sebelumnya yaitu mengenai instalasi control panel, namun kali ini kita akan mencoba control panel Cyber Panel di CentOS 7.
 Control Panel Cyber Panel bisa dibilang control panel yang open source (bebas) yang tergolong baru, dan sangat banyak fitur – fitur keren yang dapat kita manfaatkan untuk mengelola sebuah website.</description>
@@ -121,10 +133,10 @@ Control Panel Cyber Panel bisa dibilang control panel yang open source (bebas) y
     
     <item>
       <title>Instalasi CWP di CentOS 7</title>
-      <link>https://nurhamim.net/2019/panel2/</link>
+      <link>https://nurhamim.net/instalasi-cwp-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 20:49:09 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/panel2/</guid>
+      <guid>https://nurhamim.net/instalasi-cwp-di-centos-7/</guid>
       <description>Mempunyai server VPS tapi nggak bisa mengelolanya, hemm jangan kebingungan dulu guyss, disini saya akan share bagaimana cara installasi control panel CWP (Control Web Panel) di sistem operasi CentOS 7 .
 CWP (CentOS Web Panel) salah satu control panel yang powerfull yang memang dikhususkan untuk sistem operasi RHEL dan keturunannya yaitu CentOS, CWP juga dapat diinstal di CloudLinux.
 CWP bersifat open source (free) bebas digunakan tanpa harus membeli license.
@@ -133,10 +145,10 @@ Fitur – Fitur yang ada di CWP juga lumayan banyak mulai dari, DNS, Mail server
     
     <item>
       <title>Apa itu Control Panel WebHosting ?</title>
-      <link>https://nurhamim.net/2019/panel1/</link>
+      <link>https://nurhamim.net/apa-itu-control-panel-webhosting/</link>
       <pubDate>Sat, 06 Jul 2019 20:49:01 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/panel1/</guid>
+      <guid>https://nurhamim.net/apa-itu-control-panel-webhosting/</guid>
       <description>Hai semua, pada malam hari yang cerah ini #asyekk saya akan share mengenai tentang apa sih itu control panel WebHosting ?
 Mungkin diluar sana sudah banyak yang tau tentang control panel web hosting, namun masih banyak pula yang belum tau tentang apa itu control panel di dunia hosting.
 Provider atau penyedia jasa Hosting bisanya menyediakan yang namanya control panel, fungsinya untuk melakukan pengelolaan sebuah website yang berbasis web base, artinya dapat diakses menggunakan web browser.</description>
@@ -144,10 +156,10 @@ Provider atau penyedia jasa Hosting bisanya menyediakan yang namanya control pan
     
     <item>
       <title>S3 Storage untuk Backup WordPress</title>
-      <link>https://nurhamim.net/2019/centos22/</link>
+      <link>https://nurhamim.net/s3-storage-untuk-backup-wordpress/</link>
       <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos22/</guid>
+      <guid>https://nurhamim.net/s3-storage-untuk-backup-wordpress/</guid>
       <description>Pernahkan Anda mengalami kehilangan data penting pada website Anda ?
 Terlebih bagi seorang e-commerce yang menyimpan ribuan data pelanggan yang sangat – sangat penting, dan si e-commerce menggunakan CMS WordPress untuk membuat lapak jual belinya.
 Disini saya akan share bagaimana sih cara mudah untuk melakukan backup WordPress kita ke salah satu penyimpanan Data Cloud sepertihalnya S3 Protokol ?.
@@ -156,10 +168,10 @@ Oke saya harap santai sejenak yaa jangan tegang hehehehe, pada tutorial kali say
     
     <item>
       <title>Instalasi WordPress Menggunakan LAMP Di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos21/</link>
+      <link>https://nurhamim.net/instalasi-wordpress-menggunakan-lamp-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 18:34:13 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos21/</guid>
+      <guid>https://nurhamim.net/instalasi-wordpress-menggunakan-lamp-di-centos-7/</guid>
       <description>WordPress adalah salah satu CMS yang sering dan bahkan sangat banyak digunakan, semua rata – rata menggunakan WordPres mulai dari website pribadi, pendidikan (sekolah), Industri Perusahaan dan masih banyak yang lainnya.
 Kenapa harus pakai WordPress ?
 Alasan pribadi saya memakai WordPress karena WordPress bisa digunakan secara Free namun ada juga yang berbayar, dan sangat banyak developer yang mensupport untuk menggunakan CMS WordPress.
@@ -168,10 +180,10 @@ Selain itu WordPress salah satu CMS yang bisa dibilang tidak terlalu rumit seper
     
     <item>
       <title>Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos20/</link>
+      <link>https://nurhamim.net/panduan-instalasi-dan-konfigurasi-dns-master-slave-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:50 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos20/</guid>
+      <guid>https://nurhamim.net/panduan-instalasi-dan-konfigurasi-dns-master-slave-di-centos-7/</guid>
       <description>Pada tutorial sebelumnya kami telah menjelaskan dan membuat sebuah DNS Server mandiri menggunakan service BIND di VPS dengan sistem operasi CentOS 7.
 Nah khusus tutorial kali ini kami akan membahas tentang DNS Master – Slave.
 Apa sih itu DNS Master Slave ? DNS Master – Slave, kata Master (primary) artinya utama, sedangkan Slave (secondary) yang artinya yang kedua yang bisanya digunakan sebagai cadangan atau backup.
@@ -180,20 +192,20 @@ DNS Master – Slave juga bisa dibilang pembagian node Nameserver pada DNS, deng
     
     <item>
       <title>Record Record DNS Server</title>
-      <link>https://nurhamim.net/2019/centos19/</link>
+      <link>https://nurhamim.net/record-record-dns-server/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:38 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos19/</guid>
+      <guid>https://nurhamim.net/record-record-dns-server/</guid>
       <description>Pada tutorial kali ini saya akan share mengenai record - record DNS yang sering sekali digunakan, diantaranya:
  SOA (Start Of Authority) untuk mengidentifikasikan otoritas name-server pada zone data atau informasi nama host domain. TTL (Time To Live) merupakan waktu yang diperlukan server DNS untuk menyimpan hasil resolving ke cache-nya. Serial merupakan nomor seri database-cache domain domain.com. Jika ada perubahan data pada berkas zone domainanda.com, misalnya menambahkan domain blog.domainanda.com, maka anda harus merubah/menambah nomor serinya.</description>
     </item>
     
     <item>
       <title>Instalasi DNS Server Di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos18/</link>
+      <link>https://nurhamim.net/instalasi-dns-server-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:28 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos18/</guid>
+      <guid>https://nurhamim.net/instalasi-dns-server-di-centos-7/</guid>
       <description>Pada kesempatan kali ini kami akan share mengenai DNS server di CentOS 7, sebelum itu mari kita bahas sedikit pengertian dari DNS server.
 Apa itu DNS server ?
 DNS (Domain Name System) adalah sebuah sistem yang berfungsi sebagai layanan direktori untuk semua sistem, dengan menspesifikasinnya sebagai nama host atau domain. Dengan kata lain, DNS menjadi satu fasilitas dimana sebuah server yang memiliki nama dan alamat IP sebagai identitas yang unik di dalam jaringan.</description>
@@ -201,10 +213,10 @@ DNS (Domain Name System) adalah sebuah sistem yang berfungsi sebagai layanan dir
     
     <item>
       <title>Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos17/</link>
+      <link>https://nurhamim.net/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos17/</guid>
+      <guid>https://nurhamim.net/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7/</guid>
       <description>Pada tutorial tersebut kita juga dapat membuat database menggunakan mode CLI (Command Line Interface) nah untuk mempermudah Anda dalam pengelolaan Database Anda dapat menggunakan phpMyAdmin dimana phpMyAdmin sendiri berbasis Web Based.
 Dimana yang dimaksuda database Anda dapat diakses melalui web browser dengan menggunakan phpMyAdmin.
 Pada tutorial kali ini kita akan menginstall phpMyAdmin menggunakan webserver apache bagi yang belum install webserver apache silakan install terlebih dahulu.
@@ -213,10 +225,10 @@ Oke langsung saja berikut ini langkah – langkah untuk melakukan installasi dan
     
     <item>
       <title>Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos16/</link>
+      <link>https://nurhamim.net/instalasi-dan-konfigurasi-database-mariadb-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:17 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos16/</guid>
+      <guid>https://nurhamim.net/instalasi-dan-konfigurasi-database-mariadb-di-centos-7/</guid>
       <description>Tahukan Anda tentang apa itu Database ?
 Lalu buat apa sih fungsinya ?
 Oke jika Anda penasang tentang pengertian fungsi database, berikut ini merupakan pengertian dan fungsi dari database .
@@ -227,10 +239,10 @@ Fungsi Database Server :
     
     <item>
       <title>Cara Instalasi PHP 7 di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos15/</link>
+      <link>https://nurhamim.net/cara-instalasi-php-7-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos15/</guid>
+      <guid>https://nurhamim.net/cara-instalasi-php-7-di-centos-7/</guid>
       <description>Pada tutorial kali ini saya akan share bagaimana cara instalasi php 7 mulai dari php 7.1, 7.2 dan 7.3 . Dengan demikian Anda dapat memilih php versi berapa yang ingin Anda gunakan.
 Oke langsung saja yaa ke tahapan – tahapannya :
 Pertama, pastikan Anda telah menginstall webserver apache atau nginx, jika Anda menggunakan apache silakan merujuk pada tautan berikut Instalasi Webserver Apache di CentOS 7 pada tutorial sebelumnya.
@@ -239,19 +251,19 @@ Kedua, pastikan Anda telah menginstall atau memasang repository epel, berikut pe
     
     <item>
       <title>Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos14/</link>
+      <link>https://nurhamim.net/cara-upgrade-versi-dari-php-5.6-ke-php-7.1-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos14/</guid>
+      <guid>https://nurhamim.net/cara-upgrade-versi-dari-php-5.6-ke-php-7.1-di-centos-7/</guid>
       <description>Semakin hari teknologi semakin up to date sama halnya yang terjad dengan php semkin hari maka versi php juga akan update ke versi yang lebih baru, namun sangat banyak aplikasi lama yang berjalan di versi php 5.xx sedangkan saat ini banyak pula aplikasi yang meminta remondasi untuk melakukan upgrade dari 5 ke 7 salah satunya yang paling kerasa yaitu CMS WordPress dimana di versi terbaru WordPress versi PHP yang direkomendasikan yaitu versi 7.</description>
     </item>
     
     <item>
       <title>Instalasi PHP 5.6 di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos13/</link>
+      <link>https://nurhamim.net/instalasi-php-5.6-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:06 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos13/</guid>
+      <guid>https://nurhamim.net/instalasi-php-5.6-di-centos-7/</guid>
       <description>PHP (Pemberi Harapan Palsu) ? #ehh
 Bukan yaaa hihihiih 😀 😀 😀
 PHP merupakan bahasa pemrograman web, yang sering dan abnyak sekali orang menggunakan pemrograman ini, terlebih bagi seorang programmer, udah makanan sehari – hari ni php heheheh 🙂 .
@@ -261,10 +273,10 @@ Langsung saja ke pembahan yaitu installasi php di CentOS 7.</description>
     
     <item>
       <title>Instalasi Webserver Apache di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos12/</link>
+      <link>https://nurhamim.net/instalasi-webserver-apache-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:02 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos12/</guid>
+      <guid>https://nurhamim.net/instalasi-webserver-apache-di-centos-7/</guid>
       <description>Pada kesempatan kali ini saya akan share bagaimana cara installasi webserver apache tersebut di sistem operasi CentOS 7 .
 Untuk instalasi webserver apache kali ini dapat Anda coba di VPS (Virtual Private Server) atau VM (Virtual Machine) lokal biasanya banyak yang menggunakan Virtual Box di Komputer atau Laptop.
 Pertama, silakan login terlebih dahulu ke server Anda masing – masing,
@@ -273,20 +285,20 @@ Kedua, silakan lakukan pembaharuan atau update pada sistem operasi CentOS 7, den
     
     <item>
       <title>Mengenal Apa itu Web Server</title>
-      <link>https://nurhamim.net/2019/centos11/</link>
+      <link>https://nurhamim.net/mengenal-apa-itu-web-server/</link>
       <pubDate>Sat, 06 Jul 2019 09:33:59 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos11/</guid>
+      <guid>https://nurhamim.net/mengenal-apa-itu-web-server/</guid>
       <description>Hai kawan – kawan, kalau sebelumnya saya share mengenai Hosting dan yang lainnya, sepertinya kurang greget yaa, nah kali ini saya akan share mengenai web server, apasih itu web server ?
 Web server adalah perangkat lunak yang memberikan layanan atau service kepada client untuk menerima request HTTP maupun HTTPS dari client yang dikenal. Setelah itu, web server akan mengirimkan request yang diminta oleh client dalam bentuk halaman web, yang secara umum berbentuk dokumen HTML.</description>
     </item>
     
     <item>
       <title>Tips Shortcuts Di Linux</title>
-      <link>https://nurhamim.net/2019/centos10/</link>
+      <link>https://nurhamim.net/tips-shortcuts-di-linux/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:31 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos10/</guid>
+      <guid>https://nurhamim.net/tips-shortcuts-di-linux/</guid>
       <description>Pada kesempatan kali ini kita akan belajar tentang shortcuts yang berada di linux, sebelum itu apasih itu shortcuts ?
 Shortcuts di linux salah satu tombol kombinasi yang dapat kita gunakan untuk melakukan sebuah eksekusi perintah yang kita inginkan. Contohnya apabila kita ingin membuka terminal Linux , dapat dilakukan dengan cara mengetikkan Ctrl + T .
 Berikut contoh – contohnya.
@@ -295,10 +307,10 @@ Menggerakkan Cursor di Terminal Linux : Ctrl + A : Digunakan untuk berpindah ke 
     
     <item>
       <title>E-Book Perintah Dasar Di Linux</title>
-      <link>https://nurhamim.net/2019/centos9/</link>
+      <link>https://nurhamim.net/e-book-perintah-dasar-di-linux/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:26 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos9/</guid>
+      <guid>https://nurhamim.net/e-book-perintah-dasar-di-linux/</guid>
       <description>Sebelumnya kita telah mempelajari tentang apa itu linux dan struktur direktori yang berada di linux, dan pada kesempatan kali ini saya akan sharing tentang perintah dasar atau yang sering di sebut dengan command line di linux.
 Dengan mempelajari command line ini maka nantinya Anda akan dapat mempermudah untuk menggunakan sistem operasi linux.
 Oleh karena itu bagi yang berminat untuk mempelajari command line di linux silakan download saja ebook nya dengan cara KLIK DISINI Yaa 🙂</description>
@@ -306,10 +318,10 @@ Oleh karena itu bagi yang berminat untuk mempelajari command line di linux silak
     
     <item>
       <title>Struktur Hirarki Direktori di Linux</title>
-      <link>https://nurhamim.net/2019/centos8/</link>
+      <link>https://nurhamim.net/struktur-hirarki-direktori-di-linux/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:22 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos8/</guid>
+      <guid>https://nurhamim.net/struktur-hirarki-direktori-di-linux/</guid>
       <description>Pada kesempatan yang bahagia ini hehehe, saya akan sharing kembali mengenai linux, pada tulisan sebelumnya saya telah sharing dan cerita awal mula saya kenal linux serta mengetahui tentang apa itu linux
 Nah pada kali ini saya akan share tentang struktur direktori internal di linux, menurut saya mengetahui struktur file atau direktori itu sebuah keharusan yaa, dengan kita mengetahui struktur direktori maka, kita akan lebih mudah untuk mempelajari system tersebut.
 Struktur file atau direktori yang berada di sebuah sistem itu berbeda – beda, tergantung dari arsitektur kernel yang diguakan.</description>
@@ -317,30 +329,30 @@ Struktur file atau direktori yang berada di sebuah sistem itu berbeda – beda, 
     
     <item>
       <title>Memulai Dengan Linux</title>
-      <link>https://nurhamim.net/2019/centos7/</link>
+      <link>https://nurhamim.net/memulai-dengan-linux/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:15 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos7/</guid>
+      <guid>https://nurhamim.net/memulai-dengan-linux/</guid>
       <description>Hai guyss, pada kesempatan kali ini saya akan sharing tentang LINUX, dan sesuai dengan judul tema pada kali ini nantinya kita akan mempelajari tentang apa itu Linux. Nah sebelum itu saya ingin cerita terlebih dahulu tentang pertama kali saya menggunakan linux hehehehe 🙂
 Pada mulanya saya pribadi kenal Linux itu pada saat saya duduk di bangku SMK kelas 2, ya cuma sekedar tau saja hehehehe. Alhamdulillah-nya saat kelas 3 SMK saya ditugaskan untuk melaksanakan PKL (Praktek Kerja Lapangan), pada saat itu saya PKL di BLC Telkom Klaten yang berada di kota klaten Jawa tengah.</description>
     </item>
     
     <item>
       <title>Mengamankan SSH menggunakan Fail2ban</title>
-      <link>https://nurhamim.net/2019/centos6/</link>
+      <link>https://nurhamim.net/mengamankan-ssh-menggunakan-fail2ban/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos6/</guid>
+      <guid>https://nurhamim.net/mengamankan-ssh-menggunakan-fail2ban/</guid>
       <description>Mengamankan sebuah service yang berada di server itu amatlah penting, apalagi server kita public dan siapa saja dapat mengaksesnya, dan yang paling rentan dalam isu hacking atau brutforce attack di VPS (Virtual Private Server) yaitu service ssh. Nah bagaimana cara mengamankan service ssh tersebut ?
 Sangat banyak cara yang dapat dilakukan untuk mengamankan ssh, salah satunya pada tutorial kali ini kita akan mengamankan service ssh dengan menggunakan aplikasi yang cukup powerfull yaitu Fail2ban .</description>
     </item>
     
     <item>
       <title>Alias Login SSH di Linux</title>
-      <link>https://nurhamim.net/2019/centos5/</link>
+      <link>https://nurhamim.net/alias-login-ssh-di-linux/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:10 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos5/</guid>
+      <guid>https://nurhamim.net/alias-login-ssh-di-linux/</guid>
       <description>Pada kesempatan kali ini topik yang akan kita bahas masih sama yaitu tentang SSH, sebelumnya kita telah mempelajari bagaimana cara melihat log di SSH.
 Nah kali ini kita akan belajar cara bagaimana cara membuat alias atau modifikasi untuk login ssh di linux.
 Manfaat yang didatpakan yaitu Anda dapat mempermudah akses SSH dengan menggunakana nama yang Anda inginkan tanpa perlu mengetikkan perintah ssh roo@IP_Adress kembali.
@@ -349,10 +361,10 @@ Oke langsung saja yaa ke tahapan – tahapan membuat alias untuk login SSH di Li
     
     <item>
       <title>Cara Melihat Log SSH</title>
-      <link>https://nurhamim.net/2019/centos4/</link>
+      <link>https://nurhamim.net/cara-melihat-log-ssh/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:08 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos4/</guid>
+      <guid>https://nurhamim.net/cara-melihat-log-ssh/</guid>
       <description>Pada tutorial kali ini kita akan mempelajari bagaimana sih cara mengetahui log dari ssh itu sendiri, btw log ini sangat penting loh 🙂 .
 Dengan adanya log kita dapat melihat dan mengetahui siapa saja sih yang telah berhasil login/ masuk ke server kita dengan menggunakan ssh. Disini saya menggunakan sistem operasi CentOS 7 ya.
 Berikut langkah – langkahnya :
@@ -361,10 +373,10 @@ Pertama, seperti biasanya silakan remote server terlebih dahulu menggunakan ssh 
     
     <item>
       <title>Cara Mengubah Port SSH</title>
-      <link>https://nurhamim.net/2019/centos3/</link>
+      <link>https://nurhamim.net/cara-mengubah-port-ssh/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:05 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos3/</guid>
+      <guid>https://nurhamim.net/cara-mengubah-port-ssh/</guid>
       <description>Pada tutorial sebelumnya saya telah menyampaikan bahwa secara default ssh menggunakan port 22, nah pada tutorial kali ini kita akan mempelajari bagaimana cara untuk memodifikasi atau mengubah port default ssh tersebut.
 Sangat banyak manfaat yang didaptkan jika kita mengubah port default ssh salah satunya adalah melindungi service ssh kita dari serangan brutforce ssh yang sangat sering sekali terjadi.
 Namun terdapat juga kekurangannya yaitu jikalau kita lupa port ssh yang telah kita ubah sebelumnya yaa mau nggak mau kita tidak akan bisa login ke server 🙁</description>
@@ -372,10 +384,10 @@ Namun terdapat juga kekurangannya yaitu jikalau kita lupa port ssh yang telah ki
     
     <item>
       <title>Remote Server Menggunakan SSH Key Di Linux</title>
-      <link>https://nurhamim.net/2019/centos2/</link>
+      <link>https://nurhamim.net/remote-server-menggunakan-ssh-key-di-linux/</link>
       <pubDate>Sat, 06 Jul 2019 04:50:01 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos2/</guid>
+      <guid>https://nurhamim.net/remote-server-menggunakan-ssh-key-di-linux/</guid>
       <description>Sebelumnya kita telah membahas sedikit tentang SSH, kalau sebelumnya kita setiap masuk/ login ke server harus mengisikan password agak ribet juga ya dan kurang aman sih menurut saya pribadi :).
 Nah disini saya ada cara yang lebih aman dan mudah untuk diimplementasikan, menggunakan apa ?
 Menggunakan SSH Key authentication, yang biasanya sering dibilang dengan ssh-copy-id, jika Anda menggunakan ssh key Anda akan mendapatkan kenyamanan dan keamanan untuk login melalui SSH karena Anda tidak perlu memasukkan password manual seperti ssh biasa (yang rawan akan kerentanan di brutforce).</description>
@@ -383,10 +395,10 @@ Menggunakan SSH Key authentication, yang biasanya sering dibilang dengan ssh-cop
     
     <item>
       <title>Remote Server Menggunakan SSH di Linux</title>
-      <link>https://nurhamim.net/2019/centos1/</link>
+      <link>https://nurhamim.net/remote-server-menggunakan-ssh-di-linux/</link>
       <pubDate>Sat, 06 Jul 2019 04:49:43 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos1/</guid>
+      <guid>https://nurhamim.net/remote-server-menggunakan-ssh-di-linux/</guid>
       <description>Pernahkah Anda berfikir bagaimana sih cara yang dapat digunakan untuk mengakses sebuah server ?. Atau Anda yang telah mempunyai sebuah Virtual Private Server (VPS), tetapi bingung bagaimana cara mengaksesnya ?.
 Oke, jangan keburu bingung dulu yaa, heheheh 🙂 , sebelum itu bagi Anda yang ingin mempunyai sebuah VPS yang murah dan handa serta sangat berkualitas bangett, saya sarankan Anda menggunakan VPS-nya CloudKilat, selengkapnya bisa di lihat pada tautan berikut : VPS CloudKilat</description>
     </item>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/instalasi-webserver-apache-di-centos-7/" />
+  <link rel="next" href="https://nurhamim.net/cara-upgrade-versi-dari-php-5.6-ke-php-7.1-di-centos-7/" />
+  <link rel="canonical" href="https://nurhamim.net/instalasi-php-5.6-di-centos-7/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi PHP 5.6 di CentOS 7 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Instalasi PHP 5.6 di CentOS 7 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi PHP 5.6 di CentOS 7",
+    "headline" : "Instalasi PHP 5.6 di CentOS 7",
+    "description" : "PHP (Pemberi Harapan Palsu) ? #ehh\nBukan yaaa hihihiih 😀 😀 😀\nPHP merupakan bahasa pemrograman web, yang sering dan abnyak sekali orang menggunakan pemrograman ini, terlebih bagi seorang programmer, udah makanan sehari – hari ni php heheheh 🙂 .\nDisini saya tidak akan mejelaskan tentang detail mengenai php itu sendiri buat apa untuk detail mengenai php itu sendiri dapat langsung dilihat di tautan resminya berikut : http:\/\/www.php.net\/\nLangsung saja ke pembahan yaitu installasi php di CentOS 7.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 09:34:06 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 09:34:06 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/instalasi-php-5.6-di-centos-7\/",
+    "wordCount" : "502",
+    "keywords" : [ "webserver","CentOS 7","Linux","php", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi PHP 5.6 di CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>PHP (Pemberi Harapan Palsu) ? #ehh</p>
+
+<p>Bukan yaaa hihihiih 😀 😀 😀</p>
+
+<p>PHP merupakan bahasa pemrograman web, yang sering dan abnyak sekali orang menggunakan pemrograman ini, terlebih bagi seorang programmer, udah makanan sehari – hari ni php heheheh 🙂 .</p>
+
+<p>Disini saya tidak akan mejelaskan tentang detail mengenai php itu sendiri buat apa untuk detail mengenai php itu sendiri dapat langsung dilihat di tautan resminya berikut : <a href="http://www.php.net/" rel="nofollow noreferrer" target="_blank">http://www.php.net/</a></p>
+
+<p>Langsung saja ke pembahan yaitu installasi php di CentOS 7.</p>
+
+<p>Pertama, silakan login ke server Anda masing – masing.</p>
+
+<p>Kedua, silakan update sistem operasi CentOS 7 Anda dengan menjalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# yum update -y
+</code></pre>
+
+<p>Jika sudah silakan, berikutnya menambahkan atau install repositori remi di CentOS 7 dengan menjalankan perintah</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+</code></pre>
+
+<p>Jika sudah berikutnya kita install manager untuk repositori remi di CentOS 7 dengan menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# yum-config-manager --enable remi-php56
+Loaded plugins: fastestmirror
+=============================================================== repo: remi-php56 ===============================================================
+[remi-php56]
+async = True
+bandwidth = 0
+base_persistdir = /var/lib/yum/repos/x86_64/7
+baseurl = 
+cache = 0
+cachedir = /var/cache/yum/x86_64/7/remi-php56
+check_config_file_age = True
+compare_providers_priority = 80
+cost = 1000
+deltarpm_metadata_percentage = 100
+deltarpm_percentage = 
+enabled = 1
+enablegroups = True
+exclude = 
+failovermethod = priority
+ftp_disable_epsv = False
+gpgcadir = /var/lib/yum/repos/x86_64/7/remi-php56/gpgcadir
+gpgcakey = 
+gpgcheck = True
+gpgdir = /var/lib/yum/repos/x86_64/7/remi-php56/gpgdir
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+hdrdir = /var/cache/yum/x86_64/7/remi-php56/headers
+http_caching = all
+includepkgs = 
+ip_resolve = 
+keepalive = True
+keepcache = False
+mddownloadpolicy = sqlite
+mdpolicy = group:small
+mediaid = 
+metadata_expire = 21600
+metadata_expire_filter = read-only:present
+metalink = 
+minrate = 0
+mirrorlist = http://cdn.remirepo.net/enterprise/7/php56/mirror
+mirrorlist_expire = 86400
+name = Remi's PHP 5.6 RPM repository for Enterprise Linux 7 - x86_64
+old_base_cache_dir = 
+password = 
+persistdir = /var/lib/yum/repos/x86_64/7/remi-php56
+pkgdir = /var/cache/yum/x86_64/7/remi-php56/packages
+proxy = False
+proxy_dict = 
+proxy_password = 
+proxy_username = 
+repo_gpgcheck = False
+retries = 10
+skip_if_unavailable = False
+ssl_check_cert_permissions = True
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = True
+throttle = 0
+timeout = 30.0
+ui_id = remi-php56
+ui_repoid_vars = releasever,
+   basearch
+username = 
+
+[root@srv-hamim01 ~]# 
+</code></pre>
+
+<p>Jika sudah, berikutnya install php yang dibutuhkan,</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# yum install php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo
+</code></pre>
+
+<p>Silakan tunggu proses installasi php sampai selesai. Untuk melihat versi php yang kita gunakan dapat dilakukan dengan menggunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# php -v
+PHP 5.6.40 (cli) (built: Jan 9 2019 12:34:16)
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+[root@srv-hamim01 ~]#
+</code></pre>
+
+<p>Berikutnya mari kita cek php apa saja yang telah kita install dengan membuat file <strong>info.php</strong> di <strong>/var/www/html</strong>  dengan cara berikut,</p>
+
+<p>Pindah ke direktori /var/www/html menggunakan perintah cd .</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%205.6/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Buat script info.php seperti berikut menggunakan teks edito vim atau nano,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/php%205.6/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah silakan simpan file info.php tersebut, selanjutnya melakukan restart atau reload pada webserver yang Anda gunakan disini menggunakan web server apache, berikut command yang dapat Anda gunakan untuk melakukan reload tersebut</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 html]# systemctl reload httpd
+</code></pre>
+
+<p>Jika sudah silakan akses IP server Anda dengan /info.php . Maka hasilnya akan seperti pada gambar dibawah ini</p>
+
+<p>Pada tahap ini installasi php di CentOS 7 sudah selesai cukup mudah kan.</p>
+
+<p>Selamat mencoba semoga bermanfaat 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/instalasi-php-5.6-di-centos-7/>https://nurhamim.net/instalasi-php-5.6-di-centos-7/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/webserver/">
+                    #webserver</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/php/">
+                    #php</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/instalasi-webserver-apache-di-centos-7/" class="prev" rel="prev" title="Instalasi Webserver Apache di CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Instalasi Webserver Apache di CentOS 7</a>
+         
+        
+        <a href="https://nurhamim.net/cara-upgrade-versi-dari-php-5.6-ke-php-7.1-di-centos-7/" class="next" rel="next" title="Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7">Cara Upgrade Versi Dari PHP 5.6 ke PHP 7.1 Di CentOS 7&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -13,10 +13,10 @@
     
     <item>
       <title>S3 Storage untuk Backup WordPress</title>
-      <link>https://nurhamim.net/2019/centos22/</link>
+      <link>https://nurhamim.net/s3-storage-untuk-backup-wordpress/</link>
       <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos22/</guid>
+      <guid>https://nurhamim.net/s3-storage-untuk-backup-wordpress/</guid>
       <description>Pernahkan Anda mengalami kehilangan data penting pada website Anda ?
 Terlebih bagi seorang e-commerce yang menyimpan ribuan data pelanggan yang sangat – sangat penting, dan si e-commerce menggunakan CMS WordPress untuk membuat lapak jual belinya.
 Disini saya akan share bagaimana sih cara mudah untuk melakukan backup WordPress kita ke salah satu penyimpanan Data Cloud sepertihalnya S3 Protokol ?.
@@ -25,10 +25,10 @@ Oke saya harap santai sejenak yaa jangan tegang hehehehe, pada tutorial kali say
     
     <item>
       <title>Instalasi WordPress Menggunakan LAMP Di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos21/</link>
+      <link>https://nurhamim.net/instalasi-wordpress-menggunakan-lamp-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 18:34:13 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos21/</guid>
+      <guid>https://nurhamim.net/instalasi-wordpress-menggunakan-lamp-di-centos-7/</guid>
       <description>WordPress adalah salah satu CMS yang sering dan bahkan sangat banyak digunakan, semua rata – rata menggunakan WordPres mulai dari website pribadi, pendidikan (sekolah), Industri Perusahaan dan masih banyak yang lainnya.
 Kenapa harus pakai WordPress ?
 Alasan pribadi saya memakai WordPress karena WordPress bisa digunakan secara Free namun ada juga yang berbayar, dan sangat banyak developer yang mensupport untuk menggunakan CMS WordPress.
@@ -37,10 +37,10 @@ Selain itu WordPress salah satu CMS yang bisa dibilang tidak terlalu rumit seper
     
     <item>
       <title>Instalasi Webserver Apache di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos12/</link>
+      <link>https://nurhamim.net/instalasi-webserver-apache-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:02 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos12/</guid>
+      <guid>https://nurhamim.net/instalasi-webserver-apache-di-centos-7/</guid>
       <description>Pada kesempatan kali ini saya akan share bagaimana cara installasi webserver apache tersebut di sistem operasi CentOS 7 .
 Untuk instalasi webserver apache kali ini dapat Anda coba di VPS (Virtual Private Server) atau VM (Virtual Machine) lokal biasanya banyak yang menggunakan Virtual Box di Komputer atau Laptop.
 Pertama, silakan login terlebih dahulu ke server Anda masing – masing,
@@ -49,10 +49,10 @@ Kedua, silakan lakukan pembaharuan atau update pada sistem operasi CentOS 7, den
     
     <item>
       <title>Mengenal Apa itu Web Server</title>
-      <link>https://nurhamim.net/2019/centos11/</link>
+      <link>https://nurhamim.net/mengenal-apa-itu-web-server/</link>
       <pubDate>Sat, 06 Jul 2019 09:33:59 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos11/</guid>
+      <guid>https://nurhamim.net/mengenal-apa-itu-web-server/</guid>
       <description>Hai kawan – kawan, kalau sebelumnya saya share mengenai Hosting dan yang lainnya, sepertinya kurang greget yaa, nah kali ini saya akan share mengenai web server, apasih itu web server ?
 Web server adalah perangkat lunak yang memberikan layanan atau service kepada client untuk menerima request HTTP maupun HTTPS dari client yang dikenal. Setelah itu, web server akan mengirimkan request yang diminta oleh client dalam bentuk halaman web, yang secara umum berbentuk dokumen HTML.</description>
     </item>

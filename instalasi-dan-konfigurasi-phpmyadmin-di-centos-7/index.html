@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/instalasi-dan-konfigurasi-database-mariadb-di-centos-7/" />
+  <link rel="next" href="https://nurhamim.net/instalasi-dns-server-di-centos-7/" />
+  <link rel="canonical" href="https://nurhamim.net/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7",
+    "headline" : "Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7",
+    "description" : "Pada tutorial tersebut kita juga dapat membuat database menggunakan mode CLI (Command Line Interface) nah untuk mempermudah Anda dalam pengelolaan Database Anda dapat menggunakan phpMyAdmin dimana phpMyAdmin sendiri berbasis Web Based.\nDimana yang dimaksuda database Anda dapat diakses melalui web browser dengan menggunakan phpMyAdmin.\nPada tutorial kali ini kita akan menginstall phpMyAdmin menggunakan webserver apache bagi yang belum install webserver apache silakan install terlebih dahulu.\nOke langsung saja berikut ini langkah – langkah untuk melakukan installasi dan konfigurasi phpMyAdmin di CentOS 7",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-06 09:34:23 \x2b0700 WIB",
+    "dateModified" : "2019-07-06 09:34:23 \x2b0700 WIB",
+    "url" : "https:\/\/nurhamim.net\/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7\/",
+    "wordCount" : "350",
+    "keywords" : [ "mariadb","CentOS 7","Linux","database","phpmyadmin", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-06 itemprop="datePublished">July 6, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Pada tutorial tersebut kita juga dapat membuat database menggunakan mode CLI (Command Line Interface) nah untuk mempermudah Anda dalam pengelolaan Database Anda dapat menggunakan phpMyAdmin dimana phpMyAdmin sendiri berbasis Web Based.</p>
+
+<p>Dimana yang dimaksuda database Anda dapat diakses melalui web browser dengan menggunakan phpMyAdmin.</p>
+
+<p>Pada tutorial kali ini kita akan menginstall phpMyAdmin menggunakan webserver apache bagi yang belum install webserver apache silakan install terlebih dahulu.</p>
+
+<p>Oke langsung saja berikut ini langkah – langkah untuk melakukan installasi dan konfigurasi phpMyAdmin di CentOS 7</p>
+
+<p>Pertama, silakan akses server CentOS 7 Anda masing – masing,</p>
+
+<p>Kedua, pastikan Anda telah menginstall database server MariaDB atau MySQL dan webserver apache</p>
+
+<p>Ketiga, silakan melakukan pembaharuan atau update sistem operasi CentOS 7 Anda.</p>
+
+<p>Berikutnya, menginstall atau menambahkan repository epel di CentOS 7 dengan cara menjalakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# yum install epel-release
+</code></pre>
+
+<p>Jika suda, silakan install phpMyAdmin di CentOS 7 dengan cara menjalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# yum install phpmyadmin
+</code></pre>
+
+<p>Silakan tunggu proses instalasi sampai selesai, jika sudah selesai proses installasinya coba akses alamat IP server Anda /phpmyadmin</p>
+
+<p>Saya yakin 100% tidak bisa wkwkkwkwkw 😀 .</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Santai setelah installasi kita perlu melakukan konfigurasi phpMyAdmin, untuk file yang harus kita konfigurasi sendiri berada di /etc/httpd/conf.d/phpMyAdmin.conf . Untuk kebutuhan edit file konfigurasi dapat menggunakan editor vim atau nano, sesuai dengan keinginan Anda masing – masing, disini penulis menggunakan vim</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# vim /etc/httpd/conf.d/phpMyAdmin.conf
+</code></pre>
+
+<p>Berikut isi dari file phpMyAdmin secara default</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan menambahkan perintah Require all granted dan disabled ip localhost seperti pada gambar dibawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah, silakan simpan file phpMyAdmin lalu melakukan reload atau restart terhadap webserver apache kita dengan cara menjalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-hamim01 ~]# systemctl restart httpd
+</code></pre>
+
+<p>Jika, sudah silakan akses kembali IP server disertai /phpmyadmin, insya Allah work 100% ganss ehhehehe, hasil seperti berikut ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk loginnya secara default masih menggunakan root apabila Anda belum membuat user baru, untuk passwordnya password root database yang telah Anda buat pada saat Anda installasi database sebelumnya.</p>
+
+<p>Berikut tampilan dari phpMyAdmin</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/phpmyadmin/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada tahap ini Anda telah berhasil installasi dan konfigurasi phpmyadmin, bagaima simple kan intinya ada niat untuk belajar gans,</p>
+
+<p>Selamat mencoba dan semoga bermanfaat bagi kita semua :)</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7/>https://nurhamim.net/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/mariadb/">
+                    #mariadb</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/database/">
+                    #database</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/phpmyadmin/">
+                    #phpmyadmin</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/instalasi-dan-konfigurasi-database-mariadb-di-centos-7/" class="prev" rel="prev" title="Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7</a>
+         
+        
+        <a href="https://nurhamim.net/instalasi-dns-server-di-centos-7/" class="next" rel="next" title="Instalasi DNS Server Di CentOS 7">Instalasi DNS Server Di CentOS 7&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

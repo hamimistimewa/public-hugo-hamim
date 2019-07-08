@@ -13,10 +13,10 @@
     
     <item>
       <title>Instalasi Dan Konfigurasi phpMyAdmin Di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos17/</link>
+      <link>https://nurhamim.net/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
       
-      <guid>https://nurhamim.net/2019/centos17/</guid>
+      <guid>https://nurhamim.net/instalasi-dan-konfigurasi-phpmyadmin-di-centos-7/</guid>
       <description>Pada tutorial tersebut kita juga dapat membuat database menggunakan mode CLI (Command Line Interface) nah untuk mempermudah Anda dalam pengelolaan Database Anda dapat menggunakan phpMyAdmin dimana phpMyAdmin sendiri berbasis Web Based.
 Dimana yang dimaksuda database Anda dapat diakses melalui web browser dengan menggunakan phpMyAdmin.
 Pada tutorial kali ini kita akan menginstall phpMyAdmin menggunakan webserver apache bagi yang belum install webserver apache silakan install terlebih dahulu.
