@@ -5,8 +5,939 @@
     <description>Recent content in Catatan Cah Ndeso on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jul 2019 05:21:26 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 14:03:12 +0700</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Pengenalan Dan Kenapa Linux?</title>
+      <link>https://nurhamim.net/2019/linux1/</link>
+      <pubDate>Mon, 08 Jul 2019 14:03:12 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/linux1/</guid>
+      <description>
+
+&lt;h3 id=&#34;apa-itu-linux&#34;&gt;Apa itu Linux ?&lt;/h3&gt;
+
+&lt;p&gt;Menurut &lt;a href=&#34;https://en.wikipedia.org/wiki/Linux&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Linux is a family of free and open-source software operating systems built around the Linux kernel. Typically, Linux is packaged in a form known as a Linux distribution (or distro for short) for both desktop and server use. The defining component of a Linux distribution is the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds. Many Linux distributions use the word &amp;ldquo;Linux&amp;rdquo; in their name. The Free Software Foundation uses the name GNU/Linux to refer to the operating system family, as well as specific distributions, to emphasize that most Linux distributions are not just the Linux kernel, and that they have in common not only the kernel, but also numerous utilities and libraries, a large proportion of which are from the GNU project&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sangat jelas ya dari rangkuman diatas, Linux adalah sistem operasi atau perangkat lunak open source (bebas dan terbuka) namun jangan salah mengartikan bebas disini tidak semua Linux gratis terdapat juga beberapa distribusi Linux yang berbayar.&lt;/p&gt;
+
+&lt;p&gt;Linux dikemas dalam bentuk distribusi Linux atau yang biasa dibilang dengan distro Linux untuk penggunaan Desktop maupun Server.&lt;/p&gt;
+
+&lt;p&gt;Komponen utama dari distribusi Linux adalah kernel Linux, kernel sistem operasi yang pertama kali dibuat oleh &lt;code&gt;Linus Torvalds&lt;/code&gt; dan pertama kali di rilis pada  17 September 1991.&lt;/p&gt;
+
+&lt;p&gt;Pada tutorial sebelumnya saya juga telah membahas beberapa distro Linux yang dapat teman - teman lihat pada tautan berikut: &lt;a href=&#34;https://nurhamim.net/2019/centos7/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Memulai Dengan Linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;kenapa-linux&#34;&gt;Kenapa Linux ?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lebih cepat, aman, stabil
+
+&lt;ul&gt;
+&lt;li&gt;Membantu pengembang dari seluruh dunia berkontribusi, bukan hanya satu perusahaan&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Dapat di cusomisasi sesuai dengan kebutuhan bahkan bisa dikembangkan kembali.&lt;/li&gt;
+&lt;li&gt;Cocok untuk digunakan secara personal dan produksi&lt;/li&gt;
+&lt;li&gt;Komunitas nya tersebar di seluruh dunia salah satunya Indonesia&lt;/li&gt;
+&lt;li&gt;Masih banyak lagi lainnya.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Itu lah pengenalan dan kenapa harus menggunakan Linux versi saya.&lt;/p&gt;
+
+&lt;p&gt;Selamat belajar semoga bermanfaat :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Pengenalan Perintah Linux Atau Command Line</title>
+      <link>https://nurhamim.net/2019/linux2/</link>
+      <pubDate>Mon, 08 Jul 2019 14:03:12 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/2019/linux2/</guid>
+      <description>
+
+&lt;p&gt;Pada tutorial kali ini kita akan membahas tengan Command Line introduction atau Pengenalan Perintah di Linux.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini merupakan beberapa bahasan yang akan di sajikan dalam tutorial kali ini diantaranya:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;File System&lt;/li&gt;
+&lt;li&gt;Command Line Interface (CLI)&lt;/li&gt;
+&lt;li&gt;Perintah atau Command Line Di Linux&lt;/li&gt;
+&lt;li&gt;Perintah Mengenai Info System Di Linux&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;file-system&#34;&gt;File System&lt;/h3&gt;
+
+&lt;p&gt;Di sebuah sistem operasi pasti terdapat yang namanya file system, lalu apa itu file system ?&lt;/p&gt;
+
+&lt;p&gt;File System (sistem file) merupakan wadah atau tempat penyimpanan, pengelolaan, manipulasi dan pengambilan data agar mudah ditemukan dan diakses. Selengkapnya, mengenai arti dari file system dapat merujuk pada tautan berikut: &lt;a href=&#34;https://en.wikipedia.org/wiki/File_system&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Wikipedia File System&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mungkin Anda yang sudah mengenal sistem operasi seperti Windows contohnya, pasti Anda akan menemukan simbol &lt;code&gt;C:&lt;/code&gt; &lt;code&gt;D:&lt;/code&gt; dan yang lainnya itu merupakan file system tapi di sistem operasi Windows.&lt;/p&gt;
+
+&lt;p&gt;File system di sistem operasi Linux berbeda dengan Windows. Di Linux disebut dengan struktur direktori dimulai dengan simbol &lt;code&gt;/&lt;/code&gt; yang artinya sebagai direktori induk atau &lt;code&gt;root&lt;/code&gt; direktori.&lt;/p&gt;
+
+&lt;p&gt;Perbedaan yang paling mendasar dan bisa di lihat kalau di Windows file system nya sendiri2, namun berbeda dengan Linux di Linux hirarki dari file system nya sendiri bercabang di mana induk direktorinya yakni &lt;code&gt;/&lt;/code&gt; (root).&lt;/p&gt;
+
+&lt;p&gt;Untuk detail mengenai pembahasan hirarki di Linux dapat merujuk pada tutorial berikut ini: &lt;a href=&#34;https://nurhamim.net/2019/centos8/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Struktur Hirarki Direktori di Linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;command-line-interface-cli&#34;&gt;Command Line Interface (CLI)&lt;/h3&gt;
+
+&lt;p&gt;Bila Anda pengguna sistem operasi Windows Anda pasti tau dan mengenai tentang CMD, nah kalau di linux terdapat 2 pemilihan untuk menjalankan sistem operasi Linux tersebut bisa menggunakan CLI mode (Command Line Interface) atau GUI mode (Graphic User Interface).&lt;/p&gt;
+
+&lt;p&gt;Pebedaannya adalah CLI di jalankan hanya menggunakan perintah atau command text saja tidak terdapat Graphic, namun kalau GUI bisa di jalankan menggunakan CLI tanpa Graphic bisa juga digunakan melalui GUI itu sendiri yang sudah tersedia Graphic nya.&lt;/p&gt;
+
+&lt;p&gt;Biasanya di Linux kalau yang GUI kebanyakan digunakan sistem operasi linux dekstop yang mana dapat digunakan sehari - hari untuk beraktifitas kerja, sekolah dan sebagainya sedangkan untuk CLI sendiri kebanyakan digunakan untuk kebutuhan Server.&lt;/p&gt;
+
+&lt;p&gt;Command Line Interface (CLI) memugnkinkan kita sebagai user berinteraksi dengan komputer atau laptop menggunakan command atau perintah teks.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, command atau perintah &lt;code&gt;cd&lt;/code&gt; digunakan untuk melakukan berpindah direktori A ke direktori yang lainnya, atau perintah &lt;code&gt;ls&lt;/code&gt; yang dapat Anda gunakan untuk melihat isi direktori. Untuk menjalankan perintah - perintah tersebut dapat melalui terminal di sistem operasi Linux Anda.&lt;/p&gt;
+
+&lt;h3 id=&#34;command-line-di-linux&#34;&gt;Command Line Di Linux&lt;/h3&gt;
+
+&lt;p&gt;Pada tema kali ini kita akan membahas beberapa command atau perintah yang sangat sering digunakan dan ini sangat dan wajib di ketahui bagi teman - teman yang baru atau sedang belajar tentang Linux basic dengan mengetahui command line linux maka pekerjaan dengan sistem operasi linux akan mudah dan cepat.&lt;/p&gt;
+
+&lt;h4 id=&#34;navigasi-pada-direktori&#34;&gt;Navigasi Pada Direktori&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command Linux&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Tujuan&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ls&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Melihat daftar file di dalam direktori saat ini&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ls -al&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Melihat daftar semua file dalam direktori saat ini, termasuk file titik&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cd &lt;code&gt;dirpath&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Ubah atau pindah direktori&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cd&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Pindah ke direktori $HOME&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cd .  .&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Naik satu tingkat direktori&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pwd&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Menampilkan direktori saat ini&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Banyak argumen atau perintah ini dapat berupa nama file (relatif terhadap direktori saat ini), atau path file secara lengkap. Sebagai contoh, &lt;code&gt;ls /usr/local/bin&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:/# ls /usr/local/bin/
+hugo  wrk
+root@hamimaja:/# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Anda dapat menyesuaikan dengan kebutuhan ataupun dalam case - case tertentu yang Anda alami.&lt;/p&gt;
+
+&lt;h4 id=&#34;manipulasi-file-direktori&#34;&gt;Manipulasi File/Direktori&lt;/h4&gt;
+
+&lt;p&gt;Inilah salah satu hal yang sangat menarik bila kita menggunakan sistem operasi Linux, kita dapat memanipulasi sebuah file atau direktori dengan satu command saja, bayangkan saja bila Anda ingin membuat sebuah file total file 100 , maka sudah kebayang berapa waktu yang dibutuhkan untuk membuat 100 file tersebut dan ini juga termasuk kendala baik di bagian waktu. Untuk mengatasi kendala tersebut kita dapat memanfaatkan command untuk memanipulasi sebuah file atau direktori.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command Linux&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Tujuan&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;touch &lt;code&gt;filename&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Membuat file baru atau memperbaharui file yang sudah ada&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;rm &lt;code&gt;filename&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk menghapus file&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;rm -rf &lt;code&gt;dirname&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk menghapus direktori&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cp &lt;code&gt;filename new_filename&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk salin (copy) file&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cp -r &lt;code&gt;dirname new_name&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk salin (copy) direktori&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;mkdir &lt;code&gt;new_dir_name&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk membuat direktori baru&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;rmdir &lt;code&gt;dirname&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk menghapus direktori kosong&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;mv &lt;code&gt;filename new_name&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk mengubah nama direktori atau memindahkan ke direktori yang berbeda&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;melihat-file-di-linux&#34;&gt;Melihat File Di Linux&lt;/h4&gt;
+
+&lt;p&gt;Terdapat banyak cara untuk melihat isi dari sebuah file di sistem operasi Linux diantaranya&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command Linux&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Tujuan&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cat &lt;code&gt;fname&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Menampilkan isi/content file&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;vi &lt;code&gt;fname&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Melihat file menggunakan teks editor vi&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;head &lt;code&gt;fname&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Melihat beberapa baris pertama pada file (paling berguna untuk file besar, misalnya: file log)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;tail &lt;code&gt;fname&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Melihat beberapa baris terakhir pada file&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;tail - f &lt;code&gt;fname&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;melihat beberapa baris terakhir dari file. Biasanya digunakan pada file log.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;file &lt;code&gt;fname&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Melaporkan jenis file (Misalnya, teks, jpg, png, pdf, &amp;hellip;.)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;archive-compression-tar-zip&#34;&gt;Archive, Compression (tar,zip)&lt;/h4&gt;
+
+&lt;p&gt;Banyak cara yang dapat digunakan untuk melakukan archive atau compress sebuah file di sistem operasi Linux, salah satunya menggunakan tar, gzip . Berikut contoh untuk command line nya&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command Linux&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Tujuan&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;tar cvf &lt;code&gt;new name.tar dirpath&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk compress file dalam ekstensi &lt;code&gt;.tar&lt;/code&gt; juga dapat menetukan direktori file .tar&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;tar xvf &lt;code&gt;filename.tar&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk uncompress file ekstensi &lt;code&gt;.tar&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;zip -r &lt;code&gt;new name.zip dirname&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk compress file dalam ekstensi &lt;code&gt;.zip&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;unzip &lt;code&gt;filename&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk uncompress file ekstensi &lt;code&gt;.zip&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;gzip &lt;code&gt;filename&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk compress file dalam ekstensi &lt;code&gt;.gz&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;gzip -d &lt;code&gt;filename&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk uncompress file ekstensi &lt;code&gt;.gz&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;bzip2 &lt;code&gt;filename&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk compress file dalam ekstensi &lt;code&gt;.bz2&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;bzip2 -d &lt;code&gt;filename&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk uncompress file ekstensi &lt;code&gt;bz2&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;xz &lt;code&gt;filename&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk compress file dalam ekstensi &lt;code&gt;.xz&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;xz -d &lt;code&gt;filename&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk uncompress file ekstensi &lt;code&gt;.xz&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;manajemen-proses&#34;&gt;Manajemen Proses&lt;/h4&gt;
+
+&lt;p&gt;Manjamene proses yang sedang berjalan di linux sangatlah penting untuk kita ketahui, saya sendiri mewajibkan diri saya untuk mengetahui untuk command line mengenai manajemen proses ini karena dengan mengetahuinya, maka kita sebagai pengguna linux sangat dipermudah untuk mengetahui service apa saja yang memakan resource tinggi dan ini sangat dibutuhkan bila terdapat load average di sebuah server Linux.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command Linux&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Tujuan&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ps -ef&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk melihat proses yang berjalan&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pstree&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk menampilkan sebuah proses sampai ke dalam bentuk direktorinya&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;top&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk monitoring service yang sedang berjalan&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;htop&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk monitoring service yang sedang berjalan&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;kill &lt;code&gt;pid&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk memberhentikan service yang berjalan (diketahui dari hasil monitoring top/htop)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;kill -s 9 &lt;code&gt;pid&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Digunakan untuk force close (pemberhentian proses secara paksa)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;perintah-mengenai-info-system-di-linux&#34;&gt;Perintah Mengenai Info System Di Linux&lt;/h3&gt;
+
+&lt;p&gt;Selain itu disini kami akan memberikan dan mencontohkan mengenai command line yang biasanya digunakan untuk mengetahui tentang informasi system di sistem operasi Linux.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mengetahui versi kernel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Untuk mengetahui versi kernel yang kita gunakan dapat menggunakan perintah &lt;strong&gt;uname -a&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# uname -a
+Linux hamimaja 4.15.0-54-generic #58-Ubuntu SMP Mon Jun 24 10:55:24 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+root@hamimaja:~#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mengetahui nama distro  beserta versinya&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Silakan gunakan perintah &lt;strong&gt;cat /etc/lsb_release&lt;/strong&gt; ,untuk mengetahui Distro, release, distribusi serta codename yang digunakan secara detail.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# cat /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION=&amp;quot;Ubuntu 18.04.2 LTS&amp;quot;
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mengetahui Bit CPU di Linux&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Untuk mengetahui berapa bit yang digunakan oleh komputer atau laptop kita di Linux silakan menggunakan  perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# getconf LONG_BIT
+64
+root@hamimaja:~#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mengetahui Banyaknya RAM yang di gunakan&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Untuk mengetahui RAM di komputer atau laptop kita digunakan apa saja silakan gunakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# cat /proc/meminfo
+MemTotal:        5815508 kB
+MemFree:         2184708 kB
+MemAvailable:    3064164 kB
+Buffers:          146728 kB
+Cached:          1160488 kB
+SwapCached:         8972 kB
+Active:          2307080 kB
+Inactive:         993620 kB
+Active(anon):    1718080 kB
+Inactive(anon):   524020 kB
+Active(file):     589000 kB
+Inactive(file):   469600 kB
+Unevictable:          48 kB
+Mlocked:              48 kB
+SwapTotal:       2097148 kB
+SwapFree:         779680 kB
+Dirty:               400 kB
+Writeback:             0 kB
+AnonPages:       1986676 kB
+Mapped:           581912 kB
+Shmem:            281972 kB
+Slab:             138260 kB
+SReclaimable:      63920 kB
+SUnreclaim:        74340 kB
+KernelStack:       17728 kB
+PageTables:        86284 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     5004900 kB
+Committed_AS:   12759152 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      623476 kB
+DirectMap2M:     5376000 kB
+DirectMap1G:     1048576 kB
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sedangkan untuk mengetahui ukuran RAM yang kita gunakan dalam satuan KB silakan gunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# free
+              total        used        free      shared  buff/cache   available
+Mem:        5815508     2280424     2173028      260284     1362056     3064832
+Swap:       2097148     1316956      780192
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk mengetahui ukuran RAM dalam satuan MB silakan gunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# free -m
+              total        used        free      shared  buff/cache   available
+Mem:           5679        2235        2109         256        1333        2981
+Swap:          2047        1286         761
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bila Anda ingin mentahui ukuran RAM dalam satuan GB silakan gunakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# free -g
+              total        used        free      shared  buff/cache   available
+Mem:              5           2           2           0           1           2
+Swap:             1           1           0
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mengetahui info tentang CPU&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Banyak cara yang dapat Anda gunakan dan Anda pilih untuk mengetahui info CPU model diantaranya sebagai berikut.&lt;/p&gt;
+
+&lt;p&gt;Anda dapat menggunakan perintah &lt;strong&gt;lscpu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# lscpu
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              4
+On-line CPU(s) list: 0-3
+Thread(s) per core:  2
+Core(s) per socket:  2
+Socket(s):           1
+NUMA node(s):        1
+Vendor ID:           GenuineIntel
+CPU family:          6
+Model:               60
+Model name:          Intel(R) Core(TM) i5-4210M CPU @ 2.60GHz
+Stepping:            3
+CPU MHz:             2858.321
+CPU max MHz:         3200,0000
+CPU min MHz:         800,0000
+BogoMIPS:            5188.20
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            256K
+L3 cache:            3072K
+NUMA node0 CPU(s):   0-3
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+root@hamimaja:~#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Selain itu jika ingin mengetahui tentang CPU info juga dapat menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# cat /proc/cpuinfo
+processor       : 0
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 60
+model name      : Intel(R) Core(TM) i5-4210M CPU @ 2.60GHz
+stepping        : 3
+microcode       : 0x27
+cpu MHz         : 2293.900
+cache size      : 3072 KB
+physical id     : 0
+siblings        : 4
+core id         : 0
+cpu cores       : 2
+apicid          : 0
+initial apicid  : 0
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds
+bogomips        : 5188.20
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 39 bits physical, 48 bits virtual
+power management:
+
+processor       : 1
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 60
+model name      : Intel(R) Core(TM) i5-4210M CPU @ 2.60GHz
+stepping        : 3
+microcode       : 0x27
+cpu MHz         : 1234.157
+cache size      : 3072 KB
+physical id     : 0
+siblings        : 4
+core id         : 0
+cpu cores       : 2
+apicid          : 1
+initial apicid  : 1
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds
+bogomips        : 5188.20
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 39 bits physical, 48 bits virtual
+power management:
+
+processor       : 2
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 60
+model name      : Intel(R) Core(TM) i5-4210M CPU @ 2.60GHz
+stepping        : 3
+microcode       : 0x27
+cpu MHz         : 2126.496
+cache size      : 3072 KB
+physical id     : 0
+siblings        : 4
+core id         : 1
+cpu cores       : 2
+apicid          : 2
+initial apicid  : 2
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds
+bogomips        : 5188.20
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 39 bits physical, 48 bits virtual
+power management:
+
+processor       : 3
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 60
+model name      : Intel(R) Core(TM) i5-4210M CPU @ 2.60GHz
+stepping        : 3
+microcode       : 0x27
+cpu MHz         : 2368.018
+cache size      : 3072 KB
+physical id     : 0
+siblings        : 4
+core id         : 1
+cpu cores       : 2
+apicid          : 3
+initial apicid  : 3
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds
+bogomips        : 5188.20
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 39 bits physical, 48 bits virtual
+power management:
+
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bila Anda ingin mengetahui prosesor apa yang digunakan juga dapat menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# cat /proc/cpuinfo  | grep &#39;name&#39;| uniq
+model name      : Intel(R) Core(TM) i5-4210M CPU @ 2.60GHz
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sedangkan untuk mengetahui jumlah prosesor yang digunakan dapat dilakukan menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# cat /proc/cpuinfo  | grep process| wc -l
+4
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mengetahui info tentang GPU/VGA&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Untuk mengetahui tentang GPU atau VGA apa yang kita gunakan silakan gunakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# lspci 
+00:00.0 Host bridge: Intel Corporation Xeon E3-1200 v3/4th Gen Core Processor DRAM Controller (rev 06)
+00:02.0 VGA compatible controller: Intel Corporation 4th Gen Core Processor Integrated Graphics Controller (rev
+ 06)
+00:03.0 Audio device: Intel Corporation Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller (rev 06)
+00:14.0 USB controller: Intel Corporation 8 Series/C220 Series Chipset Family USB xHCI (rev 04)
+00:16.0 Communication controller: Intel Corporation 8 Series/C220 Series Chipset Family MEI Controller #1 (rev 
+04)
+00:1a.0 USB controller: Intel Corporation 8 Series/C220 Series Chipset Family USB EHCI #2 (rev 04)
+00:1b.0 Audio device: Intel Corporation 8 Series/C220 Series Chipset High Definition Audio Controller (rev 04)
+00:1c.0 PCI bridge: Intel Corporation 8 Series/C220 Series Chipset Family PCI Express Root Port #1 (rev d4)
+00:1c.2 PCI bridge: Intel Corporation 8 Series/C220 Series Chipset Family PCI Express Root Port #3 (rev d4)
+00:1c.3 PCI bridge: Intel Corporation 8 Series/C220 Series Chipset Family PCI Express Root Port #4 (rev d4)
+00:1c.4 PCI bridge: Intel Corporation 8 Series/C220 Series Chipset Family PCI Express Root Port #5 (rev d4)
+00:1d.0 USB controller: Intel Corporation 8 Series/C220 Series Chipset Family USB EHCI #1 (rev 04)
+00:1f.0 ISA bridge: Intel Corporation HM87 Express LPC Controller (rev 04)
+00:1f.2 SATA controller: Intel Corporation 8 Series/C220 Series Chipset Family 6-port SATA Controller 1 [AHCI m
+ode] (rev 04)
+00:1f.3 SMBus: Intel Corporation 8 Series/C220 Series Chipset Family SMBus Controller (rev 04)
+02:00.0 Unassigned class [ff00]: Realtek Semiconductor Co., Ltd. RTS5227 PCI Express Card Reader (rev 01)
+03:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 10)
+04:00.0 Network controller: Intel Corporation Wireless 7260 (rev 73)
+root@hamimaja:~#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ukuran Disk dan Free Space di Linux&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Terdapat beberapa perintah untuk mengetahui ukuran disk dan ruang kosong di disk tersebut.&lt;/p&gt;
+
+&lt;h4 id=&#34;1-df&#34;&gt;1. df&lt;/h4&gt;
+
+&lt;p&gt;Command &lt;strong&gt;df&lt;/strong&gt; digunakan untuk menunjukan jumlah ruang disk yang digunakan dan tersedia pada file sistem Linux.&lt;/p&gt;
+
+&lt;h4 id=&#34;2-du&#34;&gt;2. du&lt;/h4&gt;
+
+&lt;p&gt;Command &lt;strong&gt;du&lt;/strong&gt; digunakan untuk menampilkan jumlah ruang disk yang digunakan oleh file yang ditentukan dan untuk setiap subdirektori nya.&lt;/p&gt;
+
+&lt;p&gt;Berikut contoh command untuk mengetahui disk space menggunakan command &lt;strong&gt;df&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Dasar sintak untuk command &lt;strong&gt;df&lt;/strong&gt; yakni:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;df [options] [devices]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ada 2 type diantaranya&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;df&lt;/li&gt;
+&lt;li&gt;df -H&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+udev             2885652        0   2885652   0% /dev
+tmpfs             581552     2084    579468   1% /run
+/dev/sda5      110346300 37160724  67537212  36% /
+tmpfs            2907748   120976   2786772   5% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+tmpfs            2907748        0   2907748   0% /sys/fs/cgroup
+/dev/loop0         35584    35584         0 100% /snap/gtk-common-themes/319
+/dev/loop3         96384    96384         0 100% /snap/telegram-desktop/818
+/dev/loop1          3840     3840         0 100% /snap/gnome-system-monitor/95
+/dev/loop2         55680    55680         0 100% /snap/core18/1049
+/dev/loop4        127232   127232         0 100% /snap/code/9
+/dev/loop5         15104    15104         0 100% /snap/gnome-characters/288
+/dev/loop7         36224    36224         0 100% /snap/gtk-common-themes/1198
+/dev/loop8         90624    90624         0 100% /snap/core/7169
+/dev/loop6         90624    90624         0 100% /snap/core/7270
+/dev/loop9         15104    15104         0 100% /snap/gnome-characters/292
+/dev/loop11         1024     1024         0 100% /snap/gnome-logs/61
+/dev/loop10         4224     4224         0 100% /snap/gnome-calculator/406
+/dev/loop12         3840     3840         0 100% /snap/gnome-system-monitor/91
+/dev/loop13         2432     2432         0 100% /snap/gnome-calculator/180
+/dev/loop17        69248    69248         0 100% /snap/sublime-text/58
+/dev/loop14        96768    96768         0 100% /snap/telegram-desktop/836
+/dev/loop15       137216   137216         0 100% /snap/code/10
+/dev/loop19       144128   144128         0 100% /snap/gnome-3-26-1604/88
+/dev/loop20        14848    14848         0 100% /snap/gnome-logs/37
+/dev/loop21       154880   154880         0 100% /snap/gnome-3-28-1804/59
+/dev/loop16       153600   153600         0 100% /snap/gnome-3-28-1804/63
+/dev/loop18        55296    55296         0 100% /snap/core18/1013
+/dev/loop22       144128   144128         0 100% /snap/gnome-3-26-1604/90
+tmpfs             581548       20    581528   1% /run/user/121
+tmpfs             581548       44    581504   1% /run/user/1000
+root@hamimaja:~# 
+
+root@hamimaja:~# df -H
+Filesystem      Size  Used Avail Use% Mounted on
+udev            3,0G     0  3,0G   0% /dev
+tmpfs           596M  2,2M  594M   1% /run
+/dev/sda5       113G   39G   70G  36% /
+tmpfs           3,0G  120M  2,9G   5% /dev/shm
+tmpfs           5,3M  4,1k  5,3M   1% /run/lock
+tmpfs           3,0G     0  3,0G   0% /sys/fs/cgroup
+/dev/loop0       37M   37M     0 100% /snap/gtk-common-themes/319
+/dev/loop3       99M   99M     0 100% /snap/telegram-desktop/818
+/dev/loop1      4,0M  4,0M     0 100% /snap/gnome-system-monitor/95
+/dev/loop2       58M   58M     0 100% /snap/core18/1049
+/dev/loop4      131M  131M     0 100% /snap/code/9
+/dev/loop5       16M   16M     0 100% /snap/gnome-characters/288
+/dev/loop7       38M   38M     0 100% /snap/gtk-common-themes/1198
+/dev/loop8       93M   93M     0 100% /snap/core/7169
+/dev/loop6       93M   93M     0 100% /snap/core/7270
+/dev/loop9       16M   16M     0 100% /snap/gnome-characters/292
+/dev/loop11     1,1M  1,1M     0 100% /snap/gnome-logs/61
+/dev/loop10     4,4M  4,4M     0 100% /snap/gnome-calculator/406
+/dev/loop12     4,0M  4,0M     0 100% /snap/gnome-system-monitor/91
+/dev/loop13     2,5M  2,5M     0 100% /snap/gnome-calculator/180
+/dev/loop17      71M   71M     0 100% /snap/sublime-text/58
+/dev/loop14     100M  100M     0 100% /snap/telegram-desktop/836
+/dev/loop15     141M  141M     0 100% /snap/code/10
+/dev/loop19     148M  148M     0 100% /snap/gnome-3-26-1604/88
+/dev/loop20      16M   16M     0 100% /snap/gnome-logs/37
+/dev/loop21     159M  159M     0 100% /snap/gnome-3-28-1804/59
+/dev/loop16     158M  158M     0 100% /snap/gnome-3-28-1804/63
+/dev/loop18      57M   57M     0 100% /snap/core18/1013
+/dev/loop22     148M  148M     0 100% /snap/gnome-3-26-1604/90
+tmpfs           596M   21k  596M   1% /run/user/121
+tmpfs           596M   46k  596M   1% /run/user/1000
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dari 2 type diatas kita dapat mnengetahui perbedaannya. Bila ditambahkan opsi -H maka kita dapat mengetahui satuan ukuran yang digunakan oleh file sistem Linux.&lt;/p&gt;
+
+&lt;p&gt;Berikutnya, masih dalam pembahasan &lt;strong&gt;df&lt;/strong&gt; namun kali ini kita akan melihat informasi tengtang file sistem tertentu.&lt;/p&gt;
+
+&lt;p&gt;Misalnya Anda ingin mengetahui ukuran dari &lt;strong&gt;/home/&lt;/strong&gt; dapat menggunakan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# df /home/
+Filesystem     1K-blocks     Used Available Use% Mounted on
+/dev/sda5      110346300 37160996  67536940  36% /
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Supaya kita dapat mengetahui secara jelas ukuran dari &lt;strong&gt;/home&lt;/strong&gt; dalam satuan Giga silakan tambahkan opsi -h seperti berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# df -h /home/
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda5       106G   36G   65G  36% /
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika ingin mengetahui type dari &lt;strong&gt;/home/&lt;/strong&gt; silakan tambahkan opsi -T seperti berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# df -T -h /home/
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/sda5      ext4  106G   36G   65G  36% /
+root@hamimaja:~# 
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk mengetahui manual page command line &lt;strong&gt;df&lt;/strong&gt; silakan jalankan perintah &lt;strong&gt;man df&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya  merupakan contoh perintah &lt;strong&gt;du&lt;/strong&gt; untuk melihat disk space di Linux&lt;/p&gt;
+
+&lt;p&gt;Perintah &lt;strong&gt;du&lt;/strong&gt; sangat berguna untuk melacak ruang disk. Selain itu juga berguna untuk mengetahui nama direktori dan file yang menggunakan banyak ruang pada disk. Sintaks dasarnya adalah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;du
+du /path/do/dir
+du [options] [directories and/or files]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk melihat nama dan konsumsi ruang dari masing-masing direktori termasuk semua subdirektori di sistem direktori, gunakan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# du
+4       ./resources/_gen/assets
+4       ./resources/_gen/images
+12      ./resources/_gen
+16      ./resources
+4       ./.local/share/nano
+8       ./.local/share/teamviewer14/logfiles
+12      ./.local/share/teamviewer14
+8       ./wrk/.git/info
+28272   ./wrk/.git
+497512  ./wrk
+935224  .
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Gunakan opsi &lt;strong&gt;-h&lt;/strong&gt; untuk menampilkan ukuran dalam satuan K(kilobyte), M(megabita), G gigabita), contohnya sebagai berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# du -h
+4,0K    ./resources/_gen/assets
+8,0K    ./.vim
+64K     ./.nvm/test/fast/Listing versions
+32K     ./.config
+4,0K    ./.ansible/tmp
+4,0K    ./.ansible/cp
+12K     ./.ansible
+52K     ./contoh-website/.git/hooks
+4,0K    ./contoh-website/.git/branches
+8,0K    ./contoh-website/.git/logs/refs/remotes/origin
+12K     ./contoh-website/.git/logs/refs/remotes
+8,0K    ./contoh-website/.git/logs/refs/heads
+24K     ./contoh-website/.git/logs/refs
+32K     ./contoh-website/.git/logs
+232K    ./contoh-website/.git
+244K    ./contoh-website
+8,9M    ./wrk/deps
+7,3M    ./wrk/obj/lib
+48K     ./wrk/obj/include/luajit-2.1
+8,0K    ./wrk/.git/info
+28M     ./wrk/.git
+486M    ./wrk
+914M    .
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk mengetahui ukuran dari setiap direktori tertentu dapat juga menggunakan perintah &lt;strong&gt;du&lt;/strong&gt; dengan penambahan opsi &lt;strong&gt;-sh&lt;/strong&gt; , sebagai contoh saya ingin mengetahui ukuran yang digunakan oleh direktori &lt;strong&gt;/home/hamimaja&lt;/strong&gt; berikut perintahnya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# du -sh /home/hamimaja/
+22G     /home/hamimaja/
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk melihat daftar 10 direktori teratas yang memakan ruang disk misalnya di direktori &lt;strong&gt;/home/hamimaja&lt;/strong&gt;, gunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# du -a /home/hamimaja/ | sort -n -r | head -n 10
+22733348        /home/hamimaja/
+7302760 /home/hamimaja/Downloads
+6799944 /home/hamimaja/Downloads/AA
+5917424 /home/hamimaja/vmware
+5917420 /home/hamimaja/vmware/PROXMOX VE
+4195388 /home/hamimaja/vmware/PROXMOX VE/PROXMOX VE-fc8d23cc.vmem
+3843588 /home/hamimaja/Downloads/AA/AAA
+3333068 /home/hamimaja/.thunderbird
+3333032 /home/hamimaja/.thunderbird/uci27j9m.default
+2545536 /home/hamimaja/.thunderbird/uci27j9m.default/webaccountMail
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mengetaui tentang informasi USB Devices&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Silakan gunakan perintah berikut untuk mengetahui USB Device di sistem operasi linux&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
+root@hamimaja:~# xinput
+⎡ Virtual core pointer                          id=2    [master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer                id=4    [slave  pointer  (2)]
+⎜   ↳ Logitech USB Receiver                     id=10   [slave  pointer  (2)]
+⎜   ↳ SynPS/2 Synaptics TouchPad                id=12   [slave  pointer  (2)]
+⎜   ↳ TPPS/2 IBM TrackPoint                     id=13   [slave  pointer  (2)]
+⎣ Virtual core keyboard                         id=3    [master keyboard (2)]
+    ↳ Virtual core XTEST keyboard               id=5    [slave  keyboard (3)]
+    ↳ Power Button                              id=6    [slave  keyboard (3)]
+    ↳ Video Bus                                 id=7    [slave  keyboard (3)]
+    ↳ Integrated Camera: Integrated C           id=8    [slave  keyboard (3)]
+    ↳ Logitech USB Receiver                     id=9    [slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard              id=11   [slave  keyboard (3)]
+    ↳ ThinkPad Extra Buttons                    id=14   [slave  keyboard (3)]
+    ↳ Logitech USB Receiver                     id=15   [slave  keyboard (3)]
+root@hamimaja:~# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sebenarnya masih sangat banyak command line yang harus saya dan teman - teman pelajari kembali.&lt;/p&gt;
+
+&lt;p&gt;Silakan unduh buku tentang command line pada Linux pada tautan berikut: &lt;a href=&#34;https://nurhamim.net/2019/centos9/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Klik Disini Ya&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat belajar semoga bermanfaat bagi kita semua :)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Workshop DNS Server</title>
@@ -1221,178 +2152,6 @@ hamimaja@hamimaja:~$
 &lt;p&gt;Sebagai tambahan apabila Anda ingin menambahkan domai baru silakan membuat zone baru untuk domain baru Anda tersebut disisi Master dan Slave.&lt;/p&gt;
 
 &lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Record Record DNS Server</title>
-      <link>https://nurhamim.net/2019/centos19/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:38 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/2019/centos19/</guid>
-      <description>&lt;p&gt;Pada tutorial kali ini saya akan share mengenai record - record DNS yang sering sekali digunakan, diantaranya:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;SOA (Start Of Authority)&lt;/strong&gt; untuk mengidentifikasikan otoritas name-server pada zone data atau informasi nama host domain.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TTL (Time To Live)&lt;/strong&gt; merupakan waktu yang diperlukan server DNS untuk menyimpan hasil resolving ke cache-nya.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Serial&lt;/strong&gt; merupakan nomor seri database-cache domain domain.com. Jika ada perubahan data pada berkas zone domainanda.com, misalnya menambahkan domain blog.domainanda.com, maka anda harus merubah/menambah nomor serinya. Sebaiknya digunakan format tahun-bulan-tanggal-jam untuk nomor serialnya. Pada berkas database untuk zone domain domainanda.com tersebut terakhir di-update tanggal 01 Januari 2019 jam 12. Fungsi dari serial ini adalah untuk memberitahukan kepada secondary-master name-server untuk meng-update database-cache-nya jika ada perubahan pada primary-master name-server yaitu dengan melakukan pengecekan nomor serial. Jika nomor serial berubah/bertambah maka secondary-master name-server akan segera melakukan zone-transfer dari primary-master name-server.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Refresh&lt;/strong&gt; adalah selang waktu yang diperlukan (dalam detik) secondary-master name-server untuk melakukan pengecekan perubahan database-cache pada primary-master name-server.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Retry&lt;/strong&gt; adalah waktu (dalam detik) yang digunakan secondary-master name-server untuk menunggu pengulangan cek berkas zone jika pada saat proses refresh primary-master name-server tidak memberikan respon&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Expire&lt;/strong&gt; adalah waktu (dalam detik) yang digunakan secondary-master name-server untuk mempertahankan berkas zone jika tidak dapat melakukan zone-refresh. Jika setelah waktu expire telah habis tapi secondary-master name-server tidak dapat melakukan zone-refresh maka berkas zone pada secondary-master name-server akan dihapus.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Minimum&lt;/strong&gt; adalah nilai waktu (TTL) default untuk semua resource-record yang ada dalam berkas zone.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;@&lt;/strong&gt; menunjukkan bahwa zone yang bersangkutan adalah zone domain yang ditunjukkan berkas named.conf ke berkas database-cache tersebut atau origin zone&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IN&lt;/strong&gt; adalah singkatan dari Internet. Semua informasi Internet digunakan IN dan untuk informasi non-Internet digunakan kode lain.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt; menyatakan Address Internet atau alamat IP dari mesin yang ditangani oleh DNS ini proses penerjemahan namanya.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;NS&lt;/strong&gt; menyatakan Name Server.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;NS Record&lt;/strong&gt; merupakan daftar name-server yang otoritatif untuk zone bersangkutan. Pada database domain domainanda.com name-servernya adalah ns1.domainanda.com dan ns2.domainanda.com. NS Record ini yang nantinya akan diserahkan kepada pengelola domain TLD (Top Leve Domain) agar terdaftar dalam registar domain.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;MX (Mail Exchanger)&lt;/strong&gt; merupakan record routing email, untuk domain domainanda.com dalam hal ini akan diarahkan ke mail.domainanda.com. sebagai host yang ditunjuk sebagai mail exchanger akan memproses atau meneruskan mail untuk domain domainanda.com. Angka 10 pada MX 10 mail.domainanda.com. merupakan nilai preferensi (preference value) untuk menunjukkan tingkat prioritas mail exchanger yang digunakan untuk memproses atau meneruskan mail yang menuju domain my-server.com.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CNAME (Canonical Name)&lt;/strong&gt; fungsinya untuk alias, jadi suatu host dapat mempunyai nama lebih dari satu.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;PTR (POINTER)&lt;/strong&gt; menyatakan pemetaan alamat IP ke domain domainanda.com yang merupakan reversed-address. Reverse Address ini sangat diperlukan jika kita membuat mail server karena dengan adanya reverse IP Address ke alamat domain kita. Maka proses sent/receive protocol SMPT pada mesin mail server kita dapat berjalan normal. Tanpa adanya reverse Address, IP kita dianggap sebagai spammer oleh mesin smtp mail server lain karena tidak dikenal.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instalasi DNS Server Di CentOS 7</title>
-      <link>https://nurhamim.net/2019/centos18/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:28 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/2019/centos18/</guid>
-      <description>
-
-&lt;p&gt;Pada kesempatan kali ini kami akan share mengenai DNS server di CentOS 7, sebelum itu mari kita bahas sedikit pengertian dari DNS server.&lt;/p&gt;
-
-&lt;p&gt;Apa itu DNS server ?&lt;/p&gt;
-
-&lt;p&gt;DNS (Domain Name System) adalah sebuah sistem yang berfungsi sebagai layanan direktori untuk semua sistem, dengan menspesifikasinnya sebagai nama host atau domain. Dengan kata lain, DNS menjadi satu fasilitas dimana sebuah server yang memiliki nama dan alamat IP sebagai identitas yang unik di dalam jaringan.&lt;/p&gt;
-
-&lt;p&gt;Sebagai layanan, DNS menjadi salah satu bagian terpenting di dalam jaringan internet. Misalkan ni ada seseorang yang mengunjungi sebuah situs dengan mengetikan sebuah alamat situs nurhamim.net pada aplikasi browser (Firefox, Chrome, dsb).&lt;/p&gt;
-
-&lt;p&gt;Tanpa adanya DNS, pengunjung situs tersebut masih tetap akan dapat mengakses alamat tersebut dengan menggunakan IP, namun disinilah yang menjadi persoalan penting, apakah kita sanggup menghapal berbagai alamat IP sebuah server tersebut ?&lt;/p&gt;
-
-&lt;p&gt;Secara pribadi sih sangat sulit untuk menghapal sebauh alamat IP pada sebuah server jika dibandingkan dengan nama host atau domain.&lt;/p&gt;
-
-&lt;p&gt;Nah untuk melakukan pemetaan alamat sebuh domain menjadi sebuah IP Address maupun sebaliknya maka dibutuhkanlah sebuah server yang berfungsi sebagai penanggung jawab, sebuah DNS tersebut yang dinamakan DNS Server.&lt;/p&gt;
-
-&lt;p&gt;Di CentOS 7 untuk DNS Servernya sendiri kita menggunakan service BIND.&lt;/p&gt;
-
-&lt;p&gt;Apa itu BIND ?&lt;/p&gt;
-
-&lt;p&gt;BIND (Berkeley Internet Name Domain) merupakan aplikasi service dan salah satu implementasi DNS yang paling banyak digunakan pada server. BIND dibuat untuk sistem operasi BSD UNIX 4.3 oleh Kevin Dunlap, lalu banyak di-pointing ke turunan – turuan UNIX termasuk LINUX.&lt;/p&gt;
-
-&lt;h3 id=&#34;persyaratan&#34;&gt;Persyaratan :&lt;/h3&gt;
-
-&lt;p&gt;Persyaratan untuk mengikuti tutorial ini Anda diharuskan mempunyai VPS beserta domain. Karena penulis disini langsung real membuat DNS Server di VPS yang mana dapat diakses melalui publik.&lt;/p&gt;
-
-&lt;p&gt;Oke langsung saja kita ke langkah – langkah instalasi DNS Server di CentOS 7&lt;/p&gt;
-
-&lt;p&gt;Pertama, silakan akses server CentOS 7 Anda masing – masing&lt;/p&gt;
-
-&lt;p&gt;Kedua, lakukan pembaharuan atau update sistem operasi CentOS 7 Anda dengan menggunakan perintah berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-dns ~]# yum update -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Silakan tunggu proses update sampai selesai, jika sudah selanjutnya silakan install service bind dan cache nameserver DNS dengan menggunakan perintah berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-dns ~]# yum install bind bind-utils caching-nameserver -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah, selanjutnya silakan melakukan konfigurasi bind yang berada di direktori &lt;strong&gt;/etc/named.conf&lt;/strong&gt;  , pada konfigurasi ini nantinya Anda dapat membuat zone untuk DNS Server, mulai dari zone forward dan zone reverse, berikut contoh konfigurasinya, silakan sesuaikan dengan alamap IP dan domain Anda masing – masing.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah silakan simpan konfigurasi yang telah dilakukan, selanjutnya membuat file zone forward dan reverse. Untuk membuat nya menyesuaikan dengan penentuan direktori yang dibuat pada saat konfigurasi di atas yaitu di &lt;strong&gt;/etc/named/&lt;/strong&gt; silakan pindah direktori ke &lt;strong&gt;/etc/named/&lt;/strong&gt;  lalu buat file dengan nama file untuk file forward yaitu infone-forward.zone sedangkan untuk reverse infone-reverze.zone sesuai dengan konfigurasi yang telah ditentukan sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Sebenarnya untuk penamaan file zone ini bersifat bebas sesuai dengan keinginan Anda, jadi Anda tidak harus menyamakan persis untuk penamaan file buat zone forward dan reverse yaa.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-dns ~]# vim /etc/named/infone-forward.zone
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Lalu isikan record – record untuk zone forward seperti pada gambar berikut :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada gambar diatas silakan sesuaikan IP dan domain Anda masing – masing. Harap diperhatikan dalam penambahan record di atas pastikan tidak adanya typo 1 kata pun. Jika terdapat kesalahan penulisan 1 kata saja maka service named tidak akan dapat running.&lt;/p&gt;
-
-&lt;p&gt;Selain itu Anda dapat menambahkan record sub domain record email dan yang lainnya melalui zone forward ini.&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya membuat file untuk zone reverze untuk direktoriny sama dengan forward berada di direktori /named/forward .&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-dns ~]# vim /etc/named/infone-reverze.zone
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Berikut contoh konfigurasi untuk zone reverse&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila Anda telah selesai membuat ke 2 zone tersebut, berikutnya silakan start, enable service named dan pastikan semua status running sebagai berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-dns ~]# systemctl start named
-[root@srv-dns ~]# systemctl enable named
-[root@srv-dns ~]# systemctl status named
-● named.service - Berkeley Internet Name Domain (DNS)
-   Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; vendor preset: disabled)
-   Active: active (running) since Jum 2019-02-08 06:52:26 WIB; 2 days ago
- Main PID: 1977 (named)
-   CGroup: /system.slice/named.service
-           └─1977 /usr/sbin/named -u named -c /etc/named.conf
-
-Peb 10 03:52:01 srv-dns named[1977]: automatic empty zone: B.E.F.IP6.ARPA
-Peb 10 03:52:01 srv-dns named[1977]: automatic empty zone: 8.B.D.0.1.0.0.2.IP6.ARPA
-Peb 10 03:52:01 srv-dns named[1977]: reloading configuration succeeded
-Peb 10 03:52:01 srv-dns named[1977]: reloading zones succeeded
-Peb 10 03:52:01 srv-dns named[1977]: all zones loaded
-Peb 10 03:52:01 srv-dns named[1977]: running
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila service telah running dengan sempurna tanpa adanya kendala, berikut silakan mendaftarkan Gluer Record atau Private Name Server pada domain yang Anda gunakan disini saya menggunakan nama domain infone.info saya berlangganan domainnya di CloudKilat , berikut cara mendaftarkan private Nameserver domain di CloudKilat :&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Login portal area CloudKilat (&lt;a href=&#34;http://portal.cloudkilat.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://portal.cloudkilat.com/&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Service &amp;gt;&amp;gt; Domain &amp;gt;&amp;gt; Manage &amp;gt;&amp;gt; Private Nameservers&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Silakan mengisikan atau menambahkan ns1 dan ns2 yang ingin diarahkan ke IP VPS Anda seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/6.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah silakan pindah ke menu Nameserver &amp;gt;&amp;gt; Klik pada menu Use custom nameservers (enter below) ubah nameserver menjadi ns1.infone.info dan ns2.infone.info lalu Save Changes .&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya apabila perubahan NameServer telah dilakukan pada domain tersebut maka domain akan mengalami proses propagasi dan untuk proses propagasi membutuhkan waktu maksimal 48 jam. Cepat atau lambat pada proses propgasi domain bergantung dengan resolver ISP yang Anda gunakan.&lt;/p&gt;
-
-&lt;p&gt;Untuk mengetahui domain telah resolved dapat kita cek dengan cara menggunakan dig seperti berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hamimaja@hamimaja:~$ whois infone.info |grep “Name Server”
-Name Server: NS1.INFONE.INFO
-Name Server: NS2.INFONE.INFO
-hamimaja@hamimaja:~$ dig infone.info +short
-103.23.20.126
-hamimaja@hamimaja:~$ dig @ns1.infone.info infone.info +short
-103.23.20.126
-hamimaja@hamimaja:~$ dig @ns2.infone.info infone.info +short
-103.23.20.126
-hamimaja@hamimaja:~$
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Anda juga dapat memastikan bahwa domain Anda telah resolved menggunnakan DNS Checker online berikut tautannya : &lt;a href=&#34;https://dnschecker.org/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://dnschecker.org/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila Anda terdapat kendala pada saat melakukan register nameserve private atau glue record silakan membuka tiket ke info@cloudkilat.com atau membuka tiket melalui portal cloudkilat Anda untuk meminta saran mengenai kendala yang terjadi.&lt;/p&gt;
-
-&lt;p&gt;Sebagai testing saja apakah benar DNS domain untuk infone.info telah berhasil silakan install webserver apache ataupun nginx, saya sebelumnya sudah menginstall webserver apache di CentOS 7 berikut hasilnya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada tahapan ini DNS Server Mandiri di CentOS 7 Anda telah berhasil. Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
 </description>
     </item>
     
