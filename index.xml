@@ -5,246 +5,8 @@
     <description>Recent content in Catatan Cah Ndeso on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jul 2019 18:52:20 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 14:03:12 +0700</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>File Dan Direktori</title>
-      <link>https://nurhamim.net/file-dan-direktori/</link>
-      <pubDate>Mon, 08 Jul 2019 18:52:20 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/file-dan-direktori/</guid>
-      <description>
-
-&lt;p&gt;Pada tutorial kali ini saya masih tetap membahas mengenai comand line linux, namun untuk kali saya akan fokus pembahasan tentang navigasi direktori, membuat, dan memodifikasi file dan direktori di sistem operasi Linux.&lt;/p&gt;
-
-&lt;p&gt;Berikut tabel content yang akan kita bahas satu - satu&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;pwd&lt;/li&gt;
-&lt;li&gt;cd&lt;/li&gt;
-&lt;li&gt;clear&lt;/li&gt;
-&lt;li&gt;ls&lt;/li&gt;
-&lt;li&gt;mkdir&lt;/li&gt;
-&lt;li&gt;touch&lt;/li&gt;
-&lt;li&gt;rm&lt;/li&gt;
-&lt;li&gt;cp&lt;/li&gt;
-&lt;li&gt;mv&lt;/li&gt;
-&lt;li&gt;rename&lt;/li&gt;
-&lt;li&gt;ln&lt;/li&gt;
-&lt;li&gt;tar and gzip&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mari kita bahas satu per satu  content diatas :&lt;/p&gt;
-
-&lt;h4 id=&#34;pwd&#34;&gt;pwd&lt;/h4&gt;
-
-&lt;p&gt;Perintah &lt;code&gt;pwd&lt;/code&gt; digunakan untuk print (melihat) direktori dimana Anda berada.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# pwd
-/root
-root@hamimaja:~# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;cd&#34;&gt;cd&lt;/h4&gt;
-
-&lt;p&gt;Perintah ini digunakan untuk berpindah posisi dari direktori A ke direktori yang lainnya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
-root@hamimaja:~# pwd
-/root
-root@hamimaja:~# 
-root@hamimaja:~# cd /home/hamimaja/
-root@hamimaja:/home/hamimaja# pwd
-/home/hamimaja
-root@hamimaja:/home/hamimaja# cd -
-/root
-root@hamimaja:~# pwd
-/root
-root@hamimaja:~# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Dari contoh diatas kita dapat berpindah ke direktori &lt;code&gt;/home/hamimaja&lt;/code&gt; dengan menggunakan perintah &lt;code&gt;cd&lt;/code&gt; selain itu kita juga dapat kembali ke direktori semua &lt;code&gt;/root&lt;/code&gt; dengan menggunakan perintah &lt;code&gt;cd -&lt;/code&gt; .&lt;/p&gt;
-
-&lt;p&gt;Berikut beberapa opsi dari perintah &lt;code&gt;cd&lt;/code&gt; yang dapat digunakan diantaranya&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;.&lt;/code&gt; - Tetap berada di di direktori saat ini&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# 
-root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd .
-root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;..&lt;/code&gt; - Merujuk ke direktori satu hierarki di atas&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd .
-root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd ..
-root@hamimaja:/home/hamimaja/Music/Websiteku# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;../..&lt;/code&gt; - Merujuk ke direktori dua hierarki di atas dan seterusnya&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd .
-root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd ..
-root@hamimaja:/home/hamimaja/Music/Websiteku# cd ../..
-root@hamimaja:/home/hamimaja# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tidak hanya itu masih ada perintah cd dengan kompinasi lainnya seperti &lt;code&gt;cd ~/&lt;/code&gt; atau &lt;code&gt;cd ~&lt;/code&gt; atau &lt;code&gt;cd&lt;/code&gt; akan menuju direktori yang ditentukan oleh variabel shell HOME (yang biasanya disetel ke direktori home user atau pengguna)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:/home/hamimaja# pwd
-/home/hamimaja
-root@hamimaja:/home/hamimaja# echo &amp;quot;$HOME&amp;quot;
-/root
-root@hamimaja:/home/hamimaja# cd
-root@hamimaja:~# pwd
-/root
-root@hamimaja:~# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;clear&#34;&gt;clear&lt;/h4&gt;
-
-&lt;p&gt;Perintah ini digunakan untuk menghapus screen di terminal, selain itu untuk menghapus screen di terminal dapat menggunakan perintah &lt;code&gt;ctrl + l&lt;/code&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;ls&#34;&gt;ls&lt;/h4&gt;
-
-&lt;p&gt;Perintah ini digunakan untuk menampilkan list direktori.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
-root@hamimaja:~# ls
-close  contoh-website  LeaveIt  pass_list.tx  resources  tar.file  test-backup  test-backup.tar  test-backup.tar.gz  wrk
-root@hamimaja:~#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bila ingin melihat direkotiri di direktori tertentu misalnya direktori &lt;code&gt;/var&lt;/code&gt; dapat dilakukan seperti berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
-root@hamimaja:~# ls /var/
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  snap  spool  tmp
-root@hamimaja:~# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Gunakan opsi -1 untuk menampilkan direktori ke bawah (list dalam bentuk kolom) seperti berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
-root@hamimaja:~# ls -1 /var/
-backups
-cache
-crash
-lib
-local
-lock
-log
-mail
-metrics
-opt
-run
-snap
-spool
-tmproot@hamimaja:~# 
-root@hamimaja:~# ls -1 /var/
-backups
-cache
-crash
-lib
-local
-lock
-log
-mail
-metrics
-opt
-run
-snap
-spool
-tmp
-root@hamimaja:~# 
-root@hamimaja:~# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika Anda ingin menampilkan file atau direktori sekaligus ingin mengetahui &lt;code&gt;permissions, ownership, size, timestamp&lt;/code&gt; dan yang lainnya pada direktori tersebut juga dapat dilakukan dengan cara menambahkan beberapa opsi yakni &lt;code&gt;d&lt;/code&gt; untuk direktori, &lt;code&gt;-&lt;/code&gt; untuk file &lt;code&gt;l&lt;/code&gt; untuk tautan simbolik dan yang lainnya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# ls -l
-total 434952
--rw-r--r-- 1 root root         0 Jun 20 07:07 close
-drwxr-xr-x 3 root root      4096 Jul  4 21:39 contoh-website
-drwxr-xr-x 9 root root      4096 Jul  8 13:22 LeaveIt
--rw-r--r-- 1 root root         0 Jul  8 15:49 pass_list.tx
-drwxr-xr-x 3 root root      4096 Jul  7 10:26 resources
--rw-r--r-- 1 root root         0 Jun 18 02:12 tar.file
--rw-r--r-- 1 root root 445368320 Jun 18 02:17 test-backup
--rw-r--r-- 1 root root         0 Jun 18 02:12 test-backup.tar
--rw-r--r-- 1 root root         0 Jun 18 02:17 test-backup.tar.gz
-drwxr-xr-x 8 root root      4096 Mei 18 13:22 wrk
-root@hamimaja:~# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bila ingin ditampilkan size (ukuran setiap direktori) silakan tambahkan opsi &lt;code&gt;-h&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
-root@hamimaja:~# ls -lh
-total 425M
--rw-r--r-- 1 root root    0 Jun 20 07:07 close
-drwxr-xr-x 3 root root 4,0K Jul  4 21:39 contoh-website
-drwxr-xr-x 9 root root 4,0K Jul  8 13:22 LeaveIt
--rw-r--r-- 1 root root    0 Jul  8 15:49 pass_list.tx
-drwxr-xr-x 3 root root 4,0K Jul  7 10:26 resources
--rw-r--r-- 1 root root    0 Jun 18 02:12 tar.file
--rw-r--r-- 1 root root 425M Jun 18 02:17 test-backup
--rw-r--r-- 1 root root    0 Jun 18 02:12 test-backup.tar
--rw-r--r-- 1 root root    0 Jun 18 02:17 test-backup.tar.gz
-drwxr-xr-x 8 root root 4,0K Mei 18 13:22 wrk
-root@hamimaja:~# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Silakan guunakan opsi &lt;code&gt;-s&lt;/code&gt; dari pada &lt;code&gt;-l&lt;/code&gt; jika hanya info ukuran saja yang diperlukan&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
-root@hamimaja:~# ls -1sh contoh-website/
-total 8,0K
-4,0K CNAME
-4,0K index.html
-root@hamimaja:~# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Gunakan &lt;code&gt;-t&lt;/code&gt; untuk mengurutkan berdasarkan timestamp, dan biasanya dikombinasikan dengan &lt;code&gt;-r&lt;/code&gt; untuk membalik urutan sehingga file yang paling baru dimodifikasi menunjukkan sebagai item terakhir&lt;/p&gt;
-
-&lt;p&gt;Selain itu  terdapat opsi &lt;code&gt;-S&lt;/code&gt; digunakan untuk mengurutkan berdasarkan ukuran file (tidak cocok untuk direktori), &lt;code&gt;-v&lt;/code&gt; opsi ini dapat digunakan untuk melakukan penyortiran versi (cocok untuk nama file dengan angka di dalamnya), &lt;code&gt;-X&lt;/code&gt; opsi ini memungkinkan untuk mengurutkan berdasarkan ekstensi file (yaitu karakter setelah yang terakhir &lt;code&gt;.&lt;/code&gt; dalam nama file)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
-root@hamimaja:~# ls -lhtr
-total 425M
-drwxr-xr-x 8 root root 4,0K Mei 18 13:22 wrk
--rw-r--r-- 1 root root    0 Jun 18 02:12 tar.file
--rw-r--r-- 1 root root    0 Jun 18 02:12 test-backup.tar
--rw-r--r-- 1 root root    0 Jun 18 02:17 test-backup.tar.gz
--rw-r--r-- 1 root root 425M Jun 18 02:17 test-backup
--rw-r--r-- 1 root root    0 Jun 20 07:07 close
-drwxr-xr-x 3 root root 4,0K Jul  4 21:39 contoh-website
-drwxr-xr-x 3 root root 4,0K Jul  7 10:26 resources
-drwxr-xr-x 9 root root 4,0K Jul  8 13:22 LeaveIt
--rw-r--r-- 1 root root    0 Jul  8 15:49 pass_list.tx
-
-root@hamimaja:~# ls -X
-close  contoh-website  LeaveIt  resources  test-backup  wrk  tar.file  test-backup.tar.gz  test-backup.tar  pass_list.tx
-root@hamimaja:~#
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Opsi &lt;code&gt;-a&lt;/code&gt; digunakan untuk menampilkan file yang tersembunyi (file hidden)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# 
-root@hamimaja:~# ls -a wrk/
-.   azure-piplines.yml  .circleci  .git        INSTALL  Makefile  obj        SCRIPTING  src
-..  CHANGES             deps       .gitignore  LICENSE  NOTICE    README.md  scripts    wrk
-root@hamimaja:~# 
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
     
     <item>
       <title>Pengenalan Dan Kenapa Linux?</title>
@@ -1984,6 +1746,412 @@ latest.zip
 &lt;p&gt;Oke, pada tahap ini Anda telah berhasil menginstall CMS WordPress di VPS dengan sistem Operasi CentOS 7.&lt;/p&gt;
 
 &lt;p&gt;Selamat mencoba semoga bermnafaat, selamat mencoba 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Panduan Instalasi dan Konfigurasi DNS Master – Slave Di CentOS 7</title>
+      <link>https://nurhamim.net/panduan-instalasi-dan-konfigurasi-dns-master-slave-di-centos-7/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:50 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/panduan-instalasi-dan-konfigurasi-dns-master-slave-di-centos-7/</guid>
+      <description>
+
+&lt;p&gt;Pada tutorial sebelumnya kami telah menjelaskan dan membuat sebuah DNS Server mandiri menggunakan service BIND di VPS dengan sistem operasi CentOS 7.&lt;/p&gt;
+
+&lt;p&gt;Nah khusus tutorial kali ini kami akan membahas tentang DNS Master – Slave.&lt;/p&gt;
+
+&lt;h4 id=&#34;apa-sih-itu-dns-master-slave&#34;&gt;Apa sih itu DNS Master Slave ?&lt;/h4&gt;
+
+&lt;p&gt;DNS Master – Slave, kata Master (primary) artinya utama, sedangkan Slave (secondary) yang artinya yang kedua yang bisanya digunakan sebagai cadangan atau backup.&lt;/p&gt;
+
+&lt;p&gt;DNS Master – Slave juga bisa dibilang pembagian node Nameserver pada DNS, dengan pembagian ini maka kita akan mempunyai sebuah backup atau cadangan sebuah record Nameserver.&lt;/p&gt;
+
+&lt;h4 id=&#34;apa-itu-nameserver-ns&#34;&gt;Apa itu Nameserver (NS) ?&lt;/h4&gt;
+
+&lt;p&gt;Name server merupakan database dari record – record DNS. Semua record DNS mulai dari record A, MX, TXT dan yang lainnya disimpan di Nameserver.&lt;/p&gt;
+
+&lt;p&gt;Keuntungan yang didapatkan dari DNS Master Slave ini sendiri yaitu jika sewaktu – waktu server DNS Master mengalami kendala misalnya (Down) maka domain yang menggunakan Nameserver dari DNS Master – Slave tersebut tidak akan mengalami yang namanya down (tidak bisa akses domain) karena apabila server Master down domain Anda akan langsung di handle oleh server Slave yang berfungsi sebagai backup si Master. Dengan demikian domain Anda masih bisa diakses dengan normal&lt;/p&gt;
+
+&lt;p&gt;Bagi Anda yang ingin mengikuti tutorial ini silakan siapkan terlebih dahulu amunisinya hehehe, diantaranya sebagai berikut :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagi Anda yang ingin menggunakan sistem operasi selain CentOS 7 sangat diperbolehkan sesuai dengan keinginan Anda, nantinya Anda hanya perlu menyesuaikan konfigurasi dan zonenya saja.&lt;/p&gt;
+
+&lt;p&gt;Apakah harus Server Master Mengguanakan CentOS dan Server Slave Menggunakan CentOS 7 juga ?&lt;/p&gt;
+
+&lt;p&gt;Tidak, Anda dapat menggunakan Debian atau Ubuntu untuk Server Master dan Slave Anda dapat menggunakan CentOS dan sebaliknya.&lt;/p&gt;
+
+&lt;p&gt;Oke langsung saja ketahapan instalasi dan kofigurasi DNS Master Slave di CentOS 7.&lt;/p&gt;
+
+&lt;h3 id=&#34;instalasi-dan-konfigurasi-server-master-primary&#34;&gt;Instalasi Dan Konfigurasi Server Master (primary)&lt;/h3&gt;
+
+&lt;p&gt;Pertama, silakan login ke VPS Anda masing – masing dan melakukan pembaharuan sistem terlebih dahulu dengan menjalankan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-master ~]# yum update -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan tunggu proses update sampai selesai, jika sudah selanjutnya Anda silakan install service bind dengan menjalankan perintah berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-master ~]# yum install bind bind-utils -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan tunggu proses install service bind tersebut sampai selesai.&lt;/p&gt;
+
+&lt;p&gt;Kedua, melakukan konfigurasi dns master, file konfigurasinya sendiri berada di /etc/named.conf untuk membuka file konfigurasi tersebut Anda dapat menggunakan teks editor nano ataupun vim sesuai dengan keinginan Anda.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-master ~]# vim /etc/named.conf 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan menambahkan IP server Master seperti berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;options {
+	listen-on port 53 { 127.0.0.1;  117.53.45.53; };
+//	#listen-on-v6 port 53 { ::1; };
+	directory 	&amp;quot;/var/named&amp;quot;;
+	dump-file 	&amp;quot;/var/named/data/cache_dump.db&amp;quot;;
+	statistics-file &amp;quot;/var/named/data/named_stats.txt&amp;quot;;
+	memstatistics-file &amp;quot;/var/named/data/named_mem_stats.txt&amp;quot;;
+	recursing-file  &amp;quot;/var/named/data/named.recursing&amp;quot;;
+	secroots-file   &amp;quot;/var/named/data/named.secroots&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apabila Anda ingin menambahkan caching-nameserver silakan tambahkan konfigurasi berikut&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;allow-query     { 127.0.0.1; 117.53.45.53; any; };
+allow-query-cache { 127.0.0.1; 117.53.45.53; any; };
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk keamanan agar terhindar dari indikasi abuse Flooding DNS yang pernah saya pribadi alami heheheh 🙂 dengan begitu saya akan melakukan disable recursion dns, karena dns kita tidak diperuntukkan sebagai DNS resolver sepertihalnya DNS google &lt;strong&gt;(8.8.8.8 , 8.8.4.4)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;*/
+recursion no;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apabila recursion diatas kita yes (aktif) maka, DNS kita akan menjadi DNS resolver layaknya DNS Google (8.8.8.8 , 8.8.4.4) apabila DNS kita menjadi DNS resolver akan sangat banyak permintaan akses ke DNS kita dan banyaknya akses tersebut yang akan membuat Abuse Flooding DNS terjadi 🙂&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya marilah kita membuat zone untuk Master, disini saya akan membuat zone forward saja, dimana zone forward inilah yang nantinya melakukan pemetaan dari nama domain (hamim.web.id) ke alamat IP (117.53.45.53).&lt;/p&gt;
+
+&lt;h4 id=&#34;kenapa-tidak-membuat-zone-reverse&#34;&gt;Kenapa tidak membuat zone reverse ?&lt;/h4&gt;
+
+&lt;p&gt;Zone reverse ini kebalikannya zone forward dimana fungsi dari zone reverse yaitu untuk memetakan IP ke domain. Biasanya dibilang dengan rDNS atau PTR, jika Anda pengguna VPS dan Anda ingin membangun DNS di VPS, Anda tidak perlu membuat zone reverse ini karena yang mempunyai sebuah kewenganan untuk mengelola sebuah zone reverse hanyalah pengelola IP. Dan apabila penyedia VPS Anda mempunyai block IP sendiri maka Anda nantinya apabila membutuhkan rDNS atau PTR silakan melakukan request untuk penambahan rDNS ke penyedia Hosting atau VPS Anda masing – masing. Dan yang paling sering biasanya rDNS ini digunakan untuk setup mail server.&lt;/p&gt;
+
+&lt;p&gt;Contohnya disini saya menggunakan VPS CloudKilat jadi apabila saya membutuhkan record PTR atau rDNS untuk kebutuhan mail server, saya hanya perlu request/meminta ke CloudKilat untuk membuatkan rDNS atau PTR untuk IP VPS saya.&lt;/p&gt;
+
+&lt;p&gt;Berikut contoh pembuatan zone forward untuk Master&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;zone &amp;quot;hamim.web.id&amp;quot; IN {
+	type master;
+	file &amp;quot;/etc/named/forward-hamim.zone&amp;quot;;
+	allow-update { none; };
+	allow-transfer { 103.23.20.126; };
+	also-notify { 103.23.20.126; };
+	notify yes;
+	};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut beberapa keterangan dari zone forward diatas :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;zone&lt;/strong&gt; : Digunakan untuk penamaan zone dari domain Anda&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IN&lt;/strong&gt; : Internet&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Type&lt;/strong&gt; : Sesuaikan dengan skema DNS Server Yang ingin Anda gunakan, jika DNS Servernya diperuntukkan untuk Master silakan isikan master jika slave silakan sisikan slave&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;File&lt;/strong&gt; : Letak dimana database record dari domain hamim.web.id berada&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;allow-update&lt;/strong&gt; : Digunakan untuk recursive, jika tidak diaktifkan silakan berikan keterangan none;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;allow-transfer&lt;/strong&gt; : Digunakan untuk melakukan transfer database record master (primary) ke server Slave. Silakan isikan IP dari Server Slave&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;also-notify dan notify yes&lt;/strong&gt; : Digunakan untuk notifikasi setiap perubahan di sisi zone master dan akan diinformasikan ke Slave. Namun apabila tidak menggunakannya hal tersebut tidak apa – apa dikarenakan secara default bind sudah melakukan notifikasi perubahan ke host slave.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Berikut contoh lengkap dari konfigurasi zone forward disisi Master&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;//
+// named.conf
+//
+// Provided by Red Hat bind package to configure the ISC BIND named(8) DNS
+// server as a caching only nameserver (as a localhost DNS resolver only).
+//
+// See /usr/share/doc/bind*/sample/ for example named configuration files.
+//
+// See the BIND Administrator&#39;s Reference Manual (ARM) for details about the
+// configuration located in /usr/share/doc/bind-{version}/Bv9ARM.html
+
+options {
+	listen-on port 53 { 127.0.0.1;  117.53.45.53; };
+//	#listen-on-v6 port 53 { ::1; };
+	directory 	&amp;quot;/var/named&amp;quot;;
+	dump-file 	&amp;quot;/var/named/data/cache_dump.db&amp;quot;;
+	statistics-file &amp;quot;/var/named/data/named_stats.txt&amp;quot;;
+	memstatistics-file &amp;quot;/var/named/data/named_mem_stats.txt&amp;quot;;
+	recursing-file  &amp;quot;/var/named/data/named.recursing&amp;quot;;
+	secroots-file   &amp;quot;/var/named/data/named.secroots&amp;quot;;
+
+	allow-query     { 127.0.0.1; 117.53.45.53; any; };
+	allow-query-cache { 127.0.0.1; 117.53.45.53; any; };
+
+	/* 
+         - If you are building an AUTHORITATIVE DNS server, do NOT enable recursion.
+         - If you are building a RECURSIVE (caching) DNS server, you need to enable 
+           recursion. 
+         - If your recursive DNS server has a public IP address, you MUST enable access 
+           control to limit queries to your legitimate users. Failing to do so will
+           cause your server to become part of large scale DNS amplification 
+           attacks. Implementing BCP38 within your network would greatly
+           reduce such attack surface 
+        */
+        recursion no;
+
+        dnssec-enable yes;
+        dnssec-validation yes;
+
+        /* Path to ISC DLV key */
+        bindkeys-file &amp;quot;/etc/named.iscdlv.key&amp;quot;;
+
+        managed-keys-directory &amp;quot;/var/named/dynamic&amp;quot;;
+
+        pid-file &amp;quot;/run/named/named.pid&amp;quot;;
+        session-keyfile &amp;quot;/run/named/session.key&amp;quot;;
+};
+
+logging {
+        channel default_debug {
+                file &amp;quot;data/named.run&amp;quot;;
+                severity dynamic;
+        };
+};
+
+zone &amp;quot;hamim.web.id&amp;quot; IN {
+	type master;
+	file &amp;quot;/etc/named/forward-hamim.zone&amp;quot;;
+	allow-update { none; };
+	allow-transfer { 103.23.20.126; };
+	also-notify { 103.23.20.126; };
+	notify yes;
+	};
+
+include &amp;quot;/etc/named.rfc1912.zones&amp;quot;;
+include &amp;quot;/etc/named.root.key&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silakan simpan konfigurasi zone forward tersebut.&lt;/p&gt;
+
+&lt;p&gt;Ketiga, membuat record dns untuk domain “hamim.web.id” silakan sesuaikan letak file record yang ingin disimpan, pada pembuatan zone forward sebelumnya kita telah menentukan letaknya yaitu di direktori /etc/named/ dengan nama file forward-hamim.zone .&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-master ~]# vim /etc/named/forward-hamim.zone 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut contoh record forward :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$TTL    86400
+@       IN      SOA             hamim.web.id. root.hamim.web.id.(
+                2019111919      ;Serial
+                3600            ;Refresh
+                1800            ;Retry
+                604800          ;Expire
+                86400           ;Minimum TTL
+)
+
+@               IN      NS      ns1.hamim.web.id.
+@               IN      NS      ns2.hamim.web.id.
+ns1             IN      A       117.53.45.53
+ns2             IN      A       103.23.20.126  
+@               IN      A       117.53.45.53
+www             IN      CNAME   hamim.web.id.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sesuai dengan topologi sebelumnya dimana NS1.HAMIM.WEB.ID akan menggunakan IP Master (117.53.45.53) sedangkan NS2.HAMIM.WEB.ID akan menggunakan IP Slave (103.23.20.126).&lt;/p&gt;
+
+&lt;p&gt;Silakan sesuaikan dengan IP VPS Anda masing – masing dan mengenai keterangan – kerangan record DNS diatas Anda dapat merujuk pada tautan berikut : &lt;a href=&#34;https://github.com/hamimistimewa/Catatan-cahndeso/wiki/Record---Record-DNS-Server&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Record – Record DNS Server Yang Sering Digunakan&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan simpan file forward tersebut.&lt;/p&gt;
+
+&lt;p&gt;Berikutnya, silakan start dan enable service bind, dan pastikan semua service bind berjalan dengan normal dengan menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-master ~]# systemctl start named
+[root@srv-master ~]# systemctl enable named
+[root@srv-master ~]# systemctl status named
+● named.service - Berkeley Internet Name Domain (DNS)
+   Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; vendor preset: disabled)
+   Active: active (running) since Kam 2019-02-21 18:23:50 WIB; 1 day 5h ago
+ Main PID: 4483 (named)
+   CGroup: /system.slice/named.service
+           └─4483 /usr/sbin/named -u named -c /etc/named.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oke apabila semua telah berjalan dengan sempurna, mari kita lanjut ke server Slave&lt;/p&gt;
+
+&lt;h3 id=&#34;instalasi-dan-konfigurasi-server-slave&#34;&gt;Instalasi Dan Konfigurasi Server Slave&lt;/h3&gt;
+
+&lt;p&gt;Untuk installasi disisi Slave tidaklah ada perubahan yang sangat signifikan dan hampir sama dengan cara install disisi Master tadi, namun perbedaannya di Slave Anda tidak perlu membuat atau nenambahkan record forward kembali, Anda hanya perlu membuat zone dengan type slave dan menentukan letak penyimpanan file dari record master.&lt;/p&gt;
+
+&lt;p&gt;Silakan install service bind sepertihalnya install Master sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Jika sudah, silakan melakukan konfigurasi slave di /etc/named.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-slave ~]# vim /etc/named.conf 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk konfigurasi silakan sesuaikan dengan konfigurasi master&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;options {
+        listen-on port 53 { 127.0.0.1;  103.23.20.126; };
+//      listen-on-v6 port 53 { none; };
+        directory       &amp;quot;/var/named&amp;quot;;
+        dump-file       &amp;quot;/var/named/data/cache_dump.db&amp;quot;;
+        statistics-file &amp;quot;/var/named/data/named_stats.txt&amp;quot;;
+        memstatistics-file &amp;quot;/var/named/data/named_mem_stats.txt&amp;quot;;
+        recursing-file  &amp;quot;/var/named/data/named.recursing&amp;quot;;
+        secroots-file   &amp;quot;/var/named/data/named.secroots&amp;quot;;
+
+        allow-query     { 127.0.0.1; 103.23.20.126; any; };
+        allow-query-cache { 127.0.0.1; 103.23.20.126; any; };
+
+        /* 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut contoh zone forward disisi Slave :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;zone &amp;quot;hamim.web.id&amp;quot; IN {
+        type slave;
+        masters { 117.53.45.53; };
+        file &amp;quot;slaves/forward-hamim.zone&amp;quot;;
+        masterfile-format text;
+        notify no;
+        };
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut beberapa keterangan dari zone forward diatas :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;zone&lt;/strong&gt; : Digunakan untuk penamaan zone dari domain Anda&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IN&lt;/strong&gt; : Internet&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Type&lt;/strong&gt; : Sesuaikan dengan skema DNS Server Yang ingin Anda gunakan, jika DNS Servernya diperuntukkan untuk Slave silakan isikan Slave jika Master silakan sisikan Master&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;masters&lt;/strong&gt; : Silakan isikan IP Master&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;File&lt;/strong&gt; : Letak dimana hasil backup database record dari domain hamim.web.id.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Masterfile-format text&lt;/strong&gt; : Digunakan untuk menerjemahkan binari ke teks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Jika sudah, silakan save konfigurasi named.conf tersebut, dan silakan start dan enable named seperti perintah yang sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Hasilnya secara otomatis Anda akan mendapatkan database record untuk backup yang dikirimkan oleh si master.&lt;/p&gt;
+
+&lt;p&gt;Untuk melihatnya silakan pindah direktori ke &lt;strong&gt;/var/named/slaves/&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-slave ~]# cd /var/named/slaves/
+[root@srv-slave slaves]# ls
+db-06eRySfx  db-C57a5DlK  db-kIGPzEJP  db-xo4j3baV  forward-hamim.zone 
+[root@srv-slave slaves]# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oke secara otomatis akan ada file forward yang dimana itulah file backupnya&lt;/p&gt;
+
+&lt;p&gt;Secara default isi dari &lt;strong&gt;forward-hamim.zone&lt;/strong&gt; berbentuk binari bukan teks,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;kenapa-binari&#34;&gt;Kenapa binari ?&lt;/h4&gt;
+
+&lt;p&gt;Berdasarkan hasil dari beberapa referensi karena dari segi keamanan.&lt;/p&gt;
+
+&lt;p&gt;Namun hal tersebut dapat diatasi dengan cara menambahkan &lt;strong&gt;masterfile-format text;&lt;/strong&gt; di zone forward di slave.&lt;/p&gt;
+
+&lt;p&gt;Harap diperhatikan apabila Anda telah menambahkan konfigurasi baru atau melakukan perubahan konfigurasi Anda wajib melakukan restart atau reload service bind dengan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-slave slaves]# 
+[root@srv-slave slaves]# systemctl restart named
+[root@srv-slave slaves]# cat forward-hamim.zone 
+$ORIGIN .
+$TTL 86400	; 1 day
+hamim.web.id		IN SOA	hamim.web.id. root.hamim.web.id. (
+				2019111919 ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				604800     ; expire (1 week)
+				86400      ; minimum (1 day)
+				)
+			NS	ns1.hamim.web.id.
+			NS	ns2.hamim.web.id.
+			A	117.53.45.53
+$ORIGIN hamim.web.id.
+analis			A	117.53.45.53
+beddol			A	117.53.45.53
+bowok			A	117.53.45.53
+cobacoba		A	117.53.45.53
+hai			A	103.53.45.53
+hello		        A	117.53.45.53
+mail			A	117.53.45.53
+ns1			A	117.53.45.53
+ns2			A	103.23.20.126
+Ommku			A	117.53.45.53
+www			CNAME	hamim.web.id.
+[root@srv-slave slaves]# 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Namun penambahan &lt;strong&gt;masterfile-format text;&lt;/strong&gt; tidak disarankan apabila DNS Anda digunakan untuk banyak domain atau zone untuk domain.&lt;/p&gt;
+
+&lt;p&gt;Dengan demikian kami sarankan Anda untuk menonaktifkan atau tidak menggunakan &lt;strong&gt;masterfile-format text;&lt;/strong&gt; apabila memang nantinya membutuhkan hasil backup record barulah Anda dapat mengaktifkannya kembali.&lt;/p&gt;
+
+&lt;p&gt;Berikut merupakan log slave apabila terdapat perubahan record misalnya penamabahan atau pengurunganan record contohnya record untuk subdomain dan yang lainnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dan berikut log dari sisi Master,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada log diatas kita sangat jelas melihat &lt;strong&gt;peran also-notify dan notify yes;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Harap dicatat setiap menambahkan record baru di sisi Master misalnya Anda ingin menambahkan subdomain setiap menambahkan subdomain maka Anda perlu merubah &lt;strong&gt;Serial&lt;/strong&gt; apabila Anda tidak merubah serial maka si Slave tidak akan melakukan perubahan apapun dan subdomain yang telah Anda tambahkan di Master tidak akan resolve ke Slave.&lt;/p&gt;
+
+&lt;h3 id=&#34;percobaan&#34;&gt;PERCOBAAN&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;NS1.HAMIM.WEB.ID : 117.53.45.53
+NS2.HAMIM.WEB.ID : 103.23.20.12
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sebelumnya saya telah membuat subdomain subdomainbro&lt;/p&gt;
+
+&lt;p&gt;Pengecekan Domain Utama HAMIM.WEB.ID&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hamimaja@hamimaja:~$ dig hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns1.hamim.web.id hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns2.hamim.web.id hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns1.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns2.hamim.web.id +short
+103.23.20.126
+hamimaja@hamimaja:~$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pengecekan Sub Domain Utama SUBDOMAINBRO.HAMIM.WEB.ID&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hamimaja@hamimaja:~$ dig subdomainbro.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns1.hamim.web.id subdomainbro.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig @ns2.hamim.web.id subdomainbro.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns1.hamim.web.id +short
+117.53.45.53
+hamimaja@hamimaja:~$ dig ns2.hamim.web.id +short
+103.23.20.126
+hamimaja@hamimaja:~$ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20master%20slave/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebagai tambahan apabila Anda ingin menambahkan domai baru silakan membuat zone baru untuk domain baru Anda tersebut disisi Master dan Slave.&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
 </description>
     </item>
     

@@ -6,22 +6,10 @@
     <description>Recent content in Posts on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jul 2019 18:52:20 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 14:03:12 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>File Dan Direktori</title>
-      <link>https://nurhamim.net/file-dan-direktori/</link>
-      <pubDate>Mon, 08 Jul 2019 18:52:20 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/file-dan-direktori/</guid>
-      <description>Pada tutorial kali ini saya masih tetap membahas mengenai comand line linux, namun untuk kali saya akan fokus pembahasan tentang navigasi direktori, membuat, dan memodifikasi file dan direktori di sistem operasi Linux.
-Berikut tabel content yang akan kita bahas satu - satu
- pwd cd clear ls mkdir touch rm cp mv rename ln tar and gzip  Mari kita bahas satu per satu content diatas :
-pwd Perintah pwd digunakan untuk print (melihat) direktori dimana Anda berada.</description>
-    </item>
     
     <item>
       <title>Pengenalan Dan Kenapa Linux?</title>

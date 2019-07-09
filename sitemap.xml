@@ -4,7 +4,7 @@
     <url>
       <loc>https://nurhamim.net/</loc>
       
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
+      <lastmod>2019-07-08T14:03:12+07:00</lastmod>
       
       
       
@@ -16,7 +16,7 @@
     <url>
       <loc>https://nurhamim.net/categories/</loc>
       
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
+      <lastmod>2019-07-08T14:03:12+07:00</lastmod>
       
       
       
@@ -28,7 +28,7 @@
     <url>
       <loc>https://nurhamim.net/tags/command-line/</loc>
       
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
+      <lastmod>2019-07-08T14:03:12+07:00</lastmod>
       
       
       
@@ -38,19 +38,9 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/file-dan-direktori/</loc>
-      
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/tags/linux/</loc>
       
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
+      <lastmod>2019-07-08T14:03:12+07:00</lastmod>
       
       
       
@@ -62,31 +52,7 @@
     <url>
       <loc>https://nurhamim.net/categories/linux-command-line/</loc>
       
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/posts/</loc>
-      
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/</loc>
-      
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
+      <lastmod>2019-07-08T14:03:12+07:00</lastmod>
       
       
       
@@ -111,6 +77,30 @@
       <lastmod>2019-07-08T14:03:12+07:00</lastmod>
       
       
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/posts/</loc>
+      
+      <lastmod>2019-07-08T14:03:12+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/</loc>
+      
+      <lastmod>2019-07-08T14:03:12+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
       
       
     </url>
