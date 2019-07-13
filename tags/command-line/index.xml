@@ -6,10 +6,22 @@
     <description>Recent content in Command Line on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jul 2019 14:03:12 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 18:52:20 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>File Dan Direktori Di Linux</title>
+      <link>https://nurhamim.net/file-dan-direktori-di-linux/</link>
+      <pubDate>Mon, 08 Jul 2019 18:52:20 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/file-dan-direktori-di-linux/</guid>
+      <description>Pada tutorial kali ini saya masih tetap membahas mengenai comand line linux, namun untuk kali saya akan fokus pembahasan tentang navigasi direktori, membuat, dan memodifikasi file dan direktori di sistem operasi Linux.
+Berikut tabel konten yang akan kita bahas satu - persatu:
+ pwd cd clear ls mkdir touch rm cp mv  pwd Perintah pwd digunakan untuk print (melihat) direktori dimana Anda berada.
+root@hamimaja:~# pwd /root root@hamimaja:~#  cd Perintah ini digunakan untuk berpindah posisi dari direktori A ke direktori yang lainnya.</description>
+    </item>
     
     <item>
       <title>Pengenalan Dan Kenapa Linux?</title>
