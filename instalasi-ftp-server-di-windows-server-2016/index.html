@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/konfigurasi-ftp-server-di-windows-server-2016/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/instalasi-ftp-server-di-windows-server-2016/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi FTP Server Di Windows Server 2016 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Instalasi FTP Server Di Windows Server 2016 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi FTP Server Di Windows Server 2016",
+    "headline" : "Instalasi FTP Server Di Windows Server 2016",
+    "description" : "FTP (File Transfer Protokol) salah satu service yang dapat kita gunakan untuk mengimrikan sebuah file atau direktori yang berada di lokal (komputer) ke server.
+Terdapat FTP Server dan FTP Client perbedaannya adalah:
+ FTP Server: Service FTP yang di install di sisi server FTP Client: Service FTP yang di install di sisi client (komputer)  Untuk FTP Client sendiri juga banyak FTP Client Pihak ke tiga sepertihalnyaa Winscp, FileZilla etc.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-08-21 02:55:24 &#43;0700 DST",
+    "dateModified" : "2019-08-21 02:55:24 &#43;0700 DST",
+    "url" : "https://nurhamim.net/instalasi-ftp-server-di-windows-server-2016/",
+    "wordCount" : "177",
+    "keywords" : [ "Windows Server","FTP", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi FTP Server Di Windows Server 2016</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-08-21 itemprop="datePublished">August 21, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/windows-server-2016/"> Windows Server 2016 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>FTP (File Transfer Protokol) salah satu service yang dapat kita gunakan untuk mengimrikan sebuah file atau direktori yang berada di lokal (komputer) ke server.</p>
+
+<p>Terdapat FTP Server dan FTP Client perbedaannya adalah:</p>
+
+<ul>
+<li>FTP Server: Service FTP yang di install di sisi server</li>
+<li>FTP Client: Service FTP yang di install di sisi client (komputer)</li>
+</ul>
+
+<p>Untuk FTP Client sendiri juga banyak FTP Client Pihak ke tiga sepertihalnyaa Winscp, FileZilla etc.</p>
+
+<p>Berikut ini merupakan tahapan untuk instalasi FTP Server di Windows Server 2016</p>
+
+<p>Silakan akses Windows Server 2016 Anda menggunakan RDP lalu masuk ke <strong>Server Manager &gt;&gt; Add Roles and Features</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-ftp/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Kemudian klik <strong>Next</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-ftp/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pilih <strong>Roles-based or feature-based installation</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-ftp/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pilih server Anda, lalu <strong>Next</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-ftp/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada <strong>Server Roles</strong> silakan centang pada menu <strong>FTP Server</strong> seperti pada gambar di bawah ini, lalu <strong>Next</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-ftp/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada tahap ini silakan <strong>Next</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-ftp/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Install FTP Server</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-ftp/Screenshot_7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan tunggu proses instalasi sampai selesai</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-ftp/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Instalasi FTP Server telah selesai</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-ftp/Screenshot_9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk melakukan konfigurasi FTP dapat melalui menu <strong>Tools &gt;&gt; Internet Information Services (IIS) Manager</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-ftp/Screenshot_10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut dashboard untuk melakukan konfigurasi FTP Server di Windows Server 2016</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-ftp/Screenshot_11.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selamat mencoba semoga bermanfaat 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/instalasi-ftp-server-di-windows-server-2016/>https://nurhamim.net/instalasi-ftp-server-di-windows-server-2016/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/windows-server/">
+                    #Windows Server</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/ftp/">
+                    #FTP</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/konfigurasi-ftp-server-di-windows-server-2016/" class="prev" rel="prev" title="Konfigurasi FTP Server Di Windows Server 2016"><i class="iconfont icon-left"></i>&nbsp;Konfigurasi FTP Server Di Windows Server 2016</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
