@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/file-dan-direktori-di-linux/" />
+  <link rel="next" href="https://nurhamim.net/cara-mengaktifkan-telnet-di-windows-server-2016/" />
+  <link rel="canonical" href="https://nurhamim.net/mengenal-dan-instalasi-web-server-iis-di-windows-server-2016/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Mengenal Dan Instalasi Web Server IIS Di Windows Server 2016 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Mengenal Dan Instalasi Web Server IIS Di Windows Server 2016 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Mengenal Dan Instalasi Web Server IIS Di Windows Server 2016",
+    "headline" : "Mengenal Dan Instalasi Web Server IIS Di Windows Server 2016",
+    "description" : "Microsoft salah satu sistem operasi yang berbeda dengan sistem operasi yang lain. Microsoft mempunyai web server sendiri yang di beri nama IIS Web Server kepanjangannya yaitu &ldquo;Internet Information Services&rdquo; .
+Web Server IIS besutan Microsoft juga salah satu sekian banyaknya web server yang mendukung teknologi Microsoft seperti halnya ASP.NET.
+Bukan hanya itu saja, Web Server IIS juga dapat menjalankan bahasa pemrograman lain seperti PHP, Python, Java dan bahasa lainnya.
+Berikut ini beberapa fitur IIS: - Manajemen web farm yang terpusat - Delegated remote manajemen - Admin tool yang kokoh - Infrastruktur web yang mempunyai skalabilitas tinggi - Caching dan kompresi yang dinamis - Diagnostic tool yang lengkap - Perlindungan server yang ditingkatkan - Secure content publishing - Perlindungan akses - Mendukung ASP.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-08-21 00:35:49 &#43;0700 DST",
+    "dateModified" : "2019-08-21 00:35:49 &#43;0700 DST",
+    "url" : "https://nurhamim.net/mengenal-dan-instalasi-web-server-iis-di-windows-server-2016/",
+    "wordCount" : "279",
+    "keywords" : [ "Windows Server","IIS","Web Server", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Mengenal Dan Instalasi Web Server IIS Di Windows Server 2016</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-08-21 itemprop="datePublished">August 21, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/windows-server-2016/"> Windows Server 2016 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Microsoft salah satu sistem operasi yang berbeda dengan sistem operasi yang lain.
+Microsoft mempunyai web server sendiri yang  di beri nama IIS Web Server kepanjangannya yaitu &ldquo;Internet Information Services&rdquo; .</p>
+
+<p>Web Server IIS besutan Microsoft juga salah satu sekian banyaknya web server yang mendukung teknologi Microsoft seperti halnya ASP.NET.</p>
+
+<p>Bukan hanya itu saja, Web Server IIS juga dapat menjalankan bahasa pemrograman lain seperti PHP, Python, Java dan bahasa lainnya.</p>
+
+<p>Berikut ini beberapa fitur IIS:
+- Manajemen web farm yang terpusat
+- Delegated remote manajemen
+- Admin tool yang kokoh
+- Infrastruktur web yang mempunyai skalabilitas tinggi
+- Caching dan kompresi yang dinamis
+- Diagnostic tool yang lengkap
+- Perlindungan server yang ditingkatkan
+- Secure content publishing
+- Perlindungan akses
+- Mendukung ASP.NET atau PHP
+- Dan lainnya</p>
+
+<p>Selengkapnya mengenai IIS dapat merujuk pada link berikut: <a href="https://www.iis.net/" rel="nofollow noreferrer" target="_blank">https://www.iis.net/</a></p>
+
+<p>Berikut ini cara instalasi web server IIS di Windows Server 2016</p>
+
+<p>Silakan masuk ke server manager dan klik pada menu <strong>Manage &gt;&gt; Add Roles Anda Features</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada tampilan di bawah silakan Klik <strong>Next</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Lalu pilih <strong>Roles-based or feature-based Installation</strong>.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pilih Server Anda</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Scroll ke bawah pilih <strong>Web Server (IIS)</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Ketika muncul tampilan seperti gambar di bawah ini, klik <strong>Add Features</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Web Server IIS</strong> telah berhasil di pilih, klik <strong>Next</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Lalu klik <strong>Next.</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Lalu klik <strong>Next.</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pilih service (centang) yang ingin di aktifkan sesuai dengan keinginan, Next untuk lanjut ke tahapan berikutnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Informasi mengenai Web Server IIS, Klik <strong>Install</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_11.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Tunggu proses instalasi <strong>Web Server IIS</strong> sampai selesai yang membutuhkan waktu</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_12.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Web Server IIS</strong> telah berhasil di install</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_13.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk tab konfigurasi <strong>Web Server IIS</strong> berada di menu <strong>Tools &gt;&gt; Internet Information Services (IIS) Manager</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_14.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut tampilan dashboard <strong>Web Server IIS</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_15.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selamat mencoba semoga bermanfaat 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/mengenal-dan-instalasi-web-server-iis-di-windows-server-2016/>https://nurhamim.net/mengenal-dan-instalasi-web-server-iis-di-windows-server-2016/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/windows-server/">
+                    #Windows Server</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/iis/">
+                    #IIS</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/web-server/">
+                    #Web Server</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/file-dan-direktori-di-linux/" class="prev" rel="prev" title="File Dan Direktori Di Linux"><i class="iconfont icon-left"></i>&nbsp;File Dan Direktori Di Linux</a>
+         
+        
+        <a href="https://nurhamim.net/cara-mengaktifkan-telnet-di-windows-server-2016/" class="next" rel="next" title="Cara Mengaktifkan Telnet Di Windows Server 2016">Cara Mengaktifkan Telnet Di Windows Server 2016&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

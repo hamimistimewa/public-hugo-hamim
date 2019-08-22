@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Server on Catatan Cah Ndeso</title>
+    <link>https://nurhamim.net/tags/web-server/</link>
+    <description>Recent content in Web Server on Catatan Cah Ndeso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Aug 2019 00:35:49 +0700</lastBuildDate>
+    
+	<atom:link href="https://nurhamim.net/tags/web-server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cara Menambahkan Website/Virtual Host Di Web Server IIS Pada Windows Server 2016</title>
+      <link>https://nurhamim.net/cara-menambahkan-website/virtual-host-di-web-server-iis-pada-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 00:35:49 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-menambahkan-website/virtual-host-di-web-server-iis-pada-windows-server-2016/</guid>
+      <description>Tutorial kali merupakan kelanjutan dari tutorial sebelumnya.
+Bila pada tutorial sebelumnya yaitu mengenai instalasi Web Server IIS , maka untuk tutorial kali merupakan bagaimana cara menambahkan Website atau Virtual Host di Web Server IIS.
+Silakan akses Windows Server 2016 Anda terlebih dahulu menggunakan RDP
+Buka IIS Manager di menu Tools &amp;gt;&amp;gt; Internet Information Services (IIS) Manager.
+Tampilan Manager Web Server IIS
+Untuk menambahkan site/virtualhost , drop-down HAMIM-WINDOWS &amp;gt;&amp;gt; SITES &amp;gt;&amp;gt; klik kanan &amp;gt;&amp;gt; Add Website</description>
+    </item>
+    
+    <item>
+      <title>Mengenal Dan Instalasi Web Server IIS Di Windows Server 2016</title>
+      <link>https://nurhamim.net/mengenal-dan-instalasi-web-server-iis-di-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 00:35:49 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/mengenal-dan-instalasi-web-server-iis-di-windows-server-2016/</guid>
+      <description>Microsoft salah satu sistem operasi yang berbeda dengan sistem operasi yang lain. Microsoft mempunyai web server sendiri yang di beri nama IIS Web Server kepanjangannya yaitu &amp;ldquo;Internet Information Services&amp;rdquo; .
+Web Server IIS besutan Microsoft juga salah satu sekian banyaknya web server yang mendukung teknologi Microsoft seperti halnya ASP.NET.
+Bukan hanya itu saja, Web Server IIS juga dapat menjalankan bahasa pemrograman lain seperti PHP, Python, Java dan bahasa lainnya.
+Berikut ini beberapa fitur IIS: - Manajemen web farm yang terpusat - Delegated remote manajemen - Admin tool yang kokoh - Infrastruktur web yang mempunyai skalabilitas tinggi - Caching dan kompresi yang dinamis - Diagnostic tool yang lengkap - Perlindungan server yang ditingkatkan - Secure content publishing - Perlindungan akses - Mendukung ASP.</description>
+    </item>
+    
+  </channel>
+</rss>

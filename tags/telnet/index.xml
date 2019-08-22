@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Telnet on Catatan Cah Ndeso</title>
+    <link>https://nurhamim.net/tags/telnet/</link>
+    <description>Recent content in Telnet on Catatan Cah Ndeso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Aug 2019 00:35:49 +0700</lastBuildDate>
+    
+	<atom:link href="https://nurhamim.net/tags/telnet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cara Mengaktifkan Telnet Di Windows Server 2016</title>
+      <link>https://nurhamim.net/cara-mengaktifkan-telnet-di-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 00:35:49 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-mengaktifkan-telnet-di-windows-server-2016/</guid>
+      <description>Telnet salah satu service yang dapat kita gunakan untuk mengetahui atau melihat sebuah service dalam ke adaan open atau running tidak nya sebuah service dengan menggunakan ip ataupun domain yang telah terpointing ke ip tersebut.
+Pada gambar di atas terlihat service telnet di Windows Server 2016 belum dapat digunakan, oleh karena itu kita perlu mengaktifkannya.
+Berikut tahapan - tahapannya:
+Silakan masuk ke Server Manager &amp;gt;&amp;gt; Add roles and features
+Kemudian Next</description>
+    </item>
+    
+  </channel>
+</rss>

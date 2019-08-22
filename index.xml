@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Catatan Cah Ndeso on Catatan Cah Ndeso</title>
@@ -5,8 +6,322 @@
     <description>Recent content in Catatan Cah Ndeso on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jul 2019 18:52:20 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 21 Aug 2019 00:35:49 +0700</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Menambahkan Volume Di Windows Server 2016</title>
+      <link>https://nurhamim.net/cara-menambahkan-volume-di-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 00:35:49 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-menambahkan-volume-di-windows-server-2016/</guid>
+      <description>&lt;p&gt;Menambah storage di sebuah sistem operasi merupakan suatu hal yang wajib kita ketahui, dengan kita mengetahui bagaimana cara menambahkan sebuah disk maka kita akan mudah kedepannya bila terdapat issue atau case tentang storage misalnya penambahan storage baru yang akan digunakan untuk menyimpan data atau penambahan storage baru yang ingin digunakan untuk menyimpan aplikasi aplikasi tertentu yang membutuhkan penyimpanan khusus.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini merupakan tahapan bagaimana cara menambahkan storage di Windows Server 2016.&lt;/p&gt;
+
+&lt;p&gt;Pada gambar dibawah terlihat Disk yang ada saat ini di Windows Server saya hanyalah Disk root (C:)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk menambahkan storage baru misalnya Disk (D: , E:) dapat dilakukan.&lt;/p&gt;
+
+&lt;p&gt;Biasanya setelah instalasi Windows Server kita perlu mengaktifkan Disk (D: , E:) secara manual.&lt;/p&gt;
+
+&lt;p&gt;Perlu di ketahui juga bila Anda menggunakan VPS atau Virtual Machine di provider/penyedia layanan Cloud Computing silakan menghubungi pihak penyedia Cloud Computing Anda untuk melakukan Attack Volume ke VPS / Virtual Machine Anda jika sudah Anda dapat menambahkannya secara mandiri sesuai dengan keinginan di sistem operasi Windows Server Anda.&lt;/p&gt;
+
+&lt;p&gt;Silakan akses Windows Server 2016 Anda masing - masing, dan mengakses Server Manager&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikutnya klik pada menu File anda Storage Service&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian klik pada menu Disk dan klik pada spot yang kosong dan klik &amp;ldquo;Rescan Storage&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada gambar di atas sudah terlihat disk baru yang masih &amp;ldquo;Unknown&amp;rdquo; silakan klik kanan lalu &amp;ldquo;Bring Online&amp;rdquo; . Bring Online digunakan untuk mengaktifkan disk&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_7.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya Anda dapat membuat Volume dengan cara klik kanan pada disk &amp;gt;&amp;gt; New Volume&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Akan muncul konfigurasi Volume, klik Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada menu &amp;ldquo;Server and Disk&amp;rdquo; sudah terlihat Disk yang baru saja di aktifkan, klik Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_11.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya menentukan size dari Volume, disini saya akan menambahkan volume sebesar 50GB, klik Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pada menu &amp;ldquo;Drive Letter or Folder&amp;rdquo; Anda dapat menentukan Drive Letter ingin di taruh di Disk E etc, seperti pada gambar di bawah ini, klik Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini Anda diminta untuk memilih file system yang ingin digukana Anda bisa menggunakan &lt;a href=&#34;https://en.wikipedia.org/wiki/NTFS&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;NTFS&lt;/a&gt; atau &lt;a href=&#34;https://en.wikipedia.org/wiki/ReFS&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;ReFS&lt;/a&gt;, selain itu Anda juga dapat memberikan nama atau label pada Volume Anda seperti pada gambar di bawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian pada menu &amp;ldquo;Confirmation&amp;rdquo; Klik Create untuk membuat Volume, dan silakan tunggu sampai complete&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_16.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_17.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_18.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Saat ini Disk Volume sudah berhasil di tambahkan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_19.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/penambahan-disk/Screenshot_20.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Menambahkan Website/Virtual Host Di Web Server IIS Pada Windows Server 2016</title>
+      <link>https://nurhamim.net/cara-menambahkan-website/virtual-host-di-web-server-iis-pada-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 00:35:49 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-menambahkan-website/virtual-host-di-web-server-iis-pada-windows-server-2016/</guid>
+      <description>&lt;p&gt;Tutorial kali merupakan kelanjutan dari tutorial sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Bila pada tutorial sebelumnya yaitu mengenai instalasi &lt;strong&gt;Web Server IIS&lt;/strong&gt; , maka untuk tutorial kali merupakan bagaimana cara menambahkan Website atau  Virtual Host di &lt;strong&gt;Web Server IIS&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Silakan akses Windows Server 2016 Anda terlebih dahulu menggunakan RDP&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Buka &lt;strong&gt;IIS Manager&lt;/strong&gt; di menu &lt;strong&gt;Tools &amp;gt;&amp;gt; Internet Information Services (IIS) Manager.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tampilan &lt;strong&gt;Manager Web Server IIS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk menambahkan site/virtualhost , drop-down &lt;strong&gt;HAMIM-WINDOWS &amp;gt;&amp;gt; SITES &amp;gt;&amp;gt; klik kanan &amp;gt;&amp;gt; Add Website&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tampilan di bawah ini, isikan sesuai parameter website Anda masing - masing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut detailnya:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Site Name: Isikan dengan nama domain yang Anda digunakan&lt;/li&gt;
+&lt;li&gt;Physical Path: Pilih Direktori website Anda&lt;/li&gt;
+&lt;li&gt;Hostname: Isikan dengan nama domain yang Anda digunakan&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Disini saya membuat file index.html di dalam directori hamim.web.id silakan. Untuk mengedit file *&lt;strong&gt;.html.&lt;/strong&gt; Klik &lt;strong&gt;Explore&lt;/strong&gt;,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pastikan dalam directory tersebut terdapat file &lt;strong&gt;index.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Misalnya file index.html seperti berikut ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk pengujian, Klik &lt;strong&gt;Browse&lt;/strong&gt; pada panel kanan website.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut hasilnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/vihost-iis/Screenshot_12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Mengaktifkan Telnet Di Windows Server 2016</title>
+      <link>https://nurhamim.net/cara-mengaktifkan-telnet-di-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 00:35:49 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-mengaktifkan-telnet-di-windows-server-2016/</guid>
+      <description>&lt;p&gt;Telnet salah satu service yang dapat kita gunakan untuk mengetahui atau melihat sebuah service dalam ke adaan open atau running tidak nya sebuah service dengan menggunakan ip ataupun domain yang telah terpointing ke ip tersebut.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada gambar di atas terlihat service telnet di Windows Server 2016 belum dapat digunakan, oleh karena itu kita perlu mengaktifkannya.&lt;/p&gt;
+
+&lt;p&gt;Berikut tahapan - tahapannya:&lt;/p&gt;
+
+&lt;p&gt;Silakan masuk ke &lt;strong&gt;Server Manager &amp;gt;&amp;gt; Add roles and features&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian &lt;strong&gt;Next&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada &lt;strong&gt;Installation Type&lt;/strong&gt; silakan pilih &lt;strong&gt;Roles-based or feture-based installation&lt;/strong&gt; lalu &lt;strong&gt;Next&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pilih server Anda kemudian &lt;strong&gt;Next&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada &lt;strong&gt;Server Roles&lt;/strong&gt; pastikan &lt;strong&gt;File and Storage Services&lt;/strong&gt; sudah terinstall, kemudian &lt;strong&gt;Next&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada menu &lt;strong&gt;Features&lt;/strong&gt; silakan pilih dan centang fitur &lt;strong&gt;Telnet Client &amp;amp; TFTP Client&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Menjadi seperti pada gambar dibawah ini, lalu &lt;strong&gt;Next&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Install service Telnet&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggu proses instalasi sampai selesai&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instalasi Telnet telah berhasil di lakukan&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk memastikannya silakan masuk ke &lt;strong&gt;Command Prompt&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ketikan perintah &lt;strong&gt;telnet ip_server 80&lt;/strong&gt; atau &lt;strong&gt;telnet google.com 80&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut contoh bila menggunakan powershell di Windows Server 2016&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/Install%20Telnet/Screenshot_14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mengenal Dan Instalasi Web Server IIS Di Windows Server 2016</title>
+      <link>https://nurhamim.net/mengenal-dan-instalasi-web-server-iis-di-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 00:35:49 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/mengenal-dan-instalasi-web-server-iis-di-windows-server-2016/</guid>
+      <description>&lt;p&gt;Microsoft salah satu sistem operasi yang berbeda dengan sistem operasi yang lain.
+Microsoft mempunyai web server sendiri yang  di beri nama IIS Web Server kepanjangannya yaitu &amp;ldquo;Internet Information Services&amp;rdquo; .&lt;/p&gt;
+
+&lt;p&gt;Web Server IIS besutan Microsoft juga salah satu sekian banyaknya web server yang mendukung teknologi Microsoft seperti halnya ASP.NET.&lt;/p&gt;
+
+&lt;p&gt;Bukan hanya itu saja, Web Server IIS juga dapat menjalankan bahasa pemrograman lain seperti PHP, Python, Java dan bahasa lainnya.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini beberapa fitur IIS:
+- Manajemen web farm yang terpusat
+- Delegated remote manajemen
+- Admin tool yang kokoh
+- Infrastruktur web yang mempunyai skalabilitas tinggi
+- Caching dan kompresi yang dinamis
+- Diagnostic tool yang lengkap
+- Perlindungan server yang ditingkatkan
+- Secure content publishing
+- Perlindungan akses
+- Mendukung ASP.NET atau PHP
+- Dan lainnya&lt;/p&gt;
+
+&lt;p&gt;Selengkapnya mengenai IIS dapat merujuk pada link berikut: &lt;a href=&#34;https://www.iis.net/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.iis.net/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut ini cara instalasi web server IIS di Windows Server 2016&lt;/p&gt;
+
+&lt;p&gt;Silakan masuk ke server manager dan klik pada menu &lt;strong&gt;Manage &amp;gt;&amp;gt; Add Roles Anda Features&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tampilan di bawah silakan Klik &lt;strong&gt;Next&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu pilih &lt;strong&gt;Roles-based or feature-based Installation&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pilih Server Anda&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Scroll ke bawah pilih &lt;strong&gt;Web Server (IIS)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ketika muncul tampilan seperti gambar di bawah ini, klik &lt;strong&gt;Add Features&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Web Server IIS&lt;/strong&gt; telah berhasil di pilih, klik &lt;strong&gt;Next&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu klik &lt;strong&gt;Next.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu klik &lt;strong&gt;Next.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pilih service (centang) yang ingin di aktifkan sesuai dengan keinginan, Next untuk lanjut ke tahapan berikutnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Informasi mengenai Web Server IIS, Klik &lt;strong&gt;Install&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggu proses instalasi &lt;strong&gt;Web Server IIS&lt;/strong&gt; sampai selesai yang membutuhkan waktu&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Web Server IIS&lt;/strong&gt; telah berhasil di install&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk tab konfigurasi &lt;strong&gt;Web Server IIS&lt;/strong&gt; berada di menu &lt;strong&gt;Tools &amp;gt;&amp;gt; Internet Information Services (IIS) Manager&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut tampilan dashboard &lt;strong&gt;Web Server IIS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/install-iis/Screenshot_15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>File Dan Direktori Di Linux</title>
@@ -1748,387 +2063,6 @@ PING infone.info (117.53.46.27) 56(84) bytes of data.
 &lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/Cyber%20Panel/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Pada step ini control panel Cyber Panel Anda telah berhasil diinstal dengan sempurna, selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instalasi CWP di CentOS 7</title>
-      <link>https://nurhamim.net/instalasi-cwp-di-centos-7/</link>
-      <pubDate>Sat, 06 Jul 2019 20:49:09 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/instalasi-cwp-di-centos-7/</guid>
-      <description>&lt;p&gt;Mempunyai server VPS tapi nggak bisa mengelolanya, hemm jangan kebingungan dulu guyss, disini saya akan share bagaimana cara installasi control panel CWP (Control Web Panel) di sistem operasi CentOS 7 .&lt;/p&gt;
-
-&lt;p&gt;CWP (CentOS Web Panel) salah satu control panel yang powerfull yang memang dikhususkan untuk sistem operasi RHEL dan keturunannya yaitu CentOS, CWP juga dapat diinstal di CloudLinux.&lt;/p&gt;
-
-&lt;p&gt;CWP bersifat open source (free) bebas digunakan tanpa harus membeli license.&lt;/p&gt;
-
-&lt;p&gt;Fitur – Fitur yang ada di CWP juga lumayan banyak mulai dari, DNS, Mail server, Webserver, Security, dan masih banyak lagi untuk detailnya bisa lihat pada tautan berikut :&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://centos-webpanel.com/features&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Features Control Web Panel&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Sedangkan untuk requirement yang dibutuhkan untuk instalasi cwp diantaranya&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Server &lt;sup&gt;32&lt;/sup&gt;&amp;frasl;&lt;sub&gt;64&lt;/sub&gt; Bit atau VPS&lt;/li&gt;
-&lt;li&gt;Ram 512MB lebih tinggi lebih baik dan direkomendasikan&lt;/li&gt;
-&lt;li&gt;Storage 10Gb lebih tinggi lebih baik dan direkomendasikan&lt;/li&gt;
-&lt;li&gt;Sistem Operasi CentOS 6.x 7.x / RedHat 6.x, 7.x / CloudLinux 6.x, 7.x&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Selanjutnya, saaya akan memeberitahukan tahapan – tahapan untuk melakukan instalasi cwp di CentOS 7. Disini saya menggunakan VPS untuk servenya.&lt;/p&gt;
-
-&lt;p&gt;Pertama, pastikan VPS Anda dalam keadaan Freesh Install /OS atau belum terinstall aplikasi apapun.&lt;/p&gt;
-
-&lt;p&gt;Kedua, silakan remote VPS Anda, jika sudah silakan update terlebih dahulu VPS CentOS 7 Anda dengan menggunakan perintah &lt;strong&gt;yum update -y&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila sistem operasi CentOS 7 Anda telah ter-update dengan sempurna selanjutnya silakan menginstall service wget yang digunakan untuk mengunduh file installer dari cwp, berikut perintahnya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-panel ~] # yum install wget -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah selanjutnya menentukan direktori installasi cwp, secara default direktori cwp yaitu /usr/local/src . Silakan pindah direktori terlebih dahulu menggunakan perintah cd  , dan mengunduh file installer cwp seperti berikut perintahnya seperti berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-panel ~]# cd /usr/local/src
-[root@srv-panel src]# wget http://centos-webpanel.com/cwp-el7-latest
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah, selanjutnya Anda dapat melakukan instalasi cwp dengan menjalankan baris perintah berikut :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-panel src]# sh cwp-el7-latest
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Silakan tunggu proses instalasi sampai selesai, waktu instalasi membutuhkan waktu kurang lebih 1 jam.&lt;/p&gt;
-
-&lt;p&gt;Apabila instalasi telah selesai Anda akan diberikan data credential untuk login ke control panel cwp Anda, seperti berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar diatas merupakan data credential untuk login ke Administrator control panel cwp beserta login ke Database MySQL Anda. Gambar diatas juga telah menjelaskan untuk login ke Administrator cwp menggunakan username root dan untuk passwordnya menggunakan password root VPS atau server Anda. Silakan akses IP VPS Anda menggunakan port 2030 (no-secure/ http) dan port 2031 (secure /https) . Seperti pada gambar berikut ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila telah berhasil maka, Anda akan diarahkan ke Dashboard Admin dari contol panel CWP seperti berikut ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/cwp/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada tahap ini Anda telah berhasil memasang atau instalasi control panel cwp di VPS atau server Anda.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Apa itu Control Panel WebHosting ?</title>
-      <link>https://nurhamim.net/apa-itu-control-panel-webhosting/</link>
-      <pubDate>Sat, 06 Jul 2019 20:49:01 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/apa-itu-control-panel-webhosting/</guid>
-      <description>&lt;p&gt;Hai semua, pada malam hari yang cerah ini #asyekk saya akan share mengenai tentang apa sih itu control panel WebHosting ?&lt;/p&gt;
-
-&lt;p&gt;Mungkin diluar sana sudah banyak yang tau tentang control panel web hosting, namun masih banyak pula yang belum tau tentang apa itu control panel di dunia hosting.&lt;/p&gt;
-
-&lt;p&gt;Provider atau penyedia jasa Hosting bisanya menyediakan yang namanya control panel, fungsinya untuk melakukan pengelolaan sebuah website yang berbasis web base, artinya dapat diakses menggunakan web browser.&lt;/p&gt;
-
-&lt;p&gt;Dengan menggunakan control panel kita dapat mengelola sebuah website dengan mudah, pengelolaan yang dimaksud mulai dari pengelolaan domain, mebuat DNS, Mail Server, FTP dan masih banyak lagi.&lt;/p&gt;
-
-&lt;p&gt;Control panel sendiri ada banyak jenisnya, mulai dari yang berbayar sampai yang Free.&lt;/p&gt;
-
-&lt;p&gt;Berikut merupakan contoh control panel yang Berbayar dan Free yang sering atau populer digunakan di dunia perhostingan.&lt;/p&gt;
-
-&lt;p&gt;Control Panel Berbayar :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;WHM/cPanel&lt;/li&gt;
-&lt;li&gt;Plesk Panel&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Control Panel Free/ Open Source :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CWP (CentOS Web Panel)&lt;/li&gt;
-&lt;li&gt;Ajenti&lt;/li&gt;
-&lt;li&gt;Cyber Panel&lt;/li&gt;
-&lt;li&gt;Webmin&lt;/li&gt;
-&lt;li&gt;Virtualmin&lt;/li&gt;
-&lt;li&gt;Webuso&lt;/li&gt;
-&lt;li&gt;Vesta CP&lt;/li&gt;
-&lt;li&gt;Sentora&lt;/li&gt;
-&lt;li&gt;GNU Panel&lt;/li&gt;
-&lt;li&gt;ISPConfig&lt;/li&gt;
-&lt;li&gt;Froxlor&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Dan masih banyak yang lainnya.&lt;/p&gt;
-
-&lt;p&gt;Dengan demikian apabila Anda mempunya sebuah Server VPS (Virtual Private Server) dan Anda ingin menghostingkan server VPS tersebut dapat dilakukan dengan menggunakan control panel berbayar atau free yang telah disebutkan diatas.&lt;/p&gt;
-
-&lt;p&gt;Semoga informasi ini bermanfaat bagi Anda semua 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>S3 Storage untuk Backup WordPress</title>
-      <link>https://nurhamim.net/s3-storage-untuk-backup-wordpress/</link>
-      <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/s3-storage-untuk-backup-wordpress/</guid>
-      <description>&lt;p&gt;Pernahkan Anda mengalami kehilangan data penting pada website Anda ?&lt;/p&gt;
-
-&lt;p&gt;Terlebih bagi seorang e-commerce yang menyimpan ribuan data pelanggan yang sangat – sangat penting, dan si e-commerce menggunakan CMS WordPress untuk membuat lapak jual belinya.&lt;/p&gt;
-
-&lt;p&gt;Disini saya akan share bagaimana sih cara mudah untuk melakukan backup WordPress kita ke salah satu penyimpanan &lt;a href=&#34;http://www.cloudkilat.com/layanan/kilat-storage&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Data Cloud&lt;/a&gt; sepertihalnya &lt;a href=&#34;http://www.cloudkilat.com/layanan/kilat-storage&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;S3 Protokol&lt;/a&gt; ?.&lt;/p&gt;
-
-&lt;p&gt;Oke saya harap santai sejenak yaa jangan tegang hehehehe, pada tutorial kali saya akan bahas tuntas mengenai backup keselururahan isi WordPress mulai dari plugin sampai file – file/ data yang ada di WordPress kita ke S3 Protokol.&lt;/p&gt;
-
-&lt;p&gt;Disini saya menggunakan S3 Protokol dari CloudKilat untuk penyimpanan backupnya, kenapa saya memilih &lt;a href=&#34;http://www.cloudkilat.com/layanan/kilat-storage&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;S3 Protokol CloudKilat&lt;/a&gt; ?&lt;/p&gt;
-
-&lt;p&gt;Alasan yang paling utamanya adalah tempat atau letak layanan tersebut berada di Indonesia tepatnya di Data Center Cyber 2 Jakarta selain itu harga layanan yang bisa dibilang terjangkau disertai kualitas layanan yang mantull #BukanKaleng-Kaleng #ehh&lt;/p&gt;
-
-&lt;p&gt;Nama layanannya yaitu Kilat Storage, pertama kali saya makai ni untuk media penyimpanan sangatlah memuaskan haaahhaahah kenapa ?&lt;/p&gt;
-
-&lt;p&gt;Karena jarang dan bahkan nggak pernah ada downtime, dengan demikian earningku jalan dengan lancar, matursuwon &lt;a href=&#34;http://www.cloudkilat.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CloudKilat&lt;/a&gt; hehehe 🙂&lt;/p&gt;
-
-&lt;p&gt;Lebih lanjut mengenai layanan Kilat Storage atau S3 Protokol CloudKilat dapat dilihat pada tautan berikut : &lt;a href=&#34;http://www.cloudkilat.com/layanan/kilat-storage&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Layanan S3 Protokol CloudKilat&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Sedangkan untuk integrasi antara WordPress dengan Kilat Storage tersebut saya menggunakan plugin yang telah tersedia di WordPress secara Free pulaa duhhh, tambah nikmat ni hidup 🙂&lt;/p&gt;
-
-&lt;p&gt;Nama pluginnya yaitu UpdraftPlus . Oke langsung saja yaa ke langkah – langkahnya :&lt;/p&gt;
-
-&lt;p&gt;Pertama, pastikan Anda telah mempunya layanan Kilat Storage. Bagi yang belum mempunyainya silakan langganan dulu ya hehehhehe 🙂&lt;/p&gt;
-
-&lt;p&gt;Kedua, silakan install dan aktifkan terlebih dahulu plugin &lt;a href=&#34;https://wordpress.org/plugins/updraftplus/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;UpdraftPlus&lt;/a&gt; dengan cara berikut : &lt;strong&gt;Login Admin WordPress &amp;gt;&amp;gt; Plugins &amp;gt;&amp;gt; Add new &amp;gt;&amp;gt; Search nama Plugin Updraftplus &amp;gt;&amp;gt; Install Now &amp;gt;&amp;gt; Activate&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/1.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila plugin telah berhasil diintall, berikutnya membuat bucket atau tempat penyimpanan backup WordPress. Untuk bucketnya dibuat di layanan Kilat Storage. Untuk mengakses layanan Kilat Storage sangat banyak cara mulai dari menggunakan Dragondisk, s3cmd, s3browser dan masih banyak yang lainnya. Untuk detailnya bisa di lihta di tautan berikut :&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;kb.cloudkilat.com/search?query=Cara+Akses+Kilat+Storage+Baru&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Cara Mengakses layanan Kilat Storage CloudKilat&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Disini saya menggunakan dragondisk, terlebih dahulu silakan buka portal area CloudKilat Anda untuk melihat Akses Key dan Secret Key dari Layanan Kilat Storage Anda, dengan cara Login Portal CloudKilat &amp;gt;&amp;gt; Service &amp;gt;&amp;gt; Kilat Storage &amp;gt;&amp;gt; View, scroll kebawah Anda akan mendapatkan informasi detailnya seperti pada gambar berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika Anda telah mengetahui Access Key dan Secret Key  layanan Kilat Storage Anda silakan buka aplikasi Dragondisk untuk membuat bucket dengan cara&lt;/p&gt;
-
-&lt;p&gt;Buka Aplikasi Dragondisk &amp;gt;&amp;gt; Account &amp;gt;&amp;gt; New &amp;gt;&amp;gt; Isikan detail informasi seperti Endpoint, secret key dan access key yang dibutuhkan seperti berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/4.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila Anda telah membuat bucket, silakan kembali lagi ke plugin wordpress, dimana kita akan melakukan konfigurasi, silakan masuk ke plugin dengan cara setting &amp;gt;&amp;gt; UpdraftPlusBackups &amp;gt;&amp;gt; settings secara default seperti berikut, silakan pilih yang menu S3 Compatible (Generic)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Anda dapat menentukan jadwal agenda backup yang Anda inginkan mulai dari, monthly, fotnighly, weekly, daily, Every 12 hours, dll .&lt;/p&gt;
-
-&lt;p&gt;Disini saya set backup perminggu dengan 4 kali backup total 1 bulan ada 4 kali backup, berikut contohnya,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar diatas kita juga mengisikan credential mulai dair endpoint Kilat Storage, nama bucket, access key, secret key.&lt;/p&gt;
-
-&lt;p&gt;Untuk testing apakah backup kita berhasil tersimpan ke penyimpanan Kilat Storage mari kita coba backup manual dulu, dengan cara pindah ke menu Backup/Restore &amp;gt;&amp;gt; Backup Now maka si plugin akan membuat backup wordpress mulai dari Backup , plugin, database, upload dll.  Jika backupnya udah berhasil Anda akan mendapatkan hasil backup tersebut seperti pada gambar dibawah ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Mari kita pastikan apakah hasil file backup telah berada di Kilat Storage kit&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/backup-wp/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke, gambar di atas merupakan hasil backup yang baru saja kita lakukan.&lt;/p&gt;
-
-&lt;p&gt;Anda tinggal mengunduh hasil backup tersebut. Selamat mencoba semoga bermanfaat bagi kita semua 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instalasi WordPress Menggunakan LAMP Di CentOS 7</title>
-      <link>https://nurhamim.net/instalasi-wordpress-menggunakan-lamp-di-centos-7/</link>
-      <pubDate>Sat, 06 Jul 2019 18:34:13 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/instalasi-wordpress-menggunakan-lamp-di-centos-7/</guid>
-      <description>&lt;p&gt;WordPress adalah salah satu CMS yang sering dan bahkan sangat banyak digunakan, semua rata – rata menggunakan WordPres mulai dari website pribadi, pendidikan (sekolah), Industri Perusahaan dan masih banyak yang lainnya.&lt;/p&gt;
-
-&lt;p&gt;Kenapa harus pakai WordPress ?&lt;/p&gt;
-
-&lt;p&gt;Alasan pribadi saya memakai WordPress karena WordPress bisa digunakan secara Free namun ada juga yang berbayar, dan sangat banyak developer yang mensupport untuk menggunakan CMS WordPress.&lt;/p&gt;
-
-&lt;p&gt;Selain itu WordPress salah satu CMS yang bisa dibilang tidak terlalu rumit seperti CMS – CMS yang lainnya.&lt;/p&gt;
-
-&lt;p&gt;Untuk fitur WordPress dapat Anda lihat melalui tautan berikut : &lt;a href=&#34;https://wordpress.org/about/features/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;FITUR WORDPRESS .&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada tutorial kali ini saya akan share bagaimana cara menginstall CMS WordPress menggunakan LAMP (Linux, Apache, MySQL or MariaDB, PHP) di CentOS 7.&lt;/p&gt;
-
-&lt;p&gt;Langkah pertama yang harus kita lakuakan yaitu melakukan update sistem operasi CentOS 7 Anda dengan mengunaka perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial ~]# yum update -y 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Silakan tunggu proses update sampai selesai, jika sudah silakan install atau menambahkan repository epel berikut perintahnya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial ~]# yum install epel-release
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jikas sudah berikutnya barulah kita memasang atau install webserver apache terlebih dahulu dengan cara menjalankan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial ~]# yum install httpd -y
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tunggu proses installasi webserver apache sampai selesai, jika sudah pastikan webserver apache kita berjalan (running) dengan normal berikut perintahnya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial ~]# systemctl start httpd
-[root@srv-tutorial ~]# systemctl enable httpd
-Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
-[root@srv-tutorial ~]# systemctl status httpd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah berikutnya silakan install Database terlebih dahulu, pada tutorial kali ini saya akan menggunakan MariaDB.&lt;/p&gt;
-
-&lt;p&gt;Untuk installasi database dapat melihat pada tutorial sebelumnya mengenai instalasi database mariadb.&lt;/p&gt;
-
-&lt;p&gt;Langkah selanjutnya silakan install modul php, php disini sangatlah penting karean CMS WordPress ditulis menggunakan php, Jika tidak ada module php maka, CMS WordPress tidak akan berjalan (running) . Php yang digunakan untuk installasi WordPress kali ini yaitu PHP 7.1 .&lt;/p&gt;
-
-&lt;p&gt;Untuk instalasi php dapat melihat pada tutorial sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Apabila semua komponen (webserver, php, database) telah berhasil diinstall, langkah selanjutnya membuat database untuk wordpress, silakan login ke database Anda lalu membuat database baru berikut contohnya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial ~]# mysql -u root -p 
-Enter password: 
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 10
-Server version: 5.5.60-MariaDB MariaDB Server
-
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-
-Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
-
-MariaDB [(none)]&amp;gt; create database WordPress;
-Query OK, 1 row affected (0.00 sec)
-
-MariaDB [(none)]&amp;gt; grant all privileges on WordPress.* to &#39;isiusername-wp&#39;@&#39;localhost&#39; identified by &#39;isikanpassword-wp&#39;;
-Query OK, 0 rows affected (0.00 sec)
-
-MariaDB [(none)]&amp;gt; flush privileges;
-Query OK, 0 rows affected (0.00 sec)
-
-MariaDB [(none)]&amp;gt; exit
-Bye
-[root@srv-tutorial ~]# 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikutnya silakan pindah ke direktori /var/www/html/  lalu mengunduh file CMS WordPress , perintah untuk unduh file dapat menggunakan perintah wget , berikut link downlooadnya &lt;a href=&#34;https://wordpress.org/latest.zip&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://wordpress.org/latest.zip&lt;/a&gt; , berikut contohnya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Secara default file wordpress yang baru saja kita unduh berekstensi .zip dengan begitu silakan unzip atau extrack terlebih file wordpress tersebut dengan menggunakan perintah unzip [Nama File].zip , berikut contohnya&lt;/p&gt;
-
-&lt;p&gt;Install service unzip terlebih dahulu dengan menggunakan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial html]# yum install unzip
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah, barulah kita eksekusi file .zip tersebut dengan menggukana perintah unzip, seperti berikut ini&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial html]# ls
-latest.zip
-[root@srv-tutorial html]# unzip latest.zip 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika file sudah di ekstrack, silakan pindah ke direktori wordpress yang baru saja kita ekstrack lalu copi file default wp-config-sample.php menjadi wp-config.php menggunakan perintah cp  berikut contohnya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya silakan melakukan konfigurasi WordPress, yang dikonfigurasi hanyalah menyesuaikan konfigurasi database yang sebelumnya kita buat, mulai dari nama database, username, password database wordpress, berikut contoh konfigurasinya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar diatas silakan sesuaikan dengan konfigurasi database yang telah Anda buat sebelumnya . Jika sudah langkah selanjutnya yaitu memberi hak akses dan hak owner pada direktori /wordpress dengan mengguakan perintah berikut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial wordpress]# chown -R apache:apache /var/www/html/wordpress/
-[root@srv-tutorial wordpress]# chmod -R 755 /var/www/html/wordpress/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikutnya, kita akan membut file VirtualHost untuk wordpress.&lt;/p&gt;
-
-&lt;p&gt;Biasanya banyak sekali yang bertanya gimana sih caranya membuat banyak website di apache ?&lt;/p&gt;
-
-&lt;p&gt;Nah kalau Anda menggunkaan apache dan Anda ingin membuat banyak website maka Anda hanya perlu membuat VirtualHost, oke semoga tercerahkan mengenai VirtualHost.&lt;/p&gt;
-
-&lt;p&gt;Untuk membuat VirtualHost wordress dapat dilakukan di direktori /etc/httpd/conf.d/ . silakan buat file konfiugurasi dengan ekstensi .conf seperti berikut contohnya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial wordpress]# cd /etc/httpd/conf.d/
-[root@srv-tutorial conf.d]# 
-[root@srv-tutorial conf.d]# vim wordpress.conf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikut contoh file VirtualHost&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Keterangan :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ServerName # Isikan nama domain atau IP Server&lt;/li&gt;
-&lt;li&gt;ServerAdmin # Isikan email Anda (optional)&lt;/li&gt;
-&lt;li&gt;DocumentRoot /var/www/html/wordpress # Letak direktori file wordpress&lt;/li&gt;
-&lt;li&gt;ErrorLog logs/wordpress-infone.info-error_log # Letak file Error_Log&lt;/li&gt;
-&lt;li&gt;CustomLog logs/wordpress-infone.info-access_log combined # Letak file Access_log&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sebagai catatan, apabila Anda telah mempunya domain silakan mengarahkan domain Anda ke IP VPS Anda dengan cara menambahkan A record pada DNS Management Domain jika Anda bingung silakan menghubungi pihak penyedia domain Anda untuk menanyakan mengenai A record domain tersebut, atau Anda dapat membuat DNS Server Mandiri.&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya, silakan restart webserver apache dan database Anda menggunakan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@srv-tutorial conf.d]# systemctl restart httpd
-[root@srv-tutorial conf.d]# systemctl restart mariadb
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Selanjutnya, melakukan instalasi wordpress silakan akses domain infone.info/wp-admin atau IP Server/wp-admin yang telah di daftarkan di file VirtualHost pada browser seperti berikut hasilnya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar diatas silakan pilih bahasa instalasi yang ingin digunakan, disini saya memilih bahasa English (United States) klik Continue untuk melanjutkan proses installasi&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar diatas silakan isikan Site Title / Judul Situs (bebas) dan isikan username beserta password login ke Administrator WordPress. Jika sudah klik tombol Install WordPress .&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke, gambar diatas menandakan CMS WordPress kita telah selesai dan berhasil di install silakan klik tombol Log in untuk masuk ke Dasboard Administrator silakan isikan username dan password yang telah dibuat sebelumnya&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika berhasil maka Anda akan diarahkan langsung ke tampilan dasboard WordPress berikut hasilnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wordpress/16.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke, pada tahap ini Anda telah berhasil menginstall CMS WordPress di VPS dengan sistem Operasi CentOS 7.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermnafaat, selamat mencoba 🙂&lt;/p&gt;
 </description>
     </item>
     

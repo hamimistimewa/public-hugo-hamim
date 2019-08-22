@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Volume on Catatan Cah Ndeso</title>
+    <link>https://nurhamim.net/tags/volume/</link>
+    <description>Recent content in Volume on Catatan Cah Ndeso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Aug 2019 00:35:49 +0700</lastBuildDate>
+    
+	<atom:link href="https://nurhamim.net/tags/volume/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cara Menambahkan Volume Di Windows Server 2016</title>
+      <link>https://nurhamim.net/cara-menambahkan-volume-di-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 00:35:49 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-menambahkan-volume-di-windows-server-2016/</guid>
+      <description>Menambah storage di sebuah sistem operasi merupakan suatu hal yang wajib kita ketahui, dengan kita mengetahui bagaimana cara menambahkan sebuah disk maka kita akan mudah kedepannya bila terdapat issue atau case tentang storage misalnya penambahan storage baru yang akan digunakan untuk menyimpan data atau penambahan storage baru yang ingin digunakan untuk menyimpan aplikasi aplikasi tertentu yang membutuhkan penyimpanan khusus.
+Berikut ini merupakan tahapan bagaimana cara menambahkan storage di Windows Server 2016.</description>
+    </item>
+    
+  </channel>
+</rss>

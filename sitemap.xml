@@ -1,38 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://nurhamim.net/</loc>
+      <loc>https://nurhamim.net/cara-menambahkan-volume-di-windows-server-2016/</loc>
       
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
       
       
-      
-      <priority>0</priority>
       
       
     </url>
   
     <url>
-      <loc>https://nurhamim.net/categories/</loc>
+      <loc>https://nurhamim.net/cara-menambahkan-website/virtual-host-di-web-server-iis-pada-windows-server-2016/</loc>
       
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
       
       
-      
-      <priority>0</priority>
       
       
     </url>
   
     <url>
-      <loc>https://nurhamim.net/tags/command-line/</loc>
+      <loc>https://nurhamim.net/cara-mengaktifkan-telnet-di-windows-server-2016/</loc>
       
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
       
       
       
-      <priority>0</priority>
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/mengenal-dan-instalasi-web-server-iis-di-windows-server-2016/</loc>
+      
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
+      
+      
       
       
     </url>
@@ -43,54 +48,6 @@
       <lastmod>2019-07-08T18:52:20+07:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/linux/</loc>
-      
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/categories/linux-command-line/</loc>
-      
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/posts/</loc>
-      
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/</loc>
-      
-      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
@@ -116,18 +73,6 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/stories/</loc>
-      
-      <lastmod>2019-07-07T05:21:26+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/stories/part2/</loc>
       
       <lastmod>2019-07-07T05:21:26+07:00</lastmod>
@@ -138,59 +83,11 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/categories/control-panel/</loc>
-      
-      <lastmod>2019-07-06T20:49:43+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/centos-7/</loc>
-      
-      <lastmod>2019-07-06T20:49:43+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/cyber-panel/</loc>
-      
-      <lastmod>2019-07-06T20:49:43+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/menggunakan-ftp-di-cyber-panel/</loc>
       
       <lastmod>2019-07-06T20:49:43+07:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/webpanel/</loc>
-      
-      <lastmod>2019-07-06T20:49:43+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
@@ -216,18 +113,6 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/tags/wordpress/</loc>
-      
-      <lastmod>2019-07-06T20:49:38+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/membuat-website-di-cyber-panel/</loc>
       
       <lastmod>2019-07-06T20:49:36+07:00</lastmod>
@@ -243,18 +128,6 @@
       <lastmod>2019-07-06T20:49:34+07:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/dns/</loc>
-      
-      <lastmod>2019-07-06T20:49:34+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
@@ -290,18 +163,6 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/tags/cwp/</loc>
-      
-      <lastmod>2019-07-06T20:49:09+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/apa-itu-control-panel-webhosting/</loc>
       
       <lastmod>2019-07-06T20:49:01+07:00</lastmod>
@@ -312,35 +173,11 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/categories/centos-7-administrator/</loc>
-      
-      <lastmod>2019-07-06T18:34:17+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/s3-storage-untuk-backup-wordpress/</loc>
       
       <lastmod>2019-07-06T18:34:17+07:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/apache/</loc>
-      
-      <lastmod>2019-07-06T18:34:17+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
@@ -396,42 +233,6 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/tags/database/</loc>
-      
-      <lastmod>2019-07-06T09:34:23+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/mariadb/</loc>
-      
-      <lastmod>2019-07-06T09:34:23+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/phpmyadmin/</loc>
-      
-      <lastmod>2019-07-06T09:34:23+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/instalasi-dan-konfigurasi-database-mariadb-di-centos-7/</loc>
       
       <lastmod>2019-07-06T09:34:17+07:00</lastmod>
@@ -462,30 +263,6 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/tags/php/</loc>
-      
-      <lastmod>2019-07-06T09:34:08+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/webserver/</loc>
-      
-      <lastmod>2019-07-06T09:34:08+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/instalasi-php-5.6-di-centos-7/</loc>
       
       <lastmod>2019-07-06T09:34:06+07:00</lastmod>
@@ -511,18 +288,6 @@
       <lastmod>2019-07-06T09:33:59+07:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/nginx/</loc>
-      
-      <lastmod>2019-07-06T09:33:59+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
@@ -568,35 +333,11 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/tags/firewall/</loc>
-      
-      <lastmod>2019-07-06T04:50:13+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/mengamankan-ssh-menggunakan-fail2ban/</loc>
       
       <lastmod>2019-07-06T04:50:13+07:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/ssh/</loc>
-      
-      <lastmod>2019-07-06T04:50:13+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
@@ -657,30 +398,6 @@
       <lastmod>2019-07-06T03:13:32+07:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/categories/teks-editor/</loc>
-      
-      <lastmod>2019-07-06T03:13:32+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/vim/</loc>
-      
-      <lastmod>2019-07-06T03:13:32+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
@@ -786,42 +503,6 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/tags/mikrotik/</loc>
-      
-      <lastmod>2019-07-06T01:17:40+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/categories/networking/</loc>
-      
-      <lastmod>2019-07-06T01:17:40+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/network/</loc>
-      
-      <lastmod>2019-07-06T01:17:40+07:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/cara-menghubungkan-mikrotik-ke-access-point/</loc>
       
       <lastmod>2019-07-06T01:17:36+07:00</lastmod>
@@ -917,6 +598,450 @@
       <lastmod>2019-07-05T19:55:04+07:00</lastmod>
       
       
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/categories/centos-7-administrator/</loc>
+      
+      <lastmod>2019-07-06T18:34:17+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/categories/control-panel/</loc>
+      
+      <lastmod>2019-07-06T20:49:43+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/</loc>
+      
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/categories/</loc>
+      
+      <lastmod>2019-07-06T18:34:17+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/centos-7/</loc>
+      
+      <lastmod>2019-07-06T20:49:43+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/command-line/</loc>
+      
+      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/cyber-panel/</loc>
+      
+      <lastmod>2019-07-06T20:49:43+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/firewall/</loc>
+      
+      <lastmod>2019-07-06T04:50:13+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/iis/</loc>
+      
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/linux/</loc>
+      
+      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/categories/linux-command-line/</loc>
+      
+      <lastmod>2019-07-08T18:52:20+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/mikrotik/</loc>
+      
+      <lastmod>2019-07-06T01:17:40+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/categories/networking/</loc>
+      
+      <lastmod>2019-07-06T01:17:40+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/network/</loc>
+      
+      <lastmod>2019-07-06T01:17:40+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/posts/</loc>
+      
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/ssh/</loc>
+      
+      <lastmod>2019-07-06T04:50:13+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/stories/</loc>
+      
+      <lastmod>2019-07-07T05:21:26+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/categories/teks-editor/</loc>
+      
+      <lastmod>2019-07-06T03:13:32+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/</loc>
+      
+      <lastmod>2019-07-06T20:49:43+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/telnet/</loc>
+      
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/vim/</loc>
+      
+      <lastmod>2019-07-06T03:13:32+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/volume/</loc>
+      
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/web-server/</loc>
+      
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/windows-server/</loc>
+      
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/categories/windows-server-2016/</loc>
+      
+      <lastmod>2019-08-21T00:35:49+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/wordpress/</loc>
+      
+      <lastmod>2019-07-06T20:49:38+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/apache/</loc>
+      
+      <lastmod>2019-07-06T18:34:17+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/cwp/</loc>
+      
+      <lastmod>2019-07-06T20:49:09+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/database/</loc>
+      
+      <lastmod>2019-07-06T09:34:23+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/dns/</loc>
+      
+      <lastmod>2019-07-06T20:49:34+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/mariadb/</loc>
+      
+      <lastmod>2019-07-06T09:34:23+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/nginx/</loc>
+      
+      <lastmod>2019-07-06T09:33:59+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/php/</loc>
+      
+      <lastmod>2019-07-06T09:34:08+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/phpmyadmin/</loc>
+      
+      <lastmod>2019-07-06T09:34:23+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/webpanel/</loc>
+      
+      <lastmod>2019-07-06T20:49:43+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/webserver/</loc>
+      
+      <lastmod>2019-07-06T09:34:08+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/wordpress/</loc>
+      
+      <lastmod>2019-07-06T18:34:17+07:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
       
       
     </url>
