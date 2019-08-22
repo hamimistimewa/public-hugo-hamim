@@ -28,7 +28,7 @@ Terdapat FTP Server dan FTP Client perbedaannya adalah:
       <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
       
       <guid>https://nurhamim.net/konfigurasi-ftp-server-di-windows-server-2016/</guid>
-      <description>Melanjutkan tutorial sebelumnya mengenai Instalasi FTP Server Di Windows Server 2016 pada tutorial kali ini kita akan membuat FTP dan bagaimana cara akses FTP yang berada di Windows Server 2016.
+      <description>Melanjutkan tutorial sebelumnya mengenai Instalasi FTP Server Di Windows Server 2016(https://nurhamim.net/instalasi-ftp-server-di-windows-server-2016/ &amp;ldquo;&amp;rdquo;) pada tutorial kali ini kita akan membuat FTP dan bagaimana cara akses FTP yang berada di Windows Server 2016.
 Berikut tahapan - tahapannya:
 Silakan akses IIS Manager Windows Server 2016 &amp;gt;&amp;gt; Sites &amp;gt;&amp;gt; Add FTP Site
 Pada menu FTP site name isikan nama FTP sesuai keinginan Anda. Untuk Physical path silakan tentukan direktori mana yang ingin di akses melalui FTP (sesuaikan dengan keinginan Anda)</description>
