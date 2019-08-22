@@ -6,10 +6,33 @@
     <description>Recent content in Windows Server on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Aug 2019 00:35:49 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 21 Aug 2019 02:55:24 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/windows-server/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Instalasi FTP Server Di Windows Server 2018</title>
+      <link>https://nurhamim.net/instalasi-ftp-server-di-windows-server-2018/</link>
+      <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/instalasi-ftp-server-di-windows-server-2018/</guid>
+      <description>FTP (File Transfer Protokol) salah satu service yang dapat kita gunakan untuk mengimrikan sebuah file atau direktori yang berada di lokal (komputer) ke server.
+Terdapat FTP Server dan FTP Client perbedaannya adalah:
+ FTP Server: Service FTP yang di install di sisi server FTP Client: Service FTP yang di install di sisi client (komputer)  Untuk FTP Client sendiri juga banyak FTP Client Pihak ke tiga sepertihalnyaa Winscp, FileZilla etc.</description>
+    </item>
+    
+    <item>
+      <title>Konfigurasi FTP Server Di Windows Server 2016</title>
+      <link>https://nurhamim.net/konfigurasi-ftp-server-di-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/konfigurasi-ftp-server-di-windows-server-2016/</guid>
+      <description>Melanjutkan tutorial sebelumnya mengenai Instalasi FTP Server Di Windows Server 2016 pada tutorial kali ini kita akan membuat FTP dan bagaimana cara akses FTP yang berada di Windows Server 2016.
+Berikut tahapan - tahapannya:
+Silakan akses IIS Manager Windows Server 2016 &amp;gt;&amp;gt; Sites &amp;gt;&amp;gt; Add FTP Site
+Pada menu FTP site name isikan nama FTP sesuai keinginan Anda. Untuk Physical path silakan tentukan direktori mana yang ingin di akses melalui FTP (sesuaikan dengan keinginan Anda)</description>
+    </item>
     
     <item>
       <title>Cara Menambahkan Volume Di Windows Server 2016</title>
@@ -28,7 +51,7 @@ Berikut ini merupakan tahapan bagaimana cara menambahkan storage di Windows Serv
       
       <guid>https://nurhamim.net/cara-menambahkan-website/virtual-host-di-web-server-iis-pada-windows-server-2016/</guid>
       <description>Tutorial kali merupakan kelanjutan dari tutorial sebelumnya.
-Bila pada tutorial sebelumnya yaitu mengenai instalasi Web Server IIS , maka untuk tutorial kali merupakan bagaimana cara menambahkan Website atau Virtual Host di Web Server IIS.
+Bila pada tutorial sebelumnya yaitu mengenai instalasi Web Server IIS(https://nurhamim.net/mengenal-dan-instalasi-web-server-iis-di-windows-server-2016/ &amp;ldquo;&amp;rdquo;) , maka untuk tutorial kali merupakan bagaimana cara menambahkan Website atau Virtual Host di Web Server IIS.
 Silakan akses Windows Server 2016 Anda terlebih dahulu menggunakan RDP
 Buka IIS Manager di menu Tools &amp;gt;&amp;gt; Internet Information Services (IIS) Manager.
 Tampilan Manager Web Server IIS
