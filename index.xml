@@ -77,6 +77,138 @@
     </item>
     
     <item>
+      <title>Instalasi MS SQL Server Pada Windows Server 2016</title>
+      <link>https://nurhamim.net/instalasi-ms-sql-server-pada-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/instalasi-ms-sql-server-pada-windows-server-2016/</guid>
+      <description>&lt;p&gt;MS (Microsoft) SQL Server adalah sebuah sistem manajemen basis data relasional yang di peruntukan atau di rancang untuk aplikasi yang menggunakan arsitektur client - server.&lt;/p&gt;
+
+&lt;p&gt;Pada MS SQL Server terdapat sebuah fitur yang mempunyai sebuah kemampuan untuk membuat sebuah basis data baik itu mirroring dan clustering.&lt;/p&gt;
+
+&lt;p&gt;MS SQL Server juga mendukung SQL sebagai bahasa untuk memproses query ke dalam database dan kita tahu bahwa SQL ini sudah digunakan secara umum pada semua produk database server.&lt;/p&gt;
+
+&lt;p&gt;Perlu di ketahui untuk menggunakan MS SQL Server kita memerlukan sebuah License karena MS SQL tidak open source, untuk harga license nya sendiri bervariasi sesuai dengan edisi yang digunakan.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh Anda dapat melihat pricing dari License MS SQL Server 2017 pada Link berikut: &lt;a href=&#34;https://www.microsoft.com/en-us/sql-server/sql-server-2017-pricing&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;SQL Server pricing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Selengkapnya mengenai SQL Server dapat merujuk pada link berikut: &lt;a href=&#34;https://en.wikipedia.org/wiki/Microsoft_SQL_Server&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Microsoft SQL Server&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut ini tahapan untuk instalasi MS SQL Server Pada Windows Server 2016.&lt;/p&gt;
+
+&lt;p&gt;Untuk MS SQL yang kita gunakan saat ini yaitu MS SQL Server 2017, berikut tampilan installasinya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan pindah ke menu &lt;strong&gt;Installation&lt;/strong&gt; , pada menu ini terdapat beberapa metode instalasi yang dapat Anda gunakan. Bila Anda ingin menerapkan MS SQL Server Failover Cluster, silakan pilih menu &lt;strong&gt;New SQL Server failover cluster installation&lt;/strong&gt; namun bila posisinya stand-alone silakan pilih menu yang paling atas seperti pada gambar di bawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kumudian pada tahap ini Anda diminta untuk mengisikan License MS SQL Anda&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini silakan ceklis pada bagian (I Accept the license terms.) yang menunjukan Anda setuju semua tentang terms dari Lincense MS SQL Server Anda, klik Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada menu &lt;strong&gt;Microsoft Update&lt;/strong&gt; silakan Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggu setup file SQL Server sampai selesai&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instalasi Rules MS SQL Server sudah selesai, klik Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut ini merupakan tampilan default dari &lt;strong&gt;Feature Selection&lt;/strong&gt; dimana pada menu Anda dapat memilih fitur apa saja yang ingin Anda gunakan dengan cara melakukan ceklist terhadap fitur yang tersedia. Selain itu pada menu ini Anda dapat menentukan patc root etc untuk instalasi MS SQL Anda. Klik next untuk lanjut ke tahapan berikutnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada menu &lt;strong&gt;Feature Rules&lt;/strong&gt; terdapat verifikasi atau rule yang akan di tentukan dari fitur yang ingin di install, pada gambar di bawah ini terlihat terdapat status error dikarenakan belum adanya Oracle JRE 7 (Java) yang terinstall di Windows Server 2016 Anda.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut detailnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk mengatasi hal ini terdapat 2 cara yang dapat Anda gunakan.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Intall terlebih dahulu Java JRE 7 sesuai rekomendasi&lt;/li&gt;
+&lt;li&gt;Tidak melakukan ceklis pada fitur PolyBase (tidak di install)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Di sini kita akan menggunakan cara nomor 2 silakan back dan silakan non-ceklist pada menu fitur &lt;strong&gt;PolyBase Query Service for External Data&lt;/strong&gt; , lalu Klik Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggu proses verifikasi rules selesai seperti pada gambar di bawah ini, kemudia klik Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini kita menggunakan default name Instance silakan klik Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_16.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini silakan klik Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_17.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini silakan pilih &lt;strong&gt;Windows authentication mode&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_18.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu &lt;strong&gt;Add Current User&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_19.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini silakan klik &lt;strong&gt;Add Current User&lt;/strong&gt; lalu Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_20.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini silakan isikan nama controller sesuai dengan keinginan Anda&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_21.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya klik pada &lt;strong&gt;Accept&lt;/strong&gt; untuk install Microsoft R Open&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_22.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggu beberapa saat lalu Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_23.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya klik pada &lt;strong&gt;Accept&lt;/strong&gt; untuk install Python&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_24.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggu beberapa saat lalu Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_25.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada tahap ini MS SQL Server siap di install silakan klik pada menu &lt;strong&gt;Install&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_26.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instalasi MS SQL sendiri membutuhkan waktu kurang lebih 10 - 45 menit. Silakan tunggu proses nya sampai selesai.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_27.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_28.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika proses instalasi telah selesai dan sukses maka hasilnya akan seperti pada gambar berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/ms-sql-server/Screenshot_29.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Konfigurasi FTP Server Di Windows Server 2016</title>
       <link>https://nurhamim.net/konfigurasi-ftp-server-di-windows-server-2016/</link>
       <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
@@ -2004,108 +2136,6 @@ root@hamimaja:~#
 &lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Selamat mencoba semoga bermanfaat yaa 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Mengatur DNS di Cyber Panel</title>
-      <link>https://nurhamim.net/mengatur-dns-di-cyber-panel/</link>
-      <pubDate>Sat, 06 Jul 2019 20:49:34 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/mengatur-dns-di-cyber-panel/</guid>
-      <description>&lt;p&gt;Tutorial kali ini merupakan kelanjutan dari tutorial – tutorial sebelumnya yaitu instalasi control panel Cyber Panel di CentOS 7.&lt;/p&gt;
-
-&lt;p&gt;Biasanya kebanyakan kalau kita telah menginstall control panel yang paling pertama kali di konfigurasi yaitu DNS, karena menurut saya DNS ini sangat penting sekali.&lt;/p&gt;
-
-&lt;p&gt;Contoh singkatnya saja kalau sebelumnya kita akses control panel panel menggunakan IP maka dengan melakukan konfigurasi DNS ini Anda dapat menggunakan nama domain Anda.&lt;/p&gt;
-
-&lt;p&gt;Selain itu Anda juga dapat mengelola domain yang Anda miliki langsung melalui control panel mulai dari penambahan record subdomain, mail, dan sebagainya.&lt;/p&gt;
-
-&lt;p&gt;Hal yang dibutuhkan dalam mengikuti tutorial kali ini yaitu domain, disini saya sebelumnya telah mempunyai domain, saya pribadi langganan domain di CloudKilat kenapa saya berlangganan domain di CloudKilat, yang pertama fitur dan Dasboardnya lengkap elegan pulaa enak dilihat dan mudah tentunya untuk digunakan.&lt;/p&gt;
-
-&lt;p&gt;Oke, mari kita lanjut ke proses konfigurasi DNS pada Cyber Panel.&lt;/p&gt;
-
-&lt;p&gt;Pertama, silakan login ke administrator kontrol panel Cyber Panel Anda.&lt;/p&gt;
-
-&lt;p&gt;Kedua, masuk ke menu &lt;strong&gt;DNS &amp;gt;&amp;gt; Create Name Server&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Disini kita akan membuat Name server. Apa fungsi dari Name server ?&lt;/p&gt;
-
-&lt;p&gt;Name server itu pusat dari record DNS yang digunakan untuk menyimpan semua record DNS.&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya silakan tambahkan domain Anda, disini nama domain saya yaitu infone.info . Selain itu buat name server berikut detailnya :&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;First Nameserver&lt;/strong&gt;: ns1.infone.info
-&lt;strong&gt;IP Address&lt;/strong&gt;: Alamat IP Server / Control Panel Cyber Panel
-&lt;strong&gt;Second Nameserver&lt;/strong&gt;: ns2.infone.info
-&lt;strong&gt;IP Address&lt;/strong&gt;: Alamat IP Server / Control Panel Cyber Panel&lt;/p&gt;
-
-&lt;p&gt;Jika sudah, silakan save dengan menekan tombol Create Nameserver, seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika berhasil dibuat maka akan ada informasi bahwasannya Nameserver telah berhasil di buat, seperti gambar berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjuntya, yaitu membuat Private Nameserver atau bisanya sering disebut dengan Gluer Record . Disini saya berlangganan domain di CloudKilat, bagi Anda yang berlangganan domain di CloudKilat bisa mengikuti step berikut,&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Login ke portal area CloudKilat (&lt;a href=&#34;http://portal.cloudkilat.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://portal.cloudkilat.com/&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Service &amp;gt;&amp;gt; Domain &amp;gt;&amp;gt; infone.info &amp;gt;&amp;gt; Manage&lt;/li&gt;
-&lt;li&gt;Private Nameserver&lt;/li&gt;
-&lt;li&gt;Mendaftarkan Glue record dengan cara menambahkan ns1 dan ns2 ke alamat IP Server atau Control Panel Cyber Panel lalu Save Changes . Seperti pada gambar dibawah ini.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pastikan penambahan private Nameservernya berhasil, seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah, selanjutnya mengubah nameserver domain menjadi &lt;strong&gt;ns1.infone.info dan ns2.infone.info&lt;/strong&gt; .&lt;/p&gt;
-
-&lt;p&gt;Untuk mengubahnya silakan pindah ke menu &lt;strong&gt;Nameserver  &amp;gt;&amp;gt; klik pada menu Use custom nameserver (enter below) &amp;gt;&amp;gt; Isikan nameserver nya &amp;gt;&amp;gt; Changes Nameservers&lt;/strong&gt;. Seperti pada gambar dibawah ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apabila terdapat kendala pada saat pembuatan private nameserver domain, silakan menghubungi support CloudKilat di info@cloudkilat.com atau support@cloudkilat.com .&lt;/p&gt;
-
-&lt;p&gt;Bagi Anda yang mempunyai domain di provider lain selain CloudKilat silakan menghubungi pihak penyedia domain Anda. Untuk proses penambahan private Nameserver atau Glue Record.&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya apabila perubahan NameServer telah dilakukan pada domain tersebut maka domain akan mengalami proses propagasi dan untuk proses propagasi membutuhkan waktu maksimal 48 jam. Cepat atau lambat pada proses propgasi domain bergantung dengan resolver ISP yang Anda gunakan.&lt;/p&gt;
-
-&lt;p&gt;Jika proses propagasi domain telah selesai, Anda dapat mengeceknya menggunakan command dig . Berikut contohnya :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ dig @infone.info infone.info +short
-117.53.46.27
-$ dig @ns1.infone.info infone.info +short
-117.53.46.27
-$
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Oke saat ini kedua nameserver telah resolve ke IP control Panel Cyber Panel. Selanjutnya Anda dapat menambahkan A record atau record DNS yang lainnya sepertihalnya MX record dan yang lainnnya melalui DNS Management Control Panel Cyber Panel di menu DNS &amp;gt;&amp;gt; Add/Delete Records . Seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk mencobanya membutikan apakah domain infone.info telah mengarah ke control panel Cyber Panel dapat dilakukan dengan cara mengakses Control Panel Cyber Panel mengguakan nama domainnya diikuti port cyber panel contohnya : &lt;strong&gt;&lt;a href=&#34;https://infone.info:8090&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://infone.info:8090&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/dns%20cyber%20panel/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Atau Anda dapat melakukan ping ke domain infone.info , maka hasilnya domain tersebut dapat di ping dan mengarah ke IP control Panel Plesk Panel Anda :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@hamimaja:~# ping infone.info
-PING infone.info (117.53.46.27) 56(84) bytes of data.
-64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=2 ttl=58 time=16.4 ms
-64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=3 ttl=58 time=6.62 ms
-64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=4 ttl=58 time=8.36 ms
-64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=5 ttl=58 time=7.86 ms
-64 bytes from 117.53.46.27 (117.53.46.27): icmp_seq=6 ttl=58 time=4.88 ms
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Oke, saat ini konfigurasi DNS pada Cyber Panel telah berhasil, selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
 </description>
     </item>
     

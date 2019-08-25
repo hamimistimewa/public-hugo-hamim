@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Databases on Catatan Cah Ndeso</title>
+    <link>https://nurhamim.net/tags/databases/</link>
+    <description>Recent content in Databases on Catatan Cah Ndeso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Aug 2019 02:55:24 +0700</lastBuildDate>
+    
+	<atom:link href="https://nurhamim.net/tags/databases/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Instalasi MS SQL Server Pada Windows Server 2016</title>
+      <link>https://nurhamim.net/instalasi-ms-sql-server-pada-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/instalasi-ms-sql-server-pada-windows-server-2016/</guid>
+      <description>MS (Microsoft) SQL Server adalah sebuah sistem manajemen basis data relasional yang di peruntukan atau di rancang untuk aplikasi yang menggunakan arsitektur client - server.
+Pada MS SQL Server terdapat sebuah fitur yang mempunyai sebuah kemampuan untuk membuat sebuah basis data baik itu mirroring dan clustering.
+MS SQL Server juga mendukung SQL sebagai bahasa untuk memproses query ke dalam database dan kita tahu bahwa SQL ini sudah digunakan secara umum pada semua produk database server.</description>
+    </item>
+    
+  </channel>
+</rss>
