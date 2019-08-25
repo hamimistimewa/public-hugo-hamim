@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/konfigurasi-ftp-server-di-windows-server-2016/" />
+  <link rel="next" href="https://nurhamim.net/instalasi-ms-sql-server-pada-windows-server-2016/" />
+  <link rel="canonical" href="https://nurhamim.net/instalasi-sql-server-management-studio-ssms-pada-windows-server-2016/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi SQL Server Management Studio (SSMS) Pada Windows Server 2016 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Instalasi SQL Server Management Studio (SSMS) Pada Windows Server 2016 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi SQL Server Management Studio (SSMS) Pada Windows Server 2016",
+    "headline" : "Instalasi SQL Server Management Studio (SSMS) Pada Windows Server 2016",
+    "description" : "Tutorial kali ini merupakan kelanjutan dari tutorial sebelumnya mengenai Instalasi Microsoft SQL Server 2017 pada Windows Server 2016, selengkapnya mengenai instalasi dapat merujuk pada link berikut:Instalasi MS SQL Server Pada Windows Server 2016
+SQL Server Management Studio (SSMS) merupakan tools yang dapat digunakan untuk mengatur segara infrastruktur SQL mulai dari SQL Server ke SQL Database selain itu dapat digunakan untuk melakukan konfigurasi, memantau (monitoring), dan mengelola SQL baik itu melakukan deploy, upgrade komponen data-tier yang digunakan oleh aplikasi (termasuk membuat query dan script).",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-08-21 02:55:24 &#43;0700 DST",
+    "dateModified" : "2019-08-21 02:55:24 &#43;0700 DST",
+    "url" : "https://nurhamim.net/instalasi-sql-server-management-studio-ssms-pada-windows-server-2016/",
+    "wordCount" : "275",
+    "keywords" : [ "Windows Server","Databases","MS SQL SERVER", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi SQL Server Management Studio (SSMS) Pada Windows Server 2016</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-08-21 itemprop="datePublished">August 21, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/windows-server-2016/"> Windows Server 2016 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Tutorial kali ini merupakan kelanjutan dari tutorial sebelumnya mengenai Instalasi Microsoft SQL Server 2017 pada Windows Server 2016, selengkapnya mengenai instalasi dapat merujuk pada link berikut:<a href="https://nurhamim.net/instalasi-ms-sql-server-pada-windows-server-2016/" rel="nofollow noreferrer" target="_blank">Instalasi MS SQL Server Pada Windows Server 2016</a></p>
+
+<p>SQL Server Management Studio (SSMS) merupakan tools yang dapat digunakan untuk mengatur segara infrastruktur SQL mulai dari SQL Server ke SQL Database selain itu dapat digunakan untuk melakukan konfigurasi, memantau (monitoring), dan mengelola SQL baik itu melakukan deploy, upgrade komponen data-tier yang digunakan oleh aplikasi (termasuk membuat query dan script).</p>
+
+<p>Selengkapnya dapat merujuk pada link berikut: <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-2017" rel="nofollow noreferrer" target="_blank">What is SQL Server Management Studio (SSMS)?</a></p>
+
+<p>Berikut ini tahapan instalasinya.</p>
+
+<p>Pertama silakan klik pada menu <strong>Install SQL Server Management Tools</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya Anda diarahkan untuk mengunduh SQL Management Studio (SSMS) seperti pada gambar berikut ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Atau Anda dapat mengunduh secara langsung melalui link berikut ini: <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017" rel="nofollow noreferrer" target="_blank">Download SSMS 18.2</a></p>
+
+<p>Kemudian klik pada file .exe yang telah Anda unduh sebelumnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pilih <strong>Run</strong> untuk melanjutkan proses instalasi</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Default path SSMS berada di **C:\Program Files (x86)Microsoft SQL Server Management Studio 18 seperti pada gambar di bawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Bila Anda ingin custome path direktorinya dapat dilakukan dengan cara klik pada menu <strong>Change</strong> , lalu pilih Direktori sesuai keinginan Anda, seperti pada gambar di bawah ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk melanjutkan proses installasi silakan klik menu <strong>Install</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan tunggu proses instalasi sampai selesai</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila sudah selesai, maka Anda diminta untuk melakukan restart seperti gambar berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_11.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Saat ini instalasi telah selesai dilakukan, selanjutnya silakan akses SSMS seperti berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_12.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut tampilan default dari <strong>Microsoft SQL Server Management Studio</strong> , untuk loginnya silakan isikan Server-Name Windows Server Anda lalu klik <strong>Connect</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_13.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Saat ini MS SQL Anda sudah dapat diakses menggunakan management tools SSMS</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_14.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_15.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selamat mencoba semoga bermanfaat 🙂</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/instalasi-sql-server-management-studio-ssms-pada-windows-server-2016/>https://nurhamim.net/instalasi-sql-server-management-studio-ssms-pada-windows-server-2016/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/windows-server/">
+                    #Windows Server</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/databases/">
+                    #Databases</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/ms-sql-server/">
+                    #MS SQL SERVER</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/konfigurasi-ftp-server-di-windows-server-2016/" class="prev" rel="prev" title="Konfigurasi FTP Server Di Windows Server 2016"><i class="iconfont icon-left"></i>&nbsp;Konfigurasi FTP Server Di Windows Server 2016</a>
+         
+        
+        <a href="https://nurhamim.net/instalasi-ms-sql-server-pada-windows-server-2016/" class="next" rel="next" title="Instalasi MS SQL Server Pada Windows Server 2016">Instalasi MS SQL Server Pada Windows Server 2016&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

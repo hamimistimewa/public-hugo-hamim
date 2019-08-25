@@ -34,6 +34,16 @@ MS SQL Server juga mendukung SQL sebagai bahasa untuk memproses query ke dalam d
     </item>
     
     <item>
+      <title>Instalasi SQL Server Management Studio (SSMS) Pada Windows Server 2016</title>
+      <link>https://nurhamim.net/instalasi-sql-server-management-studio-ssms-pada-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/instalasi-sql-server-management-studio-ssms-pada-windows-server-2016/</guid>
+      <description>Tutorial kali ini merupakan kelanjutan dari tutorial sebelumnya mengenai Instalasi Microsoft SQL Server 2017 pada Windows Server 2016, selengkapnya mengenai instalasi dapat merujuk pada link berikut:Instalasi MS SQL Server Pada Windows Server 2016
+SQL Server Management Studio (SSMS) merupakan tools yang dapat digunakan untuk mengatur segara infrastruktur SQL mulai dari SQL Server ke SQL Database selain itu dapat digunakan untuk melakukan konfigurasi, memantau (monitoring), dan mengelola SQL baik itu melakukan deploy, upgrade komponen data-tier yang digunakan oleh aplikasi (termasuk membuat query dan script).</description>
+    </item>
+    
+    <item>
       <title>Konfigurasi FTP Server Di Windows Server 2016</title>
       <link>https://nurhamim.net/konfigurasi-ftp-server-di-windows-server-2016/</link>
       <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>

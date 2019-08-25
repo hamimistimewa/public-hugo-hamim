@@ -209,6 +209,76 @@
     </item>
     
     <item>
+      <title>Instalasi SQL Server Management Studio (SSMS) Pada Windows Server 2016</title>
+      <link>https://nurhamim.net/instalasi-sql-server-management-studio-ssms-pada-windows-server-2016/</link>
+      <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/instalasi-sql-server-management-studio-ssms-pada-windows-server-2016/</guid>
+      <description>&lt;p&gt;Tutorial kali ini merupakan kelanjutan dari tutorial sebelumnya mengenai Instalasi Microsoft SQL Server 2017 pada Windows Server 2016, selengkapnya mengenai instalasi dapat merujuk pada link berikut:&lt;a href=&#34;https://nurhamim.net/instalasi-ms-sql-server-pada-windows-server-2016/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Instalasi MS SQL Server Pada Windows Server 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;SQL Server Management Studio (SSMS) merupakan tools yang dapat digunakan untuk mengatur segara infrastruktur SQL mulai dari SQL Server ke SQL Database selain itu dapat digunakan untuk melakukan konfigurasi, memantau (monitoring), dan mengelola SQL baik itu melakukan deploy, upgrade komponen data-tier yang digunakan oleh aplikasi (termasuk membuat query dan script).&lt;/p&gt;
+
+&lt;p&gt;Selengkapnya dapat merujuk pada link berikut: &lt;a href=&#34;https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-2017&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;What is SQL Server Management Studio (SSMS)?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut ini tahapan instalasinya.&lt;/p&gt;
+
+&lt;p&gt;Pertama silakan klik pada menu &lt;strong&gt;Install SQL Server Management Tools&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya Anda diarahkan untuk mengunduh SQL Management Studio (SSMS) seperti pada gambar berikut ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Atau Anda dapat mengunduh secara langsung melalui link berikut ini: &lt;a href=&#34;https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Download SSMS 18.2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian klik pada file .exe yang telah Anda unduh sebelumnya&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pilih &lt;strong&gt;Run&lt;/strong&gt; untuk melanjutkan proses instalasi&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Default path SSMS berada di **C:\Program Files (x86)Microsoft SQL Server Management Studio 18 seperti pada gambar di bawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bila Anda ingin custome path direktorinya dapat dilakukan dengan cara klik pada menu &lt;strong&gt;Change&lt;/strong&gt; , lalu pilih Direktori sesuai keinginan Anda, seperti pada gambar di bawah ini&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk melanjutkan proses installasi silakan klik menu &lt;strong&gt;Install&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silakan tunggu proses instalasi sampai selesai&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_9.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apabila sudah selesai, maka Anda diminta untuk melakukan restart seperti gambar berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Saat ini instalasi telah selesai dilakukan, selanjutnya silakan akses SSMS seperti berikut&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut tampilan default dari &lt;strong&gt;Microsoft SQL Server Management Studio&lt;/strong&gt; , untuk loginnya silakan isikan Server-Name Windows Server Anda lalu klik &lt;strong&gt;Connect&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Saat ini MS SQL Anda sudah dapat diakses menggunakan management tools SSMS&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_14.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://window-server.s3-id-jkt-1.kilatstorage.id/management-tools-sql/Screenshot_15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Konfigurasi FTP Server Di Windows Server 2016</title>
       <link>https://nurhamim.net/konfigurasi-ftp-server-di-windows-server-2016/</link>
       <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
@@ -2094,48 +2164,6 @@ root@hamimaja:~#
 &lt;p&gt;Oke cukup simple yaa untuk instalasi CMS WordPress di Cyber Panel, sangat banyak manfaat yang didapatkan apabila kita memasang wordpress di control panel cyber panel yang menggunakan webserver litespeed mulai dari proses yang cepat dan tersedia pula plugin chache di wordpress khusus untuk webserver litespeed.&lt;/p&gt;
 
 &lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Membuat Website di Cyber Panel</title>
-      <link>https://nurhamim.net/membuat-website-di-cyber-panel/</link>
-      <pubDate>Sat, 06 Jul 2019 20:49:36 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/membuat-website-di-cyber-panel/</guid>
-      <description>&lt;p&gt;Hai guyss untuk tutorial kali ini saya akan share bagaimana cara membuat sebuah website menggunakan control panel cyber panel, tutorial ini kelanjutan dari tutorial sebelumnya yang memabahas tentang bagaimana cara menngatur DNS di Cyber Panel&lt;/p&gt;
-
-&lt;p&gt;Untuk mengikuti tutorial ini pastikan Anda telah mengatur DNS dengan benar, jika sudah mari kita bahas bagaimana cara membuat website di cyber panel&lt;/p&gt;
-
-&lt;p&gt;Pertama, login terlebih dahulu ke cyber panel Anda&lt;/p&gt;
-
-&lt;p&gt;Kedua, pilih menu &lt;strong&gt;Website &amp;gt;&amp;gt; Create Website&lt;/strong&gt; , dan isikan detailnya mulai dari pemilihan paket yang ingin digunakan, disini saya menggunakan packages default.&lt;/p&gt;
-
-&lt;p&gt;Selain itu Anda juga dapat menentukan apakah website nantinya ingin menggunakan SSL Free yang disediakan oleh Cyber Panel atau tidak, jika Anda ingin menggunakan SSL Free silakan checklist pada menu SSL yang berada di Additional Features seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tunggu proses pembuatan website sampai selesa&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah selesai maka Akan ada informasi seperti pada gambar berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk melihat list dari website yang telah kita buat dapat dilihat dimenu Website &amp;gt;&amp;gt; List Website  . Klik pada icon Launch  untuk melihat fitur apa saja yang dapat diinstall atau dipasangkan di website Anda nantinya.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika sudah di klik, Anda akan dimanjakan oleh tampilan fitur yang diberikan oleh Cyber panel yang sangat – sangat indah dan mudah dalam penggunaanya. Nggak ribet uyyy :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Silakan Akses website yang telah Anda buat, seperti berikut hasilnya, website kita telah terinstall SSL Free looo.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/website%20cyber%20panel/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat yaa 🙂&lt;/p&gt;
 </description>
     </item>
     
