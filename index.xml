@@ -676,6 +676,38 @@ Microsoft mempunyai web server sendiri yang  di beri nama IIS Web Server kepanja
     </item>
     
     <item>
+      <title>My First eBook</title>
+      <link>https://nurhamim.net/stories/part3/</link>
+      <pubDate>Fri, 12 Jul 2019 13:28:17 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/stories/part3/</guid>
+      <description>&lt;p&gt;#Cah Ndeso&lt;/p&gt;
+
+&lt;p&gt;Yah saya anak desa tepatnya beralamat di Dsn. Talian, Ds. Panyepen, Kec. Jrengik, Kab. Sampang Madura Jawa Timur.&lt;/p&gt;
+
+&lt;p&gt;Tepat pada hari senin tanggal &lt;em&gt;16 September 2019&lt;/em&gt; saya bisa menyelesaikan eBook pertama saya mengenai CentOS 7 Linux Administration Pada Cloud Computing.&lt;/p&gt;
+
+&lt;p&gt;Pada saat lulus SMK  Alhamdulillah saya belum di takdirkan untuk kuliah, namun sang khalik berkata lain saya berkesempatan #Nyantri IT di Semarang tepat nya Santren Koding (santrenkoding.org). Terima kasih banyak saya ucapkan kepada Bapak Ariasetia Alam yang telah mendidik saya selama di Santren.&lt;/p&gt;
+
+&lt;p&gt;Lanjut cerita saya berkesempatan untuk mengikuti Bootcamp Linux Administration yang diadakan Komunitas GNU/Linux Malang (klim.or.id) dimana pada saat ini juga #Alhamdulillah saya bisa berkesempatan memulai karir di dunia IT Cloud Computing sampai saat ini.&lt;/p&gt;
+
+&lt;p&gt;Pada eBook ini banyak materi dasar dan menengah terkait Linux CentOS dimana semua yang ada di eBook merupakan hasil rangkuman belajar.&lt;/p&gt;
+
+&lt;p&gt;Saya ucapkan terima kasih banyak kepada Bapak Muhammad Wildan Zubaidi dan Bapak Febri Nur Aswin yang telah mau mendidik saya cah Ndeso ini.&lt;/p&gt;
+
+&lt;p&gt;eBook ini saya persembahkan untuk teman - teman komunitas Linux tentunya yang ingin belajar terkait CentOS 7 Linux Administration secara [Free]&lt;/p&gt;
+
+&lt;p&gt;Saya meminta dan memohon maaf bila terdapat penulisan yang kurang berkenan atau pun typo karena saya sendiri masih tahap belajar untuk lebih baik lagi, kritik saudara dan teman - teman sangat membantu saya.&lt;/p&gt;
+
+&lt;p&gt;Untuk mengunduh eBook silakan klik pada link berikut: &lt;a href=&#34;https://s.id/ebook-CentOS7&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CentOS 7 Linux Administration Pada Cloud Computing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Salam Hangat&lt;/p&gt;
+
+&lt;p&gt;Nur Hamim&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>File Dan Direktori Di Linux</title>
       <link>https://nurhamim.net/file-dan-direktori-di-linux/</link>
       <pubDate>Mon, 08 Jul 2019 18:52:20 +0700</pubDate>
@@ -2114,54 +2146,6 @@ root@hamimaja:~#
 &lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/file%20manager%20cyber%20panel/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Sangat mudah kan hehehhehe simple banget loo, dan design yang elegant membuat saya sangat suka menggunakan control panel yang mantapp ini.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instalasi CMS WordPress di Cyber Panel</title>
-      <link>https://nurhamim.net/instalasi-cms-wordpress-di-cyber-panel/</link>
-      <pubDate>Sat, 06 Jul 2019 20:49:38 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/instalasi-cms-wordpress-di-cyber-panel/</guid>
-      <description>&lt;p&gt;Hello Guyss, masih pada semangat yaa untuk belajar mengenai control panel, tutorial kali ini melanjutkan tutorial sebelumnya, dimana sebelumnya kita telah belajar bagaiamana cara membuat website di Cyber Panel .&lt;/p&gt;
-
-&lt;p&gt;Sesuai dengan judul tutorial kali  ini kita akan menginstall CMS WordPress di control panel Cyber Panel.&lt;/p&gt;
-
-&lt;p&gt;Oke, langsung saja ke langkah – langkah installasinya ya&lt;/p&gt;
-
-&lt;p&gt;Pertama, silakan login terlebih dahulu ke control panel cyber panel Anda.&lt;/p&gt;
-
-&lt;p&gt;Kedua, masuk kemenu Website &amp;gt;&amp;gt; List Website &amp;gt;&amp;gt; Klik pada menu launch , seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Scroll kebawah terdapat menu fitur untuk instalasi aplikasi, secara default Cyber panel telah menyediakan CMS WordPress, jadi Anda tinggal klik pada menu WordPress with LSCache seperti pada gambar dibawah ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya silakan mengisikan credential mulai dari title untuk wordpress Anda sampai username dan password untuk login ke admin wordpress Anda nantinya, selain itu Anda juga diminta untuk mengisikan letak direktori untuk menyimpan berkas wordpress, seperti pada gambar berikut, jika sudah diisi semua klik pada menu Install Now  untuk memulai instalasi wordpress&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/3.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tunggu sampai instalasi wordpress selesai, jika sudah selesai akan tampail seperti berikut&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada langkah ini Anda telah berhasil melakukan instalasi wordpress, silakan mencoba akses domain Anda. Berikut tampilan default wordpress&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk login ke admin wordpress silakan ketikkan nama domain /wp-admin atau nama domain /wp-login contohnya : &lt;a href=&#34;https://infone.info/wp-login.php&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://infone.info/wp-login.php&lt;/a&gt; , isikan username dan password login admin wordpress Anda yang telah Anda input atau buat pada proses intalasi di atas sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika Anda berhasil login maka Anda akan diarahkan ke halam admin wordpress&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/wp%20cyber%20panel/7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oke cukup simple yaa untuk instalasi CMS WordPress di Cyber Panel, sangat banyak manfaat yang didapatkan apabila kita memasang wordpress di control panel cyber panel yang menggunakan webserver litespeed mulai dari proses yang cepat dan tersedia pula plugin chache di wordpress khusus untuk webserver litespeed.&lt;/p&gt;
 
 &lt;p&gt;Selamat mencoba semoga bermanfaat 🙂&lt;/p&gt;
 </description>

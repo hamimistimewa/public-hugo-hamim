@@ -6,10 +6,22 @@
     <description>Recent content in Stories on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jul 2019 05:21:26 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2019 13:28:17 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/stories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My First eBook</title>
+      <link>https://nurhamim.net/stories/part3/</link>
+      <pubDate>Fri, 12 Jul 2019 13:28:17 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/stories/part3/</guid>
+      <description>#Cah Ndeso
+Yah saya anak desa tepatnya beralamat di Dsn. Talian, Ds. Panyepen, Kec. Jrengik, Kab. Sampang Madura Jawa Timur.
+Tepat pada hari senin tanggal 16 September 2019 saya bisa menyelesaikan eBook pertama saya mengenai CentOS 7 Linux Administration Pada Cloud Computing.
+Pada saat lulus SMK Alhamdulillah saya belum di takdirkan untuk kuliah, namun sang khalik berkata lain saya berkesempatan #Nyantri IT di Semarang tepat nya Santren Koding (santrenkoding.org). Terima kasih banyak saya ucapkan kepada Bapak Ariasetia Alam yang telah mendidik saya selama di Santren.</description>
+    </item>
     
     <item>
       <title>Workshop DNS Server</title>
