@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MS SQL SERVER on Catatan Cah Ndeso</title>
@@ -20,16 +20,6 @@
       <description>MS (Microsoft) SQL Server adalah sebuah sistem manajemen basis data relasional yang di peruntukan atau di rancang untuk aplikasi yang menggunakan arsitektur client - server.
 Pada MS SQL Server terdapat sebuah fitur yang mempunyai sebuah kemampuan untuk membuat sebuah basis data baik itu mirroring dan clustering.
 MS SQL Server juga mendukung SQL sebagai bahasa untuk memproses query ke dalam database dan kita tahu bahwa SQL ini sudah digunakan secara umum pada semua produk database server.</description>
-    </item>
-    
-    <item>
-      <title>Instalasi SQL Server Management Studio (SSMS) Pada Windows Server 2016</title>
-      <link>https://nurhamim.net/instalasi-sql-server-management-studio-ssms-pada-windows-server-2016/</link>
-      <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/instalasi-sql-server-management-studio-ssms-pada-windows-server-2016/</guid>
-      <description>Tutorial kali ini merupakan kelanjutan dari tutorial sebelumnya mengenai Instalasi Microsoft SQL Server 2017 pada Windows Server 2016, selengkapnya mengenai instalasi dapat merujuk pada link berikut:Instalasi MS SQL Server Pada Windows Server 2016
-SQL Server Management Studio (SSMS) merupakan tools yang dapat digunakan untuk mengatur segara infrastruktur SQL mulai dari SQL Server ke SQL Database selain itu dapat digunakan untuk melakukan konfigurasi, memantau (monitoring), dan mengelola SQL baik itu melakukan deploy, upgrade komponen data-tier yang digunakan oleh aplikasi (termasuk membuat query dan script).</description>
     </item>
     
   </channel>

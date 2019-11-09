@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/instalasi-ftp-server-di-windows-server-2016/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/membangun-cms-wordpress-menggunakan-load-balancer-pada-centos-7/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Membangun CMS WordPress Menggunakan Load Balancer Pada CentOS 7 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Membangun CMS WordPress Menggunakan Load Balancer Pada CentOS 7 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Membangun CMS WordPress Menggunakan Load Balancer Pada CentOS 7",
+    "headline" : "Membangun CMS WordPress Menggunakan Load Balancer Pada CentOS 7",
+    "description" : "PENDAHULUAN CMS WordPress salah satu CMS yang sering dan sangat banyak digunakan baik untuk personal maupun corporate. Panduan kali ini kami akan bahas bagaimana membangun sebuah website dengan high availability menggunakan layanan Cloud Computing.\nDisini kami menggunakan NEO Cloud dari Biznet GIO salah satu penyedia layanan Cloud Computing yang handal dan terpercaya tentunya.\nKenapa Menggunakan NEO Cloud?\nAlasan terbaik menggunakan NEO Cloud karena NEO Cloud salah satu provider Cloud Computing yang bagus dan terpercaya digunakan untuk mengimplementasikan sebuah service atau aplikasi di dunia Cloud Computing dan mudah digunakan tentunya.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-10-28 21:23:44 \x2b0700 \x2b07",
+    "dateModified" : "2019-10-28 21:23:44 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/membangun-cms-wordpress-menggunakan-load-balancer-pada-centos-7\/",
+    "wordCount" : "4101",
+    "keywords" : [ "LB","CentOS 7","Linux","Lsyncd","S3 Protokol","Wordpress", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Membangun CMS WordPress Menggunakan Load Balancer Pada CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-10-28 itemprop="datePublished">October 28, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-7-administrator/"> CENTOS 7 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="pendahuluan">PENDAHULUAN</h2>
+
+<p>CMS WordPress salah satu CMS yang sering dan sangat banyak digunakan baik untuk personal maupun corporate. Panduan kali ini kami akan bahas bagaimana membangun sebuah website dengan high availability menggunakan layanan Cloud Computing.</p>
+
+<p>Disini kami menggunakan <a href="https://www.biznetgio.com/neo/cloud" rel="nofollow noreferrer" target="_blank">NEO Cloud</a> dari <a href="https://www.biznetgio.com/" rel="nofollow noreferrer" target="_blank">Biznet GIO</a> salah satu penyedia layanan Cloud Computing yang handal dan terpercaya tentunya.</p>
+
+<p>Kenapa Menggunakan <a href="https://www.biznetgio.com/neo/cloud" rel="nofollow noreferrer" target="_blank">NEO Cloud</a>?</p>
+
+<p>Alasan terbaik menggunakan <a href="https://www.biznetgio.com/neo/cloud" rel="nofollow noreferrer" target="_blank">NEO Cloud</a> karena <a href="https://www.biznetgio.com/neo/cloud" rel="nofollow noreferrer" target="_blank">NEO Cloud</a> salah satu provider Cloud Computing yang bagus dan terpercaya digunakan untuk mengimplementasikan sebuah service atau aplikasi di dunia Cloud Computing dan mudah digunakan tentunya. Dari segi Infrastruktur sendiri telah menggunakan Infrastruktur yang up to date yaitu <a href="https://www.openstack.org/" rel="nofollow noreferrer" target="_blank">OpenStack</a>. Di <a href="https://www.biznetgio.com/neo/cloud" rel="nofollow noreferrer" target="_blank">NEO Cloud</a> Anda dapat menyesuaikan dengan kebutuhan Anda masing - masing mulai dari Network IP, IP Router, Instance.</p>
+
+<p>Selengkapnya terkait <a href="https://www.biznetgio.com/neo/cloud" rel="nofollow noreferrer" target="_blank">NEO Cloud</a> dapat merujuk pada link berikut: <a href="https://www.biznetgio.com/neo/cloud/products" rel="nofollow noreferrer" target="_blank">NEOCLOUD PRODUK</a></p>
+
+<p>Berikut ini merupakan desain topologi yang akan digunakan:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/topologi-wp.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="kebutuhan">Kebutuhan:</h3>
+
+<ul>
+<li>1 Server Load Balancer
+
+<ul>
+<li>Private IP: 192.168.10.10</li>
+<li>Public IP: 103.58.XX.XX</li>
+</ul></li>
+<li>2 Server Web server + CMS WordPress
+
+<ul>
+<li>srv-web01 WordPress
+, Private IP: 192.168.10.7</li>
+<li>srv-web02 WordPress
+, Private IP: 192.168.10.9</li>
+</ul></li>
+<li>1 Server Database
+
+<ul>
+<li>srv-database WordPress
+, Private IP: 192.168.10.17</li>
+</ul></li>
+<li>NEO Object Storage</li>
+</ul>
+
+<p>Note: Untuk IP silakan disesuaikan dengan kondisi dan keinginan Anda masing - masing dan untuk sistem operasi yang digunakan pada panduan kali ini yaitu CentOS 7 dan untuk akses ke masing - masing Instance NEO disini kami menggunakan ssh key. Dan pada Security Group telah di allow untuk port default seperti SSH, MySQL,</p>
+
+<h3 id="keterangan">Keterangan:</h3>
+
+<p>WordPress digunakan sebagai CMS atau website yang ingin digunakan, pada website tersebut menggunakan 2 Web server dengan data yang sama tersinkronisasi antara <strong>srv-web01</strong> dan <strong>srv-web02</strong> menggunakan metode <strong>Lsyncd</strong>. Database yang digunakan yaitu MariaDB untuk menyimpan data dari CMS WordPress dan S3 Protokol digunakan untuk menyimpan data dan file statik misalnya foto, video, music, dan yang lainnya. Load Balancer sendiri digunakan untuk membagi beban traffic antara <strong>srv-web01</strong> dan <strong>srv-web02</strong>.</p>
+
+<h2 id="langkah-kerja">LANGKAH KERJA</h2>
+
+<h2 id="langkah-1-instalasi-web-server-php-unduh-wordpress">Langkah 1: Instalasi Web Server + PHP + Unduh WordPress</h2>
+
+<p>Silakan akses &ldquo;srv-web01&rdquo; update sistem operasi CentOS 7 Anda terlebih dahulu menggunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]#
+[root@srv-web01 ~]# yum update -y 
+</code></pre>
+
+<p>Jika sudah silakan install web server yang ingin Anda gunakan, pada panduan kali ini kami menggunakan web server apache gunakan perintah berikut untuk install repositori epel dan apache pada CentOS 7</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]# yum install epel-release
+[root@srv-web01 ~]# yum install httpd -y    
+</code></pre>
+
+<p>Apabila sudah selesai silakan start, enable, dan pastikan service apache telah berjalan dengan normal</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]# systemctl start httpd   
+[root@srv-web01 ~]# systemctl enable httpd
+[root@srv-web01 ~]# systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-10-27 18:22:25 UTC; 1 day 1h ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 1013 (httpd)
+   Status: &quot;Total requests: 1460; Current requests/sec: 0; Current traffic:   0 B/sec&quot;     
+   CGroup: /system.slice/httpd.service
+           ├─1013 /usr/sbin/httpd -DFOREGROUND
+           ├─1633 /usr/sbin/httpd -DFOREGROUND
+           ├─1634 /usr/sbin/httpd -DFOREGROUND
+           ├─1635 /usr/sbin/httpd -DFOREGROUND
+           ├─1636 /usr/sbin/httpd -DFOREGROUND
+           ├─1637 /usr/sbin/httpd -DFOREGROUND
+           ├─2855 /usr/sbin/httpd -DFOREGROUND
+           ├─2856 /usr/sbin/httpd -DFOREGROUND
+           ├─8523 /usr/sbin/httpd -DFOREGROUND
+           ├─8524 /usr/sbin/httpd -DFOREGROUND
+           └─8525 /usr/sbin/httpd -DFOREGROUND
+
+Oct 27 18:22:24 nur-srv-web01.novalocal systemd[1]: Starting The Apache HTTP Server...     
+Oct 27 18:22:25 nur-srv-web01.novalocal systemd[1]: Started The Apache HTTP Server.        
+[root@srv-web01 ~]#
+</code></pre>
+
+<p>Selanjutnya melakukan instalasi php untuk kebutuhan WordPress, disini kami menggunakan php 7.2. Sebelum melakukan instalasi php 7.2 pada CentOS 7 terlebih dahulu Anda memasang repository remi dan paket manager yang akan digunakan untuk management php 7 pada CentOS 7 berikut beberapa perintah yang digunakan:</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]# yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+[root@srv-web01 ~]# yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+Instalasi paket manager
+
+[root@srv-web01 ~]# yum install yum-utils
+
+Enable php 7.2 
+
+[root@srv-web01 ~]# yum-config-manager --enable remi-php72 
+</code></pre>
+
+<p>Instalasi module php yang dibutuhkan untuk setup CMS WordPress sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]# yum install php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo -y 
+</code></pre>
+
+<p>Jika sudah untuk memastikan versi php 7.2 ketikan perintah berikut:</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]#
+[root@srv-web01 ~]# php -v
+PHP 7.2.24 (cli) (built: Oct 22 2019 11:15:01) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.2.24, Copyright (c) 1999-2018, by Zend Technologies
+[root@srv-web01 ~]# 
+[root@srv-web01 ~]# 
+</code></pre>
+
+<p>Sampai langkah ini silakan Anda remote server &ldquo;srv-web02&rdquo; dan install web server apache, php 7.2 sesuai dengan perintah di atas apabila sudah diinstall dan service apache beserta php sudah berjalan dengan normal kiranya dapat pindah atau beralih ke server &ldquo;srv-web01&rdquo; untuk setup wordpress nya.</p>
+
+<p>Berikutnya pindah direktori ke direktori <em>/var/www/html</em> dan unduh CMS WordPress menggunakan wget, melalui link berikut: <a href="https://wordpress.org/download/" rel="nofollow noreferrer" target="_blank">Get WordPress</a></p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]# 
+[root@srv-web01 ~]# cd /var/www/html/
+[root@srv-web01 html]# 
+[root@srv-web01 html]# wget https://wordpress.org/latest.zip
+</code></pre>
+
+<p>Unzip file WordPress menggunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-web01 html]# unzip latest.zip 
+</code></pre>
+
+<p>Kemudian, membuat VirtualHost untuk WordPress, untuk membuatnya silakan pindah direktori ke <em>/etc/httpd/conf.d</em> dan buka editor untuk membuat file VirtualHost disini kami menggunakan vim , untuk editor silakan sesuaikan dengan kebiasaan Anda masing - masing. sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-web01 home]#
+[root@srv-web01 home]# cd /etc/httpd/conf.d/
+[root@srv-web01 conf.d]# 
+[root@srv-web01 conf.d]# vim wordpress.conf 
+</code></pre>
+
+<p>Isikan konfigurasi sebagai berikut:</p>
+
+<pre><code class="language-bash">&lt;VirtualHost *:80&gt;
+        ServerName wordpress.domainanda.id
+        DocumentRoot /var/www/html/wordpress
+        ErrorLog logs/wordpress-domainanda.id-error_log
+        CustomLog logs/wordpress-domainanda.id-access_log combined
+
+&lt;IfModule dir_module&gt;
+        DirectoryIndex index.php index.html
+&lt;/IfModule&gt;
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<h3 id="keterangan-1">Keterangan:</h3>
+
+<ul>
+<li><strong>ServerName:</strong> Isikan IP atau Domain atau subdomain yang ingin Anda gunakan.</li>
+<li><strong>DocumentRoot:</strong> Sesuaikan dengan letak dimana file WordPress Anda berada pada panduan ini letak nya berada di <em>/var/ww/html/wordpress</em>.</li>
+<li><strong>ErrorLog:</strong> Letak dari error_log WordPress Anda.</li>
+<li><strong>CustomLog:</strong> Letak dari access_log WordPress Anda.</li>
+</ul>
+
+<p>Selanjutnya memberi hak akses 755 dan hak owner pada direktori root wordpress sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@srv-web01 conf.d]# chown -R apache:apache /var/www/html/wordpress/
+[root@srv-web01 conf.d]# chmod -R 755 /var/www/html/wordpress/
+</code></pre>
+
+<p>Silakan restart service web server apache Anda gunakan perintah berikut:</p>
+
+<pre><code class="language-bash">[root@srv-web01 conf.d]#
+[root@srv-web01 conf.d]# systemctl restart httpd
+[root@srv-web01 conf.d]#
+</code></pre>
+
+<h2 id="langkah-2-singkronisasi-direktori-server-srv-web01-srv-web02">Langkah 2: Singkronisasi Direktori Server (srv-web01 &amp; srv-web02)</h2>
+
+<p>Pada langkah ini kita akan melakukan singkronisasi direktori dari server <strong>srv-web01</strong> dengan <strong>srv-web02</strong>. Direktori yang akan di singkronisasi hanyalah direktori <strong>/var/www/html/wordpress</strong> sebagai direktori dari CMS WordPress dan direktori VirtualHost <strong>/etc/httpd/conf.d</strong> singkronisasi disini secara live apabila di sisi <strong>srv-web01</strong> melakukan perubahan pada direktori WordPress dan VirtualHost, maka <strong>srv-web02</strong> akan mengikuti perubahan yang telah dilakukan pada <strong>srv-web01</strong>.</p>
+
+<p>Untuk sinkronisasi Direktori disini kami menggunakan service <strong>Lsyncd</strong>.</p>
+
+<p><strong>Apa itu Lsyncd?</strong></p>
+
+<p>Lsyncd singkatan dari &ldquo;Live Syncing Daemon&rdquo;, sebuah service yang digunakan untuk menyinkronkan atau mereplikasi file dan direktori secara lokal dan jarak jauh setelah interval waktu tertentu menggunakan rsync dan ssh di backend untuk authentication.</p>
+
+<p><strong>Apa bedanya dengan rsync?</strong></p>
+
+<p>Apabila Anda menggunakan rsync Anda perlu &ldquo;job&rdquo; sebagai perintah untuk sinkronisasi, dengan lsyncd Anda tidak perlu membuat &ldquo;cron job&rdquo; untuk menjalankan sinkronisasi.</p>
+
+<p>Lsyncd bekerja pada arsitektur Master dan Slave di mana ia memantau direktori pada server master, jika ada perubahan atau modifikasi yang dilakukan maka lsyncd akan mereplikasi yang sama pada server slave-nya setelah interval waktu tertentu.</p>
+
+<p>Selengkapnya tentang Lsyncd dapat merujuk pada link berikut: <a href="https://axkibe.github.io/lsyncd/" rel="nofollow noreferrer" target="_blank">Lsyncd - Live Syncing (Mirror) Daemon</a></p>
+
+<p>Lsyncd disini akan di install hanya di server <strong>srv-web01</strong> saja untuk instalasinya sebagai berikut:</p>
+
+<p>Enable repository epel dan install lsyncd gunakan perintah berikut:</p>
+
+<pre><code class="language-bash">[root@srv-web01 conf.d]# yum install epel-release 
+[root@srv-web01 conf.d]# yum install lsyncd -y
+</code></pre>
+
+<p>Jika instalasi telah selesai sekarang menghubungkan antara <strong>srv-web01</strong> dan <strong>srv-web02</strong> menggunakan <strong>ssh key authentication</strong>, silakan generate key di sisi <strong>srv-web01</strong> dengan cara menjalalankan perintah berikut:</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]#
+[root@srv-web01 ~]# ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:e5Uc/1Xtwq7/1auuPNqZ8IQIyR1lv53JZtIuP/Q7vAQ root@srv-web01
+The key's randomart image is:
++---[RSA 2048]----+
+|         o       |
+|        o .     .|
+|       .   ..   o|
+|    . o .  .==o..|
+|     + .S  o+E+ o|
+|      . ....=o.oo|
+|       ..o.o..+.+|
+|         .*.=o.+o|
+|         ..B==+==|
++----[SHA256]-----+
+[root@srv-web01 ~]#
+</code></pre>
+
+<p>Jika sudah selanjutnya Anda remote server <strong>srv-web02</strong> dan enable <strong>PermitRootLogin yes</strong> dan atur root password dari <strong>srv-web02</strong> karena default dari NEO Cloud tidak aktif.</p>
+
+<p><strong>Kenapa di aktifkan? Nanti tidak aman? Bagaimana sih?</strong></p>
+
+<p>Pada topologi ini kita menghubungkan antara <strong>srv-web01</strong> dan <strong>srv-web02</strong> via private IP dan tidak akan di expose ke public yang di expose ke publik hanyalah IP Load Balancer saja.</p>
+
+<p>Selanjut copy publik key ke server tujuan yaitu <strong>srv-web02</strong> menggunakan ssh-copy-id seperti berikut</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]# ssh-copy-id root@192.168.10.9
+/bin/ssh-copy-id: INFO: Source of key(s) to be installed: &quot;/root/.ssh/id_rsa.pub&quot;
+The authenticity of host '192.168.10.9 (192.168.10.9)' can't be established.
+ECDSA key fingerprint is SHA256:gzAdjdYg/H4jns0gQXoChNXZD4R9PjNpHxYeqz8xv/0.
+ECDSA key fingerprint is MD5:f0:a1:40:5a:94:13:7b:e5:bb:12:f7:ab:2f:d8:fd:b1.
+Are you sure you want to continue connecting (yes/no)? yes
+/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+root@192.168.10.9's password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   &quot;ssh 'root@192.168.10.9'&quot;
+and check to make sure that only the key(s) you wanted were added.
+
+[root@srv-web01 ~]#
+</code></pre>
+
+<p>Pastikan <strong>srv-web02</strong> sudah dapat diakses tanpa password dari <strong>srv-web01</strong> seperti berikut:</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]#
+[root@srv-web01 ~]# ssh root@192.168.10.9
+Last failed login: Mon Oct 28 20:55:32 UTC 2019 from nur-srv-web01.neo.internal on ssh:notty
+There was 1 failed login attempt since the last successful login.
+Last login: Mon Oct 28 20:50:54 2019
+[root@srv-web02 ~]# 
+[root@srv-web02 ~]#
+</code></pre>
+
+<p>Saat ini <strong>srv-web01</strong> dan <strong>srv-web02</strong> sudah saling terkoneksi.</p>
+
+<p>Berikutnya melakukan konfigurasi Lsyncd, default direktori konfigurasi dari Lsyncd berada di <strong>/etc/lsyncd</strong> sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]#
+[root@srv-web01 ~]# vim /etc/lsyncd.conf 
+</code></pre>
+
+<p>Berikut contoh konfigurasinya:</p>
+
+<pre><code class="language-bash">----
+-- User configuration file for lsyncd.
+--
+-- Simple example for default rsync, but executing moves through on the target.
+--
+-- For more examples, see /usr/share/doc/lsyncd*/examples/
+--
+-- sync{default.rsyncssh, source=&quot;/var/www/html&quot;, host=&quot;localhost&quot;, targetdir=&quot;/tmp/htmlcopy/&quot;}
+
+settings {
+        logfile         = &quot;/var/log/lsyncd/lsyncd.log&quot;,
+        statusFile      = &quot;/tmp/lsyncd.stat&quot;,
+        statusInterval  = 1,
+}
+
+sync {
+        default.rsync,
+        source  = &quot;/var/www/html&quot;,
+        target  = &quot;192.168.10.9:/var/www/html&quot;,
+}
+
+sync {
+        default.rsync,
+        source  = &quot;/etc/httpd/conf.d&quot;,
+        target  = &quot;192.168.10.9:/etc/httpd/conf.d&quot;,
+}
+
+rsync = {
+        update  = true,
+        perms   = true,
+        owner   = true,
+        group   = true,
+        rsh     = &quot;/usr/bin/ssh -l root -i /root/.ssh/id_rsa&quot;
+}
+</code></pre>
+
+<h3 id="keterangan-2">Keterangan:</h3>
+
+<ul>
+<li>Pada menu <strong>settings</strong> merupakan konfigurasi dari stat dan log dari lsyncd</li>
+<li>Pada <strong>sync</strong> pertama merupakan konfigurasi source dan target/destination dari direktori yang akan di sinkronkan diatas contohnya direktori <strong>/var/www/html/wordpress</strong> akan di sinkronkan ke <strong>srv-web02</strong> dengan IP <strong>192.168.10.9</strong> dan tujuan direktorinya sama yakni <strong>/var/www/html/wordpress</strong></li>
+<li>Pada <strong>sync</strong> kedua untuk keterangannya hampir sama dengan yang pertama perbedaanya hanya di sisi source direktori yang ingin di sinkronkan saja.</li>
+<li>Pada <strong>rsync</strong> lah yang mengirimkan semua perintah dari <strong>sync</strong> melalui ssh key.</li>
+</ul>
+
+<p>Simpan konfigurasi di atas dan restart, enable dan pastikan semua service lsyncd telah berjalan dengan normal sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]# systemctl restart lsyncd
+[root@srv-web01 ~]# systemctl enable lsyncd
+[root@srv-web01 ~]# systemctl status lsyncd
+● lsyncd.service - Live Syncing (Mirror) Daemon
+   Loaded: loaded (/usr/lib/systemd/system/lsyncd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Mon 2019-10-28 21:14:55 UTC; 17s ago
+ Main PID: 1629 (lsyncd)
+   CGroup: /system.slice/lsyncd.service
+           └─1629 /usr/bin/lsyncd -nodaemon /etc/lsyncd.conf
+
+Oct 28 21:14:55 srv-web01 systemd[1]: Started Live Syncing (Mirror) Daemon.
+[root@srv-web01 ~]# 
+</code></pre>
+
+<p>Selanjutnya melihat log sinkronisasi direktori yang telah ditentukan hasilnya sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]#
+[root@srv-web01 ~]# tail -f /var/log/lsyncd/lsyncd.log 
+Mon Oct 28 21:45:38 2019 Normal: recursive startup rsync: /var/www/html/ -&gt; 192.168.10.9:/var/www/html/
+Mon Oct 28 21:45:38 2019 Normal: recursive startup rsync: /etc/httpd/conf.d/ -&gt; 192.168.10.9:/etc/httpd/conf.d/
+Mon Oct 28 21:45:38 2019 Normal: Startup of /etc/httpd/conf.d/ -&gt; 192.168.10.9:/etc/httpd/conf.d/ finished.
+Mon Oct 28 21:45:39 2019 Normal: Startup of /var/www/html/ -&gt; 192.168.10.9:/var/www/html/ finished.
+Mon Oct 28 21:45:48 2019 Normal: --- TERM signal, fading ---
+Mon Oct 28 21:45:48 2019 Normal: --- Startup ---
+Mon Oct 28 21:45:48 2019 Normal: recursive startup rsync: /var/www/html/ -&gt; 192.168.10.9:/var/www/html/
+Mon Oct 28 21:45:48 2019 Normal: recursive startup rsync: /etc/httpd/conf.d/ -&gt; 192.168.10.9:/etc/httpd/conf.d/
+Mon Oct 28 21:45:48 2019 Normal: Startup of /etc/httpd/conf.d/ -&gt; 192.168.10.9:/etc/httpd/conf.d/ finished.
+Mon Oct 28 21:45:48 2019 Normal: Startup of /var/www/html/ -&gt; 192.168.10.9:/var/www/html/ finished.
+</code></pre>
+
+<p>Selanjutnya cek hasil singkronisasi di sisi <strong>srv-web02</strong> pastikan sama semua baik isi, permission direktori dan yang lainnya sebagai berikut hasilnya</p>
+
+<p>Hasil <strong>srv-web01</strong> seperti berikut</p>
+
+<pre><code class="language-bash">[root@srv-web01 wordpress]# ls -lah
+total 200K
+drwxr-xr-x   5 apache apache 4.0K Oct 14 20:37 .
+drwxr-xr-x.  3 root   root     41 Oct 28 21:43 ..
+-rwxr-xr-x   1 apache apache  420 Nov 30  2017 index.php
+-rwxr-xr-x   1 apache apache  20K Jan  1  2019 license.txt
+-rwxr-xr-x   1 apache apache 7.3K Apr  8  2019 readme.html
+-rwxr-xr-x   1 apache apache 6.8K Jan 12  2019 wp-activate.php
+drwxr-xr-x   9 apache apache 4.0K Oct 14 20:37 wp-admin
+-rwxr-xr-x   1 apache apache  369 Nov 30  2017 wp-blog-header.php
+-rwxr-xr-x   1 apache apache 2.3K Jan 21  2019 wp-comments-post.php
+-rwxr-xr-x   1 apache apache 2.9K Jan  8  2019 wp-config-sample.php
+drwxr-xr-x   4 apache apache   52 Oct 14 20:37 wp-content
+-rwxr-xr-x   1 apache apache 3.8K Jan  9  2019 wp-cron.php
+drwxr-xr-x  20 apache apache 8.0K Oct 14 20:37 wp-includes
+-rwxr-xr-x   1 apache apache 2.5K Jan 16  2019 wp-links-opml.php
+-rwxr-xr-x   1 apache apache 3.3K Nov 30  2017 wp-load.php
+-rwxr-xr-x   1 apache apache  39K Jun 10 13:34 wp-login.php
+-rwxr-xr-x   1 apache apache 8.3K Nov 30  2017 wp-mail.php
+-rwxr-xr-x   1 apache apache  19K Mar 28  2019 wp-settings.php
+-rwxr-xr-x   1 apache apache  31K Jan 16  2019 wp-signup.php
+-rwxr-xr-x   1 apache apache 4.7K Nov 30  2017 wp-trackback.php
+-rwxr-xr-x   1 apache apache 3.0K Aug 17  2018 xmlrpc.php
+[root@srv-web01 wordpress]#
+[root@srv-web01 wordpress]#
+</code></pre>
+
+<p>Hasil <strong>srv-web02</strong> seperti berikut</p>
+
+<pre><code class="language-bash">[root@srv-web02 wordpress]# ls -lah
+total 200K
+drwxr-xr-x   5 apache apache 4.0K Oct 14 20:37 .
+drwxr-xr-x.  3 root   root     41 Oct 28 22:43 ..
+-rwxr-xr-x   1 apache apache  420 Nov 30  2017 index.php
+-rwxr-xr-x   1 apache apache  20K Jan  1  2019 license.txt
+-rwxr-xr-x   1 apache apache 7.3K Apr  8  2019 readme.html
+-rwxr-xr-x   1 apache apache 6.8K Jan 12  2019 wp-activate.php
+drwxr-xr-x   9 apache apache 4.0K Oct 14 20:37 wp-admin
+-rwxr-xr-x   1 apache apache  369 Nov 30  2017 wp-blog-header.php
+-rwxr-xr-x   1 apache apache 2.3K Jan 21  2019 wp-comments-post.php
+-rwxr-xr-x   1 apache apache 2.9K Jan  8  2019 wp-config-sample.php
+drwxr-xr-x   4 apache apache   52 Oct 14 20:37 wp-content
+-rwxr-xr-x   1 apache apache 3.8K Jan  9  2019 wp-cron.php
+drwxr-xr-x  20 apache apache 8.0K Oct 14 20:37 wp-includes
+-rwxr-xr-x   1 apache apache 2.5K Jan 16  2019 wp-links-opml.php
+-rwxr-xr-x   1 apache apache 3.3K Nov 30  2017 wp-load.php
+-rwxr-xr-x   1 apache apache  39K Jun 10 13:34 wp-login.php
+-rwxr-xr-x   1 apache apache 8.3K Nov 30  2017 wp-mail.php
+-rwxr-xr-x   1 apache apache  19K Mar 28  2019 wp-settings.php
+-rwxr-xr-x   1 apache apache  31K Jan 16  2019 wp-signup.php
+-rwxr-xr-x   1 apache apache 4.7K Nov 30  2017 wp-trackback.php
+-rwxr-xr-x   1 apache apache 3.0K Aug 17  2018 xmlrpc.php
+[root@srv-web02 wordpress]#
+[root@srv-web02 wordpress]#
+
+</code></pre>
+
+<h2 id="langkah-3-setup-database-wordpress">Langkah 3: Setup Database WordPress</h2>
+
+<p>Pada Langkah ke 3 silakan remote server database Anda disini kita akan setup server database. Untuk Database kita akan menggunakan MariaDB versi 10.3 silakan update terlebih dahulu sistem operasi CentOS 7 Anda gunakan perintah berikut:</p>
+
+<pre><code class="language-bash">[root@srv-database ~]#
+[root@srv-database ~]# yum update -y 
+</code></pre>
+
+<p>Tunggu proses update sampai selesai, jika sudah menambahkan repositori MariaDB 10.3 letaknya berada di direktori <strong>/etc/yum.repos.d</strong> seperti berikut:</p>
+
+<pre><code class="language-bash">[root@srv-database ~]#
+[root@srv-database ~]# vim  /etc/yum.repos.d/MariaDB.repo 
+</code></pre>
+
+<p>Isikan repository database MariaDB 10.3 seperti berikut</p>
+
+<pre><code class="language-bash"># MariaDB 10.3 CentOS repository list - created 2018-05-25 19:02 UTC
+# http://downloads.mariadb.org/mariadb/repositories/
+[mariadb]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.3/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1
+</code></pre>
+
+<p>Simpan repository dan update kembali sistem operasi CentOS 7 Anda dan install database MariaDB menggunakan perintah sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@srv-database ~]#
+[root@srv-database ~]# yum update -y
+[root@srv-database ~]# yum install MariaDB-server MariaDB-client -y 
+</code></pre>
+
+<p>Tunggu proses instalasi sampai selesai, jika sudah start, enable dan pastikan service sudah berjalan dengan normal sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@srv-database ~]#
+[root@srv-database ~]# systemctl status mariadb
+● mariadb.service - MariaDB 10.3.18 database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled; vendor preset: disabled)
+  Drop-In: /etc/systemd/system/mariadb.service.d
+           └─migrated-from-my.cnf-settings.conf
+   Active: active (running) since Sun 2019-10-27 18:21:52 UTC; 1 day 3h ago
+     Docs: man:mysqld(8)
+           https://mariadb.com/kb/en/library/systemd/
+ Main PID: 948 (mysqld)
+   Status: &quot;Taking your SQL requests now...&quot;
+   CGroup: /system.slice/mariadb.service
+           └─948 /usr/sbin/mysqld
+</code></pre>
+
+<p>Konfigurasi password root database jalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-database ~]# 
+[root@srv-database ~]# mysql_secure_installation 
+</code></pre>
+
+<p>Selengkapnya untuk instalasi dan konfigurasi database merujuk pada referensi berikut: <a href="https://nurhamim.net/instalasi-dan-konfigurasi-database-mariadb-di-centos-7/" rel="nofollow noreferrer" target="_blank">Instalasi Dan Konfigurasi Database MariaDB Di CentOS 7.</a></p>
+
+<p>Berikutnya akses database Anda dan membuat user dan database wordpress serta grant ke setiap ip private dari <strong>srv-web01</strong> dan <strong>srv-web02</strong> sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@srv-database ~]#
+[root@srv-database ~]# mysql -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 62
+Server version: 10.3.18-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]&gt; create database wp-db;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]&gt; grant all privileges on wp-db.* to 'wp-user'@'192.168.10.7' identified by 'Isikan_password';
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [(none)]&gt; grant all privileges on jangkrikbos.* to 'wp-user'@'192.168.10.9' identified by 'Isikan_password';
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [(none)]&gt; flush privileges;
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [(none)]&gt; exit
+Bye
+[root@srv-database ~]# 
+</code></pre>
+
+<p>Kemudian allow database ke 0.0.0.0 sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-database ~]#
+[root@srv-database ~]# vim /etc/my.cnf.d/server.cnf 
+
+Pada bind-address Ubah seperti berikut ini
+
+#
+# Allow server to accept connections on all interfaces.
+#
+bind-address=0.0.0.0
+#
+</code></pre>
+
+<p>Jika sudah silakan restart service mariadb dan pastikan statusnya running sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@srv-database ~]#
+[root@srv-database ~]# systemctl restart mariadb
+[root@srv-database ~]# systemctl status mariadb
+● mariadb.service - MariaDB 10.3.18 database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled; vendor preset: disabled)
+  Drop-In: /etc/systemd/system/mariadb.service.d
+           └─migrated-from-my.cnf-settings.conf
+   Active: active (running) since Mon 2019-10-28 22:25:29 UTC; 5s ago
+     Docs: man:mysqld(8)
+           https://mariadb.com/kb/en/library/systemd/
+  Process: 19619 ExecStartPost=/bin/sh -c systemctl unset-environment _WSREP_START_POSITION (code=exited, status=0/SUCCESS)
+  Process: 19572 ExecStartPre=/bin/sh -c [ ! -e /usr/bin/galera_recovery ] &amp;&amp; VAR= ||   VAR=`/usr/bin/galera_recovery`; [ $? -eq 0 ]   &amp;&amp; systemctl set-environment _WSREP_START_POSITION=$VAR || exit 1 (code=exited, status=0/SUCCESS)
+  Process: 19570 ExecStartPre=/bin/sh -c systemctl unset-environment _WSREP_START_POSITION (code=exited, status=0/SUCCESS)
+ Main PID: 19587 (mysqld)
+   Status: &quot;Taking your SQL requests now...&quot;
+   CGroup: /system.slice/mariadb.service
+           └─19587 /usr/sbin/mysqld
+
+Oct 28 22:25:29 srv-database mysqld[19587]: 2019-10-28 22:25:29 0 [Note] InnoDB: 10.3.18 started; log sequence number 2684709; transaction id 764
+Oct 28 22:25:29 srv-database mysqld[19587]: 2019-10-28 22:25:29 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+Oct 28 22:25:29 srv-database mysqld[19587]: 2019-10-28 22:25:29 0 [Note] Plugin 'FEEDBACK' is disabled.
+Oct 28 22:25:29 srv-database mysqld[19587]: 2019-10-28 22:25:29 0 [Note] InnoDB: Buffer pool(s) load completed at 191028 22:25:29
+Oct 28 22:25:29 srv-database mysqld[19587]: 2019-10-28 22:25:29 0 [Note] Server socket created on IP: '0.0.0.0'.
+Oct 28 22:25:29 srv-database mysqld[19587]: 2019-10-28 22:25:29 0 [Note] Reading of all Master_info entries succeeded
+Oct 28 22:25:29 srv-database mysqld[19587]: 2019-10-28 22:25:29 0 [Note] Added new Master_info '' to hash table
+Oct 28 22:25:29 srv-database mysqld[19587]: 2019-10-28 22:25:29 0 [Note] /usr/sbin/mysqld: ready for connections.
+Oct 28 22:25:29 srv-database mysqld[19587]: Version: '10.3.18-MariaDB'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MariaDB Server
+Oct 28 22:25:29 srv-data
+</code></pre>
+
+<p>Selanjutnya akses server <strong>srv-web01</strong> dan <strong>srv-web02</strong> sebagai berikut:</p>
+
+<ul>
+<li><p>Akses Melalui <strong>srv-web01</strong></p>
+
+<pre><code class="language-bash">[root@srv-web01 ~]#
+[root@srv-web01 ~]# mysql -u wp-user -p -h 192.168.10.17
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 12
+Server version: 10.3.18-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]&gt; show databases;
++--------------------+  
+| Database           |  
++--------------------+  
+| information_schema |  
+| wp-db              |  
++--------------------+  
+2 rows in set (0.00 sec)
+
+MariaDB [(none)]&gt; exit  
+Bye
+[root@srv-web01 ~]# 
+</code></pre></li>
+
+<li><p>Akses Melalui <strong>srv-web02</strong></p>
+
+<pre><code class="language-bash">[root@srv-web02 ~]#
+[root@srv-web02 ~]# mysql -u wp-user -p -h 192.168.10.17
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 13
+Server version: 10.3.18-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]&gt; show databases;
++--------------------+  
+| Database           |  
++--------------------+  
+| information_schema |  
+| wp-db              |  
++--------------------+  
+2 rows in set (0.00 sec)
+
+MariaDB [(none)]&gt; exit  
+Bye
+[root@srv-web02 ~]# 
+</code></pre></li>
+</ul>
+
+<p>Hasilnya database sudah bisa di akses dengan normal baik dari sisi <strong>srv-web01</strong> dan <strong>srv-web02</strong></p>
+
+<p>Saat ini ini kita telah berhasil setup 2 web server dan 1 database. Sebagai catatan di CentOS 7 biasanya terdapat Selinux, dengan demikian kami sarankan untuk disable Selinux di seluruh server database dan web server.</p>
+
+<h2 id="langkah-4-instalasi-dan-konfigurasi-load-balancer">Langkah 4: Instalasi Dan Konfigurasi Load Balancer</h2>
+
+<p>Pada langkah ini kita akan setup Load Balancer menggunakan HAProxy Di CentOS 7.</p>
+
+<p><strong>Apa itu Load Balancer?</strong></p>
+
+<p>Load balancer adalah solusi yang digunakan untuk mendistribusikan aplikasi web secara horizontal di beberapa host sekaligus memberikan pengguna satu titik akses ke layanan.</p>
+
+<p>HAProxy adalah salah satu perangkat lunak penyeimbang beban yang open-source dan yang paling populer, yang juga menawarkan ketersediaan tinggi dan fungsionalitas proxy.</p>
+
+<p>HAProxy bertujuan untuk mengoptimalkan penggunaan sumber daya, memaksimalkan throughput, meminimalkan waktu respons, dan menghindari kelebihan sumber daya tunggal.</p>
+
+<p>HAProxy sangat cocok untuk situs web dengan lalu lintas sangat tinggi dan karenanya sering digunakan untuk meningkatkan keandalan dan kinerja layanan web untuk konfigurasi multi-server.</p>
+
+<p>Berikut ini merupakan tahapan installasi HAProxy pada CentOS 7:</p>
+
+<p>Update terlebih dahulu sistem operasi CentOS 7 Anda gunakan perintah</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb ~]#
+[root@nur-srv-lb ~]# yum update -y
+</code></pre>
+
+<p>Tunggu proses update sampai selesai, selanjutnya instalasi dependensi yang dibutuhkan sebagai berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb ~]#              
+[root@nur-srv-lb ~]# yum install gcc pcre-devel tar make -y
+</code></pre>
+
+<p>Kali ini kami menggunakan HAProxy versi 2.0, silakan untuk HAProxy sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb ~]#
+[root@nur-srv-lb ~]# wget http://www.haproxy.org/download/2.0/src/haproxy-2.0.7.tar.gz -O ~/haproxy.tar.gz
+</code></pre>
+
+<p>Ekstrak file HAProxy gunakan perintah berikut:</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb ~]#
+[root@nur-srv-lb ~]# tar xzvf ~/haproxy.tar.gz -C ~/
+</code></pre>
+
+<p>Pindah ke directori HAProxy</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb ~]#
+[root@nur-srv-lb ~]# cd ~/haproxy-2.0.7
+[root@nur-srv-lb haproxy-2.0.7]# 
+</code></pre>
+
+<p>Melakukan compile gunakan perintah berikut:</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb haproxy-2.0.7]# 
+[root@nur-srv-lb haproxy-2.0.7]# make TARGET=linux-glibc
+</code></pre>
+
+<p>Tunggu proses compile selesai, jika sudah install HAProxy menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb haproxy-2.0.7]#
+[root@nur-srv-lb haproxy-2.0.7]# sudo make install
+</code></pre>
+
+<p>Selanjutnya membuat direktori HAProxy dan file stats untuk HAProxy sebagai berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb haproxy-2.0.7]# mkdir -p /etc/haproxy
+[root@nur-srv-lb haproxy-2.0.7]# mkdir -p /var/lib/haproxy 
+[root@nur-srv-lb haproxy-2.0.7]# touch /var/lib/haproxy/stats
+</code></pre>
+
+<h3 id="konfigurasi-haproxy">Konfigurasi HAProxy</h3>
+
+<p>Pada dasarnya, yang perlu Anda lakukan adalah memberi tahu HAProxy jenis koneksi dari source dan tujuannya.</p>
+
+<p>Untuk melakukan konfigurasi tersebut kiranya dapat membuat file pada direktori <strong>/etc/haproxy/haproxy.cfg</strong> untuk konfigurasinya. Untuk mempelajari lebih lanjut terkait HAProxy dapat melalui dokumentasi resmi sebagai berikut: <a href="https://cbonte.github.io/haproxy-dconv/2.0/configuration.html" rel="nofollow noreferrer" target="_blank">Configuration Manual.</a></p>
+
+<p>Berikut ini contoh konfigurasi yang akan digunakan pada panduan ini sebagai berikut:</p>
+
+<pre><code class="language-bash">global
+   log /dev/log local0
+   log /dev/log local1 notice
+   chroot /var/lib/haproxy
+   stats timeout 30s
+   user haproxy
+   group haproxy
+   daemon
+
+defaults
+   log global
+   mode http
+   option httplog
+   option dontlognull
+   timeout connect 5000
+   timeout client 50000
+   timeout server 50000
+
+frontend http_front
+   bind *:80
+   stats uri /haproxy?stats
+   default_backend http_back
+
+backend http_back
+   balance roundrobin
+   server srv_web01-wordpress 192.168.10.7:80 check
+   server srv-web02-wordpress 192.168.10.9:80 check
+</code></pre>
+
+<p>Simpan konfigurasi diatas dan restart haproxy dan pastikan service nya running gunakan perintah sebagai berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb haproxy]#
+[root@nur-srv-lb haproxy]# systemctl restart haproxy
+[root@nur-srv-lb haproxy]# systemctl status haproxy
+● haproxy.service - SYSV: HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited for high availability environments.
+   Loaded: loaded (/etc/rc.d/init.d/haproxy; bad; vendor preset: disabled)
+   Active: active (running) since Mon 2019-10-28 23:40:48 UTC; 6s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 11851 ExecStop=/etc/rc.d/init.d/haproxy stop (code=exited, status=0/SUCCESS)
+  Process: 11753 ExecReload=/etc/rc.d/init.d/haproxy reload (code=exited, status=0/SUCCESS)
+  Process: 11861 ExecStart=/etc/rc.d/init.d/haproxy start (code=exited, status=0/SUCCESS)
+ Main PID: 11870 (haproxy)
+   CGroup: /system.slice/haproxy.service
+           └─11870 /usr/sbin/haproxy -D -f /etc/haproxy/haproxy.cfg -p /var/run/haproxy.pid
+
+Oct 28 23:40:48 srv-lb systemd[1]: Stopped SYSV: HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited for high availability environments..   
+Oct 28 23:40:48 srv-lb systemd[1]: Starting SYSV: HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited for high availability environments....
+Oct 28 23:40:48 srv-lb haproxy[11869]: Proxy http_front started.
+Oct 28 23:40:48 srv-lb haproxy[11861]: Starting haproxy: [  OK  ]
+Oct 28 23:40:48 srv-lb systemd[1]: Started SYSV: HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited for high availability environments..   
+[root@nur-srv-lb haproxy]# 
+</code></pre>
+
+<p>Silakan akses HAProxy menggunakan IP Public Server Anda atau domain/subdomain yang telah terpointing ke IP Public HA sebagai berikut contohnya: <a href="http://IP_SERVER_ANDA/haproxy?stats" rel="nofollow noreferrer" target="_blank">http://IP_SERVER_ANDA/haproxy?stats</a></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/gambar-ha-default.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="langkah-5">Langkah 5</h2>
+
+<p>Pada langkah sebelumnya web server telah terhubung dan langkah saat ini yaitu instalasi CMS WordPress silakan akses IP SERVER Load Balancer Anda maka akan muncul tampilan setup dari CMS WordPress seperti berikut:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Klik <strong>Let&rsquo;s go!</strong> untuk lanjut ke tahapan selanjutnya,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Isikan semua credential database WordPress yang telah dibuat sebelumnya sebagai berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Klik <strong>Run the Installation</strong> untuk melanjutkan ke proses instalasi WordPress</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya isikan semua informasi dan credential untuk login ke Dashboard CMS WordPress sebagai berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Instalasi telah selesai dilakukan silakan klik login untuk login ke Dashboard CMS WordPress</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Isi dengan credential yang telah dibuat sebelumnya pada saat proses instalasi</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut tampilan Dashboard dari CMS WordPress</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="langkah-6-integrasi-s3-protokol-pada-wordpress">Langkah 6: Integrasi S3 Protokol Pada WordPress</h2>
+
+<p>Pada langkah ini sesuai dengan topologi yang telah dibuat kami akan mengintegrasikan S3 Protokol dengan CMS WordPress.</p>
+
+<p>Fungsi dari hal ini yaitu semua file statik pada WordPress baik itu gambar, foto, video, musik, dan yang lainnya akan tersimpan otomatis ke S3 Protokol jadi tidak server web server tidak perlu menggunakan storage yang besar untuk penyimpanan.</p>
+
+<p>Untuk integrasi ini kami menggunakan plugin WordPress yaitu <a href="https://wordpress.org/plugins/ilab-media-tools/" rel="nofollow noreferrer" target="_blank">Media Cloud</a>.</p>
+
+<p>Silakan akses Dashboard WordPress Anda dan pilih menu <strong>Plugins &gt;&gt; Installed Plugins &gt;&gt; Add New &gt;&gt; Search (Media Cloud) &gt;&gt; Install Now</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Klik <strong>Aktivate</strong> untuk megaktifkan plugin</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_11.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Konfigurasi Plugin Media Cloud, aktifkan <strong>Cloud Storage</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_12.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Siapkan credential S3 Storage Anda masing - masing, disini kami menggunakan NEO Object Storage. Yang harus disiapkan diantaranya adalah <em>Access Key, Private Key, Endpoint</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_13.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya membuat bucket di S3 Storage Anda, disini kami mengakses S3 Storage menggunakan Dragondisk,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_14.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Konfigurasi Media Cloud, seperti gambar berikut ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/Screenshot_15.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Simpan konfigurasinya, dan silakan mencoba post atau add gambar ke library CMS WordPress</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/post-1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada gambar diatas terlihat <strong>Copy Link</strong> telah mengarah ke URL Endpoint dari S3 Storage, silakan akses hasil post baru Anda dan hasilnya akan seperti berikut:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/post-2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika di view images akan terlihat bahwa gambar nya sudah ada di S3 Storage sebagai berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/haprox-wp/post-3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sekian untuk panduan ini semoga bermanfaat bagi kita semua</p>
+
+<p>See You :)</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/membangun-cms-wordpress-menggunakan-load-balancer-pada-centos-7/>https://nurhamim.net/membangun-cms-wordpress-menggunakan-load-balancer-pada-centos-7/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/lb/">
+                    #LB</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/lsyncd/">
+                    #Lsyncd</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/s3-protokol/">
+                    #S3 Protokol</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/wordpress/">
+                    #Wordpress</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/instalasi-ftp-server-di-windows-server-2016/" class="prev" rel="prev" title="Instalasi FTP Server Di Windows Server 2016"><i class="iconfont icon-left"></i>&nbsp;Instalasi FTP Server Di Windows Server 2016</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

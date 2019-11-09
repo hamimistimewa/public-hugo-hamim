@@ -50,15 +50,12 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https://nurhamim.net"
+         "@id": "https:\/\/nurhamim.net"
     },
     "articleSection" : "posts",
     "name" : "File Dan Direktori Di Linux",
     "headline" : "File Dan Direktori Di Linux",
-    "description" : "Pada tutorial kali ini saya masih tetap membahas mengenai comand line linux, namun untuk kali saya akan fokus pembahasan tentang navigasi direktori, membuat, dan memodifikasi file dan direktori di sistem operasi Linux.
-Berikut tabel konten yang akan kita bahas satu - persatu:
- pwd cd clear ls mkdir touch rm cp mv  pwd Perintah pwd digunakan untuk print (melihat) direktori dimana Anda berada.
-root@hamimaja:~# pwd /root root@hamimaja:~#  cd Perintah ini digunakan untuk berpindah posisi dari direktori A ke direktori yang lainnya.",
+    "description" : "Pada tutorial kali ini saya masih tetap membahas mengenai comand line linux, namun untuk kali saya akan fokus pembahasan tentang navigasi direktori, membuat, dan memodifikasi file dan direktori di sistem operasi Linux.\nBerikut tabel konten yang akan kita bahas satu - persatu:\n pwd cd clear ls mkdir touch rm cp mv  pwd Perintah pwd digunakan untuk print (melihat) direktori dimana Anda berada.\nroot@hamimaja:~# pwd \/root root@hamimaja:~#  cd Perintah ini digunakan untuk berpindah posisi dari direktori A ke direktori yang lainnya.",
     "inLanguage" : "en-us",
     "author" : "[Nur Hamim]",
     "creator" : "[Nur Hamim]",
@@ -66,9 +63,9 @@ root@hamimaja:~# pwd /root root@hamimaja:~#  cd Perintah ini digunakan untuk ber
     "accountablePerson" : "[Nur Hamim]",
     "copyrightHolder" : "[Nur Hamim]",
     "copyrightYear" : "2019",
-    "datePublished": "2019-07-08 18:52:20 &#43;0700 &#43;07",
-    "dateModified" : "2019-07-08 18:52:20 &#43;0700 &#43;07",
-    "url" : "https://nurhamim.net/file-dan-direktori-di-linux/",
+    "datePublished": "2019-07-08 18:52:20 \x2b0700 \x2b07",
+    "dateModified" : "2019-07-08 18:52:20 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/file-dan-direktori-di-linux\/",
     "wordCount" : "1556",
     "keywords" : [ "Linux","Command Line", "Catatan Cah Ndeso"]
 }
@@ -212,32 +209,28 @@ root@hamimaja:~#
 <p>Berikut beberapa opsi dari perintah <code>cd</code> yang dapat digunakan diantaranya</p>
 
 <ul>
-<li><code>.</code> - Tetap berada di di direktori saat ini</li>
-</ul>
+<li><p><code>.</code> - Tetap berada di di direktori saat ini</p>
 
 <pre><code class="language-bash">root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# 
 root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd .
 root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# 
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li><code>..</code> - Merujuk ke direktori satu hirarki di atas</li>
-</ul>
+<li><p><code>..</code> - Merujuk ke direktori satu hirarki di atas</p>
 
 <pre><code class="language-bash">root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd .
 root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd ..
 root@hamimaja:/home/hamimaja/Music/Websiteku# 
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li><code>../..</code> - Merujuk ke direktori dua hirarki di atas dan seterusnya</li>
-</ul>
+<li><p><code>../..</code> - Merujuk ke direktori dua hirarki di atas dan seterusnya</p>
 
 <pre><code class="language-bash">root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd .
 root@hamimaja:/home/hamimaja/Music/Websiteku/nurhamim.net# cd ..
 root@hamimaja:/home/hamimaja/Music/Websiteku# cd ../..
 root@hamimaja:/home/hamimaja# 
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p>Tidak hanya itu masih ada perintah cd dengan kompinasi lainnya seperti <code>cd ~/</code> atau <code>cd ~</code> atau <code>cd</code> akan menuju direktori yang ditentukan oleh variabel shell HOME (yang biasanya disetel ke direktori home user atau pengguna)</p>
 

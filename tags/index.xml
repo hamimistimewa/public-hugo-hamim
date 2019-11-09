@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Catatan Cah Ndeso</title>
@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 20:49:43 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 28 Oct 2019 21:23:44 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,27 +14,54 @@
     <item>
       <title>CentOS 7</title>
       <link>https://nurhamim.net/tags/centos-7/</link>
-      <pubDate>Sat, 06 Jul 2019 20:49:43 +0700</pubDate>
+      <pubDate>Mon, 28 Oct 2019 21:23:44 +0700</pubDate>
       
       <guid>https://nurhamim.net/tags/centos-7/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Command Line</title>
-      <link>https://nurhamim.net/tags/command-line/</link>
-      <pubDate>Mon, 08 Jul 2019 18:52:20 +0700</pubDate>
+      <title>LB</title>
+      <link>https://nurhamim.net/tags/lb/</link>
+      <pubDate>Mon, 28 Oct 2019 21:23:44 +0700</pubDate>
       
-      <guid>https://nurhamim.net/tags/command-line/</guid>
+      <guid>https://nurhamim.net/tags/lb/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Cyber Panel</title>
-      <link>https://nurhamim.net/tags/cyber-panel/</link>
-      <pubDate>Sat, 06 Jul 2019 20:49:43 +0700</pubDate>
+      <title>Linux</title>
+      <link>https://nurhamim.net/tags/linux/</link>
+      <pubDate>Mon, 28 Oct 2019 21:23:44 +0700</pubDate>
       
-      <guid>https://nurhamim.net/tags/cyber-panel/</guid>
+      <guid>https://nurhamim.net/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lsyncd</title>
+      <link>https://nurhamim.net/tags/lsyncd/</link>
+      <pubDate>Mon, 28 Oct 2019 21:23:44 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/lsyncd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S3 Protokol</title>
+      <link>https://nurhamim.net/tags/s3-protokol/</link>
+      <pubDate>Mon, 28 Oct 2019 21:23:44 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/s3-protokol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress</title>
+      <link>https://nurhamim.net/tags/wordpress/</link>
+      <pubDate>Mon, 28 Oct 2019 21:23:44 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/wordpress/</guid>
       <description></description>
     </item>
     
@@ -57,11 +84,20 @@
     </item>
     
     <item>
-      <title>Firewall</title>
-      <link>https://nurhamim.net/tags/firewall/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
+      <title>MS SQL SERVER</title>
+      <link>https://nurhamim.net/tags/ms-sql-server/</link>
+      <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
       
-      <guid>https://nurhamim.net/tags/firewall/</guid>
+      <guid>https://nurhamim.net/tags/ms-sql-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows Server</title>
+      <link>https://nurhamim.net/tags/windows-server/</link>
+      <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/windows-server/</guid>
       <description></description>
     </item>
     
@@ -75,65 +111,11 @@
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>https://nurhamim.net/tags/linux/</link>
-      <pubDate>Mon, 08 Jul 2019 18:52:20 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MS SQL SERVER</title>
-      <link>https://nurhamim.net/tags/ms-sql-server/</link>
-      <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/ms-sql-server/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mikrotik</title>
-      <link>https://nurhamim.net/tags/mikrotik/</link>
-      <pubDate>Sat, 06 Jul 2019 01:17:40 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/mikrotik/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Network</title>
-      <link>https://nurhamim.net/tags/network/</link>
-      <pubDate>Sat, 06 Jul 2019 01:17:40 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SSH</title>
-      <link>https://nurhamim.net/tags/ssh/</link>
-      <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Telnet</title>
       <link>https://nurhamim.net/tags/telnet/</link>
       <pubDate>Wed, 21 Aug 2019 00:35:49 +0700</pubDate>
       
       <guid>https://nurhamim.net/tags/telnet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vim</title>
-      <link>https://nurhamim.net/tags/vim/</link>
-      <pubDate>Sat, 06 Jul 2019 03:13:32 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/vim/</guid>
       <description></description>
     </item>
     
@@ -156,92 +138,20 @@
     </item>
     
     <item>
-      <title>Windows Server</title>
-      <link>https://nurhamim.net/tags/windows-server/</link>
-      <pubDate>Wed, 21 Aug 2019 02:55:24 +0700</pubDate>
+      <title>Command Line</title>
+      <link>https://nurhamim.net/tags/command-line/</link>
+      <pubDate>Mon, 08 Jul 2019 18:52:20 +0700</pubDate>
       
-      <guid>https://nurhamim.net/tags/windows-server/</guid>
+      <guid>https://nurhamim.net/tags/command-line/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>WordPress</title>
-      <link>https://nurhamim.net/tags/wordpress/</link>
-      <pubDate>Sat, 06 Jul 2019 20:49:38 +0700</pubDate>
+      <title>Cyber Panel</title>
+      <link>https://nurhamim.net/tags/cyber-panel/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:43 +0700</pubDate>
       
-      <guid>https://nurhamim.net/tags/wordpress/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>apache</title>
-      <link>https://nurhamim.net/tags/apache/</link>
-      <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/apache/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cwp</title>
-      <link>https://nurhamim.net/tags/cwp/</link>
-      <pubDate>Sat, 06 Jul 2019 20:49:09 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/cwp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>database</title>
-      <link>https://nurhamim.net/tags/database/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/database/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dns</title>
-      <link>https://nurhamim.net/tags/dns/</link>
-      <pubDate>Sat, 06 Jul 2019 20:49:34 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/dns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mariadb</title>
-      <link>https://nurhamim.net/tags/mariadb/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/mariadb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nginx</title>
-      <link>https://nurhamim.net/tags/nginx/</link>
-      <pubDate>Sat, 06 Jul 2019 09:33:59 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>php</title>
-      <link>https://nurhamim.net/tags/php/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>phpmyadmin</title>
-      <link>https://nurhamim.net/tags/phpmyadmin/</link>
-      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/tags/phpmyadmin/</guid>
+      <guid>https://nurhamim.net/tags/cyber-panel/</guid>
       <description></description>
     </item>
     
@@ -255,6 +165,69 @@
     </item>
     
     <item>
+      <title>dns</title>
+      <link>https://nurhamim.net/tags/dns/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:34 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cwp</title>
+      <link>https://nurhamim.net/tags/cwp/</link>
+      <pubDate>Sat, 06 Jul 2019 20:49:09 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/cwp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apache</title>
+      <link>https://nurhamim.net/tags/apache/</link>
+      <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/apache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://nurhamim.net/tags/database/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mariadb</title>
+      <link>https://nurhamim.net/tags/mariadb/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/mariadb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phpmyadmin</title>
+      <link>https://nurhamim.net/tags/phpmyadmin/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:23 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/phpmyadmin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://nurhamim.net/tags/php/</link>
+      <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>webserver</title>
       <link>https://nurhamim.net/tags/webserver/</link>
       <pubDate>Sat, 06 Jul 2019 09:34:08 +0700</pubDate>
@@ -264,11 +237,56 @@
     </item>
     
     <item>
-      <title>wordpress</title>
-      <link>https://nurhamim.net/tags/wordpress/</link>
-      <pubDate>Sat, 06 Jul 2019 18:34:17 +0700</pubDate>
+      <title>nginx</title>
+      <link>https://nurhamim.net/tags/nginx/</link>
+      <pubDate>Sat, 06 Jul 2019 09:33:59 +0700</pubDate>
       
-      <guid>https://nurhamim.net/tags/wordpress/</guid>
+      <guid>https://nurhamim.net/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Firewall</title>
+      <link>https://nurhamim.net/tags/firewall/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/firewall/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>https://nurhamim.net/tags/ssh/</link>
+      <pubDate>Sat, 06 Jul 2019 04:50:13 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://nurhamim.net/tags/vim/</link>
+      <pubDate>Sat, 06 Jul 2019 03:13:32 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mikrotik</title>
+      <link>https://nurhamim.net/tags/mikrotik/</link>
+      <pubDate>Sat, 06 Jul 2019 01:17:40 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/mikrotik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network</title>
+      <link>https://nurhamim.net/tags/network/</link>
+      <pubDate>Sat, 06 Jul 2019 01:17:40 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/network/</guid>
       <description></description>
     </item>
     
