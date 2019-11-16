@@ -6,10 +6,23 @@
     <description>Recent content in HAProxy on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Nov 2019 23:21:28 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2019 02:31:54 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/haproxy/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Compile HAProxy 2.0 Pada CentOS 7</title>
+      <link>https://nurhamim.net/compile-haproxy-2.0-pada-centos-7/</link>
+      <pubDate>Sun, 17 Nov 2019 02:31:54 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/compile-haproxy-2.0-pada-centos-7/</guid>
+      <description>Pada kesempatan kali ini kami akan berbagi bagaimana cara compile HAProxy 2.0 Pada CentOS.
+Kenapa harus di compile?
+Karena default repositori yang tersedia untuk HAProxy pada CentOS 7 yaitu versi 1.5. Dengan demikian bila Anda ingin menggunakan versi 2.0 Pada CentOS 7 salah satu nya cara yaitu compile.
+Berikut ini tahapan compile HAProxy 2.0 pada CentOS 7.
+ Silakan akses server CentOS 7 Anda masing - masing Melakukan update gunakan perintah berikut</description>
+    </item>
     
     <item>
       <title>Instalasi HAProxy Menggunakan Default Repository CentOS 7</title>
