@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Oct 2019 21:23:44 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 16 Nov 2019 13:19:42 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Load Balancer</title>
+      <link>https://nurhamim.net/categories/load-balancer/</link>
+      <pubDate>Sat, 16 Nov 2019 13:19:42 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/categories/load-balancer/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>CENTOS 7 Administrator</title>

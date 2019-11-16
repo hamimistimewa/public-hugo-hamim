@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/membangun-cms-wordpress-menggunakan-load-balancer-pada-centos-7/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/pengenalan-dasar-haproxy/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Pengenalan Dasar HAProxy | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Pengenalan Dasar HAProxy | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Pengenalan Dasar HAProxy",
+    "headline" : "Pengenalan Dasar HAProxy",
+    "description" : "Pengenalan HAProxy High Availability Proxy adalah kepanjangan dari HAProxy sebuah perangkat lunak open source dibawah GPLv2 license. HAProxy digunakan untuk membagi beban request atau load balancer TCP\/HTTP dan solusi proxy yang dapat dijalankan di sistem operasi Linux, Solaris, dan FreeBSD.\nPembagian bebannya pun beragam sesuai dengan algoritma yang ada. HAProxy sudah umum digunakan untuk meningkatkan kinerja dan kehandalan sebuah server dengan mendistribusikan beban kerja dari beberapa server lain seperti web server, database server, smtp server dan yang lainnya.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-11-16 13:19:42 \x2b0700 \x2b07",
+    "dateModified" : "2019-11-16 13:19:42 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/pengenalan-dasar-haproxy\/",
+    "wordCount" : "563",
+    "keywords" : [ "LB","Load Balancer","HAProxy", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Pengenalan Dasar HAProxy</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-11-16 itemprop="datePublished">November 16, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/load-balancer/"> Load Balancer </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://haproxy.s3-id-jkt-1.kilatstorage.id/pengenalan-dasar/Load%20Balancer.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="pengenalan-haproxy">Pengenalan HAProxy</h3>
+
+<p><strong>High Availability Proxy</strong> adalah kepanjangan dari HAProxy sebuah perangkat lunak open source dibawah <strong>GPLv2 license</strong>. HAProxy digunakan untuk membagi beban request atau load balancer TCP/HTTP dan solusi proxy yang dapat dijalankan di sistem operasi Linux, Solaris, dan FreeBSD.</p>
+
+<p>Pembagian bebannya pun beragam sesuai dengan algoritma yang ada. HAProxy sudah umum digunakan untuk meningkatkan kinerja dan kehandalan sebuah server dengan mendistribusikan beban kerja dari beberapa server lain seperti web server, database server, smtp server dan yang lainnya.</p>
+
+<h3 id="fitur-haproxy">Fitur HAProxy</h3>
+
+<p>HAProxy mempunyai banyak fitur yang dapat digunakan sesuai dengan kebutuhan Anda diantaranya sebagai berikut:</p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Transport_layer" rel="nofollow noreferrer" target="_blank">Layer 4 (TCP)</a> and <a href="https://en.wikipedia.org/wiki/OSI_model#Layer_7:_Application_Layer" rel="nofollow noreferrer" target="_blank">Layer 7 (HTTP)</a> load balancing</li>
+<li><a href="https://en.wikipedia.org/wiki/Rewrite_engine" rel="nofollow noreferrer" target="_blank">URL rewriting</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rate_limiting" rel="nofollow noreferrer" target="_blank">Rate limiting</a></li>
+<li>SSL/TLS termination</li>
+<li><a href="https://en.wikipedia.org/wiki/Gzip" rel="nofollow noreferrer" target="_blank">Gzip compression</a></li>
+<li>Proxy Protocol support</li>
+<li>Health checking</li>
+<li>Connection and HTTP message logging</li>
+<li><a href="https://en.wikipedia.org/wiki/HTTP/2" rel="nofollow noreferrer" target="_blank">HTTP/2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)" rel="nofollow noreferrer" target="_blank">Multithreading</a></li>
+<li>Hitless Reloads</li>
+<li><a href="https://en.wikipedia.org/wiki/GRPC" rel="nofollow noreferrer" target="_blank">gRPC</a> Support</li>
+<li><a href="https://en.wikipedia.org/wiki/Lua_(programming_language)" rel="nofollow noreferrer" target="_blank">Lua</a> and SPOE Support</li>
+<li><a href="https://en.wikipedia.org/wiki/Application_programming_interface" rel="nofollow noreferrer" target="_blank">API</a> Support</li>
+<li>Layer 4 Retries</li>
+<li>Simplified circuit breaking</li>
+</ul>
+
+<h3 id="haruskah-menggunakan-haproxy">Haruskah Menggunakan HAProxy?</h3>
+
+<p>Jika Anda ingin mempunyai sebuah website dengan high availability yang tinggi Anda dapat memanfaatkan HAProxy.</p>
+
+<p>Karena HAProxy khusus digunakan untuk high performance, reliable, mature, dan selain itu banyak fitur pendukung yang dapat dimanfaatkan.</p>
+
+<p>Selain fitur terdapat beberapa variasi yang dapat Anda terapkan di HAProxy Anda dapat berfokus pada besaran request rate, berapa konkuren requst, penggunaan bandwith dan SSL.</p>
+
+<p>Manfaat lainnya yang akan didapatkan jika Anda menggunakan HAProxy adalah Anda akan mendapatkan impact yang besar dalam performa namun kecil dalam penggunaan resource.</p>
+
+<p>Dengan demikian apakah Anda harus menggunakan HAProxy?</p>
+
+<p>Semua bergantung dengan kebutuahn Anda masing - masing. Jika website Anda hanya perlu berjalan tanpa high availability Anda tidak perlu menggunakan HAProxy sebaliknya jika website Anda high availability Anda dapat menggunakan HAProxy.</p>
+
+<h3 id="bagaimana-cara-kerja-load-balancer-haproxy">Bagaimana Cara Kerja Load Balancer HAProxy</h3>
+
+<p>Load Balancer menggunakan HAProxy bekerja sesuai dengan algoritma yang ditentukan. Terdapat 3 algoritma yang dapat digunakan diantaranya:</p>
+
+<h4 id="1-roundrobin">1. Roundrobin</h4>
+
+<p>Algoritma Roundrobin salah satu algoritma default yang umum digunakan, cara kerjanya yaitu memilih secara bergantian antara host 1 dengan bost 2 dan seterusnya apabila terdapat request dari client.</p>
+
+<h4 id="2-leastconn">2. Leastconn</h4>
+
+<p>Jika Anda menggunakan algoritma Lestconn maka Anda dapat menentukan host mana yang akan menjadi beban atau tumpuan bila terdapat request dari client. Namun di sisi Backend Anda masih dapat menggunakan algoritma roundrobin.</p>
+
+<h4 id="3-source">3. Source</h4>
+
+<p>Algoritma Source adalah salah satu metode yang dapat digunakan untuk memastikan bahwa pengguna akan terhubung ke server yang sama. Anda dapat memilih berdasarkan hash dari IP sumber yaitu alamat IP pengguna (Client).</p>
+
+<p>Berikut ini merupakan perbedaan menggunakan Load Balancer atau tanpa Load Balancer. Perhatikan topologi berikut:</p>
+
+<h4 id="tanpa-load-balancer">Tanpa Load Balancer</h4>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://haproxy.s3-id-jkt-1.kilatstorage.id/pengenalan-dasar/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada topologi diatas terdapat user mengakses web server Anda, namun web server dan database server Anda berjalan bersama di dalam satu server tanpa load balancer.</p>
+
+<p>Jika server tersebut mati (down) maka user tidak akan dapat mengakses webserver Anda kembali dan sudah dapat dipastikan website Anda down.</p>
+
+<p>Selain itu, jika banyak pengguna mencoba mengakses server Anda secara bersamaan dan server overload (karena tidak ada load balancer), maka sudah dapat dipastikan website Anda akan terasa lambat dan bahkan tidak terhubung sama sekali.</p>
+
+<p>Jika Anda menggunakan Load Balancer pada server terdapat 2 layer yang dapat Anda terapkan diantaranya:</p>
+
+<h4 id="menggunakan-load-balancer">Menggunakan Load Balancer</h4>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://haproxy.s3-id-jkt-1.kilatstorage.id/pengenalan-dasar/lb-layer-4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada topologi diatas setiap client mengakses website Anda (domainanda.com) maka akan di handle dengan Load Balancer tidak langsung ke web server dengan demikian bila <strong>web-1</strong> down masih ada <strong>web-2</strong> yang akan menghandle (domaianda.com) dan website tidak akan down. Namun pastikan juga semua <strong>web-1 dan web-2</strong> mempunyai content yang sama dan terhubung ke server database.</p>
+
+<p>Sekian panduan terkait pengenalan dasar Load Balancer !</p>
+
+<p>See You &gt;.&lt;</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/pengenalan-dasar-haproxy/>https://nurhamim.net/pengenalan-dasar-haproxy/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/lb/">
+                    #LB</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/load-balancer/">
+                    #Load Balancer</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/haproxy/">
+                    #HAProxy</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/membangun-cms-wordpress-menggunakan-load-balancer-pada-centos-7/" class="prev" rel="prev" title="Membangun CMS WordPress Menggunakan Load Balancer Pada CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Membangun CMS WordPress Menggunakan Load Balancer Pada CentOS 7</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

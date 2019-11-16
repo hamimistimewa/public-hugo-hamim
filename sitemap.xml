@@ -4,7 +4,7 @@
     <url>
       <loc>https://nurhamim.net/</loc>
       
-      <lastmod>2019-10-28T21:23:44+07:00</lastmod>
+      <lastmod>2019-11-16T13:19:42+07:00</lastmod>
       
       
       
@@ -14,7 +14,77 @@
     <url>
       <loc>https://nurhamim.net/categories/</loc>
       
-      <lastmod>2019-10-28T21:23:44+07:00</lastmod>
+      <lastmod>2019-11-16T13:19:42+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/haproxy/</loc>
+      
+      <lastmod>2019-11-16T13:19:42+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/lb/</loc>
+      
+      <lastmod>2019-11-16T13:19:42+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/categories/load-balancer/</loc>
+      
+      <lastmod>2019-11-16T13:19:42+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/load-balancer/</loc>
+      
+      <lastmod>2019-11-16T13:19:42+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/pengenalan-dasar-haproxy/</loc>
+      
+      <lastmod>2019-11-16T13:19:42+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/posts/</loc>
+      
+      <lastmod>2019-11-16T13:19:42+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/</loc>
+      
+      <lastmod>2019-11-16T13:19:42+07:00</lastmod>
       
       
       
@@ -33,16 +103,6 @@
   
     <url>
       <loc>https://nurhamim.net/categories/centos-7-administrator/</loc>
-      
-      <lastmod>2019-10-28T21:23:44+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/lb/</loc>
       
       <lastmod>2019-10-28T21:23:44+07:00</lastmod>
       
@@ -82,27 +142,7 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/posts/</loc>
-      
-      <lastmod>2019-10-28T21:23:44+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/tags/s3-protokol/</loc>
-      
-      <lastmod>2019-10-28T21:23:44+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/</loc>
       
       <lastmod>2019-10-28T21:23:44+07:00</lastmod>
       
