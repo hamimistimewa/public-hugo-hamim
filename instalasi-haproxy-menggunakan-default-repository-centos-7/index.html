@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/pengenalan-dasar-haproxy/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/instalasi-haproxy-menggunakan-default-repository-centos-7/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi HAProxy Menggunakan Default Repository CentOS 7 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Instalasi HAProxy Menggunakan Default Repository CentOS 7 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi HAProxy Menggunakan Default Repository CentOS 7",
+    "headline" : "Instalasi HAProxy Menggunakan Default Repository CentOS 7",
+    "description" : "Pada kesempatan kali ini kami akan berbagi bagaimana cara melakukan instalasi HAProxy menggunakan repository default dari CentOS 7.\nVersi HAProxy yang ada pada repository default CentOS 7 yaitu versi 1.5.18.\nSebelum ke tahapan instalasi kami harapkan Anda sudah mengerti terkait pengenalan dasar tentang HAProxy yang dapat Anda ketahui melalui link berikut: Pengenalan Dasar HAProxy\nBerikut ini tahapan - tahapan untuk instalasinya:\n Akses server Anda masing - masing. Di sini kami menggunakan CentOS 7 Lakukan update pada CentOS 7 Anda gunakan perintah berikut:",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-11-16 23:21:28 \x2b0700 \x2b07",
+    "dateModified" : "2019-11-16 23:21:28 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/instalasi-haproxy-menggunakan-default-repository-centos-7\/",
+    "wordCount" : "556",
+    "keywords" : [ "LB","Load Balancer","HAProxy", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi HAProxy Menggunakan Default Repository CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-11-16 itemprop="datePublished">November 16, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/load-balancer/"> Load Balancer </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Pada kesempatan kali ini kami akan berbagi bagaimana cara melakukan instalasi HAProxy menggunakan repository default dari CentOS 7.</p>
+
+<p>Versi HAProxy yang ada pada repository default CentOS 7 yaitu versi 1.5.18.</p>
+
+<p>Sebelum ke tahapan instalasi kami harapkan Anda sudah mengerti terkait pengenalan dasar tentang HAProxy yang dapat Anda ketahui melalui link berikut: <strong><a href="https://nurhamim.net/pengenalan-dasar-haproxy/" rel="nofollow noreferrer" target="_blank">Pengenalan Dasar HAProxy</a></strong></p>
+
+<p>Berikut ini tahapan - tahapan untuk instalasinya:</p>
+
+<ol>
+<li>Akses server Anda masing - masing. Di sini kami menggunakan CentOS 7</li>
+
+<li><p>Lakukan update pada CentOS 7 Anda gunakan perintah berikut:</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb ~]# 
+[root@nur-srv-lb ~]# yum update -y
+</code></pre></li>
+
+<li><p>Memeriksa versi dan ketersediaan HAProxy berikut perintahnya</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb ~]#
+[root@nur-srv-lb ~]# yum info haproxy
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+* base: mirror.dionipe.net
+* extras: mirror.dionipe.net 
+* updates: mirror.dionipe.net
+Available Packages
+Name        : haproxy
+Arch        : x86_64
+Version     : 1.5.18
+Release     : 9.el7
+Size        : 834 k
+Repo        : base/7/x86_64
+Summary     : TCP/HTTP proxy and load balancer for high availability environments      
+URL         : http://www.haproxy.org/
+License     : GPLv2+
+Description : HAProxy is a TCP/HTTP reverse proxy which is particularly suited for high
+        : availability environments. Indeed, it can:
+        :  - route HTTP requests depending on statically assigned cookies
+        :  - spread load among several servers while assuring server persistence   
+        :    through the use of HTTP cookies
+        :  - switch to backup servers in the event a main server fails
+        :  - accept connections to special ports dedicated to service monitoring   
+        :  - stop accepting connections without breaking existing ones
+        :  - add, modify, and delete HTTP headers in both directions
+        :  - block requests matching particular patterns
+        :  - report detailed status to authenticated users from a URI
+        :    intercepted by the application
+
+[root@nur-srv-lb ~]# 
+</code></pre></li>
+
+<li><p>Untuk instalasi HAProxy gunakan satu baris perintah berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb ~]#
+[root@nur-srv-lb ~]# yum install haproxy   
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+* base: mirror.dionipe.net   
+* extras: mirror.dionipe.net 
+* updates: mirror.dionipe.net
+Resolving Dependencies
+--&gt; Running transaction check
+---&gt; Package haproxy.x86_64 0:1.5.18-9.el7 will be installed
+--&gt; Finished Dependency Resolution
+
+Dependencies Resolved
+
+====================================================================================================== Package                Arch                  Version                       Repository           Size 
+======================================================================================================Installing:
+haproxy                x86_64                1.5.18-9.el7                  base                834 k 
+
+Transaction Summary
+======================================================================================================Install  1 Package
+
+Total download size: 834 k
+Installed size: 2.6 M
+Is this ok [y/d/N]: y 
+Downloading packages:
+haproxy-1.5.18-9.el7.x86_64.rpm                                                | 834 kB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+Installing : haproxy-1.5.18-9.el7.x86_64                                                        1/1 
+Verifying  : haproxy-1.5.18-9.el7.x86_64                                                        1/1 
+
+Installed:
+haproxy.x86_64 0:1.5.18-9.el7
+
+Complete!
+[root@nur-srv-lb ~]# 
+</code></pre></li>
+
+<li><p>Untuk melihat versi HAProxy yang sudah berhasil di install gunakan perintah</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb ~]#
+[root@nur-srv-lb ~]# haproxy -v            
+HA-Proxy version 1.5.18 2016/05/10
+Copyright 2000-2016 Willy Tarreau &lt;willy@haproxy.org&gt;
+
+[root@nur-srv-lb ~]#
+</code></pre></li>
+
+<li><p>Mengaktifkan (running) HAProxy jalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb ~]# 
+[root@nur-srv-lb ~]# systemctl start haproxy
+[root@nur-srv-lb ~]# systemctl enable haproxy
+Created symlink from /etc/systemd/system/multi-user.target.wants/haproxy.service to /usr/lib/systemd/system/haproxy.service.
+[root@nur-srv-lb ~]# 
+</code></pre></li>
+
+<li><p>Untuk melihat status HAProxy gunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-lb ~]#
+[root@nur-srv-lb ~]# systemctl status haproxy
+● haproxy.service - HAProxy Load Balancer
+Loaded: loaded (/usr/lib/systemd/system/haproxy.service; enabled; vendor preset: disabled)
+Active: active (running) since Sat 2019-11-16 18:56:54 UTC; 2min 20s ago
+Main PID: 15147 (haproxy-systemd)
+CGroup: /system.slice/haproxy.service
+       ├─15147 /usr/sbin/haproxy-systemd-wrapper -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid
+       ├─15148 /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid -Ds
+       └─15149 /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid -Ds
+
+Nov 16 18:56:54 nur-srv-lb.novalocal systemd[1]: Started HAProxy Load Balancer.
+[root@nur-srv-lb ~]#
+</code></pre></li>
+</ol>
+
+<p>Saat ini instalasi HAProxy menggunkana repository default CentOS 7 telah berhasil di lakukan.</p>
+
+<p>Selamat Mencoba semoga bermanfaat !</p>
+
+<p>See You &gt;.&lt;</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/instalasi-haproxy-menggunakan-default-repository-centos-7/>https://nurhamim.net/instalasi-haproxy-menggunakan-default-repository-centos-7/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/lb/">
+                    #LB</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/load-balancer/">
+                    #Load Balancer</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/haproxy/">
+                    #HAProxy</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/pengenalan-dasar-haproxy/" class="prev" rel="prev" title="Pengenalan Dasar HAProxy"><i class="iconfont icon-left"></i>&nbsp;Pengenalan Dasar HAProxy</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
