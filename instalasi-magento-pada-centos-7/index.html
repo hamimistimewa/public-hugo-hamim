@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/compile-haproxy-2.0-pada-centos-7/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/instalasi-magento-pada-centos-7/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi Magento Pada CentOS 7 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Instalasi Magento Pada CentOS 7 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi Magento Pada CentOS 7",
+    "headline" : "Instalasi Magento Pada CentOS 7",
+    "description" : "Pada panduan kali ini saya akan berbagi bagaiamana tahapan instalasi Magento pada CentOS 7.\nApa itu Magento?\nMagento adalah platform e-commerce open-source yang ditulis menggunakan PHP. Magento salah satu sistem e-commerce terbuka yang paling populer. Magento dibuat menggunakan Zend Framework.\nKode sumber Magento didistribusikan di bawah Open Source Initiative (OSI) yang disetujui oleh Open Software License (OSL) v3.0, yang mirip dengan AGPL tetapi tidak sesuai dengan GPL. Selengkapnya dapat merujuk pada link berikut: Wikipedia Magento.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-11-24 17:03:41 \x2b0700 \x2b07",
+    "dateModified" : "2019-11-24 17:03:41 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/instalasi-magento-pada-centos-7\/",
+    "wordCount" : "2616",
+    "keywords" : [ "Magento2","CentOS 7", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi Magento Pada CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-11-24 itemprop="datePublished">November 24, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/sinau-magento-2/"> Sinau Magento 2 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>Pada panduan kali ini saya akan berbagi bagaiamana tahapan instalasi Magento pada CentOS 7.</p>
+
+<p>Apa itu Magento?</p>
+
+<p>Magento adalah platform e-commerce open-source yang ditulis menggunakan PHP. Magento salah satu sistem e-commerce terbuka yang paling populer. Magento dibuat menggunakan Zend Framework.</p>
+
+<p>Kode sumber Magento didistribusikan di bawah Open Source Initiative (OSI) yang disetujui oleh Open Software License (OSL) v3.0, yang mirip dengan AGPL tetapi tidak sesuai dengan GPL. Selengkapnya dapat merujuk pada link berikut: <a href="https://en.wikipedia.org/wiki/Magento" rel="nofollow noreferrer" target="_blank">Wikipedia Magento.</a></p>
+
+<p>Berikut ini merupakan topologi sederhana yang akan saya gunakan</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/topologi-magento.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada topologi diatas saya membutuhkan 2 Instance diantaranya:</p>
+
+<ol>
+<li>Digunakan untuk server web server magento</li>
+<li>Digunakan untuk server database magento</li>
+</ol>
+
+<p>Dimana nantinya server database magento akan terhubung dengan server web magento menggunakan private IP. Panduan kali ini saya menggunakan <a href="https://www.biznetgio.com/neo" rel="nofollow noreferrer" target="_blank">NEO Cloud</a> sebagai penyedia layanan Cloud Computing yang mudah digunakan dan tentunya berkualitas dalam segi performance dan yang lainnya.</p>
+
+<h3 id="tahapan-instalasi-magento-2-2">Tahapan Instalasi Magento 2.2</h3>
+
+<h4 id="akses-instance-web-server-magento">Akses Instance Web Server Magento</h4>
+
+<p>Silakan akses server Web Magento Anda, dan terlebih dahulu update sistem operasi CentOS 7 Anda menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-web ~]# yum update -y
+</code></pre>
+
+<p>Silakan tunggu sampai proses update selesai, jika sudah langkah selanjutnya menambahkan installasi epel gunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-web ~]#
+[root@srv-web ~]# yum install epel-release -y
+</code></pre>
+
+<p>Langkah selanjutnya yaitu instalasi web server, disini saya menggunakan Nginx. Untuk instalasi Nginx Anda hanya perlu menjalankan satu baris perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-web ~]#
+[root@srv-web ~]# yum install nginx -y
+</code></pre>
+
+<p>Jika sudah silakan start, enable Nginx dan pastikan service nya running seperti berikut</p>
+
+<pre><code class="language-bash">[root@srv-web ~]#
+[root@srv-web ~]# systemctl start nginx
+[root@srv-web ~]# systemctl enable nginx
+Created symlink from /etc/systemd/system/multi-user.target.wants/nginx.service to /usr/lib/systemd/system/nginx.service.
+[root@srv-web ~]# systemctl status nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-11-24 10:49:48 UTC; 9s ago
+ Main PID: 15067 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─15067 nginx: master process /usr/sbin/nginx
+           ├─15068 nginx: worker process
+           └─15069 nginx: worker process
+
+Nov 24 10:49:48 srv-web.hamim.web.id systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Nov 24 10:49:48 srv-web.hamim.web.id nginx[15062]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok  
+Nov 24 10:49:48 srv-web.hamim.web.id nginx[15062]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Nov 24 10:49:48 srv-web.hamim.web.id systemd[1]: Started The nginx HTTP and reverse proxy server.
+[root@srv-web ~]# 
+</code></pre>
+
+<p>Selanjutnya instalasi PHP. Disini saya akan menggunakan php 7.2 webtatic, terlebih dahulu silakan enable repository webtatic sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-web ~]#
+[root@srv-web ~]# rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+Retrieving https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:epel-release-7-12                ################################# [ 50%]
+Cleaning up / removing...
+   2:epel-release-7-11                ################################# [100%]
+[root@srv-web ~]# 
+[root@srv-web ~]# rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+Retrieving https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+warning: /var/tmp/rpm-tmp.6VcXw1: Header V4 RSA/SHA1 Signature, key ID 62e74ca5: NOKEY
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:webtatic-release-7-3             ################################# [100%]
+[root@srv-web ~]#
+</code></pre>
+
+<p>Selanjutnya instalasi ekstensi PHP72 yang dibutuhkan Magento 2 sebagai berikut,</p>
+
+<pre><code class="language-bash">[root@srv-web ~]# 
+[root@srv-web ~]# yum install php72w-{fpm,cli,bcmath,devel,gd,iconv,intl,json,mbstring,mysqlnd,opcache,pdo,soap,xml} -y
+</code></pre>
+
+<p>Untuk melihat versi php gunakan perintah berikut:</p>
+
+<pre><code class="language-bash">[root@srv-web ~]# 
+[root@srv-web ~]# php -v
+PHP 7.2.24 (cli) (built: Oct 26 2019 12:28:19) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.2.24, Copyright (c) 1999-2018, by Zend Technologies
+[root@srv-web ~]# 
+</code></pre>
+
+<p>Selanjutnya konfigurasi php.ini, di CentOS 7 php.ini berada di direktori <strong>/etc/php.ini</strong> silakan gunakan teks editor untuk membukanya, disini saya menggunakan vim.</p>
+
+<pre><code class="language-bash">[root@srv-web ~]#
+[root@srv-web ~]# vim /etc/php.ini
+
+Ubah beberapa parameter berikut:
+
+memory_limit = 128M           &gt;&gt; memory_limit = 2G
+max_execution_time = 30       &gt;&gt; max_execution_time = 1800
+zlib.output_compression = Off &gt;&gt; zlib.output_compression = On
+session.save_path = &quot;N;/path&quot; &gt;&gt; session.save_path = &quot;/var/lib/php/session&quot;
+</code></pre>
+
+<p>Jika sudah silakan simpan konfigurasi php.ini</p>
+
+<p>Langkah selanjutnya melakukan konfigurasi <strong>php-fpm</strong> yang berada di direktori <strong>/etc/php-fpm.d/www.conf</strong> silakan buka menggunakan teks editor</p>
+
+<pre><code class="language-bash">[root@srv-web ~]# 
+[root@srv-web ~]# vim /etc/php-fpm.d/www.conf
+
+Ubah beberapa parameter berikut: 
+
+user = apache           &gt;&gt; user = nginx
+group = apache          &gt;&gt; group = nginx
+listen = 127.0.0.1:9000 &gt;&gt; listen = /run/php-fpm/php-fpm.sock
+
+Uncoment dan ubah beberapa parameter berikut:
+
+;listen.owner = nobody &gt;&gt; listen.owner = nginx
+;listen.group = nobody &gt;&gt; listen.group = nginx
+;listen.mode = 0660    &gt;&gt; listen.mode = 0660
+
+Uncoment beberapa parameter berikut:
+
+;env[HOSTNAME] = $HOSTNAME                  &gt;&gt;  env[HOSTNAME] = $HOSTNAME 
+;env[PATH] = /usr/local/bin:/usr/bin:/bin   &gt;&gt;  env[PATH] = /usr/local/bin:/usr/bin:/bin
+;env[TMP] = /tmp                            &gt;&gt;  env[TMP] = /tmp
+;env[TMPDIR] = /tmp                         &gt;&gt;  env[TMPDIR] = /tmp
+;env[TEMP] = /tmp                           &gt;&gt;  env[TEMP] = /tmp
+</code></pre>
+
+<p>Jika sudah silakan simpan konfigurasi php-fpm.</p>
+
+<p>Selanjutnya membuat direktori php session dan change owner nya menjadi nginx sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@srv-web ~]#
+[root@srv-web ~]# mkdir -p /var/lib/php/session
+[root@srv-web ~]# chown -R nginx:nginx /var/lib/php/
+[root@srv-web ~]# mkdir -p /run/php-fpm
+[root@srv-web ~]# chown -R nginx:nginx /run/php-fpm/
+[root@srv-web ~]#
+</code></pre>
+
+<p>Silakan start, enable dan pastikan service php-fpm Anda sudah running dengan normal sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-web ~]# 
+[root@srv-web ~]# systemctl start php-fpm
+[root@srv-web ~]# systemctl enable php-fpm
+Created symlink from /etc/systemd/system/multi-user.target.wants/php-fpm.service to /usr/lib/systemd/system/php-fpm.service.
+[root@srv-web ~]# systemctl status php-fpm
+● php-fpm.service - The PHP FastCGI Process Manager
+   Loaded: loaded (/usr/lib/systemd/system/php-fpm.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-11-24 11:18:37 UTC; 12s ago
+ Main PID: 15302 (php-fpm)
+   Status: &quot;Processes active: 0, idle: 5, Requests: 0, slow: 0, Traffic: 0req/sec&quot;
+   CGroup: /system.slice/php-fpm.service
+           ├─15302 php-fpm: master process (/etc/php-fpm.conf)
+           ├─15303 php-fpm: pool www
+           ├─15304 php-fpm: pool www
+           ├─15305 php-fpm: pool www
+           ├─15306 php-fpm: pool www
+           └─15307 php-fpm: pool www
+
+Nov 24 11:18:37 srv-web.hamim.web.id systemd[1]: Starting The PHP FastCGI Process Manager... 
+Nov 24 11:18:37 srv-web.hamim.web.id systemd[1]: Started The PHP FastCGI Process Manager.    
+[root@srv-web ~]#
+[root@srv-web ~]# netstat -pl | grep php-fpm.sock
+unix  2      [ ACC ]     STREAM     LISTENING     66249    15302/php-fpm: mast  /run/php-fpm/php-fpm.sock
+[root@srv-web ~]# 
+</code></pre>
+
+<p>Langkah selanjutnya unduh Magento dan ekstract Magento di dokumen root Nginx sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-web ~]#
+[root@srv-web ~]# cd /usr/share/nginx/html/
+[root@srv-web html]# 
+[root@srv-web html]# wget wget https://github.com/magento/magento2/archive/2.2.tar.gz
+--2019-11-24 11:21:00--  http://wget/
+Resolving wget (wget)... failed: Name or service not known.
+wget: unable to resolve host address 'wget'
+--2019-11-24 11:21:00--  https://github.com/magento/magento2/archive/2.2.tar.gz
+Resolving github.com (github.com)... 52.74.223.119
+Connecting to github.com (github.com)|52.74.223.119|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/magento/magento2/tar.gz/2.2 [following]   
+--2019-11-24 11:21:00--  https://codeload.github.com/magento/magento2/tar.gz/2.2
+Resolving codeload.github.com (codeload.github.com)... 13.250.162.133
+Connecting to codeload.github.com (codeload.github.com)|13.250.162.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: '2.2.tar.gz'
+
+    [                                                             &lt;=&gt;                                               ] 43,295,067  3.88MB/s   in 12s    
+
+2019-11-24 11:21:13 (3.36 MB/s) - '2.2.tar.gz' saved [43295067]
+
+FINISHED --2019-11-24 11:21:13--
+Total wall clock time: 13s
+Downloaded: 1 files, 41M in 12s (3.36 MB/s)
+[root@srv-web html]#
+</code></pre>
+
+<p>Ekstrack dan ubah direktori magento menjadi magento2, untuk penamaan direktori ini bersifat optional silakan disesuaikan dengan keinginan Anda masing - masing.</p>
+
+<pre><code class="language-bash">[root@srv-web html]#
+[root@srv-web html]# tar -xzvf 2.2.tar.gz
+[root@srv-web html]# mv magento2-2.2/ magento2     
+[root@srv-web html]# 
+</code></pre>
+
+<p>Setup permission dan change owner direktori magento2 sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-web html]#
+[root@srv-web html]# cd magento2/
+[root@srv-web magento2]# 
+[root@srv-web magento2]# find var vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
+[root@srv-web magento2]# find var vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
+[root@srv-web magento2]# chown -R nginx:nginx .
+[root@srv-web magento2]# chmod u+x bin/magento
+[root@srv-web magento2]# 
+</code></pre>
+
+<p>Langkah selanjutnya instalasi composer gunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-web magento2]#
+[root@srv-web magento2]# curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
+All settings correct for using Composer
+Downloading...
+
+Composer (version 1.9.1) successfully installed to: /usr/bin/composer
+Use it: php /usr/bin/composer
+
+[root@srv-web magento2]# 
+</code></pre>
+
+<p>Update dependensi Magento 2.2 menggunakan composer sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-web magento2]# composer install
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/composer-install.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan tunggu sampai selesai.</p>
+
+<p>Jika sudah selanjutnya konfigurasi Virtual Block Nginx sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 ~]#
+[root@nur-srv-web02 ~]# vim /etc/nginx/conf.d/magento.conf
+
+Isikan konfigurasi nginx sebagai berikut:
+
+upstream fastcgi_backend {
+  server unix:/run/php-fpm/php-fpm.sock;
+}
+
+server {
+
+  listen 80;
+  server_name hamim.web.id;
+  set $MAGE_ROOT /usr/share/nginx/html/magento2;
+  include /usr/share/nginx/html/magento2/nginx.conf.sample;
+}
+</code></pre>
+
+<p>Silakan disesuaikan untuk server name nya, jika sudah silakan simpan konfigurasi virtualblock Nginx.</p>
+
+<p>Langkah selanjutnya verivikasi konfigurasi Nginx dan restart nginx</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 ~]#
+[root@nur-srv-web02 ~]# nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok  
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+[root@nur-srv-web02 ~]#
+[root@nur-srv-web02 ~]# systemctl restart nginx
+[root@nur-srv-web02 ~]# systemctl status  nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-11-24 12:08:35 UTC; 1min 9s ago
+  Process: 8519 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)
+  Process: 8516 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)
+  Process: 8514 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)
+ Main PID: 8521 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─8521 nginx: master process /usr/sbin/nginx
+           ├─8522 nginx: worker process
+           └─8523 nginx: worker process
+
+Nov 24 12:08:35 nur-srv-web02.novalocal systemd[1]: Stopped The nginx HTTP and reverse proxy server.
+Nov 24 12:08:35 nur-srv-web02.novalocal systemd[1]: Starting The nginx HTTP and reverse proxy server...
+Nov 24 12:08:35 nur-srv-web02.novalocal nginx[8516]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok  
+Nov 24 12:08:35 nur-srv-web02.novalocal nginx[8516]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Nov 24 12:08:35 nur-srv-
+</code></pre>
+
+<h4 id="akses-instance-database-magento">Akses Instance Database Magento</h4>
+
+<p>Langkah selanjutnya yaitu melakukan setup database magento, terlebih dahulu update sistem operasi CentOS 7 Anda menggunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-db ~]#
+[root@srv-db ~]# yum update -y
+</code></pre>
+
+<p>Jika sudah silakan install database Magento, disini saya menggunakan MySQL Community versi 5.6. Unduh repository MySQL Community gunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-db ~]#
+[root@srv-db ~]# wget http://repo.mysql.com/mysql-community-release-el6-5.noarch.rpm &amp;&amp; sudo rpm -ivh mysql-community-release-el6-5.noarch.rpm
+--2019-11-24 11:37:31--  http://repo.mysql.com/mysql-community-release-el6-5.noarch.rpm
+Resolving repo.mysql.com (repo.mysql.com)... 23.53.161.122
+Connecting to repo.mysql.com (repo.mysql.com)|23.53.161.122|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5824 (5.7K) [application/x-redhat-package-manager]
+Saving to: 'mysql-community-release-el6-5.noarch.rpm'
+
+100%[==============================================================================================================&gt;] 5,824       --.-K/s   in 0s      
+
+2019-11-24 11:37:31 (137 MB/s) - 'mysql-community-release-el6-5.noarch.rpm' saved [5824/5824]
+
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:mysql-community-release-el6-5    ################################# [100%]
+[root@srv-db ~]# 
+</code></pre>
+
+<p>Install MySQL Server menggunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-db ~]# 
+[root@srv-db ~]# yum install mysql-server -y
+</code></pre>
+
+<p>Untuk melihat versi MySQL yang telah berhasil di install gunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-db ~]#
+[root@srv-db ~]# mysql -V
+mysql  Ver 14.14 Distrib 5.6.46, for Linux (x86_64) using  EditLine wrapper
+[root@srv-db ~]#
+</code></pre>
+
+<p>Silakan start MySQL server Anda dan pastikan service nya suah running dengan normal sebagai berikut,</p>
+
+<pre><code class="language-bash">[root@srv-db ~]# systemctl start mysqld
+[root@srv-db ~]# systemctl status mysqld
+● mysqld.service - SYSV: MySQL database server.
+   Loaded: loaded (/etc/rc.d/init.d/mysqld; bad; vendor preset: disabled)
+   Active: active (running) since Sun 2019-11-24 11:42:06 UTC; 16s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 25278 ExecStart=/etc/rc.d/init.d/mysqld start (code=exited, status=0/SUCCESS)
+ Main PID: 25564 (mysqld)
+</code></pre>
+
+<p>Setup username dan password root MySQL Server Anda  gunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-db ~]#
+[root@srv-db ~]# mysql_secure_installation
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:   
+        LANGUAGE = (unset),
+        LC_ALL = (unset),
+        LANG = &quot;C.UTF-8&quot;
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale (&quot;C&quot;).
+
+
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MySQL
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY! 
+
+In order to log into MySQL to secure it, we'll need the current    
+password for the root user.  If you've just installed MySQL, and   
+you haven't set the root password yet, the password will be blank, 
+so you should just press enter here.
+
+Enter current password for root (enter for none):
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MySQL
+root user without the proper authorisation.
+
+Set root password? [Y/n] Y
+New password: 
+Re-enter new password: 
+Password updated successfully!
+Reloading privilege tables..  
+ ... Success!
+
+
+By default, a MySQL installation has an anonymous user, allowing anyone
+to log into MySQL without having to have a user account created for    
+them.  This is intended only for testing, and to make the installation 
+go a bit smoother.  You should remove them before moving into a        
+production environment.
+
+Remove anonymous users? [Y/n]
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n]
+ ... Success!
+
+By default, MySQL comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n]
+ - Dropping test database...
+ERROR 1008 (HY000) at line 1: Can't drop database 'test'; database doesn't exist
+ ... Failed!  Not critical, keep moving...
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n]
+ ... Success!
+
+
+
+
+All done!  If you've completed all of the above steps, your MySQL
+installation should now be secure.
+
+Thanks for using MySQL!
+
+
+Cleaning up...
+[root@srv-db ~]#
+</code></pre>
+
+<p>Konfigurasi max allowed packet MySQL pada <strong>my.cnf</strong></p>
+
+<pre><code class="language-bash">[root@srv-db ~]#
+[root@srv-db ~]# vim /etc/my.cnf
+
+Seperti berikut
+
+# For advice on how to change settings please see
+# http://dev.mysql.com/doc/refman/5.6/en/server-configuration-defaults.html
+
+[mysqld]
+max_allowed_packet=16M
+#
+# Remove leading # and set to the amount of RAM for the most important data
+# cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.
+# innodb_buffer_pool_size = 128M
+</code></pre>
+
+<p>Jika sudah silakan simpan konfigurasi diatas.</p>
+
+<p>Selanjutnya membuat database Magento yang di grant ke server web Magento, sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-db ~]#
+[root@srv-db ~]# vim /etc/my.cnf
+[root@srv-db ~]#
+[root@srv-db ~]# mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 13
+Server version: 5.6.46 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&gt; create database magento;
+Query OK, 1 row affected (0.00 sec)
+
+mysql&gt; create user hamimaja identified by 'Isikan_Password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; grant all on magento.* to hamimaja@192.168.10.9 identified by 'Isikan_Password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; exit
+Bye
+[root@srv-db ~]#
+</code></pre>
+
+<p>Jika sudah silakan verisikasi atau pastikan di sisi web server magento sudah dapat remote database magento seperti berikut:</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 ~]#
+[root@nur-srv-web02 ~]# mysql -u hamimaja -p -h 192.168.10.17
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 3
+Server version: 5.6.46 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]&gt; show databases;
++--------------------+  
+| Database           |  
++--------------------+  
+| information_schema |  
+| magento            |  
++--------------------+  
+2 rows in set (0.00 sec)
+
+MySQL [(none)]&gt; 
+</code></pre>
+
+<h4 id="konfigurasi-magento-2-2">Konfigurasi Magento 2.2</h4>
+
+<p>Pada tahap terakhir terdapat 2 pemilihan untuk setup magento bisa menggunakan CLI ataupun Web Based.</p>
+
+<p>Disini saya akan menggunakan yang Web Based namun saya akan memberikan contoh menggunakan CLI sebagai berikut:</p>
+
+<p>Jika Anda ingin menggunakan CLI Anda dapat menggunakan tahapan berikut:</p>
+
+<p>Pindah ke direktori root Magento</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 ~]# cd /usr/share/nginx/html/magento2/  
+[root@nur-srv-web02 magento2]# 
+[root@nur-srv-web02 magento2]# cd bin/
+[root@nur-srv-web02 bin]# 
+[root@nur-srv-web02 bin]# 
+</code></pre>
+
+<p>Berikut command yang dapat Anda gunakan bila ingin menggunakan CLI, namun sebelum itu Anda dapat menyesuaikan terlebih dahulu seperti, url magento, koneksi database (nama, username, password database), Username Magento, Credential Admin (username, password Magento), Nilai mata Uang yang digunakan, time atau waktu zona Anda berada, dan bahasa yang ingin Anda gunakan. Contohnya sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 bin]# ./magento setup:install --base-url=http://www.magento-dev.com/ \
+--db-host=localhost --db-name=magento --db-user=magento --db-password=magento \
+--admin-firstname=Magento --admin-lastname=User --admin-email=user@example.com \
+--admin-user=admin --admin-password=admin123 --language=en_US \
+--currency=USD --timezone=America/Chicago --use-rewrites=1
+</code></pre>
+
+<p>Disini saya menggunakan Web Based saja berikut tahapannya:</p>
+
+<p>Silakan akses melalui browser IP atau domain yang sudah di konfigurasi pada saat membuat virtual block Nginx sebelumnya.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya klik menu <strong>Start Readiness Check</strong> untuk melihat atau check ekstensi PHP dan melanjutkan ke tahapan berikutnya,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Konfigurasi database, silakan isikan semua credential database yang telah di setup sebelumnya pada server Database magento seperti berikut,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Konfigurasi Web, disini Anda dapat menyesuaikan URL yang ingin digunakan silakan disamakan dengan server name yang telah dibuat sebelumnya pada konfigurasi Nginx dan pada menu ini Anda dapat menentukan juga URL Admin Magento sesuai dengan keinginan Anda,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sesuaikan time atau zona dimana Anda berada saat ini, mata uang yang ingin Anda gunakan, dan bahasa yang ingin Anda gunakan,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Membuat Admin Account disini Anda dapat menentukan credential untuk login ke Admin magento nantinya, silakan sesuaikan dengan keinginan Anda masing - masing.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Tahapan terakhir yaitu melakukan instalasi magento, silakan klik <strong>Install Now</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Tunggu proses install sampai selesai yang membutuhkan waktu,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah berhasil Anda akan mendapatkan informasi sebagai berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_11.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan login ke Admin Magento, dan isikan username dan password yang telah Anda buat sebelumnya,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_12.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut tampilan Dashboard Magento 2.2</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_13.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut tampilan default Magento 2.2</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-magento/Screenshot_14.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selamat Mencoba semoga bermanfaat bagi kita semua !.</p>
+
+<p>See You &gt;.&lt;</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/instalasi-magento-pada-centos-7/>https://nurhamim.net/instalasi-magento-pada-centos-7/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/magento2/">
+                    #Magento2</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/compile-haproxy-2.0-pada-centos-7/" class="prev" rel="prev" title="Compile HAProxy 2.0 Pada CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Compile HAProxy 2.0 Pada CentOS 7</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

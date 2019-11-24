@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Nov 2019 02:31:54 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 24 Nov 2019 17:03:41 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sinau Magento 2</title>
+      <link>https://nurhamim.net/categories/sinau-magento-2/</link>
+      <pubDate>Sun, 24 Nov 2019 17:03:41 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/categories/sinau-magento-2/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Load Balancer</title>

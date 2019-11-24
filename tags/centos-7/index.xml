@@ -6,10 +6,22 @@
     <description>Recent content in CentOS 7 on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Oct 2019 21:23:44 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 24 Nov 2019 17:03:41 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/centos-7/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Instalasi Magento Pada CentOS 7</title>
+      <link>https://nurhamim.net/instalasi-magento-pada-centos-7/</link>
+      <pubDate>Sun, 24 Nov 2019 17:03:41 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/instalasi-magento-pada-centos-7/</guid>
+      <description>Pada panduan kali ini saya akan berbagi bagaiamana tahapan instalasi Magento pada CentOS 7.
+Apa itu Magento?
+Magento adalah platform e-commerce open-source yang ditulis menggunakan PHP. Magento salah satu sistem e-commerce terbuka yang paling populer. Magento dibuat menggunakan Zend Framework.
+Kode sumber Magento didistribusikan di bawah Open Source Initiative (OSI) yang disetujui oleh Open Software License (OSL) v3.0, yang mirip dengan AGPL tetapi tidak sesuai dengan GPL. Selengkapnya dapat merujuk pada link berikut: Wikipedia Magento.</description>
+    </item>
     
     <item>
       <title>Membangun CMS WordPress Menggunakan Load Balancer Pada CentOS 7</title>
