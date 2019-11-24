@@ -4,7 +4,7 @@
     <url>
       <loc>https://nurhamim.net/</loc>
       
-      <lastmod>2019-11-24T17:03:41+07:00</lastmod>
+      <lastmod>2019-11-24T21:04:39+07:00</lastmod>
       
       
       
@@ -14,7 +14,7 @@
     <url>
       <loc>https://nurhamim.net/categories/</loc>
       
-      <lastmod>2019-11-24T17:03:41+07:00</lastmod>
+      <lastmod>2019-11-24T21:04:39+07:00</lastmod>
       
       
       
@@ -24,17 +24,7 @@
     <url>
       <loc>https://nurhamim.net/tags/centos-7/</loc>
       
-      <lastmod>2019-11-24T17:03:41+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/instalasi-magento-pada-centos-7/</loc>
-      
-      <lastmod>2019-11-24T17:03:41+07:00</lastmod>
+      <lastmod>2019-11-24T21:04:39+07:00</lastmod>
       
       
       
@@ -44,7 +34,17 @@
     <url>
       <loc>https://nurhamim.net/tags/magento2/</loc>
       
-      <lastmod>2019-11-24T17:03:41+07:00</lastmod>
+      <lastmod>2019-11-24T21:04:39+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/mengatasi-indexers-invalid-pada-magento-2/</loc>
+      
+      <lastmod>2019-11-24T21:04:39+07:00</lastmod>
       
       
       
@@ -54,7 +54,7 @@
     <url>
       <loc>https://nurhamim.net/posts/</loc>
       
-      <lastmod>2019-11-24T17:03:41+07:00</lastmod>
+      <lastmod>2019-11-24T21:04:39+07:00</lastmod>
       
       
       
@@ -64,7 +64,7 @@
     <url>
       <loc>https://nurhamim.net/categories/sinau-magento-2/</loc>
       
-      <lastmod>2019-11-24T17:03:41+07:00</lastmod>
+      <lastmod>2019-11-24T21:04:39+07:00</lastmod>
       
       
       
@@ -73,6 +73,26 @@
   
     <url>
       <loc>https://nurhamim.net/tags/</loc>
+      
+      <lastmod>2019-11-24T21:04:39+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/instalasi-ssl-lets-encrypt-pada-magento-2-di-centos-7/</loc>
+      
+      <lastmod>2019-11-24T20:16:56+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/instalasi-magento-pada-centos-7/</loc>
       
       <lastmod>2019-11-24T17:03:41+07:00</lastmod>
       

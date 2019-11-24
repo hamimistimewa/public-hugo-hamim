@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  
+  <link rel="prev" href="https://nurhamim.net/instalasi-magento-pada-centos-7/" />
+  <link rel="next" href="https://nurhamim.net/mengatasi-indexers-invalid-pada-magento-2/" />
+  <link rel="canonical" href="https://nurhamim.net/instalasi-ssl-lets-encrypt-pada-magento-2-di-centos-7/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Instalasi SSL Let&#39;s Encrypt Pada Magento 2 Di CentOS 7 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Instalasi SSL Let&#39;s Encrypt Pada Magento 2 Di CentOS 7 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Instalasi SSL Let\x27s Encrypt Pada Magento 2 Di CentOS 7",
+    "headline" : "Instalasi SSL Let\x27s Encrypt Pada Magento 2 Di CentOS 7",
+    "description" : "Panduan kali ini merupakan kelanjutan dari panduan sebelumnya tentang bagaimana cara instalasi Magento Pada CentOS 7.\nSebelum memasang SSL pada Magento, Anda perlu mengetahui terlebih dahulu web server yang Anda gunakan, disini saya menggunakan Nginx.\nSSL yang akan saya gunakan saat ini yaitu SSL Let\x26rsquo;s Encrypt dari certbot\nTahapan Instalasi SSL Let\x26rsquo;s Encrypt Pertama yang harus Anda lakukan yaitu mengakses server web magento Anda terlebih dahulu, kemudian jalankan perintah berikut",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-11-24 20:16:56 \x2b0700 \x2b07",
+    "dateModified" : "2019-11-24 20:16:56 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/instalasi-ssl-lets-encrypt-pada-magento-2-di-centos-7\/",
+    "wordCount" : "2149",
+    "keywords" : [ "Magento2","CentOS 7", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Instalasi SSL Let&#39;s Encrypt Pada Magento 2 Di CentOS 7</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-11-24 itemprop="datePublished">November 24, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/sinau-magento-2/"> Sinau Magento 2 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>Panduan kali ini merupakan kelanjutan dari panduan sebelumnya tentang bagaimana cara <a href="https://nurhamim.net/instalasi-magento-pada-centos-7/" rel="nofollow noreferrer" target="_blank">instalasi Magento Pada CentOS 7</a>.</p>
+
+<p>Sebelum memasang SSL pada Magento, Anda perlu mengetahui terlebih dahulu web server yang Anda gunakan, disini saya menggunakan Nginx.</p>
+
+<p>SSL yang akan saya gunakan saat ini yaitu SSL Let&rsquo;s Encrypt dari <a href="https://certbot.eff.org" rel="nofollow noreferrer" target="_blank">certbot</a></p>
+
+<h3 id="tahapan-instalasi-ssl-let-s-encrypt">Tahapan Instalasi SSL Let&rsquo;s Encrypt</h3>
+
+<p>Pertama yang harus Anda lakukan yaitu mengakses server web magento Anda terlebih dahulu, kemudian jalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 ~]# yum -y install yum-utils
+</code></pre>
+
+<p>Instalasi certbot dengan cara menjalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 ~]#
+[root@nur-srv-web02 ~]# yum install certbot python2-certbot-nginx -y
+</code></pre>
+
+<p>Jika sudah, silakan jalankan perintah berikut, untuk instalasi certbot ke domain utama (magento) Anda</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 ~]#
+[root@nur-srv-web02 ~]# certbot --nginx
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator nginx, Installer nginx
+Enter email address (used for urgent renewal and security notices) (Enter 'c' to
+cancel): hamimistimewa@gmail.com
+Starting new HTTPS connection (1): acme-v02.api.letsencrypt.org
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Please read the Terms of Service at
+https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
+agree in order to register with the ACME server at
+https://acme-v02.api.letsencrypt.org/directory
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(A)gree/(C)ancel: A
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Would you be willing to share your email address with the Electronic Frontier
+Foundation, a founding partner of the Let's Encrypt project and the non-profit
+organization that develops Certbot? We'd like to send you email about our work
+encrypting the web, EFF news, campaigns, and ways to support digital freedom.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: Y
+Starting new HTTPS connection (1): supporters.eff.org
+
+Which names would you like to activate HTTPS for?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: hamim.web.id
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate numbers separated by commas and/or spaces, or leave input
+blank to select all options shown (Enter 'c' to cancel):
+Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for hamim.web.id
+Waiting for verification...
+Cleaning up challenges
+Deploying Certificate to VirtualHost /etc/nginx/conf.d/magento.conf
+
+Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: No redirect - Make no further changes to the webserver configuration.
+2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
+new sites, or if you're confident your site works on HTTPS. You can undo this
+change by editing your web server's configuration.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 2
+Redirecting all traffic on port 80 to ssl in /etc/nginx/conf.d/magento.conf
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Congratulations! You have successfully enabled https://hamim.web.id
+
+You should test your configuration at:
+https://www.ssllabs.com/ssltest/analyze.html?d=hamim.web.id
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/hamim.web.id/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/hamim.web.id/privkey.pem
+   Your cert will expire on 2020-02-22. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot again
+   with the &quot;certonly&quot; option. To non-interactively renew *all* of
+   your certificates, run &quot;certbot renew&quot;
+ - Your account credentials have been saved in your Certbot
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Certbot so
+   making regular backups of this folder is ideal.
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+
+ - We were unable to subscribe you the EFF mailing list because your
+   e-mail address appears to be invalid. You can try again later by
+   visiting https://act.eff.org.
+[root@nur-srv-web02 ~]# 
+</code></pre>
+
+<p>Certbot akan membuat secara otomatis untuk konfigurasi SSL di virtualblock Nginx Anda sebagai berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 ~]#
+[root@nur-srv-web02 ~]# cat /etc/nginx/conf.d/magento.conf 
+upstream fastcgi_backend {
+  server unix:/run/php-fpm/php-fpm.sock;
+}
+
+server {
+  server_name hamim.web.id;
+  set $MAGE_ROOT /usr/share/nginx/html/magento2;
+  include /usr/share/nginx/html/magento2/nginx.conf.sample;
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/hamim.web.id/fullchain.pem; # managed by Certbot  
+    ssl_certificate_key /etc/letsencrypt/live/hamim.web.id/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+
+
+server {
+    if ($host = hamim.web.id) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+
+  listen 80;
+  server_name hamim.web.id;
+    return 404; # managed by Certbot
+
+
+}[root@nur-srv-web02 ~]#
+</code></pre>
+
+<p>Selanjutnya setup auto renewal SSL Lets encryp dengan cara membuat cron job, silakan jalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 ~]# echo &quot;0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; certbot renew&quot; | sudo tee -a /etc/crontab &gt; /dev/null
+[root@nur-srv-web02 ~]#
+</code></pre>
+
+<p>Saat ini domain hamim.web.id (Magento) telah terpasang SSL Lets encrypt sebagai berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-magento/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Namun disaat Anda ingin login ke Admin Magento maka Magento tidak dapat diakses dan akan muncul pesan error sebagai berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-magento/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Bagaimana cara mengatasinya?</p>
+
+<p>Cara mengatasinya Anda dapat menyesuaikan base URL di sisi database Magento Anda, karena sebelumnya base URL yang digunakan yaitu protokol HTTP bukan HTTPS, berikut tahapannya.</p>
+
+<p>Pertama silakan login ke server database Magento Anda, dan login ke root database Anda,</p>
+
+<pre><code class="language-bash">[root@nur-srv-database ~]# 
+[root@nur-srv-database ~]# mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 701
+Server version: 5.6.46 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.  
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&gt;
+</code></pre>
+
+<p>Lihat databases Magento Anda,</p>
+
+<pre><code class="language-bash">mysql&gt; show databases;
++--------------------+  
+| Database           |  
++--------------------+  
+| information_schema |  
+| magento            |  
+| mysql              |  
+| performance_schema |  
++--------------------+  
+4 rows in set (0.00 sec)
+
+mysql&gt;
+</code></pre>
+
+<p>Akses database Magento,</p>
+
+<pre><code class="language-bash">mysql&gt; use magento;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A    
+
+Database changed
+mysql&gt;
+</code></pre>
+
+<p>Jalankan perintah berikut untuk melihat base url Magento,</p>
+
+<pre><code class="language-bash">mysql&gt;
+mysql&gt; select * from core_config_data;
++-----------+---------+----------+-------------------------------------------------------------+-------------------------------------------+---------------------+
+| config_id | scope   | scope_id | path                                                        | value                                     | updated_at          |
++-----------+---------+----------+-------------------------------------------------------------+-------------------------------------------+---------------------+
+|         1 | default |        0 | web/seo/use_rewrites                                        | 1                                         | 2019-11-24 12:19:25 |
+|         2 | default |        0 | web/unsecure/base_url                                       | http://hamim.web.id/                      | 2019-11-24 12:19:26 |
+|         3 | default |        0 | web/secure/base_url                                         | https://hamim.web.id/                     | 2019-11-24 12:19:26 |
+|         4 | default |        0 | general/locale/code                                         | en_US                                     | 2019-11-24 12:19:27 |
+|         5 | default |        0 | web/secure/use_in_frontend                                  | NULL                                      | 2019-11-24 12:19:27 |
+|         6 | default |        0 | web/secure/use_in_adminhtml                                 | NULL                                      | 2019-11-24 12:19:28 |
+|         7 | default |        0 | general/locale/timezone                                     | UTC                                       | 2019-11-24 12:19:29 |
+|         8 | default |        0 | currency/options/base                                       | IDR                                       | 2019-11-24 12:19:30 |
+|         9 | default |        0 | currency/options/default                                    | IDR                                       | 2019-11-24 12:19:30 |
+|        10 | default |        0 | currency/options/allow                                      | IDR                                       | 2019-11-24 12:19:31 |
+|        11 | default |        0 | general/region/display_all                                  | 1                                         | 2019-11-24 12:19:41 |
+|        12 | default |        0 | general/region/state_required                               | AT,BR,CA,CH,EE,ES,FI,LT,LV,RO,US,HR,IN,AU | 2019-11-24 12:19:43 |
+|        13 | default |        0 | catalog/category/root_id                                    | 2                                         | 2019-11-24 12:19:51 |
+|        14 | default |        0 | payment/authorizenet_acceptjs/cctypes                       | AE,VI,MC,DI,JCB,DN                        | 2019-11-24 12:20:00 |
+|        15 | default |        0 | payment/authorizenet_acceptjs/order_status                  | processing                                | 2019-11-24 12:20:00 |
+|        16 | default |        0 | payment/authorizenet_acceptjs/payment_action                | authorize                                 | 2019-11-24 12:20:00 |
+|        17 | default |        0 | payment/authorizenet_acceptjs/currency                      | USD                                       | 2019-11-24 12:20:00 |
+|        18 | default |        0 | analytics/subscription/enabled                              | 1                                         | 2019-11-24 12:20:00 |
+|        19 | default |        0 | crontab/default/jobs/analytics_subscribe/schedule/cron_expr | 0 * * * *                                 | 2019-11-24 12:20:00 |
+|        20 | default |        0 | system/full_page_cache/varnish/access_list                  | localhost                                 | 2019-11-24 12:54:37 |
+|        21 | default |        0 | system/full_page_cache/varnish/backend_host                 | localhost                                 | 2019-11-24 12:54:37 |
+|        22 | default |        0 | system/full_page_cache/varnish/backend_port                 | 8080                                      | 2019-11-24 12:54:37 |
+|        23 | default |        0 | system/full_page_cache/varnish/grace_period                 | 300                                       | 2019-11-24 12:54:37 |
++-----------+---------+----------+-------------------------------------------------------------+-------------------------------------------+---------------------+
+23 rows in set (0.00 sec)
+
+mysql&gt;
+</code></pre>
+
+<p>Silakan ubah web/unsecure/base_url yang masih menggunakan protokol http ubah menjadi https dengan cara menjalankan perintah</p>
+
+<pre><code class="language-bash">mysql&gt; update core_config_data set value = 'https://hamim.web.id' where path = 'web/unsecure/base_url';
+Query OK, 1 row affected (0.01 sec)     
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql&gt;
+</code></pre>
+
+<p>Hasilnya saat ini sudah menggunakan protokol https semua sebagai berikut:</p>
+
+<pre><code class="language-bash">mysql&gt; select * from core_config_data;
++-----------+---------+----------+-------------------------------------------------------------+-------------------------------------------+---------------------+
+| config_id | scope   | scope_id | path                                                        | value                                     | updated_at          |
++-----------+---------+----------+-------------------------------------------------------------+-------------------------------------------+---------------------+
+|         1 | default |        0 | web/seo/use_rewrites                                        | 1                                         | 2019-11-24 12:19:25 |
+|         2 | default |        0 | web/unsecure/base_url                                       | https://hamim.web.id                      | 2019-11-24 13:53:42 |
+|         3 | default |        0 | web/secure/base_url                                         | https://hamim.web.id/                     | 2019-11-24 12:19:26 |
+|         4 | default |        0 | general/locale/code                                         | en_US                                     | 2019-11-24 12:19:27 |
+|         5 | default |        0 | web/secure/use_in_frontend                                  | NULL                                      | 2019-11-24 12:19:27 |
+|         6 | default |        0 | web/secure/use_in_adminhtml                                 | NULL                                      | 2019-11-24 12:19:28 |
+|         7 | default |        0 | general/locale/timezone                                     | UTC                                       | 2019-11-24 12:19:29 |
+|         8 | default |        0 | currency/options/base                                       | IDR                                       | 2019-11-24 12:19:30 |
+|         9 | default |        0 | currency/options/default                                    | IDR                                       | 2019-11-24 12:19:30 |
+|        10 | default |        0 | currency/options/allow                                      | IDR                                       | 2019-11-24 12:19:31 |
+|        11 | default |        0 | general/region/display_all                                  | 1                                         | 2019-11-24 12:19:41 |
+|        12 | default |        0 | general/region/state_required                               | AT,BR,CA,CH,EE,ES,FI,LT,LV,RO,US,HR,IN,AU | 2019-11-24 12:19:43 |
+|        13 | default |        0 | catalog/category/root_id                                    | 2                                         | 2019-11-24 12:19:51 |
+|        14 | default |        0 | payment/authorizenet_acceptjs/cctypes                       | AE,VI,MC,DI,JCB,DN                        | 2019-11-24 12:20:00 |
+|        15 | default |        0 | payment/authorizenet_acceptjs/order_status                  | processing                                | 2019-11-24 12:20:00 |
+|        16 | default |        0 | payment/authorizenet_acceptjs/payment_action                | authorize                                 | 2019-11-24 12:20:00 |
+|        17 | default |        0 | payment/authorizenet_acceptjs/currency                      | USD                                       | 2019-11-24 12:20:00 |
+|        18 | default |        0 | analytics/subscription/enabled                              | 1                                         | 2019-11-24 12:20:00 |
+|        19 | default |        0 | crontab/default/jobs/analytics_subscribe/schedule/cron_expr | 0 * * * *                                 | 2019-11-24 12:20:00 |
+|        20 | default |        0 | system/full_page_cache/varnish/access_list                  | localhost                                 | 2019-11-24 12:54:37 |
+|        21 | default |        0 | system/full_page_cache/varnish/backend_host                 | localhost                                 | 2019-11-24 12:54:37 |
+|        22 | default |        0 | system/full_page_cache/varnish/backend_port                 | 8080                                      | 2019-11-24 12:54:37 |
+|        23 | default |        0 | system/full_page_cache/varnish/grace_period                 | 300                                       | 2019-11-24 12:54:37 |
++-----------+---------+----------+-------------------------------------------------------------+-------------------------------------------+---------------------+
+23 rows in set (0.00 sec)
+</code></pre>
+
+<p>Langkah selanjutnya yaitu login ke server web Magento dan silakan clear cache pada Magento sebagai berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 ~]# 
+[root@nur-srv-web02 ~]# cd /usr/share/nginx/html/magento2/
+[root@nur-srv-web02 magento2]# 
+[root@nur-srv-web02 magento2]# php bin/magento cache:clean
+Cleaned cache types:
+config
+layout
+block_html
+collections
+reflection
+db_ddl
+eav
+customer_notification
+config_integration
+config_integration_api
+full_page
+config_webservice
+translate
+[root@nur-srv-web02 magento2]#
+</code></pre>
+
+<p>Hasilnya saat ini Admin Magento sudah dapat diakses dengan normal kembali.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-magento/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan coba login terlebih dahulu ke Admin Magento Anda sebagai berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-magento/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Saat ini instalasi SSL telah berhasi. Sekian panduan terkait installasi SSL Lets entcryp pada Megento 2 Di CentOS 7.</p>
+
+<p>See You &gt;.&lt;</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/instalasi-ssl-lets-encrypt-pada-magento-2-di-centos-7/>https://nurhamim.net/instalasi-ssl-lets-encrypt-pada-magento-2-di-centos-7/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/magento2/">
+                    #Magento2</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-7/">
+                    #CentOS 7</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/instalasi-magento-pada-centos-7/" class="prev" rel="prev" title="Instalasi Magento Pada CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Instalasi Magento Pada CentOS 7</a>
+         
+        
+        <a href="https://nurhamim.net/mengatasi-indexers-invalid-pada-magento-2/" class="next" rel="next" title="Mengatasi Indexers Invalid Pada Magento 2">Mengatasi Indexers Invalid Pada Magento 2&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

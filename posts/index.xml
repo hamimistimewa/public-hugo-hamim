@@ -6,10 +6,33 @@
     <description>Recent content in Posts on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Nov 2019 17:03:41 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 24 Nov 2019 21:04:39 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mengatasi Indexers Invalid Pada Magento 2</title>
+      <link>https://nurhamim.net/mengatasi-indexers-invalid-pada-magento-2/</link>
+      <pubDate>Sun, 24 Nov 2019 21:04:39 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/mengatasi-indexers-invalid-pada-magento-2/</guid>
+      <description>Panduan kali ini saya akan membahas sedikit cara bagaimana cara troublehoosting bila mendapati kendala indexers invalid setelah melakukan instalasi Magento 2.2 seperti gambar diatas.
+Untuk mengatasi kendala ini Anda dapat melakukan reindex melalui CLI command line di dalam direktori root Magento Anda dan melakukan clear cache pada Magento Anda sebagai berikut
+[root@nur-srv-web02 ~]# [root@nur-srv-web02 ~]# cd /usr/share/nginx/html/magento2/ [root@nur-srv-web02 magento2]# [root@nur-srv-web02 magento2]# php bin/magento indexer:reindex [root@nur-srv-web02 magento2]# php bin/magento cache:flush  Jika sudah silakan akses kembali admin Magento Anda, hasil saat ini reindex sudah berhasil sebagai berikut hasilnya</description>
+    </item>
+    
+    <item>
+      <title>Instalasi SSL Let&#39;s Encrypt Pada Magento 2 Di CentOS 7</title>
+      <link>https://nurhamim.net/instalasi-ssl-lets-encrypt-pada-magento-2-di-centos-7/</link>
+      <pubDate>Sun, 24 Nov 2019 20:16:56 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/instalasi-ssl-lets-encrypt-pada-magento-2-di-centos-7/</guid>
+      <description>Panduan kali ini merupakan kelanjutan dari panduan sebelumnya tentang bagaimana cara instalasi Magento Pada CentOS 7.
+Sebelum memasang SSL pada Magento, Anda perlu mengetahui terlebih dahulu web server yang Anda gunakan, disini saya menggunakan Nginx.
+SSL yang akan saya gunakan saat ini yaitu SSL Let&amp;rsquo;s Encrypt dari certbot
+Tahapan Instalasi SSL Let&amp;rsquo;s Encrypt Pertama yang harus Anda lakukan yaitu mengakses server web magento Anda terlebih dahulu, kemudian jalankan perintah berikut</description>
+    </item>
     
     <item>
       <title>Instalasi Magento Pada CentOS 7</title>
