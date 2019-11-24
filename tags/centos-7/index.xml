@@ -6,10 +6,22 @@
     <description>Recent content in CentOS 7 on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Nov 2019 21:04:39 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 24 Nov 2019 21:17:42 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/centos-7/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Custome Login Page Admin Magento 2</title>
+      <link>https://nurhamim.net/cara-custome-login-page-admin-magento-2/</link>
+      <pubDate>Sun, 24 Nov 2019 21:17:42 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-custome-login-page-admin-magento-2/</guid>
+      <description>Panduan kali ini saya akan berbagi bagaimana cara mengubah atau custome login page Admin dari Magento 2.2.
+Untuk custome login page ini silakan login ke server web Magento Anda terlebih dahulu dan pindah ke direktori root Magento seperti berikut:
+[root@nur-srv-web02 ~]# [root@nur-srv-web02 ~]# cd /usr/share/nginx/html/magento2/ [root@nur-srv-web02 magento2]#  Kemudian, pindah ke direktori /app/etc/ dan buka file env.php.
+[root@nur-srv-web02 magento2]# cd app/etc/ [root@nur-srv-web02 etc]# [root@nur-srv-web02 etc]# vim env.php Ubah bagian &#39;frontName&#39; pada backend seperti berikut ini &#39;frontName&#39; =&amp;gt; &#39;admin_4n57aw&#39; &amp;gt;&amp;gt; &#39;frontName&#39; =&amp;gt; &#39;Hamimaja&#39;  Disini saya mengubah menjadi Hamimaja</description>
+    </item>
     
     <item>
       <title>Mengatasi Indexers Invalid Pada Magento 2</title>

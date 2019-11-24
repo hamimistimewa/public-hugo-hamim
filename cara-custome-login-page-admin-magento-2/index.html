@@ -18,9 +18,9 @@
   
   
   
-  <link rel="prev" href="https://nurhamim.net/instalasi-ssl-lets-encrypt-pada-magento-2-di-centos-7/" />
-  <link rel="next" href="https://nurhamim.net/cara-custome-login-page-admin-magento-2/" />
-  <link rel="canonical" href="https://nurhamim.net/mengatasi-indexers-invalid-pada-magento-2/" />
+  <link rel="prev" href="https://nurhamim.net/mengatasi-indexers-invalid-pada-magento-2/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/cara-custome-login-page-admin-magento-2/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -31,10 +31,10 @@
   <title>
        
        
-           Mengatasi Indexers Invalid Pada Magento 2 | Catatan Cah Ndeso
+           Cara Custome Login Page Admin Magento 2 | Catatan Cah Ndeso
        
   </title>
-  <meta name="title" content="Mengatasi Indexers Invalid Pada Magento 2 | Catatan Cah Ndeso">
+  <meta name="title" content="Cara Custome Login Page Admin Magento 2 | Catatan Cah Ndeso">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -53,9 +53,9 @@
          "@id": "https:\/\/nurhamim.net"
     },
     "articleSection" : "posts",
-    "name" : "Mengatasi Indexers Invalid Pada Magento 2",
-    "headline" : "Mengatasi Indexers Invalid Pada Magento 2",
-    "description" : "Panduan kali ini saya akan membahas sedikit cara bagaimana cara troublehoosting bila mendapati kendala indexers invalid setelah melakukan instalasi Magento 2.2 seperti gambar diatas.\nUntuk mengatasi kendala ini Anda dapat melakukan reindex melalui CLI command line di dalam direktori root Magento Anda dan melakukan clear cache pada Magento Anda sebagai berikut\n[root@nur-srv-web02 ~]# [root@nur-srv-web02 ~]# cd \/usr\/share\/nginx\/html\/magento2\/ [root@nur-srv-web02 magento2]# [root@nur-srv-web02 magento2]# php bin\/magento indexer:reindex [root@nur-srv-web02 magento2]# php bin\/magento cache:flush  Jika sudah silakan akses kembali admin Magento Anda, hasil saat ini reindex sudah berhasil sebagai berikut hasilnya",
+    "name" : "Cara Custome Login Page Admin Magento 2",
+    "headline" : "Cara Custome Login Page Admin Magento 2",
+    "description" : "Panduan kali ini saya akan berbagi bagaimana cara mengubah atau custome login page Admin dari Magento 2.2.\nUntuk custome login page ini silakan login ke server web Magento Anda terlebih dahulu dan pindah ke direktori root Magento seperti berikut:\n[root@nur-srv-web02 ~]# [root@nur-srv-web02 ~]# cd \/usr\/share\/nginx\/html\/magento2\/ [root@nur-srv-web02 magento2]#  Kemudian, pindah ke direktori \/app\/etc\/ dan buka file env.php.\n[root@nur-srv-web02 magento2]# cd app\/etc\/ [root@nur-srv-web02 etc]# [root@nur-srv-web02 etc]# vim env.php Ubah bagian \x27frontName\x27 pada backend seperti berikut ini \x27frontName\x27 =\x26gt; \x27admin_4n57aw\x27 \x26gt;\x26gt; \x27frontName\x27 =\x26gt; \x27Hamimaja\x27  Disini saya mengubah menjadi Hamimaja",
     "inLanguage" : "en-us",
     "author" : "[Nur Hamim]",
     "creator" : "[Nur Hamim]",
@@ -63,10 +63,10 @@
     "accountablePerson" : "[Nur Hamim]",
     "copyrightHolder" : "[Nur Hamim]",
     "copyrightYear" : "2019",
-    "datePublished": "2019-11-24 21:04:39 \x2b0700 \x2b07",
-    "dateModified" : "2019-11-24 21:04:39 \x2b0700 \x2b07",
-    "url" : "https:\/\/nurhamim.net\/mengatasi-indexers-invalid-pada-magento-2\/",
-    "wordCount" : "97",
+    "datePublished": "2019-11-24 21:17:42 \x2b0700 \x2b07",
+    "dateModified" : "2019-11-24 21:17:42 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-custome-login-page-admin-magento-2\/",
+    "wordCount" : "160",
     "keywords" : [ "Magento2","CentOS 7", "Catatan Cah Ndeso"]
 }
 </script>
@@ -129,7 +129,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Mengatasi Indexers Invalid Pada Magento 2</h1>
+        <h1 class="post-title" itemprop="name headline">Cara Custome Login Page Admin Magento 2</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
                 <span class="post-time">
@@ -161,26 +161,49 @@
           
           
 
-          <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/indexers-magento/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+          <p>Panduan kali ini saya akan berbagi bagaimana cara mengubah atau custome login page Admin dari Magento 2.2.</p>
 
-<p>Panduan kali ini saya akan membahas sedikit cara bagaimana cara troublehoosting bila mendapati kendala indexers invalid setelah melakukan instalasi Magento 2.2 seperti gambar diatas.</p>
+<p>Untuk custome login page ini silakan login ke server web Magento Anda terlebih dahulu dan pindah ke direktori root Magento seperti berikut:</p>
 
-<p>Untuk mengatasi kendala ini Anda dapat melakukan reindex melalui CLI command line di dalam direktori root Magento Anda dan melakukan clear cache pada Magento Anda sebagai berikut</p>
-
-<pre><code class="language-bash">[root@nur-srv-web02 ~]#
+<pre><code class="language-bash">[root@nur-srv-web02 ~]# 
 [root@nur-srv-web02 ~]# cd /usr/share/nginx/html/magento2/
 [root@nur-srv-web02 magento2]# 
-[root@nur-srv-web02 magento2]# php bin/magento indexer:reindex
+</code></pre>
+
+<p>Kemudian, pindah ke direktori <strong>/app/etc/</strong> dan buka file <strong>env.php</strong>.</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 magento2]# cd app/etc/
+[root@nur-srv-web02 etc]# 
+[root@nur-srv-web02 etc]# vim env.php
+
+Ubah bagian 'frontName' pada backend seperti berikut ini
+
+'frontName' =&gt; 'admin_4n57aw' &gt;&gt; 'frontName' =&gt; 'Hamimaja'
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/custome-login-magento/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Disini saya mengubah menjadi <strong>Hamimaja</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/custome-login-magento/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah silakan simpan perubahan yang telah dilakukan.</p>
+
+<p>Selanjutnya silakan restart service Nginx dan php-fpm, serta flush cache magento menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@nur-srv-web02 magento2]#
+[root@nur-srv-web02 magento2]# systemctl restart nginx &amp;&amp; systemctl restart php-fpm
+[root@nur-srv-web02 magento2]#
 [root@nur-srv-web02 magento2]# php bin/magento cache:flush
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/indexers-magento/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Selanjutnya silakan akses kembali hamim.web.id/Hamimaja untuk mengakses admin page Magento Anda hasil nya akan sebagai berikut</p>
 
-<p>Jika sudah silakan akses kembali admin Magento Anda, hasil saat ini reindex sudah berhasil sebagai berikut hasilnya</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/custome-login-magento/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/indexers-magento/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/custome-login-magento/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p>Sekian panduan ini semoga bermanfaat bagi kita semua.</p>
+<p>Sekian panduan terkait custome login page Admin pada Magento 2. Semoga bermanfaat bagi kita semua.</p>
 
 <p>See You &gt;.&lt;</p>
 
@@ -199,7 +222,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://nurhamim.net/mengatasi-indexers-invalid-pada-magento-2/>https://nurhamim.net/mengatasi-indexers-invalid-pada-magento-2/</span>
+                    <a href=https://nurhamim.net/cara-custome-login-page-admin-magento-2/>https://nurhamim.net/cara-custome-login-page-admin-magento-2/</span>
             </p>
             
             
@@ -227,10 +250,8 @@
 
     <div class="post-nav">
         
-        <a href="https://nurhamim.net/instalasi-ssl-lets-encrypt-pada-magento-2-di-centos-7/" class="prev" rel="prev" title="Instalasi SSL Let&#39;s Encrypt Pada Magento 2 Di CentOS 7"><i class="iconfont icon-left"></i>&nbsp;Instalasi SSL Let&#39;s Encrypt Pada Magento 2 Di CentOS 7</a>
+        <a href="https://nurhamim.net/mengatasi-indexers-invalid-pada-magento-2/" class="prev" rel="prev" title="Mengatasi Indexers Invalid Pada Magento 2"><i class="iconfont icon-left"></i>&nbsp;Mengatasi Indexers Invalid Pada Magento 2</a>
          
-        
-        <a href="https://nurhamim.net/cara-custome-login-page-admin-magento-2/" class="next" rel="next" title="Cara Custome Login Page Admin Magento 2">Cara Custome Login Page Admin Magento 2&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
