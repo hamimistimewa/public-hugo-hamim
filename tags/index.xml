@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Nov 2019 21:17:42 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2020 20:29:26 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>FreeBSD</title>
+      <link>https://nurhamim.net/tags/freebsd/</link>
+      <pubDate>Sun, 16 Feb 2020 20:29:26 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/freebsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pfSense2.4</title>
+      <link>https://nurhamim.net/tags/pfsense2.4/</link>
+      <pubDate>Sun, 16 Feb 2020 20:29:26 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/pfsense2.4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VMware</title>
+      <link>https://nurhamim.net/tags/vmware/</link>
+      <pubDate>Sun, 16 Feb 2020 20:29:26 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/vmware/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>CentOS 7</title>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  <meta name="google-site-verification" content="ca-pub-1515372853161377" />
+  <link rel="prev" href="https://nurhamim.net/cara-custome-login-page-admin-magento-2/" />
+  <link rel="next" href="https://nurhamim.net/instalasi-pfsense-2.4/" />
+  <link rel="canonical" href="https://nurhamim.net/cara-create-vm-pada-vmware-esxi/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Create VM Pada VMware ESXi | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Cara Create VM Pada VMware ESXi | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Create VM Pada VMware ESXi",
+    "headline" : "Cara Create VM Pada VMware ESXi",
+    "description" : "Pada tutorial kali ini kami akan memberikan cara bagaimana membuat VM pada VMware ESXi, dimana nantinya VM ini akan digunakan untuk instalasi pfSense 2.4 dengan spesifikasi yang dibutuhkan sebagai berikut:\n CPU : 2 Core RAM : 2 GB HDD : 10 GB Network : 2 interface  Requirements hardware yang dibutuhkan untuk instalasi pfsense dapat dilihat pada link berikut: Minimum Hardware Requirements.\nSelanjutnya, silakan akses VMWare Anda masing - masing dan create VM Kemudian pilih custom, lalu Next Memberi nama VM, silakan sesuaikan dengan keinginan masing - masing Selanjutnya, memilih Datastore yang ingin digunakan untuk menampung VM pfsense nantinya.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-16 18:34:49 \x2b0700 \x2b07",
+    "dateModified" : "2020-02-16 18:34:49 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-create-vm-pada-vmware-esxi\/",
+    "wordCount" : "265",
+    "keywords" : [ "VMware", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Create VM Pada VMware ESXi</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-02-16 itemprop="datePublished">February 16, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/sinau-pfsense-2.4/"> Sinau pfSense 2.4 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Pada tutorial kali ini kami akan memberikan cara bagaimana membuat VM pada VMware ESXi, dimana nantinya VM ini akan digunakan untuk instalasi <strong>pfSense 2.4</strong> dengan spesifikasi yang dibutuhkan sebagai berikut:</p>
+
+<ul>
+<li>CPU       : 2 Core</li>
+<li>RAM       : 2 GB</li>
+<li>HDD       : 10 GB</li>
+<li>Network   : 2 interface</li>
+</ul>
+
+<p>Requirements hardware yang dibutuhkan untuk instalasi pfsense dapat dilihat pada link berikut: <a href="https://docs.netgate.com/pfsense/en/latest/book/hardware/minimum-hardware-requirements.html" rel="nofollow noreferrer" target="_blank">Minimum Hardware Requirements</a>.</p>
+
+<p>Selanjutnya, silakan akses VMWare Anda masing - masing dan create VM
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/create-vm.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Kemudian pilih custom, lalu Next
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Memberi nama VM, silakan sesuaikan dengan keinginan masing - masing
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya, memilih <strong>Datastore</strong> yang ingin digunakan untuk menampung VM pfsense nantinya.
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya memilih kompabilitas pilih “Virtual Machine Version 11”
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu Gest OS ini kita akan menggunakan Free-BSD 64 Bit, karena pfSense sendiri merupakan turunan dari Free-BSD.
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya menentukan CPU yang ingin digunakan, sesuai info sebelumnya kita akan menggunakan 2 core CPU
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Menentukan RAM atau memory yang digunakan kali ini yaitu sebesar 2 GB
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>Network</strong> kita akan menggunakan 2 network dengan satu Interface yang sama. 1 Network digunakan sebagain WAN Network (Internet-Vlan) dan 1 Network digunakan untuk LAN Network (Local-Vlan) dengan type Interface VMXNET3
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya untuk disk akan menggunakan disk baru silakan pilih <strong>Create a new virtual disk</strong>, lalu Next
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/11.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sesuai info sebelumnya untuk disk yang kita gunakan sebesar 10 GB
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/12.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>Advanced Options</strong> pada VDN pilih <strong>SCSI</strong> lalu Next
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/13.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah berikutnya klik Finish
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/14.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah Selanjutnya klik kanan pada VM &gt;&gt; Edit Settings &gt;&gt; Pilih CD/DVD &gt;&gt; Pastikan sudah menceklis <strong>Connect at power on</strong> &gt;&gt; upload ISO pfSense 2.4.4 yang sudah di unggah ke <strong>Datastore</strong> sebelumnnya.
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/install-pfsense/upload-iso.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah terakhir silakan power on VM</p>
+
+<p>See You &gt;.&lt;</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/cara-create-vm-pada-vmware-esxi/>https://nurhamim.net/cara-create-vm-pada-vmware-esxi/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/vmware/">
+                    #VMware</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/cara-custome-login-page-admin-magento-2/" class="prev" rel="prev" title="Cara Custome Login Page Admin Magento 2"><i class="iconfont icon-left"></i>&nbsp;Cara Custome Login Page Admin Magento 2</a>
+         
+        
+        <a href="https://nurhamim.net/instalasi-pfsense-2.4/" class="next" rel="next" title="Instalasi pfSense 2.4">Instalasi pfSense 2.4&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

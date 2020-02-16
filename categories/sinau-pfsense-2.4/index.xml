@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sinau pfSense 2.4 on Catatan Cah Ndeso</title>
+    <link>https://nurhamim.net/categories/sinau-pfsense-2.4/</link>
+    <description>Recent content in Sinau pfSense 2.4 on Catatan Cah Ndeso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Feb 2020 20:29:26 +0700</lastBuildDate>
+    
+	<atom:link href="https://nurhamim.net/categories/sinau-pfsense-2.4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Instalasi pfSense 2.4</title>
+      <link>https://nurhamim.net/instalasi-pfsense-2.4/</link>
+      <pubDate>Sun, 16 Feb 2020 20:29:26 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/instalasi-pfsense-2.4/</guid>
+      <description>Tutorial kali ini merupakan lanjutan dari tutorial sebelumnya, dimana sebelumnya kita telah create VM dan pada tutorial kali ini kita akan melakukan instalasi pfsense 2.4 namun sebelum melakukan instalasi kita akan membahas sedikit tentang pfSense.
+Mengenal pfSense pfSense adalah software (operating system) open source berbasis FreeBSD (unix) yang diperuntukan atau digunakan sebagai firewall sekaligus router, pfSense dapat diinstall di server fisik (on-premise) atau di virtual machine atau compute di Cloud Computing.</description>
+    </item>
+    
+    <item>
+      <title>Cara Create VM Pada VMware ESXi</title>
+      <link>https://nurhamim.net/cara-create-vm-pada-vmware-esxi/</link>
+      <pubDate>Sun, 16 Feb 2020 18:34:49 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-create-vm-pada-vmware-esxi/</guid>
+      <description>Pada tutorial kali ini kami akan memberikan cara bagaimana membuat VM pada VMware ESXi, dimana nantinya VM ini akan digunakan untuk instalasi pfSense 2.4 dengan spesifikasi yang dibutuhkan sebagai berikut:
+ CPU : 2 Core RAM : 2 GB HDD : 10 GB Network : 2 interface  Requirements hardware yang dibutuhkan untuk instalasi pfsense dapat dilihat pada link berikut: Minimum Hardware Requirements.
+Selanjutnya, silakan akses VMWare Anda masing - masing dan create VM Kemudian pilih custom, lalu Next Memberi nama VM, silakan sesuaikan dengan keinginan masing - masing Selanjutnya, memilih Datastore yang ingin digunakan untuk menampung VM pfsense nantinya.</description>
+    </item>
+    
+  </channel>
+</rss>
