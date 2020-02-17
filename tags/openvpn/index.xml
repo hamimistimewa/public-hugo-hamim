@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenVPN on Catatan Cah Ndeso</title>
+    <link>https://nurhamim.net/tags/openvpn/</link>
+    <description>Recent content in OpenVPN on Catatan Cah Ndeso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Feb 2020 02:55:18 +0700</lastBuildDate>
+    
+	<atom:link href="https://nurhamim.net/tags/openvpn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cara Konfigurasi OpenVPN Server dan Client Pada pfSense 2.4</title>
+      <link>https://nurhamim.net/cara-konfigurasi-openvpn-server-dan-client-pada-pfsense-2.4/</link>
+      <pubDate>Tue, 18 Feb 2020 02:55:18 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-konfigurasi-openvpn-server-dan-client-pada-pfsense-2.4/</guid>
+      <description>Mengenal Apa Itu VPN VPN salah satu metode yang dapat kita gunakan untuk menghubungkan suatu jaringan dengan jaringan lainnya melalui internet secara aman.
+OpenVPN merupakan aplikasi yang dapat digunakan untuk membuat membuat VPN Server dan Client OpenVPN juga salah satu aplikasi yang sering dan banyak sekali digunakan.
+OpenVPN sendiri terdapat 2 versi yaitu:
+ OpenVPN Community Edition OpenVPN Access Server  Perbedaan dari versi diatas diaantaranya:
+ OpenVPN Community Edition: Untuk versi ini semua konfigurasi di harus dilakukan melalui command line atau console OpenVPN Access Server: Untuk versi ini sudah terdapat web GUI yang memudahkan administrator baik dari instalasi sampai dengan management VPN.</description>
+    </item>
+    
+  </channel>
+</rss>

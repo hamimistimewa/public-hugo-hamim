@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  <meta name="google-site-verification" content="ca-pub-1515372853161377" />
+  <link rel="prev" href="https://nurhamim.net/cara-memasang-ssl-lets-encrypt-pada-pfsense-2.4/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/cara-konfigurasi-openvpn-server-dan-client-pada-pfsense-2.4/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Konfigurasi OpenVPN Server dan Client Pada pfSense 2.4 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Cara Konfigurasi OpenVPN Server dan Client Pada pfSense 2.4 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Konfigurasi OpenVPN Server dan Client Pada pfSense 2.4",
+    "headline" : "Cara Konfigurasi OpenVPN Server dan Client Pada pfSense 2.4",
+    "description" : "Mengenal Apa Itu VPN VPN salah satu metode yang dapat kita gunakan untuk menghubungkan suatu jaringan dengan jaringan lainnya melalui internet secara aman.\nOpenVPN merupakan aplikasi yang dapat digunakan untuk membuat membuat VPN Server dan Client OpenVPN juga salah satu aplikasi yang sering dan banyak sekali digunakan.\nOpenVPN sendiri terdapat 2 versi yaitu:\n OpenVPN Community Edition OpenVPN Access Server  Perbedaan dari versi diatas diaantaranya:\n OpenVPN Community Edition: Untuk versi ini semua konfigurasi di harus dilakukan melalui command line atau console OpenVPN Access Server: Untuk versi ini sudah terdapat web GUI yang memudahkan administrator baik dari instalasi sampai dengan management VPN.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-18 02:55:18 \x2b0700 \x2b07",
+    "dateModified" : "2020-02-18 02:55:18 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-konfigurasi-openvpn-server-dan-client-pada-pfsense-2.4\/",
+    "wordCount" : "594",
+    "keywords" : [ "Firewall","pfSense2.4","VPN","OpenVPN", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Konfigurasi OpenVPN Server dan Client Pada pfSense 2.4</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-02-18 itemprop="datePublished">February 18, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/sinau-pfsense-2.4/"> Sinau pfSense 2.4 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h3 id="mengenal-apa-itu-vpn">Mengenal Apa Itu VPN</h3>
+
+<p>VPN salah satu metode yang dapat kita gunakan untuk menghubungkan suatu jaringan dengan jaringan lainnya melalui internet secara aman.</p>
+
+<p>OpenVPN merupakan aplikasi yang dapat digunakan untuk membuat membuat VPN Server dan Client OpenVPN juga salah satu aplikasi yang sering dan banyak sekali digunakan.</p>
+
+<p>OpenVPN sendiri terdapat 2 versi yaitu:</p>
+
+<ol>
+<li><strong>OpenVPN Community Edition</strong></li>
+<li><strong>OpenVPN Access Server</strong></li>
+</ol>
+
+<p>Perbedaan dari versi diatas diaantaranya:</p>
+
+<ol>
+<li><strong>OpenVPN Community Edition:</strong> Untuk versi ini semua konfigurasi di harus dilakukan melalui command line atau console</li>
+<li><strong>OpenVPN Access Server:</strong> Untuk versi ini sudah terdapat web GUI yang memudahkan administrator baik dari instalasi sampai dengan management VPN.</li>
+</ol>
+
+<p>Kedua versi tersebut free/gratis, namun untuk Access Server, secara default terdapat limit 2 concurrent user. Agar bisa digunakan lebih dari 2 user, kita harus membeli license tambahan.</p>
+
+<p>Untuk harganya dapat melihat pada link berikut: <a href="https://openvpn.net/index.php/access-server/pricing.html" rel="nofollow noreferrer" target="_blank">https://openvpn.net/index.php/access-server/pricing.html</a>.</p>
+
+<p>Namun pada tutorial kali ini kita akan membuat server OpenVPN menggunakan pfSense, pada pfSense OpenVPN sudah menjadi service yang secara default sudah ada, Anda hanya perlu mengkonfigurasinya saja.</p>
+
+<h3 id="tahapan-konfigurasi-openvpn-server">Tahapan Konfigurasi OpenVPN Server</h3>
+
+<p>Langkah pertama kita akan membuat CA_ROOT dan Certificates, silakan masuk ke menu <strong>System &gt;&gt; Cert. Manager</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Kemudian Anda ke menu <strong>CAs</strong> lalu <strong>Add</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Membuat CA_ROOT untuk certificates OpenVPN, silakan isi yang perlu saja mulai dari <strong>Descriptive name, Common Name, Country Code, State of Province, City, Organization,</strong> kemudian <strong>Save</strong> seperti berikut
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Hasilnya akan seperti berikut ini
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah selanjutnya pindah ke menu <strong>Certificates &gt;&gt; Add</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Silakan isi seperti membuat CA_ROOT sebelumnya, sesuaikan saja dengan keinginan untuk <strong>Descriptive name, Common Name</strong>, gambarannya seperti berikut
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Hasilnya akan seperti ini
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah selanjutnya konfigurasi OpenVPN Server silakan masuk ke menu <strong>VPN &gt;&gt; OpenVPN</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pindah ke menu <strong>Wizard</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pilih <strong>Local User Access</strong>, lalu <strong>Next</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pilih CA yang telah dibuat sebelumnya, lalu <strong>Next</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_11.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pilih Certificates yang telah dibuat sebelumnya, lalu <strong>Next</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_12.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>General OpenVPN Server Information</strong> silakan isikan <strong>Description</strong> sesuai keinginan Anda
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_13.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>Cryptographic Settings</strong> pastikan untuk <strong>Auth Digest Algorithm</strong> menggunakan **SHA256 (256-bit)
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_14.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>Tunnel Network, Redirect Gateway, Local Network, Concurrent Connections,</strong> silakan isikan sesuai keinginan,
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_15.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>Client Settings</strong> silakan isi <strong>DNS Default Domain</strong> dengan hostname pfsense Anda dan untuk <strong>DNS Server</strong> Anda dapat menggunakan DNS Resolver Google, lalu <strong>Next</strong> untuk melanjutkannya seperti berikut
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_16.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah selanjutnya pada ceklis pada menu <strong>Firewall Rule &amp; OpenVPN rule</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_17.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah selanjutnya klik <strong>Finish</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_18.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut hasilnya
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_19.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pastikan pada <strong>Firewall &gt;&gt; Rules</strong> sudah ada rules untuk OpenVPN
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_20.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="tahapan-konfigurasi-openvpn-client">Tahapan Konfigurasi OpenVPN Client</h3>
+
+<p>Langkah selanjutnya melakukan konfigurasi OpenVPN Client silakan pindah ke menu <strong>Clients &gt;&gt; Add</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_21.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>General Information</strong> silakan isikan IP atau hostname pfsense
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_22.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>User Authentication Settings</strong> Anda dapat membuat credential untuk OpenVPN Client, harap dicatat ini bukan untuk user OpenVPN
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_23.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>Cryptographic Settings</strong> silakan tambahkan <strong>NCP Algorithms</strong> seperti pada gambar berikut
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_24.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>Advanced Configuration</strong> silakan pilih <strong>IPv4 Only</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_25.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="instalasi-paket-openvpn">Instalasi Paket OpenVPN</h3>
+
+<p>Paket OpenVPN disini digunakan untuk mengunduh user vpn sesuai device yang ingin kita gunakan, berikut tahapan - tahapannya:</p>
+
+<p>Silakan masuk ke menu <strong>System &gt;&gt; Package Manager</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_26.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Lalu search <strong>openvpn &gt;&gt; Install</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_27.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Lalu pilih <strong>Confirm</strong> untuk melanjutkannya
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_28.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Tunggu proses instalasi sampai selesai seperti berikut
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_29.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="membuat-user-openvpn">Membuat User OpenVPN</h3>
+
+<p>Silakan masuk ke menu <strong>System &gt;&gt; User Manager</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_30.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>User &gt;&gt; Add</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_31.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Isikan dengan detail sebagai berikut:</p>
+
+<ul>
+<li>Username: isikan username OpenVPN (sesuai kebutuhan)</li>
+<li>Password: Isikan password dari user diatas</li>
+<li>Descriptive name: Isikan sesuai keinginan Anda</li>
+</ul>
+
+<p>Jika sudah silakan di <strong>Save</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_32.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut hasil dari user OpenVPN yang telah kita buat
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_33.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk mengunduh file openvpn sesuai user yang telah kita buat sebelumnya silakan masuk ke menu <strong>VPN &gt;&gt; OpenVPN &gt;&gt; Client Export</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_33.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Scroll ke bawah Anda akan menemukan menu <strong>OpenVPN Clients</strong> silakan unduh sesuai device yang Anda gunakan
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/openvpn-pfsense/Screenshot_35.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selamat mencoba semoga bermanfaat !</p>
+
+<p>See You &gt;.&lt;</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/cara-konfigurasi-openvpn-server-dan-client-pada-pfsense-2.4/>https://nurhamim.net/cara-konfigurasi-openvpn-server-dan-client-pada-pfsense-2.4/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/firewall/">
+                    #Firewall</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/pfsense2.4/">
+                    #pfSense2.4</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/vpn/">
+                    #VPN</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/openvpn/">
+                    #OpenVPN</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/cara-memasang-ssl-lets-encrypt-pada-pfsense-2.4/" class="prev" rel="prev" title="Cara Memasang SSL Let&#39;s Encrypt Pada pfSense 2.4"><i class="iconfont icon-left"></i>&nbsp;Cara Memasang SSL Let&#39;s Encrypt Pada pfSense 2.4</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

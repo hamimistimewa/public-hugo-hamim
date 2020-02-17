@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Feb 2020 21:37:24 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2020 02:55:18 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,18 +14,36 @@
     <item>
       <title>Firewall</title>
       <link>https://nurhamim.net/tags/firewall/</link>
-      <pubDate>Mon, 17 Feb 2020 21:37:24 +0700</pubDate>
+      <pubDate>Tue, 18 Feb 2020 02:55:18 +0700</pubDate>
       
       <guid>https://nurhamim.net/tags/firewall/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>OpenVPN</title>
+      <link>https://nurhamim.net/tags/openvpn/</link>
+      <pubDate>Tue, 18 Feb 2020 02:55:18 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/openvpn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>pfSense2.4</title>
       <link>https://nurhamim.net/tags/pfsense2.4/</link>
-      <pubDate>Mon, 17 Feb 2020 21:37:24 +0700</pubDate>
+      <pubDate>Tue, 18 Feb 2020 02:55:18 +0700</pubDate>
       
       <guid>https://nurhamim.net/tags/pfsense2.4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VPN</title>
+      <link>https://nurhamim.net/tags/vpn/</link>
+      <pubDate>Tue, 18 Feb 2020 02:55:18 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/tags/vpn/</guid>
       <description></description>
     </item>
     
