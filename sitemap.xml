@@ -2,9 +2,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
+      <loc>https://nurhamim.net/cara-memasang-ssl-lets-encrypt-pada-pfsense-2.4/</loc>
+      
+      <lastmod>2020-02-17T21:37:24+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
       <loc>https://nurhamim.net/</loc>
       
-      <lastmod>2020-02-16T20:29:26+07:00</lastmod>
+      <lastmod>2020-02-17T21:37:24+07:00</lastmod>
       
       
       
@@ -14,7 +24,77 @@
     <url>
       <loc>https://nurhamim.net/categories/</loc>
       
-      <lastmod>2020-02-16T20:29:26+07:00</lastmod>
+      <lastmod>2020-02-17T21:37:24+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/firewall/</loc>
+      
+      <lastmod>2020-02-17T21:37:24+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/pfsense2.4/</loc>
+      
+      <lastmod>2020-02-17T21:37:24+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/posts/</loc>
+      
+      <lastmod>2020-02-17T21:37:24+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/categories/sinau-pfsense-2.4/</loc>
+      
+      <lastmod>2020-02-17T21:37:24+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/ssl/</loc>
+      
+      <lastmod>2020-02-17T21:37:24+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/</loc>
+      
+      <lastmod>2020-02-17T21:37:24+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/vmware/</loc>
+      
+      <lastmod>2020-02-17T21:37:24+07:00</lastmod>
       
       
       
@@ -33,56 +113,6 @@
   
     <url>
       <loc>https://nurhamim.net/instalasi-pfsense-2.4/</loc>
-      
-      <lastmod>2020-02-16T20:29:26+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/pfsense2.4/</loc>
-      
-      <lastmod>2020-02-16T20:29:26+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/posts/</loc>
-      
-      <lastmod>2020-02-16T20:29:26+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/categories/sinau-pfsense-2.4/</loc>
-      
-      <lastmod>2020-02-16T20:29:26+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/</loc>
-      
-      <lastmod>2020-02-16T20:29:26+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/vmware/</loc>
       
       <lastmod>2020-02-16T20:29:26+07:00</lastmod>
       
@@ -905,16 +935,6 @@
       <loc>https://nurhamim.net/memulai-dengan-linux/</loc>
       
       <lastmod>2019-07-06T04:50:15+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/firewall/</loc>
-      
-      <lastmod>2019-07-06T04:50:13+07:00</lastmod>
       
       
       

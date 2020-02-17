@@ -6,10 +6,21 @@
     <description>Recent content in Sinau pfSense 2.4 on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Feb 2020 20:29:26 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2020 21:37:24 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/categories/sinau-pfsense-2.4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Memasang SSL Let&#39;s Encrypt Pada pfSense 2.4</title>
+      <link>https://nurhamim.net/cara-memasang-ssl-lets-encrypt-pada-pfsense-2.4/</link>
+      <pubDate>Mon, 17 Feb 2020 21:37:24 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-memasang-ssl-lets-encrypt-pada-pfsense-2.4/</guid>
+      <description>Tutorial kali ini merupakan lanjutan dari tutorial sebelumnya yaitu tentang Instalasi pfSense 2.4, pada tutorial kali ini kita akan memasang SSL Let&amp;rsquo;s Encrypt pada pfSense.
+SSL Let&amp;rsquo;s Encrypt sendiri salah satu fitur SSL free yang ada pada pfsense, sebelum itu kita perlu melakukan instalasi paket ACME Certificates pada pfsense dengan tahapan sebagai berikut:
+Silakan masuk ke menu System &amp;gt;&amp;gt; Package Manager &amp;gt;&amp;gt; Available Packages &amp;gt;&amp;gt; Search term &amp;gt;&amp;gt; acme &amp;gt;&amp;gt; Install Klik Confirm untuk melanjutkan instalasi paket Pastikan instalasi paket ACME Certificates berhasil seperti berikut Selanjutnya, melakukan Create Account Certificates pada menu Service &amp;gt;&amp;gt; Acme Certificates &amp;gt;&amp;gt; Account keys &amp;gt;&amp;gt; + Add, isikan semua data dan silakan create new account key dan Register ACME account key lalu Save seperti gambar berikut: Jika berhasil hasilnya akan seperti berikut Selanjutnya membuat certificates, silakan masuk ke menu Services &amp;gt;&amp;gt; ACME Certificates &amp;gt;&amp;gt; Certificates &amp;gt;&amp;gt; Add .</description>
+    </item>
     
     <item>
       <title>Instalasi pfSense 2.4</title>

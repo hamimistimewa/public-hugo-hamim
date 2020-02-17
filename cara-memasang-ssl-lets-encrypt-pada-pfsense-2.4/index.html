@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  <meta name="google-site-verification" content="ca-pub-1515372853161377" />
+  <link rel="prev" href="https://nurhamim.net/instalasi-pfsense-2.4/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/cara-memasang-ssl-lets-encrypt-pada-pfsense-2.4/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Memasang SSL Let&#39;s Encrypt Pada pfSense 2.4 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Cara Memasang SSL Let&#39;s Encrypt Pada pfSense 2.4 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Memasang SSL Let\x27s Encrypt Pada pfSense 2.4",
+    "headline" : "Cara Memasang SSL Let\x27s Encrypt Pada pfSense 2.4",
+    "description" : "Tutorial kali ini merupakan lanjutan dari tutorial sebelumnya yaitu tentang Instalasi pfSense 2.4, pada tutorial kali ini kita akan memasang SSL Let\x26rsquo;s Encrypt pada pfSense.\nSSL Let\x26rsquo;s Encrypt sendiri salah satu fitur SSL free yang ada pada pfsense, sebelum itu kita perlu melakukan instalasi paket ACME Certificates pada pfsense dengan tahapan sebagai berikut:\nSilakan masuk ke menu System \x26gt;\x26gt; Package Manager \x26gt;\x26gt; Available Packages \x26gt;\x26gt; Search term \x26gt;\x26gt; acme \x26gt;\x26gt; Install Klik Confirm untuk melanjutkan instalasi paket Pastikan instalasi paket ACME Certificates berhasil seperti berikut Selanjutnya, melakukan Create Account Certificates pada menu Service \x26gt;\x26gt; Acme Certificates \x26gt;\x26gt; Account keys \x26gt;\x26gt; \x2b Add, isikan semua data dan silakan create new account key dan Register ACME account key lalu Save seperti gambar berikut: Jika berhasil hasilnya akan seperti berikut Selanjutnya membuat certificates, silakan masuk ke menu Services \x26gt;\x26gt; ACME Certificates \x26gt;\x26gt; Certificates \x26gt;\x26gt; Add .",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-17 21:37:24 \x2b0700 \x2b07",
+    "dateModified" : "2020-02-17 21:37:24 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-memasang-ssl-lets-encrypt-pada-pfsense-2.4\/",
+    "wordCount" : "399",
+    "keywords" : [ "Firewall","pfSense2.4","VMware","SSL", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Memasang SSL Let&#39;s Encrypt Pada pfSense 2.4</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-02-17 itemprop="datePublished">February 17, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/sinau-pfsense-2.4/"> Sinau pfSense 2.4 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Tutorial kali ini merupakan lanjutan dari tutorial sebelumnya yaitu tentang <a href="https://nurhamim.net/instalasi-pfsense-2.4/" rel="nofollow noreferrer" target="_blank">Instalasi pfSense 2.4</a>, pada tutorial kali ini kita akan memasang SSL Let&rsquo;s Encrypt pada pfSense.</p>
+
+<p>SSL Let&rsquo;s Encrypt sendiri salah satu fitur SSL free yang ada pada pfsense, sebelum itu kita perlu melakukan instalasi paket <strong>ACME Certificates</strong> pada pfsense dengan tahapan sebagai berikut:</p>
+
+<p>Silakan masuk ke menu <strong>System &gt;&gt; Package Manager &gt;&gt; Available Packages &gt;&gt; Search term &gt;&gt; acme &gt;&gt; Install</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/p1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Klik <strong>Confirm</strong> untuk melanjutkan instalasi paket
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/p2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pastikan instalasi paket <strong>ACME Certificates</strong> berhasil seperti berikut
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/p3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya, melakukan <strong>Create Account Certificates</strong> pada menu <strong>Service &gt;&gt; Acme Certificates &gt;&gt; Account keys &gt;&gt; + Add</strong>, isikan semua data dan silakan <strong>create new account key</strong> dan <strong>Register ACME account key</strong> lalu <strong>Save</strong> seperti gambar berikut:
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika berhasil hasilnya akan seperti berikut
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya membuat certificates, silakan masuk ke menu <strong>Services &gt;&gt; ACME Certificates &gt;&gt; Certificates &gt;&gt; Add</strong> . Untuk pengisiannya sebagai berikut:</p>
+
+<ul>
+<li><strong>Name:</strong> Isikan sesuai keinginan</li>
+<li><strong>Description:</strong> Isikan sesuai keinginan</li>
+<li><strong>Status:</strong> Active</li>
+<li><strong>Acme Account:</strong> Pilih sesuai <strong>Account Keys</strong> key yang telah dibuat sebelumnya</li>
+<li><strong>Private Key:</strong> 2048-bit RSA</li>
+<li><strong>Domain SAN List:</strong>
+
+<ul>
+<li><strong>Mode:</strong> Enabled</li>
+<li><strong>Domainname:</strong> Isikan nama domain atau subdomain sesuai dengan hostname dari pfsense Anda pastikan sudah FQDN</li>
+<li><strong>Method:</strong> Silakan sesuaikan dengan kebutuhan untuk metode verifikasi SSL Let&rsquo;s Encrypt nya, disini kami menggunakan DNS-Manual</li>
+</ul></li>
+</ul>
+
+<p>Jika sudah silakan <strong>Save.</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika berhasil maka hasilnya akan seperti berikut
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah selanjutnya melakukan <strong>Issued</strong> SSL klik pada menu <strong>Issue</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Anda akan mendapatkan record TXT yang perlu Anda tambahkan pada DNS Management domain atau subdomain yang Anda gunakan, gambarannya seperti berikut
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Menambahkan record TXT untuk verifikasi, silakan menghubungi pihak penyedia domain atau Registrar Domain Anda masing - masing untuk penambahan record TXT ini, gambarannya seperti berikut
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pastikan record TXT Anda telah resolved dengan baik
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah selanjutnya klik pada menu <strong>Renew</strong>, tunggu proses renew sampai selesai
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika berhasil hasilnya akan seperti berikut ini
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk melihat hasil dari SSL nya Anda dapat melihatnya melalui menu <strong>System &gt;&gt; Cert. Manager</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_11.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut hasil CAs
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_12.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Dan berikut hasil Certificates nya
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_13.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah selanjutnya, konfigurasi protokol pada pfsense dari http ke https pada menu <strong>System &gt;&gt; Advanced</strong>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_14.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Ubah pada menu <strong>Admin Access</strong> seperti berikut
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_15.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Lalu Save dan pastikan hasilnya sukses
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_16.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>20 Second kemudian pfsense akan melakukan reload secara otomatis dan saat ini SSL telah Let&rsquo;s Encrypt telah terpasang dengan normal
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_17.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut hasil di dalam dashboard pfsense
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/ssl-pfsense/Screenshot_18.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Itulah tahapan bagaimana cara memasang SSL Free menggunakan Let&rsquo;s Encrypt pada pfSense. Selamat mencoba semoga bermanfaat bagi kita semua.</p>
+
+<p>See You &gt;.&lt;</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/cara-memasang-ssl-lets-encrypt-pada-pfsense-2.4/>https://nurhamim.net/cara-memasang-ssl-lets-encrypt-pada-pfsense-2.4/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/firewall/">
+                    #Firewall</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/pfsense2.4/">
+                    #pfSense2.4</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/vmware/">
+                    #VMware</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/ssl/">
+                    #SSL</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/instalasi-pfsense-2.4/" class="prev" rel="prev" title="Instalasi pfSense 2.4"><i class="iconfont icon-left"></i>&nbsp;Instalasi pfSense 2.4</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

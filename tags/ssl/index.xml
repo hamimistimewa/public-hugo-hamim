@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pfSense2.4 on Catatan Cah Ndeso</title>
-    <link>https://nurhamim.net/tags/pfsense2.4/</link>
-    <description>Recent content in pfSense2.4 on Catatan Cah Ndeso</description>
+    <title>SSL on Catatan Cah Ndeso</title>
+    <link>https://nurhamim.net/tags/ssl/</link>
+    <description>Recent content in SSL on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 17 Feb 2020 21:37:24 +0700</lastBuildDate>
     
-	<atom:link href="https://nurhamim.net/tags/pfsense2.4/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nurhamim.net/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <description>Tutorial kali ini merupakan lanjutan dari tutorial sebelumnya yaitu tentang Instalasi pfSense 2.4, pada tutorial kali ini kita akan memasang SSL Let&amp;rsquo;s Encrypt pada pfSense.
 SSL Let&amp;rsquo;s Encrypt sendiri salah satu fitur SSL free yang ada pada pfsense, sebelum itu kita perlu melakukan instalasi paket ACME Certificates pada pfsense dengan tahapan sebagai berikut:
 Silakan masuk ke menu System &amp;gt;&amp;gt; Package Manager &amp;gt;&amp;gt; Available Packages &amp;gt;&amp;gt; Search term &amp;gt;&amp;gt; acme &amp;gt;&amp;gt; Install Klik Confirm untuk melanjutkan instalasi paket Pastikan instalasi paket ACME Certificates berhasil seperti berikut Selanjutnya, melakukan Create Account Certificates pada menu Service &amp;gt;&amp;gt; Acme Certificates &amp;gt;&amp;gt; Account keys &amp;gt;&amp;gt; + Add, isikan semua data dan silakan create new account key dan Register ACME account key lalu Save seperti gambar berikut: Jika berhasil hasilnya akan seperti berikut Selanjutnya membuat certificates, silakan masuk ke menu Services &amp;gt;&amp;gt; ACME Certificates &amp;gt;&amp;gt; Certificates &amp;gt;&amp;gt; Add .</description>
-    </item>
-    
-    <item>
-      <title>Instalasi pfSense 2.4</title>
-      <link>https://nurhamim.net/instalasi-pfsense-2.4/</link>
-      <pubDate>Sun, 16 Feb 2020 20:29:26 +0700</pubDate>
-      
-      <guid>https://nurhamim.net/instalasi-pfsense-2.4/</guid>
-      <description>Tutorial kali ini merupakan lanjutan dari tutorial sebelumnya, dimana sebelumnya kita telah create VM dan pada tutorial kali ini kita akan melakukan instalasi pfsense 2.4 namun sebelum melakukan instalasi kita akan membahas sedikit tentang pfSense.
-Mengenal pfSense pfSense adalah software (operating system) open source berbasis FreeBSD (unix) yang diperuntukan atau digunakan sebagai firewall sekaligus router, pfSense dapat diinstall di server fisik (on-premise) atau di virtual machine atau compute di Cloud Computing.</description>
     </item>
     
   </channel>
