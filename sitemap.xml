@@ -2,9 +2,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://nurhamim.net/cara-konfigurasi-openvpn-server-dan-client-pada-pfsense-2.4/</loc>
+      <loc>https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/</loc>
       
-      <lastmod>2020-02-18T02:55:18+07:00</lastmod>
+      <lastmod>2020-03-08T19:25:18+07:00</lastmod>
       
       
       
@@ -14,7 +14,7 @@
     <url>
       <loc>https://nurhamim.net/</loc>
       
-      <lastmod>2020-02-18T02:55:18+07:00</lastmod>
+      <lastmod>2020-03-08T19:25:18+07:00</lastmod>
       
       
       
@@ -23,6 +23,96 @@
   
     <url>
       <loc>https://nurhamim.net/categories/</loc>
+      
+      <lastmod>2020-03-08T19:25:18+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/centos-8/</loc>
+      
+      <lastmod>2020-03-08T19:25:18+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/categories/centos-8-administrator/</loc>
+      
+      <lastmod>2020-03-08T19:25:18+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/linux/</loc>
+      
+      <lastmod>2020-03-08T19:25:18+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/posts/</loc>
+      
+      <lastmod>2020-03-08T19:25:18+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/tags/</loc>
+      
+      <lastmod>2020-03-08T19:25:18+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/cara-menambah-dan-menghapus-user-sudoer-di-centos-8/</loc>
+      
+      <lastmod>2020-03-08T14:50:41+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/cara-instalasi-cockpit-di-centos-8/</loc>
+      
+      <lastmod>2020-03-08T13:55:25+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/instalasi-centos-8-di-openstack/</loc>
+      
+      <lastmod>2020-03-08T10:26:22+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/cara-konfigurasi-openvpn-server-dan-client-pada-pfsense-2.4/</loc>
       
       <lastmod>2020-02-18T02:55:18+07:00</lastmod>
       
@@ -62,27 +152,7 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/posts/</loc>
-      
-      <lastmod>2020-02-18T02:55:18+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
       <loc>https://nurhamim.net/categories/sinau-pfsense-2.4/</loc>
-      
-      <lastmod>2020-02-18T02:55:18+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/</loc>
       
       <lastmod>2020-02-18T02:55:18+07:00</lastmod>
       
@@ -303,16 +373,6 @@
   
     <url>
       <loc>https://nurhamim.net/categories/centos-7-administrator/</loc>
-      
-      <lastmod>2019-10-28T21:23:44+07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://nurhamim.net/tags/linux/</loc>
       
       <lastmod>2019-10-28T21:23:44+07:00</lastmod>
       

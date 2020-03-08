@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CentOS 8 Administrator on Catatan Cah Ndeso</title>
+    <link>https://nurhamim.net/categories/centos-8-administrator/</link>
+    <description>Recent content in CentOS 8 Administrator on Catatan Cah Ndeso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Mar 2020 19:25:18 +0700</lastBuildDate>
+    
+	<atom:link href="https://nurhamim.net/categories/centos-8-administrator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cara Konfigurasi NTP Server Dan Client Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/</link>
+      <pubDate>Sun, 08 Mar 2020 19:25:18 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/</guid>
+      <description>NTP singkatan dari Network Time Protokol sebuah protokol yang digunakan untuk sinkronisasi waktu. NTP server sangatlah penting untuk diatur, jika Anda mempunyai sebuah aplikasi yang membutuhkan sinkronisasi waktu tertentu yang akurat, maka hal ini ini perlu di dikonfigurasi dengan baik dan benar.
+Konfigurasi NTP Server Melihat zona waktu yang digunakan oleh server Anda saat ini, gunakan perintah berikut
+[root@hamim-centos8 ~]# timedatectl  Jika Anda ingin melihat list zona waktu yang tersedia, silakan gunakan perintah berikut</description>
+    </item>
+    
+    <item>
+      <title>Cara Menambah dan Menghapus User (Sudoer) Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-menambah-dan-menghapus-user-sudoer-di-centos-8/</link>
+      <pubDate>Sun, 08 Mar 2020 14:50:41 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-menambah-dan-menghapus-user-sudoer-di-centos-8/</guid>
+      <description>Tutorial kali ini saya akan membahas bagaimana cara membuat user dengan privileges root dan bagaiamana cara menghapus user tersebut pada CentOS 8.
+Tujuan dari tutorial ini Anda dapat membuat user sesuai keinginan Anda, selain itu dari segi keamanan server juga sangat baik karena nantinya Anda dapat disable user root dan Anda dapat menggunakan user yang sudah dibuat dengan privileges root tersebut.
+Berikut ini tahapan - tahapan membuat user pada CentOS 8</description>
+    </item>
+    
+    <item>
+      <title>Cara Instalasi Cockpit Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-instalasi-cockpit-di-centos-8/</link>
+      <pubDate>Sun, 08 Mar 2020 13:55:25 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-instalasi-cockpit-di-centos-8/</guid>
+      <description>Pengenalan Cockpit adalah tools yang digunakan untuk manajemen server berbasis web. Secara default pada CentOS 8 tools Cockpit sudah ada di dalam repository.
+Cockpit dapat digunakan oleh sysadmin untuk memantau, mengelola sepertihalnya network, storage, container, dan sistem log dari aplikasi yang terinstall di Server.
+Instalasi Dan Penggunaan Cockpit Untuk instalasi cockpit pada CentOS 8 Anda dapat menjalankan baris perintah berikut:
+[root@srv-centos8 ~]# dnf install cockpit -y  Jika sudah silakan start dan enable service cockpit, gunakan perintah berikut:</description>
+    </item>
+    
+    <item>
+      <title>Instalasi CentOS 8 Di Openstack</title>
+      <link>https://nurhamim.net/instalasi-centos-8-di-openstack/</link>
+      <pubDate>Sun, 08 Mar 2020 10:26:22 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/instalasi-centos-8-di-openstack/</guid>
+      <description>24 September 2019 waktu dimana CentOS 8 dirilis. Yaa CentOS 8 merupakan penerus dari CentOS 7 yang akan EOL pada 30 Juni 2024.
+CentOS 8 saat ini sudah menggunakan Linux Kernel 4.18. Terdapat beberapa fitur baru yang ada pada CentOS diataranya sebagai berikut:
+ Cockpit sekarang tersedia secara default CentOS 8 hadir dengan versi baru dari versi YUM (Yellowdog Updater Modified) yang didasarkan pada DNF (Dandified Yum). Versi baru ini kompatibel dengan YUM v3 (CentOS 7) RPM v4.</description>
+    </item>
+    
+  </channel>
+</rss>
