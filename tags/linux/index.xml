@@ -6,10 +6,21 @@
     <description>Recent content in Linux on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Mar 2020 19:25:18 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2020 20:11:59 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Instalasi Web Server Apache Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/</link>
+      <pubDate>Sun, 08 Mar 2020 20:11:59 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/</guid>
+      <description>Web Server Apache merupakan web server yang dapat dijalankan di berbagai macam sistem operasi yang berbeda seperti Unix, BSD, Linux, Windows dan Novell Netware yang bertugas untuk melayani fasilitas web dengan menggunakan protokol http.
+Apache bersifat open source, yang artinya dapat digunakan secara bebas oleh semua pengguna atau kalangan.
+Web server Apache akan bekerja jika pengguna atau user meminta atau request melalui protokol http atau https untuk membuka suatu halaman. Apache akan menjawab request yang diminta oleh pengguna kemudian akan diproses oleh Apache sampai menampilkan sebuah halaman yang diminta atau yang diminta.</description>
+    </item>
     
     <item>
       <title>Cara Konfigurasi NTP Server Dan Client Di CentOS 8</title>

@@ -18,9 +18,9 @@
   
   
   <meta name="google-site-verification" content="ca-pub-1515372853161377" />
-  <link rel="prev" href="https://nurhamim.net/cara-menambah-dan-menghapus-user-sudoer-di-centos-8/" />
-  <link rel="next" href="https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/" />
-  <link rel="canonical" href="https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/" />
+  <link rel="prev" href="https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -31,10 +31,10 @@
   <title>
        
        
-           Cara Konfigurasi NTP Server Dan Client Di CentOS 8 | Catatan Cah Ndeso
+           Cara Instalasi Web Server Apache Di CentOS 8 | Catatan Cah Ndeso
        
   </title>
-  <meta name="title" content="Cara Konfigurasi NTP Server Dan Client Di CentOS 8 | Catatan Cah Ndeso">
+  <meta name="title" content="Cara Instalasi Web Server Apache Di CentOS 8 | Catatan Cah Ndeso">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -53,9 +53,9 @@
          "@id": "https:\/\/nurhamim.net"
     },
     "articleSection" : "posts",
-    "name" : "Cara Konfigurasi NTP Server Dan Client Di CentOS 8",
-    "headline" : "Cara Konfigurasi NTP Server Dan Client Di CentOS 8",
-    "description" : "NTP singkatan dari Network Time Protokol sebuah protokol yang digunakan untuk sinkronisasi waktu. NTP server sangatlah penting untuk diatur, jika Anda mempunyai sebuah aplikasi yang membutuhkan sinkronisasi waktu tertentu yang akurat, maka hal ini ini perlu di dikonfigurasi dengan baik dan benar.\nKonfigurasi NTP Server Melihat zona waktu yang digunakan oleh server Anda saat ini, gunakan perintah berikut\n[root@hamim-centos8 ~]# timedatectl  Jika Anda ingin melihat list zona waktu yang tersedia, silakan gunakan perintah berikut",
+    "name" : "Cara Instalasi Web Server Apache Di CentOS 8",
+    "headline" : "Cara Instalasi Web Server Apache Di CentOS 8",
+    "description" : "Web Server Apache merupakan web server yang dapat dijalankan di berbagai macam sistem operasi yang berbeda seperti Unix, BSD, Linux, Windows dan Novell Netware yang bertugas untuk melayani fasilitas web dengan menggunakan protokol http.\nApache bersifat open source, yang artinya dapat digunakan secara bebas oleh semua pengguna atau kalangan.\nWeb server Apache akan bekerja jika pengguna atau user meminta atau request melalui protokol http atau https untuk membuka suatu halaman. Apache akan menjawab request yang diminta oleh pengguna kemudian akan diproses oleh Apache sampai menampilkan sebuah halaman yang diminta atau yang diminta.",
     "inLanguage" : "en-us",
     "author" : "[Nur Hamim]",
     "creator" : "[Nur Hamim]",
@@ -63,10 +63,10 @@
     "accountablePerson" : "[Nur Hamim]",
     "copyrightHolder" : "[Nur Hamim]",
     "copyrightYear" : "2020",
-    "datePublished": "2020-03-08 19:25:18 \x2b0700 \x2b07",
-    "dateModified" : "2020-03-08 19:25:18 \x2b0700 \x2b07",
-    "url" : "https:\/\/nurhamim.net\/cara-konfigurasi-ntp-server-dan-client-di-centos-8\/",
-    "wordCount" : "300",
+    "datePublished": "2020-03-08 20:11:59 \x2b0700 \x2b07",
+    "dateModified" : "2020-03-08 20:11:59 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-instalasi-web-server-apache-di-centos-8\/",
+    "wordCount" : "412",
     "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
 }
 </script>
@@ -129,7 +129,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Cara Konfigurasi NTP Server Dan Client Di CentOS 8</h1>
+        <h1 class="post-title" itemprop="name headline">Cara Instalasi Web Server Apache Di CentOS 8</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
                 <span class="post-time">
@@ -161,89 +161,96 @@
           
           
 
-          
+          <p>Web Server Apache merupakan web server yang dapat dijalankan di berbagai macam sistem  operasi  yang  berbeda  seperti  Unix,  BSD,  Linux,  Windows  dan  Novell  Netware yang bertugas untuk melayani fasilitas web dengan menggunakan protokol http.</p>
 
-<p>NTP singkatan dari <em>Network Time Protokol</em> sebuah protokol yang digunakan untuk sinkronisasi waktu. NTP server sangatlah penting untuk diatur, jika Anda mempunyai sebuah aplikasi yang membutuhkan sinkronisasi waktu tertentu yang akurat, maka hal ini ini perlu di dikonfigurasi dengan baik dan benar.</p>
+<p>Apache bersifat  open source,  yang artinya dapat  digunakan  secara bebas  oleh  semua pengguna atau kalangan.</p>
 
-<h3 id="konfigurasi-ntp-server">Konfigurasi NTP Server</h3>
+<p>Web server Apache akan bekerja jika pengguna atau user meminta atau request melalui protokol http atau https untuk membuka suatu halaman. Apache akan menjawab request yang diminta oleh pengguna kemudian akan diproses oleh Apache sampai menampilkan sebuah halaman yang diminta atau yang diminta.</p>
 
-<p>Melihat zona waktu yang digunakan oleh server Anda saat ini, gunakan perintah berikut</p>
+<p>Untukmelakukan instalasi web server apache di CentOS 8 sangatlah mudah dikarenakan secara default repository apache telah tersedia di CentOS 8.</p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl 
+<p>Berikut perintah yang digunakan untuk instalasi apache di CentOS 8</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# dnf install httpd -y
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-apache/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p>Jika Anda ingin melihat list zona waktu yang tersedia, silakan gunakan perintah berikut</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl list-timezones
-</code></pre>
-
-<p>Namun jika Anda berada di Jakarta dan Anda ingin menyinkronisasi server Anda dengan waktu di Jakarta Anda dapat grep dari list diatas seperti berikut</p>
+<p>Jika instalasi apache telah selesai, silakan start service apache untuk mengaktifkannya, kemudian  jalankan  perintah enable agar  service  apache  dapat  running  (berjalan) otomatis di saat server melakukan reboot atau restart, berikut perintahnya</p>
 
 <pre><code class="language-bash">[root@hamim-centos8 ~]#
-[root@hamim-centos8 ~]# timedatectl list-timezones |grep Asia/Jakarta
-Asia/Jakarta
+[root@hamim-centos8 ~]# systemctl enable httpd
+Created symlink /etc/systemd/system/multi-user.target.wants/httpd.service → /usr/lib/systemd/system/httpd.service.
+[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# systemctl start httpd
+[root@hamim-centos8 ~]# systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2020-03-08 20:12:50 WIB; 22s ago
+     Docs: man:httpd.service(8)
+ Main PID: 25256 (httpd)
+   Status: &quot;Running, listening on: port 80&quot;
+    Tasks: 213 (limit: 23996)
+   Memory: 47.6M
+   CGroup: /system.slice/httpd.service
+           ├─25256 /usr/sbin/httpd -DFOREGROUND
+           ├─25257 /usr/sbin/httpd -DFOREGROUND
+           ├─25258 /usr/sbin/httpd -DFOREGROUND
+           ├─25259 /usr/sbin/httpd -DFOREGROUND
+           └─25260 /usr/sbin/httpd -DFOREGROUND
+
+Mar 08 20:12:49 hamim-centos8.nurhamim.net systemd[1]: Starting The Apache HTTP Server...
+Mar 08 20:12:50 hamim-centos8.nurhamim.net systemd[1]: Started The Apache HTTP Server.
+Mar 08 20:12:50 hamim-centos8.nurhamim.net httpd[25256]: Server configured, listening on: port 80
 [root@hamim-centos8 ~]#
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-apache/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p>Untuk set waktu nya dapat menggunakan perintah berikut, dan lihat perubahannya</p>
+<p>Untuk mengetahui versi apache yang terinstall gunakan perintah berikut</p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl set-timezone Asia/Jakarta
-[root@hamim-centos8 ~]# timedatectl 
+<pre><code class="language-bash">[root@hamim-centos8 ~]# httpd -v
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-apache/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<h3 id="konfigurasi-ntp-client">Konfigurasi NTP Client</h3>
+<p>Saat ini Anda telah berhasil melakukan instalasi webserver apache di CentOS 8, silakan akses IP_Server Anda untuk mengetahui default page dari apache di CentOS 8 sebagai berikut</p>
 
-<p>Tugas dari NTP Client sendiri yaitu melakukan sinkronisasi waktu dengan NTP Server, pastikan terlebih dahulu untuk NTP Client Anda sudah Aktif, gunakan perintah berikut:</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-apache/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl | grep 'NTP service'
-              NTP service: active
-[root@hamim-centos8 ~]#
+<p>Validasi web server apache dengan cara membuat test page sederhana menggunakan file <strong>.html</strong>, silakan buat file <strong>.html</strong> di root direktori apache yaitu <em>/var/www/html</em> seperti berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# touch /var/www/html/index.html
 </code></pre>
 
-<p>Jika NTP Client Anda belum Aktif silakan install service <strong>chrony</strong> terlebih dahulu berikut command yang digunakan untuk instalasinya</p>
+<p>Silakan buka file <strong>index.html</strong> menggunakan editor vim/vi/nano sesuai kebutuhan</p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# dnf install chrony -y 
-[root@hamim-centos8 ~]# systemctl enable chrony
-[root@hamim-centos8 ~]# systemctl start chrony
-[root@hamim-centos8 ~]# systemctl status chrony
+<pre><code class="language-bash">[root@hamim-centos8 ~]# vim /var/www/html/index.html
 </code></pre>
 
-<p>Selanjutnya buka file  <em>chrony.conf</em> yang berada di direktori <strong>/etc/chrony.conf</strong> silakan gunakan teks editor vi/vim/nano sesuai kenyamanan Anda</p>
+<p>Isi dengan script html berikut</p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# vim /etc/chrony.conf 
+<pre><code class="language-csharp">&lt;html&gt;
+&lt;body&gt;
+&lt;div style=&quot;width: 100%; font-size: 40px; font-weight: bold; text-align: center;&quot;&gt;
+Test Page nurhamim.net
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
-<p>Disable <strong>pool 2.centos.pool.ntp.org iburst</strong> dan ubah NTP Server dengan lokasi Anda</p>
+<p>Lalu restart service apache gunakan perintah berikut</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
-
-<p>Gunakan perintah berikut, untuk cek sources NTP Server</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]# chronyc sources
+<pre><code class="language-bash">[root@hamim-centos8 ~]# systemctl restart httpd
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Akses kembali IP_Server Anda dan pastikan tampilannya hanya <strong>Test Page nurhamim.net</strong> seperti berikut</p>
 
-<p>Untuk memeriksa sinkronisasi waktu sudah berjalan atau belum Anda dapat menggunakan tool NTPStat, silakan install terlebih dahulu menggunakan perintah</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-apache/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# dnf install ntpstat -y
-</code></pre>
+<p>Selamat mencoba semoga bermanfaat 👌</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
-
-<p>Pastikan semua waktu mulai dari tanggal/bulan/tahun/ dan jam sudah sesuai semua dan berikut hasilnya</p>
-
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
-
-<p>Selamat mencoba semoga bermanfaat.</p>
-
-<p>See You &gt;.&lt;</p>
+<p>See You 😃</p>
 
     </div>
 
@@ -260,7 +267,7 @@ Asia/Jakarta
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/>https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/</span>
+                    <a href=https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/>https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/</span>
             </p>
             
             
@@ -288,10 +295,8 @@ Asia/Jakarta
 
     <div class="post-nav">
         
-        <a href="https://nurhamim.net/cara-menambah-dan-menghapus-user-sudoer-di-centos-8/" class="prev" rel="prev" title="Cara Menambah dan Menghapus User (Sudoer) Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Menambah dan Menghapus User (Sudoer) Di CentOS 8</a>
+        <a href="https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/" class="prev" rel="prev" title="Cara Konfigurasi NTP Server Dan Client Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Konfigurasi NTP Server Dan Client Di CentOS 8</a>
          
-        
-        <a href="https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/" class="next" rel="next" title="Cara Instalasi Web Server Apache Di CentOS 8">Cara Instalasi Web Server Apache Di CentOS 8&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
