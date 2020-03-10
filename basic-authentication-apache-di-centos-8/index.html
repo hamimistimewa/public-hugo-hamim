@@ -18,9 +18,9 @@
   
   
   <meta name="google-site-verification" content="ca-pub-1515372853161377" />
-  <link rel="prev" href="https://nurhamim.net/cara-menambah-dan-menghapus-user-sudoer-di-centos-8/" />
-  <link rel="next" href="https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/" />
-  <link rel="canonical" href="https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/" />
+  <link rel="prev" href="https://nurhamim.net/cara-menggunakan-cgi-scripts-basic-di-apache-centos-8/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/basic-authentication-apache-di-centos-8/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -31,10 +31,10 @@
   <title>
        
        
-           Cara Konfigurasi NTP Server Dan Client Di CentOS 8 | Catatan Cah Ndeso
+           Basic Authentication Apache Di CentOS 8 | Catatan Cah Ndeso
        
   </title>
-  <meta name="title" content="Cara Konfigurasi NTP Server Dan Client Di CentOS 8 | Catatan Cah Ndeso">
+  <meta name="title" content="Basic Authentication Apache Di CentOS 8 | Catatan Cah Ndeso">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -53,9 +53,9 @@
          "@id": "https:\/\/nurhamim.net"
     },
     "articleSection" : "posts",
-    "name" : "Cara Konfigurasi NTP Server Dan Client Di CentOS 8",
-    "headline" : "Cara Konfigurasi NTP Server Dan Client Di CentOS 8",
-    "description" : "Pengelanan NTP NTP singkatan dari Network Time Protokol sebuah protokol yang digunakan untuk sinkronisasi waktu. NTP server sangatlah penting untuk diatur, jika Anda mempunyai sebuah aplikasi yang membutuhkan sinkronisasi waktu tertentu yang akurat, maka hal ini ini perlu di dikonfigurasi dengan baik dan benar.\nKonfigurasi NTP Server Melihat zona waktu yang digunakan oleh server Anda saat ini, gunakan perintah berikut\n[root@hamim-centos8 ~]# timedatectl  Jika Anda ingin melihat list zona waktu yang tersedia, silakan gunakan perintah berikut",
+    "name" : "Basic Authentication Apache Di CentOS 8",
+    "headline" : "Basic Authentication Apache Di CentOS 8",
+    "description" : "Pengenalan Basic Authentication Keamanan selalu menjadi prioritas pertama untuk semua orang. Jika Anda seorang webmaster dan Anda ingin membatasi akses ke situs web tertentu saja yang dapat mengakses nya dengan ketentuan masing - masing user mempunyai user dan password sendiri - sendiri untuk mengakses situs, makaa cara ini dapat digunakan.\nBasic Authentication salah satu solusi yang dapat digunakan sebagai security. Dengan Basic Authentication Anda dapat membuat username dan password tertentu untuk mengakses sebuah situs misalnya.",
     "inLanguage" : "en-us",
     "author" : "[Nur Hamim]",
     "creator" : "[Nur Hamim]",
@@ -63,10 +63,10 @@
     "accountablePerson" : "[Nur Hamim]",
     "copyrightHolder" : "[Nur Hamim]",
     "copyrightYear" : "2020",
-    "datePublished": "2020-03-08 19:25:18 \x2b0700 \x2b07",
-    "dateModified" : "2020-03-08 19:25:18 \x2b0700 \x2b07",
-    "url" : "https:\/\/nurhamim.net\/cara-konfigurasi-ntp-server-dan-client-di-centos-8\/",
-    "wordCount" : "302",
+    "datePublished": "2020-03-10 22:32:16 \x2b0700 \x2b07",
+    "dateModified" : "2020-03-10 22:32:16 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/basic-authentication-apache-di-centos-8\/",
+    "wordCount" : "311",
     "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
 }
 </script>
@@ -129,11 +129,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Cara Konfigurasi NTP Server Dan Client Di CentOS 8</h1>
+        <h1 class="post-title" itemprop="name headline">Basic Authentication Apache Di CentOS 8</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2020-03-08 itemprop="datePublished">March 8, 2020</time>
+                on <time datetime=2020-03-10 itemprop="datePublished">March 10, 2020</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -163,89 +163,101 @@
 
           
 
-<h3 id="pengelanan-ntp">Pengelanan NTP</h3>
+<h3 id="pengenalan-basic-authentication">Pengenalan Basic Authentication</h3>
 
-<p>NTP singkatan dari <em>Network Time Protokol</em> sebuah protokol yang digunakan untuk sinkronisasi waktu. NTP server sangatlah penting untuk diatur, jika Anda mempunyai sebuah aplikasi yang membutuhkan sinkronisasi waktu tertentu yang akurat, maka hal ini ini perlu di dikonfigurasi dengan baik dan benar.</p>
+<p>Keamanan selalu menjadi prioritas pertama untuk semua orang. Jika Anda seorang webmaster dan Anda ingin membatasi akses ke situs web tertentu saja yang dapat mengakses nya dengan ketentuan masing - masing user mempunyai user dan password sendiri - sendiri untuk mengakses situs, makaa cara ini dapat digunakan.</p>
 
-<h3 id="konfigurasi-ntp-server">Konfigurasi NTP Server</h3>
+<p><strong><em>Basic Authentication</em></strong> salah satu solusi yang dapat digunakan sebagai security. Dengan <em>Basic Authentication</em> Anda dapat membuat username dan password tertentu untuk mengakses sebuah situs misalnya.</p>
 
-<p>Melihat zona waktu yang digunakan oleh server Anda saat ini, gunakan perintah berikut</p>
+<h3 id="konfigurasi-basic-authentication">Konfigurasi Basic Authentication.</h3>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl 
-</code></pre>
-
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
-
-<p>Jika Anda ingin melihat list zona waktu yang tersedia, silakan gunakan perintah berikut</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl list-timezones
-</code></pre>
-
-<p>Namun jika Anda berada di Jakarta dan Anda ingin menyinkronisasi server Anda dengan waktu di Jakarta Anda dapat grep dari list diatas seperti berikut</p>
+<p>Untuk melakukan konfigurasi <em>Basic Authentication</em> di Apache sangatlah mudah silakan pindah ke direktori <em>/etc/httpd/conf.d/</em> dan membuat file dengan nama <em>auth_basic.conf</em> seperti berikut ini</p>
 
 <pre><code class="language-bash">[root@hamim-centos8 ~]#
-[root@hamim-centos8 ~]# timedatectl list-timezones |grep Asia/Jakarta
-Asia/Jakarta
-[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# cd /etc/httpd/conf.d/
+[root@hamim-centos8 conf.d]#
+[root@hamim-centos8 conf.d]# vim auth_basic.conf
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Isikan dengan detail berikut:</p>
 
-<p>Untuk set waktu nya dapat menggunakan perintah berikut, dan lihat perubahannya</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl set-timezone Asia/Jakarta
-[root@hamim-centos8 ~]# timedatectl 
+<pre><code class="language-bash">&lt;Directory /var/www/html/auth-basic&gt;
+    AuthType Basic
+    AuthName &quot;Basic Authentication&quot;
+    AuthUserFile /etc/httpd/conf/.htpasswd
+    require valid-user
+&lt;/Directory&gt;
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<h4 id="keterangan">Keterangan:</h4>
 
-<h3 id="konfigurasi-ntp-client">Konfigurasi NTP Client</h3>
+<ol>
+<li>AuthType: Tipe dari Autentikasi</li>
+<li>AuthName: Nama Autentikasi</li>
+<li>AuthUserFile: Direktori file user</li>
+</ol>
 
-<p>Tugas dari NTP Client sendiri yaitu melakukan sinkronisasi waktu dengan NTP Server, pastikan terlebih dahulu untuk NTP Client Anda sudah Aktif, gunakan perintah berikut:</p>
+<p>Selanjutnya set password user yang akan mengakses situs Anda gunakan perintah berikut</p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl | grep 'NTP service'
-              NTP service: active
-[root@hamim-centos8 ~]#
+<pre><code class="language-bash">[root@hamim-centos8 conf.d]#
+[root@hamim-centos8 conf.d]# htpasswd -c /etc/httpd/conf/.htpasswd hamim
+New password:
+Re-type new password:
+Adding password for user hamim
+[root@hamim-centos8 conf.d]#
 </code></pre>
 
-<p>Jika NTP Client Anda belum Aktif silakan install service <strong>chrony</strong> terlebih dahulu berikut command yang digunakan untuk instalasinya</p>
+<p>Lihat authentikasi yang dibuat sebelumnya,</p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# dnf install chrony -y 
-[root@hamim-centos8 ~]# systemctl enable chrony
-[root@hamim-centos8 ~]# systemctl start chrony
-[root@hamim-centos8 ~]# systemctl status chrony
+<pre><code class="language-bash">[root@hamim-centos8 conf.d]#
+[root@hamim-centos8 conf.d]# cat /etc/httpd/conf/.htpasswd
+hamim:$apr1$5HT7qgeN$qVb2xEPxr2TVbrVsCwYJj/
+[root@hamim-centos8 conf.d]#
 </code></pre>
 
-<p>Selanjutnya buka file  <em>chrony.conf</em> yang berada di direktori <strong>/etc/chrony.conf</strong> silakan gunakan teks editor vi/vim/nano sesuai kenyamanan Anda</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/basic-auth-apache/Screenshot_0.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# vim /etc/chrony.conf 
+<p>Berikutnya, membuat direktori, untuk penamaan direktori sesuaikan dengan konfigurasi <em>auth_basic.conf</em> diatas</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 conf.d]# mkdir /var/www/html/auth-basic
+[root@hamim-centos8 conf.d]#
 </code></pre>
 
-<p>Disable <strong>pool 2.centos.pool.ntp.org iburst</strong> dan ubah NTP Server dengan lokasi Anda</p>
+<p>Jika sudah silakan restart service httpd</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
-
-<p>Gunakan perintah berikut, untuk cek sources NTP Server</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]# chronyc sources
+<pre><code class="language-bash">[root@hamim-centos8 conf.d]# systemctl restart httpd
+[root@hamim-centos8 conf.d]#
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Untuk percobaan silakan buat test page bisa menggunakan <em>.html</em> misalnya, seperti berikut ini</p>
 
-<p>Untuk memeriksa sinkronisasi waktu sudah berjalan atau belum Anda dapat menggunakan tool NTPStat, silakan install terlebih dahulu menggunakan perintah</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]# dnf install ntpstat -y
+<pre><code class="language-bash">[root@hamim-centos8 conf.d]# vim /var/www/html/auth-basic/index.html
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Berikut isi file <em>.index.html</em> nya</p>
 
-<p>Pastikan semua waktu mulai dari tanggal/bulan/tahun/ dan jam sudah sesuai semua dan berikut hasilnya</p>
+<pre><code class="language-bash">&lt;html&gt;
+&lt;body&gt;
+&lt;div style=&quot;width: 100%; font-size: 40px; font-weight: bold; text-align: center;&quot;&gt;
+Test Page for Basic Authentication
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Jika sudah silakan akses <a href="http://IP_VM/auth/basic/" rel="nofollow noreferrer" target="_blank">http://IP_VM/auth/basic/</a> atau subdomain atau domain yang sudah pointing (arahkan) ke IP VM Anda seperti berikut:</p>
 
-<p>Selamat mencoba semoga bermanfaat.</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/basic-auth-apache/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p>See You &gt;.&lt;</p>
+<p>Pastika username dan password nya sudah benar, jika benar akan tampil tampilan html yang sudah dibuat sebelumnya, seperti berikut ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/basic-auth-apache/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sekian tutorial terkait <em>Basic Authentication Apache</em>.</p>
+
+<p>Selamat mencoba semoga bermanfaat 👌</p>
+
+<p>See You 😃</p>
 
     </div>
 
@@ -262,7 +274,7 @@ Asia/Jakarta
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/>https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/</span>
+                    <a href=https://nurhamim.net/basic-authentication-apache-di-centos-8/>https://nurhamim.net/basic-authentication-apache-di-centos-8/</span>
             </p>
             
             
@@ -290,10 +302,8 @@ Asia/Jakarta
 
     <div class="post-nav">
         
-        <a href="https://nurhamim.net/cara-menambah-dan-menghapus-user-sudoer-di-centos-8/" class="prev" rel="prev" title="Cara Menambah dan Menghapus User (Sudoer) Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Menambah dan Menghapus User (Sudoer) Di CentOS 8</a>
+        <a href="https://nurhamim.net/cara-menggunakan-cgi-scripts-basic-di-apache-centos-8/" class="prev" rel="prev" title="Cara Menggunakan CGI Scripts Basic Di Apache CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Menggunakan CGI Scripts Basic Di Apache CentOS 8</a>
          
-        
-        <a href="https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/" class="next" rel="next" title="Cara Instalasi Web Server Apache Di CentOS 8">Cara Instalasi Web Server Apache Di CentOS 8&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

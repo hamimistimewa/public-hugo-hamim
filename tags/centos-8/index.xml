@@ -6,10 +6,51 @@
     <description>Recent content in CentOS 8 on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Mar 2020 20:11:59 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 22:32:16 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/centos-8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Basic Authentication Apache Di CentOS 8</title>
+      <link>https://nurhamim.net/basic-authentication-apache-di-centos-8/</link>
+      <pubDate>Tue, 10 Mar 2020 22:32:16 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/basic-authentication-apache-di-centos-8/</guid>
+      <description>Pengenalan Basic Authentication Keamanan selalu menjadi prioritas pertama untuk semua orang. Jika Anda seorang webmaster dan Anda ingin membatasi akses ke situs web tertentu saja yang dapat mengakses nya dengan ketentuan masing - masing user mempunyai user dan password sendiri - sendiri untuk mengakses situs, makaa cara ini dapat digunakan.
+Basic Authentication salah satu solusi yang dapat digunakan sebagai security. Dengan Basic Authentication Anda dapat membuat username dan password tertentu untuk mengakses sebuah situs misalnya.</description>
+    </item>
+    
+    <item>
+      <title>Cara Menggunakan CGI Scripts Basic Di Apache CentOS 8</title>
+      <link>https://nurhamim.net/cara-menggunakan-cgi-scripts-basic-di-apache-centos-8/</link>
+      <pubDate>Tue, 10 Mar 2020 21:28:06 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-menggunakan-cgi-scripts-basic-di-apache-centos-8/</guid>
+      <description>Pengenalan Common Gateway Interface (CGI) adalah suatu standar untuk menghubungkan berbagai program aplikasi yang ada pada suatu server ke halaman web. CGI berfungsi menjembatani standar HTML untuk halaman web dengan program lain seperti misalnya database, karena bagian dari web server ini dapat berkomunikasi dengan program lain. CGI Script dapat ditulis dalam bahasa apapun seperti bash, java, C, Perl, Python, dan lain - lain, yang dapat dengan mudah dieksekusi oleh web server.</description>
+    </item>
+    
+    <item>
+      <title>Cara Mengaktifkan UserDir Apache Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-mengaktifkan-userdir-apache-di-centos-8/</link>
+      <pubDate>Tue, 10 Mar 2020 19:43:38 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-mengaktifkan-userdir-apache-di-centos-8/</guid>
+      <description>Pengenalan Userdir Userdir kepanjangan dari User Direktory, Merupakan direktori user yang berada pada Linux letak user nya sendiri berada di /home/nama_user/user_dir, jika Anda mengakftifkan userdir, maka Anda dapat menyimpan atau meletakkan file website misalnya di direktori user tersebut dan web server apache (httpd) dapat menjalankan file website Anda tersebut.
+Secara default konfigurasi userdir di CentOS 8 berada di direktori /etc/httpd/conf.d/.
+Tahapan Konfigurasi Userdir Untuk mengaktifkan userdir silakan buka file userdir.</description>
+    </item>
+    
+    <item>
+      <title>Cara Membuat Virtual Host (vhost) Apache CentOS 8</title>
+      <link>https://nurhamim.net/cara-membuat-virtual-host-vhost-apache-centos-8/</link>
+      <pubDate>Tue, 10 Mar 2020 17:50:07 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-membuat-virtual-host-vhost-apache-centos-8/</guid>
+      <description>Pengenalan Virtual Host. Jika Anda pengguna layanan Cloud ataupun VPS dan Anda menggunakan web server Apache dan kemudian Anda mempunyai lebih dari 1 domain lalu Anda ingin menambahkan semua domain tersebut ke dalam VPS Anda di dalam 1 web server Apache apakah dapat dilakukan?
+Dan apabila saya mempunyai 1 domain banyak subdomain di dalam satu server tersebut apakah dapat dilakukan?
+Jawabannnya BISA dengan cara menggunakan Virtual Host (vhost) atau sering orang bilang dengan kalimat Virtual Hosting.</description>
+    </item>
     
     <item>
       <title>Cara Instalasi Web Server Apache Di CentOS 8</title>
@@ -17,9 +58,9 @@
       <pubDate>Sun, 08 Mar 2020 20:11:59 +0700</pubDate>
       
       <guid>https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/</guid>
-      <description>Web Server Apache merupakan web server yang dapat dijalankan di berbagai macam sistem operasi yang berbeda seperti Unix, BSD, Linux, Windows dan Novell Netware yang bertugas untuk melayani fasilitas web dengan menggunakan protokol http.
+      <description>Pengenalan Web Server Apache Web Server Apache merupakan web server yang dapat dijalankan di berbagai macam sistem operasi yang berbeda seperti Unix, BSD, Linux, Windows dan Novell Netware yang bertugas untuk melayani fasilitas web dengan menggunakan protokol http.
 Apache bersifat open source, yang artinya dapat digunakan secara bebas oleh semua pengguna atau kalangan.
-Web server Apache akan bekerja jika pengguna atau user meminta atau request melalui protokol http atau https untuk membuka suatu halaman. Apache akan menjawab request yang diminta oleh pengguna kemudian akan diproses oleh Apache sampai menampilkan sebuah halaman yang diminta atau yang diminta.</description>
+Web server Apache akan bekerja jika pengguna atau user meminta atau request melalui protokol http atau https untuk membuka suatu halaman.</description>
     </item>
     
     <item>
@@ -28,7 +69,7 @@ Web server Apache akan bekerja jika pengguna atau user meminta atau request mela
       <pubDate>Sun, 08 Mar 2020 19:25:18 +0700</pubDate>
       
       <guid>https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/</guid>
-      <description>NTP singkatan dari Network Time Protokol sebuah protokol yang digunakan untuk sinkronisasi waktu. NTP server sangatlah penting untuk diatur, jika Anda mempunyai sebuah aplikasi yang membutuhkan sinkronisasi waktu tertentu yang akurat, maka hal ini ini perlu di dikonfigurasi dengan baik dan benar.
+      <description>Pengelanan NTP NTP singkatan dari Network Time Protokol sebuah protokol yang digunakan untuk sinkronisasi waktu. NTP server sangatlah penting untuk diatur, jika Anda mempunyai sebuah aplikasi yang membutuhkan sinkronisasi waktu tertentu yang akurat, maka hal ini ini perlu di dikonfigurasi dengan baik dan benar.
 Konfigurasi NTP Server Melihat zona waktu yang digunakan oleh server Anda saat ini, gunakan perintah berikut
 [root@hamim-centos8 ~]# timedatectl  Jika Anda ingin melihat list zona waktu yang tersedia, silakan gunakan perintah berikut</description>
     </item>
@@ -39,9 +80,9 @@ Konfigurasi NTP Server Melihat zona waktu yang digunakan oleh server Anda saat i
       <pubDate>Sun, 08 Mar 2020 14:50:41 +0700</pubDate>
       
       <guid>https://nurhamim.net/cara-menambah-dan-menghapus-user-sudoer-di-centos-8/</guid>
-      <description>Tutorial kali ini saya akan membahas bagaimana cara membuat user dengan privileges root dan bagaiamana cara menghapus user tersebut pada CentOS 8.
+      <description>Pengelanan User Pada tutorial kali ini kami akan membahas tentang bagaimana cara membuat user dengan privileges root dan bagaiamana cara menghapus user tersebut pada CentOS 8.
 Tujuan dari tutorial ini Anda dapat membuat user sesuai keinginan Anda, selain itu dari segi keamanan server juga sangat baik karena nantinya Anda dapat disable user root dan Anda dapat menggunakan user yang sudah dibuat dengan privileges root tersebut.
-Berikut ini tahapan - tahapan membuat user pada CentOS 8</description>
+Tahapan Membuat Dan Menhapus User Langkah pertama silakan remote akses terlebih dahulu server CentOS 8 Langkah selanjutnya gunakan beberapa perintah berikut untuk membuat user dan memberikan password pada user</description>
     </item>
     
     <item>
@@ -62,7 +103,7 @@ Instalasi Dan Penggunaan Cockpit Untuk instalasi cockpit pada CentOS 8 Anda dapa
       <pubDate>Sun, 08 Mar 2020 10:26:22 +0700</pubDate>
       
       <guid>https://nurhamim.net/instalasi-centos-8-di-openstack/</guid>
-      <description>24 September 2019 waktu dimana CentOS 8 dirilis. Yaa CentOS 8 merupakan penerus dari CentOS 7 yang akan EOL pada 30 Juni 2024.
+      <description>Pengenalan 24 September 2019 waktu dimana CentOS 8 dirilis. Yaa CentOS 8 merupakan penerus dari CentOS 7 yang akan EOL pada 30 Juni 2024.
 CentOS 8 saat ini sudah menggunakan Linux Kernel 4.18. Terdapat beberapa fitur baru yang ada pada CentOS diataranya sebagai berikut:
  Cockpit sekarang tersedia secara default CentOS 8 hadir dengan versi baru dari versi YUM (Yellowdog Updater Modified) yang didasarkan pada DNF (Dandified Yum). Versi baru ini kompatibel dengan YUM v3 (CentOS 7) RPM v4.</description>
     </item>

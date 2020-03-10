@@ -18,9 +18,9 @@
   
   
   <meta name="google-site-verification" content="ca-pub-1515372853161377" />
-  <link rel="prev" href="https://nurhamim.net/cara-menambah-dan-menghapus-user-sudoer-di-centos-8/" />
-  <link rel="next" href="https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/" />
-  <link rel="canonical" href="https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/" />
+  <link rel="prev" href="https://nurhamim.net/cara-membuat-virtual-host-vhost-apache-centos-8/" />
+  <link rel="next" href="https://nurhamim.net/cara-menggunakan-cgi-scripts-basic-di-apache-centos-8/" />
+  <link rel="canonical" href="https://nurhamim.net/cara-mengaktifkan-userdir-apache-di-centos-8/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -31,10 +31,10 @@
   <title>
        
        
-           Cara Konfigurasi NTP Server Dan Client Di CentOS 8 | Catatan Cah Ndeso
+           Cara Mengaktifkan UserDir Apache Di CentOS 8 | Catatan Cah Ndeso
        
   </title>
-  <meta name="title" content="Cara Konfigurasi NTP Server Dan Client Di CentOS 8 | Catatan Cah Ndeso">
+  <meta name="title" content="Cara Mengaktifkan UserDir Apache Di CentOS 8 | Catatan Cah Ndeso">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -53,9 +53,9 @@
          "@id": "https:\/\/nurhamim.net"
     },
     "articleSection" : "posts",
-    "name" : "Cara Konfigurasi NTP Server Dan Client Di CentOS 8",
-    "headline" : "Cara Konfigurasi NTP Server Dan Client Di CentOS 8",
-    "description" : "Pengelanan NTP NTP singkatan dari Network Time Protokol sebuah protokol yang digunakan untuk sinkronisasi waktu. NTP server sangatlah penting untuk diatur, jika Anda mempunyai sebuah aplikasi yang membutuhkan sinkronisasi waktu tertentu yang akurat, maka hal ini ini perlu di dikonfigurasi dengan baik dan benar.\nKonfigurasi NTP Server Melihat zona waktu yang digunakan oleh server Anda saat ini, gunakan perintah berikut\n[root@hamim-centos8 ~]# timedatectl  Jika Anda ingin melihat list zona waktu yang tersedia, silakan gunakan perintah berikut",
+    "name" : "Cara Mengaktifkan UserDir Apache Di CentOS 8",
+    "headline" : "Cara Mengaktifkan UserDir Apache Di CentOS 8",
+    "description" : "Pengenalan Userdir Userdir kepanjangan dari User Direktory, Merupakan direktori user yang berada pada Linux letak user nya sendiri berada di \/home\/nama_user\/user_dir, jika Anda mengakftifkan userdir, maka Anda dapat menyimpan atau meletakkan file website misalnya di direktori user tersebut dan web server apache (httpd) dapat menjalankan file website Anda tersebut.\nSecara default konfigurasi userdir di CentOS 8 berada di direktori \/etc\/httpd\/conf.d\/.\nTahapan Konfigurasi Userdir Untuk mengaktifkan userdir silakan buka file userdir.",
     "inLanguage" : "en-us",
     "author" : "[Nur Hamim]",
     "creator" : "[Nur Hamim]",
@@ -63,10 +63,10 @@
     "accountablePerson" : "[Nur Hamim]",
     "copyrightHolder" : "[Nur Hamim]",
     "copyrightYear" : "2020",
-    "datePublished": "2020-03-08 19:25:18 \x2b0700 \x2b07",
-    "dateModified" : "2020-03-08 19:25:18 \x2b0700 \x2b07",
-    "url" : "https:\/\/nurhamim.net\/cara-konfigurasi-ntp-server-dan-client-di-centos-8\/",
-    "wordCount" : "302",
+    "datePublished": "2020-03-10 19:43:38 \x2b0700 \x2b07",
+    "dateModified" : "2020-03-10 19:43:38 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-mengaktifkan-userdir-apache-di-centos-8\/",
+    "wordCount" : "391",
     "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
 }
 </script>
@@ -129,11 +129,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Cara Konfigurasi NTP Server Dan Client Di CentOS 8</h1>
+        <h1 class="post-title" itemprop="name headline">Cara Mengaktifkan UserDir Apache Di CentOS 8</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2020-03-08 itemprop="datePublished">March 8, 2020</time>
+                on <time datetime=2020-03-10 itemprop="datePublished">March 10, 2020</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -163,89 +163,129 @@
 
           
 
-<h3 id="pengelanan-ntp">Pengelanan NTP</h3>
+<h3 id="pengenalan-userdir">Pengenalan Userdir</h3>
 
-<p>NTP singkatan dari <em>Network Time Protokol</em> sebuah protokol yang digunakan untuk sinkronisasi waktu. NTP server sangatlah penting untuk diatur, jika Anda mempunyai sebuah aplikasi yang membutuhkan sinkronisasi waktu tertentu yang akurat, maka hal ini ini perlu di dikonfigurasi dengan baik dan benar.</p>
+<p>Userdir kepanjangan dari <em>User Direktory</em>, Merupakan direktori user yang berada pada Linux letak user nya sendiri berada di <em>/home/nama_user/user_dir</em>, jika Anda mengakftifkan <em>userdir</em>, maka Anda dapat menyimpan atau meletakkan file website misalnya di direktori user tersebut dan web server apache (httpd) dapat menjalankan file website Anda tersebut.</p>
 
-<h3 id="konfigurasi-ntp-server">Konfigurasi NTP Server</h3>
+<p>Secara default konfigurasi <em>userdir</em> di CentOS 8 berada di direktori <em>/etc/httpd/conf.d/</em>.</p>
 
-<p>Melihat zona waktu yang digunakan oleh server Anda saat ini, gunakan perintah berikut</p>
+<h3 id="tahapan-konfigurasi-userdir">Tahapan Konfigurasi Userdir</h3>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl 
-</code></pre>
-
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
-
-<p>Jika Anda ingin melihat list zona waktu yang tersedia, silakan gunakan perintah berikut</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl list-timezones
-</code></pre>
-
-<p>Namun jika Anda berada di Jakarta dan Anda ingin menyinkronisasi server Anda dengan waktu di Jakarta Anda dapat grep dari list diatas seperti berikut</p>
+<p>Untuk mengaktifkan <em>userdir</em> silakan buka file <em>userdir.conf</em> yang berada di direktori <em>/etc/httpd/conf.d</em></p>
 
 <pre><code class="language-bash">[root@hamim-centos8 ~]#
-[root@hamim-centos8 ~]# timedatectl list-timezones |grep Asia/Jakarta
-Asia/Jakarta
+[root@hamim-centos8 ~]# vim /etc/httpd/conf.d/userdir.conf
+</code></pre>
+
+<p>Pada baris berikut ubah dari</p>
+
+<pre><code class="language-bash">   UserDir disabled
+</code></pre>
+
+<p>menjadi</p>
+
+<pre><code class="language-bash">    UserDir enabled
+</code></pre>
+
+<p>Kemudian <em>uncomment</em> pada:</p>
+
+<pre><code class="language-bash">UserDir public_html
+</code></pre>
+
+<p>Detailnya seperti pada gambar berikut ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/userdir-apache/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika Anda ingin hanya pengguna tertentu saja yang memiliki <em>userdir</em>, maka konfigurasi bisa dibuat seperti berikut:</p>
+
+<pre><code class="language-bash">UserDir enabled
+UserDir disabled userhamim usercentos user1
+</code></pre>
+
+<p>Jika sudah silakan restart webserver apache Anda, gunakan perintah</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# systemctl restart httpd
+</code></pre>
+
+<p>Kemudian, untuk memvalidasi apakah <em>userdir</em> telah aktif silakan membuat user terlebih dahulu. Disini saya sudah mempunyai 2 user diantaranya user <em>hamim</em> dan <em>centos</em></p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# ls -lah /home/
+total 0
+drwxr-xr-x.  4 root   root    33 Mar 10 20:50 .
+dr-xr-xr-x. 17 root   root   244 Mar 10 20:20 ..
+drwx------.  3 centos centos  95 Mar  7 22:23 centos
+drwx--x--x   3 hamim  hamim   81 Mar 10 20:51 hamim
 [root@hamim-centos8 ~]#
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Silakan membuat direktori <em>public_hmtl</em> di dalam user <em>hamim</em> (disini saya menggunakan user <em>hamim</em>)</p>
 
-<p>Untuk set waktu nya dapat menggunakan perintah berikut, dan lihat perubahannya</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl set-timezone Asia/Jakarta
-[root@hamim-centos8 ~]# timedatectl 
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# mkdir /home/hamim/public_html
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Kemudian, berikan hak akses <strong>711</strong> pada user <em>hamim</em></p>
 
-<h3 id="konfigurasi-ntp-client">Konfigurasi NTP Client</h3>
+<pre><code class="language-bash">[root@hamim-centos8 ~]# chmod 711 /home/hamim/
+</code></pre>
 
-<p>Tugas dari NTP Client sendiri yaitu melakukan sinkronisasi waktu dengan NTP Server, pastikan terlebih dahulu untuk NTP Client Anda sudah Aktif, gunakan perintah berikut:</p>
+<p>Kemudian, berikan hak owner <strong>hamim:hamim</strong> pada direktori <em>public_html</em></p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# timedatectl | grep 'NTP service'
-              NTP service: active
+<pre><code class="language-bash">[root@hamim-centos8 ~]# chown hamim:hamim /home/hamim/public_html/
+</code></pre>
+
+<p>Kemudian, berikan hak akses <strong>755</strong> untuk direktori <em>public_html</em></p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# chmod 755 /home/hamim/public_html/
 [root@hamim-centos8 ~]#
 </code></pre>
 
-<p>Jika NTP Client Anda belum Aktif silakan install service <strong>chrony</strong> terlebih dahulu berikut command yang digunakan untuk instalasinya</p>
+<p>Disini saya tidak menggunakan SELinux dengan demikian pastikan SELinux Anda dalam status <em>disabled</em>, gunakan perintah berikut</p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# dnf install chrony -y 
-[root@hamim-centos8 ~]# systemctl enable chrony
-[root@hamim-centos8 ~]# systemctl start chrony
-[root@hamim-centos8 ~]# systemctl status chrony
+<pre><code class="language-bash">[root@hamim-centos8 ~]# sestatus
+SELinux status:                 disabled
+[root@hamim-centos8 ~]#
 </code></pre>
 
-<p>Selanjutnya buka file  <em>chrony.conf</em> yang berada di direktori <strong>/etc/chrony.conf</strong> silakan gunakan teks editor vi/vim/nano sesuai kenyamanan Anda</p>
+<p>Jika sudah silakan akses di browser domain atau IP VM contohnya</p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# vim /etc/chrony.conf 
+<pre><code class="language-bash">URL: http://IP_VM/~hamim
+URL: vhost.nurhamim.net/~hamim
 </code></pre>
 
-<p>Disable <strong>pool 2.centos.pool.ntp.org iburst</strong> dan ubah NTP Server dengan lokasi Anda</p>
+<p>Hasilnya akan seperti berikut</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/userdir-apache/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p>Gunakan perintah berikut, untuk cek sources NTP Server</p>
+<p>Langkah selanjutnya saya akan mencoba membuat file <em>index.html</em> yang berada di dalam direktori <strong>public_html</strong> seperti berikut</p>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# chronyc sources
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# cd /home/hamim/public_html/
+[root@hamim-centos8 public_html]#
+[root@hamim-centos8 public_html]# vim index.html
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Isi Dari file <em>index.html</em> sebagai berikut</p>
 
-<p>Untuk memeriksa sinkronisasi waktu sudah berjalan atau belum Anda dapat menggunakan tool NTPStat, silakan install terlebih dahulu menggunakan perintah</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]# dnf install ntpstat -y
+<pre><code class="language-bash">&lt;html&gt;
+&lt;body&gt;
+&lt;div style=&quot;width: 100%; font-size: 40px; font-weight: bold; text-align: center;&quot;&gt;
+UserDir Test Page
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Jika sudah silakan akses kembali <em>userdir</em> melalui browser, hasilnya akan seperti berikut ini</p>
 
-<p>Pastikan semua waktu mulai dari tanggal/bulan/tahun/ dan jam sudah sesuai semua dan berikut hasilnya</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/userdir-apache/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ntp/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Sekian tutorial terkait <strong>UserDir</strong> di CentOS 8.</p>
 
-<p>Selamat mencoba semoga bermanfaat.</p>
+<p>Selamat mencoba semoga bermanfaat 👌</p>
 
-<p>See You &gt;.&lt;</p>
+<p>See You 😃</p>
 
     </div>
 
@@ -262,7 +302,7 @@ Asia/Jakarta
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/>https://nurhamim.net/cara-konfigurasi-ntp-server-dan-client-di-centos-8/</span>
+                    <a href=https://nurhamim.net/cara-mengaktifkan-userdir-apache-di-centos-8/>https://nurhamim.net/cara-mengaktifkan-userdir-apache-di-centos-8/</span>
             </p>
             
             
@@ -290,10 +330,10 @@ Asia/Jakarta
 
     <div class="post-nav">
         
-        <a href="https://nurhamim.net/cara-menambah-dan-menghapus-user-sudoer-di-centos-8/" class="prev" rel="prev" title="Cara Menambah dan Menghapus User (Sudoer) Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Menambah dan Menghapus User (Sudoer) Di CentOS 8</a>
+        <a href="https://nurhamim.net/cara-membuat-virtual-host-vhost-apache-centos-8/" class="prev" rel="prev" title="Cara Membuat Virtual Host (vhost) Apache CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Membuat Virtual Host (vhost) Apache CentOS 8</a>
          
         
-        <a href="https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/" class="next" rel="next" title="Cara Instalasi Web Server Apache Di CentOS 8">Cara Instalasi Web Server Apache Di CentOS 8&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://nurhamim.net/cara-menggunakan-cgi-scripts-basic-di-apache-centos-8/" class="next" rel="next" title="Cara Menggunakan CGI Scripts Basic Di Apache CentOS 8">Cara Menggunakan CGI Scripts Basic Di Apache CentOS 8&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

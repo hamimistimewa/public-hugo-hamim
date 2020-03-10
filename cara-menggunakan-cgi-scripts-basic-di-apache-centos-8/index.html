@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  <meta name="google-site-verification" content="ca-pub-1515372853161377" />
+  <link rel="prev" href="https://nurhamim.net/cara-mengaktifkan-userdir-apache-di-centos-8/" />
+  <link rel="next" href="https://nurhamim.net/basic-authentication-apache-di-centos-8/" />
+  <link rel="canonical" href="https://nurhamim.net/cara-menggunakan-cgi-scripts-basic-di-apache-centos-8/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Menggunakan CGI Scripts Basic Di Apache CentOS 8 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Cara Menggunakan CGI Scripts Basic Di Apache CentOS 8 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Menggunakan CGI Scripts Basic Di Apache CentOS 8",
+    "headline" : "Cara Menggunakan CGI Scripts Basic Di Apache CentOS 8",
+    "description" : "Pengenalan Common Gateway Interface (CGI) adalah suatu standar untuk menghubungkan berbagai program aplikasi yang ada pada suatu server ke halaman web. CGI berfungsi menjembatani standar HTML untuk halaman web dengan program lain seperti misalnya database, karena bagian dari web server ini dapat berkomunikasi dengan program lain. CGI Script dapat ditulis dalam bahasa apapun seperti bash, java, C, Perl, Python, dan lain - lain, yang dapat dengan mudah dieksekusi oleh web server.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-10 21:28:06 \x2b0700 \x2b07",
+    "dateModified" : "2020-03-10 21:28:06 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-menggunakan-cgi-scripts-basic-di-apache-centos-8\/",
+    "wordCount" : "443",
+    "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Menggunakan CGI Scripts Basic Di Apache CentOS 8</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-03-10 itemprop="datePublished">March 10, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-8-administrator/"> CentOS 8 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h3 id="pengenalan">Pengenalan</h3>
+
+<p>Common Gateway Interface (CGI) adalah suatu standar untuk menghubungkan berbagai program aplikasi yang ada pada suatu server ke halaman web.
+CGI berfungsi menjembatani standar HTML untuk halaman web dengan program lain seperti misalnya database, karena bagian dari web server ini dapat berkomunikasi dengan program lain.
+CGI Script dapat ditulis dalam bahasa apapun seperti <em>bash, java, C, Perl, Python, dan lain - lain</em>, yang dapat dengan mudah dieksekusi oleh web server.</p>
+
+<h3 id="contoh-penggunaan-script-cgi-menggunakan-perl">Contoh Penggunaan Script CGI Menggunakan Perl</h3>
+
+<p>Langkah pertama kali yang di lakukan untuk menggunakan CGI pastikan di VM CentOS 8 Anda sudah terinstall sevice package <em>perl</em> dan <em>perl-CGI</em> jika belum silakan install terlebih dahulu menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# dnf install perl perl-CGI -y 
+</code></pre>
+
+<p>Selanjutnya memastikan paket CGI sudah terinstall dan saat ini CGI sudah tersedia sebagai berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# grep -n &quot;^ *ScriptAlias&quot; /etc/httpd/conf/httpd.conf
+250:    ScriptAlias /cgi-bin/ &quot;/var/www/cgi-bin/&quot;
+[root@hamim-centos8 ~]#
+</code></pre>
+
+<p>Kemudian, silakan membuat script <strong>perl</strong> sederhana misalnya <strong>Hello, World!</strong> di direktori <em>/var/www/cgi-bin</em> seperti berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# cd /var/www/cgi-bin/
+[root@hamim-centos8 cgi-bin]#
+[root@hamim-centos8 cgi-bin]# vim hello.pl
+</code></pre>
+
+<p>Isi dengan script <em>perl</em> berikut</p>
+
+<pre><code class="language-perl">#!/usr/bin/perl
+print &quot;Content-type: text/html\n\n&quot;;
+print &quot;Hello, World!&quot;;
+</code></pre>
+
+<p>Jika sudah berikan hak akses pada file <strong>hello.pl</strong>, gunakan perintah</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 cgi-bin]# chmod 755 /var/www/cgi-bin/hello.pl
+[root@hamim-centos8 cgi-bin]#
+</code></pre>
+
+<p>Dan restar web server apache (httpd), gunakan perintah</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 cgi-bin]# systemctl restart httpd
+</code></pre>
+
+<p>Kemudian akses IP_VM Anda seperti pada gambar berikut:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/cgi-apache/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="membuat-script-cgi-dengan-virtual-host-apache">Membuat Script CGI Dengan Virtual Host Apache</h3>
+
+<p>Silakan membuat script CGI sesuai bahasa yang diinginkan disini saya akan membuat dua script menggunakan <strong>bash</strong> dan <strong>perl</strong>.</p>
+
+<p><strong>Bash Script:</strong> [/var/www/cgi-bin/mybash.cgi]</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+echo -e &quot;Content-type: text/html\n\n&quot;
+echo &quot;Welcome! to First CGI Script&quot;
+</code></pre>
+
+<p><strong>Perl Script:</strong> [/var/www/cgi-bin/myperl.cgi]</p>
+
+<pre><code class="language-perl">#!/usr/bin/perl
+ 
+print &quot;Content-type: text/html\n&quot;;
+print &quot;Welcome! to First CGI Script&quot;;
+</code></pre>
+
+<p>Namun disini saya akan mencoba mendemokan yang menggunakan bahasa <strong>bash</strong> silakan ke direktori <em>/var/www/cgi-bin</em> dan buat file dengan nama <strong>mybash.cgi</strong> seperti berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# cd /var/www/cgi-bin/
+[root@hamim-centos8 cgi-bin]#
+[root@hamim-centos8 cgi-bin]# vim mybash.cgi
+</code></pre>
+
+<p>isi dengan script diatas</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+echo -e &quot;Content-type: text/html\n\n&quot;
+echo &quot;Welcome! to First CGI Script&quot;
+</code></pre>
+
+<p>Berikan hak akses <em>755</em> pada file <em>mybash.cgi</em>,</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 cgi-bin]# chmod 755 mybash.cgi
+</code></pre>
+
+<p>Jika sudah silakan membuat VirtualHost, pindah ke direktori <em>/etc/httpd/conf.d/</em> buat file virtualhost disini saya berikan nama file <strong>mycgi-bash.conf</strong></p>
+
+<pre><code class="language-bash">[root@hamim-centos8 cgi-bin]# cd /etc/httpd/conf.d/
+[root@hamim-centos8 conf.d]#
+[root@hamim-centos8 conf.d]# vim mycgi-bash.conf
+</code></pre>
+
+<p>Berikut isi dari VirtualHost tersebut</p>
+
+<pre><code class="language-bash">&lt;VirtualHost *:80&gt;
+    ServerName cgibash.nurhamim.net
+    ServerAlias www.cgibash.nurhamim.net
+    ServerAdmin email@nurhamim.net
+    DocumentRoot /var/www/cgi-bin/mybash.cgi
+
+&lt;Directory &quot;/usr/local/cgi-bin/&quot;&gt;
+         Require all granted
+         Options +ExecCGI
+         AddHandler cgi-script .cgi
+&lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<p>Jika sudah silakan simpan virtual host dan silakan restar web server httpd Anda</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 conf.d]# systemctl restart httpd
+[root@hamim-centos8 conf.d]#
+</code></pre>
+
+<p>Silakan akses <a href="http://IP_VM/cgi-bin/mybash.cgi" rel="nofollow noreferrer" target="_blank">http://IP_VM/cgi-bin/mybash.cgi</a> jika berhasil akan tampil <strong>Welcome! to First CGI Script</strong> seperti berikut ini</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/cgi-apache/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sekian tutorial terkati CGI Script basic di Apache CentOS 8</p>
+
+<p>Selamat mencoba semoga bermanfaat 👌</p>
+
+<p>See You 😃</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/cara-menggunakan-cgi-scripts-basic-di-apache-centos-8/>https://nurhamim.net/cara-menggunakan-cgi-scripts-basic-di-apache-centos-8/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-8/">
+                    #CentOS 8</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/cara-mengaktifkan-userdir-apache-di-centos-8/" class="prev" rel="prev" title="Cara Mengaktifkan UserDir Apache Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Mengaktifkan UserDir Apache Di CentOS 8</a>
+         
+        
+        <a href="https://nurhamim.net/basic-authentication-apache-di-centos-8/" class="next" rel="next" title="Basic Authentication Apache Di CentOS 8">Basic Authentication Apache Di CentOS 8&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
