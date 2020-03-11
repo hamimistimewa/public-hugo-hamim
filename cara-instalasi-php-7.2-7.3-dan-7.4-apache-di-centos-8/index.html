@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  <meta name="google-site-verification" content="ca-pub-1515372853161377" />
+  <link rel="prev" href="https://nurhamim.net/cara-instalasi-ssl-lets-encrypt-apache-di-centos-8/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/cara-instalasi-php-7.2-7.3-dan-7.4-apache-di-centos-8/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Instalasi PHP 7.2, 7.3 dan 7.4 Apache Di CentOS 8 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Cara Instalasi PHP 7.2, 7.3 dan 7.4 Apache Di CentOS 8 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Instalasi PHP 7.2, 7.3 dan 7.4 Apache Di CentOS 8",
+    "headline" : "Cara Instalasi PHP 7.2, 7.3 dan 7.4 Apache Di CentOS 8",
+    "description" : "Pengenalan PHP adalah salah satu bahasa pemrograman yang paling banyak digunakan. Banyak CMS dan Frameworks seperti WordPress, Magento, dan lavarel dibangun menggunakan PHP.\nInstalasi PHP CentOS 8 didistribusikan dengan default PHP versi 7.2. Versi sebagian besar sudah mendukung aplikasi PHP modern contohnya seperti WordPress yang sudah wajib menggunakan PHP 7.x. Versi PHP yang terbaru ataupun up to date tersedia di Remi Repository.\nInstalasi Repository Remi Jika Anda akan menggunakan PHP versi 7.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-12 00:05:58 \x2b0700 \x2b07",
+    "dateModified" : "2020-03-12 00:05:58 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-instalasi-php-7.2-7.3-dan-7.4-apache-di-centos-8\/",
+    "wordCount" : "468",
+    "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Instalasi PHP 7.2, 7.3 dan 7.4 Apache Di CentOS 8</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-03-12 itemprop="datePublished">March 12, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-8-administrator/"> CentOS 8 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="pengenalan">Pengenalan</h2>
+
+<p>PHP adalah salah satu bahasa pemrograman yang paling banyak digunakan. Banyak CMS dan Frameworks seperti WordPress, Magento, dan lavarel dibangun menggunakan PHP.</p>
+
+<h2 id="instalasi-php">Instalasi PHP</h2>
+
+<p>CentOS 8 didistribusikan dengan default PHP versi 7.2. Versi sebagian besar sudah mendukung aplikasi PHP modern contohnya seperti WordPress yang sudah wajib menggunakan PHP 7.x. Versi PHP yang terbaru ataupun up to date tersedia di <strong><a href="https://rpms.remirepo.net" rel="nofollow noreferrer" target="_blank">Remi Repository</a></strong>.</p>
+
+<h3 id="instalasi-repository-remi">Instalasi Repository Remi</h3>
+
+<p>Jika Anda akan menggunakan PHP versi 7.2, maka langkah ini bisa Anda lewatkan. Namun jika Anda nantinya akan menggunakan PHP 7.3 dan 7.4, maka Anda perlu instalasi <em>repository remi</em> terlebih dahulu, berikut perintah yang digunakan untuk installasinya</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/php-7x/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Setelah instalasi selesai dilakukan, untuk melihat semua versi yang tersedia jalankan perintah berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# dnf module list php
+Last metadata expiration check: 0:07:07 ago on Wed Mar 11 05:31:05 2020.
+CentOS-8 - AppStream
+Name                               Stream                                Profiles                                                Summary
+php                                7.2 [d]                               common [d], devel, minimal                              PHP scripting language
+php                                7.3                                   common, devel, minimal                                  PHP scripting language
+
+Remi's Modular repository for Enterprise Linux 8 - x86_64
+Name                               Stream                                Profiles                                                Summary
+php                                remi-7.2                              common [d], devel, minimal                              PHP scripting language
+php                                remi-7.3                              common [d], devel, minimal                              PHP scripting language
+php                                remi-7.4                              common [d], devel, minimal                              PHP scripting language
+
+Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
+[root@hamim-centos8 ~]#
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/php-7x/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Seperti yang disampaikan diatas sebelumnya secara default di CentOS 8 sudah diatur menggunakan PHP 7.2 dengan tanda <em>[d]</em> diatas, silaka sesuaikan dengan kebutuhan masing - masing.</p>
+
+<p>Jika kebutuhannya menggunakan PHP 7.2 Anda dapat langsung melakukan installasi PHP nya, namun jika Anda ingin menggunakan PHP versi 7.3 atau 7.4 Anda dapat mengubah set module nya dengan menggunakan beberapa perintah berikut</p>
+
+<h4 id="php-7-3">PHP 7.3</h4>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# dnf module reset php
+[root@hamim-centos8 ~]# dnf module enable php:remi-7.3
+</code></pre>
+
+<h4 id="php-7-4">PHP 7.4</h4>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# dnf module reset php
+[root@hamim-centos8 ~]# dnf module enable php:remi-7.4
+</code></pre>
+
+<p>Disini kami akan menggunakan PHP versi 7.3, seperti berikut hasilnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/php-7x/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah Anda dapat install module PHP yang dibutuhkan, silakan sesuaikan dengan aplikasi Anda masing - masing, sebagai contoh berikut kami berikan cara instalasi beberapa module PHP nya</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# dnf install php php-opcache php-gd php-curl php-mysqlnd php-fpm -y
+</code></pre>
+
+<p>Untuk melihat versi PHP yang sudah diinstall dapat menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# php -v
+PHP 7.3.15 (cli) (built: Feb 18 2020 09:25:23) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.15, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.3.15, Copyright (c) 1999-2018, by Zend Technologies
+[root@hamim-centos8 ~]#
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/php-7x/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk melihat <em>info.php</em> gunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# echo '&lt;?php phpinfo(); ?&gt;' &gt; /var/www/html/info.php
+</code></pre>
+
+<p>Langkah terakhir restart web server apache Anda</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# systemctl restart httpd
+[root@hamim-centos8 ~]#
+</code></pre>
+
+<p>Jika sudah silakan akses <a href="http://IP_VM/info.php" rel="nofollow noreferrer" target="_blank">http://IP_VM/info.php</a> atau <a href="http://namadomain.com/info.php" rel="nofollow noreferrer" target="_blank">http://namadomain.com/info.php</a> contohnya <a href="https://vhost.nurhamim.net/info.php" rel="nofollow noreferrer" target="_blank">https://vhost.nurhamim.net/info.php</a> hasilnya sebagai berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/php-7x/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sekian tutorial terkait <em>Instalasi PHP 7.x Di Apache CentOS 8</em> .</p>
+
+<p>Selamat mencoba semoga bermanfaat 👌</p>
+
+<p>See You 😃</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/cara-instalasi-php-7.2-7.3-dan-7.4-apache-di-centos-8/>https://nurhamim.net/cara-instalasi-php-7.2-7.3-dan-7.4-apache-di-centos-8/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-8/">
+                    #CentOS 8</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/cara-instalasi-ssl-lets-encrypt-apache-di-centos-8/" class="prev" rel="prev" title="Cara Instalasi SSL Let&#39;s Encrypt Apache Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Instalasi SSL Let&#39;s Encrypt Apache Di CentOS 8</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

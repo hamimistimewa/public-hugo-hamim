@@ -6,10 +6,32 @@
     <description>Recent content in Linux on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Mar 2020 22:32:16 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 00:05:58 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Instalasi PHP 7.2, 7.3 dan 7.4 Apache Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-instalasi-php-7.2-7.3-dan-7.4-apache-di-centos-8/</link>
+      <pubDate>Thu, 12 Mar 2020 00:05:58 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-instalasi-php-7.2-7.3-dan-7.4-apache-di-centos-8/</guid>
+      <description>Pengenalan PHP adalah salah satu bahasa pemrograman yang paling banyak digunakan. Banyak CMS dan Frameworks seperti WordPress, Magento, dan lavarel dibangun menggunakan PHP.
+Instalasi PHP CentOS 8 didistribusikan dengan default PHP versi 7.2. Versi sebagian besar sudah mendukung aplikasi PHP modern contohnya seperti WordPress yang sudah wajib menggunakan PHP 7.x. Versi PHP yang terbaru ataupun up to date tersedia di Remi Repository.
+Instalasi Repository Remi Jika Anda akan menggunakan PHP versi 7.</description>
+    </item>
+    
+    <item>
+      <title>Cara Instalasi SSL Let&#39;s Encrypt Apache Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-instalasi-ssl-lets-encrypt-apache-di-centos-8/</link>
+      <pubDate>Wed, 11 Mar 2020 14:24:44 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-instalasi-ssl-lets-encrypt-apache-di-centos-8/</guid>
+      <description>Pengenalan Let&amp;rsquo;s Encrypt merupakan SSL yang bersifat open source dengan kata lain dapat digunakan secara gratis. Lets&amp;rsquo;s Encrypt dikembangkan oleh Internet Security Research Group (ISRG) yang menyediakan SSL secara gratis.
+Let’s Encrypt sudah dipercayai oleh semua browser dan masa berlau Let’s Encrypt hanya 90 hari sejak diterbitkan.
+Persyaratan Instalasi Let&amp;rsquo;s Encrypt  Pastikan domain atau subdomain yang Anda miliki sudah mengarah (pointing) ke IP VM atau Server yang ingin di install Let&amp;rsquo;s Encrypt.</description>
+    </item>
     
     <item>
       <title>Basic Authentication Apache Di CentOS 8</title>

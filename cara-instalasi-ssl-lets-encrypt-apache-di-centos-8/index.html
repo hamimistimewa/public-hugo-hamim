@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  <meta name="google-site-verification" content="ca-pub-1515372853161377" />
+  <link rel="prev" href="https://nurhamim.net/basic-authentication-apache-di-centos-8/" />
+  <link rel="next" href="https://nurhamim.net/cara-instalasi-php-7.2-7.3-dan-7.4-apache-di-centos-8/" />
+  <link rel="canonical" href="https://nurhamim.net/cara-instalasi-ssl-lets-encrypt-apache-di-centos-8/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Instalasi SSL Let&#39;s Encrypt Apache Di CentOS 8 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Cara Instalasi SSL Let&#39;s Encrypt Apache Di CentOS 8 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Instalasi SSL Let\x27s Encrypt Apache Di CentOS 8",
+    "headline" : "Cara Instalasi SSL Let\x27s Encrypt Apache Di CentOS 8",
+    "description" : "Pengenalan Let\x26rsquo;s Encrypt merupakan SSL yang bersifat open source dengan kata lain dapat digunakan secara gratis. Lets\x26rsquo;s Encrypt dikembangkan oleh Internet Security Research Group (ISRG) yang menyediakan SSL secara gratis.\nLet’s Encrypt sudah dipercayai oleh semua browser dan masa berlau Let’s Encrypt hanya 90 hari sejak diterbitkan.\nPersyaratan Instalasi Let\x26rsquo;s Encrypt  Pastikan domain atau subdomain yang Anda miliki sudah mengarah (pointing) ke IP VM atau Server yang ingin di install Let\x26rsquo;s Encrypt.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-11 14:24:44 \x2b0700 \x2b07",
+    "dateModified" : "2020-03-11 14:24:44 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-instalasi-ssl-lets-encrypt-apache-di-centos-8\/",
+    "wordCount" : "940",
+    "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Instalasi SSL Let&#39;s Encrypt Apache Di CentOS 8</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-03-11 itemprop="datePublished">March 11, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-8-administrator/"> CentOS 8 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h3 id="pengenalan">Pengenalan</h3>
+
+<p><strong><em><a href="https://letsencrypt.org/" rel="nofollow noreferrer" target="_blank">Let&rsquo;s Encrypt</a></em></strong> merupakan SSL yang bersifat open source dengan kata lain dapat digunakan secara gratis. Lets&rsquo;s Encrypt dikembangkan oleh  <strong><em><a href="https://www.abetterinternet.org/" rel="nofollow noreferrer" target="_blank">Internet Security Research Group (ISRG)</a></em></strong> yang menyediakan SSL secara gratis.</p>
+
+<p>Let’s Encrypt sudah dipercayai oleh semua browser dan masa berlau Let’s Encrypt hanya 90 hari sejak diterbitkan.</p>
+
+<h3 id="persyaratan-instalasi-let-s-encrypt">Persyaratan Instalasi Let&rsquo;s Encrypt</h3>
+
+<ul>
+<li>Pastikan domain atau subdomain yang Anda miliki sudah mengarah (pointing) ke IP VM atau Server yang ingin di install Let&rsquo;s Encrypt. Disini saya menggunakan subdomain <em>vhost.nurhamim.net</em></li>
+<li>Pastikan Anda sudah instalasi web server Apache dan sudah memahami tentang Virtual Host, jika belum silakan mengikuti panduan berikut terlebih dahulu
+
+<ul>
+<li><strong><em><a href="https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/" rel="nofollow noreferrer" target="_blank">Cara Instalasi Web Server Apache Di CentOS 8</a></em></strong></li>
+<li><strong><em><a href="https://nurhamim.net/cara-membuat-virtual-host-vhost-apache-centos-8/" rel="nofollow noreferrer" target="_blank">Cara Membuat Virtual Host (vhost) Apache CentOS 8</a></em></strong></li>
+</ul></li>
+<li>Pastikan port 80 dan 443  sudah di open di sisi Firewall</li>
+</ul>
+
+<h3 id="install-module-yang-dibutuhkan">Install Module Yang Dibutuhkan</h3>
+
+<p>Langkah pertama yang harus dilakukan yaitu instalasi paket SSL encrypted web server <em>(mod_ssl, openssl)</em> terlebih dahulu</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# dnf install mod_ssl openssl -y
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ssl-apache/Screenshot_0.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika paket <em>mod_ssl</em> sudah diinstall selanjutnya membuat <em>key</em> dan <em>certificate</em> untuk localhost gunakan beberapa baris perintah berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes \
+&gt; -out /etc/pki/tls/certs/localhost.crt \
+&gt; -keyout /etc/pki/tls/private/localhost.key
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ssl-apache/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="install-certbot">Install Certbot</h3>
+
+<p>Langkah selanjutnya yaitu install <em>certbot</em>, secara default di CentOS 8 standart untuk paket <em>certbot</em> tidak tersedia di repository.</p>
+
+<p>Dengan demikian Anda dapat mengunguh paket <em>certbot</em> menggunakan <em>wget</em> atau yang lainnya, silakan unduh <em>certbot</em> dan simpan di direktori <em>/usr/local/bin</em> sebagai berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# wget -P /usr/local/bin https://dl.eff.org/certbot-auto
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ssl-apache/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah di unduh, selanjutnya memberikan hak akses terhadap file tersebut supaya dapat dieksekusi</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# chmod +x /usr/local/bin/certbot-auto
+</code></pre>
+
+<h3 id="generate-group-dh-diffie-hellman">Generate Group Dh (Diffie-Hellman)</h3>
+
+<p><strong><em>Diffie–Hellman key exchange (DH)</em></strong> adalah metode pertukaran kunci kriptografis yang aman melalui saluran komunikasi yang tidak aman. Security nya menggunakan 2048 bit untuk DH. Namun Anda juga dapat menggunakan yang 4096 bit namun generate key nya akan memakan waktu sampai 30 menit.</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ssl-apache/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="melakukan-enkripsi-ssl-let-s-encrypt">Melakukan Enkripsi SSL Let’s Encrypt</h3>
+
+<p>Untuk memperoleh sertifikat SSL untuk sebuah domain, kita perlu validasi dan untuk validasi ini bisa menggunakan plugin <strong>Webroot</strong> yang berfungsi untuk membuat file sementara untuk memvalidasi domain yang diminta oleh direktori <strong>${webroot-path}/</strong> yang biasa disebut dengan <strong>/acme-challenge</strong>.</p>
+
+<p>Supaya validasi SSL ini menjadi sedeharna kita akan meletakkan <strong>/acme-challenge</strong> ke direktori Let&rsquo;s Encrypt <strong>/var/lib/letsencrypt</strong>.</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# mkdir -p /var/lib/letsencrypt/.well-known
+[root@hamim-centos8 ~]# chgrp apache /var/lib/letsencrypt
+[root@hamim-centos8 ~]# chmod g+s /var/lib/letsencrypt
+[root@hamim-centos8 ~]#
+</code></pre>
+
+<p>Silakan buat vhost untuk validasi letsencrypt</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# vim /etc/httpd/conf.d/letsencrypt.conf
+</code></pre>
+
+<p>Isi dengan file berikut</p>
+
+<pre><code class="language-bash">Alias /.well-known/acme-challenge/ &quot;/var/lib/letsencrypt/.well-known/acme-challenge/&quot;
+&lt;Directory &quot;/var/lib/letsencrypt/&quot;&gt;
+    AllowOverride None
+    Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec
+    Require method GET POST OPTIONS
+&lt;/Directory&gt;
+</code></pre>
+
+<p>Dan silakan buat vhost untuk SSL params untuk validasi DH sebelumnya yang sudah dibuat</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# vim /etc/httpd/conf.d/ssl-params.conf
+[root@hamim-centos8 ~]#
+</code></pre>
+
+<p>Isi dengan file berikut</p>
+
+<pre><code class="language-bash">SSLCipherSuite EECDH+AESGCM:EDH+AESGCM
+# Requires Apache 2.4.36 &amp; OpenSSL 1.1.1
+SSLProtocol -all +TLSv1.3 +TLSv1.2
+SSLOpenSSLConfCmd Curves X25519:secp521r1:secp384r1:prime256v1
+# Older versions
+# SSLProtocol All -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
+SSLHonorCipherOrder On
+Header always set Strict-Transport-Security &quot;max-age=63072000; includeSubDomains; preload&quot;
+Header always set X-Frame-Options DENY
+Header always set X-Content-Type-Options nosniff
+# Requires Apache &gt;= 2.4
+SSLCompression off
+SSLUseStapling on
+SSLStaplingCache &quot;shmcb:logs/stapling-cache(150000)&quot;
+# Requires Apache &gt;= 2.4.11
+SSLSessionTickets Off
+
+SSLOpenSSLConfCmd DHParameters &quot;/etc/ssl/certs/dhparam.pem&quot;
+</code></pre>
+
+<p>Konfigurasi di atas menggunakan chipper, dimana hal ini telah direkomendasikan oleh <a href="https://cipherli.st/" rel="nofollow noreferrer" target="_blank">Cipherli.st</a> dan mengaktifkan OCSP Stapling, HTTP Strict Transport Security (HSTS), Dh key, dan fokus ke sisi keamanan HTTP headers.</p>
+
+<p>Langkah selanjutnya melakukan restart service apache (web server)</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# systemctl reload httpd
+[root@hamim-centos8 ~]#
+</code></pre>
+
+<p>Jika sudah silakan jalankan perintah berikut, untuk installasi SSL Let&rsquo;s Encrypt nya</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# /usr/local/bin/certbot-auto certonly --agree-tos --email admin@nurhamim.net --webroot -w /var/lib/letsencrypt/ -d vhost.nurhamim.net
+</code></pre>
+
+<p><strong>Catatan:</strong></p>
+
+<p>Silakan sesuaikan untuk nama domain atau subdomain yang ingin Anda gunakan.</p>
+
+<p>Jika tidak terdapat kendala, maka akan terdapat informasi seperti berikut, yang menjelaskan kalau instalasi SSL nya sudah berhasil</p>
+
+<pre><code class="language-bash">IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/vhost.nurhamim.net/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/vhost.nurhamim.net/privkey.pem
+   Your cert will expire on 2020-06-08. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot-auto
+   again. To non-interactively renew *all* of your certificates, run
+   &quot;certbot-auto renew&quot;
+ - Your account credentials have been saved in your Certbot
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Certbot so
+   making regular backups of this folder is ideal.
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+
+[root@hamim-centos8 ~]#
+</code></pre>
+
+<p>Selanjutnya membuat vhost untuk domain atau subdomain yang Anda gunakan</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# vim /etc/httpd/conf.d/example.com.conf
+</code></pre>
+
+<pre><code class="language-bash">&lt;VirtualHost *:80&gt;
+  ServerName vhost.nurhamim.net
+  Redirect permanent / https://vhost.nurhamim.net/
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:443&gt;
+  ServerName vhost.nurhamim.net
+  Protocols h2 http:/1.1
+
+  &lt;If &quot;%{HTTP_HOST} == 'www.vhost.nurhamim.net'&quot;&gt;
+    Redirect permanent / https://vhost.nurhamim.net/
+  &lt;/If&gt;
+
+  DocumentRoot /var/www/vhost.nurhamim.net/public_html
+  ErrorLog /var/log/httpd/vhost.nurhamim.net.com-error.log
+  CustomLog /var/log/httpd/vhost.nurhamim.net-access.log combined
+
+  SSLEngine On
+  SSLCertificateFile /etc/letsencrypt/live/vhost.nurhamim.net/fullchain.pem
+  SSLCertificateKeyFile /etc/letsencrypt/live/vhost.nurhamim.net/privkey.pem
+
+  # Other Apache Configuration
+
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<p><strong>Catatan:</strong></p>
+
+<p>Silakan sesuaikan untuk nama domain atau subdomain yang Anda gunakan.</p>
+
+<p>Langkah selanjutnya membuat website sederhana menggunakan <em>html</em> untuk memastikan virtualhost beserta SSL sudah berjalan dengan normal</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# cd /var/www/
+[root@hamim-centos8 www]# mkdir vhost.nurhamim.net
+[root@hamim-centos8 www]# mkdir vhost.nurhamim.net/public_html
+[root@hamim-centos8 www]# cd vhost.nurhamim.net/public_html/
+[root@hamim-centos8 public_html]# vim index.html
+</code></pre>
+
+<p>Isikan dengan <em>script html</em> berikut</p>
+
+<pre><code class="language-bash">&lt;html&gt;
+&lt;body&gt;
+&lt;div style=&quot;width: 100%; font-size: 40px; font-weight: bold; text-align: center;&quot;&gt;
+Test Page SSL Let's Encrypt on CentOS 8
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Jika sudah silakan restart service web server apache</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 public_html]# systemctl restart httpd
+[root@hamim-centos8 public_html]#
+</code></pre>
+
+<p>Jika tidak terdapat kendala, silakan akses domain atau subdomain yang Anda gunakan untuk SSL ini, berikut hasilnya</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ssl-apache/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika di test grade SSL menggunakan <strong><em><a href="https://www.ssllabs.com/ssltest/" rel="nofollow noreferrer" target="_blank">SSL Server Test by Qualys SSL Labs</a></em></strong> untuk SSL sudah mendapatkan <strong>A+</strong> seperti berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/ssl-apache/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sekian tutorial terkait <em>Instalasi SSL Let&rsquo;s Encrypt Apache Di CentOS 8</em> .</p>
+
+<p>Selamat mencoba semoga bermanfaat 👌</p>
+
+<p>See You 😃</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/cara-instalasi-ssl-lets-encrypt-apache-di-centos-8/>https://nurhamim.net/cara-instalasi-ssl-lets-encrypt-apache-di-centos-8/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-8/">
+                    #CentOS 8</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/basic-authentication-apache-di-centos-8/" class="prev" rel="prev" title="Basic Authentication Apache Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Basic Authentication Apache Di CentOS 8</a>
+         
+        
+        <a href="https://nurhamim.net/cara-instalasi-php-7.2-7.3-dan-7.4-apache-di-centos-8/" class="next" rel="next" title="Cara Instalasi PHP 7.2, 7.3 dan 7.4 Apache Di CentOS 8">Cara Instalasi PHP 7.2, 7.3 dan 7.4 Apache Di CentOS 8&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
