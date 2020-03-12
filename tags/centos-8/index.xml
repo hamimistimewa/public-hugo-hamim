@@ -6,10 +6,32 @@
     <description>Recent content in CentOS 8 on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2020 00:05:58 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 17:18:45 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/centos-8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Manajemen Dan Struktur File Konfigurasi Apache Di CentOS 8</title>
+      <link>https://nurhamim.net/manajemen-dan-struktur-file-konfigurasi-apache-di-centos-8/</link>
+      <pubDate>Thu, 12 Mar 2020 17:18:45 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/manajemen-dan-struktur-file-konfigurasi-apache-di-centos-8/</guid>
+      <description>Pengenalan Pada tutorial ini kami akan berikan bagaimana cara melakukan manajemen service web server seperti, start, stop dan basic troubleshoot pada web server apache. Kemudian akan di lanjut dengan strktur file untuk melakukan konfigurasi web server apacche di CentOS 8
+Manajement Service Web Server Apache Untuk mengikuti tutorial ini pastikan Anda sudah melakukan instalasi web server apache nya terlebih dahulu, jika belum silakan mengikuti panduan berikut:
+ Cara Instalasi Web Server Apache Di CentOS 8  Berikut beberapa perintah mengenai management service yang sering digunakan dan dapat Anda gunakan untuk pengelolaan service apache, sebagai berikut:</description>
+    </item>
+    
+    <item>
+      <title>Cara Konfigurasi PHP-FPM Di CentOS 8 Menggunakan Apache 2.4</title>
+      <link>https://nurhamim.net/cara-konfigurasi-php-fpm-di-centos-8-menggunakan-apache-2.4/</link>
+      <pubDate>Thu, 12 Mar 2020 00:45:54 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-konfigurasi-php-fpm-di-centos-8-menggunakan-apache-2.4/</guid>
+      <description>Pengenalan PHP-FPM merupakan interpreter PHP yang terpisah dari aplikasi web server. Setiap request atas script PHP yang masuk ke web serverakan diteruskan (forward) ke FastCGI melalui socket atau koneksi TCP/IP.
+PHP-FPM (FastCGI Process Manager) juga dapat meningkatkan kinerja atau performance web server Apache jika Anda mempunyai situs dengan beban yang tinggi dan Anda menggunakan Apache sebagai webserver maka, PHP-FPM dapat Anda dapat menggunakan PHP-FPM.
+Konfigurasi PHP-FPM Untuk mengikuti tutorial ini, pastikan Anda sudah instalasi Web Server Apache, Instalasi PHP.</description>
+    </item>
     
     <item>
       <title>Cara Instalasi PHP 7.2, 7.3 dan 7.4 Apache Di CentOS 8</title>

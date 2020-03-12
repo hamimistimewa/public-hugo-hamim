@@ -19,7 +19,7 @@
   
   <meta name="google-site-verification" content="ca-pub-1515372853161377" />
   <link rel="prev" href="https://nurhamim.net/cara-instalasi-ssl-lets-encrypt-apache-di-centos-8/" />
-  
+  <link rel="next" href="https://nurhamim.net/cara-konfigurasi-php-fpm-di-centos-8-menggunakan-apache-2.4/" />
   <link rel="canonical" href="https://nurhamim.net/cara-instalasi-php-7.2-7.3-dan-7.4-apache-di-centos-8/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -66,7 +66,7 @@
     "datePublished": "2020-03-12 00:05:58 \x2b0700 \x2b07",
     "dateModified" : "2020-03-12 00:05:58 \x2b0700 \x2b07",
     "url" : "https:\/\/nurhamim.net\/cara-instalasi-php-7.2-7.3-dan-7.4-apache-di-centos-8\/",
-    "wordCount" : "468",
+    "wordCount" : "487",
     "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
 }
 </script>
@@ -223,10 +223,16 @@ Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
 
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/php-7x/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p>Jika sudah Anda dapat install module PHP yang dibutuhkan, silakan sesuaikan dengan aplikasi Anda masing - masing, sebagai contoh berikut kami berikan cara instalasi beberapa module PHP nya</p>
+<p>Jika sudah Anda dapat install extensi atau module PHP yang dibutuhkan, silakan sesuaikan dengan aplikasi Anda masing - masing, sebagai contoh berikut kami berikan cara instalasi beberapa module PHP nya</p>
 
 <pre><code class="language-bash">[root@hamim-centos8 ~]#
 [root@hamim-centos8 ~]# dnf install php php-opcache php-gd php-curl php-mysqlnd php-fpm -y
+</code></pre>
+
+<p>Jika ingin mencari extension yang dibutuhkan bisa menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# dnf search php-
 </code></pre>
 
 <p>Untuk melihat versi PHP yang sudah diinstall dapat menggunakan perintah berikut</p>
@@ -309,6 +315,8 @@ Zend Engine v3.3.15, Copyright (c) 1998-2018 Zend Technologies
         
         <a href="https://nurhamim.net/cara-instalasi-ssl-lets-encrypt-apache-di-centos-8/" class="prev" rel="prev" title="Cara Instalasi SSL Let&#39;s Encrypt Apache Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Instalasi SSL Let&#39;s Encrypt Apache Di CentOS 8</a>
          
+        
+        <a href="https://nurhamim.net/cara-konfigurasi-php-fpm-di-centos-8-menggunakan-apache-2.4/" class="next" rel="next" title="Cara Konfigurasi PHP-FPM Di CentOS 8 Menggunakan Apache 2.4">Cara Konfigurasi PHP-FPM Di CentOS 8 Menggunakan Apache 2.4&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
