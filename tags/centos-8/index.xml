@@ -6,10 +6,20 @@
     <description>Recent content in CentOS 8 on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Mar 2020 17:18:45 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2020 20:37:44 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/centos-8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Instalasi Web Server Nginx Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-instalasi-web-server-nginx-di-centos-8/</link>
+      <pubDate>Fri, 13 Mar 2020 20:37:44 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-instalasi-web-server-nginx-di-centos-8/</guid>
+      <description>Pengenalan Nginx adalah salah satu web server yang powerfull dan berbasis open source (bebas dan Free), dapat Anda gunakan untuk reverse proxy untuk mendukung web server apache serta dapat digunakan sebagai server proxy IMAP/POP3.
+Web server Nginx terkenal karena performanya yang tinggi, stabil, memiliki banyak fitur, mudah dikonfigurasi, dan menggunakan hanya sedikit sumberdaya pada server. Nginx adalah salah satu dari sebagian kecil perangkat lunak untuk server yang diciptakan untuk mengatasi Problem C10K.</description>
+    </item>
     
     <item>
       <title>Manajemen Dan Struktur File Konfigurasi Apache Di CentOS 8</title>
