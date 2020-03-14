@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  <meta name="google-site-verification" content="ca-pub-1515372853161377" />
+  <link rel="prev" href="https://nurhamim.net/manajemen-dan-struktur-file-konfigurasi-nginx-di-centos-8/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/cara-membuat-server-block-nginx-di-centos-8/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Membuat Server Block Nginx Di CentOS 8 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Cara Membuat Server Block Nginx Di CentOS 8 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Membuat Server Block Nginx Di CentOS 8",
+    "headline" : "Cara Membuat Server Block Nginx Di CentOS 8",
+    "description" : "Pengenalan Server Block hampir sama dengan Virtual Host yang ada di Apache Web Server.\nDimana berfungsi sebagai server_name artinya dapat mendefinisikan konfigurasi website Anda masing - masing. Jika Anda mempunyai layanan Cloud ataupun VM dan Anda ingin menghosting domain.com beserta sub.domain.com di dalam layanan Cloud ataupun VM hal tersebut dapat di lakukan dengan cara menggunakan Server Block di web server Nginx. Secara default untuk konfigurasi server block Nginx berada di \/etc\/nginx\/conf.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-14 15:25:43 \x2b0700 \x2b07",
+    "dateModified" : "2020-03-14 15:25:43 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-membuat-server-block-nginx-di-centos-8\/",
+    "wordCount" : "458",
+    "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Membuat Server Block Nginx Di CentOS 8</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-03-14 itemprop="datePublished">March 14, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-8-administrator/"> CentOS 8 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="pengenalan">Pengenalan</h2>
+
+<p><strong><a href="https://www.nginx.com/resources/wiki/start/topics/examples/server_blocks/" rel="nofollow noreferrer" target="_blank">Server Block</a></strong> hampir sama dengan <strong><a href="https://httpd.apache.org/docs/2.4/vhosts/" rel="nofollow noreferrer" target="_blank">Virtual Host</a></strong> yang ada di Apache Web Server.</p>
+
+<p>Dimana berfungsi sebagai server_name artinya dapat mendefinisikan konfigurasi website Anda masing - masing. Jika Anda mempunyai layanan Cloud ataupun VM dan Anda ingin menghosting domain.com beserta sub.domain.com di dalam layanan Cloud ataupun VM hal tersebut dapat di lakukan dengan cara menggunakan Server Block di web server Nginx.  Secara default untuk konfigurasi server block Nginx berada di <em>/etc/nginx/conf.d/</em></p>
+
+<h2 id="membuat-server-block">Membuat Server Block</h2>
+
+<p>Untuk mengikuti panduan ini kiranya Anda sudah melakukan instalasi Nginx, jika belum dapat mengikuti panduan berikut</p>
+
+<ul>
+<li><strong><em><a href="https://nurhamim.net/cara-instalasi-web-server-nginx-di-centos-8/" rel="nofollow noreferrer" target="_blank">Cara Instalasi Web Server Nginx Di CentOS 8</a></em></strong></li>
+</ul>
+
+<p>Skema yang saya buat dalam membuat server block kali ini sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# mkdir -p /var/www/server-block.nurhamim.net/public_html
+[root@hamim-centos8 ~]# mkdir -p /var/www/server-block-01.nurhamim.net/public_html
+[root@hamim-centos8 ~]# mkdir -p /var/www/server-block-02.nurhamim.net/public_html
+[root@hamim-centos8 ~]# 
+[root@hamim-centos8 ~]# tree /var/www/
+/var/www/
+├── server-block-01.nurhamim.net
+│   └── public_html
+├── server-block-02.nurhamim.net
+│   └── public_html
+└── server-block.nurhamim.net   
+    └── public_html
+
+6 directories, 0 files
+[root@hamim-centos8 ~]# 
+</code></pre>
+
+<p><strong>Keterangan:</strong></p>
+
+<p>Terdapat 3 subdomain diantaranya:</p>
+
+<ol>
+<li>server-block.nurhamim.net</li>
+<li>server-block-01.nurhamim.net</li>
+<li>server-block-02.nurhamim.net</li>
+</ol>
+
+<p>Dimana setiap subdomain diatas akan menampilkan isi yang berbeda, dan data website masing - masing subdomain juga berbeda.</p>
+
+<p>Silakan menuju ke direktori <em>/etc/nginx/conf.d</em> dan membuat server block masing - masing sub domain diatas sebagai berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# cd /etc/nginx/conf.d/
+[root@hamim-centos8 conf.d]# 
+</code></pre>
+
+<p>Untuk penamaan server block disini akan kami sesuaikan dengan nama subdomainnya masing - masing sebagai contoh server block untuk subdomain <em>server-block-nurhamim.net</em></p>
+
+<pre><code class="language-bash">[root@hamim-centos8 conf.d]# 
+[root@hamim-centos8 conf.d]# vim server-block.nurhamim.net.conf
+</code></pre>
+
+<p>Isi dengan konfigurasi server block berikut</p>
+
+<pre><code class="language-bash">server {
+    listen 80;
+    # listen [::]:80;
+        
+    root /var/www/server-block.nurhamim.net/public_html;
+        
+    index index.html;
+        
+    server_name server-block.nurhamim.net;
+        
+    access_log /var/log/nginx/server-block.nurhamim.net.access.log;
+    error_log /var/log/nginx/server-block.nurhamim.net.error.log;
+        
+    location / {
+        try_files $uri $uri/ =404;
+    }   
+}      
+</code></pre>
+
+<p>Memastikan konfigurasi nginx tidak terdapat mis ataupun error sebagai berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 conf.d]# 
+[root@hamim-centos8 conf.d]# nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok  
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+[root@hamim-centos8 conf.d]# 
+</code></pre>
+
+<p>Disini masing - masing subdomain akan diisikan script <em>html</em> sebagai contoh saja, silakan pindah ke direktori subdomain ataupun domain Anda masing - masing</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 conf.d]# 
+[root@hamim-centos8 conf.d]# cd /var/www/server-block.nurhamim.net/public_html/
+[root@hamim-centos8 public_html]#  vim index.html
+</code></pre>
+
+<p>Berikut isi file html nya</p>
+
+<pre><code class="language-bash">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Selamat Datang Di [nurhamim.net]&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt; 
+    &lt;h1&gt;Success! server-block.nurhamim.net [NGINX] Server Block Home Page!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+<p>Langkah selanjutnya memberikan hak owner pada masing - masing root direktori subdomain ataupun domain Anda</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# chown -R nginx: /var/www/server-block.nurhamim.net/
+</code></pre>
+
+<p>Langkah terkahir melakukan restart pada web server Nginx</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# systemctl restart nginx
+[root@hamim-centos8 ~]#
+</code></pre>
+
+<p>Sebelum Anda mengakses subdomain ataupun domain yang sudah di tentukan sebelumnya di server_name disisi server block pastikan Anda telah melakukan pointing A record subdomain atau domain tersebut ke IP ataupun server Anda seperti berikut</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/server-block-nginx/Screenshot_0.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut hasil dari masing - masing subdomain diatas</p>
+
+<ul>
+<li><p>server-block.nurhamim.net
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/server-block-nginx/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p></li>
+
+<li><p>server-block-01.nurhamim.net
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/server-block-nginx/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p></li>
+
+<li><p>server-block-02.nurhamim.net
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/server-block-nginx/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p></li>
+</ul>
+
+<p>Sekian tutorial terkait bagaimana cara membuat server nginx di CentOS 8.</p>
+
+<p>Selamat mencoba semoga bermanfaat 👌</p>
+
+<p>See You 😃</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/cara-membuat-server-block-nginx-di-centos-8/>https://nurhamim.net/cara-membuat-server-block-nginx-di-centos-8/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-8/">
+                    #CentOS 8</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/manajemen-dan-struktur-file-konfigurasi-nginx-di-centos-8/" class="prev" rel="prev" title="Manajemen Dan Struktur File Konfigurasi Nginx Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Manajemen Dan Struktur File Konfigurasi Nginx Di CentOS 8</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
