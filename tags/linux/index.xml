@@ -6,10 +6,21 @@
     <description>Recent content in Linux on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Mar 2020 20:27:29 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 22:05:31 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Instalasi phpMyAdmin Menggunakan Apache Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-instalasi-phpmyadmin-menggunakan-apache-di-centos-8/</link>
+      <pubDate>Sun, 15 Mar 2020 22:05:31 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-instalasi-phpmyadmin-menggunakan-apache-di-centos-8/</guid>
+      <description>Pengenalan phpMyAdmin merupakan aplikasi open source yang ditulis menggunakan PHP untuk mengelola server database MySQL dan MariaDB melalui antarmuka Web.
+phpMyAdmin memiliki dukungan untuk berbagai operasi di MySQL, MariaDB, dan Drizzle. Dengan phpMyAdmin, Anda dapat mengelola database, tables, columns, relations, indexes, useres, permissions, dan lainnya melalui antarmuka web yang intuitif dan mudah digunakan.
+Instalasi phpMyAdmin Untuk mengikuti tutorial ini pastikan Anda telah melakukan instalasi apache web server dan PHP, untuk panduannya dapat mengikuti link berikut:</description>
+    </item>
     
     <item>
       <title>Cara Instalasi Database MariaDB Di CentOS 8</title>

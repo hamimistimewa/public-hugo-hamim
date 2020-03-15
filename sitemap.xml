@@ -2,9 +2,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://nurhamim.net/cara-instalasi-database-mariadb-di-centos-8/</loc>
+      <loc>https://nurhamim.net/cara-instalasi-phpmyadmin-menggunakan-apache-di-centos-8/</loc>
       
-      <lastmod>2020-03-15T20:27:29+07:00</lastmod>
+      <lastmod>2020-03-15T22:05:31+07:00</lastmod>
       
       
       
@@ -14,7 +14,7 @@
     <url>
       <loc>https://nurhamim.net/</loc>
       
-      <lastmod>2020-03-15T20:27:29+07:00</lastmod>
+      <lastmod>2020-03-15T22:05:31+07:00</lastmod>
       
       
       
@@ -24,7 +24,7 @@
     <url>
       <loc>https://nurhamim.net/categories/</loc>
       
-      <lastmod>2020-03-15T20:27:29+07:00</lastmod>
+      <lastmod>2020-03-15T22:05:31+07:00</lastmod>
       
       
       
@@ -34,7 +34,7 @@
     <url>
       <loc>https://nurhamim.net/tags/centos-8/</loc>
       
-      <lastmod>2020-03-15T20:27:29+07:00</lastmod>
+      <lastmod>2020-03-15T22:05:31+07:00</lastmod>
       
       
       
@@ -44,7 +44,7 @@
     <url>
       <loc>https://nurhamim.net/categories/centos-8-administrator/</loc>
       
-      <lastmod>2020-03-15T20:27:29+07:00</lastmod>
+      <lastmod>2020-03-15T22:05:31+07:00</lastmod>
       
       
       
@@ -54,7 +54,7 @@
     <url>
       <loc>https://nurhamim.net/tags/linux/</loc>
       
-      <lastmod>2020-03-15T20:27:29+07:00</lastmod>
+      <lastmod>2020-03-15T22:05:31+07:00</lastmod>
       
       
       
@@ -64,7 +64,7 @@
     <url>
       <loc>https://nurhamim.net/posts/</loc>
       
-      <lastmod>2020-03-15T20:27:29+07:00</lastmod>
+      <lastmod>2020-03-15T22:05:31+07:00</lastmod>
       
       
       
@@ -73,6 +73,16 @@
   
     <url>
       <loc>https://nurhamim.net/tags/</loc>
+      
+      <lastmod>2020-03-15T22:05:31+07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://nurhamim.net/cara-instalasi-database-mariadb-di-centos-8/</loc>
       
       <lastmod>2020-03-15T20:27:29+07:00</lastmod>
       
@@ -462,7 +472,7 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/categories/load-balancer/</loc>
+      <loc>https://nurhamim.net/tags/load-balancer/</loc>
       
       <lastmod>2019-11-17T02:31:54+07:00</lastmod>
       
@@ -472,7 +482,7 @@
     </url>
   
     <url>
-      <loc>https://nurhamim.net/tags/load-balancer/</loc>
+      <loc>https://nurhamim.net/categories/load-balancer/</loc>
       
       <lastmod>2019-11-17T02:31:54+07:00</lastmod>
       
