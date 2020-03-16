@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Mar 2020 22:05:31 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2020 20:23:50 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Instalasi Database MySQL Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-instalasi-database-mysql-di-centos-8/</link>
+      <pubDate>Mon, 16 Mar 2020 20:23:50 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-instalasi-database-mysql-di-centos-8/</guid>
+      <description>Pengenalan MySQL adalah sistem manajemen basis data relasional bersifat open source dan bisa di bilang yang paling populer dari yang lainnya.
+Versi terbaru dari server database MySQL saat ini yaitu, versi 8.0, dan sudah tersedia di default repository CentOS 8.
+MySQL 8.0 memperkenalkan banyak fitur dan perubahan baru yang membuat beberapa aplikasi mungkin tidak kompatibel dengan versi ini. Sebelum memilih versi MySQL untuk diinstal, ada baiknya Anda melihat terlebih dahulu dokumentasi aplikasi yang Anda gunakan apakah kompatibel atau tidak.</description>
+    </item>
     
     <item>
       <title>Cara Instalasi phpMyAdmin Menggunakan Apache Di CentOS 8</title>

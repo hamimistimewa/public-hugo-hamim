@@ -18,9 +18,9 @@
   
   
   <meta name="google-site-verification" content="ca-pub-1515372853161377" />
-  <link rel="prev" href="https://nurhamim.net/cara-instalasi-database-mariadb-di-centos-8/" />
-  <link rel="next" href="https://nurhamim.net/cara-instalasi-database-mysql-di-centos-8/" />
-  <link rel="canonical" href="https://nurhamim.net/cara-instalasi-phpmyadmin-menggunakan-apache-di-centos-8/" />
+  <link rel="prev" href="https://nurhamim.net/cara-instalasi-phpmyadmin-menggunakan-apache-di-centos-8/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/cara-instalasi-database-mysql-di-centos-8/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -31,10 +31,10 @@
   <title>
        
        
-           Cara Instalasi phpMyAdmin Menggunakan Apache Di CentOS 8 | Catatan Cah Ndeso
+           Cara Instalasi Database MySQL Di CentOS 8 | Catatan Cah Ndeso
        
   </title>
-  <meta name="title" content="Cara Instalasi phpMyAdmin Menggunakan Apache Di CentOS 8 | Catatan Cah Ndeso">
+  <meta name="title" content="Cara Instalasi Database MySQL Di CentOS 8 | Catatan Cah Ndeso">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -53,9 +53,9 @@
          "@id": "https:\/\/nurhamim.net"
     },
     "articleSection" : "posts",
-    "name" : "Cara Instalasi phpMyAdmin Menggunakan Apache Di CentOS 8",
-    "headline" : "Cara Instalasi phpMyAdmin Menggunakan Apache Di CentOS 8",
-    "description" : "Pengenalan phpMyAdmin merupakan aplikasi open source yang ditulis menggunakan PHP untuk mengelola server database MySQL dan MariaDB melalui antarmuka Web.\nphpMyAdmin memiliki dukungan untuk berbagai operasi di MySQL, MariaDB, dan Drizzle. Dengan phpMyAdmin, Anda dapat mengelola database, tables, columns, relations, indexes, useres, permissions, dan lainnya melalui antarmuka web yang intuitif dan mudah digunakan.\nInstalasi phpMyAdmin Untuk mengikuti tutorial ini pastikan Anda telah melakukan instalasi apache web server dan PHP, untuk panduannya dapat mengikuti link berikut:",
+    "name" : "Cara Instalasi Database MySQL Di CentOS 8",
+    "headline" : "Cara Instalasi Database MySQL Di CentOS 8",
+    "description" : "Pengenalan MySQL adalah sistem manajemen basis data relasional bersifat open source dan bisa di bilang yang paling populer dari yang lainnya.\nVersi terbaru dari server database MySQL saat ini yaitu, versi 8.0, dan sudah tersedia di default repository CentOS 8.\nMySQL 8.0 memperkenalkan banyak fitur dan perubahan baru yang membuat beberapa aplikasi mungkin tidak kompatibel dengan versi ini. Sebelum memilih versi MySQL untuk diinstal, ada baiknya Anda melihat terlebih dahulu dokumentasi aplikasi yang Anda gunakan apakah kompatibel atau tidak.",
     "inLanguage" : "en-us",
     "author" : "[Nur Hamim]",
     "creator" : "[Nur Hamim]",
@@ -63,10 +63,10 @@
     "accountablePerson" : "[Nur Hamim]",
     "copyrightHolder" : "[Nur Hamim]",
     "copyrightYear" : "2020",
-    "datePublished": "2020-03-15 22:05:31 \x2b0700 \x2b07",
-    "dateModified" : "2020-03-15 22:05:31 \x2b0700 \x2b07",
-    "url" : "https:\/\/nurhamim.net\/cara-instalasi-phpmyadmin-menggunakan-apache-di-centos-8\/",
-    "wordCount" : "409",
+    "datePublished": "2020-03-16 20:23:50 \x2b0700 \x2b07",
+    "dateModified" : "2020-03-16 20:23:50 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-instalasi-database-mysql-di-centos-8\/",
+    "wordCount" : "449",
     "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
 }
 </script>
@@ -129,11 +129,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Cara Instalasi phpMyAdmin Menggunakan Apache Di CentOS 8</h1>
+        <h1 class="post-title" itemprop="name headline">Cara Instalasi Database MySQL Di CentOS 8</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2020-03-15 itemprop="datePublished">March 15, 2020</time>
+                on <time datetime=2020-03-16 itemprop="datePublished">March 16, 2020</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -165,121 +165,113 @@
 
 <h2 id="pengenalan">Pengenalan</h2>
 
-<p><strong>phpMyAdmin</strong> merupakan aplikasi open source yang ditulis menggunakan PHP untuk mengelola server database MySQL dan MariaDB melalui antarmuka Web.</p>
+<p><strong><a href="https://www.mysql.com/" rel="nofollow noreferrer" target="_blank">MySQL</a></strong> adalah sistem manajemen basis data relasional bersifat open source dan bisa di bilang yang paling populer dari yang lainnya.</p>
 
-<p>phpMyAdmin memiliki dukungan untuk berbagai operasi di MySQL, MariaDB, dan Drizzle. Dengan phpMyAdmin, Anda dapat mengelola database, tables, columns, relations, indexes, useres, permissions, dan lainnya melalui antarmuka web yang intuitif dan mudah digunakan.</p>
+<p>Versi terbaru dari server database MySQL saat ini yaitu, versi 8.0, dan sudah tersedia di default repository CentOS 8.</p>
 
-<h2 id="instalasi-phpmyadmin">Instalasi phpMyAdmin</h2>
+<p>MySQL 8.0 memperkenalkan banyak fitur dan perubahan baru yang membuat beberapa aplikasi mungkin tidak kompatibel dengan versi ini. Sebelum memilih versi MySQL untuk diinstal, ada baiknya Anda melihat terlebih dahulu dokumentasi aplikasi yang Anda gunakan apakah kompatibel atau tidak.</p>
 
-<p>Untuk mengikuti tutorial ini pastikan Anda telah melakukan instalasi apache web server dan PHP, untuk panduannya dapat mengikuti link berikut:</p>
-
-<ul>
-<li><strong><em><a href="https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/" rel="nofollow noreferrer" target="_blank">Cara Instalasi Web Server Apache Di CentOS 8</a></em></strong></li>
-<li><strong><em><a href="https://nurhamim.net/cara-instalasi-php-7.2-7.3-dan-7.4-apache-di-centos-8/" rel="nofollow noreferrer" target="_blank">Cara Instalasi PHP 7.2, 7.3 dan 7.4 Apache Di CentOS 8</a></em></strong></li>
-</ul>
-
-<p>Dan pastikan Anda sudah melakukan instalasi database MySQL ataupun MariaDB, berikut panduan untuk instalasi MariaDB</p>
+<p>CentOS 8 juga menyediakan MariaDB 10.3, yang merupakan “pengganti drop-in” untuk MySQL 5.7, dengan beberapa batasan. Jika aplikasi Anda tidak kompatibel dengan MySQL 8.0, Anda dapat menggunakan MariaDB 10.3, panduannya pada link berikut:</p>
 
 <ul>
 <li><strong><em><a href="https://nurhamim.net/cara-instalasi-database-mariadb-di-centos-8/" rel="nofollow noreferrer" target="_blank">Cara Instalasi Database MariaDB Di CentOS 8</a></em></strong></li>
 </ul>
 
-<p>Langkah selanjutnya pastikan untuk module <strong>php-mysqlnd</strong> sudah terinstall</p>
+<h2 id="instalasi-mysql-8-0">Instalasi MySQL 8.0</h2>
 
-<pre><code class="language-bash">[root@hamim-centos8 ~]# 
-[root@hamim-centos8 ~]# php -m |grep mysqlnd
-mysqlnd
+<p>Untuk melakukan instalasi MySQL 8.0 Anda dapat menjalankan satu baris perintah berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# dnf install @mysql -y
+</code></pre>
+
+<p>Jika instalasi sudah selesai, silakan <em>enable</em> service MySQL database Anda menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# systemctl enable --now mysqld
+Created symlink /etc/systemd/system/multi-user.target.wants/mysqld.service → /usr/lib/systemd/system/mysqld.service.
+[root@hamim-centos8 ~]# 
+</code></pre>
+
+<p>Pastikan status MySQL sudah running</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# systemctl status mysqld
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/mysql/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Mengatur password root MySQL</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]# mysql_secure_installation
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/mysql/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada gambar diatas silakan isi password dan konfirmasi password root MySQL Anda dan ketikan perintah <em>yes</em>.</p>
+
+<p>Untuk melihat versi MySQL yang sudah terinstall, gunakan perintah</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# mysql -V
+mysql  Ver 8.0.17 for Linux on x86_64 (Source distribution)
 [root@hamim-centos8 ~]#
 </code></pre>
 
-<p>Jika sudah silakan unduh phpMyAdmin dapat melalui link berikut: Klik <strong><a href="https://www.phpmyadmin.net/downloads/" rel="nofollow noreferrer" target="_blank">DISINI</a></strong></p>
-
-<p>Atau Anda dapat menggunakan perintah berikut</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]#
-[root@hamim-centos8 ~]# wget https://files.phpmyadmin.net/phpMyAdmin/5.0.1/phpMyAdmin-5.0.1-all-languages.zip
-</code></pre>
-
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/phpmyadmin-apache/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
-
-<p>Selanjutnya <em>unzip</em> file phpMyAdmin</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]#
-[root@hamim-centos8 ~]# unzip phpMyAdmin-5.0.1-all-languages.zip
-</code></pre>
-
-<p>Jika sudah ubah nama file phpMyAdmin, untuk penamaan silakan sesuaikan dengan keinginan</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]#
-[root@hamim-centos8 ~]# mv phpMyAdmin-5.0.1-all-languages phpmyadmin
-</code></pre>
-
-<p>Pindah file <em>phpmyadmin</em> ke direktori <em>/var/www/</em></p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]#
-[root@hamim-centos8 ~]# mv phpmyadmin/ /var/www/
-</code></pre>
-
-<p>Change owner menjadi <em>apache</em> untuk direktori <em>phpmyamdin</em></p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]#
-[root@hamim-centos8 ~]# chown -Rf apache:apache /var/www/phpmyadmin/
-</code></pre>
-
-<p>Kemudian, membuat vhost untuk phpmyadmin</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]#
-[root@hamim-centos8 ~]# vim /etc/httpd/conf.d/phpmyadmin.conf
-</code></pre>
-
-<p>Berikut isi file vhost <em>phpmyadmin.conf</em></p>
-
-<pre><code class="language-bash">Alias /phpmyadmin /var/www/phpmyadmin
-</code></pre>
-
-<p>Langkah selanjutnya konfigurasi phpmyadmin, silakan masuk ke root database Anda dan membuat username dan password untuk login ke phpmyadmin</p>
+<p>Untuk login ke root MySQL, gunakan perintah berikut</p>
 
 <pre><code class="language-bash">[root@hamim-centos8 ~]#
 [root@hamim-centos8 ~]# mysql -u root -p
-Enter password:
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 17
-Server version: 10.3.17-MariaDB MariaDB Server
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.17 Source distribution
 
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.  
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-MariaDB [(none)]&gt;
-MariaDB [(none)]&gt; GRANT ALL ON *.* TO 'phpmyadmin'@'localhost' IDENTIFIED BY 'Isi_Password_Nya_Disini';
-Query OK, 0 rows affected (0.002 sec)
-
-MariaDB [(none)]&gt; FLUSH PRIVILEGES;
-Query OK, 0 rows affected (0.001 sec)
-
-MariaDB [(none)]&gt; exit
+mysql&gt; exit
 Bye
+[root@hamim-centos8 ~]# 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/mysql/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="mengubah-metode-otentikasi-mysql">Mengubah Metode Otentikasi MySQL</h2>
+
+<p>Untuk tahapan ini bersifat <strong>[OPTIONAL]</strong>.</p>
+
+<p>Server Database MySQL 8.0 yang termasuk dalam repositori CentOS 8 diatur menggunakan plugin autentikasi <em>mysql_native_password</em> karena beberapa client tools dan librari di CentOS 8 tidak kompatibel dengan metode <em>caching_sha2_password</em>, yang ditetapkan sebagai default dalam rilis MySQL 8.0 upstream.</p>
+
+<p>Metode <em>mysql_native_password</em> bagus untuk sebagian besar pengaturan. Namun, jika Anda ingin mengubah plugin autentikasi default menjadi <em>caching_sha2_password</em> yang lebih cepat dan memberikan keamanan yang lebih baik, buka file konfigurasi berikut:</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# vim /etc/my.cnf.d/mysql-default-authentication-plugin.cnf 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/mysql/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Ubah menjadi seperti berikut</p>
+
+<pre><code class="language-bash">[mysqld]
+default_authentication_plugin=caching_sha2_password
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/mysql/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah silakan simpan dan melakukan restart service database MySQL menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@hamim-centos8 ~]#
+[root@hamim-centos8 ~]# systemctl restart mysqld
 [root@hamim-centos8 ~]#
 </code></pre>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/phpmyadmin-apache/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
-
-<p>Langkah terakhir restart apache dan database Anda</p>
-
-<pre><code class="language-bash">[root@hamim-centos8 ~]#
-[root@hamim-centos8 ~]# systemctl restart httpd
-[root@hamim-centos8 ~]# systemctl restart mysql
-</code></pre>
-
-<p>Silakan akses <a href="http://IP_VM/phpmyadmin" rel="nofollow noreferrer" target="_blank">http://IP_VM/phpmyadmin</a> atau domain yang sudah di arahkan ke IP VM Anda, hasilnya seperti berikut</p>
-
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/phpmyadmin-apache/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
-
-<p>Silakan login dengan menggunakan user root untuk login ke database Anda</p>
-
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/phpmyadmin-apache/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
-
-<p>Sekian tutorial instalasi phpMyAdmin menggunakan apache di CentOS 8.</p>
+<p>Sekian tutorial terkait instalasi database MySQL di CentOS 8.</p>
 
 <p>Selamat mencoba semoga bermanfaat 👌</p>
 
@@ -300,7 +292,7 @@ Bye
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://nurhamim.net/cara-instalasi-phpmyadmin-menggunakan-apache-di-centos-8/>https://nurhamim.net/cara-instalasi-phpmyadmin-menggunakan-apache-di-centos-8/</span>
+                    <a href=https://nurhamim.net/cara-instalasi-database-mysql-di-centos-8/>https://nurhamim.net/cara-instalasi-database-mysql-di-centos-8/</span>
             </p>
             
             
@@ -328,10 +320,8 @@ Bye
 
     <div class="post-nav">
         
-        <a href="https://nurhamim.net/cara-instalasi-database-mariadb-di-centos-8/" class="prev" rel="prev" title="Cara Instalasi Database MariaDB Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Instalasi Database MariaDB Di CentOS 8</a>
+        <a href="https://nurhamim.net/cara-instalasi-phpmyadmin-menggunakan-apache-di-centos-8/" class="prev" rel="prev" title="Cara Instalasi phpMyAdmin Menggunakan Apache Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Instalasi phpMyAdmin Menggunakan Apache Di CentOS 8</a>
          
-        
-        <a href="https://nurhamim.net/cara-instalasi-database-mysql-di-centos-8/" class="next" rel="next" title="Cara Instalasi Database MySQL Di CentOS 8">Cara Instalasi Database MySQL Di CentOS 8&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
