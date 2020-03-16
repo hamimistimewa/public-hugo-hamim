@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Mar 2020 20:23:50 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2020 22:33:10 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Instalasi phpMyAdmin Menggunakan Nginx Di CentOS 8 </title>
+      <link>https://nurhamim.net/cara-instalasi-phpmyadmin-menggunakan-nginx-di-centos-8/</link>
+      <pubDate>Mon, 16 Mar 2020 22:33:10 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-instalasi-phpmyadmin-menggunakan-nginx-di-centos-8/</guid>
+      <description>Pengenalan phpMyAdmin merupakan aplikasi open source yang ditulis menggunakan PHP untuk mengelola server database MySQL dan MariaDB melalui antarmuka Web.
+phpMyAdmin memiliki dukungan untuk berbagai operasi di MySQL, MariaDB, dan Drizzle. Dengan phpMyAdmin, Anda dapat mengelola database, tables, columns, relations, indexes, useres, permissions, dan lainnya melalui antarmuka web yang intuitif dan mudah digunakan.
+Instalasi phpMyAdmin Untuk mengikuti tutorial ini pastikan Anda telah melakukan instalasi web server nginx, module php, dan database MySQL, untuk panduannya dapat mengikuti link berikut:</description>
+    </item>
     
     <item>
       <title>Cara Instalasi Database MySQL Di CentOS 8</title>
