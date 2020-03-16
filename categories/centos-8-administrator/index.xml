@@ -6,10 +6,33 @@
     <description>Recent content in CentOS 8 Administrator on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Mar 2020 22:33:10 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2020 01:26:59 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/categories/centos-8-administrator/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Konfigurasi Replikasi Master - Slave Database MariaDB Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-konfigurasi-replikasi-master-slave-database-mariadb-di-centos-8/</link>
+      <pubDate>Tue, 17 Mar 2020 01:26:59 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-konfigurasi-replikasi-master-slave-database-mariadb-di-centos-8/</guid>
+      <description>Pengenalan Hidup didunia ini pasti akan ada yang namanya bencana, ketika itu terjadi data - data berharga misalnya data perusahaan yang tersimpan di server database sangatlah penting untuk di lindungi. Pada tutorial kali ini kami akan embuat sebuah salinan/cadangan/backup database MariaDB.
+Bagaimana cara yang tepat untuk membuat sebuah cadangan/backup sebuah database server MariaDB mariadb secara realtime?
+Anda dapat membuat replikasi Master - Slave dimana nantinya setiap melakukan update di sisi server Master maka akan tersinkronisasi ke sisi server Slave dengan kata lain server Slave sebagai cadangan dari server Master.</description>
+    </item>
+    
+    <item>
+      <title>Cara Menghapus Database MariaDB dan MySQL Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-menghapus-database-mariadb-dan-mysql-di-centos-8/</link>
+      <pubDate>Tue, 17 Mar 2020 01:26:54 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-menghapus-database-mariadb-dan-mysql-di-centos-8/</guid>
+      <description>Pengenalan Tutorial kali ini akan menjelaskan secara singkat bagaimana cara menghapus database MariaDB dan MsSQL di CentOS 8.
+Salah satu tujuannya yaitu apabila Anda salah melakukan instalasi versi database yang Anda inginkan maka Anda tidak perlu rebuild server atau VM, Anda hanya cukup menghapus service database nya saja dengan mudah tentunya.
+Menghapus Database MariaDB dan MySQL Untuk menghapus database MariaDB Anda hanya perlu menjalankan satu baris perintah berikut
+[root@hamim-centos8 ~]# [root@hamim-centos8 ~]# dnf remove @mariadb -y  Untuk menghapus database MySQL Anda hanya perlu menjalankan perintah berikut</description>
+    </item>
     
     <item>
       <title>Cara Instalasi phpMyAdmin Menggunakan Nginx Di CentOS 8 </title>
