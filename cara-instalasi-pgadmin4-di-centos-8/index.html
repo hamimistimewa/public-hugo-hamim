@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  <meta name="google-site-verification" content="ca-pub-1515372853161377" />
+  <link rel="prev" href="https://nurhamim.net/cara-instalasi-database-postgresql-di-centos-8/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/cara-instalasi-pgadmin4-di-centos-8/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Instalasi pgAdmin4 Di CentOS 8 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Cara Instalasi pgAdmin4 Di CentOS 8 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Instalasi pgAdmin4 Di CentOS 8",
+    "headline" : "Cara Instalasi pgAdmin4 Di CentOS 8",
+    "description" : "Pengenalan pgAdmin merupakan tools open source yang dapat digunakan untuk mengelola database PostgreSQL melalui peramban web ataupun aplikasi client yang dapat di instalasi di sisi lokal komputer (MacOS, Linux dan Windows, container dan yang lainnya), untuk mengunduhnya dapat melalui link berikut: Download pgAdmin.\nInstalasi Pada tutorial kali ini kita akan install pgAdmin4 menggunakan web server apache di CentOS 8.\nUntuk mengikuti panduan ini kiranya Anda telah menginstall apache web server dan database PostgreSQL di CentOS 8",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-29 01:20:28 \x2b0700 \x2b07",
+    "dateModified" : "2020-03-29 01:20:28 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-instalasi-pgadmin4-di-centos-8\/",
+    "wordCount" : "510",
+    "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Instalasi pgAdmin4 Di CentOS 8</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-03-29 itemprop="datePublished">March 29, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-8-administrator/"> CentOS 8 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="pengenalan">Pengenalan</h2>
+
+<p><strong><a href="https://www.pgadmin.org/" rel="nofollow noreferrer" target="_blank">pgAdmin</a></strong> merupakan tools open source yang dapat digunakan untuk mengelola database <strong>PostgreSQL</strong> melalui peramban web ataupun aplikasi client yang dapat di instalasi di sisi lokal komputer (MacOS, Linux dan Windows, container dan yang lainnya), untuk mengunduhnya dapat melalui link berikut: <strong><a href="https://www.pgadmin.org/download/" rel="nofollow noreferrer" target="_blank">Download pgAdmin</a></strong>.</p>
+
+<h2 id="instalasi">Instalasi</h2>
+
+<p>Pada tutorial kali ini kita akan install pgAdmin4 menggunakan web server apache di CentOS 8.</p>
+
+<p>Untuk mengikuti panduan ini kiranya Anda telah menginstall apache web server dan database PostgreSQL di CentOS 8</p>
+
+<ul>
+<li><strong><em><a href="https://nurhamim.net/cara-instalasi-web-server-apache-di-centos-8/" rel="nofollow noreferrer" target="_blank">Cara Instalasi Web Server Apache Di CentOS 8</a></em></strong></li>
+<li><strong><em><a href="https://nurhamim.net/cara-instalasi-database-postgresql-di-centos-8/" rel="nofollow noreferrer" target="_blank">Cara Instalasi Database PostgreSQL Di CentOS 8</a></em></strong></li>
+</ul>
+
+<p>Pastikan Anda sudah menambahkan repository remi di CentOS 8</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# dnf install epel-release -y
+</code></pre>
+
+<p>Kemudian, enable epel dan powertools repository untuk instalasi pgAdmin4 menggunakan command berikut</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# dnf --enablerepo=PowerTools install pgadmin4
+</code></pre>
+
+<p>Membuat file konfigurasi untuk pgAdmin4 di bawah struktur konfigurasi httpd (apache). Buat file konfigurasi baru dari sampel yang sudah ada seperti berikut:</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# cp /etc/httpd/conf.d/pgadmin4.conf.sample /etc/httpd/conf.d/pgadmin4.conf
+</code></pre>
+
+<p>Selanjutnya, pastikan bahwa sintaks konfigurasi httpd ok, dan restart httpd</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# httpd -t
+[Tue Mar 17 03:48:36.120572 2020] [so:warn] [pid 17194:tid 140387017783552] AH01574: module wsgi_module is already loaded, skipping
+Syntax OK
+[root@srv-posgre ~]#
+[root@srv-posgre ~]# systemctl restart httpd
+[root@srv-posgre ~]#
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/pgadmin/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Langkah selanjutnya membuat direktori untuk log dan librari pgAdmin dengan menjalankan perintah berikut</p>
+
+<pre><code class="language-bash">
+[root@srv-posgre ~]#
+[root@srv-posgre ~]# mkdir -p /var/lib/pgadmin4/
+[root@srv-posgre ~]# mkdir -p /var/log/pgadmin4/
+[root@srv-posgre ~]#
+</code></pre>
+
+<p>Kemudian deklarasi lokasi / path file log, database SQLite, database sesi dan penyimpanan dalam file konfigurasi Python untuk pgAdmin dalam file</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# vim /usr/lib/python3.6/site-packages/pgadmin4-web/config_distro.py
+</code></pre>
+
+<p>Isi sebagai berikut</p>
+
+<pre><code class="language-bash">HELP_PATH = '/usr/share/doc/pgadmin4-docs/en_US/html'
+UPGRADE_CHECK_ENABLED = False
+
+LOG_FILE = '/var/log/pgadmin4/pgadmin4.log'
+SQLITE_PATH = '/var/lib/pgadmin4/pgadmin4.db'
+SESSION_DB_PATH = '/var/lib/pgadmin4/sessions'
+STORAGE_DIR = '/var/lib/pgadmin4/storage'
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/pgadmin/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Membuat akun pengguna yang digunakan untuk mengautentikasi di antarmuka web dan juga membuat konfigurasi database</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# python3 /usr/lib/python3.6/site-packages/pgadmin4-web/setup.py
+NOTE: Configuring authentication for SERVER mode.
+
+Enter the email address and password to use for the initial pgAdmin user account:
+
+Email address: hi@nurhamim.net
+Password:
+Retype password:
+pgAdmin 4 - Application Initialisation
+======================================
+
+[root@srv-posgre ~]#
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/pgadmin/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Catatan:</strong>
+- Untuk email silakan sesuaikan dengan keinginan, email disini digunakan untuk login ke pgAdmin
+- Isikan password dan konfirmasi password yang ingin digunakan untuk login ke pgAdmin</p>
+
+<p>Change owner direktori log pgAdmin</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# chown -R apache:apache /var/lib/pgadmin4
+[root@srv-posgre ~]# chown -R apache:apache /var/log/pgadmin4
+[root@srv-posgre ~]#
+</code></pre>
+
+<p>Jika sudah langkah terkahir restart httpd</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# systemctl restart httpd
+[root@srv-posgre ~]#
+</code></pre>
+
+<p>Silakan akses <a href="http://IP_VM/pgadmin4/" rel="nofollow noreferrer" target="_blank">http://IP_VM/pgadmin4/</a> untuk login ke administrator pgAdmin. Username dan password yang digunakan yaitu email yang telah dibuat diatas.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/pgadmin/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika berhasil, maka akan tampil default dari tampilan dashboard pgAdmin4</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/pgadmin/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="menambahkan-server-postgresql-di-pgadmin4">Menambahkan Server PostgreSQL di pgAdmin4</h2>
+
+<p>Berikut tahapan menambahkan server database postgreSQL di pgAdmin4.</p>
+
+<p>Klik pada menu  <strong>Add New Server</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/pgadmin/Screenshot_6.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>General</strong> isi hostname database postgreSQL.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/pgadmin/Screenshot_7.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Pada menu <strong>Connection</strong> isikan IP/Hostname database postgreSQL, beserta username dan password untuk login ke database postgreSQL, lalu Save</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/pgadmin/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Apabila berhasil terkoneksi dengan baik dan benar akan muncul informasi server database postgreSQL yang telah terhubung ke pgAdmin4</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/pgadmin/Screenshot_9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Berikut contoh tampilan database postgreSQL menggunakan pgadmin via peramban web</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/pgadmin/Screenshot_10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sekian tutorial instalasi pgAdmin4 di CentOS 8.</p>
+
+<p>Selamat mencoba semoga bermanfaat 👌</p>
+
+<p>See You 😃</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/cara-instalasi-pgadmin4-di-centos-8/>https://nurhamim.net/cara-instalasi-pgadmin4-di-centos-8/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-8/">
+                    #CentOS 8</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/cara-instalasi-database-postgresql-di-centos-8/" class="prev" rel="prev" title="Cara Instalasi Database PostgreSQL Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Instalasi Database PostgreSQL Di CentOS 8</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

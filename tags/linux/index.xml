@@ -6,10 +6,21 @@
     <description>Recent content in Linux on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2020 13:04:09 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2020 01:20:28 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Instalasi pgAdmin4 Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-instalasi-pgadmin4-di-centos-8/</link>
+      <pubDate>Sun, 29 Mar 2020 01:20:28 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-instalasi-pgadmin4-di-centos-8/</guid>
+      <description>Pengenalan pgAdmin merupakan tools open source yang dapat digunakan untuk mengelola database PostgreSQL melalui peramban web ataupun aplikasi client yang dapat di instalasi di sisi lokal komputer (MacOS, Linux dan Windows, container dan yang lainnya), untuk mengunduhnya dapat melalui link berikut: Download pgAdmin.
+Instalasi Pada tutorial kali ini kita akan install pgAdmin4 menggunakan web server apache di CentOS 8.
+Untuk mengikuti panduan ini kiranya Anda telah menginstall apache web server dan database PostgreSQL di CentOS 8</description>
+    </item>
     
     <item>
       <title>Cara Instalasi Database PostgreSQL Di CentOS 8</title>
