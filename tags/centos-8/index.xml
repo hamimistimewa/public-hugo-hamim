@@ -6,10 +6,21 @@
     <description>Recent content in CentOS 8 on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Mar 2020 01:26:59 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 13:04:09 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/tags/centos-8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Instalasi Database PostgreSQL Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-instalasi-database-postgresql-di-centos-8/</link>
+      <pubDate>Mon, 23 Mar 2020 13:04:09 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-instalasi-database-postgresql-di-centos-8/</guid>
+      <description>Pengenalan PostgreSQL, juga dikenal sebagai Postgres, merupakan sistem manajemen basis data relasional yang open-source yang dapat menekankan ekstensibilitas dan kepatuhan SQL. Awalnya bernama POSTGRES, merujuk pada asalnya sebagai penerus basis data Ingres yang dikembangkan di University of California. Selengkapnya dapat merujuk pada link berikut: Wiki PostgreSQL
+Instalasi Secara default pada repository CentOS 8 sudah terdapat beberapa varian modul postgresql yang dapat digunakan sebagai berikut:
+[root@srv-posgre ~]# [root@srv-posgre ~]# dnf module list postgresql Last metadata expiration check: 0:00:14 ago on Tue Mar 17 03:09:59 2020.</description>
+    </item>
     
     <item>
       <title>Cara Konfigurasi Replikasi Master - Slave Database MariaDB Di CentOS 8</title>

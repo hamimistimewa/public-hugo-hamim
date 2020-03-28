@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  <meta name="google-site-verification" content="ca-pub-1515372853161377" />
+  <link rel="prev" href="https://nurhamim.net/cara-konfigurasi-replikasi-master-slave-database-mariadb-di-centos-8/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/cara-instalasi-database-postgresql-di-centos-8/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Instalasi Database PostgreSQL Di CentOS 8 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Cara Instalasi Database PostgreSQL Di CentOS 8 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Instalasi Database PostgreSQL Di CentOS 8",
+    "headline" : "Cara Instalasi Database PostgreSQL Di CentOS 8",
+    "description" : "Pengenalan PostgreSQL, juga dikenal sebagai Postgres, merupakan sistem manajemen basis data relasional yang open-source yang dapat menekankan ekstensibilitas dan kepatuhan SQL. Awalnya bernama POSTGRES, merujuk pada asalnya sebagai penerus basis data Ingres yang dikembangkan di University of California. Selengkapnya dapat merujuk pada link berikut: Wiki PostgreSQL\nInstalasi Secara default pada repository CentOS 8 sudah terdapat beberapa varian modul postgresql yang dapat digunakan sebagai berikut:\n[root@srv-posgre ~]# [root@srv-posgre ~]# dnf module list postgresql Last metadata expiration check: 0:00:14 ago on Tue Mar 17 03:09:59 2020.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-23 13:04:09 \x2b0700 \x2b07",
+    "dateModified" : "2020-03-23 13:04:09 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-instalasi-database-postgresql-di-centos-8\/",
+    "wordCount" : "576",
+    "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Instalasi Database PostgreSQL Di CentOS 8</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-03-23 itemprop="datePublished">March 23, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-8-administrator/"> CentOS 8 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="pengenalan">Pengenalan</h2>
+
+<p><strong><a href="https://www.postgresql.org/" rel="nofollow noreferrer" target="_blank">PostgreSQL</a></strong>, juga dikenal sebagai Postgres, merupakan sistem manajemen basis data relasional yang open-source yang dapat  menekankan ekstensibilitas dan kepatuhan SQL. Awalnya bernama POSTGRES, merujuk pada asalnya sebagai penerus basis data Ingres yang dikembangkan di University of California. Selengkapnya dapat merujuk pada link berikut: <strong><a href="https://en.wikipedia.org/wiki/PostgreSQL" rel="nofollow noreferrer" target="_blank">Wiki PostgreSQL</a></strong></p>
+
+<h2 id="instalasi">Instalasi</h2>
+
+<p>Secara default pada repository CentOS 8 sudah terdapat beberapa varian modul postgresql yang dapat digunakan sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# dnf module list postgresql
+Last metadata expiration check: 0:00:14 ago on Tue Mar 17 03:09:59 2020.
+CentOS-8 - AppStream
+Name                                  Stream                            Profiles                                      Summary
+postgresql                            9.6                               client, server [d]                            PostgreSQL server and client module
+postgresql                            10 [d]                            client, server [d]                            PostgreSQL server and client module
+postgresql                            12                                client, server                                PostgreSQL server and client module
+
+Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
+[root@srv-posgre ~]#
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-postgres/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Dengan demikian Anda dapat memilih versi postgresql yang ingin Anda gunakan, jika Anda ingin instalasi menggunakan module yang sudah ada secara default untuk proses instalasinya dapat menggunakan beberapa command berikut</p>
+
+<h3 id="install-postgresql-versi-9-6">Install PostgreSQL versi 9.6</h3>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# dnf install @postgresql:9.6
+</code></pre>
+
+<h3 id="install-postgresql-versi-12">Install PostgreSQL versi 12</h3>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# dnf install @postgresql:10
+</code></pre>
+
+<p>Apabila Anda ingin install postgreSQL versi latest menggunakan repository dapat dilakukan, sebagai berikut:</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# dnf install https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-postgres/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika Anda menggunakan repository, maka Anda perlu menonaktifkan module default postgreSQL yang sudah ada di CentOS 8, gunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# dnf -qy module disable postgresql
+[root@srv-posgre ~]#
+</code></pre>
+
+<p>Silakan pastikan kembali module list postgreSQL, jika sudah tidak aktif akan ada tanda <strong>(X)</strong></p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]# dnf module list postgresql
+Last metadata expiration check: 0:00:13 ago on Tue Mar 17 03:20:24 2020.
+CentOS-8 - AppStream
+Name                                  Stream                              Profiles                                     Summary
+postgresql                            9.6 [x]                             client, server [d]                           PostgreSQL server and client module
+postgresql                            10 [d][x]                           client, server [d]                           PostgreSQL server and client module
+postgresql                            12 [x]                              client, server                               PostgreSQL server and client module
+
+Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
+[root@srv-posgre ~]#
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-postgres/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Untuk melanjutkan proses instalasi postgreSQL menggunakan repository gunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# dnf install postgresql12-server -y
+</code></pre>
+
+<p>Setelah instalasi selesai, inisialisasi basis data PostgreSQL, dan melakukan enable service postgreSQL supaya dapat aktif otomatis apabila VM melakukan boot dan pastikan service postgreSQL sudah running</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# /usr/pgsql-12/bin/postgresql-12-setup initdb
+Initializing database ... OK
+
+[root@srv-posgre ~]# systemctl enable postgresql-12
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql-12.service → /usr/lib/systemd/system/postgresql-12.service.
+[root@srv-posgre ~]#
+[root@srv-posgre ~]# systemctl start postgresql-12
+[root@srv-posgre ~]#
+[root@srv-posgre ~]# systemctl status postgresql-12
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-postgres/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Selanjutnya, amankan akun pengguna Postgres dan akun pengguna administrator basis data dengan membuat kata sandi untuk akun pengguna sistem Postgres menggunakan utilitas passwd sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# passwd postgres
+Changing password for user postgres.
+New password:
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@srv-posgre ~]#
+</code></pre>
+
+<p>Kemudian beralih ke akun sistem Postgres dan buat kata sandi yang aman dan kuat untuk pengguna / peran database administrator PostgreSQL sebagai berikut</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# su - postgres
+Last login: Tue Mar 17 03:26:24 WIB 2020 on pts/0
+[postgres@srv-posgre ~]$
+[postgres@srv-posgre ~]$ psql -c &quot;ALTER USER postgres WITH PASSWORD 'ISI_PASWORD';&quot;
+ALTER ROLE
+[postgres@srv-posgre ~]$ exit
+logout
+[root@srv-posgre ~]#
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-postgres/Screenshot_8.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Melakukan konfigurasi server Postgres supaya dapat mengotentikasi klien seperti pgAdmin.</p>
+
+<p>Metode otentikasi yang didukung mencakup otentikasi berbasis kata sandi yang menggunakan salah satu metode enkripsi berikut: md5, crypt, atau password.</p>
+
+<p>Untuk tutorial ini, kami akan mengonfigurasi metode otentikasi md5 di file /var/lib/pgsql/12/data/pg_hba.conf.</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]#
+[root@srv-posgre ~]# vim /var/lib/pgsql/12/data/pg_hba.conf
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-postgres/Screenshot_9.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Ubah menjadi MD5</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/install-postgres/Screenshot_10.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah silakan simpan dan restart postgres</p>
+
+<pre><code class="language-bash">[root@srv-posgre ~]# systemctl restart postgresql-12
+[root@srv-posgre ~]#
+</code></pre>
+
+<p>Sekian tutorial terkait instalasi postgreSQL di CentOS 8</p>
+
+<p>Selamat mencoba semoga bermanfaat 👌</p>
+
+<p>See You 😃</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/cara-instalasi-database-postgresql-di-centos-8/>https://nurhamim.net/cara-instalasi-database-postgresql-di-centos-8/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-8/">
+                    #CentOS 8</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/cara-konfigurasi-replikasi-master-slave-database-mariadb-di-centos-8/" class="prev" rel="prev" title="Cara Konfigurasi Replikasi Master - Slave Database MariaDB Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Konfigurasi Replikasi Master - Slave Database MariaDB Di CentOS 8</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
