@@ -6,10 +6,23 @@
     <description>Recent content in CentOS 8 Administrator on Catatan Cah Ndeso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2020 01:20:28 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 01:22:55 +0700</lastBuildDate>
     
 	<atom:link href="https://nurhamim.net/categories/centos-8-administrator/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Instalasi MongoDB 4.2 Di CentOS 8</title>
+      <link>https://nurhamim.net/cara-instalasi-mongodb-4.2-di-centos-8/</link>
+      <pubDate>Mon, 30 Mar 2020 01:22:55 +0700</pubDate>
+      
+      <guid>https://nurhamim.net/cara-instalasi-mongodb-4.2-di-centos-8/</guid>
+      <description>Pengenalan MongoDB merupakan basis data (database) NoSQL yang berbasis dokumen dengan format JSON.
+Jika pada database SQL data disimpan dalam bentuk tabel, sedangkan pada MongoDB disimpan dalam bentuk dokumen dengan format JSON.
+Selengkapnya terkait MongoDB dapat merujuk pada link berikut: Wiki MongoDB.
+Instalasi Pada repository default CentOS 8 untuk MongoDB tidak tersedia, dengan demikian untuk instalasi kali ini akan menggunakan repository MongoDB.
+Versi MongoDB yang akan digunakan pada tutorial kali ini yaitu versi 4.</description>
+    </item>
     
     <item>
       <title>Cara Instalasi pgAdmin4 Di CentOS 8</title>

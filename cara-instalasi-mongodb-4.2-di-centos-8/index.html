@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133820714-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133820714-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Nur Hamim">
+  
+  
+  <meta name="google-site-verification" content="ca-pub-1515372853161377" />
+  <link rel="prev" href="https://nurhamim.net/cara-instalasi-pgadmin4-di-centos-8/" />
+  
+  <link rel="canonical" href="https://nurhamim.net/cara-instalasi-mongodb-4.2-di-centos-8/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Cara Instalasi MongoDB 4.2 Di CentOS 8 | Catatan Cah Ndeso
+       
+  </title>
+  <meta name="title" content="Cara Instalasi MongoDB 4.2 Di CentOS 8 | Catatan Cah Ndeso">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/nurhamim.net"
+    },
+    "articleSection" : "posts",
+    "name" : "Cara Instalasi MongoDB 4.2 Di CentOS 8",
+    "headline" : "Cara Instalasi MongoDB 4.2 Di CentOS 8",
+    "description" : "Pengenalan MongoDB merupakan basis data (database) NoSQL yang berbasis dokumen dengan format JSON.\nJika pada database SQL data disimpan dalam bentuk tabel, sedangkan pada MongoDB disimpan dalam bentuk dokumen dengan format JSON.\nSelengkapnya terkait MongoDB dapat merujuk pada link berikut: Wiki MongoDB.\nInstalasi Pada repository default CentOS 8 untuk MongoDB tidak tersedia, dengan demikian untuk instalasi kali ini akan menggunakan repository MongoDB.\nVersi MongoDB yang akan digunakan pada tutorial kali ini yaitu versi 4.",
+    "inLanguage" : "en-us",
+    "author" : "[Nur Hamim]",
+    "creator" : "[Nur Hamim]",
+    "publisher": "[Nur Hamim]",
+    "accountablePerson" : "[Nur Hamim]",
+    "copyrightHolder" : "[Nur Hamim]",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-30 01:22:55 \x2b0700 \x2b07",
+    "dateModified" : "2020-03-30 01:22:55 \x2b0700 \x2b07",
+    "url" : "https:\/\/nurhamim.net\/cara-instalasi-mongodb-4.2-di-centos-8\/",
+    "wordCount" : "514",
+    "keywords" : [ "CentOS 8","Linux", "Catatan Cah Ndeso"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class=""></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont terminal"></i></a>&nbsp;<a href="https://nurhamim.net">Catatan Cah Ndeso</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="https://resume.nurhamim.net" title="">Resume</a>
+                
+                <a class="menu-item" href="/stories/" title="">Stories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Cara Instalasi MongoDB 4.2 Di CentOS 8</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://nurhamim.net" rel="author">[Nur Hamim]</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-03-30 itemprop="datePublished">March 30, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://nurhamim.net/categories/centos-8-administrator/"> CentOS 8 Administrator </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="pengenalan">Pengenalan</h2>
+
+<p>MongoDB merupakan basis data (database) NoSQL yang berbasis dokumen dengan format <a href="https://www.json.org/" rel="nofollow noreferrer" target="_blank">JSON</a>.</p>
+
+<p>Jika pada database SQL data disimpan dalam bentuk tabel, sedangkan pada MongoDB disimpan dalam bentuk dokumen dengan format JSON.</p>
+
+<p>Selengkapnya terkait MongoDB dapat merujuk pada link berikut: <a href="https://en.wikipedia.org/wiki/MongoDB" rel="nofollow noreferrer" target="_blank">Wiki MongoDB</a>.</p>
+
+<h2 id="instalasi">Instalasi</h2>
+
+<p>Pada repository default CentOS 8 untuk MongoDB tidak tersedia, dengan demikian untuk instalasi kali ini akan menggunakan repository MongoDB.</p>
+
+<p>Versi MongoDB yang akan digunakan pada tutorial kali ini yaitu versi 4.2, untuk mengetahui repository dari versi MongoDB yang lainnya Anda dapat merujuk pada link berikut: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/#configure-the-package-management-system-yum" rel="nofollow noreferrer" target="_blank">Repository MongoDB</a>.</p>
+
+<p>Langkah pertama yang harus dilakukan yaitu enable repository MongoDB.</p>
+
+<pre><code class="language-bash">[root@srv-mongo ~]#
+[root@srv-mongo ~]# vim /etc/yum.repos.d/mongodb-org.repo
+</code></pre>
+
+<p>Berikut repository MongoDB versi 4.2</p>
+
+<pre><code class="language-bash">[mongodb-org-4.2]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/mongodb/Screenshot_1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah silakan simpan dan install MongoDB menggunakan perintah berikut</p>
+
+<pre><code class="language-bash">[root@srv-mongo ~]# dnf install mongodb-org -y
+[root@srv-mongo ~]#
+</code></pre>
+
+<p>Jika sudah silakan enable dan start MongoDB</p>
+
+<pre><code class="language-bash">[root@srv-mongo ~]# systemctl enable mongod --now
+[root@srv-mongo ~]#
+</code></pre>
+
+<p>Selanjutnya verifikasi MongoDB dengan cara menjalankan perintah <strong>mongo</strong> nantinya akan masuk ke server MongoDB, jika ingin melihat versi MongoDB gunakan perintah <strong>db.version()</strong>.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/mongodb/Screenshot_2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="konfigurasi-mongodb">Konfigurasi MongoDB</h2>
+
+<p>Langkah selanjutnya melakukan konfigurasi pada MongoDB. File konfigurasi MongoDB bernama <strong>mongod.conf</strong> dan terletak di direktori <strong>/etc</strong>, filenya sendiri dalam format YAML.</p>
+
+<p>Dalam konfigurasi MongoDB dapat menyesuaikan dengan case, namun kali ini kami akan mengaktifkan security seperti berikut:</p>
+
+<pre><code class="language-bash">[root@srv-mongo ~]#                                             
+[root@srv-mongo ~]# vim /etc/mongod.conf
+</code></pre>
+
+<p>Uncomment pada menu <strong>Security</strong></p>
+
+<pre><code class="language-bash">security:
+  authorization: enabled
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/mongodb/Screenshot_3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Jika sudah silakan restart MongoDB</p>
+
+<pre><code class="language-bash">[root@srv-mongo ~]# systemctl restart mongod
+[root@srv-mongo ~]#  
+</code></pre>
+
+<h3 id="membuat-user-admin-mongodb">Membuat User Admin MongoDB</h3>
+
+<p>Jika sebelumnya kita telah mengaktifkan autentikasi di MongoDB, kali ini kita akan membuat user administrator di MongoDB yang berguna untuk mengakses database MongoDB.</p>
+
+<p>Silakan akses MongoDB menggunakan perintah</p>
+
+<pre><code class="language-bash">[root@srv-mongo ~]#
+[root@srv-mongo ~]# mongo
+MongoDB shell version v4.2.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb        
+Implicit session: session { &quot;id&quot; : UUID(&quot;993f61a4-818c-40fb-b441-d556c870f834&quot;) }
+MongoDB server version: 4.2.5
+&gt;
+</code></pre>
+
+<p>Ketikan perintah berikut untuk beralih ke admin</p>
+
+<pre><code class="language-bash">&gt; use admin
+switched to db admin
+&gt;
+</code></pre>
+
+<p>Membuat user, user yang kami gunakan adalah <em>mongoAdmin</em> dengan privileges <em>userAdminAnyDatabase</em></p>
+
+<pre><code class="language-bash">&gt;
+&gt; db.createUser(
+...
+... {
+... user: &quot;mongoAdmin&quot;,
+... pwd: &quot;changeMe&quot;,
+... roles: [ { role: &quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot; } ]
+... }
+... )
+Successfully added user: {
+        &quot;user&quot; : &quot;mongoAdmin&quot;,
+        &quot;roles&quot; : [
+                {
+                        &quot;role&quot; : &quot;userAdminAnyDatabase&quot;,
+                        &quot;db&quot; : &quot;admin&quot;
+                }
+        ]
+}
+&gt;
+&gt; quit()
+[root@srv-mongo ~]# 
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/mongodb/Screenshot_4.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Catatan:</strong></p>
+
+<ul>
+<li><strong>user:</strong> Isi dengan user yang ingin Anda gunakan</li>
+<li><strong>pwd:</strong> Password dari user database</li>
+</ul>
+
+<p>Untuk testing perubahan yang sudah dilakukan, silakan akses shell mongo menggunakan user administrator yang telah dibuat sebelumnya menggunakan perintah berikut:</p>
+
+<pre><code class="language-bash">[root@srv-mongo ~]#
+[root@srv-mongo ~]# mongo -u mongoAdmin -p --authenticationDatabase admin
+MongoDB shell version v4.2.5
+Enter password:[ISI PASSWORD USER mongoAdmin]
+connecting to: mongodb://127.0.0.1:27017/?authSource=admin&amp;compressors=disabled&amp;gssapiServiceName=mongodb
+Implicit session: session { &quot;id&quot; : UUID(&quot;8abba17b-491f-41f4-b74a-254e5fa64cc1&quot;) }
+MongoDB server version: 4.2.5
+&gt;
+&gt; use admin
+switched to db admin
+&gt;
+</code></pre>
+
+<p>Tampilkan detail user yang telah dibuat sebelumnya</p>
+
+<pre><code class="language-bash">&gt;
+&gt; show users
+{
+        &quot;_id&quot; : &quot;admin.mongoAdmin&quot;,
+        &quot;userId&quot; : UUID(&quot;083de080-7fb4-4af9-8a3d-f985d0a425cd&quot;),
+        &quot;user&quot; : &quot;mongoAdmin&quot;,
+        &quot;db&quot; : &quot;admin&quot;,
+        &quot;roles&quot; : [
+                {
+                        &quot;role&quot; : &quot;userAdminAnyDatabase&quot;,        
+                        &quot;db&quot; : &quot;admin&quot;
+                }
+        ],
+        &quot;mechanisms&quot; : [
+                &quot;SCRAM-SHA-1&quot;,
+                &quot;SCRAM-SHA-256&quot;
+        ]
+}
+&gt;
+&gt; quit()
+[root@srv-mongo ~]# 
+[root@srv-mongo ~]#
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://imgnurhamimnet.s3-id-jkt-1.kilatstorage.id/CentOS-8/mongodb/Screenshot_5.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sekian tutorial terkait instalasi database MongoDB di CentOS 8.</p>
+
+<p>Selamat mencoba semoga bermanfaat 👌</p>
+
+<p>See You 😃</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Nur Hamim </span>
+                </p>
+            
+              
+            
+              
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://nurhamim.net/cara-instalasi-mongodb-4.2-di-centos-8/>https://nurhamim.net/cara-instalasi-mongodb-4.2-di-centos-8/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/centos-8/">
+                    #CentOS 8</a></span>
+            
+            <span class="tag"><a href="https://nurhamim.net/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://nurhamim.net">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://nurhamim.net/cara-instalasi-pgadmin4-di-centos-8/" class="prev" rel="prev" title="Cara Instalasi pgAdmin4 Di CentOS 8"><i class="iconfont icon-left"></i>&nbsp;Cara Instalasi pgAdmin4 Di CentOS 8</a>
+         
+        
+    </div>
+
+<div class="post-comment">
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'nurhamim';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+    
+</div>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont terminal"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://nurhamim.net">Nur Hamim</a> | </span> 
+         
+
+         
+      <span>Powered by <a href="https://github.com/hamimistimewa" target="_blank" rel="external nofollow">Github</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
